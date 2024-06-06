@@ -1,9 +1,6 @@
 const colors = require('tailwindcss/colors')
 module.exports = {
   mode: 'jit',
-  purge: [
-    './src/index.html'
-  ],
   content: [
     "./src/**/*.{html,js,tsx}"
   ],
@@ -59,6 +56,11 @@ module.exports = {
           },
         },
       },
+    },
+  },
+  variants: {
+    extend: {
+      display: ['responsive', 'group-hover', 'group-focus', 'hover', 'focus', 'min', 'max'], // Add other variants as needed
     },
   },
   plugins: [

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   // video popup
   const videoThumbnails = document.querySelectorAll('.video-thumbnail');
   const videoModal = document.getElementById('videoModal');
