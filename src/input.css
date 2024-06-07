@@ -1900,7 +1900,21 @@ video {
 .slick-arrow.next{
   right: -25px;
 }
-
+@media(max-width:768px){
+  .slick-arrow.next {
+    right: -15px;
+  }
+  .slick-arrow.prev{
+    left: -15px;
+  }
+  .slick-arrow{
+    width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 85px);
+  }
+}
 .pf_list .slick-track{
   display: flex;
   align-items: center;

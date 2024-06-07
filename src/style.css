@@ -1695,6 +1695,10 @@ video {
   font-weight: 500;
 }
 
+.font-\[600\] {
+  font-weight: 600;
+}
+
 .font-\[700\] {
   font-weight: 700;
 }
@@ -3774,6 +3778,24 @@ video {
   right: -25px;
 }
 
+@media(max-width:768px){
+  .slick-arrow.next {
+    right: -15px;
+  }
+
+  .slick-arrow.prev{
+    left: -15px;
+  }
+
+  .slick-arrow{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 85px);
+  }
+}
+
 .pf_list .slick-track{
   display: flex;
   align-items: center;
@@ -4463,6 +4485,10 @@ body.modal-open{
 
   .md\:text-\[80px\] {
     font-size: 80px;
+  }
+
+  .md\:text-\[22px\] {
+    font-size: 22px;
   }
 
   .md\:leading-\[80px\] {

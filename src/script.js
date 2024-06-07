@@ -1,5 +1,47 @@
 $(document).ready(function(){
+// counter animation
+var $animation_elements = $('.animation-element');
+var $window = $(window);
+var $counter_wrap = $('.counter_wrap')
+var isAlreadyRun = false;
 
+function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+    $.each($counter_wrap, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+        //check to see if this current container is within viewport
+        if ((element_top_position <= window_bottom_position)) {
+            $element.addClass('in-view');
+            console.log("test");
+            if (!isAlreadyRun) {
+                $element.find('.count-number .no-i').each(function() {
+
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }
+                    , 
+                    {
+                        duration: 1500,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            }
+            isAlreadyRun = true;
+        } else {
+            $element.removeClass('in-view');
+        }
+    });
+}
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
   // video popup
   const videoThumbnails = document.querySelectorAll('.video-thumbnail');
   const videoModal = document.getElementById('videoModal');
