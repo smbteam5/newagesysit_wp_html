@@ -153,36 +153,37 @@ window.toggleAccordion = (button) => {
     console.error('Accordion content element not found.');
   }
 };
-    $('.brand_list').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        speed: 300,
-        infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: true,
-        responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 2,
-        }
-      }
-    ]
-      });
+$('.brand_list').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  infinite: true,
+  speed: 5000,
+  autoplaySpeed: 0,
+  autoplay: true,
+  cssEase: 'linear',
+  responsive: [
+{
+  breakpoint: 991,
+  settings: {
+    slidesToShow: 3,
+  }
+},
+{
+  breakpoint: 767,
+  settings: {
+    slidesToShow: 3,
+  }
+},
+{
+  breakpoint: 500,
+  settings: {
+    slidesToShow: 2,
+  }
+}
+]
+});
       $('.cs_items').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -236,27 +237,29 @@ window.toggleAccordion = (button) => {
       });
     // pf_list
     $('.pf_list').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        speed: 300,
-        infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: true,
-        responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-        }
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      infinite: true,        
+      speed: 5000,
+      autoplaySpeed: 0,
+      autoplay: true,
+      cssEase: 'linear',
+      responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
       }
-    ]
-      });
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
+    });
+
 })
