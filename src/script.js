@@ -18,7 +18,7 @@ function check_if_in_view() {
         if ((element_top_position <= window_bottom_position)) {
             $element.addClass('in-view');
             console.log("test");
-            if (!isAlreadyRun) {
+            if (isAlreadyRun) {
                 $element.find('.count-number .no-i').each(function() {
 
                     $(this).prop('Counter', 0).animate({
@@ -34,7 +34,7 @@ function check_if_in_view() {
                     });
                 });
             }
-            isAlreadyRun = true;
+            isAlreadyRun = false;
         } else {
             $element.removeClass('in-view');
         }
