@@ -2447,7 +2447,7 @@ body.modal-open {
     @apply w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5];
   }
   .user_submit {
-    @apply text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white;
+    @apply text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white cursor-pointer;
   }
 }
 .quote-form {
@@ -2464,7 +2464,7 @@ body.modal-open {
     @apply w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5];
   }
   .user_submit {
-    @apply text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white;
+    @apply text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white cursor-pointer;
   }
   .user_communication_medium {
     @apply border-gray-300 rounded h-5 w-5;
@@ -2477,10 +2477,21 @@ body.modal-open {
   @apply !hidden;
 }
 
+.wpcf7-not-valid-tip:not(:nth-child(1)):not(:nth-child(2)) {
+  @apply hidden;
+}
+
 .error-message {
   color: rgb(239 68 68);
 }
 
 .success-message {
   color: rgb(34 197 94);
+}
+
+.grecaptcha-badge {
+  width: 70px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  left: 4px !important;
 }
