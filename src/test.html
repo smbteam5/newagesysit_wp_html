@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Width Slick Slider</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        .slick-slider {
+          position: relative;
+          width: 100%;
+          left: 300px; 
+          transition: all .5s;
+        }
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-track {
+            display: flex;
+        }
+        .slick-slide {
+            width: 100vw;
+        }
+        .slick-slide {
+            margin: 0 15px;
+        }
+        .slick-slide img{
+          width: 100%;
+        }
+        .slick-list {
+            margin: 0 -15px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container111">
+    <div class="slick-slider">
+        <div><img src="./img/banner-bg-demand.svg" alt="Slide 1" class="w-full"></div>
+        <div><img src="./img/banner-bg-demand.svg" alt="Slide 2" class="w-full"></div>
+        <div><img src="./img/banner-bg-demand.svg" alt="Slide 3" class="w-full"></div>
+        <div><img src="./img/banner-bg-demand.svg" alt="Slide 1" class="w-full"></div>
+        <div><img src="./img/banner-bg-demand.svg" alt="Slide 2" class="w-full"></div>
+        <div><img src="./img/banner-bg-demand.svg" alt="Slide 3" class="w-full"></div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Slick JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+        var slider = $('.slick-slider');
+        $('.slick-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            initialSlide: 0, // Starts at the first slide
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+        // Adjust the initial position of the slider
+        var initialOffset = -($(window).width() + 300); // 25% of the window width
+        slider.find('.slick-track').css('transform', 'translate3d(' + initialOffset + 'px, 0, 0)');
+         // Remove the initial offset after the first interaction
+         slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            slider.find('.slick-track').css('transform', '');
+            $('.slick-list').css('margin-left', '0');
+            $('.slick-slider').css('left', '0');
+        });
+    });
+</script>
+</body>
+</html>
