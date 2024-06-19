@@ -644,10 +644,6 @@ video {
   bottom: 0.75rem;
 }
 
-.bottom-\[-10px\] {
-  bottom: -10px;
-}
-
 .bottom-\[-15px\] {
   bottom: -15px;
 }
@@ -722,6 +718,10 @@ video {
 
 .top-\[20px\] {
   top: 20px;
+}
+
+.bottom-\[-10px\] {
+  bottom: -10px;
 }
 
 .z-0 {
@@ -1189,6 +1189,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1988,10 +1992,6 @@ video {
   font-size: 26px;
 }
 
-.text-\[28px\] {
-  font-size: 28px;
-}
-
 .text-\[30px\] {
   font-size: 30px;
 }
@@ -2002,6 +2002,10 @@ video {
 
 .text-\[45px\] {
   font-size: 45px;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
 }
 
 .text-base {
@@ -2076,16 +2080,16 @@ video {
   line-height: 50px;
 }
 
-.leading-\[60px\] {
-  line-height: 60px;
-}
-
 .leading-none {
   line-height: 1;
 }
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-\[60px\] {
+  line-height: 60px;
 }
 
 .tracking-wide {
@@ -5256,6 +5260,41 @@ body.modal-open {
   position: relative;
   transition: all .5s;
 }
+@media (min-width: 768px) {
+  .people-bg {
+    background-image: url('./img/people-bg.png');
+  }
+}
+
+.grecaptcha-badge {
+  width: 70px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  left: 4px !important;
+}
+
+.ind_services .num {
+  font-size: 100px;
+  font-weight: 900 !important;
+  /* width: 132px; */
+  height: 99px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.ind_services .num p {
+  padding: 0;
+  margin: 0;
+  line-height: 100px;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2970ff;
+}
+
+.ind_services:hover .num p {
+  transform: translateY(-90px);
+  transition: all 0.4s ease;
+}
 
 .hover\:bg-blue-50:hover {
   --tw-bg-opacity: 1;
@@ -5594,12 +5633,12 @@ body.modal-open {
     font-size: 36px;
   }
 
-  .md\:text-\[50px\] {
-    font-size: 50px;
-  }
-
   .md\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .md\:text-\[50px\] {
+    font-size: 50px;
   }
 
   .md\:leading-\[80px\] {
@@ -5711,16 +5750,16 @@ body.modal-open {
     height: auto;
   }
 
-  .min-768px\:w-1\/2 {
-    width: 50%;
-  }
-
   .min-768px\:w-\[50\%\] {
     width: 50%;
   }
 
   .min-768px\:flex-row {
     flex-direction: row;
+  }
+
+  .min-768px\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .min-768px\:flex-nowrap {
@@ -5737,12 +5776,12 @@ body.modal-open {
 }
 
 @media (min-width: 992px) {
-  .min-992px\:bottom-\[-15px\] {
-    bottom: -15px;
-  }
-
   .min-992px\:bottom-\[-18px\] {
     bottom: -18px;
+  }
+
+  .min-992px\:bottom-\[-15px\] {
+    bottom: -15px;
   }
 
   .min-992px\:block {
