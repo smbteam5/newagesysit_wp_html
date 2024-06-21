@@ -184,6 +184,39 @@ $('.brand_list').slick({
 }
 ]
 });
+
+// Global clientele
+$('.clientele').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  infinite: true,
+  speed: 5000,
+  autoplaySpeed: 0,
+  autoplay: true,
+  cssEase: 'linear',
+  responsive: [
+{
+  breakpoint: 991,
+  settings: {
+    slidesToShow: 3,
+  }
+},
+{
+  breakpoint: 767,
+  settings: {
+    slidesToShow: 3,
+  }
+},
+{
+  breakpoint: 500,
+  settings: {
+    slidesToShow: 2,
+  }
+}
+]
+});
       $('.cs_items').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -261,5 +294,42 @@ $('.brand_list').slick({
     }
   ]
     });
-
+    //dev-services-slider
+    var slider = $('.dev-services-slider');
+    slider.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: $('.ds_prev'),
+            nextArrow: $('.ds_next'),
+            dots: false,
+            initialSlide: 0, // Starts at the first slide
+            responsive: [
+              {
+                breakpoint: 991,
+                settings: {
+                  slidesToShow: 3,
+                }
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 2,
+                }
+              },
+              {
+                breakpoint: 500,
+                settings: {
+                  slidesToShow: 1,
+                }
+              }
+            ]
+        });
+        var initialOffset = -($(window).width() + 300); 
+        slider.find('.slick-track').css('transform', 'translate3d(' + initialOffset + 'px, 0, 0)');
+        slider.on('beforeChange', function(){
+          slider.find('.slick-track').css('transform', '');
+          $('.slick-list').css('margin-left', '0');
+          $('.slick-slider').css('left', '0');
+        });
 })

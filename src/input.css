@@ -1926,7 +1926,7 @@ video {
   margin-bottom: 0 !important;
 }
 
-.slick-arrow {
+.client-say .slick-arrow {
   width: 50px;
   height: 50px;
   background-color: #dfe7ec;
@@ -1948,6 +1948,11 @@ video {
 .slick-arrow.next {
   right: -25px;
 }
+.arrow_wrap {
+  border-radius: 50%;
+  position: absolute;
+  bottom: -80px;
+}
 @media (max-width: 768px) {
   .slick-arrow.next {
     right: -15px;
@@ -1955,12 +1960,14 @@ video {
   .slick-arrow.prev {
     left: -15px;
   }
-  .slick-arrow {
+
+  .arrow_wrap .ds-left-arrow,
+  .arrow_wrap .ds-right-arrow {
     width: 35px;
     height: 35px;
-    border-radius: 50%;
-    position: absolute;
-    top: calc(50% - 85px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .pf_list .slick-track {
@@ -2488,11 +2495,6 @@ body.modal-open {
 .success-message {
   color: rgb(34 197 94);
 }
-<<<<<<< HEAD
-.people-bg{
-  @apply md:bg-[url('./img/people-bg.png')]
-}
-=======
 
 .grecaptcha-badge {
   width: 70px !important;
@@ -2523,4 +2525,33 @@ body.modal-open {
   transform: translateY(-90px);
   transition: all 0.4s ease;
 }
->>>>>>> d804c525afaa1f951aef9cc8df31928543e73c75
+
+.dev-services-slider {
+  position: relative;
+  width: 100%;
+  transition: all 0.5s;
+}
+@media (min-width: 992px) {
+  .dev-services-slider {
+    left: 300px;
+  }
+}
+.dev-services-slider .slick-track {
+  display: flex;
+  gap: 10px;
+}
+.dev-services-slider .slick-list {
+  overflow: hidden;
+}
+.dev-services-slider .slick-slide {
+  height: inherit;
+  min-height: 350px !important;
+}
+.dev-services-slider .slick-slide {
+  position: relative;
+  transition: all 0.5s;
+}
+.dev-services-slider .slick-slide p {
+  position: relative;
+  transition: all 0.5s;
+}
