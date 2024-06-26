@@ -10,11 +10,11 @@
     <link href="style.css" rel="stylesheet"> 
 </head>
 
-<body class="font-inter">
+<body class="font-inter overflow-x-hidden">
    <div class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 hidden p-[15px]" id="videoModal">
       <div class="bg-white rounded-lg overflow-hidden w-full max-w-3xl relative">
           <div class="relative pb-9/16">
-              <iframe id="youtubePlayer" class="w-full h-[400px]" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe id="youtubePlayer" class="w-full h-[400px]" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
           <button class="absolute top-0 right-0 m-2 text-white bg-red-600 rounded-full p-2 w-[30px] h-[30px] flex justify-center items-center" id="closeModal">
               &times;
@@ -659,8 +659,8 @@
             <nav class="hidden lg:flex">
                <ul>
                   <li>
-                     <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-4 rounded uppercase xl:w-[140px]">
-                     Call Us
+                     <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-4 rounded uppercase xl:w-auto">
+                     GET A QUOTE
                      </button>
                   </li>
                </ul>
@@ -1309,20 +1309,13 @@
                 <div class="flex min-1024px:h-[calc(100vh-80px)] min-768px:flex-nowrap flex-wrap">
                     <div class=" w-full md:w-3/5 self-center min-768px:pb-[40px]">
                         <h1 class="text-white text-4xl md:text-[60px] font-[500] md:leading-[80px]">
-                            <span class="block">
+                            <span class="block capitalize">
                                 Unlock the power 
-                                 <span class="relative">
+                                 <span class="relative inline-block">
                                     <img src="https://newagesysit.com/wp-content/uploads/2024/04/marked_line-1.svg" 
                                     alt="Marked Line"
-                                     class="absolute bottom-[-15px] left-0 w-[100%] h-auto">Of PHP</span>, 
+                                     class="absolute bottom-[-5px] min-1024px:bottom-[-15px] left-0 w-[100%] h-auto">Of PHP</span>, Delivering scalable solutions Tailored to your business Requirements.
                             </span>
-                            <span class="min-992px:block">
-                                Delivering scalable solutions 
-                            </span>
-                            <span class="min-992px:block">
-                                Tailored to your business 
-                            </span>
-                            <span class="min-992px:block">Requirements.</span>
                         </h1>
                     </div>
                     <div class=" w-full md:w-2/5 self-end">
@@ -1347,7 +1340,7 @@
                                     <img src="./img/phps1.svg" alt="" class="mx-auto">
                                 </div>
                                 <div class="ser-name text-center">
-                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2">Custom PHP Web App Development</h2>
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2">Custom PHP Web Application Development</h2>
                                 </div>
                                 <div class="ser-detail">
                                     <p class="text-[16px] min-1024px:text-[18px]">
@@ -1486,7 +1479,7 @@
             </span>
            <div class="c_in bg-[#003296] py-10 md:py-[60px] rounded-2xl p-5">
             <h2 class="text-[26px] md:text-[36px] min-992px:text-[50px]  font-[700] text-center mb-2 relative min-1024px:leading-[60px]  text-white"><span class="block">Why should you partner</span> <span class="block">with <span class="relative"><img src="https://newagesysit.com/wp-content/uploads/2024/04/marked_line-1.svg" alt="Marked Line" class="absolute bottom-[-25px] right-0 w-[70%] h-auto">NewAgeSysIT?</span></span></h2>
-            <p class="mt-[50px] text-base md:text-[22px] text-center text-white min-992px:max-w-[70%] mx-auto leading-[32px]">Partnering with NewAgeSysIT provides access to a collaborative app development process, where our experienced developers prioritize your unique needs to deliver bespoke, high-quality solutions. We guarantee timely delivery and full source code ownership, ensuring long-term control and adaptability for your project.</p>
+            <p class="mt-[50px] text-base min-1024px:text-[22px] text-center text-white min-992px:max-w-[70%] mx-auto text-[16px] min-1024px:leading-[32px] leading-relaxed">Partnering with NewAgeSysIT provides access to a collaborative app development process, where our experienced developers prioritize your unique needs to deliver bespoke, high-quality solutions. We guarantee timely delivery and full source code ownership, ensuring long-term control and adaptability for your project.</p>
 
             <div class="flex flex-wrap relative counts mt-[40px] counter_wrap">
                 <div class="sw-app-item basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 text-white text-center border-r border-b border-[#004BE0] p-5 md:py-8">
@@ -1556,7 +1549,7 @@
             </div>
         </div>
         <div class="relative">
-            <div class=" flex gap-[20px] ds-arrows absolute left-[50%] bottom-[-80px] transform -translate-x-1/2 z-[0]">
+            <div class="flex gap-[20px] ds-arrows absolute bottom-[-80px] z-[0] justify-center w-full">
                <div class="arrow_wrap flex gap-4">
                   <span class="ds-left-arrow ds_prev cursor-pointer">
                      <div>
@@ -1571,7 +1564,7 @@
                 </div>
             </div>
             <div class="overflow-hidden">
-                <div class="dev-services-slider">
+                <div class="dev-services-slider overflow-hidden">
                     <div>
                         <div class="ser-item bg-[#EFF3F5] p-[20px] h-full">
                             <div class="ser-top">
@@ -1827,7 +1820,7 @@
     <section class="innovations bg-grey py-10 md:py-[80px] ">
         <div class="container">
             <div class="dev_head text-[20px] text-center">
-                <h2 class="text-[28px] md:text-[36px] min-992px:text-[50px]  font-semibold text-center  mb-4"><span class="pr-2 md:block">Enduring Commitment to Excellence</span><span class="text-primary md:block">Leading the Way in Digital Product Innovation</span></h2>
+                <h2 class="text-[28px] md:text-[36px] min-992px:text-[50px]  font-semibold text-center  mb-4"><span class="pr-2 md:block">Enduring Commitment to Excellence</span><span class="text-primary block">Leading the Way in Digital Product Innovation</span></h2>
                 <p class="text-base md:text-[22px] md:w-[70%] mx-auto md:pb-8">Our Awards and Recognitions affirm that we are the foremost choice for top-notch Mobile App development in the U.S</p>
             </div>
             <div class="innovations pt-[50px]">
@@ -2067,10 +2060,10 @@
                                 <div class="rc_top">
                                     <div class="head text-white leading-[40px]">
                                         <span class="text-[14px]"><b>CASE STUDY</b></span>
-                                        <h2 class="text-[36px] min-[992px]:text-[55px]"><b>Whipflip</b></h2>
+                                        <h2 class="text-[36px] min-[992px]:text-[55px]"><b>WhipFlip</b></h2>
                                     </div>
                                     <div class="dec text-white mt-4">
-                                        <p>An On-demand service-providing application that effortlessly connects customers with hairstylist professionals and make-up artists on schedule.</p>
+                                       <p>An on-demand app connects you with a network of experts, from car buying and selling professionals to dedicated concierges who ensure smooth appointment scheduling.</p>
                                     </div>
                                 </div>
                                 <div class="rc_count flex justify-between py-[40px]">
@@ -2136,7 +2129,7 @@
                                        <h2 class="text-[36px] min-[992px]:text-[55px]"><b>Car Up</b></h2>
                                    </div>
                                    <div class="dec text-white mt-4">
-                                       <p>An On-demand service-providing application that effortlessly connects customers with hairstylist professionals and make-up artists on schedule.</p>
+                                    <p>Car-Up offers the most convenient and transparent auto repair service, disrupting the industry with unparalleled customer service.</p>
                                    </div>
                                </div>
                                <div class="rc_count flex justify-between py-[40px]">

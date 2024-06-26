@@ -652,12 +652,12 @@ video {
   bottom: -10px;
 }
 
-.bottom-\[-15px\] {
-  bottom: -15px;
-}
-
 .bottom-\[-25px\] {
   bottom: -25px;
+}
+
+.bottom-\[-5px\] {
+  bottom: -5px;
 }
 
 .bottom-\[-80px\] {
@@ -666,6 +666,10 @@ video {
 
 .bottom-\[-8px\] {
   bottom: -8px;
+}
+
+.bottom-\[0px\] {
+  bottom: 0px;
 }
 
 .end-2 {
@@ -681,10 +685,6 @@ video {
 }
 
 .left-1\/2 {
-  left: 50%;
-}
-
-.left-\[50\%\] {
   left: 50%;
 }
 
@@ -1307,6 +1307,10 @@ video {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded {
@@ -2221,6 +2225,10 @@ video {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .tracking-wide {
@@ -4339,11 +4347,11 @@ video {
   right: -25px;
 }
 
-.arrow_wrap {
+/* .arrow_wrap {
   border-radius: 50%;
   position: absolute;
   bottom: -80px;
-}
+} */
 
 @media (max-width: 768px) {
   .slick-arrow.next {
@@ -5409,12 +5417,6 @@ body.modal-open {
   transition: all 0.5s;
 }
 
-@media (min-width: 992px) {
-  .dev-services-slider {
-    left: 300px;
-  }
-}
-
 .dev-services-slider .slick-track {
   display: flex;
   gap: 10px;
@@ -5446,6 +5448,19 @@ ul.slick-dots{
 
 .slick-dots li button:before{
   font-size: 14px !important;
+}
+
+.android-banner{
+  background: linear-gradient(
+                180deg,          /* Direction: top to bottom */
+                #060C18 0%,     /* Start color at 0% */
+                #000A1F 50%,    /* Middle color at 50% */
+                #0E1B42 100%    /* End color at 100% */
+            );
+}
+
+html{
+  overflow-x: hidden;
 }
 
 .hover\:bg-blue-50:hover {
@@ -5861,8 +5876,8 @@ ul.slick-dots{
     display: none;
   }
 
-  .xl\:w-\[140px\] {
-    width: 140px;
+  .xl\:w-auto {
+    width: auto;
   }
 
   .xl\:min-w-\[1000px\] {
@@ -5930,16 +5945,20 @@ ul.slick-dots{
     padding: 1.25rem;
   }
 
-  .min-768px\:pt-\[0px\] {
-    padding-top: 0px;
-  }
-
   .min-768px\:pb-\[40px\] {
     padding-bottom: 40px;
+  }
+
+  .min-768px\:pt-\[0px\] {
+    padding-top: 0px;
   }
 }
 
 @media (min-width: 992px) {
+  .min-992px\:bottom-\[-12px\] {
+    bottom: -12px;
+  }
+
   .min-992px\:bottom-\[-15px\] {
     bottom: -15px;
   }
@@ -5988,6 +6007,10 @@ ul.slick-dots{
 @media (min-width: 1024px) {
   .min-1024px\:invisible {
     visibility: hidden;
+  }
+
+  .min-1024px\:bottom-\[-15px\] {
+    bottom: -15px;
   }
 
   .min-1024px\:left-\[-25px\] {
@@ -6086,6 +6109,10 @@ ul.slick-dots{
 
   .min-1024px\:text-\[32px\] {
     font-size: 32px;
+  }
+
+  .min-1024px\:leading-\[32px\] {
+    line-height: 32px;
   }
 
   .min-1024px\:leading-\[60px\] {
