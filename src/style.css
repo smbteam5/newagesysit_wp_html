@@ -665,6 +665,10 @@ video {
   bottom: -10px;
 }
 
+.bottom-\[-15px\] {
+  bottom: -15px;
+}
+
 .bottom-\[-20px\] {
   bottom: -20px;
 }
@@ -885,6 +889,10 @@ video {
   margin-inline-start: 0.75rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -927,10 +935,6 @@ video {
 
 .mt-\[80px\] {
   margin-top: 80px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .line-clamp-3 {
@@ -1145,6 +1149,10 @@ video {
 
 .w-\[50px\] {
   width: 50px;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[70\%\] {
@@ -1409,10 +1417,6 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-8 {
@@ -4707,11 +4711,6 @@ video {
   align-items: center;
 }
 
-.pf_listz .slick-track {
-  display: flex;
-  align-items: center;
-}
-
 /* sasasa */
 
 .iam {
@@ -5894,6 +5893,7 @@ html{
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+
 .bg-ecommerce {
   background-image: linear-gradient(to right, #081340 0%, #000A1F 100%, #031B5A 100%);
 }
@@ -6161,16 +6161,16 @@ html{
     flex-basis: 100%;
   }
 
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .md\:justify-end {
@@ -6584,6 +6584,14 @@ html{
   .min-500px\:flex-row {
     flex-direction: row;
   }
+
+  .min-500px\:justify-center {
+    justify-content: center;
+  }
+
+  .min-500px\:text-\[20px\] {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -6642,6 +6650,10 @@ html{
   .min-768px\:pt-\[0px\] {
     padding-top: 0px;
   }
+
+  .min-768px\:text-\[22px\] {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -6683,6 +6695,11 @@ html{
 
   .min-992px\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .min-992px\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .min-992px\:text-\[23px\] {
