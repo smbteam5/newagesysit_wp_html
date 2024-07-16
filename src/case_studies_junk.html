@@ -1448,15 +1448,44 @@
    </div>
   </section>
   <section class="bg-white p-4 xl:px-10 xl:py-14">
-   <div class="grid grid-cols-6 gap-6">
-      <img class="w-full" src="./img/junk_screen_1.png" alt="junk screens">
-      <img class="w-full" src="./img/junk_screen_1.png" alt="junk screens">
-      <img class="w-full" src="./img/junk_screen_1.png" alt="junk screens">
-      <img class="w-full" src="./img/junk_screen_1.png" alt="junk screens">
-      <img class="w-full" src="./img/junk_screen_1.png" alt="junk screens">
-      <img class="w-full" src="./img/junk_screen_1.png" alt="junk screens">
 
-   </div>
+   <div class="pf_listz overflow-hidden px-[20px]">
+      <div>
+          <div class="pf_item flex items-center justify-center">
+              <img src="./img/junk_screen_1.png" alt="Njbiz" class="object-contain p-1">
+          </div>
+      </div>
+      <div>
+          <div class="pf_item flex items-center justify-center">
+              <img src="./img/junk_screen_2.png" alt="Deloit" class="object-contain p-1">
+          </div>
+      </div>
+      <div>
+          <div class="pf_item flex items-center justify-center"> 
+              <img src="./img/junk_screen_3.png" alt="Inc" class="object-contain p-1">
+          </div>
+      </div>
+      <div>
+          <div class="pf_item flex items-center justify-center">
+              <img src="./img/junk_screen_4.png" alt="Upsaac" class="object-contain p-1">
+          </div>
+      </div>
+      <div>
+          <div class="pf_item flex items-center justify-center">
+              <img src="./img/junk_screen_5.png" alt="50fast" class="object-contain p-1">
+          </div>
+      </div>
+      <div>
+         <div class="pf_item flex items-center justify-center">
+             <img src="./img/junk_screen_6.png" alt="50fast" class="object-contain p-1">
+         </div>
+     </div>
+     <div>
+      <div class="pf_item flex items-center justify-center">
+          <img src="./img/junk_screen_4.png" alt="Upsaac" class="object-contain p-1">
+      </div>
+  </div>
+  </div>
   </section>
 
   <section class="banner w-full bg-[#331300] pt-5 md:pt-[80px] ">
@@ -1998,4 +2027,83 @@ d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 
 //   $(document).ready(function(){
     
 //   })
-    </script>
+
+      $(document).ready(function () {
+        // counter animation
+        var $window = $(window);
+        var $counter_wrap = $(".counter_wrap");
+        var isAlreadyRun = false;
+    
+        function check_if_in_view() {
+          var window_height = $window.height();
+          var window_top_position = $window.scrollTop();
+          var window_bottom_position = window_top_position + window_height;
+          $.each($counter_wrap, function () {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = element_top_position + element_height;
+            //check to see if this current container is within viewport
+            if (element_top_position <= window_bottom_position) {
+              $element.addClass("in-view");
+              if (!isAlreadyRun) {
+                $element.find(".count-number .no-i").each(function () {
+                  $(this)
+                    .prop("Counter", 0)
+                    .animate(
+                      {
+                        Counter: $(this).text(),
+                      },
+                      {
+                        duration: 1500,
+                        easing: "swing",
+                        step: function (now) {
+                          $(this).text(Math.ceil(now));
+                        },
+                      }
+                    );
+                });
+              }
+              isAlreadyRun = true;
+            } else {
+              $element.removeClass("in-view");
+            }
+          });
+        }
+        $window.on("scroll resize", check_if_in_view);
+        $window.trigger("scroll");
+    
+        $(".pf_listz").slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          infinite: true,
+          speed: 5000,
+          autoplaySpeed: 0,
+          autoplay: true,
+          cssEase: "linear",
+          responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+          ],
+        });
+      })
+    
+      window.addEventListener("load", (e) => {
+        e.preventDefault();
+        $(".pf_listz").slick("refresh");
+      });
+    
+    
+    </script> 
