@@ -294,6 +294,32 @@ $('.clientele').slick({
     }
   ]
     });
+        // pf_listz
+        $('.pf_listz').slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          infinite: true,        
+          speed: 5000,
+          autoplaySpeed: 0,
+          autoplay: true,
+          cssEase: 'linear',
+          responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+          }
+        }
+      ]
+        });
     //dev-services-slider
     var slider = $('.dev-services-slider');
     slider.slick({
