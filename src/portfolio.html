@@ -1318,10 +1318,10 @@
                <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full  py-4 pe-4 ps-12  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required />
             </div>
       </form>
-      <div class="mb-4 lg:mb-8 flex items-center">
+      <div class="mb-4 lg:mb-8 flex items-center overflow-hidden">
          <a href="#" class="text-md text-black py-4 px-5 rounded-full bg-slate-300 transition-all duration-500 block whitespace-nowrap min-w-[100px] text-center mb-2">All</a>
 
-         <div class="hover:overflow-x-auto ms-3" id="style-1">
+         <div class="hover:overflow-x-auto ms-3 " id="scrollContainer">
             <ul class="flex pb-1">
                <li class="me-3"><a href="#" class="text-md text-black py-4 px-5 rounded-full hover:bg-slate-300 transition-all duration-500 block whitespace-nowrap">Transportation</a></li>
                <li class="me-3"><a href="#" class="text-md text-black py-4 px-5 rounded-full hover:bg-slate-300 transition-all duration-500 block whitespace-nowrap">On Demand</a></li>
@@ -1801,7 +1801,11 @@ d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 
 <script src="script.js"></script>
 </html>
 <script>
-        
+   const scrollContainer = document.getElementById("scrollContainer");
+      scrollContainer.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        scrollContainer.scrollLeft += event.deltaY;
+      });     
     var typing=new Typed(".text", {
        strings: ["", "Ignite Digital Innovation", "Craft Agile Solutions", "Empower with Expertise"],
        typeSpeed: 100,
@@ -1878,4 +1882,8 @@ d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 
 //   $(document).ready(function(){
     
 //   })
+
+
+
+
     </script>

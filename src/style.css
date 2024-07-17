@@ -885,6 +885,10 @@ video {
   margin-inline-start: 0.75rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -927,10 +931,6 @@ video {
 
 .mt-\[80px\] {
   margin-top: 80px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .line-clamp-3 {
@@ -1409,10 +1409,6 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-8 {
@@ -4707,11 +4703,6 @@ video {
   align-items: center;
 }
 
-.pf_listz .slick-track {
-  display: flex;
-  align-items: center;
-}
-
 /* sasasa */
 
 .iam {
@@ -5864,20 +5855,20 @@ html{
   transition: all .3s ease;
 }
 
-#style-1::-webkit-scrollbar-track
+#scrollContainer::-webkit-scrollbar-track
 {
   -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
   border-radius: 10px;
   background-color: #F5F5F5;
 }
 
-#style-1::-webkit-scrollbar
+#scrollContainer::-webkit-scrollbar
 {
   height: 4px;
   background-color: #F5F5F5;
 }
 
-#style-1::-webkit-scrollbar-thumb
+#scrollContainer::-webkit-scrollbar-thumb
 {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.3);
@@ -5894,6 +5885,7 @@ html{
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+
 .bg-ecommerce {
   background-image: linear-gradient(to right, #081340 0%, #000A1F 100%, #031B5A 100%);
 }
@@ -6161,16 +6153,16 @@ html{
     flex-basis: 100%;
   }
 
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .md\:justify-end {
