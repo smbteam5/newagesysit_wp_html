@@ -153,6 +153,34 @@ window.toggleAccordion = (button) => {
     console.error('Accordion content element not found.');
   }
 };
+
+// navigation portfolio
+$('.portfolio-nav').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  speed: 300,
+  infinite: true,
+  autoplaySpeed: 2000,
+  autoplay: true,
+  responsive: [
+{
+  breakpoint: 991,
+  settings: {
+    slidesToShow: 4,
+  }
+},
+{
+  breakpoint: 767,
+  settings: {
+    slidesToShow: 3,
+  }
+}
+]
+});
+
+
 $('.brand_list').slick({
   slidesToShow: 6,
   slidesToScroll: 1,
