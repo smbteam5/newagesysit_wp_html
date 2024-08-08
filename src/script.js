@@ -163,6 +163,7 @@ $('.portfolio-nav').slick({
   speed: 300,
   infinite: true,
   autoplaySpeed: 2000,
+  focusOnSelect: true,
   autoplay: true,
   responsive: [
 {
