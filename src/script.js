@@ -164,7 +164,7 @@ $('.portfolio-nav').slick({
   infinite: true,
   autoplaySpeed: 2000,
   focusOnSelect: true,
-  autoplay: true,
+  autoplay: false,
   responsive: [
 {
   breakpoint: 991,
