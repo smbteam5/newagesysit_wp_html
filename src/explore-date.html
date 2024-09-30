@@ -1436,9 +1436,9 @@
   <section class="w-full bg-[#FF5D0008]">
     <div>
        <div class="container-full">
-          <div class="flex">
+          <div class="flex flex-wrap">
              
-             <div class="hidden md:flex justify-center md:w-2/5">
+             <div class=" md:flex flex-wrap justify-center md:w-2/5 w-full">
                 <div class="p-[30px] bg-[#FF5D00] py-[50px] flex">
                     <div class="self-center">
                         <h2 class="text-white text-[28px] md:text-[50px] font-[700] mb-[20px] min-1024px:leading-[60px]">App Features</h2>
@@ -1447,9 +1447,10 @@
                     </div>
                 </div>
              </div>
-             <div class="pb-5 flex-1 md:w-3/5">
-                <h3 class="text-[22px] text-black mb-4">The app offers a variety of features to meet users' diverse needs:</h3>
+             <div class="pb-5 flex-1 md:w-3/5 p-[10px]">
+                
                 <div class="px-5">
+                  <h3 class="text-[22px] text-black mb-4 py-5 font-medium">The app offers a variety of features to meet users' diverse needs:</h3>
                     <div class="flex gap-3">
                         <div>
                             <div class="w-[30px] h-[30px]">
@@ -1458,7 +1459,7 @@
                         </div>
                        <div>
                           <div class="">
-                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-bold">Chat Option</h5>
+                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-medium">Chat Option</h5>
                              <p class="text-black  text-md lg:text-lg mb-4 font-light">Automatically initiate conversations with matches based on shared interests.
 
                              </p>
@@ -1473,7 +1474,7 @@
                         </div>
                        <div>
                           <div class="">
-                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-bold">Full Transparency</h5>
+                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-medium">Full Transparency</h5>
                              <p class="text-black  text-md lg:text-lg mb-4 font-light">A mandatory full-length photo requirement ensures no surprises during the first meeting.
                              </p>
                           </div>
@@ -1487,7 +1488,7 @@
                         </div>
                        <div>
                           <div class="">
-                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-bold">Unique Grid View</h5>
+                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-medium">Unique Grid View</h5>
                              <p class="text-black  text-md lg:text-lg mb-4 font-light">Users can view multiple potential matches simultaneously, eliminating the endless swiping.
                              </p>
                           </div>
@@ -1501,7 +1502,7 @@
                         </div>
                        <div>
                           <div class="">
-                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-bold">Advanced Filters</h5>
+                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-medium">Advanced Filters</h5>
                              <p class="text-black  text-md lg:text-lg mb-4 font-light">Offers an extensive range of filters to help users find the perfect match.
                              </p>
                           </div>
@@ -1516,7 +1517,7 @@
                         </div>
                        <div>
                           <div class="">
-                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-bold">User Blocking</h5>
+                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-medium">User Blocking</h5>
                              <p class="text-black  text-md lg:text-lg mb-4 font-light">Users can restrict who can communicate with them on the platform by blocking other users. By enabling users to avoid undesired contact, this feature aims to improve user safety and guarantee a great experience.
                              </p>
                           </div>
@@ -1530,7 +1531,7 @@
                         </div>
                        <div>
                           <div class="">
-                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-bold">Subscription Model</h5>
+                             <h5 class="text-black text-[20px] lg:text-[20px] mb-2 font-medium">Subscription Model</h5>
                              <p class="text-black  text-md lg:text-lg mb-4 font-light">The app offers three free interest-based interactions, with additional features available through in-app purchases.
                              </p>
                           </div>
@@ -1708,7 +1709,7 @@
 <div class="grid grid-cols-1  min-768px:grid-cols-2 min-992px:grid-cols-3 gap-4 items-center ">
 <div><a href="#"><img src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg" alt="logo"  class="max-w-[268px]"></a></div>
 <div>
-   <p class="text-black text-md max-w-[292px]">4390 US-1, Suite 110
+   <p class="text-white text-md max-w-[292px]">4390 US-1, Suite 110
    Princeton, NJ 08540
    <a href="tel:+1-609-331-9194">1-609-331-9194 </a>/ <a href="tel:+1-609-919-9816 ">1-609-919-9816 </a>
    <a href="mailto: contactsales@newagesysit.com"> contactsales@newagesysit.com</a><a></a></p>
@@ -2029,33 +2030,7 @@ d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 
         $window.on("scroll resize", check_if_in_view);
         $window.trigger("scroll");
     
-        $(".pf_listz").slick({
-          slidesToShow: 6,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-          infinite: true,
-          speed: 5000,
-          autoplaySpeed: 0,
-          autoplay: true,
-          //cssEase: "linear",
-          responsive: [
-            {
-              breakpoint: 991,
-              settings: {
-                slidesToShow: 3,
-                infinite: true,
-              },
-            },
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 2,
-                infinite: true,
-              },
-            },
-          ],
-        });
+      
       })
     
       window.addEventListener("load", (e) => {
