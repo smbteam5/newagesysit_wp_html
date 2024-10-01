@@ -356,7 +356,7 @@ $(document).ready(function () {
   var slider = $(".dev-services-slider");
   slider.slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: $(".ds_prev"),
     nextArrow: $(".ds_next"),
