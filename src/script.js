@@ -159,6 +159,7 @@ $(document).ready(function () {
   };
 
   // navigation portfolio
+
   $(".portfolio-nav").slick({
     variableWidth: true,
     slidesToShow: 6,
