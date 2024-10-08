@@ -175,32 +175,43 @@ $(document).ready(function () {
   };
 
   // navigation portfolio
-  $(".portfolio-nav").slick({
-    variableWidth: true,
-    slidesToShow: 6,
-    slidesToScroll: 6,
-    arrows: false,
-    dots: false,
-    infinite: false,
-    autoplay: false,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-    ],
-  });
 
+
+  $(document).ready(function(){
+    $(window).resize(function() {
+     var $slider = $('#portfolio-nav');
+     if ($(window).width() < 1050) {
+      $(".portfolio-nav").slick({
+        variableWidth: true,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        arrows: false,
+        dots: false,
+        infinite: false,
+        autoplay: false,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+            },
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+            },
+          },
+        ],
+      });
+     } else {
+         $slider.removeClass('portfolio-nav');
+         $slider.slick('setPosition');
+     }
+ }).resize();
+   })
   $(".brand_list").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
