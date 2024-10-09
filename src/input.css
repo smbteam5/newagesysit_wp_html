@@ -2687,3 +2687,65 @@ html{
   background: rgb(244,235,255);
   background: linear-gradient(180deg, rgba(244,235,255,1) 0%, rgba(208,190,242,1) 100%);
 }
+
+.c_in .text {
+  position: absolute;
+  width: 600px;
+  left: 0%;
+  text-align: left;
+  margin-top: -28px;
+  margin-left: 10px;
+}
+
+.c_in p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.c_in .word {
+  position: absolute;
+  opacity: 0;
+}
+
+.c_in .letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.c_in .letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.c_in .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.c_in .letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.c_in .wisteria {
+  color: #8e44ad;
+}
+
+.c_in .belize {
+  color: #2980b9;
+}
+
+.c_in .pomegranate {
+  color: #c0392b;
+}
+
+.c_in .green {
+  color: #16a085;
+}
+
+.c_in .midnight {
+  color: #2c3e50;
+}
