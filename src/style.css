@@ -1278,10 +1278,6 @@ video {
   width: 60%;
 }
 
-.w-\[600px\] {
-  width: 600px;
-}
-
 .w-\[60px\] {
   width: 60px;
 }
@@ -1850,6 +1846,9 @@ video {
   border-color: rgb(252 253 253 / var(--tw-border-opacity));
 }
 
+.border-\[\#\] {
+  border-color: #;
+}
 
 .border-black {
   --tw-border-opacity: 1;
@@ -5060,6 +5059,11 @@ video {
     border: 1px solid #004be0;
     border-bottom: 0;
   }
+
+  .counts.hire-count-section .sw-app-item {
+    border: 1px solid #70A0FF;
+    border-bottom: 1px solid #70A0FF;
+  }
 }
 
 @keyframes ripple {
@@ -6040,12 +6044,19 @@ html{
 }
 
 .c_in .text {
-  position: absolute;
-  width: 600px;
-  left: 0%;
-  text-align: left;
-  margin-top: -28px;
-  margin-left: 10px;
+  @media(min-width:1024px){
+    position: absolute;
+
+    width: 600px;
+
+    left: 0%;
+
+    text-align: left;
+
+    margin-top: -28px;
+
+    margin-left: 10px;
+  }
 }
 
 .c_in p {
@@ -7200,6 +7211,10 @@ html{
   .min-992px\:leading-\[55px\] {
     line-height: 55px;
   }
+
+  .min-992px\:leading-\[60px\] {
+    line-height: 60px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -7273,6 +7288,10 @@ html{
 
   .min-1024px\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .min-1024px\:w-\[600px\] {
+    width: 600px;
   }
 
   .min-1024px\:w-\[80\%\] {
@@ -7351,6 +7370,16 @@ html{
 
   .min-1024px\:border-image-gradient {
     border-image-source: linear-gradient(90deg, rgba(112, 160, 255, 0) 0%, rgba(112, 160, 255, 0.633) 50%, rgba(112, 160, 255, 0) 100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .max-1024px\:flex-col {
+    flex-direction: column;
+  }
+
+  .max-1024px\:text-center {
+    text-align: center;
   }
 }
 
