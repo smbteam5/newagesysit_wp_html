@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  const tabs = document.querySelectorAll('.tab-nav button');
+      const tabContents = document.querySelectorAll('.tab-content .tab-c');
+    
+      tabs.forEach((tab, index) => {
+        tabContents[0].classList.remove('hidden');
+        //tabs.classList.remove('active-tab');
+        tabs[0].classList.add('active-tab');
+        tab.addEventListener('click', () => {
+          // Hide all tab contents
+          tabContents.forEach(content => content.classList.add('hidden'));
+          tabs.forEach(content => content.classList.remove('active-tab'));
+          // Show the clicked tab content
+          tabContents[index].classList.remove('hidden');
+          tabs[index].classList.add('active-tab');
+        });
+      });
   // counter animation
   var $animation_elements = $(".animation-element");
   var $window = $(window);
