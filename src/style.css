@@ -1062,6 +1062,10 @@ video {
   height: 2.5rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1848,10 +1852,6 @@ video {
 .border-\[\#FCFDFD\] {
   --tw-border-opacity: 1;
   border-color: rgb(252 253 253 / var(--tw-border-opacity));
-}
-
-.border-\[\#\] {
-  border-color: #;
 }
 
 .border-black {
@@ -6118,6 +6118,31 @@ html{
 
 .c_in .midnight {
   color: #2c3e50;
+}
+
+.flow {
+  position: relative;
+}
+
+.flow ::after{
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 42%;
+  z-index: 9;
+  width: 58px;
+  height: 58px;
+  background-image: url("./img/flow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.flow-last-child {
+  margin-right: 50px;
+}
+
+.flow-last-child ::after{
+  display: none;
 }
 
 .hover\:scale-110:hover {

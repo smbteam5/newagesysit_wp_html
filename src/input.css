@@ -2760,3 +2760,23 @@ html{
 .c_in .midnight {
   color: #2c3e50;
 }
+.flow {
+  position: relative;
+}
+.flow ::after{
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 42%;
+  z-index: 9;
+  width: 58px;
+  height: 58px;
+  background-image: url("./img/flow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.flow-last-child { margin-right: 50px;}
+.flow-last-child ::after{
+display: none;
+
+}
