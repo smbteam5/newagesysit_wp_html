@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'quality-gradient-bg': 'linear-gradient(180deg, #FCFDFD 17.22%, rgba(255, 255, 255, 0) 103.21%)',
+      },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
     },
