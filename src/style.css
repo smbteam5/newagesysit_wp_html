@@ -1057,6 +1057,10 @@ video {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .table {
   display: table;
 }
@@ -7576,8 +7580,20 @@ html{
 }
 
 @media (max-width: 1024px) {
+  .max-1024px\:inline-flex {
+    display: inline-flex;
+  }
+
+  .max-1024px\:h-\[50px\] {
+    height: 50px;
+  }
+
   .max-1024px\:flex-col {
     flex-direction: column;
+  }
+
+  .max-1024px\:items-center {
+    align-items: center;
   }
 
   .max-1024px\:text-center {
