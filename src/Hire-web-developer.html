@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neww-96</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"> 
+</head>
+
+<body class="font-inter overflow-x-hidden">
+   <div class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 hidden p-[15px]" id="videoModal">
+      <div class="bg-white rounded-lg overflow-hidden w-full max-w-3xl relative">
+          <div class="relative pb-9/16">
+              <iframe id="youtubePlayer" class="w-full h-[400px]" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="absolute top-0 right-0 m-2 text-white bg-red-600 rounded-full p-2 w-[30px] h-[30px] flex justify-center items-center" id="closeModal">
+              &times;
+          </button>
+      </div>
+  </div>
+  <header  class="top-0 left-0 right-0 fixed text-white z-10" style="background-color: rgba(0, 10, 31) !important;">
+   <div class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto ">
+       <nav class="flex ">
+          <a href="#">
+          <img  src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg" class="h-[40px] md:h-[47px]" alt="Services">
+          </a>
+          <ul class="hidden lg:flex items-center justify-center lg:ml-6">
+             <li class="relative px-4 group">
+                <button class="cursor-default ">Services</button>
+              
+             </li>
+             <li class="relative px-4 group">
+                <button class="cursor-default ">Industries</button>
+             
+             </li>
+             <li class="relative px-4 group">
+                <button class="cursor-default ">Technologies</button>
+              
+             </li>
+             <li class="relative px-4 group">
+                <a href="#" class="cursor-default">Portfolio
+                </a>
+             </li>
+             <li class="relative px-4 group">
+                <a href="#" class="cursor-default">Blog
+                </a>
+             </li>
+             <li class="relative px-4 group">
+                <a href="#" class="cursor-default">Contact
+                </a>
+             </li>
+          </ul>
+       </nav>
+       <nav class="hidden lg:flex">
+          <ul>
+             <li>
+                <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-4 rounded uppercase xl:w-auto">
+                GET A QUOTE
+                </button>
+             </li>
+          </ul>
+       </nav>
+       <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
+          <button class="py-2 px-3 rounded uppercase ">
+          <img class="max-w-6" src="./img/call.png" alt="call">
+          </button>
+          <button id="mobile-menu-button" class="xl:hidden">
+             <svg class="w-7 h-7 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+             </svg>
+          </button>
+       </div>
+   </div>
+
+ 
+</header>
+<section class="banner w-full bg-gradient-to-r from-[#091734] to-[#232653] bg-blend-overlay pt-[80px] bg-cover bg-center" style="background-image: url('./img/banner-wd.jpg');">
+       <div class="container h-full relative">
+            <div class="relative pt-12 md:pt-[0]">    
+                <div class="flex min-1024px:h-auto flex-wrap pb-[50px]">
+                    <div class=" w-full md:w-3/5 self-center min-768px:pb-[40px]">
+                        <h1 class="text-white text-4xl md:text-[60px] md:leading-[80px] leading-normal pb-6">
+                           
+                            <span class="inline-block relative ">
+                                <img src="./img/marked 1.png" alt="Marked Line" class=" absolute bottom-[-20px] min-768px::bottom-[-20px] right-0 w-[70%] h-auto ">
+                                Hire Web Developer 
+                            </span>
+                            <span class="block">
+                                For Your Next Project
+                            </span>
+                        </h1>
+                        <p class="text-white text-[24px] mt-[20px]">The proffessional web developers at NewAgeSysIT are availbale on an instant basis to start addressing your needs for any project.Our specialists develop unique web solutions that address  the needs of your bussiness using a wide range of technologies. </p>
+                        <div>
+                           <div class="flex gap-[15px] mt-4 flex-wrap uppercase">
+                              <button class="bg-primary px-[25px] py-[15px] rounded-[5px] text-white uppercase font-semibold">
+                                 Calculate Pricing
+                              </button>
+                              <button class="bg-white px-[25px] py-[15px] rounded-[5px] uppercase flex gap-2 items-center font-semibold">
+                                 <span>
+                                    <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M13.7365 16.0925C14.0009 16.3597 14.0609 16.6357 13.9408 17.0127C13.4842 18.4109 12.3127 18.96 11.3454 19.2806C10.0723 19.6944 8.86865 19.5231 7.73767 18.7641C4.6944 16.723 2.31979 14.1779 0.996861 10.7552C0.0115725 8.17863 -0.258781 5.4714 0.254891 3.33412C0.699472 1.5768 2.02721 0.650642 4.3132 0.50222C4.79683 0.475504 5.08821 0.689232 5.23841 1.18199C5.54961 2.24618 5.88275 3.19431 6.38591 4.72335C6.55713 5.28142 6.455 5.52186 5.94733 5.76528L5.88125 5.79496C5.26544 6.08587 4.63161 6.38568 3.97976 6.61425C3.61028 6.74783 3.4751 6.9764 3.54719 7.34449C3.96204 9.38382 5.27836 12.2656 7.41625 14.0829C7.83981 14.4331 7.89988 14.4658 8.35648 14.2164C8.64786 14.0532 8.93924 13.8691 9.22161 13.694C9.45292 13.5485 9.68422 13.4061 9.91852 13.2665C10.5914 12.8806 10.8197 12.9163 11.3454 13.4981C11.9972 14.2194 12.8534 15.1664 13.7365 16.0925Z" fill="black"/>
+                                       </svg>
+                                       
+                                 </span>
+                                 Book a 30 min call
+                              </button>
+                           </div>
+                         </div>
+                    </div>
+                    <div class=" w-full md:w-2/5 self-center">
+                        <div class="banner-right pt-[40px] min-768px:pt-[0px]">
+                            <img src="./img/wr-banner-laptop.png" alt="Banner" class="h-[500px] object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner_r_services border border-[#28447D] border-b-0 flex flex-wrap text-white rounded-[4px]">
+                <div class="brs_item w-full min-1024px:w-1/5 min-500px:w-1/2 p-[15px] flex justify-center bg-[url('./img/brd-right.svg')] bg-no-repeat bg-right ">
+                    <div class="brsi_inside flex justify-center flex-col text-center gap-3 ">
+                        <div class="brs_top mx-auto">
+                            <img src="./img/freetrial7.svg" alt="Risk Free Trial" class="mx-auto">
+                        </div>
+                        <div class="brs_btm">
+                            <span>7 Days Risk Free Trial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="brs_item w-full min-1024px:w-1/5 min-500px:w-1/2 p-[15px] flex justify-center bg-[url('./img/brd-right.svg')] bg-no-repeat bg-right ">
+                    <div class="brsi_inside flex justify-center flex-col text-center gap-3">
+                        <div class="brs_top">
+                            <img src="./img/fss2.svg" alt="Any time zone" class="mx-auto">
+                        </div>
+                        <div class="brs_btm">
+                            <span>Any time zone</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="brs_item w-full min-1024px:w-1/5 min-500px:w-1/2 p-[15px] flex justify-center bg-[url('./img/brd-right.svg')] bg-no-repeat bg-right ">
+                    <div class="brsi_inside flex justify-center flex-col text-center gap-3">
+                        <div class="brs_top">
+                            <img src="./img/quality.svg" alt="Quality Services" class="mx-auto">
+                        </div>
+                        <div class="brs_btm">
+                            <span>Quality Services</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="brs_item w-full min-1024px:w-1/5 min-500px:w-1/2 p-[15px] flex justify-center bg-[url('./img/brd-right.svg')] bg-no-repeat bg-right ">
+                    <div class="brsi_inside flex justify-center flex-col text-center gap-3">
+                        <div class="brs_top">
+                            <img src="./img/fss4.svg" alt="Affordable Pricing" class="mx-auto">
+                        </div>
+                        <div class="brs_btm">
+                            <span>Affordable Pricing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="brs_item w-full min-1024px:w-1/5 min-500px:w-1/2 p-[15px] flex justify-center bg-no-repeat bg-right-bottom ">
+                    <div class="brsi_inside flex justify-center flex-col text-center gap-3">
+                        <div class="brs_top">
+                            <img src="./img/work-report.svg" alt="Daily Work Report" class="mx-auto">
+                        </div>
+                        <div class="brs_btm">
+                            <span>Daily Work Report</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </section>
+    <section class="brands py-[80px] md:pt-[50px]">
+        <div class="container-brands ">
+           <div class="c_in pt-8 md:pt-[80px] rounded-2xl ">
+            <h2 class="text-[36px] min-992px:text-[50px] font-bold text-center min-992px:leading-[55px] leading-[45px] mb-2">
+                Join the league of <span class="text-primary">global clientele </span></h2>
+            <div class="clientele py-4 md:py-8 max-w-[900px] mx-auto">
+                <div class="brand-item">
+                    <img src="./img/Stavola.png" alt="Stavola" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/CFT_logo.png" alt="CFT" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/WhipFlip_logo.png" alt="WhipFlip" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/mankind_logo.png" alt="Mankind" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/Auntie_logo.png" alt="Auntie" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/Comcast_logo.png" alt="Comcast" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/Max2Go_logo.png" alt="Max2Go" class="h-[100px] object-contain">
+                </div>
+                <div class="brand-item">
+                    <img src="./img/Martin_Insurance-Group-logo.png" alt="Martin" class="h-[100px] object-contain">
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
+    <section class="services py-10 md:pt-[80px]  md:pb-[80px]">
+        <div class="container">
+            <div class="sec-head text-center pb-[40px]">
+                <h2 class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px]">Hire a Web Developer in  <span class="text-[#FF5D00]">4 Easy Steps</span> </h2>
+                <p class="px-[50px] text-2xl">Hire the most suitable web developer for your project  from NewAgeSysIT's candidate pool.
+               </p>
+            </div>
+            <div class="flex flex-wrap rounded-md h-[350px]">
+                <div class="w-full min-1024px:w-1/4 min-768px:w-1/2  ">
+                    <div class="h-full relative flex items-center ">
+                        <span class="step-arrow absolute -right-[18px] z-[9] hidden min-1024px:block">
+                           <img src="./img/step-arrow.svg" alt="Step Arrow" class="w-[40px] h-[40px] object-contain">
+                        </span>
+                        <div class="ser-item bg-[#001F5C] py-[50px] px-[30px] h-full w-full ">
+                            <div class="ser-top">
+                                <div class="ser-icon text-left  mb-2 pl-5">
+                                    <img src="./img/step1.svg" alt="Step Arrow" class="w-[50px] h-[50px]">
+                                </div>
+                                <div class="ser-name text-left p-5 ">
+                                    <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Discuss your project requirements</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full min-1024px:w-1/4 min-768px:w-1/2 ">
+                  <div class="h-full relative flex items-center">
+                     <span class="step-arrow absolute -right-[18px] z-[9] hidden min-1024px:block">
+                        <img src="./img/step-arrow.svg" alt="Step Arrow" class="w-[40px] h-[40px] object-contain">
+                     </span>
+                        <div class="ser-item bg-[#0C2F74] py-[20px] px-[30px] h-full w-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-left  mb-2 pl-5">
+                                    <img src="./img/step2.svg" alt="Step Arrow" class="w-[50px] h-[50px]">
+                                </div>
+                                <div class="ser-name text-left p-5">
+                                    <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Find the best talent from our talent pool within days</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full min-1024px:w-1/4 min-768px:w-1/2">
+                  <div class="h-full relative flex items-center">
+                     <span class="step-arrow absolute -right-[18px] z-[9] hidden min-1024px:block">
+                        <img src="./img/step-arrow.svg" alt="Step Arrow" class="w-[40px] h-[40px] object-contain">
+                     </span>
+                        <div class="ser-item bg-[#153B85] py-[20px] px-[30px] h-full w-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-left mb-2 pl-5">
+                                    <img src="./img/step3.svg" alt="Step Arrow" class="w-[50px] h-[50px]">
+                                </div>
+                                <div class="ser-name text-left p-5">
+                                    <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Meet, Schedule interviews, and select the right developers </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full min-1024px:w-1/4 min-768px:w-1/2">
+                  <div class="h-full relative flex items-center">
+                        <div class="ser-item bg-[#2651A5] py-[20px] px-[30px] h-full w-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-left mb-2 pl-5">
+                                    <img src="./img/step4.svg" alt="Step Arrow" class="w-[50px] h-[50px]">
+                                </div>
+                                <div class="ser-name text-left p-5">
+                                    <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Onboard and Start your risk free trial</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+               <button class="py-[15px] px-[50px] bg-primary text-white mt-[20px] rounded-md">Hire for Project </button>
+            </div>
+        </div>
+    </section>
+    <section class="ready-start py-10 md:pt-[80px] bg-gradient-to-r from-[#DBE7FF] via-[#DBE7FF] to-[#FFEFE5] md:pb-[80px]">
+        <div class="container">
+            <div class="sec-head text-center pb-[40px]">
+                <h2 class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px]">
+                    Hire Web Developers for Your Unique 
+                    <span class="m-2 block">Bussiness Needs</span></h2>
+             
+            </div>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full min-1024px:w-1/3 min-500px:w-1/2">
+                    <div class="p-[10px] h-full">
+                       <div class="ser-item rounded-[8px] bg-[#fff] p-[32px] h-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/rss-globe.svg" alt="Progressive Web App Development Services" class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2  text-slate-950">Hire Proffessional Website Developers</h2>
+                                </div>
+                                <div class="ser-detail text-justify">
+                                    <p class="text-[16px] min-1024px:text-[18px]">
+                                 Gain acces to web developers who specialize in building exceptional ,user-friendly websites that meet your objectives.Our proffessional website developers ensure optimal performance and seamless functionality.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full min-1024px:w-1/3 min-500px:w-1/2">
+                    <div class="p-[10px] h-full">
+                       <div class="ser-item rounded-[8px] bg-[#fff] p-[32px] h-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/csds1.svg" alt="Enterprise Application Development" class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2 text-slate-950">Hire Front-End Web Developers</h2>
+                                </div>
+                                <div class="ser-detail text-justify">
+                                    <p class="text-[16px] min-1024px:text-[18px]">
+                                       Our talented front-end web devlopers can help you realize your vision by creating engaging,interactive user interfaces that provide a flawless online experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full min-1024px:w-1/3 min-500px:w-1/2">
+                    <div class="p-[10px] h-full">
+                       <div class="ser-item rounded-[8px] bg-[#fff] p-[32px] h-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/as1.svg" alt="UI/UX Design" class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2  text-slate-950">Hire Web Designers</h2>
+                                </div>
+                                <div class="ser-detail text-justify ">
+                                    <p class="text-[16px] min-1024px:text-[18px]">
+                                  Out talented web designers focus on producing visually appealing,responsive designs that raise your bussiness's online profile
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+               
+                
+               
+
+                <div class="w-full min-1024px:w-1/3 min-500px:w-1/2">
+                    <div class="p-[10px] h-full">
+                       <div class="ser-item rounded-[8px] bg-[#fff] p-[32px] h-full">
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/wss6.svg" alt="Backend Development" class="mx-auto w-[100px]">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2  text-slate-950">Hire a Web Programmer</h2>
+                                </div>
+                                <div class="ser-detail text-justify mt-2">
+                                    <p class="text-[16px] min-1024px:text-[18px]">
+                                      Build secure and dynamic websites  with our expert web programmers ,who excel at developing robust backend solutions for bussinesses.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+              <div class="w-full min-1024px:w-1/3 min-500px:w-1/2">
+                <div class="p-[10px] h-full">
+                   <div class="ser-item rounded-[8px] bg-[#fff] p-[32px] h-full">
+                        <div class="ser-top">
+                            <div class="ser-icon text-center mb-2">
+                                <img src="./img/rns2.svg" alt="Cross-Platform App Development" class="mx-auto">
+                            </div>
+                            <div class="ser-name text-center">
+                                <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2 text-slate-950">
+                                   Hire Web Applicaton Developers
+                             </h2>
+                            </div>
+                            <div class="ser-detail text-justify">
+                                <p class="text-[16px] min-1024px:text-[18px]">
+                                  looking to create  scalable web applications?Our experienced web application developers deliver custom-built  solutions to meet your needs
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+           
+        </div>
+            <div class="flex justify-center">
+               <button class="py-[15px] px-[80px] bg-primary text-white mt-[20px] rounded-md p-5">Hire developers for your project​!</button>
+            </div>
+        </div>
+    </section>
+    <section class="flexible-models py-10 bg-[#fff] md:pb-[180px] pt-[80px]">
+      <div class="container">
+          <div class="sec-head text-center pb-[40px]">
+              <h2 class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px]">Our Flexible <span class="text-[#FF5D00]">Hiring Models</span></h2>
+              <p class="px-[50px] text-2xl">Select an Ideal Option for your project needs.</p>
+          </div>
+          <div class="flex flex-wrap ">
+              <div class="w-full min-1024px:w-1/3 min-500px:w-1/2 h-[400px]">
+                  <div class="h-full relative flex items-center p-[15px]">
+                      <div class="ser-item bg-[#CC4B00] py-[20px] px-[30px] h-full w-full rounded-[10px]">
+                          <div class="ser-top">
+                              <div class="ser-icon text-left  mb-2">
+                                  <img src="./img/fh1.svg" alt="Step Arrow" class="w-[50px] h-[50px] mx-auto">
+                              </div>
+                              <div class="ser-name text-center">
+                                  <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Remote</h2>
+                                  <p class="opacity-[.8] text-white">Hire proffesional web developers who work remotely .Our developers are versed in all aspects of web programming ,front-end development ,and web applications to ensure that your bussiness objectives are achieved</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="w-full min-1024px:w-1/3 min-500px:w-1/2 h-[400px]">
+                <div class="h-full relative flex items-center p-[15px]">
+                      <div class="ser-item bg-[#FF5D00] py-[20px] px-[30px] h-full w-full rounded-[10px]">
+                          <div class="ser-top">
+                              <div class="ser-icon text-left mb-2">
+                                  <img src="./img/fh2.svg" alt="Step Arrow" class="w-[50px] h-[50px] mx-auto">
+                              </div>
+                              <div class="ser-name text-center">
+                                  <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Offshore</h2>
+                                      <p  class="opacity-[.8] text-white">Access cost effective offshore web developers from our global talent pool.Hire web application developers and programmers to build secure,scalabe solutions tailored to your requirements.
+                                    </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="w-full min-1024px:w-1/3 min-500px:w-1/2 h-[400px]">
+                <div class="h-full relative flex items-center p-[15px]">
+                      <div class="ser-item bg-[#FF7E33] py-[20px] px-[30px] h-full w-full rounded-[10px]">
+                          <div class="ser-top">
+                              <div class="ser-icon text-left mb-2">
+                                  <img src="./img/fh3.svg" alt="Step Arrow" class="w-[50px] h-[50px] mx-auto">
+                              </div>
+                              <div class="ser-name text-center">
+                                  <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Dedicated Team</h2>
+                                  <p class="opacity-[.8] text-white">
+                                Build a team of expert web designers,front-end developers,and programmers who seamlessly integrate with your senior  management.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <!-- </div>
+          <div class="flex flex-wrap "> -->
+            <div class="w-full min-1024px:w-1/3 min-500px:w-1/2 h-[400px]">
+                <div class="h-full relative flex items-center p-[15px]">
+                    <div class="ser-item bg-[#CC4B00] py-[20px] px-[30px] h-full w-full rounded-[10px]">
+                        <div class="ser-top">
+                            <div class="ser-icon text-left  mb-2">
+                                <img src="./img/clock-1.png" alt="Step Arrow" class="w-[70px] h-[70px] mx-auto">
+                            </div>
+                            <div class="ser-name text-center">
+                                <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white ">Part-Time Developers</h2>
+                                <p class="opacity-[.8] text-white">Hire Web developers part-time for flexible project needs.Whether you require a front-end specialist or a proggessional web designer,our developers deliver exceptional results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full min-1024px:w-1/3 min-500px:w-1/2 h-[400px]">
+              <div class="h-full relative flex items-center p-[15px]">
+                    <div class="ser-item bg-[#FF5D00] py-[20px] px-[30px] h-full w-full rounded-[10px]">
+                        <div class="ser-top">
+                            <div class="ser-icon text-left mb-2">
+                                <img src="./img/clock-2.png" alt="Step Arrow" class="w-[70px] h-[70px] mx-auto">
+                            </div>
+                            <div class="ser-name text-center">
+                                <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Onsite Staff Augmentation</h2>
+                                    <p  class="opacity-[.8] text-white">For hands-on support,hire a web programmer oer web appplication developer to works at your location.This option is perfect for critical projects needing immediate attension.
+                                  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full min-1024px:w-1/3 min-500px:w-1/2 h-[400px]">
+              <div class="h-full relative flex items-center p-[15px]">
+                    <div class="ser-item bg-[#FF7E33] py-[20px] px-[30px] h-full w-full rounded-[10px]">
+                        <div class="ser-top">
+                            <div class="ser-icon text-left mb-2">
+                                <img src="./img/clock-3.png" alt="Step Arrow" class="w-[70px] h-[70px] mx-auto">
+                            </div>
+                            <div class="ser-name text-center">
+                                <h2 class="text-[16px] min-1024px:text-[22px] leading-[30px] mt-[15px] mb-2 text-white">Complete Product Development Team</h2>
+                                <p class="opacity-[.8] text-white">
+                                 Do you need an end-to-end solution,andare you looking to hire web developers and designers?Collaborate with us to create dependable websites,engaging applications,and eye-catching designs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+  </section>
+  <section class="partners min-1024px:mt-[-60px] relative mt-[80px] pb-[80px]">  
+    <span class="absolute left-0 min-1440px:left-[-60px] top-[10%] hidden min-768px:block min-1024px:left-[-40px] z-10">
+        <img src="./img/people-left-wd.png" alt="People Over" class="w-[80px] min-1024px:w-auto ">
+    </span>
+    <span class="absolute right-0 min-1440px:right-[-60px] top-[10%] hidden min-768px:block  min-1024px:right-[-20px] z-10 ">
+        <img src="./img/people_right-wd.png" alt="People Over" class="w-[80px] min-1024px:w-auto ">
+    </span>      
+    <div class="container relative ">
+
+      
+       <div class="c_in bg-[#003296] py-10 md:py-[60px] rounded-2xl p-5">
+        <h2 class="text-[26px] md:text-[36px] min-992px:text-[50px]  font-[700] text-center mb-2 relative min-1024px:leading-[60px] text-white"><span class="block">Why Hire Web Developers </span> <span class="block">From <span class="relative"><img src="https://newagesysit.com/wp-content/uploads/2024/04/marked_line-1.svg" alt="Marked Line" class="absolute bottom-[-25px] right-0 w-[70%] h-auto">NewAgeSysIT?</span></span></h2>
+        
+          
+          <div class="px-[20px] min-992px:px-[50px] pt-[30px] min-992px:w-[70%] mx-auto">
+            <p class="text-white text-[22px] text-center">
+                Top clients, ranging from startups to enterprises, rely on us to expand their application development teams for the following reasons.
+            </p>
+        </div>
+          
+          
+        
+        <div class="flex flex-wrap relative counts mt-[60px] counter_wrap min-1024px:px-[100px] hire-count-section">
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Cost Efficiency</span>
+                     </div>
+                </div>
+               
+            </div>
+           </div>
+           <div  class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Quick Team Setup</span>
+                     </div>
+                </div>
+               
+            </div>
+           </div>
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3 px-3 py-3">
+            <div class="sw-app-item text-white text-center border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Access To large talent pool</span>
+                     </div>
+                </div>
+                
+            </div>
+           </div>
+           <!-- 2 -->
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Experiened developers
+                           </span>
+                     </div>
+                </div>
+                
+            </div>
+           </div>
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Timely Delivery</span>
+                     </div>
+                </div>
+                
+            </div>
+           </div>
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Rigourous Screening process</span>
+                     </div>
+                </div>
+                
+            </div>
+           </div>
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Flexible Time Zone Alignment</span>
+                     </div>
+                </div>
+                
+            </div>
+           </div>
+           <div class="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3  px-3 py-3">
+            <div class="sw-app-item text-white border-r border border-[#70A0FF] p-5 md:py-8 rounded-[10px] h-full px-[5px]">
+                <div class="flex gap-2 min-992px:flex-nowrap flex-wrap items-center">
+                     <div>
+                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8521 3.24514C17.5324 2.65551 17.8499 2.38337 18.2127 2.15659C20.5259 0.614471 23.5194 0.614471 25.7873 2.15659C26.1048 2.38337 26.4676 2.65551 27.148 3.24514C27.4201 3.47192 27.5562 3.60799 27.6922 3.6987C28.6447 4.42441 29.7786 4.87797 30.9579 5.0594C31.1393 5.0594 31.3207 5.10475 31.6836 5.10475C32.5907 5.19546 32.9989 5.19546 33.4071 5.28618C36.1285 5.83045 38.2149 7.91685 38.7592 10.6382C38.8499 11.0011 38.8499 11.4546 38.9406 12.3618C38.986 12.7246 38.986 12.906 38.986 13.0875C39.122 14.2667 39.621 15.4006 40.3467 16.3531C40.4374 16.4892 40.5734 16.6253 40.8002 16.8974C41.3899 17.5778 41.662 17.8952 41.8888 18.2581C43.4309 20.5713 43.4309 23.5648 41.8888 25.8326C41.662 26.1501 41.3899 26.513 40.8002 27.1933C40.5734 27.4654 40.4374 27.6015 40.3467 27.7376C39.621 28.6901 39.1674 29.824 38.986 31.0032C38.9406 31.1847 38.9406 31.3661 38.9406 31.7289C38.8499 32.6361 38.8499 33.0443 38.7592 33.4525C38.1695 36.0832 36.0378 38.2149 33.3164 38.7138C32.9536 38.8045 32.5 38.8045 31.5929 38.8952C31.23 38.9406 31.0486 38.9406 30.8672 38.9406C29.6879 39.0767 28.554 39.5756 27.6015 40.3013C27.4654 40.392 27.3294 40.5281 27.0572 40.7549C26.3769 41.3445 26.0594 41.6166 25.6965 41.8434C23.3834 43.3855 20.3899 43.3855 18.122 41.8434C17.8045 41.6166 17.4417 41.3445 16.7613 40.7549C16.4892 40.5281 16.3531 40.392 16.2171 40.3013C15.2646 39.5756 14.1307 39.122 12.9514 38.9406C12.77 38.8952 12.5886 38.8952 12.2257 38.8952C11.3186 38.8045 10.9104 38.8045 10.5022 38.7138C7.91685 38.2149 5.7851 36.0832 5.28618 33.3618C5.19547 32.9989 5.19546 32.5454 5.10475 31.6382C5.0594 31.2754 5.0594 31.094 5.0594 30.9125C4.92333 29.7333 4.42441 28.5994 3.69871 27.6469C3.60799 27.5108 3.47192 27.3747 3.24514 27.1026C2.65551 26.4222 2.38337 26.1047 2.15659 25.7419C0.614471 23.4287 0.614471 20.4352 2.15659 18.1674C2.38337 17.8499 2.65551 17.487 3.24514 16.8067C3.47192 16.5346 3.60799 16.3985 3.69871 16.2624C4.42441 15.3099 4.87797 14.176 5.0594 12.9968C5.0594 12.8153 5.10475 12.6339 5.10475 12.2711C5.19546 11.3639 5.19547 10.9557 5.28618 10.5475C5.7851 7.9622 7.91685 5.83045 10.6382 5.33153C11.0011 5.24082 11.4546 5.24082 12.3618 5.15011C12.7246 5.10475 12.906 5.10475 13.0875 5.10475C14.2667 4.96868 15.4006 4.46976 16.3531 3.74406C16.4438 3.60799 16.5799 3.51728 16.8521 3.24514Z" stroke="#FCFDFD" stroke-width="2"/><path d="M14.5 22L19 26.5L28 17.5" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round"/></svg>                                
+                     </div>
+                     <div>
+                         <span class="text-[22px]">Transparent Communication</span>
+                     </div>
+                </div>
+                
+            </div>
+           </div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-center pt-4">
+            <button class="py-[10px] px-[30px] bg-primary text-white mt-[20px] rounded-md">Schedule your free consultation</button>
+         </div>
+    </div>
+    </div>
+</section>
+<section class="technology py-10 md:py-[80px] bg-[#EFF3F5]">
+    <div class="container">
+        <div class="dev_head text-[20px] text-center">
+            <h2 class="text-[28px] md:text-[36px] min-992px:text-[50px] font-[700] text-center min-992px:leading-[55px] mb-2 ">
+                <span class="text-primary">Technologies </span>we use 
+            </h2>
+            <p class="text-base md:text-[22px] min-992px:max-w-[70%] mx-auto leading-[32px]">
+                At NewAgeSysIT, our objective is to utilize the most advanced tools and technologies to move your business to the next level.
+            </p>
+        </div>
+        <div class="pt-10 flex flex-wrap gap-5 justify-center">
+            <!-- Row 1: 5 items -->
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/rails.png" alt="Ruby on Rails" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Ruby on Rails</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/react-js-icon-1.webp" alt="React Native" class="w-[76px]" />
+                <div class="pt-4 text-center">React Native</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/javascript.webp" alt="JavaScript" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">JavaScript</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/p-sql.webp" alt="PostgreSQL" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">PostgreSQL</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/redis.png" alt="Swift" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Redis</div>
+            </div>
+            </div>
+            <div class="pt-10 flex flex-wrap gap-5 justify-center">
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/python-1 (1).png" alt="Kotlin" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Python</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/angular.svg" alt="Flutter" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Angular</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/vuejs-1.webp" alt="Vue.js" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Vue.js</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/typescript.png" alt="NativeScript" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">TypeScript</div>
+            </div>
+            </div>
+            <div class="pt-10 flex flex-wrap gap-5 justify-center">
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/html-1 1.png" alt="HTML5" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">HTML5</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/java.png" alt="Xamarin" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Java</div>
+            </div>
+            <div class="bg-white rounded-md p-8 flex flex-col items-center justify-center ">
+                <img src="./img/ruby-1.svg" alt="jQuery Mobile" class="w-[76px]" />
+                <div class="w-[130px] pt-4 text-center">Ruby</div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+    <section class="hire-app bg-[#1A1614] py-10 md:pb-[180px] pt-[80px]">
+        <div class="container">
+            <h2 class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px] text-center text-white"><span class="text-[#FF5D00] block">How To Hire Web Developers</span> From NewAgeSysIT</h2>
+         </div>
+         
+         <div class="relative mt-3 lg:mt-8 flex flex-col-reverse">
+            <div class="flex gap-[20px] ds-arrows z-40 justify-center w-full pt-[20px]">
+               <div class="arrow_wrap flex gap-4">
+                  <span class="ds-left-arrow  cursor-pointer">
+                     <div>
+                        <img src="./img/left-arrow.svg" alt="Left Arrow" class="w-[50px] h-[50px] object-contain">
+                     </div>
+                 </span>
+                 <span class="ds-right-arrow  cursor-pointer">
+                     <div>
+                        <img src="./img/right-arrow.svg" alt="Right Arro" class="w-[50px] h-[50px] object-contain">
+                     </div>
+                 </span>
+                </div>
+            </div>
+            <div class="overflow-hidden">
+                <div class="dev-services-slider overflow-hidden hfc-slider">
+             
+                    <div>
+                     <div class="p-[10px] h-full pl-[0px]">
+                        <div class="ser-item rounded-[5px] bg-[#261C17] p-[20px] h-full border border-[#44332A]">
+                            <span class="absolute -right-[35px] top-[50%] translate-y-[-50%] z-[9] arrow-right-black">
+                                <img src="./img/right-black-arrow.svg" alt="">
+                            </span>
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                 <img src="./img/requirement.png" alt="Custom Mobile App
+                                 Development" class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2 text-[#FF5D00] ">Share Your Requirements
+
+                                    </h2>
+                                </div>
+                                <div class="ser-detail">
+                                    <p class="text-[16px] min-1024px:text-[18px] text-[#867B73] text-center  pt-3">
+                                        Tell us about your project requirements to get started. We guarantee a comprehensive consultation to comprehend your growth objectives, regardless of whether you need to engage a web developer, hire a professional website developer, or web designer. We manage all of your information with the highest secrecy and security.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                     <div class="p-[10px] h-full pl-[0px]">
+                        <div class="ser-item rounded-[5px] bg-[#261C17] p-[20px] h-full border border-[#44332A]">
+                            <span class="absolute -right-[35px] top-[50%] translate-y-[-50%] z-[9]  arrow-right-black ">
+                                <img src="./img/right-black-arrow.svg" alt="">
+                            </span>
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/hfd2.svg" alt="CV Examining
+                                    " class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2 text-[#FF5D00] ">Shortlisting Ideal Candidates.
+                                    </h2>
+                                </div>
+                                <div class="ser-detail">
+                                    <p class="text-[16px] min-1024px:text-[18px] text-[#867B73] text-center  pt-3">
+                                        Our professionals carry out a thorough screening procedure to assist you in selecting the best web developer or programmer for your project. We make sure you get a web developer who fits your unique demands by carefully choosing just the best talent that precisely matches the specifications of your project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                     <div class="p-[10px] h-full pl-[0px]">
+                        <div class="ser-item rounded-[5px] bg-[#261C17] p-[20px] h-full border border-[#44332A]">
+                            <span class="absolute -right-[35px] top-[50%] translate-y-[-50%] z-[9]  arrow-right-black ">
+                                <img src="./img/right-black-arrow.svg" alt="">
+                            </span>
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/hfd3.svg" alt="Scheduling Interviews" class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2 text-[#FF5D00]"> Interview and Final selection
+                                    </h2>
+                                </div>
+                                <div class="ser-detail">
+                                    <p class="text-[16px] min-1024px:text-[18px] text-[#867B73] text-center">
+                                        When we have shortlisted our candidates, you will have the opportunity to interview the best applicants. Since you can take into account a specific candidate's technical skills, ability to solve problems, and fit in the organization’s culture even if hiring a front-end web developer or a web application developer, it will not be hard to make a recruiting decision.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                     <div class="p-[10px] h-full pl-[0px]">
+                        <div class="ser-item rounded-[5px] bg-[#261C17] p-[20px] h-full border border-[#44332A]">
+                            <span class="absolute -right-[35px] top-[50%] translate-y-[-50%] z-[9]  arrow-right-black ">
+                                <img src="./img/right-black-arrow.svg" alt="">
+                            </span>
+                            <div class="ser-top">
+                                <div class="ser-icon text-center mb-2">
+                                    <img src="./img/hfd4.svg" alt="Enterprise Mobile
+                                    App Development" class="mx-auto">
+                                </div>
+                                <div class="ser-name text-center">
+                                    <h2 class="text-[25px] min-1024px:text-[32px] leading-[40px] mb-2 text-[#FF5D00]">Developers are Assigned to Your Project</h2>
+                                </div>
+                                <div class="ser-detail">
+                                    <p class="text-[16px] min-1024px:text-[18px] text-[#867B73] text-center">
+                                        After you choose the ideal candidates, we assign the developers to your project with a focus on seamless onboarding. Whether you decide to hire a web designer or a web programmer, we prioritize smooth integration to ensure the team aligns with your project goals from day one.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                   
+                     
+                   
+                     
+                </div>
+            </div>
+           
+        </div>
+       
+        <div class="flex justify-center pt-4">
+            <button class="py-[10px] px-[30px] bg-primary text-white mt-[20px] rounded-md">Hire professional website developer</button>
+         </div>
+      
+        </div>
+    </section>
+   
+  <section class="client-say py-[60px] bg-grey">
+      <div class="container">
+          <div class="dev_head text-[20px] text-center">
+              <h2 class="text-[28px] md:text-[36px] min-992px:text-[55px]  font-semibold  text-center "><span class="text-primary">Hiring Web Developers </span> from NewAgeSysIT </h2>
+              <p class="text-base md:text-[22px]">Hear straight from our clients</p>
+          </div>
+          <div class="slider_wrapper md:pt-[50px] w-[95%] min-768px:w-[50%] mx-auto relative">
+              <span class="prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 9 15" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.98933 0.732497C8.37986 1.12302 8.37986 1.75619 7.98933 2.14671L2.41403 7.72202L7.84608 13.1541C8.23661 13.5446 8.23661 14.1778 7.84608 14.5683C7.45556 14.9588 6.82239 14.9588 6.43187 14.5683L0.292708 8.42912C-0.0978163 8.0386 -0.0978166 7.40543 0.292708 7.01491L6.57512 0.732497C6.96564 0.341973 7.59881 0.341973 7.98933 0.732497Z" fill="white"></path></svg>
+              </span>
+              <span class="next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 9 15" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.846604 14.5429C0.45608 14.1524 0.45608 13.5192 0.846604 13.1287L6.42191 7.55337L0.989856 2.12132C0.599331 1.7308 0.599331 1.09763 0.989856 0.707107C1.38038 0.316583 2.01354 0.316583 2.40407 0.707107L8.54323 6.84627C8.93375 7.23679 8.93375 7.86996 8.54323 8.26048L2.26082 14.5429C1.87029 14.9334 1.23713 14.9334 0.846604 14.5429Z" fill="white"></path></svg>
+              </span>
+              <div class="video_list w-full pt-8">
+                 
+                  <div class="video_item w-full">
+                      <div class="vi_in w-full h-[400px] mx-auto rounded-lg overflow-hidden relative flex items-center">
+                          <img src="./img/David-Chabukashvili-1-1-1.webp" alt="David Chabukashvili" class="w-full h-full object-cover">        
+                                                              
+                          <div class="play_btn absolute rounded-[50%] w-full h-full video-thumbnail" data-video-id="mr6aBH9l_d0">
+                              <div class="relative inset-0 flex items-center justify-center ripple w-full h-full cursor-pointer">
+                              <svg fill="#fff" height="50px" width="50px" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                  <g>
+                                  <g>
+                                      <path d="M256,0C114.608,0,0,114.608,0,256s114.608,256,256,256s256-114.608,256-256S397.392,0,256,0z M256,496 C123.664,496,16,388.336,16,256S123.664,16,256,16s240,107.664,240,240S388.336,496,256,496z"/>
+                                  </g>
+                                  </g>
+                                  <g>
+                                  <g>
+                                      <polygon points="189.776,141.328 189.776,370.992 388.672,256.16"/>
+                                  </g>
+                                  </g>
+                              </svg>
+                              </div>
+                          </div>                       
+                      </div>
+                      
+                      <div class="vi_dec text-center mt-4">
+                          <p>
+                            “They delivered everything on time and it was of great quality. They go above and beyond to meet your requirements and deliver the product you are looking for….”
+                          </p>
+                          <div class="mt-4">
+                              <span class="block text-[18px] font-[500]"><b>David Chabukashvili</b></span>
+                              <span class="block text-[18px] font-[500]">Founder -LCard App</span>
+                          </div>
+                      </div>
+                  </div>
+                 
+               
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    <section class="faq py-10 md:py-[80px]">
+        <div class="container">
+            <div class="dev_head text-[20px] text-center">
+                <h2 class="text-[28px] md:text-[36px] min-992px:text-[50px]  font-[700] text-center min-992px:leading-[55px] mb-2 "><span class="text-primary">Frequently Asked </span>Questions</h2>
+            </div>
+            <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+                <div class="accordion faq-accordion">
+                    <div class="flex flex-wrap relative">
+                        <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
+                            <div class="px-[6px]">
+                                <div class="bg-[#e9eef1] rounded-[10px] min-h-[80px]">
+                                    <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                      <span class="font-medium">What are the advantages of hiring a professional website developer or dedicated developer?</span>
+                                      <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                       <span class="plus-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                             <rect width="24" height="24" fill="white"/>
+                                             <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                             <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                             </svg>
+                                       </span>
+                                          <span class="minus-icon">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                <rect width="24" height="24" fill="white"/>
+                                                <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                          </span>
+                                      </span>
+                                    </button>
+                                   
+                                  </div>
+                                  <div class="bg-[#e9eef1] rounded-[10px] mt-3 min-h-[80px]">
+                                      <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                        <span class="font-medium">How soon can I hire a web developer from NewAgeSysIT, in less than a day?</span>
+                                        <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                          <span class="plus-icon">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                <rect width="24" height="24" fill="white"/>
+                                                <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                          </span>
+                                             <span class="minus-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                   <rect width="24" height="24" fill="white"/>
+                                                   <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                   </svg>
+                                             </span>
+                                         </span>
+                                      </button>
+                                    
+                                    </div>
+                                  <div class="bg-[#e9eef1] rounded-[10px] mt-3 min-h-[80px]">
+                                      <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                        <span class="font-medium">What if I do not find the work of the developer convincing?​?</span>
+                                        <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                          <span class="plus-icon">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                <rect width="24" height="24" fill="white"/>
+                                                <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                          </span>
+                                             <span class="minus-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                   <rect width="24" height="24" fill="white"/>
+                                                   <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                   </svg>
+                                             </span>
+                                         </span>
+                                      </button>
+                                     
+                                    </div>
+                                    <div class="bg-[#e9eef1] rounded-[10px] mt-3  min-h-[80px]">
+                                        <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                          <span class="font-medium">Why should I look for a web developer with NewAgeSysIT??</span>
+                                          <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                           <span class="plus-icon">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                 <rect width="24" height="24" fill="white"/>
+                                                 <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                 <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                 </svg>
+                                           </span>
+                                              <span class="minus-icon">
+                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                    <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                              </span>
+                                          </span>
+                                        </button>
+                                       
+                                      </div>
+                                      
+                            </div>
+                        </div>
+                        <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black  mt-[15px] min-768px:mt-[0px] ">
+                            <div class="px-[6px]">
+                                
+                                  <div class="bg-[#e9eef1] rounded-[10px] min-h-[80px]">
+                                      <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                        <span class="font-medium">How much am I expected to spend to hire a web developer??</span>
+                                        <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                          <span class="plus-icon">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                <rect width="24" height="24" fill="white"/>
+                                                <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                          </span>
+                                             <span class="minus-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                   <rect width="24" height="24" fill="white"/>
+                                                   <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                   </svg>
+                                             </span>
+                                      </span>
+                                      </button>
+                                      
+                                    </div>
+                                    <!-- new -->
+                                    <div class="bg-[#e9eef1] rounded-[10px] mt-3 min-h-[80px]">
+                                        <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                          <span class="font-medium">Will my project be the sole focus of the developer I hired??</span>
+                                          <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                            <span class="plus-icon">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                  <rect width="24" height="24" fill="white"/>
+                                                  <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  </svg>
+                                            </span>
+                                               <span class="minus-icon">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                     <rect width="24" height="24" fill="white"/>
+                                                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                     </svg>
+                                               </span>
+                                        </span>
+                                       
+                                      </div>
+                                      <div class="bg-[#e9eef1] rounded-[10px] mt-3 min-h-[80px]">
+                                        <button class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]" onclick="toggleAccordion(this)">
+                                          <span class="font-medium">Can I later change the engagement model??
+                                        </span>
+                                          <span class="transform transition-transform duration-200 text-black  absolute right-[15px] rounded-[50%]">
+                                            <span class="plus-icon">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                  <rect width="24" height="24" fill="white"/>
+                                                  <path d="M12 6V18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  </svg>
+                                            </span>
+                                               <span class="minus-icon">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none" class="rounded-[50%]">
+                                                     <rect width="24" height="24" fill="white"/>
+                                                     <path d="M6 12H18" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                                     </svg>
+                                               </span>
+                                        </span>
+                                        </button>
+                                        
+                                      </div>
+                                     
+                                     
+                            </div>
+                        </div>
+                    </div>                    
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="let_discuss bg-[url('./img/cta_bg-1.webp')] py-[60px]">
+      <div class="container">
+          <div class="flex flex-wrap relative">
+              <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black self-center">
+                  <div class="ld_left_wrap text-white">
+                     <h2 class="text-[28px] md:text-[36px] min-992px:text-[50px]  font-medium text-white md:mb-[25px]"><span class="relative "><img src="https://newagesysit.com/wp-content/uploads/2024/04/marked_line-1.svg" alt="Marked Line" class="absolute bottom-[-15px] min-992px:bottom-[-25px] left-0 w-[100%] h-auto hidden md:block">Ready to start </span> <span>hiring? </span></h2>
+                      <p class="text-base md:text-[18px]">Share your requirements with us and we will find the best and most experienced developers for you quickly.</p>
+                      <button class="px-[20px] py-[10px] cursor-pointer text-white bg-primary rounded-[6px] mt-[20px] text-[22px]">Discuss with our Experts</button>
+                  </div>
+              </div>
+              <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
+                  <div class="cta_right min-768px:p-5 py-0 max-768px:mt-[20px] flex">
+                      <form action="" class="px-[30px] py-[40px] bg-white rounded-[15px] max-w-[580px]">
+                          <div class="form-group mb-3">
+                              <input type="text" placeholder="Name" class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]">
+                          </div>
+                          <div class="form-group mb-3">
+                              <input type="text" placeholder="Email Address" class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]">
+                          </div>
+                          <div class="form-group mb-3">
+                              <input type="text" placeholder="Phone Number" class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]">
+                          </div>
+                          <div class="form-group mb-3">
+                              <input type="text" placeholder="Company" class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]">
+                          </div>
+                          <div class="form-group mb-3">
+                              <textarea name="" id="" class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]" placeholder="Message"></textarea>
+                          </div>
+                          <div class="form-group mb-3">
+                              <button class="text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white">Submit</button>
+                          </div>
+                          <div class="form-footer text-[#445D6E] pt-5">
+                              <p class="flex items-center text-sm"><span class="pr-2"><img src="./img/form.svg" alt="Agreement"> </span><span>Your idea is 100% protected by our non disclosure agreement.</span></p>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> 
+
+    <footer class="bg-zinc-800 text-white pt-12 pb-4 px-4">
+        <div class="bg-slate-700 rounded-md mx-auto py-6 md:p-8 container overflow-hidden flex flex-col lg:flex-row justify-between mb-4">
+          <div class="container mx-auto">
+            <div class="grid grid-cols-1  min-768px:grid-cols-2 min-992px:grid-cols-3 gap-4 items-center ">
+              <div><a href="#"><img src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg" alt="logo"  class="max-w-[268px]"></a></div>
+              <div>
+                <p class="text-white text-md max-w-[292px]">4390 US-1, Suite 110
+                  Princeton, NJ 08540
+                  <a href="tel:+1-609-331-9194">1-609-331-9194 </a>/ <a href="tel:+1-609-919-9816 ">1-609-919-9816 </a>
+                  <a href="mailto: contactsales@newagesysit.com"> contactsales@newagesysit.com</a><a></a></p>
+              </div>
+              <div>
+                <form class="mb-2">   
+                  <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                  <div class="relative">
+                      <input type="search" id="search" class="block w-full p-4  text-sm text-gray-900 border border-gray-300 rounded-md  focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required />
+                      <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-primary hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Subscribe</button>
+                  </div>
+                </form>
+                <div class="flex flex-wrap gap-[10px] mt-[10px]">
+                           
+                  <button
+                  type="button"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                  class=" inline-block rounded bg-black hover:bg-slate-800 px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <span class="[&>svg]:h-4 [&>svg]:w-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 320 512">
+                      <path
+                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                    </svg>
+                  </span>
+                  </button>
+                  
+                  <button
+                  type="button"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                  class=" inline-block rounded bg-black hover:bg-slate-800 px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <span class="[&>svg]:h-4 [&>svg]:w-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                    </svg>
+                  </span>
+                  </button>
+                  
+                  <button
+                  type="button"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                  class=" inline-block rounded bg-black hover:bg-slate-800 px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <span class="[&>svg]:h-4 [&>svg]:w-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 576 512">
+                      <path
+                        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                    </svg>
+                  </span>
+                  </button>
+                  
+                  <button
+                  type="button"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                  class=" inline-block rounded bg-black hover:bg-slate-800 px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <span class="[&>svg]:h-4 [&>svg]:w-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                  </span>
+                  </button>
+                  
+                  
+                  <button
+                  type="button"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                  class=" inline-block rounded bg-black hover:bg-slate-800 px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <span class="[&>svg]:h-4 [&>svg]:w-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 448 512">
+                      <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                    </svg>
+                  </span>
+                  </button>
+                  
+                  <button
+                  type="button"
+                  data-twe-ripple-init
+                  data-twe-ripple-color="light"
+                  class=" inline-block rounded bg-black hover:bg-slate-800 px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <span class="[&>svg]:h-4 [&>svg]:w-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 496 512">
+                      <path
+                        d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3 .8-3.4 5-20.3 6.9-28.1 .6-2.5 .3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z" />
+                    </svg>
+                  </span>
+                  </button>
+                  
+                                  </div>
+
+
+
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <div class="container mx-auto ">
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+       <div>
+         <ul class="text-[13px] text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full mt-4">
+           <li class="inline-block py-2  text-yellow-500 uppercase font-medium tracking-wide">Company</li>
+           <li><a href="/portfolio/" class="inline-block py-1 text-white hover:text-yellow-500 no-underline font-normal	">Portfolio</a></li>
+           <li><a href="/contact/" class="inline-block py-1 text-white hover:text-yellow-500 no-underline font-normal">Contact</a></li>
+           <li><a href="/blog/"class="inline-block py-1 text-white hover:text-yellow-500 no-underline font-normal	">Blog</a></li>
+       </ul>
+       </div>
+       <div>
+       <ul class="text-[13px] text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full mt-4">
+         <li class="inline-block py-2  text-yellow-500 uppercase font-medium tracking-wide">Company</li>
+         <li><a href="/custom-software-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Custom Software Development</a></li>
+         <li><a href="/web-application-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Web Application Development</a></li>
+         <li><a href="/mobile-app-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Mobile App Development</a></li>
+         <li><a href="/cloud-consulting/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Cloud Consulting</a></li>
+         <li><a href="/ui-ux-consulting/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">UI/UX Consulting</a></li>
+         <li><a href="/devops-consulting-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">DevOps Consulting Services</a></li>
+         <li><a href="/devops-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">DevOps Development Services</a></li>
+         <li><a href="/ai-ml/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">AI/ML</a></li>
+         <li><a href="/ar-vr/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">AR/VR</a></li>
+         <li><a href="/product-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Product Development</a></li>
+         <li><a href="/maintenance-support/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Maintenance &amp; Support</a></li>
+         <li><a href="/start-up-advisory-consulting" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Start-up Advisory / Consulting</a></li>
+         <li><a href="/digital-transformation/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Digital Transformation</a></li>
+         <li><a href="/it-consulting/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">IT Consulting</a></li>
+         <li><a href="/staff-augmentation/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Staff Augmentation</a></li>
+         <li><a href="/dedicated-development-team/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Dedicated Development Team</a></li>
+         <li><a href="/qa-testing/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">QA &amp; Testing</a></li>
+       </ul>
+       </div>
+       <div>
+         <ul class="text-[13px] text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full mt-4">
+           <li class="inline-block py-2  text-yellow-500 uppercase font-medium tracking-wide">Company</li>
+           <li><a href="/transportation-app/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Transportation</a></li>
+           <li><a href="/healthcare-software-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Healthcare Apps</a></li>
+           <li><a href="/on-demand-app-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">On demand Apps</a></li>
+           <li><a href="/social-media-application-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Social networking Apps</a></li>
+           <li><a href="/media-entertainment-app-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Entertainment Apps</a></li>
+           <li><a href="/restaurant-app-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Restaurant Apps</a></li>
+           <li><a href="/real-estate-app-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Real Estate Apps</a></li>
+           <li><a href="/e-commerce-app-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">E-commerce</a></li>
+           <li><a href="/saas-app-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">SaaS</a></li>
+           <li><a href="/fintech-app-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">FinTech</a></li>
+           <li><a href="/mobile-game-app-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Gaming Apps</a></li>
+           <li><a href="/education-app-development-services/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Education Apps</a></li>
+           <li><a href="/wellness-app-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Wellness Apps</a></li>
+           <li><a href="/uber-like-platform-app-development/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Uber-Like Apps</a></li>
+         </ul>
+       </div>
+       <div>
+         <div>
+           <ul class="text-[13px] text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full mt-4">
+             <li class="inline-block py-2  text-yellow-500 uppercase font-medium tracking-wide">Company</li>
+             <li><a href="/isra-case-study/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">ISRA App - On-Demand Service</a></li>
+             <li><a href="/car-wash-app/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Car Wash App -  Uber Like App </a></li>
+             <li><a href="/whipflip-case-study/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Whip Flip - Web Development</a></li>
+             <li><a href="/moly-case-study/" class="inline-block py-1  text-gray-300 hover:text-yellow-500 no-underline font-normal ">Moly - Hybrid App Development</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+  
+   <div class="container mx-auto border-t border-slate-500 pt-4 mt-8 px-0">
+     <div class=" md:text-right text-[13px]">
+       <a class="text-gray-300 hover:text-white px-3" href="/privacy/">Privacy Policy</a>
+       <a class="text-gray-300 hover:text-white px-3" href="/terms/">Terms & Conditions</a>
+     </div>
+   </div>
+  
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<script src="script.js"></script>
+</html>
+<script>
+        
+    var typing=new Typed(".text", {
+       strings: ["", "Ignite Digital Innovation", "Craft Agile Solutions", "Empower with Expertise"],
+       typeSpeed: 100,
+       backSpeed: 40,
+       loop: true,
+   });
+   
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const isOpen = content.classList.contains('show');
+
+      // Close all accordion items
+      const accordionItems = document.querySelectorAll('.accordion-content');
+      accordionItems.forEach(item => {
+        item.classList.remove('show');
+      });
+
+      // Rotate all accordion icons
+      const accordionIcons = document.querySelectorAll('.transform');
+      accordionIcons.forEach(icon => {
+        icon.classList.remove('rotate-180');
+      });
+
+      // Open the clicked accordion item if it was closed
+      if (!isOpen) {
+        content.classList.add('show');
+        button.querySelector('span:last-child').classList.add('rotate-180');
+      }
+    }
+      // counter animation
+  // button animation
+  var $animation_elements = $('.animation-element');
+  var $window = $(window);
+  var $counter_wrap = $('.counter_wrap')
+  var isAlreadyRun = false;
+
+  function check_if_in_view() {
+      var window_height = $window.height();
+      var window_top_position = $window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+      $.each($counter_wrap, function() {
+          var $element = $(this);
+          var element_height = $element.outerHeight();
+          var element_top_position = $element.offset().top;
+          var element_bottom_position = (element_top_position + element_height);
+          //check to see if this current container is within viewport
+          if ((element_top_position <= window_bottom_position)) {
+              $element.addClass('in-view');
+              console.log("test");
+              if (!isAlreadyRun) {
+                  $element.find('.count-number .no-i').each(function() {
+
+                      $(this).prop('Counter', 0).animate({
+                          Counter: $(this).text()
+                      }
+                      , 
+                      {
+                          duration: 1500,
+                          easing: 'swing',
+                          step: function(now) {
+                              $(this).text(Math.ceil(now));
+                          }
+                      });
+                  });
+              }
+              isAlreadyRun = true;
+          } else {
+              $element.removeClass('in-view');
+          }
+      });
+  }
+  $window.on('scroll resize', check_if_in_view);
+  $window.trigger('scroll');
+//   $(document).ready(function(){
+    
+//   })
+    </script>
