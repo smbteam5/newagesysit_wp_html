@@ -34,6 +34,7 @@ module.exports = {
     
       screens: {
         'min-500px': '500px',
+        'min-550px': '550px',
         'min-768px': '768px',
         'min-992px': '992px',
         'min-1024px': '1024px',
