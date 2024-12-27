@@ -33,11 +33,17 @@ module.exports = {
     },
     
       screens: {
+       
+        'min-320px': '320px',
+        'min-375px': '375px',
+        'min-412px': '412px',
+        'min-425px': '425px',
         'min-500px': '500px',
         'min-550px': '550px',
         'min-768px': '768px',
         'min-992px': '992px',
         'min-1024px': '1024px',
+        'min-1440px':'1440px',
         'max-1024px': {'max': '1024px'},
         'max-768px': {'max': '768px'},
         'max-500px': {'max': '500px'},
