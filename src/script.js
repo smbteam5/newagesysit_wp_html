@@ -421,4 +421,15 @@ $(document).ready(function () {
     $(".dev-services-slider .slick-list").css("margin-left", "0");
     $(".dev-services-slider.slick-slider").css("left", "0px");
   });
+
+  $(document).ready(function() {
+    // Initialize the new Slick Carousel with a unique class
+    $('.slick-carousel-new').slick({
+      slidesToShow: 1,  // Show one slide at a time
+      slidesToScroll: 1, // Scroll one slide at a time
+      prevArrow: '#prev', // Custom left button
+      nextArrow: '#next', // Custom right button
+      dots: false, // Enable dots navigation (optional)
+    });
+  });
 });
