@@ -422,14 +422,40 @@ $(document).ready(function () {
     $(".dev-services-slider.slick-slider").css("left", "0px");
   });
 
-  $(document).ready(function() {
-    // Initialize the new Slick Carousel with a unique class
+  $(document).ready(function(){
     $('.slick-carousel-new').slick({
-      slidesToShow: 1,  // Show one slide at a time
-      slidesToScroll: 1, // Scroll one slide at a time
-      prevArrow: '#prev', // Custom left button
-      nextArrow: '#next', // Custom right button
-      dots: false, // Enable dots navigation (optional)
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: $('#prev'),
+      nextArrow: $('#next'),
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
   });
 });

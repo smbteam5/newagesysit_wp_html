@@ -2839,3 +2839,37 @@ html {
   height: 100%;
   background-color: #000a1fa2;
 }
+
+ .slick-carousel-new .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-carousel-new .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slick-carousel-new .slide h3,
+  .slick-carousel-new .slide p {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .slick-carousel-new .slide {
+      flex-direction: column;
+    }
+
+    .slick-carousel-new .slide div {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .slick-carousel-new .slide h3,
+    .slick-carousel-new .slide p {
+      text-align: left; /* Align text to the left on screens above 1024px */
+    }
+  }
