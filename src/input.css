@@ -2840,36 +2840,32 @@ html {
   background-color: #000a1fa2;
 }
 
- .slick-carousel-new .slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.devops-slider {
+  position: relative;
+  width: 100%;
+  transition: all 0.5s;
+}
+.devops-slider .slick-track {
+  display: flex;
+  gap: 10px;
+}
+.devops-slider .slick-list {
+  overflow: hidden;
+}
+.devops-slider .slick-slide {
+  height: inherit;
+  min-height: 350px !important;
+}
+.devops-slider .slick-slide {
+  position: relative;
+  transition: all 0.5s;
+}
+.devops-slider .slick-slide p {
+  position: relative;
+  transition: all 0.5s;
+}
 
-  .slick-carousel-new .slide img {
-    max-width: 100%;
-    height: auto;
-  }
+.devops-slider .
 
-  .slick-carousel-new .slide h3,
-  .slick-carousel-new .slide p {
-    text-align: center;
-  }
-
-  @media (max-width: 768px) {
-    .slick-carousel-new .slide {
-      flex-direction: column;
-    }
-
-    .slick-carousel-new .slide div {
-      width: 100%;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .slick-carousel-new .slide h3,
-    .slick-carousel-new .slide p {
-      text-align: left; /* Align text to the left on screens above 1024px */
-    }
-  }
+  
+  

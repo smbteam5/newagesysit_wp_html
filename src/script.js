@@ -422,40 +422,48 @@ $(document).ready(function () {
     $(".dev-services-slider.slick-slider").css("left", "0px");
   });
 
-  $(document).ready(function(){
-    $('.slick-carousel-new').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      prevArrow: $('#prev'),
-      nextArrow: $('#next'),
-      adaptiveHeight: true,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            
-          }
+
+  var slider = $(".devops-slider");
+  slider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".prev"),
+    nextArrow: $(".next"),
+    dots: false,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
+  // var container = document.querySelector(".container");
+  // var containerWidth = container.offsetWidth;
+  // var viewportWidth = window.innerWidth;
+  // var leftSpace = (viewportWidth - containerWidth) / 2;
+  // // console.log("containerWidth",leftSpace);
+  // $(".devops-slider.slick-slider").css("left", leftSpace + "px");
+  // slider.on("beforeChange", function () {
+  //   slider.find(".devops-slider .slick-track").css("transform", "");
+  //   $(".devops-slider .slick-list").css("margin-left", "0");
+  //   $(".devops-slider.slick-slider").css("left", "0px");
+  // });
+
+ 
 });
