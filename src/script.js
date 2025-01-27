@@ -423,8 +423,8 @@ $(document).ready(function () {
   });
 
 
-  var slider = $(".devops-slider");
-  slider.slick({
+  var devopSlider = $(".devops-slider");
+  devopSlider.slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -453,17 +453,57 @@ $(document).ready(function () {
       },
     ],
   });
+ 
+//dev-services-slider with 4 slides
+
+  var slider = $(".dev-services-slider_4");
+  slider.slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: $(".ds_prev_new"),
+    nextArrow: $(".ds_next_new"),
+    dots: false,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
   // var container = document.querySelector(".container");
   // var containerWidth = container.offsetWidth;
   // var viewportWidth = window.innerWidth;
   // var leftSpace = (viewportWidth - containerWidth) / 2;
   // // console.log("containerWidth",leftSpace);
-  // $(".devops-slider.slick-slider").css("left", leftSpace + "px");
+  // $(".dev-services-slider_4.slick-slider").css("left", leftSpace + "px");
   // slider.on("beforeChange", function () {
-  //   slider.find(".devops-slider .slick-track").css("transform", "");
-  //   $(".devops-slider .slick-list").css("margin-left", "0");
-  //   $(".devops-slider.slick-slider").css("left", "0px");
+  //   slider.find(".dev-services-slider_4 .slick-track").css("transform", "");
+  //   $(".dev-services-slider_4 .slick-list").css("margin-left", "0");
+  //   $(".dev-services-slider_4.slick-slider").css("left", "0px");
   // });
+
 
  
 });
