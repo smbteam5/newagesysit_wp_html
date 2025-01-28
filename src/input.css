@@ -2891,3 +2891,44 @@ html {
   position: relative;
   transition: all 0.5s;
 }
+
+.feature-class  li {
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+margin: 10px;
+}
+
+.feature-class  li p {
+margin-left: 8px;
+}
+
+
+
+
+  
+.feature-heading-1::after{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #ff5d00;
+  margin-top: 6px;
+}
+
+  .feature-heading-2::after{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ff5d00;
+    margin-top: 6px;
+   
+  }
+
+  @media (max-width: 1023px) {
+    .feature-heading-1::after,
+    .feature-heading-2::after {
+      display: none;
+    }
+  }
