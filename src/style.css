@@ -6809,6 +6809,29 @@ html {
   }
 }
 
+.flow_4 {
+  position: relative;
+}
+
+.flow_4 ::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 42%;
+  z-index: 9;
+  width: 58px;
+  height: 58px;
+  background-image: url("./img/flow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 1024px) {
+  .flow_4 ::after {
+    display:none;
+  }
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -7292,6 +7315,10 @@ html {
     background-image: url('./img/ruby_rails.jpg');
   }
 
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
   .md\:p-8 {
     padding: 2rem;
   }
@@ -7566,6 +7593,10 @@ html {
     margin-top: 0.75rem;
   }
 
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .lg\:mt-8 {
     margin-top: 2rem;
   }
@@ -7634,8 +7665,8 @@ html {
     width: 25%;
   }
 
-  .lg\:w-\[40\%\] {
-    width: 40%;
+  .lg\:w-\[35\%\] {
+    width: 35%;
   }
 
   .lg\:w-\[47px\] {
@@ -7716,6 +7747,10 @@ html {
 
   .lg\:justify-start {
     justify-content: flex-start;
+  }
+
+  .lg\:gap-36 {
+    gap: 9rem;
   }
 
   .lg\:gap-5 {
@@ -8650,3 +8685,4 @@ html {
 .\[\&\>svg\]\:w-4>svg {
   width: 1rem;
 }
+  

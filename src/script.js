@@ -428,8 +428,8 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: $(".prev"),
-    nextArrow: $(".next"),
+    prevArrow: $(".devops_prev"),
+    nextArrow: $(".devops_next"),
     dots: false,
     initialSlide: 0, // Starts at the first slide
     responsive: [
