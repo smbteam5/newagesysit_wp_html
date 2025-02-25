@@ -2892,6 +2892,31 @@ html {
   transition: all 0.5s;
 }
 
+.dev-services-slider_3 {
+  position: relative;
+  width: 100%;
+  transition: all 0.5s;
+}
+.dev-services-slider_3 .slick-track {
+  display: flex;
+  gap: 10px;
+}
+.dev-services-slider_3 .slick-list {
+  overflow: hidden;
+}
+.dev-services-slider_3 .slick-slide {
+  height: inherit;
+  min-height: 350px !important;
+}
+.dev-services-slider_3 .slick-slide {
+  position: relative;
+  transition: all 0.5s;
+}
+.dev-services-slider_3 .slick-slide p {
+  position: relative;
+  transition: all 0.5s;
+}
+
 .feature-class  li {
 display: flex;
 justify-content: flex-start;
@@ -2949,8 +2974,30 @@ margin-left: 8px;
     background-position: center center;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1440px) {
     .flow_4 ::after {
+    display:none;
+    }
+  }
+  
+  .flow_3 {
+    position: relative;
+  }
+  .flow_3 ::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: 42%;
+    z-index: 9;
+    width: 58px;
+    height: 58px;
+    background-image: url("./img/flow.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @media (min-width: 768px) {
+    .flow_3 ::after {
     display:none;
     }
   }
