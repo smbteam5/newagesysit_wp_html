@@ -459,7 +459,7 @@ $(document).ready(function () {
   var slider_4 = $(".dev-services-slider_4");
   slider_4.slick({
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: $(".ds_prev_new"),
     nextArrow: $(".ds_next_new"),
