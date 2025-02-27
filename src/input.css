@@ -2961,6 +2961,7 @@ margin-left: 8px;
   .flow_4 {
     position: relative;
   }
+
   .flow_4 ::after {
     content: "";
     position: absolute;
@@ -2973,7 +2974,12 @@ margin-left: 8px;
     background-repeat: no-repeat;
     background-position: center center;
   }
-
+.flow_4-last-child {
+  margin-right: 50px;
+}
+.flow_4-last-child ::after {
+  display: none;
+}
   @media (min-width: 1440px) {
     .flow_4 ::after {
     display:none;
