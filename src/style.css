@@ -7431,16 +7431,32 @@ html {
   padding: 0.5rem;
 }
 
-.rfp_form .start_date {
-  accent-color: #22c55e;
+.rfp_form .custom-radio {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
 }
 
-.rfp_form .business_type {
-  accent-color: #22c55e;
+.rfp_form .custom-radio:checked {
+  border-color: green;
 }
 
-.rfp_form .ownership {
-  accent-color: #22c55e;
+.rfp_form .custom-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
 }
 
 .rfp_form .submit_button {
