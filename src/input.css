@@ -3017,7 +3017,7 @@ html {
 .rfp_form .zip_code {
   @apply w-full  p-2 rounded-[4px] bg-[#f0eeee];
 }
-.rfp_form .custom-radio {
+.rfp_form .custom-radio input[type="radio"] {
   appearance: none;
   width: 20px;
   height: 20px;
@@ -3026,10 +3026,10 @@ html {
   outline: none;
   position: relative;
 }
-.rfp_form .custom-radio:checked {
+.rfp_form .custom-radio input[type="radio"]:checked {
   border-color: green;
 }
-.rfp_form .custom-radio:checked::before {
+.rfp_form .custom-radio input[type="radio"]:checked::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -3040,6 +3040,12 @@ html {
   background-color: green;
   border-radius: 50%;
 }
+.rfp_form .custom-radio label {
+  @apply flex;
+}
+.rfp_form .custom-radio .wpcf7-list-item-label {
+  @apply ml-2;
+}
 .rfp_form .submit_button {
-  @apply w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600;
+  @apply w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 cursor-pointer;
 }

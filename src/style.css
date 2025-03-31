@@ -7431,7 +7431,7 @@ html {
   padding: 0.5rem;
 }
 
-.rfp_form .custom-radio {
+.rfp_form .custom-radio input[type="radio"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -7443,11 +7443,11 @@ html {
   position: relative;
 }
 
-.rfp_form .custom-radio:checked {
+.rfp_form .custom-radio input[type="radio"]:checked {
   border-color: green;
 }
 
-.rfp_form .custom-radio:checked::before {
+.rfp_form .custom-radio input[type="radio"]:checked::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -7459,10 +7459,19 @@ html {
   border-radius: 50%;
 }
 
+.rfp_form .custom-radio label {
+  display: flex;
+}
+
+.rfp_form .custom-radio .wpcf7-list-item-label {
+  margin-left: 0.5rem;
+}
+
 .rfp_form .submit_button {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
   width: 100%;
+  cursor: pointer;
   border-radius: 0.5rem;
   padding: 0.5rem;
   --tw-text-opacity: 1;
@@ -7702,11 +7711,6 @@ html {
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
-}
-
-.peer:checked ~ .peer-checked\:bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
