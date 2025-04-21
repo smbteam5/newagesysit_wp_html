@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+   
   </head>
 
   <body class="font-inter overflow-x-hidden">
@@ -1845,13 +1846,13 @@
 
     <section
       style="background-image: url('./img/whipflip-banner.png')"
-      class="banner w-full pt-[80px] bg-cover bg-center min-h-[1750px]"
+      class=" w-full pt-[80px] bg-cover bg-center  md:min-h-[1750px]"
     >
       <div class="container h-full py-10">
         <!-- Fixed here: added flex -->
-        <div class="flex flex-col justify-between min-h-[1750px]">
+        <div class="flex flex-col justify-between min-h-[1500px] md:min-h-[1750px]">
           <!-- Top content: Heading section -->
-          <div class="w-full text-center py-10 px-4">
+          <div class="w-full text-center min-375px:py-10 min-375px:px-4">
             <h1
               class="text-white text-3xl md:text-[60px] font-[700] md:leading-[80px] leading-normal"
             >
@@ -1869,9 +1870,11 @@
 
           <!-- Bottom content: Client Overview -->
           <div class="flex justify-center items-center text-white px-4 py-10">
-            <div class="w-full md:w-1/2 backdrop-blur-2xl p-6 rounded-md">
-              <h3 class="text-2xl font-semibold mb-4">Client Overview</h3>
-              <p class="text-base leading-relaxed">
+            <div class="w-full md:w-[90%] backdrop-blur-2xl p-6 rounded-3xl">
+              <h3 class="text-2xl md:text-[50px] font-semibold mb-4">
+                Client Overview
+              </h3>
+              <p class="text-base leading-relaxed text-[16px] xl:text-[24px]">
                 WhipFlip, a Delaware-based digital automotive platform, was
                 founded by a team with over 100 years of combined expertise in
                 the auto industry, consumer services, and technology. Their
@@ -1888,175 +1891,106 @@
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="container mt-[50px]">
-        <div class="py-6 lg:py-20">
-          <h3
-            class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px] text-center"
-          >
-            Client Overview and Partnership
-          </h3>
-          <p
-            class="text-[16px] xl:text-[24px] mb-[10px] min-1024px:w-[90%] mx-auto text-center"
-          >
-            Podiatry Content Connection, a leading U.S.-based SEO service
-            provider, delivers cutting-edge SEO solutions to over 600 companies.
-            However, their manual SEO reporting process was time-consuming and
-            inefficient, requiring teams to search keywords on Google, capture
-            screenshots, highlight rankings, and compile reports into PDFs
-            manually.
-
-            <br />
-            <br />
-            To streamline operations and enhance efficiency, they partnered with
-            NewAgeSysIT to develop a custom automated software
-            solution—eliminating manual tasks and optimizing the reporting
-            workflow.
-          </p>
-        </div>
-      </div>
-    </section>
     <section
-      class="services py-10 md:pt-[80px] bg-[#803ED1] text-white md:pb-[180px]"
-    >
-      <div class="container">
-        <div class="sec-head text-center pb-[40px] p-9">
-          <h2
-            class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px]"
-          >
-            The Solution
-          </h2>
-          <p class="text-[16px] min-1024px:text-[20px] mt-5">
-            To address Podiatry Content Connection’s need for an efficient SEO
-            reporting system, NewAgeSysIT conducted a comprehensive analysis of
-            their requirements and designed a robust, scalable software solution
-            to fully automate the process.
-            <br />
-            <br />
-            Managing reports for 600+ clients required a high-performance
-            system, presenting a significant technical challenge. We tackled
-            this by implementing a microservices-based architecture, ensuring
-            the platform could efficiently handle concurrent requests and
-            automate keyword tracking—completely eliminating the need for manual
-            searches and screenshot-based reporting.
-          </p>
-          <h2
-            class="text-[28px] md:text-[30px] font-[700] mt-7 min-1024px:leading-[60px]"
-          >
-            Key Contributions:
-          </h2>
+     class=" text-black py-16 bg-cover "
+     style="background-image: url('./img/whipflip-sec-bg.png')"
+     >
+      <div class="container mx-auto text-center px-4">
+        <h3 class="text-3xl md:text-5xl font-bold mb-6">The Challenge</h3>
+        <p class="text-base md:text-lg xl:text-xl max-w-4xl mx-auto mb-12">
+          Selling or trading a vehicle independently has long been a frustrating and time-consuming process. WhipFlip identified several critical pain points in the market:
+        </p>
+    
+        <!-- Top pain points -->
+        <div class="flex flex-wrap justify-start gap-6 mb-16">
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/blue-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              A lack of trusted, technology-driven platforms to support seamless used car sales.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/blue-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Lengthy processes with unclear vehicle valuations and consistently low offers.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/blue-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Integrate third-party services such as secure payment processing and responsive customer support.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/blue-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Deliver a seamless, secure, and efficient user experience for both clients and stylists.
+            </p>
+          </div>
         </div>
-        <div class="flex flex-wrap justify-center gap-5 text-black">
-          <div
-            class="w-full min-500px:w-[40%] min-1440px:w-[22%] bg-white rounded-2xl shadow-lg min-h-[250px] flex-col justify-between p-5"
-          >
-            <div class="w-full h-[80px] flex items-center justify-start">
-              <img src="./img/pcc-1.png" alt="" />
-            </div>
-            <div class="">
-              <h4
-                class="text-[20px] min-1024px:text-[24px] font-semibold text-left"
-              >
-                Automated SEO Report Generation
-              </h4>
-              <p class="text-[18px] min-1024px:text-[20px] py-2 text-left">
-                The software automatically tracks keyword rankings on Google and
-                generates detailed reports.
-              </p>
-            </div>
+    
+        <!-- Divider Heading -->
+        <h4 class="text-2xl md:text-3xl font-bold mb-10">They needed a platform that could</h4>
+    
+        <!-- Feature needs -->
+        <div class="flex flex-wrap justify-start gap-6">
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/yellow-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Generate accurate quotes by factoring in vehicle condition and real-time market trends.
+            </p>
           </div>
-          <div
-            class="w-full min-500px:w-[40%] min-1440px:w-[22%] bg-white rounded-2xl shadow-lg min-h-[250px] flex-col justify-between p-5"
-          >
-            <div class="w-full h-[80px] flex items-center justify-start">
-              <img src="./img/pcc-2.png" alt="" />
-            </div>
-            <div class="">
-              <h4
-                class="text-[20px] min-1024px:text-[24px] font-semibold text-left"
-              >
-                Microservices-Based Server
-              </h4>
-              <p class="text-[18px] min-1024px:text-[20px] py-2 text-left">
-                Designed to handle high volumes of concurrent requests
-                efficiently.
-              </p>
-            </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/yellow-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Detect damage automatically through AI-powered image recognition technology.
+            </p>
           </div>
-          <div
-            class="w-full min-500px:w-[40%] min-1440px:w-[22%] bg-white rounded-2xl shadow-lg min-h-[250px] flex-col justify-between p-5"
-          >
-            <div class="w-full h-[80px] flex items-center justify-start">
-              <img src="./img/pcc-3.png" alt="" />
-            </div>
-            <div class="">
-              <h4
-                class="text-[20px] min-1024px:text-[24px] font-semibold text-left"
-              >
-                Seamless Admin Panel Integration
-              </h4>
-              <p class="text-[18px] min-1024px:text-[20px] py-2 text-left">
-                Fetches keyword data from the admin panel for automated
-                tracking.
-              </p>
-            </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/yellow-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Integrate real-time vehicle history reports for full transparency.
+            </p>
           </div>
-          <div
-            class="w-full min-500px:w-[40%] min-1440px:w-[22%] bg-white rounded-2xl shadow-lg min-h-[250px] flex-col justify-between p-5"
-          >
-            <div class="w-full h-[80px] flex items-center justify-start">
-              <img src="./img/pcc-4.png" alt="" />
-            </div>
-            <div class="">
-              <h4
-                class="text-[20px] min-1024px:text-[24px] font-semibold text-left"
-              >
-                Multiple Report Types:
-              </h4>
-
-              <ul
-                class="list-disc pl-5 text-[18px] min-1024px:text-[20px] py-2 text-left"
-              >
-                <li>
-                  <span class="font-bold">SEO Report</span>: Weekly keyword
-                  rankings and positioning.
-                </li>
-                <li>
-                  <span class="font-bold">SEO Summary Report</span>: A
-                  comprehensive review is shared with clients every three
-                  months.
-                </li>
-              </ul>
-            </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/yellow-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Digitally manage paperwork and title transfers, streamlining the entire process.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 w-full sm:w-[45%] xl:w-[30%]">
+            <img src="./img/yellow-check.png" alt="check" class="w-7 h-7 mt-1" />
+            <p class="text-left text-lg text-gray-700">
+              Enable users to complete the sale entirely from their phone, anytime, anywhere.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+   
+    
+    
+      <div class="container mx-auto text-center py-12">
+       
+        <h3 class="text-3xl md:text-5xl font-bold mb-6">The Solution</h3>
+        <p class="text-base md:text-lg xl:text-xl max-w-4xl mx-auto mb-12">
+          NewAgeSysIT partnered with WhipFlip to transform their concept into a scalable, production-ready web application. The journey began with a 4–6 week product discovery phase.
 
-    <section
-      class="bg-gradient-to-r from-[#FFFFFF] to-[#FCE8FF] text-black py-12"
-    >
-      <div class="container mx-auto text-center">
-        <h3 class="text-3xl md:text-5xl font-bold mb-10">
-          Software Functionality
-        </h3>
-
+        </p>
         <div class="flex flex-col items-center justify-center space-y-8 my-10">
           <!-- Functionality Items -->
           <div class="flex items-start space-x-4 w-full lg:w-[60%] xl:w-[40%]">
             <img
               src="./img/round-tick-black.svg"
               alt="tick"
-              class="w-6 h-6 mt-1"
+              class="w-7 h-7 mt-1"
             />
             <div class="text-left">
               <h5 class="text-xl lg:text-2xl font-bold">
-                Automated SEO Reports
+                Defined Scope
               </h5>
               <p class="text-md text-gray-700">
-                Weekly keyword ranking reports are generated without manual
-                intervention.
+                Defined the full scope of work to ensure alignment with business objectives.
+
               </p>
             </div>
           </div>
@@ -2065,15 +1999,15 @@
             <img
               src="./img/round-tick-black.svg"
               alt="tick"
-              class="w-6 h-6 mt-1"
+              class="w-7 h-7 mt-1"
             />
             <div class="text-left">
               <h5 class="text-xl lg:text-2xl font-bold">
-                Automated SEO Summary Reports
+                Roadmap Planning
               </h5>
               <p class="text-md text-gray-700">
-                A quarterly report consolidating keyword performance data and
-                providing comparative insights.
+                Developed a realistic launch roadmap with clear milestones and timelines.
+
               </p>
             </div>
           </div>
@@ -2082,15 +2016,15 @@
             <img
               src="./img/round-tick-black.svg"
               alt="tick"
-              class="w-6 h-6 mt-1"
+              class="w-7 h-7 mt-1"
             />
             <div class="text-left">
               <h5 class="text-xl lg:text-2xl font-bold">
-                Seamless Integration with the Admin Panel
+                UI/UX & Prototype Design
               </h5>
               <p class="text-md text-gray-700">
-                The system reads keyword data and fetches rankings directly from
-                Google.
+                Designed a user-first UI/UX along with a clickable prototype to visualize the experience.
+
               </p>
             </div>
           </div>
@@ -2099,22 +2033,139 @@
             <img
               src="./img/round-tick-black.svg"
               alt="tick"
-              class="w-6 h-6 mt-1"
+              class="w-7 h-7 mt-1"
             />
             <div class="text-left">
               <h5 class="text-xl lg:text-2xl font-bold">
-                Automated Keyword Tracking
+                Scalable Tech Stack
               </h5>
               <p class="text-md text-gray-700">
-                Eliminates manual searches and screenshots by retrieving keyword
-                rankings automatically.
+                Aligned the technology stack with WhipFlip’s long-term goals and scalability needs.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <section class="py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Core Features Delivered</h2>
+  
+        <div class="flex flex-col md:flex-row border border-yellow-200 rounded-2xl shadow-md overflow-hidden p-3">
+          <!-- Tabs -->
+          <div class="md:w-1/3 border-r border-gray-200">
+            <button class="tab-button w-full text-left px-6 py-4 hover:bg-gray-50 text-gray-400">AI-Powered Vehicle Valuation</button>
+            <button class="tab-button w-full text-left px-6 py-4 hover:bg-gray-50 text-gray-400">AI-powered Quote Engine</button>
+            <button class="tab-button w-full text-left px-6 py-4 hover:bg-gray-50 text-gray-400">AutoCheck Vehicle History API Integration</button>
+            <button class="tab-button w-full text-left px-6 py-4 hover:bg-gray-50 text-gray-400">Online Documentation and Title Transfers</button>
+            <button class="tab-button w-full text-left px-6 py-4 hover:bg-gray-50 text-gray-400">Step Selling Process</button>
+            <button class="tab-button w-full text-left px-6 py-4 hover:bg-gray-50 text-gray-400">WhipFlip Car Concierge</button>
+          </div>
+  
+          <!-- Content -->
+          <div class="md:w-2/3 px-6 py-8 space-y-4">
+            <div class="tab-content hidden">
+              <h3 class="text-xl font-semibold mb-4">AI-Powered Vehicle Valuation</h3>
+              <div class="flex gap-3">
+               <img src="./img/tick-circle.png" alt="check" class="w-5 h-5 mt-1" />
+                <p>Custom integration of third-party AI tools to analyze visible damage through user-uploaded photos and videos.</p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./img/tick-circle.png" alt="check" class="w-5 h-5 mt-1" />
+                <p>A damage scoring engine that seamlessly integrates with the quote generation system to deliver accurate valuations.</p>
+              </div>
+            </div>
+  
+            <div class="tab-content hidden">
+              <h3 class="text-xl font-semibold mb-4">AI-powered Quote Engine</h3>
+              <p>Real-time quote generation based on current market trends, vehicle specs, and historical data.</p>
+            </div>
+  
+            <div class="tab-content hidden">
+              <h3 class="text-xl font-semibold mb-4">AutoCheck Vehicle History API Integration</h3>
+              <p>Instant retrieval of vehicle history reports using trusted AutoCheck APIs.</p>
+            </div>
+  
+            <div class="tab-content hidden">
+              <h3 class="text-xl font-semibold mb-4">Online Documentation and Title Transfers</h3>
+              <p>Digitally managed paperwork and title transfers for a streamlined experience.</p>
+            </div>
+  
+            <div class="tab-content hidden">
+              <h3 class="text-xl font-semibold mb-4">Step Selling Process</h3>
+              <p>Guided step-by-step selling process that improves user experience and reduces drop-off.</p>
+            </div>
+  
+            <div class="tab-content hidden">
+              <h3 class="text-xl font-semibold mb-4">WhipFlip Car Concierge</h3>
+              <p>Personal concierge service to handle logistics, pickup, and post-sale support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+    class="bg-white p-4 xl:px-10 xl:py-14"
+  >
+    <div class="pf_listz overflow-hidden px-[20px]">
+      <div>
+        <div class="pf_item flex items-center justify-center">
+          <img
+            src="./img/whipflip-screen-1.jpg"
+            alt="auntie-frame"
+            class="object-contain p-1"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="pf_item flex items-center justify-center">
+          <img
+            src="./img/whipflip-screen-2.jpg"
+            alt="auntie-frame"
+            class="object-contain p-1"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="pf_item flex items-center justify-center">
+          <img
+            src="./img/whipflip-screen-3.jpg"
+            alt="auntie-frame"
+            class="object-contain p-1"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="pf_item flex items-center justify-center">
+          <img
+            src="./img/whipflip-screen-4.jpg"
+            alt="auntie-frame"
+            class="object-contain p-1"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="pf_item flex items-center justify-center">
+          <img
+            src="./img/whipflip-screen-5.jpg"
+            alt="auntie-frame"
+            class="object-contain p-1"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="pf_item flex items-center justify-center">
+          <img
+            src="./img/whipflip-screen-6.jpg"
+            alt="auntie-frame"
+            class="object-contain p-1"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
     <section class="pb-10 lg:pb-16 pt-6">
       <div class="container mx-auto px-4">
         <div class="py-6 lg:pb-20">
@@ -2130,98 +2181,82 @@
             <div class="">
               <div class="mt-6">
                 <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
-                  Admin Web Dashboard development and Application Servers
+                 Frontend
                 </h3>
                 <div class="flex flex-wrap gap-3 mt-4 font-medium">
                   <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Nginx
+                    React.js
                   </div>
+                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
+                    HTML5
+                  </div>
+
+                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
+                    CSS3
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
+                  APIs
+                </h3>
+                <div class="flex flex-wrap gap-3 mt-4 font-medium">
+                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
+                    AutoCheck
+                  </div>
+                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
+                    DocuSign                  </div>
+                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
+                    HelloSign
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="mt-6">
+                <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
+                  Backend: Node.js, Python (ML models)
+                </h3>
+                <div class="flex flex-wrap gap-3 mt-4 font-medium">
                   <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
                     Node.js
                   </div>
-
                   <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Nest js
+                    Python (ML models)
                   </div>
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Postgresql
-                  </div>
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    RabbitMq
-                  </div>
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Microservice Architecture
-                  </div>
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    SerpAPI
-                  </div>
+                 
                 </div>
               </div>
-
               <div class="mt-6">
                 <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
-                  Database Servers
+                  Hosting
                 </h3>
                 <div class="flex flex-wrap gap-3 mt-4 font-medium">
                   <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Postgresql
+                    AWS with CI/CD pipelines for deployment
                   </div>
+                 
                 </div>
               </div>
             </div>
             <div class="">
               <div class="mt-6">
                 <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
-                  Authentication and Authorization Servers
+                  Database
                 </h3>
                 <div class="flex flex-wrap gap-3 mt-4 font-medium">
                   <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    API Key
-                  </div>
-                </div>
-              </div>
-              <div class="mt-6">
-                <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
-                  DevOps and CI/CD
-                </h3>
-                <div class="flex flex-wrap gap-3 mt-4 font-medium">
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Github actions
+                    MongoDB 
                   </div>
                   <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Jenkins
+                    PostgreSQL 
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="mt-6">
-                <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
-                  Backup and Disaster Recovery Servers
-                </h3>
-                <div class="flex flex-wrap gap-3 mt-4 font-medium">
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Regular backups
-                  </div>
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Automated failover mechanisms
-                  </div>
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    Disaster recovery plans
-                  </div>
+                
                 </div>
               </div>
 
-              <div class="mt-6">
-                <h3 class="text-sm font-semibold uppercase text-[#445D6E]">
-                  Cloud Hosting and Services
-                </h3>
-                <div class="flex flex-wrap gap-3 mt-4 font-medium">
-                  <div class="px-4 py-2 border rounded-3xl bg-[#FCFDFD]">
-                    AWS
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -2236,12 +2271,7 @@
           >
             Results
           </h3>
-          <p
-            class="text-white text-md lg:text-lg mb-4 font-light w-full text-center"
-          >
-            The implementation of this software has transformed the client's
-            reporting process, delivering:
-          </p>
+         
           <div class="grid grid-cols-1 xl:grid-cols-2 xl:gap-5">
             <div>
               <div class="grid grid-cols-12 gap-4 mt-2 md:mt-8">
@@ -2255,9 +2285,8 @@
                 <div class="col-span-11">
                   <div class="pl-3">
                     <p class="text-white text-md lg:text-lg mb-4 font-light">
-                      <span class="font-semibold">Significant Time Savings</span
-                      >–Automated reporting replaced the labor-intensive manual
-                      process.
+                      AI-based vehicle assessment for fair offers.
+
                     </p>
                   </div>
                 </div>
@@ -2276,10 +2305,8 @@
                 <div class="col-span-11">
                   <div class="pl-3">
                     <p class="text-white text-md lg:text-lg mb-4 font-light">
-                      <span class="font-semibold"
-                        >Scalability & Efficiency
-                      </span>
-                      – Seamless handling of reports for 600+ clients.
+                      Car sales completed in less than 5 minutes via mobile.
+
                     </p>
                   </div>
                 </div>
@@ -2297,17 +2324,50 @@
                 <div class="col-span-11">
                   <div class="pl-3">
                     <p class="text-white text-md lg:text-lg mb-4 font-light">
-                      <span class="font-semibold"
-                        >Enhanced Client Satisfaction
-                      </span>
-                      – Timely, accurate, and professional SEO reports.
+                      Positive customer feedback and a 4.8-star rating on Google.
                     </p>
-                  </div>
+                  </div>            
+                </div>       
+              </div>
+            </div>
+            <div>
+              <div class="grid grid-cols-12 gap-4 mt-2 md:mt-8">
+                <div>
+                  <img
+                    class="min-w-[20px] md:min-w-[46px] mt-1"
+                    src="./img/tick_big.png"
+                    alt="Results tick"
+                  />
                 </div>
+                <div class="col-span-11">
+                  <div class="pl-3">
+                    <p class="text-white text-md lg:text-lg mb-4 font-light">
+                      Boosted user confidence with transparent pricing and instant payments.
+                    </p>
+                  </div>             
+                </div>    
+              </div>
+            </div>
+            <div>
+              <div class="grid grid-cols-12 gap-4 mt-2 md:mt-8">
+                <div>
+                  <img
+                    class="min-w-[20px] md:min-w-[46px] mt-1"
+                    src="./img/tick_big.png"
+                    alt="Results tick"
+                  />
+                </div>
+                <div class="col-span-11">
+                  <div class="pl-3">
+                    <p class="text-white text-md lg:text-lg mb-4 font-light">
+                      Instant quotes with complete pricing breakdown.
+                    </p>
+                  </div>               
+                </div>              
               </div>
             </div>
           </div>
-          <p class="text-white text-md lg:text-lg mb-4 font-light">
+          <p class="text-white text-md lg:text-lg my-4  font-light">
             The client praised NewAgeSysIT’s innovative approach and technical
             expertise, reaffirming our commitment to delivering high-performance
             solutions that optimize business operations.
@@ -3075,5 +3135,27 @@
   window.addEventListener("load", (e) => {
     e.preventDefault();
     $(".pf_listz").slick("refresh");
+  });
+
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("text-black", "font-semibold", "border-r-4", "border-blue-500"));
+        tab.classList.add("text-black", "font-semibold", "border-r-4", "border-blue-500");
+
+        contents.forEach(c => c.classList.add("hidden"));
+        contents[index].classList.remove("hidden");
+      });
+    });
+
+    // Set initial active tab
+    tabs[0].classList.add("text-black", "font-semibold", "border-r-4", "border-blue-500");
+    contents[0].classList.remove("hidden");
   });
 </script>
