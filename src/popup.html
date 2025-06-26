@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            overflow: hidden;
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            flex: 0 0 100%; /* Each slide takes full width */
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d1d5db; /* Gray-300 */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #f97316; /* Orange-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-2xl  p-8 relative slider-container">
+        <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slide flex-shrink-0 p-4">
+                <div class="mb-6 text-center">
+                    <svg class="w-10 h-10 text-blue-500 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M11.707 3.293a1 1 0 010 1.414L7.414 10l4.293 4.293a1 1 0 01-1.414 1.414L6 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L4.586 10 0.293 5.707a1 1 0 011.414-1.414L6 8.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="text-xl md:text-2xl font-medium text-gray-800 mt-4">
+                        "They delivered everything on time and it was of great quality. They go above and beyond to meet your requirements and deliver the product you are looking for...."
+                    </p>
+                </div>
+                <div class="flex items-center justify-center mt-8">
+                    <img class="w-16 h-16 rounded-full mr-4 object-cover" src="https://via.placeholder.com/150/0000FF/FFFFFF?text=David" alt="David Chabukashvili">
+                    <div>
+                        <p class="font-semibold text-gray-900">DAVID CHABUKASHVILI</p>
+                        <p class="text-gray-600 text-sm">Founder -LCArd App</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide flex-shrink-0 p-4">
+                <div class="mb-6 text-center">
+                    <svg class="w-10 h-10 text-blue-500 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M11.707 3.293a1 1 0 010 1.414L7.414 10l4.293 4.293a1 1 0 01-1.414 1.414L6 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L4.586 10 0.293 5.707a1 1 0 011.414-1.414L6 8.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="text-xl md:text-2xl font-medium text-gray-800 mt-4">
+                        "Excellent service! They truly understand our needs and deliver high-quality solutions every time. Highly recommended for their professionalism."
+                    </p>
+                </div>
+                <div class="flex items-center justify-center mt-8">
+                    <img class="w-16 h-16 rounded-full mr-4 object-cover" src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Jane" alt="Jane Doe">
+                    <div>
+                        <p class="font-semibold text-gray-900">JANE DOE</p>
+                        <p class="text-gray-600 text-sm">CEO - Innovate Solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide flex-shrink-0 p-4">
+                <div class="mb-6 text-center">
+                    <svg class="w-10 h-10 text-blue-500 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M11.707 3.293a1 1 0 010 1.414L7.414 10l4.293 4.293a1 1 0 01-1.414 1.414L6 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L4.586 10 0.293 5.707a1 1 0 011.414-1.414L6 8.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="text-xl md:text-2xl font-medium text-gray-800 mt-4">
+                        "A truly collaborative experience. They listened to our feedback and iterated quickly to deliver exactly what we envisioned. Fantastic team!"
+                    </p>
+                </div>
+                <div class="flex items-center justify-center mt-8">
+                    <img class="w-16 h-16 rounded-full mr-4 object-cover" src="https://via.placeholder.com/150/008000/FFFFFF?text=Mark" alt="Mark Johnson">
+                    <div>
+                        <p class="font-semibold text-gray-900">MARK JOHNSON</p>
+                        <p class="text-gray-600 text-sm">Product Manager - Global Tech</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex justify-center mt-8 space-x-2" id="dotsContainer">
+            </div>
+    </div>
+
+    <script>
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        const dotsContainer = document.getElementById('dotsContainer');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Create dots dynamically
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) {
+                    dot.classList.add('active');
+                }
+                dot.dataset.index = i;
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                    resetAutoSlide();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        // Go to a specific slide
+        function goToSlide(index) {
+            currentSlide = index;
+            const offset = -currentSlide * 100; // Calculate offset for transform
+            sliderWrapper.style.transform = `translateX(${offset}%)`;
+            updateDots();
+        }
+
+        // Update active dot
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        // Start auto-sliding
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        // Reset auto-sliding (for manual dot clicks)
+        function resetAutoSlide() {
+            clearInterval(slideInterval);
+            startAutoSlide();
+        }
+
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', () => {
+            createDots();
+            startAutoSlide();
+        });
+    </script>
+</body>
+</html>

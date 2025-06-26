@@ -300,6 +300,30 @@ $(document).ready(function () {
       },
     ],
   });
+    $(".modal_items").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    speed: 300,
+    infinite: true,
+    autoplaySpeed: 5000,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
   // video_list
   $(".video_list").slick({
     slidesToShow: 1,
