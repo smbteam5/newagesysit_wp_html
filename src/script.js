@@ -559,6 +559,42 @@ $(document).ready(function () {
       },
     ],
   });
+  var blog_slider = $(".blog_slider");
+  blog_slider.slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $(".blog_next"),
+    nextArrow: $(".blog_prev"),
+    dots: false,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
  
 
 

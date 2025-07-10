@@ -58,6 +58,7 @@ module.exports = {
       animation: {
         ripple: 'ripple 2s linear infinite',
          dropFromTop: 'dropFromTop .8s ease-out forwards',
+          flicker: 'flicker 0.2s ease-in-out infinite',
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(0deg, rgba(231,231,231,0) 0%, rgba(221,221,221,1) 100%)',
@@ -77,6 +78,10 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(-100vh)' },
           '80%': { opacity: '1', transform: 'translateY(15px)' },  // slight overshoot
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+         flicker: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.6' },
         },
       },
     },
