@@ -15,6 +15,8 @@ $(document).ready(function () {
           tabs[index].classList.add('active-tab');
         });
       });
+
+      
   // counter animation
   var $animation_elements = $(".animation-element");
   var $window = $(window);
@@ -596,7 +598,32 @@ $(document).ready(function () {
     ],
   });
  
+  const typeTabs = document.querySelectorAll(".type-tab button");
+  const typeTabContents = document.querySelectorAll(".type-tab-content .tab-c");
 
+  let activeIndex = 0;
 
+  // Initial state
+  typeTabContents[0].classList.remove("opacity-0", "pointer-events-none");
+  typeTabContents[0].classList.add("opacity-100");
+  typeTabs[0].classList.add("active-tab-type");
+
+  typeTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      if (index === activeIndex) return;
+
+      // Fade out current
+      typeTabContents[activeIndex].classList.remove("opacity-100");
+      typeTabContents[activeIndex].classList.add("opacity-0", "pointer-events-none");
+      typeTabs[activeIndex].classList.remove("active-tab-type");
+
+      // Fade in new
+      typeTabContents[index].classList.remove("opacity-0", "pointer-events-none");
+      typeTabContents[index].classList.add("opacity-100");
+      typeTabs[index].classList.add("active-tab-type");
+
+      activeIndex = index;
+    });
+  });
  
 });
