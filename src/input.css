@@ -3052,3 +3052,40 @@ html {
 }
 
 
+
+@media (min-width: 1024px) { /* Tailwind's lg breakpoint */
+  .custom-dashed {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3) 12px,
+      transparent 12px,
+      transparent 24px
+    ) 1;
+    border-image-slice: 1;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+.new-flow {
+  position: relative;
+}
+.new-flow::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: 42%;
+  z-index: 9;
+  width: 100px;
+  height: 40px;
+  background-image: url("./img/Arrow\ 5.svg"); /* Your custom arrow path */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.new-flow-last-child::after {
+  display: none;
+}

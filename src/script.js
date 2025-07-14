@@ -627,3 +627,59 @@ $(document).ready(function () {
   });
  
 });
+
+
+
+  var slider = $(".dev-services-slider_new");
+  slider.slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $(".ds_prev"),
+    nextArrow: $(".ds_next"),
+    dots: false,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  var container = document.querySelector(".container");
+  var containerWidth = container.offsetWidth;
+  var viewportWidth = window.innerWidth;
+  var leftSpace = (viewportWidth - containerWidth) / 2;
+  // console.log("containerWidth",leftSpace);
+  $(".dev-services-slider_new.slick-slider").css("left", leftSpace + "px");
+  slider.on("beforeChange", function () {
+    slider.find(".dev-services-slider_new .slick-track").css("transform", "");
+    $(".dev-services-slider_new .slick-list").css("margin-left", "0");
+    $(".dev-services-slider_new.slick-slider").css("left", "0px");
+  });
