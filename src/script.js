@@ -15,6 +15,8 @@ $(document).ready(function () {
           tabs[index].classList.add('active-tab');
         });
       });
+
+      
   // counter animation
   var $animation_elements = $(".animation-element");
   var $window = $(window);
@@ -596,7 +598,88 @@ $(document).ready(function () {
     ],
   });
  
+  const typeTabs = document.querySelectorAll(".type-tab button");
+  const typeTabContents = document.querySelectorAll(".type-tab-content .tab-c");
 
+  let activeIndex = 0;
 
+  // Initial state
+  typeTabContents[0].classList.remove("opacity-0", "pointer-events-none");
+  typeTabContents[0].classList.add("opacity-100");
+  typeTabs[0].classList.add("active-tab-type");
+
+  typeTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      if (index === activeIndex) return;
+
+      // Fade out current
+      typeTabContents[activeIndex].classList.remove("opacity-100");
+      typeTabContents[activeIndex].classList.add("opacity-0", "pointer-events-none");
+      typeTabs[activeIndex].classList.remove("active-tab-type");
+
+      // Fade in new
+      typeTabContents[index].classList.remove("opacity-0", "pointer-events-none");
+      typeTabContents[index].classList.add("opacity-100");
+      typeTabs[index].classList.add("active-tab-type");
+
+      activeIndex = index;
+    });
+  });
  
 });
+
+
+
+  var slider = $(".dev-services-slider_new");
+  slider.slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $(".ds_prev"),
+    nextArrow: $(".ds_next"),
+    dots: false,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  var container = document.querySelector(".container");
+  var containerWidth = container.offsetWidth;
+  var viewportWidth = window.innerWidth;
+  var leftSpace = (viewportWidth - containerWidth) / 2;
+  // console.log("containerWidth",leftSpace);
+  $(".dev-services-slider_new.slick-slider").css("left", leftSpace + "px");
+  slider.on("beforeChange", function () {
+    slider.find(".dev-services-slider_new .slick-track").css("transform", "");
+    $(".dev-services-slider_new .slick-list").css("margin-left", "0");
+    $(".dev-services-slider_new.slick-slider").css("left", "0px");
+  });
