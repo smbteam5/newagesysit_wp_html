@@ -1499,9 +1499,9 @@
         <!-- mobile-menu end-->
     </header>
 
-<section>
+<section class="relative">
     <div class="w-full border-b mt-24 border-[#C3C9D0] ">
-    <div class="lg:max-w-[80%] mx-auto px-6 flex justify-between space-x-6 overflow-x-auto text-[18px] font-medium">
+    <div class="lg:max-w-[80%] mx-auto px-6 flex justify-between space-x-6 overflow-x-auto text-[16px] font-normal">
       <a href="#" class="text-[#364EBE] border-b-[3px] border-[#364EBE] pb-2">All</a>
       <a href="#" class="text-gray-600 hover:text-black text-nowrap">Product Development</a>
       <a href="#" class="text-gray-600 hover:text-black text-nowrap ">Marketing</a>
@@ -1509,12 +1509,44 @@
       <a href="#" class="text-gray-600 hover:text-black text-nowrap">Design</a>
       <a href="#" class="text-gray-600 hover:text-black text-nowrap">Artificial Intelligence</a>
       <a href="#" class="text-gray-600 hover:text-black text-nowrap">Technology</a>   
-      <select  class="text-gray-600 hover:text-black mb-2 text-nowrap" id="Others" name="Others">
-      <option value="Others">Others</option>
-      <option value="Others">Others</option>
-     </select>    
+      <div class=" group">
+  <button id="othersButton" class="text-gray-600 hover:text-black text-nowrap flex items-center gap-1">
+    Others
+    <svg class="w-4 h-4 mt-[2px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+
+  <!-- Dropdown -->
+  <div id="othersMenu"
+       class="absolute right-0 md:right-40 top-5 z-50 mt-2 md:w-[450px] max-h-[500px] overflow-y-auto bg-white shadow-lg border rounded-xl p-6 hidden">
+    <h4 class="text-lg font-bold mb-4 text-black">Categories</h4>
+    <div class="flex flex-wrap gap-3">
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Travel</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Social Media</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Productivity</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Fintech</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Gaming & Esports</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Education</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Education</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Social Media</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Productivity</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Fintech</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Gaming & Esports</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Education</span>
+          <span class="border rounded-md  px-3 py-1 text-[#2A2D30] text-sm hover:border hover:border-blue-300 cursor-default hover:bg-blue-50">Education</span>
+        </div>
+  </div>
+</div>
+
     </div>
   </div>
+  <!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black/30  z-40 hidden pointer-events-auto"></div>
+
+
+
+
 </section>
 
 
@@ -1843,6 +1875,39 @@
   </div>
   </section>
   
+<script>
+  const othersButton = document.getElementById('othersButton');
+  const othersMenu = document.getElementById('othersMenu');
+  const overlay = document.getElementById('overlay');
+
+  othersButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = !othersMenu.classList.contains('hidden');
+
+    if (isOpen) {
+      othersMenu.classList.add('hidden');
+      overlay.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    } else {
+      othersMenu.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!othersMenu.contains(e.target) && !othersButton.contains(e.target)) {
+      othersMenu.classList.add('hidden');
+      overlay.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+
+
+</script>
+
+
+
   <footer class="bg-zinc-800 text-white pt-12 pb-4 px-4">
         <div
             class="bg-slate-700 rounded-md mx-auto py-6 md:p-8 container overflow-hidden flex flex-col lg:flex-row justify-between mb-4">
