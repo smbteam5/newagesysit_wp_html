@@ -61,6 +61,7 @@ module.exports = {
           flicker: 'flicker 0.2s ease-in-out infinite',
            'up-down': 'up-down 0.6s ease-in-out',
              'rotate-up': 'rotate-up 0.6s ease-in-out',
+              'rotate-right': 'rotate-right 0.6s ease-in-out',
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(0deg, rgba(231,231,231,0) 0%, rgba(221,221,221,1) 100%)',
@@ -93,6 +94,11 @@ module.exports = {
           '0%': { transform: 'rotateX(0deg)' },
           '50%': { transform: 'rotateX(90deg)', opacity: 0 },
           '100%': { transform: 'rotateX(0deg)', opacity: 1 },
+        },
+         'rotate-right': {
+          '0%': { transform: 'rotateY(0deg)', opacity: 1 },
+          '50%': { transform: 'rotateY(90deg)', opacity: 0 },
+          '100%': { transform: 'rotateY(0deg)', opacity: 1 },
         },
       },
     },
