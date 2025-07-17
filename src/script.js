@@ -630,13 +630,13 @@ $(document).ready(function () {
 
 
 
-  var slider = $(".dev-services-slider_new");
+  var slider = $(".healthcare-slider");
   slider.slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: $(".ds_prev"),
-    nextArrow: $(".ds_next"),
+    prevArrow: $(".health_prev"),
+    nextArrow: $(".health_next"),
     dots: false,
     initialSlide: 0, // Starts at the first slide
     responsive: [
@@ -683,3 +683,167 @@ $(document).ready(function () {
     $(".dev-services-slider_new .slick-list").css("margin-left", "0");
     $(".dev-services-slider_new.slick-slider").css("left", "0px");
   });
+
+
+
+  var case_slider = $(".case-study-slider");
+
+   case_slider.on("init", function () {
+    // re-check visibility on init
+    if (window.innerWidth < 768) {
+      $(".case_prev, .case_next").hide();
+    } else {
+      $(".case_prev, .case_next").show();
+    }
+  });
+  case_slider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".case_prev"),
+    nextArrow: $(".case_next"),
+    dots: true,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  var client_slider = $(".client-feedback-slider");
+
+   
+  client_slider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+   autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    initialSlide: 0, // Starts at the first slide
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+
+  var case_slider = $(".health-case-study-slider");
+
+// Function to toggle navigation buttons
+function toggleSliderNav() {
+  if (window.innerWidth < 768) {
+    $(".case_prev, .case_next").hide();
+  } else {
+    $(".case_prev, .case_next").show();
+  }
+}
+
+// On init
+case_slider.on("init", function () {
+  toggleSliderNav();
+});
+
+// On window resize
+$(window).on("resize", function () {
+  toggleSliderNav();
+});
+
+// Initialize slick
+case_slider.slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: $(".case_prev"),
+  nextArrow: $(".case_next"),
+  dots: true,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1439,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
