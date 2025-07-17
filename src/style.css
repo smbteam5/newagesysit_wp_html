@@ -2222,10 +2222,6 @@ video {
   max-width: 425px;
 }
 
-.max-w-\[520px\] {
-  max-width: 520px;
-}
-
 .max-w-\[572px\] {
   max-width: 572px;
 }
@@ -2363,11 +2359,6 @@ video {
 
 .rotate-45 {
   --tw-rotate: 45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-90 {
-  --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3547,6 +3538,11 @@ video {
   background-color: rgb(255 126 51 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#FF8214\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 130 20 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FFE2E4\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 226 228 / var(--tw-bg-opacity));
@@ -3638,11 +3634,6 @@ video {
 .bg-\[\#f0eeee\] {
   --tw-bg-opacity: 1;
   background-color: rgb(240 238 238 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ff5f1f\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 95 31 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#fff\] {
@@ -5116,6 +5107,11 @@ video {
 .text-\[\#626970\] {
   --tw-text-opacity: 1;
   color: rgb(98 105 112 / var(--tw-text-opacity));
+}
+
+.text-\[\#6981F1\] {
+  --tw-text-opacity: 1;
+  color: rgb(105 129 241 / var(--tw-text-opacity));
 }
 
 .text-\[\#867B73\] {
@@ -8910,6 +8906,115 @@ html {
   opacity: 0;
 }
 
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.health-accordion-content {
+  max-height: 5rem;
+  /* Adjusted to show partial content (e.g., 2 lines of text) */
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding-top 0.4s ease, padding-bottom 0.4s ease;
+  padding-top: 1rem;
+  /* Initial padding when closed */
+  padding-bottom: 1rem;
+  /* Initial padding when closed */
+}
+
+.health-accordion-content.show {
+  max-height: 1000px;
+  /* Enough to reveal full text, adjust if content is much longer */
+  padding-top: 1rem;
+  /* Add padding when shown */
+  padding-bottom: 1rem;
+  /* Add padding when shown */
+}
+
+.health-accordion-content .full-text {
+  display: none;
+}
+
+.health-accordion-content.show .summary-text {
+  display: none;
+}
+
+.health-accordion-content.show .full-text {
+  display: block;
+}
+
+/* Icon Styling */
+
+.icon-wrapper {
+  position: relative;
+  /* Needed for absolute positioning of child icons */
+  width: 48px;
+  /* Match the w-12 (48px) from Tailwind */
+  height: 48px;
+  /* Match the h-12 (48px) from Tailwind */
+  display: flex;
+  /* Use flex to center the icon if needed */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Ensures any rotation outside the bounds is clipped */
+}
+
+.closed-arrow,
+      .open-arrow {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* Slightly longer transition for better visual */
+}
+
+.closed-arrow {
+  opacity: 1;
+  transform: rotate(0deg);
+  pointer-events: auto;
+}
+
+.open-arrow {
+  opacity: 0;
+  /* Hidden by default */
+  transform: rotate(90deg);
+  /* Start rotated for open state */
+  pointer-events: none;
+  /* Not clickable when hidden */
+}
+
+/* When the parent container has 'accordion-open' class */
+
+.accordion-item-container.accordion-open .closed-arrow {
+  opacity: 0;
+  /* Fade out closed arrow */
+  transform: rotate(-90deg);
+  /* Rotate closed arrow as it fades out */
+  pointer-events: none;
+  /* Make it unclickable */
+}
+
+.accordion-item-container.accordion-open .open-arrow {
+  opacity: 1;
+  /* Fade in open arrow */
+  transform: rotate(0deg);
+  /* Rotate open arrow to its final position */
+  pointer-events: auto;
+  /* Make it clickable */
+}
+
+.case-study-slider .slick-track {
+  display: flex !important;
+}
+
+.case-study-slider .slick-slide {
+  height: 100% !important;
+  display: flex;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -9010,11 +9115,6 @@ html {
 .hover\:bg-\[\#e65c00\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(230 92 0 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[\#e9561c\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 86 28 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-black\/10:hover {
