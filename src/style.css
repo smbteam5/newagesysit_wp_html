@@ -1749,10 +1749,6 @@ video {
   max-height: 9999px;
 }
 
-.min-h-\[100px\] {
-  min-height: 100px;
-}
-
 .min-h-\[1500px\] {
   min-height: 1500px;
 }
@@ -2370,18 +2366,13 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.rotate-\[-45deg\] {
-  --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-\[90deg\] {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .rotate-90 {
   --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[-45deg\] {
+  --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3370,6 +3361,11 @@ video {
   background-color: rgb(219 231 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#DEE3E9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 227 233 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#E2E7FF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(226 231 255 / var(--tw-bg-opacity));
@@ -3790,11 +3786,6 @@ video {
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#DEE3E9\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(222 227 233 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-60 {
@@ -8902,6 +8893,23 @@ html {
   border-radius: 9999px;
 }
 
+.ripple-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  background-color: white;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1);
+  z-index: 0;
+}
+
+.group:hover .ripple-wrapper::before {
+  transform: scale(20);
+  opacity: 0;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -12289,4 +12297,4 @@ html {
 
 .\[\&\>svg\]\:w-4>svg {
   width: 1rem;
-} 
+}
