@@ -630,59 +630,54 @@ $(document).ready(function () {
 
 
 
-  var slider = $(".healthcare-slider");
-  slider.slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    prevArrow: $(".health_prev"),
-    nextArrow: $(".health_next"),
-    dots: false,
-    initialSlide: 0, // Starts at the first slide
-    responsive: [
-      {
-        breakpoint: 1439,
-        settings: {
-          slidesToShow: 3,
-        },
+ var slider = $(".healthcare-slider");
+slider.slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  prevArrow: $(".health_prev"),
+  nextArrow: $(".health_next"),
+  dots: false,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1441, // ≤1440px
+      settings: {
+        slidesToShow: 4,
       },
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 2,
-        },
+    },
+    {
+      breakpoint: 1025, // ≤1024px
+      settings: {
+        slidesToShow: 3,
       },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-        },
+    },
+    {
+      breakpoint: 769, // ≤768px
+      settings: {
+        slidesToShow: 2,
       },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-        },
+    },
+    {
+      breakpoint: 500, // ≤500px
+      settings: {
+        slidesToShow: 1,
       },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-  var container = document.querySelector(".container");
-  var containerWidth = container.offsetWidth;
-  var viewportWidth = window.innerWidth;
-  var leftSpace = (viewportWidth - containerWidth) / 2;
+    },
+  ],
+});
+
+  // var container = document.querySelector(".container");
+  // var containerWidth = container.offsetWidth;
+  // var viewportWidth = window.innerWidth;
+  // var leftSpace = (viewportWidth - containerWidth) / 2;
   // console.log("containerWidth",leftSpace);
-  $(".dev-services-slider_new.slick-slider").css("left", leftSpace + "px");
-  slider.on("beforeChange", function () {
-    slider.find(".dev-services-slider_new .slick-track").css("transform", "");
-    $(".dev-services-slider_new .slick-list").css("margin-left", "0");
-    $(".dev-services-slider_new.slick-slider").css("left", "0px");
-  });
+  // $(".healthcare-slider.slick-slider").css("left", leftSpace + "px");
+  // slider.on("beforeChange", function () {
+  //   slider.find(".healthcare-slider .slick-track").css("transform", "");
+  //   $(".healthcare-slider .slick-list").css("margin-left", "0");
+  //   $(".healthcare-slider.slick-slider").css("left", "0px");
+  // });
 
 
 
@@ -846,4 +841,38 @@ case_slider.slick({
       },
     },
   ],
+});
+
+
+ var slider = $(".industry-slider");
+var isSliderInitialized = false;
+
+function initializeSlider() {
+  if (window.innerWidth >= 768) {
+    if (!isSliderInitialized) {
+      slider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $(".industry_prev"),
+        nextArrow: $(".industry_next"),
+        dots: true,
+        initialSlide: 0,
+      });
+      isSliderInitialized = true;
+    }
+  } else {
+    if (isSliderInitialized) {
+      slider.slick('unslick');
+      isSliderInitialized = false;
+    }
+  }
+}
+
+// Run on page load
+initializeSlider();
+
+// Run on window resize
+$(window).on('resize', function () {
+  initializeSlider();
 });
