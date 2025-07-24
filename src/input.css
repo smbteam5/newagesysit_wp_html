@@ -3157,6 +3157,19 @@ html {
   border-radius: 9999px;
 }
 
+   .ripple-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  background-color: white;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1);
+  z-index: 0;
+}
 .ripple-wrapper::before {
   content: "";
   position: absolute;
@@ -3322,5 +3335,46 @@ html {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+ .custom-bottom-border {
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-image: repeating-linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3) 12px,
+        transparent 12px,
+        transparent 24px
+      )
+      1;
+    border-image-slice: 1;
+    border-left: none;
+    border-top: none;
+
+    border-right: none;
+  }
+
+ @media (max-width: 767px) {
+  .mobile-scrollbar {
+    overflow-x: scroll !important;
+    scrollbar-color: #2A2D30 #e0e0e0;
+    scrollbar-width: thin;
+    padding-bottom: 1rem; /* Same as pb-4 */
+    box-sizing: content-box;
+  }
+
+  .mobile-scrollbar::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .mobile-scrollbar::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+
+  .mobile-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #2A2D30;
+    border-radius: 8px;
+  }
 }
 

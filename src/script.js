@@ -633,7 +633,7 @@ $(document).ready(function () {
  var slider = $(".healthcare-slider");
 slider.slick({
   infinite: true,
-  slidesToShow: 5,
+  slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow: $(".health_prev"),
   nextArrow: $(".health_next"),
@@ -643,7 +643,7 @@ slider.slick({
     {
       breakpoint: 1441, // ≤1440px
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
       },
     },
     {
@@ -666,6 +666,42 @@ slider.slick({
     },
   ],
 });
+
+ var slider = $(".eco-slider");
+slider.slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  prevArrow: $(".eco_prev"),
+  nextArrow: $(".eco_next"),
+  dots: true,
+  initialSlide: 0,
+  responsive: [
+   
+    {
+      breakpoint: 1025, // ≤1024px
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll:2
+      },
+    },
+    {
+      breakpoint: 769, // ≤768px
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll:2
+      },
+    },
+    {
+      breakpoint: 500, // ≤500px
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll:1
+      },
+    },
+  ],
+});
+
 
   // var container = document.querySelector(".container");
   // var containerWidth = container.offsetWidth;
