@@ -630,8 +630,8 @@ $(document).ready(function () {
 
 
 
- var slider = $(".healthcare-slider");
-slider.slick({
+ var health_slider = $(".healthcare-slider");
+health_slider.slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -649,7 +649,7 @@ slider.slick({
     {
       breakpoint: 1025, // ≤1024px
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
       },
     },
     {
@@ -667,8 +667,8 @@ slider.slick({
   ],
 });
 
- var slider = $(".eco-slider");
-slider.slick({
+ var eco_slider = $(".eco-slider");
+eco_slider.slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -703,17 +703,7 @@ slider.slick({
 });
 
 
-  // var container = document.querySelector(".container");
-  // var containerWidth = container.offsetWidth;
-  // var viewportWidth = window.innerWidth;
-  // var leftSpace = (viewportWidth - containerWidth) / 2;
-  // console.log("containerWidth",leftSpace);
-  // $(".healthcare-slider.slick-slider").css("left", leftSpace + "px");
-  // slider.on("beforeChange", function () {
-  //   slider.find(".healthcare-slider .slick-track").css("transform", "");
-  //   $(".healthcare-slider .slick-list").css("margin-left", "0");
-  //   $(".healthcare-slider.slick-slider").css("left", "0px");
-  // });
+ 
 
 
 
@@ -877,6 +867,53 @@ case_slider.slick({
       },
     },
   ],
+});
+
+
+var case_new_slider = $(".health-case-study-new-slider");
+
+// Function to initialize or destroy slick based on screen width
+function initOrDestroySlider() {
+  if (window.innerWidth < 1024) {
+    if (!case_new_slider.hasClass("slick-initialized")) {
+      case_new_slider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false, // No prev/next buttons
+        dots: true,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    }
+  } else {
+    if (case_new_slider.hasClass("slick-initialized")) {
+      case_new_slider.slick("unslick");
+    }
+  }
+}
+
+// Init on load
+$(document).ready(function () {
+  initOrDestroySlider();
+});
+
+// Re-check on resize
+$(window).on("resize", function () {
+  initOrDestroySlider();
 });
 
 

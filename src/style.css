@@ -661,6 +661,10 @@ video {
   left: -100%;
 }
 
+.-left-full {
+  left: -100%;
+}
+
 .-right-\[18px\] {
   right: -18px;
 }
@@ -3973,8 +3977,8 @@ video {
   background-image: url('./img/hma-banner-1.png');
 }
 
-.bg-\[url\(\'\.\/img\/hsd-banner\.png\'\)\] {
-  background-image: url('./img/hsd-banner.png');
+.bg-\[url\(\'\.\/img\/hsd-banner-mobile\.png\'\)\] {
+  background-image: url('./img/hsd-banner-mobile.png');
 }
 
 .bg-\[url\(\'\.\/img\/junk_banner\.jpg\'\)\] {
@@ -9082,23 +9086,17 @@ html {
 
 .health-accordion-content {
   max-height: 5rem;
-  /* Adjusted to show partial content (e.g., 2 lines of text) */
   overflow: hidden;
   transition: max-height 0.4s ease, padding-top 0.4s ease,
     padding-bottom 0.4s ease;
   padding-top: 1rem;
-  /* Initial padding when closed */
   padding-bottom: 1rem;
-  /* Initial padding when closed */
 }
 
 .health-accordion-content.show {
   max-height: 1000px;
-  /* Enough to reveal full text, adjust if content is much longer */
   padding-top: 1rem;
-  /* Add padding when shown */
   padding-bottom: 1rem;
-  /* Add padding when shown */
 }
 
 .health-accordion-content .full-text {
@@ -9117,17 +9115,12 @@ html {
 
 .icon-wrapper {
   position: relative;
-  /* Needed for absolute positioning of child icons */
   width: 48px;
-  /* Match the w-12 (48px) from Tailwind */
   height: 48px;
-  /* Match the h-12 (48px) from Tailwind */
   display: flex;
-  /* Use flex to center the icon if needed */
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* Ensures any rotation outside the bounds is clipped */
 }
 
 .closed-arrow,
@@ -9136,7 +9129,6 @@ html {
   top: 5px;
   right: 12px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  /* Slightly longer transition for better visual */
 }
 
 .closed-arrow {
@@ -9147,31 +9139,20 @@ html {
 
 .open-arrow {
   opacity: 0;
-  /* Hidden by default */
   transform: rotate(90deg);
-  /* Start rotated for open state */
   pointer-events: none;
-  /* Not clickable when hidden */
 }
-
-/* When the parent container has 'accordion-open' class */
 
 .accordion-item-container.accordion-open .closed-arrow {
   opacity: 0;
-  /* Fade out closed arrow */
   transform: rotate(-90deg);
-  /* Rotate closed arrow as it fades out */
   pointer-events: none;
-  /* Make it unclickable */
 }
 
 .accordion-item-container.accordion-open .open-arrow {
   opacity: 1;
-  /* Fade in open arrow */
   transform: rotate(0deg);
-  /* Rotate open arrow to its final position */
   pointer-events: auto;
-  /* Make it clickable */
 }
 
 .health-case-study-slider .slick-track {
@@ -9210,6 +9191,18 @@ html {
   height: 100%;
 }
 
+.health-case-study-new-slider .slick-track {
+  display: flex !important;
+}
+
+.health-case-study-new-slider .slick-slide {
+  height: inherit;
+}
+
+.health-case-study-new-slider .slick-slide > div {
+  height: 100%;
+}
+
 .slider-track {
   animation: slide 20s linear infinite;
 }
@@ -9224,19 +9217,13 @@ html {
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-
 .scrollbar-hide {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }
 
 #accordionImageContainer {
@@ -9645,6 +9632,11 @@ html {
 
 .group:hover .group-hover\:translate-x-\[12rem\] {
   --tw-translate-x: 12rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:translate-x-full {
+  --tw-translate-x: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -10307,6 +10299,10 @@ html {
     gap: 2.5rem;
   }
 
+  .md\:gap-16 {
+    gap: 4rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -10392,6 +10388,10 @@ html {
   .md\:object-contain {
     -o-object-fit: contain;
        object-fit: contain;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:p-10 {
@@ -10639,6 +10639,10 @@ html {
     padding-top: 6rem;
   }
 
+  .md\:pt-40 {
+    padding-top: 10rem;
+  }
+
   .md\:pt-8 {
     padding-top: 2rem;
   }
@@ -10786,6 +10790,11 @@ html {
 
   .md\:text-\[70px\] {
     font-size: 70px;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-lg {
@@ -11020,6 +11029,10 @@ html {
 
   .lg\:h-\[985px\] {
     height: 985px;
+  }
+
+  .lg\:h-\[calc\(70vh\)\] {
+    height: calc(70vh);
   }
 
   .lg\:h-full {
