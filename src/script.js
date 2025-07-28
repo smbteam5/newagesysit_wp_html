@@ -669,7 +669,7 @@ health_slider.slick({
 
  var eco_slider = $(".eco-slider");
 eco_slider.slick({
-  infinite: true,
+  infinite: false,
   slidesToShow: 3,
   slidesToScroll: 3,
   prevArrow: $(".eco_prev"),

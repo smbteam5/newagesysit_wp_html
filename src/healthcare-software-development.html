@@ -1845,8 +1845,7 @@
     </header>
 
     <section
-  
-  class=" bg-[url('./img/hsd-banner-mobile.png')]  md:bg-[url('./img/hsd-banner.jpg')] min-h-[900px] bg-center  bg-no-repeat bg-cover  
+     class=" bg-[url('./img/hsd-banner-mobile.png')]  md:bg-[url('./img/hsd-banner.jpg')] min-h-[900px] bg-center  bg-no-repeat bg-cover  
          md:pt-40 relative"
 >
 
@@ -1858,7 +1857,7 @@
         class="relative z-10 container px-4 md:px-8 flex flex-col justify-start md:justify-center text-white pb-10 pt-60 lg:pt-0 h-full"
       >
         <h1
-          class="bg-gradient-to-r from-white to-[#f5bfa0] bg-clip-text text-transparent font-bold text-[40px] sm:text-[32px] md:text-[50px] xl:text-[80px] leading-snug md:leading-[1.2] w-full md:w-[80%] mb-4"
+          class="bg-gradient-to-br from-white to-[#efc8b2] bg-clip-text text-transparent font-bold text-[40px] sm:text-[32px] md:text-[50px] xl:text-[80px] leading-snug md:leading-[1.2] w-full md:w-[80%] mb-4"
         >
           Custom Healthcare Software Development Company
         </h1>
@@ -1906,9 +1905,9 @@
           <a
             href="#"
             class="bg-transparent group hover:bg-white/15 border border-white text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-5 rounded-full flex items-center justify-between sm:justify-start gap-2 shadow-md w-fit"
-          >
-            Download Healthcare Solutions Brochure
-
+          >         
+         <span class="hidden md:block">Download Healthcare Solutions Brochure</span>
+         <span class="block md:hidden text-nowrap">Download Healthcare Solutions...</span>
             <div
               class="relative w-[15px] h-[15px] overflow-hidden inline-block ml-4"
             >
@@ -1937,7 +1936,8 @@
               100+
             </h3>
             <p class="text-sm w-[70%] text-gray-200 mt-2">
-              Healthcare projects delivered
+              projects delivered successfully
+
             </p>
           </div>
           <div
@@ -2028,7 +2028,7 @@
           <img src="./img/money (1) 1.svg" alt="Money icon" class="w-16 h-16" />
           <p class="text-[18px] text-gray-900 text-left">
             The healthcare software development market size is expected to reach
-            <strong>$94.56 billion by 2034</strong>,according to NASSCOM.
+            <strong>$94.56 billion by 2034</strong>, according to NASSCOM.
           </p>
         </div>
       </div>
@@ -2036,17 +2036,17 @@
 
     <section class="px-4 py-8">
   <div
-    class="container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 rounded-[20px] min-h-[300px] px-6 md:px-12 py-8 md:py-12 bg-cover bg-center"
+    class="container flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 rounded-[20px] min-h-[500px] px-10 md:px-12 py-8 md:py-12 bg-cover bg-center"
     style="background-image: url('./img/Solution-Oriented CTA.png');"
   >
     <!-- Left image -->
-    <div class="w-[140px] md:w-[40%] flex justify-center ">
+    <div class="w-[180px] md:w-[40%] flex justify-center ">
       <img src="./img/group-R5.png" alt="solution" class="max-w-full h-auto" />
     </div>
 
     <!-- Right content -->
-    <div class="text-white md:w-[60%] space-y-6 text-center md:text-left">
-      <p class="text-lg md:text-[23px] font-medium leading-relaxed">
+    <div class="text-white md:w-[60%] space-y-6 text-left ">
+      <p class="text-lg md:text-[23px] font-medium leading-relaxed px-3">
         A surge in telemedicine and the rise of AI is expected to reach an
         estimated market value of <strong>$176.4 bn</strong> by 2031,
         transforming the healthcare segment.
@@ -2056,7 +2056,8 @@
         href="#"
         class="bg-transparent group hover:bg-white/15 border border-white text-white text-[15px] md:text-base font-medium py-3 pl-4 pr-5 rounded-full flex items-center justify-center md:justify-start gap-2 shadow-md w-fit mx-auto md:mx-0"
       >
-        Let’s Discuss How to Build Your Healthcare Software
+        <span class="hidden md:block">Let’s Discuss How to Build Your Healthcare Software</span>
+        <span class="block md:hidden">Let’s Discuss How to Build...</span>
 
         <!-- Arrow animation -->
         <div class="relative w-[15px] h-[15px] overflow-hidden ml-3">
@@ -3488,43 +3489,40 @@
         <div
           class="flex gap-[24px] bottom-0 right-5 z-[0] pr-3 justify-center lg:justify-end"
         >
-          <div class="arrow_wrap flex gap-4">
-            <span
-              class="ds-left-arrow eco_prev group cursor-pointer relative w-[40px] h-[40px] inline-block"
-            >
-              <!-- Default Arrow -->
-              <img
-                src="./img/Carousel Prev.svg"
-                alt="Left Arrow"
-                class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0"
-              />
+        <div class="arrow_wrap flex gap-4">
+  <!-- LEFT arrow (PREV) -->
+  <span class="ds-left-arrow eco_prev group cursor-pointer relative w-[40px] h-[40px] inline-block">
+    <!-- Default Arrow -->
+    <img
+      src="./img/Carousel Prev.svg"
+      alt="Left Arrow"
+      class="absolute inset-0 w-full eco_prev_normal h-full object-contain transition-opacity duration-100 ease-in-out opacity-100"
+    />
+    <!-- Hover Arrow -->
+    <img
+      src="./img/Carousel Next.svg"
+      alt="Left Arrow Hover"
+      class="absolute inset-0 w-full h-full eco_prev_black object-contain transition-opacity duration-100 ease-in-out opacity-0 rotate-180"
+    />
+  </span>
 
-              <!-- Hover Arrow  -->
-              <img
-                src="./img/Carousel Next.svg"
-                alt="Right Arrow"
-                class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 rotate-180"
-              />
-            </span>
+  <!-- RIGHT arrow (NEXT) -->
+  <span class="ds-right-arrow eco_next group cursor-pointer relative w-[40px] h-[40px] inline-block">
+    <!-- Default Arrow -->
+    <img
+      src="./img/Carousel Prev.svg"
+      alt="Right Arrow"
+      class="absolute inset-0 w-full h-full eco_next_normal object-contain transition-opacity duration-100 ease-in-out opacity-100 rotate-180"
+    />
+    <!-- Hover Arrow -->
+    <img
+      src="./img/Carousel Next.svg"
+      alt="Right Arrow Hover"
+      class="absolute inset-0 w-full h-full eco_next_black object-contain transition-opacity duration-100 ease-in-out opacity-0"
+    />
+  </span>
+</div>
 
-            <span
-              class="ds-right-arrow eco_next group cursor-pointer relative w-[40px] h-[40px] inline-block"
-            >
-              <!-- Default Arrow -->
-              <img
-                src="./img/Carousel Prev.svg"
-                alt="Left Arrow"
-                class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0 rotate-180"
-              />
-
-              <!-- Hover Arrow -->
-              <img
-                src="./img/Carousel Next.svg"
-                alt="Right Arrow"
-                class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-              />
-            </span>
-          </div>
         </div>
       </div>
     </section>
@@ -3587,13 +3585,13 @@
               applications, telehealth platforms, web and
               <a
                 href="https://newagesysit.com/app-development-service/"
-                class="underline text-blue-500"
+                class="underline hover:text-blue-600"
                 >mobile applications</a
               >, healthcare software, and mHealth solutions tailored to meet
               your organization’s
               <a
                 href="https://newagesysit.com/healthcare-software-development-services/"
-                class="text-blue-500 underline"
+                class="hover:text-blue-600 underline"
                 >healthcare service</a
               >
               standards while also aligning with the essential security
@@ -3662,9 +3660,9 @@
               a pioneering medical
               <a
                 href="https://newagesysit.com/custom-software-development-services/"
-                class="underline text-blue-500"
+                class="underline hover:text-blue-600"
                 >software development</a
-              >company, we engage in building software with the latest
+              > company, we engage in building software with the latest
               technologies.
             </p>
           </div>
@@ -3684,7 +3682,7 @@
               As one of the leading healthcare software providers and a top
               <a
                 href="https://newagesysit.com/devops-development-services/"
-                class="underline text-blue-500"
+                class="underline hover:text-blue-600"
                 >DevOps service</a
               >
               s company, we are committed to delivering high-quality solutions
@@ -4170,10 +4168,8 @@
             <div class="mt-4">
               <h3 class="font-semibold text-[28px]">Blockchain</h3>
               <p class="text-[18px] mt-2">
-                Our team develops healthcare software incorporating AI/ML
-                algorithms to enhance the precision of diagnostics and
-                analytics, improve the efficiency of routine processes, and
-                adopt advanced examination techniques.
+               As one of the leading healthcare software service providers, we enable you to scale patient data integrity and security by leveraging the capabilities of blockchain, thereby maintaining transparent records for every transaction.
+
               </p>
             </div>
           </div>
@@ -4195,10 +4191,8 @@
             <div class="mt-4">
               <h3 class="font-semibold text-[28px]">RPA</h3>
               <p class="text-[18px] mt-2">
-                With the Internet of Things (IoT), we enable clients to
-                integrate devices that track patients’ vitals, monitor
-                medication compliance, and provide real-time data insights,
-                thereby enhancing and boosting the patient care mechanism.
+              By utilizing intelligent process automation, also known as Robotic Process Automation (RPA), we streamline healthcare workflows, encompassing appointment scheduling, health plan execution, accounting, and compliance checks. 
+
               </p>
             </div>
           </div>
@@ -4560,7 +4554,7 @@
             <a
               class="bg-[#FF8214] group text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
             >
-              Schedule a Free Consultation
+              Get a Free Project Plan
 
               <div
                 class="relative w-[30px] h-[30px] inline-block rounded-full z-10 ripple-wrapper"
@@ -4708,8 +4702,7 @@
                     href="https://newagesysit.com/ui-ux-design-services/"
                     class="underline"
                     >UI/UX design</a
-                  >
-                  , our experts build user-centered prototypes tailored for the
+                  >, our experts build user-centered prototypes tailored for the
                   healthcare software. As a top healthcare software solutions
                   company, we ensure a flawless experience, accessibility, and a
                   highly appealing one that aligns with the expectations of both
@@ -4755,7 +4748,7 @@
                   <a
                     href="https://newagesysit.com/mvp-development-for-startups/"
                     class="hover:text-blue-500 underline"
-                    >mobile app development services</a
+                    >MVP development</a
                   >
                   (Minimum Viable Product) to test your ideas in a real-world
                   environment. With the agile development methodology, we ensure
@@ -4801,7 +4794,7 @@
                   and errors in healthcare software. With continuous testing, we
                   help you ensure flawless functioning, top-notch security, and
                   a superior user experience. As a custom healthcare software
-                  development company, we also offer<a
+                  development company, we also offer <a
                     href="https://newagesysit.com/qa-consulting-services/"
                     class="underline hover:text-blue-500"
                     >QA consulting services</a
@@ -4892,7 +4885,7 @@
                   software to achieve seamless performance. As a part of our
                   healthcare services, we provide
                   <a href="" class="underline hover:text-blue-500">
-                    maintenance and support services </a
+                    maintenance and support services</a
                   >, after launch to keep the software highly functional.
                 </p>
               </div>
@@ -5397,7 +5390,7 @@
                     <div class="accordion-content">
                       <div class="p-4 text-black">
                         <p>
-                         Yes. As a leading custom hospital software development company, we have expertise in collaborating with growing and established healthcare organizations like<a href="https://newagesysit.com/usa-health-advisors-custom-app-for-insurance-agents/" class="underline text-blue-500">USA Health Advisors</a>,<a href="https://newagesysit.com/cashdocs-digital-health-platform/" class="underline text-blue-500">Cashdocs</a>, and many others, offering the best medical device software development services and software development for healthcare. With the top healthcare software development services, we dive deep into your organization’s operations, crafting a custom-tailored approach to your project and tagging us as the top healthcare software company.
+                         Yes. As a leading custom hospital software development company, we have expertise in collaborating with growing and established healthcare organizations like<a href="https://newagesysit.com/usa-health-advisors-custom-app-for-insurance-agents/" class="underline text-blue-500">USA Health Advisors</a>,<a href="https://newagesysit.com/cashdocs-digital-health-platform/" class="underline text-blue-500"> Cashdocs</a>, and many others, offering the best medical device software development services and software development for healthcare. With the top healthcare software development services, we dive deep into your organization’s operations, crafting a custom-tailored approach to your project and tagging us as the top healthcare software company.
 
                         </p>
                        
