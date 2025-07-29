@@ -595,6 +595,14 @@ video {
     max-width: 1440px;
   }
 }
+@media (min-width: 1920) {
+  .container {
+    max-width: 1920;
+  }
+}
+
+
+
 
 .sr-only {
   position: absolute;
@@ -3157,6 +3165,19 @@ html {
   border-radius: 9999px;
 }
 
+   .ripple-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  background-color: white;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1);
+  z-index: 0;
+}
 .ripple-wrapper::before {
   content: "";
   position: absolute;
@@ -3182,18 +3203,18 @@ html {
 }
 
 .health-accordion-content {
-  max-height: 5rem; /* Adjusted to show partial content (e.g., 2 lines of text) */
+  max-height: 5rem; 
   overflow: hidden;
   transition: max-height 0.4s ease, padding-top 0.4s ease,
     padding-bottom 0.4s ease;
-  padding-top: 1rem; /* Initial padding when closed */
-  padding-bottom: 1rem; /* Initial padding when closed */
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
 }
 
 .health-accordion-content.show {
-  max-height: 1000px; /* Enough to reveal full text, adjust if content is much longer */
-  padding-top: 1rem; /* Add padding when shown */
-  padding-bottom: 1rem; /* Add padding when shown */
+  max-height: 1000px; 
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
 }
 
 .health-accordion-content .full-text {
@@ -3210,13 +3231,13 @@ html {
 
 /* Icon Styling */
 .icon-wrapper {
-  position: relative; /* Needed for absolute positioning of child icons */
-  width: 48px; /* Match the w-12 (48px) from Tailwind */
-  height: 48px; /* Match the h-12 (48px) from Tailwind */
-  display: flex; /* Use flex to center the icon if needed */
+  position: relative; 
+  width: 48px; 
+  height: 48px; 
+  display: flex; 
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensures any rotation outside the bounds is clipped */
+  overflow: hidden; 
 }
 
 .closed-arrow,
@@ -3225,7 +3246,7 @@ html {
   top: 5px;
   right: 12px;
 
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Slightly longer transition for better visual */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
 }
 
 .closed-arrow {
@@ -3235,22 +3256,22 @@ html {
 }
 
 .open-arrow {
-  opacity: 0; /* Hidden by default */
-  transform: rotate(90deg); /* Start rotated for open state */
-  pointer-events: none; /* Not clickable when hidden */
+  opacity: 0; 
+  transform: rotate(90deg); 
+  pointer-events: none; 
 }
 
-/* When the parent container has 'accordion-open' class */
+
 .accordion-item-container.accordion-open .closed-arrow {
-  opacity: 0; /* Fade out closed arrow */
-  transform: rotate(-90deg); /* Rotate closed arrow as it fades out */
-  pointer-events: none; /* Make it unclickable */
+  opacity: 0; 
+  transform: rotate(-90deg); 
+  pointer-events: none;
 }
 
 .accordion-item-container.accordion-open .open-arrow {
-  opacity: 1; /* Fade in open arrow */
-  transform: rotate(0deg); /* Rotate open arrow to its final position */
-  pointer-events: auto; /* Make it clickable */
+  opacity: 1; 
+  transform: rotate(0deg); 
+  pointer-events: auto; 
 }
 
 .health-case-study-slider .slick-track {
@@ -3275,6 +3296,7 @@ html {
 .industry-slider .slick-slide > div {
   height: 100%;
 }
+
 .healthcare-slider .slick-track {
   display: flex !important;
 }
@@ -3284,6 +3306,17 @@ html {
 }
 
 .healthcare-slider .slick-slide > div {
+  height: 100%;
+}
+.health-case-study-new-slider .slick-track {
+  display: flex !important;
+}
+
+.health-case-study-new-slider .slick-slide {
+  height: inherit;
+}
+
+.health-case-study-new-slider .slick-slide > div {
   height: 100%;
 }
 
@@ -3300,14 +3333,14 @@ html {
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
+
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 #accordionImageContainer {
@@ -3324,3 +3357,99 @@ html {
   width: 100%;
 }
 
+ .custom-bottom-border {
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-image: repeating-linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3) 12px,
+        transparent 12px,
+        transparent 24px
+      )
+      1;
+    border-image-slice: 1;
+    border-left: none;
+    border-top: none;
+
+    border-right: none;
+  }
+
+ @media (max-width: 767px) {
+  .mobile-scrollbar {
+    overflow-x: scroll !important;
+    scrollbar-color: #2A2D30 #e0e0e0;
+    scrollbar-width: thin;
+    padding-bottom: 1rem; /* Same as pb-4 */
+    box-sizing: content-box;
+  }
+
+  .mobile-scrollbar::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .mobile-scrollbar::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+
+  .mobile-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #2A2D30;
+    border-radius: 8px;
+  }
+}
+
+ .custom-dashed-small {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3) 2px,  /* dash length */
+      transparent 2px,
+      transparent 4px         /* gap size */
+    )
+    1;
+  border-image-slice: 1;
+
+  /* optional reset */
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+
+
+#parallax-section {
+  background-image: url('./img/Parallax.png');
+    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax-section-1 {
+  background-image: url('./img/Unique-Process-Roadmap.png');
+  background-attachment: fixed;
+    
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* 
+@media (min-width: 1024px) {
+#parallax-section {
+
+    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#parallax-section-1 {
+ 
+  background-attachment: fixed;
+    
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+} */
