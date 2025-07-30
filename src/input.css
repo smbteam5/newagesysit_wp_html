@@ -595,14 +595,11 @@ video {
     max-width: 1440px;
   }
 }
-@media (min-width: 1920) {
+@media (min-width: 1920px) {
   .container {
-    max-width: 1920;
+    max-width: 1920px;
   }
 }
-
-
-
 
 .sr-only {
   position: absolute;
@@ -3165,8 +3162,8 @@ html {
   border-radius: 9999px;
 }
 
-   .ripple-wrapper::before {
-  content: '';
+.ripple-wrapper::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -3203,18 +3200,18 @@ html {
 }
 
 .health-accordion-content {
-  max-height: 5rem; 
+  max-height: 5rem;
   overflow: hidden;
   transition: max-height 0.4s ease, padding-top 0.4s ease,
     padding-bottom 0.4s ease;
-  padding-top: 1rem; 
-  padding-bottom: 1rem; 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .health-accordion-content.show {
-  max-height: 1000px; 
-  padding-top: 1rem; 
-  padding-bottom: 1rem; 
+  max-height: 1000px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .health-accordion-content .full-text {
@@ -3231,13 +3228,13 @@ html {
 
 /* Icon Styling */
 .icon-wrapper {
-  position: relative; 
-  width: 48px; 
-  height: 48px; 
-  display: flex; 
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .closed-arrow,
@@ -3246,7 +3243,7 @@ html {
   top: 5px;
   right: 12px;
 
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .closed-arrow {
@@ -3256,22 +3253,21 @@ html {
 }
 
 .open-arrow {
-  opacity: 0; 
-  transform: rotate(90deg); 
-  pointer-events: none; 
+  opacity: 0;
+  transform: rotate(90deg);
+  pointer-events: none;
 }
 
-
 .accordion-item-container.accordion-open .closed-arrow {
-  opacity: 0; 
-  transform: rotate(-90deg); 
+  opacity: 0;
+  transform: rotate(-90deg);
   pointer-events: none;
 }
 
 .accordion-item-container.accordion-open .open-arrow {
-  opacity: 1; 
-  transform: rotate(0deg); 
-  pointer-events: auto; 
+  opacity: 1;
+  transform: rotate(0deg);
+  pointer-events: auto;
 }
 
 .health-case-study-slider .slick-track {
@@ -3333,14 +3329,13 @@ html {
   }
 }
 
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #accordionImageContainer {
@@ -3357,28 +3352,28 @@ html {
   width: 100%;
 }
 
- .custom-bottom-border {
-    border-bottom-width: 1px;
-    border-right-style: solid;
-    border-image: repeating-linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3) 12px,
-        transparent 12px,
-        transparent 24px
-      )
-      1;
-    border-image-slice: 1;
-    border-left: none;
-    border-top: none;
+.custom-bottom-border {
+  border-bottom-width: 1px;
+  border-right-style: solid;
+  border-image: repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3) 12px,
+      transparent 12px,
+      transparent 24px
+    )
+    1;
+  border-image-slice: 1;
+  border-left: none;
+  border-top: none;
 
-    border-right: none;
-  }
+  border-right: none;
+}
 
- @media (max-width: 767px) {
+@media (max-width: 767px) {
   .mobile-scrollbar {
     overflow-x: scroll !important;
-    scrollbar-color: #2A2D30 #e0e0e0;
+    scrollbar-color: #2a2d30 #e0e0e0;
     scrollbar-width: thin;
     padding-bottom: 1rem; /* Same as pb-4 */
     box-sizing: content-box;
@@ -3393,20 +3388,20 @@ html {
   }
 
   .mobile-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #2A2D30;
+    background-color: #2a2d30;
     border-radius: 8px;
   }
 }
 
- .custom-dashed-small {
+.custom-dashed-small {
   border-right-width: 2px;
   border-right-style: solid;
   border-image: repeating-linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3) 2px,  /* dash length */
-      transparent 2px,
-      transparent 4px         /* gap size */
+      rgba(0, 0, 0, 0.3) 2px,
+      /* dash length */ transparent 2px,
+      transparent 4px /* gap size */
     )
     1;
   border-image-slice: 1;
@@ -3417,19 +3412,17 @@ html {
   border-bottom: none;
 }
 
-
-
 #parallax-section {
-  background-image: url('./img/Parallax.png');
-    background-attachment: fixed;
+  background-image: url("./img/Parallax.png");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 #parallax-section-1 {
-  background-image: url('./img/Unique-Process-Roadmap.png');
+  background-image: url("./img/Unique-Process-Roadmap.png");
   background-attachment: fixed;
-    
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
