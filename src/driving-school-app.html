@@ -4696,9 +4696,7 @@
       </div>
     </section>
 
-    <section
-      class="!pt-[100px] py-10 md:py-[30px] bg-center bg-cover health-case-study-slider-ccs"
-    >
+    <section class="!pt-[100px] py-10 md:py-[30px] bg-center bg-cover">
       <div class="mx-auto px-4">
         <div class="text-center md:max-w-[1100px] mx-auto">
           <h2 class="text-[36px] lg:text-[50px] font-semibold mb-3">
@@ -4706,7 +4704,9 @@
           </h2>
         </div>
 
-        <div class="relative mx-auto mt-10 md:px-4 main">
+        <div
+          class="relative mx-auto mt-10 md:px-4 main health-case-study-slider-ccs"
+        >
           <div class="h-[calc(70vh)]">
             <div id="hcss-wrapper" class="flex gap-2 h-full">
               <div class="hcss-item w-[85vw] shrink-0 h-full">
@@ -5720,7 +5720,7 @@
           ease: "none",
           scrollTrigger: {
             trigger: ".health-case-study-slider-ccs",
-            start: "top top",
+            start: "top 20%",
             end: () => `+=${scrollAmount}`,
             scrub: 1,
             pin: true,
