@@ -1,22 +1,21 @@
 $(document).ready(function () {
-  const tabs = document.querySelectorAll('.tab-nav button');
-      const tabContents = document.querySelectorAll('.tab-content .tab-c');
-    
-      tabs.forEach((tab, index) => {
-        tabContents[0].classList.remove('hidden');
-        //tabs.classList.remove('active-tab');
-        tabs[0].classList.add('active-tab');
-        tab.addEventListener('click', () => {
-          // Hide all tab contents
-          tabContents.forEach(content => content.classList.add('hidden'));
-          tabs.forEach(content => content.classList.remove('active-tab'));
-          // Show the clicked tab content
-          tabContents[index].classList.remove('hidden');
-          tabs[index].classList.add('active-tab');
-        });
-      });
+  const tabs = document.querySelectorAll(".tab-nav button");
+  const tabContents = document.querySelectorAll(".tab-content .tab-c");
 
-      
+  tabs.forEach((tab, index) => {
+    tabContents[0].classList.remove("hidden");
+    //tabs.classList.remove('active-tab');
+    tabs[0].classList.add("active-tab");
+    tab.addEventListener("click", () => {
+      // Hide all tab contents
+      tabContents.forEach((content) => content.classList.add("hidden"));
+      tabs.forEach((content) => content.classList.remove("active-tab"));
+      // Show the clicked tab content
+      tabContents[index].classList.remove("hidden");
+      tabs[index].classList.add("active-tab");
+    });
+  });
+
   // counter animation
   var $animation_elements = $(".animation-element");
   var $window = $(window);
@@ -178,42 +177,43 @@ $(document).ready(function () {
 
   // navigation portfolio
 
-
-  $(document).ready(function(){
-    $(window).resize(function() {
-     var $slider = $('#portfolio-nav');
-     if ($(window).width() < 1050) {
-      $(".portfolio-nav").slick({
-        variableWidth: true,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        arrows: false,
-        dots: false,
-        infinite: false,
-        autoplay: false,
-        responsive: [
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 4,
-            },
-          },
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-            },
-          },
-        ],
-      });
-     } else {
-         $slider.removeClass('portfolio-nav');
-         $slider.slick('setPosition');
-     }
- }).resize();
-   })
+  $(document).ready(function () {
+    $(window)
+      .resize(function () {
+        var $slider = $("#portfolio-nav");
+        if ($(window).width() < 1050) {
+          $(".portfolio-nav").slick({
+            variableWidth: true,
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            arrows: false,
+            dots: false,
+            infinite: false,
+            autoplay: false,
+            responsive: [
+              {
+                breakpoint: 991,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
+                },
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                },
+              },
+            ],
+          });
+        } else {
+          $slider.removeClass("portfolio-nav");
+          $slider.slick("setPosition");
+        }
+      })
+      .resize();
+  });
   $(".brand_list").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -302,7 +302,7 @@ $(document).ready(function () {
       },
     ],
   });
-    $(".modal_items").slick({
+  $(".modal_items").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -448,7 +448,6 @@ $(document).ready(function () {
     $(".dev-services-slider.slick-slider").css("left", "0px");
   });
 
-
   var devopSlider = $(".devops-slider");
   devopSlider.slick({
     infinite: true,
@@ -479,8 +478,8 @@ $(document).ready(function () {
       },
     ],
   });
- 
-//dev-services-slider with 4 slides
+
+  //dev-services-slider with 4 slides
 
   var slider_4 = $(".dev-services-slider_4");
   slider_4.slick({
@@ -597,7 +596,7 @@ $(document).ready(function () {
       },
     ],
   });
- 
+
   const typeTabs = document.querySelectorAll(".type-tab button");
   const typeTabContents = document.querySelectorAll(".type-tab-content .tab-c");
 
@@ -614,23 +613,26 @@ $(document).ready(function () {
 
       // Fade out current
       typeTabContents[activeIndex].classList.remove("opacity-100");
-      typeTabContents[activeIndex].classList.add("opacity-0", "pointer-events-none");
+      typeTabContents[activeIndex].classList.add(
+        "opacity-0",
+        "pointer-events-none"
+      );
       typeTabs[activeIndex].classList.remove("active-tab-type");
 
       // Fade in new
-      typeTabContents[index].classList.remove("opacity-0", "pointer-events-none");
+      typeTabContents[index].classList.remove(
+        "opacity-0",
+        "pointer-events-none"
+      );
       typeTabContents[index].classList.add("opacity-100");
       typeTabs[index].classList.add("active-tab-type");
 
       activeIndex = index;
     });
   });
- 
 });
 
-
-
- var health_slider = $(".healthcare-slider");
+var health_slider = $(".healthcare-slider");
 health_slider.slick({
   infinite: true,
   slidesToShow: 3,
@@ -667,7 +669,7 @@ health_slider.slick({
   ],
 });
 
- var eco_slider = $(".eco-slider");
+var eco_slider = $(".eco-slider");
 eco_slider.slick({
   infinite: false,
   slidesToShow: 3,
@@ -677,135 +679,127 @@ eco_slider.slick({
   dots: true,
   initialSlide: 0,
   responsive: [
-   
     {
       breakpoint: 1025, // ≤1024px
       settings: {
         slidesToShow: 2,
-        slidesToScroll:2
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 769, // ≤768px
       settings: {
         slidesToShow: 2,
-        slidesToScroll:2
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 500, // ≤500px
       settings: {
         slidesToShow: 1,
-        slidesToScroll:1
+        slidesToScroll: 1,
       },
     },
   ],
 });
 
+var case_slider = $(".case-study-slider");
 
- 
+case_slider.on("init", function () {
+  // re-check visibility on init
+  if (window.innerWidth < 768) {
+    $(".case_prev, .case_next").hide();
+  } else {
+    $(".case_prev, .case_next").show();
+  }
+});
+case_slider.slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: $(".case_prev"),
+  nextArrow: $(".case_next"),
+  dots: true,
+  initialSlide: 0, // Starts at the first slide
+  responsive: [
+    {
+      breakpoint: 1439,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
 
+var client_slider = $(".client-feedback-slider");
 
+client_slider.slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  dots: true,
+  initialSlide: 0, // Starts at the first slide
+  responsive: [
+    {
+      breakpoint: 1439,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
 
-  var case_slider = $(".case-study-slider");
-
-   case_slider.on("init", function () {
-    // re-check visibility on init
-    if (window.innerWidth < 768) {
-      $(".case_prev, .case_next").hide();
-    } else {
-      $(".case_prev, .case_next").show();
-    }
-  });
-  case_slider.slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: $(".case_prev"),
-    nextArrow: $(".case_next"),
-    dots: true,
-    initialSlide: 0, // Starts at the first slide
-    responsive: [
-      {
-        breakpoint: 1439,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-
-  var client_slider = $(".client-feedback-slider");
-
-   
-  client_slider.slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-   autoplay: true,
-    autoplaySpeed: 5000,
-    dots: true,
-    initialSlide: 0, // Starts at the first slide
-    responsive: [
-      {
-        breakpoint: 1439,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-
-
-  var case_slider = $(".health-case-study-slider");
+var case_slider = $(".health-case-study-slider");
 
 // Function to toggle navigation buttons
 function toggleSliderNav() {
@@ -869,7 +863,6 @@ case_slider.slick({
   ],
 });
 
-
 var case_new_slider = $(".health-case-study-new-slider");
 
 // Function to initialize or destroy slick based on screen width
@@ -916,8 +909,7 @@ $(window).on("resize", function () {
   initOrDestroySlider();
 });
 
-
- var slider = $(".industry-slider");
+var slider = $(".industry-slider");
 var isSliderInitialized = false;
 
 function initializeSlider() {
@@ -936,7 +928,7 @@ function initializeSlider() {
     }
   } else {
     if (isSliderInitialized) {
-      slider.slick('unslick');
+      slider.slick("unslick");
       isSliderInitialized = false;
     }
   }
@@ -946,6 +938,6 @@ function initializeSlider() {
 initializeSlider();
 
 // Run on window resize
-$(window).on('resize', function () {
+$(window).on("resize", function () {
   initializeSlider();
 });
