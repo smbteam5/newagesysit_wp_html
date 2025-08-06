@@ -51,10 +51,11 @@ module.exports = {
         'min-992px': '992px',
         'min-1024px': '1024px',
         'min-1440px':'1440px',
+        'min-1600px':'1600px',
         'max-1024px': {'max': '1024px'},
         'max-768px': {'max': '768px'},
         'max-500px': {'max': '500px'},
-        '2xl':'1800px'
+        
       },
       animation: {
         ripple: 'ripple 2s linear infinite',

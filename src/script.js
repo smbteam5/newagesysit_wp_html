@@ -668,6 +668,57 @@ health_slider.slick({
     },
   ],
 });
+ var health_slider_golang = $(".healthcare-slider-go");
+health_slider_golang.slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  prevArrow: $(".health_prev_go"),
+  nextArrow: $(".health_next_go"),
+  dots: false,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1441, // ≤1440px
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1025, // ≤1024px
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 769, // ≤768px
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 500, // ≤500px
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
+
+// var health_slider = $(".healthcare-slider");
+// health_slider.slick({
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   arrows: true,
+//   dots: false,
+//   infinite: true,
+//   prevArrow: $(".health_prev"),
+//   nextArrow: $(".health_next"),
+//   responsive: [
+//     { breakpoint: 1024, settings: { slidesToShow: 2 } },
+//     { breakpoint: 640, settings: { slidesToShow: 1 } },
+//   ],
+// });
 
 var eco_slider = $(".eco-slider");
 eco_slider.slick({
