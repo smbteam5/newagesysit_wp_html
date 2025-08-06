@@ -2034,7 +2034,7 @@
       </div>
 
       <!-- Student Slider -->
-      <div class="container lg:!mx-auto lg:!mr-0 lg:!p-[0px] mt-[20px]">
+      <div class="custom-width-box lg:!mx-auto lg:!mr-0 lg:!p-[0px] mt-[20px]">
         <div
           id="studentSlider"
           class="slider-section block transition-all duration-300 lg:ml-[-20px]"
@@ -5216,6 +5216,18 @@ For Driving School App Development?
           $(target).find(".slick-slider").slick("setPosition");
         });
       });
+      
     </script>
+    <script>
+  const referenceContainer = document.querySelector('.container');
+  const targetBox = document.querySelector('.custom-width-box');
+  const leftSpacing = referenceContainer.getBoundingClientRect().left+40;
+  const newWidth = document.documentElement.clientWidth - (leftSpacing);
+  targetBox.style.width = `${newWidth}px`;
+  window.addEventListener('resize', () => {
+    const updatedLeft = referenceContainer.getBoundingClientRect().left;
+    targetBox.style.width = `${window.innerWidth - updatedLeft}px`;
+  });
+</script>
   </body>
 </html>
