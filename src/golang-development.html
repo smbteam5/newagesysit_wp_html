@@ -2161,7 +2161,7 @@
         class="healthcare-slider md:mt-12 p-4 xl:pl-[calc((100vw-1440px)/2)]"
       >
         <!-- CARD 1 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2183,7 +2183,7 @@
         </div>
 
         <!-- CARD 2 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2234,7 +2234,7 @@
         </div>
 
         <!-- CARD 4 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2256,7 +2256,7 @@
         </div>
 
         <!-- CARD 5 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2278,7 +2278,7 @@
         </div>
 
         <!-- CARD 6 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2300,7 +2300,7 @@
         </div>
 
         <!-- CARD 7 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2322,7 +2322,7 @@
         </div>
 
         <!-- CARD 8 -->
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2342,7 +2342,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2362,7 +2362,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2383,7 +2383,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2409,7 +2409,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -2429,7 +2429,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full h-fit md:h-[460px] p-2">
+       <div class=" h-fit md:h-[460px] p-2">
           <div class="h-full bg-[#F0F6FF] rounded-[16px] p-6 shadow">
             <div class="flex flex-col items-start gap-3 mb-4">
               <img
@@ -3383,9 +3383,8 @@
             </div>
           </div>
 
-          <div
-            class="card-set-hidden card-expand-transition hidden max-h-0 md:max-h-full transition-all duration-500"
-          >
+         <div class="card-set-hidden card-expand-transition hidden transition-all duration-500">
+
             <div
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 md:mt-0"
             >
@@ -5023,38 +5022,37 @@
     </script>
 
     <script>
-      $(document).ready(function () {
-        const $hiddenSection = $(".card-set-hidden");
-        const $loadMoreBtn = $("#loadMoreBtn");
+    $(document).ready(function () {
+  const $hiddenSection = $(".card-set-hidden");
+  const $loadMoreBtn = $("#loadMoreBtn");
 
-        function handleResponsiveVisibility() {
-          if (window.innerWidth < 768) {
-            $hiddenSection.addClass("max-h-0").removeClass("max-h-[9999px]");
-            $loadMoreBtn.show().text("Load More");
-          } else {
-            $hiddenSection.removeClass("max-h-0").addClass("max-h-[9999px]");
-            $loadMoreBtn.hide();
-          }
-        }
+  function handleResponsiveVisibility() {
+    if (window.innerWidth < 768) {
+      $hiddenSection.addClass("hidden");
+      $loadMoreBtn.show().text("Show More");
+    } else {
+      $hiddenSection.removeClass("hidden");
+      $loadMoreBtn.hide();
+    }
+  }
 
-        handleResponsiveVisibility();
-        $(window).on("resize", handleResponsiveVisibility);
+  handleResponsiveVisibility();
+  $(window).on("resize", handleResponsiveVisibility);
 
-        $loadMoreBtn.on("click", function () {
-          const isHidden = $hiddenSection.hasClass("max-h-0");
+  $loadMoreBtn.on("click", function () {
+    const isHidden = $hiddenSection.hasClass("hidden");
 
-          if (isHidden) {
-            $hiddenSection
-              .removeClass("hidden")
-              .removeClass("max-h-0")
-              .addClass("max-h-[9999px]");
-            $loadMoreBtn.text("Load Less");
-          } else {
-            $hiddenSection.removeClass("max-h-[9999px]").addClass("max-h-0");
-            $loadMoreBtn.text("Load More");
-          }
-        });
-      });
+    if (isHidden) {
+      $hiddenSection.removeClass("hidden");
+      $loadMoreBtn.text("Show Less");
+    } else {
+      $hiddenSection.addClass("hidden");
+      $loadMoreBtn.text("Show More");
+    }
+  });
+});
+
+    
     </script>
 
     <script>
