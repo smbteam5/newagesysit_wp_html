@@ -5032,31 +5032,33 @@
     </script>
 
     <script>
-  $(document).ready(function () {
+      
+ $(document).ready(function () {
   const $hiddenSection = $(".card-set-hidden");
   const $loadMoreBtn = $("#loadMoreBtn");
 
-  // Track if user manually toggled
-  let manuallyToggled = false;
+  let hasUserToggled = false;
 
   function handleResponsiveVisibility() {
-    if (!manuallyToggled) {
-      if (window.innerWidth < 768) {
+    if (window.innerWidth < 768) {
+      if (!hasUserToggled) {
         $hiddenSection.addClass("hidden");
         $loadMoreBtn.show().text("Show More");
-      } else {
-        $hiddenSection.removeClass("hidden");
-        $loadMoreBtn.hide();
       }
+    } else {
+      $hiddenSection.removeClass("hidden");
+      $loadMoreBtn.hide();
     }
   }
 
+  // Initial visibility check
   handleResponsiveVisibility();
 
+  // Only trigger if user has not manually toggled
   $(window).on("resize", function () {
-    // Only trigger visibility change on resize if not manually toggled
-    manuallyToggled = false;
-    handleResponsiveVisibility();
+    if (!hasUserToggled) {
+      handleResponsiveVisibility();
+    }
   });
 
   $loadMoreBtn.on("click", function () {
@@ -5065,19 +5067,18 @@
     if (isHidden) {
       $hiddenSection.removeClass("hidden");
       $loadMoreBtn.text("Show Less");
-      manuallyToggled = true;
     } else {
-      // Scroll to the top of visible card section before collapsing
-      const offsetTop = $(".card-set").offset().top;
-      $("html, body").animate({ scrollTop: offsetTop }, 300, function () {
+      // Scroll to top of card before collapsing
+      const cardTop = $(".card-set").offset().top;
+      $("html, body").animate({ scrollTop: cardTop }, 300, function () {
         $hiddenSection.addClass("hidden");
         $loadMoreBtn.text("Show More");
-        manuallyToggled = true;
       });
     }
+
+    hasUserToggled = true; // Prevent resize from interfering
   });
 });
-
 
     
     </script>
