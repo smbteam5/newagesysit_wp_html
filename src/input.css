@@ -3311,8 +3311,6 @@ html {
   height: 100%;
 }
 
-
-
 .health-case-study-new-slider .slick-track {
   display: flex !important;
 }
@@ -3463,17 +3461,13 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.tab-slider .slick-slide {
-  margin-right: 1rem; /* Adjust spacing here */
-}
-.tab-slider .slick-track {
-  margin-right: -1rem; /* Cancels last gap */
-}
+
 .h-inherit {
   height: inherit;
 }
 .tab-slider .slick-track {
   display: flex;
+  gap: 10px;
 }
 *,
 *::before,
@@ -3483,4 +3477,18 @@ html {
 .healthcare-slider {
   width: 100% !important;
   box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .custom-width-box {
+    width: 100% !important;
+  }
+}
+@media (min-width: 768px) {
+  /* .tab-slider .slick-slide {
+    margin-right: 1rem;
+  }
+  .tab-slider .slick-track {
+    margin-right: -1rem;
+  } */
 }
