@@ -4803,7 +4803,7 @@ in Just 3-5 Weeks!
       const items = gsap.utils.toArray(".hcss-item");
 
       function dist() {
-        return Math.max(0, wrapper.scrollWidth - window.innerWidth);
+        return Math.max(0, (wrapper.scrollWidth + 100) - window.innerWidth);
       }
 
       gsap.to(wrapper, {
