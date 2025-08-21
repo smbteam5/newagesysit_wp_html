@@ -9799,9 +9799,15 @@ html {
   overflow: hidden;
 }
 
-#leftDoctor, #rightAvailability {
+#leftDoctor,
+#rightAvailability {
   will-change: transform;
   pointer-events: none;
+}
+
+.animation-element img {
+  transition: all 0.5s;
+  position: relative;
 }
 
 .animation-element.in-view .anim-img img {
@@ -11721,6 +11727,10 @@ html {
     height: 430px;
   }
 
+  .lg\:h-\[460px\] {
+    height: 460px;
+  }
+
   .lg\:h-\[47px\] {
     height: 47px;
   }
@@ -11755,10 +11765,6 @@ html {
 
   .lg\:h-screen {
     height: 100vh;
-  }
-
-  .lg\:h-\[460px\] {
-    height: 460px;
   }
 
   .lg\:min-h-\[100px\] {

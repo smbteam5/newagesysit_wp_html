@@ -2353,7 +2353,7 @@
 
     <section class="pb-10 px-6 md:px-12 md:my-10">
       <div
-        class="container mx-auto bg-[#6981F1] min-h-[320px] pt-10 lg:pt-0 px-6 md:px-12 rounded-[24px] flex flex-col lg:flex-row justify-between gap-6 overflow-hidden "
+        class="container mx-auto bg-[#6981F1] min-h-[320px] pt-10 lg:pt-0 px-6 md:px-12 rounded-[24px] flex flex-col lg:flex-row justify-between gap-6 overflow-hidden"
       >
         <div class="py-[50px]">
           <h2
@@ -2618,13 +2618,13 @@
           class="flex gap-6 lg:w-[80%] w-full justify-center mx-auto animation-element relative"
         >
           <div class="md:flex-1 anim-img-down">
-            <img src="./img/app1.png" alt="" />
+            <img src="./img/app1.png" alt="" class="mt-0" />
           </div>
           <div class="md:flex-1 anim-img">
-            <img src="./img/app2.png" alt="" />
+            <img src="./img/app2.png" alt="" class="mt-0" />
           </div>
           <div class="md:flex-1 anim-img-down">
-            <img src="./img/app3.png" alt="" />
+            <img src="./img/app3.png" alt="" class="mt-0" />
           </div>
         </div>
       </div>
@@ -3410,7 +3410,8 @@
         function check_if_in_view() {
           var window_height = $window.height();
           var window_top_position = $window.scrollTop();
-          var window_bottom_position = window_top_position + window_height - 200;
+          var window_bottom_position =
+            window_top_position + window_height - 200;
 
           $.each($animation_elements, function () {
             var $element = $(this);
