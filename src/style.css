@@ -4886,6 +4886,10 @@ video {
   padding-top: 20px !important;
 }
 
+.\!pt-\[60px\] {
+  padding-top: 60px !important;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -9725,6 +9729,28 @@ html {
   overflow: unset !important;
 }
 
+.animation-element.in-view .anim-img img {
+  margin-top: -30px;
+  transition: all 1s;
+}
+
+.in-view .anim-img-down img {
+  margin-top: 30px;
+  transition: all 1s;
+}
+
+@media (max-width: 768px) {
+  .animation-element.in-view .anim-img img {
+    margin-top: -15px;
+    transition: all 1s;
+  }
+
+  .in-view .anim-img-down img {
+    margin-top: 15px;
+    transition: all 1s;
+  }
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -10454,6 +10480,10 @@ html {
     margin-top: 1rem;
   }
 
+  .md\:mt-40 {
+    margin-top: 10rem;
+  }
+
   .md\:mt-5 {
     margin-top: 1.25rem;
   }
@@ -11099,10 +11129,6 @@ html {
     padding-top: 0px !important;
   }
 
-  .md\:\!pt-\[150px\] {
-    padding-top: 150px !important;
-  }
-
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -11590,10 +11616,6 @@ html {
 
   .lg\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .lg\:mt-\[-60px\] {
-    margin-top: -60px;
   }
 
   .lg\:mt-\[100px\] {
@@ -12128,6 +12150,10 @@ html {
     padding-right: 200px !important;
   }
 
+  .lg\:\!pt-\[150px\] {
+    padding-top: 150px !important;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -12238,10 +12264,6 @@ html {
 
   .lg\:pt-\[0\] {
     padding-top: 0;
-  }
-
-  .lg\:pt-\[20px\] {
-    padding-top: 20px;
   }
 
   .lg\:pt-\[30px\] {
