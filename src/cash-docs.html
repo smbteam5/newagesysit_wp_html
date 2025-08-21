@@ -27,8 +27,6 @@
   </head>
 
   <body class="font-inter overflow-x-hidden">
-   
-
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
       style="background-color: rgba(0, 10, 31) !important"
@@ -1827,10 +1825,10 @@
 
     <section class="mt-40">
       <div class="container flex flex-col items-center justify-center">
-        <div class="mx-auto w-[80%]">
+        <div class="mx-auto md:w-[80%]">
           <!-- Heading -->
        <h1
-  class="text-[38px] md:text-[60px] font-bold leading-snug text-[#2A2D30] text-center space-y-2"
+  class="text-[38px] md:text-[60px] font-bold leading-tight md:leading-[72px] text-[#2A2D30] text-center"
 >
   <span class="block animate-reveal">
     Revolutionizing Doctor-Patient
@@ -1839,7 +1837,7 @@
   <span class="block animate-reveal">
     Relations & 
     <span
-      class="bg-gradient-to-r from-[#FF8214]  to-[#4361EE] bg-clip-text text-transparent"
+      class="bg-gradient-to-r from-[#FF8214] to-[#4361EE] bg-clip-text text-transparent"
     >
       Doctor Appointments
     </span>
@@ -1849,7 +1847,6 @@
     With a Mobile Application
   </span>
 </h1>
-
 
 
           <!-- Subheading -->
@@ -1928,49 +1925,51 @@
         </div>
       </div>
     </section>
-    
-<section class="relative  mt-10">
-  <div class="flex w-full justify-center items-center  gap-4 relative container">
-    <!-- Left floating doctor image -->
-    <img 
-      src="./img/Doctor.png" 
-      alt="doc" 
-      class="h-auto absolute left-0 top-0 z-10" 
-      id="leftDoctor"
-    />
-    
-    <!-- Right floating availability image -->
-    <img 
-      src="./img/Availability.png" 
-      alt="doc" 
-      class="h-auto absolute -right-16   z-10" 
-      id="rightAvailability"
-    />
-    
-    <!-- Banner images wrapper -->
-    <div
-      id="bannerWrapper"
-      class="banner-wrapper  flex justify-center gap-3 relative w-full"
-    >
 
-    
-      <img
-        src="./img/cds-banner.jpg"
-        alt="banner"
-        class="w-1/2 h-auto  origin-center"
-        id="banner1" 
-      />
-      <img 
-        src="./img/cds-banner-1.jpg" 
-        alt="banner" 
-        class="w-1/2 h-auto  origin-center"
-        id="banner2"
-      />
-    </div>
-  </div>
-</section>
+    <section class="relative mt-10 ">
+      <div
+        class="flex w-full justify-center items-center gap-4 relative container"
+      >
+        <!-- Left floating doctor image -->
+        <img
+          src="./img/Doctor.png"
+          alt="doc"
+          class="h-auto absolute left-0 top-0 z-10 hidden lg:block"
+          id="leftDoctor"
+        />
 
-    <section class="mt-16 px-6 pt-16 md:px-20 bg-white text-[#2A2D30]">
+        <!-- Right floating availability image -->
+        <img
+          src="./img/Availability.png"
+          alt="doc"
+          class="h-auto absolute -right-16 z-10 hidden lg:block"
+          id="rightAvailability"
+        />
+
+        <!-- Banner images wrapper -->
+        <div
+          id="bannerWrapper"
+          class="banner-wrapper flex justify-center gap-3 relative w-full rounded-xl"
+        >
+          <img
+            src="./img/cds-banner.jpg"
+            alt="banner"
+            class="w-1/2 h-auto origin-center"
+            id="banner1"
+          />
+          <img
+            src="./img/cds-banner-1.jpg"
+            alt="banner"
+            class="w-1/2 h-auto origin-center"
+            id="banner2"
+          />
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section class="md:mt-16 px-2 pt-16 md:px-20 bg-white text-[#2A2D30]">
       <div class="container grid grid-cols-1 lg:grid-cols-2">
         <!-- Heading -->
         <div class="mb-12">
@@ -2064,7 +2063,7 @@
           <h4 class="font-bold text-[28px] mb-4">Make your idea real</h4>
           <a
             href="https://newagesysit.com/contact/"
-            class="bg-[#2A231F] group/inner border border-white text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-5 rounded-md flex items-center justify-between sm:justify-start gap-2 shadow-md w-fit"
+            class="bg-[#2A231F] group/inner border border-white text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-5 rounded-md flex items-center justify-between sm:justify-start gap-2 shadow-md w-fit text-nowrap"
           >
             Talk to our experts
 
@@ -2088,10 +2087,10 @@
       </div>
     </section>
 
-    <section class="px-6 py-12 md:px-20 bg-white text-[#2A2D30]">
+    <section class="px-2 py-5 lg:py-12 md:px-20 bg-white text-[#2A2D30]">
       <div class="container grid grid-cols-1 lg:grid-cols-2">
         <!-- Heading -->
-        <div class="mb-12">
+        <div class="mb-8 lg:mb-12">
           <h2
             class="text-[35px] md:text-[50px] font-bold leading-tight lg:w-[80%]"
           >
@@ -2101,7 +2100,7 @@
         </div>
 
         <!-- Content Grid -->
-        <div class="grid mb-12">
+        <div class="grid mb-5 lg:mb-12">
           <div class="text-lg leading-relaxed">
             <p class="text-[20px] md:text-[28px]">
               Our strategy for CashDocs involves building a powerful
@@ -2118,14 +2117,25 @@
       </div>
     </section>
 
-    <section
-      id="parallax-section-1"
-      class="relative h-[40vh] lg:h-[70vh] bg-black overflow-hidden bg-center bg-no-repeat bg-contain"
-    >
-      <!-- Optional: Overlay content here -->
+    <section class="bg-[#F0F3FF] py-10 md:py-[80px] lg:!pt-[150px] !pt-[60px]">
+      <div class="container">
+        <div
+          class="flex gap-6 lg:w-[80%] w-full justify-center mx-auto animation-element relative"
+        >
+          <div class="md:flex-1 anim-img-down">
+            <img src="./img/PHONE.png" alt="" />
+          </div>
+          <div class="md:flex-1 anim-img">
+            <img src="./img/PHONE (1).png" alt="" />
+          </div>
+          <div class="md:flex-1 anim-img-down">
+            <img src="./img/PHONE (2).png" alt="" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="px-6 pt-5 md:px-20 bg-white text-[#2A2D30]">
+    <section class="lg:mt-12 px-2 pt-5 md:px-20 bg-white text-[#2A2D30]">
       <div class="container mx-auto text-left">
         <!-- Section Title -->
         <h2 class="text-[35px] md:text-[50px] font-bold mb-6 xl:w-[70%]">
@@ -2146,8 +2156,8 @@
 
     <section class="mt-5 bg-white">
       <div class="container pb-10">
-        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-          <div class="accordion faq-accordion w-full">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 mt-12">
+          <div class="accordion faq-accordion">
             <div class="flex flex-wrap relative">
               <div class="basis-full text-black">
                 <div class="px-[6px]">
@@ -2159,12 +2169,14 @@
                       onclick="toggleUniqueAccordion(this)"
                       data-img-index="0"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >01
-                        <span class="custom-dashed-small mx-3"></span>Enhanced
-                        doctor search functionality
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>01</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Enhanced doctor search functionality</div>
+                      </div>
+
                       <span
                         class="arrow-wrapper opacity-0 group-hover/1:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2184,7 +2196,7 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content !overflow-hidden">
                       <div
                         class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
@@ -2215,12 +2227,13 @@
                       onclick="toggleUniqueAccordion(this)"
                       data-img-index="1"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >02
-                        <span class="custom-dashed-small mx-3"></span>Tailored
-                        application design
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>02</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Tailored application design</div>
+                      </div>
                       <span
                         class="arrow-wrapper opacity-0 group-hover/2:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2240,9 +2253,9 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content !overflow-hidden">
                       <div
-                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                        class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
                         <p>
                           Our dedicated team crafted the application from the
@@ -2271,12 +2284,13 @@
                       onclick="toggleUniqueAccordion(this)"
                       data-img-index="2"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >03
-                        <span class="custom-dashed-small mx-3"></span
-                        >Streamlined doctor registration process
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>03</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Streamlined doctor registration process</div>
+                      </div>
                       <span
                         class="arrow-wrapper opacity-0 group-hover/3:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2296,9 +2310,9 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content !overflow-hidden">
                       <div
-                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                        class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
                         <p>
                           We established an efficient registration procedure for
@@ -2312,7 +2326,7 @@
                       </div>
                       <div class="w-full block lg:hidden">
                         <img
-                        src="./img/cdf-3.png"
+                          src="./img/cdf-3.png"
                           alt="Healthcare App 1"
                           class="w-full h-auto rounded-lg"
                         />
@@ -2327,12 +2341,13 @@
                       onclick="toggleUniqueAccordion(this)"
                       data-img-index="3"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >04
-                        <span class="custom-dashed-small mx-3"></span
-                        >Geographical search options
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>05</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Geographical search options</div>
+                      </div>
                       <span
                         class="arrow-wrapper opacity-0 group-hover/4:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2352,9 +2367,9 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content !overflow-hidden">
                       <div
-                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                        class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
                         <p>
                           With the location-based search feature, patients can
@@ -2365,7 +2380,7 @@
                       </div>
                       <div class="w-full block lg:hidden">
                         <img
-                         src="./img/cdf-4.png"
+                          src="./img/cdf-4.png"
                           alt="Healthcare App 1"
                           class="w-full h-auto rounded-lg"
                         />
@@ -2380,13 +2395,13 @@
                       onclick="toggleUniqueAccordion(this)"
                       data-img-index="4"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
                       >
-                        05
-                        <span class="custom-dashed-small mx-3"></span
-                        >HIPAA-compliant data protection
-                      </span>
+                        <div>05</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>HIPAA-compliant data protection</div>
+                      </div>
                       <span
                         class="arrow-wrapper opacity-0 group-hover/5:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2406,9 +2421,9 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content !overflow-hidden">
                       <div
-                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                        class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
                         <p>
                           Acknowledging the critical importance of data security
@@ -2436,12 +2451,13 @@
                       onclick="toggleUniqueAccordion(this)"
                       data-img-index="5"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >06
-                        <span class="custom-dashed-small mx-3"></span
-                        >Promotional sponsor profile
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>06</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Promotional sponsor profile</div>
+                      </div>
                       <span
                         class="arrow-wrapper opacity-0 group-hover/6:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2461,9 +2477,9 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content !overflow-hidden">
                       <div
-                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                        class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
                         <p>
                           We introduced a sponsor profile feature for doctors
@@ -2575,18 +2591,20 @@
         <div class="slider_wrapper w-full mx-auto relative text-[18px]">
           <div class="accordion faq-accordion">
             <div class="flex flex-wrap relative">
-              <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
+              <div class="basis-full  lg:basis-1/2 text-black">
                 <div class="px-[6px]">
                   <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                        class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >01 <span class="custom-dashed-small mx-3"></span>Doctor
-                        search and discovery
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>01</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Doctor search and discovery</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2608,7 +2626,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                        <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                        <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             CashDocs enables patients to book both video visits
                             and in-clinic appointments.
@@ -2630,15 +2648,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >02
-                        <span class="custom-dashed-small mx-3"></span
-                        >Appointment booking and management
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>02</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Appointment booking and management</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2660,7 +2679,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Easily schedule appointments online at any time,
                             viewing doctors' real-time availability.
@@ -2683,15 +2702,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >03
-                        <span class="custom-dashed-small mx-3"></span
-                        >Telemedicine
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>03</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Telemedicine</div>
+                      </div>
 
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -2714,7 +2734,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Engage in video consultations for prompt, convenient
                             care directly from your home.
@@ -2735,20 +2755,21 @@
                 </div>
               </div>
               <div
-                class="basis-full md:basis-1/2 lg:basis-1/2 text-black mt-[15px] min-768px:mt-[0px]"
+                class="basis-full  lg:basis-1/2 text-black mt-[15px] min-768px:mt-[0px]"
               >
                 <div class="px-[6px]">
-                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px]  mt-3 lg:mt-0 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >04
-                        <span class="custom-dashed-small mx-3"></span>Medical
-                        records management
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>04</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Medical records management</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2770,7 +2791,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Securely store and access your medical records,
                             including prescriptions, lab results, and
@@ -2786,14 +2807,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >05<span class="custom-dashed-small mx-3"></span
-                        >Medication management
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>05</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Medication management</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2815,7 +2838,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Set reminders for medication intake and monitor
                             refill requirements.
@@ -2830,14 +2853,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >06 <span class="custom-dashed-small mx-3"></span>In-app
-                        messaging
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>06</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>In-app messaging</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2859,7 +2884,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Stay informed with updates and notifications from
                             doctors about appointments and health advice.
@@ -2883,19 +2908,20 @@
         <div class="slider_wrapper w-full mx-auto relative text-[18px]">
           <div class="accordion faq-accordion">
             <div class="flex flex-wrap relative">
-              <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
+              <div class="basis-full  lg:basis-1/2 text-black">
                 <div class="px-[6px]">
-                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px]  min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >01
-                        <span class="custom-dashed-small mx-3"></span>Account
-                        setup and onboarding
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>01</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Account setup and onboarding</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2917,7 +2943,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Doctors can register to create a medical
                             practitioner account, simplifying the onboarding
@@ -2929,15 +2955,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >02
-                        <span class="custom-dashed-small mx-3"></span
-                        >Appointment management
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>02</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Appointment management</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2959,7 +2986,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Efficiently view and manage patient appointments.
                           </li>
@@ -2976,14 +3003,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >03<span class="custom-dashed-small mx-3"></span
-                        >Telemedicine
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>03</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Telemedicine</div>
+                      </div>
 
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -3006,7 +3035,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Perform remote video consultations with patients.
                           </li>
@@ -3025,19 +3054,21 @@
                 </div>
               </div>
               <div
-                class="basis-full md:basis-1/2 lg:basis-1/2 text-black mt-[15px] min-768px:mt-[0px]"
+                class="basis-full  lg:basis-1/2 text-black mt-[15px] min-768px:mt-[0px] "
               >
                 <div class="px-[6px]">
-                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 lg:mt-0 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >04 <span class="custom-dashed-small mx-3"></span>In-app
-                        messaging
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>04</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>In-app messaging</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -3059,7 +3090,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Facilitate direct communication with patients via
                             messages.
@@ -3070,15 +3101,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >05
-                        <span class="custom-dashed-small mx-3"></span>Patient
-                        communication
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>05</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Patient communication</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -3100,7 +3132,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Securely interact with patients through messaging or
                             video calls, sharing test results, diagnoses, and
@@ -3112,15 +3144,16 @@
                   </div>
                   <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
                     <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-8 pl-5 pr-[50px] relative text-[18px]"
                       onclick="toggleAccordion(this)"
                     >
-                      <span
-                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
-                        >06
-                        <span class="custom-dashed-small mx-3"></span>Practice
-                        management
-                      </span>
+                      <div
+                        class="flex font-semibold text-[18px] md:text-[28px]"
+                      >
+                        <div>06</div>
+                        <span class="custom-dashed-small mx-3"></span>
+                        <div>Practice management</div>
+                      </div>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -3142,7 +3175,7 @@
                     </button>
                     <div class="accordion-content">
                       <div class="p-4 text-black">
-                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                         <ul class="list-disc pl-8 text-[18px] md:text-[23px] space-y-4">
                           <li>
                             Securely manage patient data and medical records.
                           </li>
@@ -3221,7 +3254,7 @@
       </div>
     </section>
 
-    <section class="bg-white text-[#2A2D30] py-12">
+    <section class="bg-white text-[#2A2D30] py-12 mt-12">
       <div class="container mx-auto">
         <!-- Title -->
         <h2 class="text-3xl md:text-[50px] font-bold text-left mb-10">
@@ -3229,7 +3262,7 @@
         </h2>
 
         <!-- Process Steps Container -->
-        <div class="bg-[#F0F3FF] p-6 md:p-12 rounded-2xl py-10">
+        <div class="bg-[#F0F3FF] p-6 md:p-12 rounded-2xl py-10 mt-5">
           <div class="relative">
             <!-- Line connecting image centers -->
             <div
@@ -3308,7 +3341,7 @@
     <section class="py-16 bg-white text-center text-[#2A2D30] container">
       <h2 class="text-3xl md:text-[50px] font-bold mb-12">Technology Stack</h2>
       <div
-        class="flex flex-wrap justify-center items-center mt-12 gap-14 mx-auto max-w-5xl"
+        class="flex flex-wrap justify-center items-center md:mt-18 gap-14 mx-auto max-w-5xl"
       >
         <!-- Item -->
         <div class="flex flex-col items-center space-y-4">
@@ -3381,10 +3414,10 @@
       </div>
     </section>
 
-    <section class="px-6 py-12 md:px-20 md:py-24 bg-white text-[#2A2D30]">
+    <section class="px-2 py-12 md:px-20 md:py-24 bg-white text-[#2A2D30]">
       <div class="container mx-auto">
         <h2 class="text-[35px] md:text-[50px] font-bold mb-6 xl:w-[70%]">
-          Results
+          Key Results
         </h2>
 
         <!-- Description -->
@@ -3403,7 +3436,7 @@
         <div class="grid lg:grid-cols-2 gap-6">
           <!-- Card 1 -->
           <div
-            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+            class="flex flex-col items-center md:flex-row md:items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
           >
             <img
               src="./img/Progress Pie Chart.svg"
@@ -3420,7 +3453,7 @@
 
           <!-- Card 2 -->
           <div
-            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+            class="flex flex-col items-center md:flex-row md:items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
           >
             <img
               src="./img/Progress Pie Chart (1).svg"
@@ -3437,7 +3470,7 @@
 
           <!-- Card 3 -->
           <div
-            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+            class="flex flex-col items-center md:flex-row md:items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
           >
             <img
               src="./img/Progress Pie Chart (2).svg"
@@ -3454,7 +3487,7 @@
 
           <!-- Card 4 -->
           <div
-            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+            class="flex flex-col items-center md:flex-row md:items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
           >
             <img
               src="./img/Progress Pie Chart (3).svg"
@@ -3591,16 +3624,13 @@
     <script src="script.js"></script>
 
     <script>
-   
-     
-
       const imageSources = [
         "./img/cdf-1.png",
         "./img/cdf-2.png",
         "./img/cdf-3.png",
         "./img/cdf-4.png",
         "./img/cdf-5.png",
-        "./img/cdf-6.png"
+        "./img/cdf-6.png",
       ];
 
       function toggleUniqueAccordion(button) {
@@ -3655,102 +3685,128 @@
         }
       }
 
-  
-
-
       function toggleAccordion(button) {
-    const content = button.nextElementSibling;
-    const isOpen = content.classList.contains("show");
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
 
-    // Close all accordion items
-    const accordionItems = document.querySelectorAll(".accordion-content");
-    accordionItems.forEach((item) => {
-      item.classList.remove("show");
-    });
+        // Close all accordion items
+        const accordionItems = document.querySelectorAll(".accordion-content");
+        accordionItems.forEach((item) => {
+          item.classList.remove("show");
+        });
 
-    // Rotate all accordion icons
-    const accordionIcons = document.querySelectorAll(".transform");
-    accordionIcons.forEach((icon) => {
-      icon.classList.remove("rotate-180");
-    });
+        // Rotate all accordion icons
+        const accordionIcons = document.querySelectorAll(".transform");
+        accordionIcons.forEach((icon) => {
+          icon.classList.remove("rotate-180");
+        });
 
-    // Open the clicked accordion item if it was closed
-    if (!isOpen) {
-      content.classList.add("show");
-      button.querySelector("span:last-child").classList.add("rotate-180");
-    }
-  }
+        // Open the clicked accordion item if it was closed
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
     </script>
-   
 
-<script>
-gsap.registerPlugin(ScrollTrigger);
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
 
-// ---------------------------
-// Initial states
-// ---------------------------
+      // ---------------------------
+      // Initial states
+      // ---------------------------
 
-// Floating images start below and hidden
-gsap.set("#leftDoctor", { y: "100%", opacity: 0 });
-gsap.set("#rightAvailability", { y: "100%", opacity: 0 });
+      // Floating images start below and hidden
+      gsap.set("#leftDoctor", { y: "100%", opacity: 0 });
+      gsap.set("#rightAvailability", { y: "100%", opacity: 0 });
 
+      // ---------------------------
+      // On page load animations
+      // ---------------------------
+      gsap.to(["#leftDoctor", "#rightAvailability"], {
+        y: "0%",
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out",
+      });
 
-// ---------------------------
-// On page load animations
-// ---------------------------
-gsap.to(["#leftDoctor", "#rightAvailability"], {
-  y: "0%",
-  opacity: 1,
-  duration: 1.5,
-  ease: "power2.out"
-});
+      // ---------------------------
+      // Scroll animations
+      // ---------------------------
 
-// ---------------------------
-// Scroll animations
-// ---------------------------
+      // Floating doctor image (left)
+      // Floating doctor image (left) - very slight right + up
+      gsap.to("#leftDoctor", {
+        scrollTrigger: {
+          trigger: ".banner-wrapper",
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+        },
+        xPercent: 15, // small right movement relative to wrapper width
+        yPercent: -25, // move upward
+        ease: "power2.inOut",
+      });
 
-// Floating doctor image (left)
-// Floating doctor image (left) - very slight right + up
-gsap.to("#leftDoctor", {
-  scrollTrigger: {
-    trigger: ".banner-wrapper",
-    start: "top center",
-    end: "bottom center",
-    scrub: 1
-  },
-  xPercent: 15,   // small right movement relative to wrapper width
-  yPercent: -25,  // move upward
-  ease: "power2.inOut"
-});
+      // Floating availability image (right) - only upward
+      gsap.to("#rightAvailability", {
+        scrollTrigger: {
+          trigger: ".banner-wrapper",
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+        },
+        yPercent: -50, // only move up
+        ease: "power2.inOut",
+      });
 
-// Floating availability image (right) - only upward
-gsap.to("#rightAvailability", {
-  scrollTrigger: {
-    trigger: ".banner-wrapper",
-    start: "top center",
-    end: "bottom center",
-    scrub: 1
-  },
-  yPercent: -50,  // only move up
-  ease: "power2.inOut"
-});
+      gsap.fromTo(
+        ".banner-wrapper",
+        { scale: 0.8, transformOrigin: "center center" }, // start smaller
+        {
+          scrollTrigger: {
+            trigger: ".banner-wrapper",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1,
+          },
+          scale: 1, // grow back to full size
+          ease: "power2.out",
+        }
+      );
 
+    
 
-gsap.fromTo(
-  ".banner-wrapper",
-  { scale: 0.8, transformOrigin: "center center" }, // start smaller
-  {
-    scrollTrigger: {
-      trigger: ".banner-wrapper",
-      start: "top center",
-      end: "bottom center",
-      scrub: 1
-    },
-    scale: 1, // grow back to full size
-    ease: "power2.out"
-  }
-);
-</script>
+    </script>
 
-</body>
+    <script>
+      jQuery(document).ready(function () {
+        var $animation_elements = $(".animation-element");
+        var $window = $(window);
+        var isAlreadyRun = false;
+
+        function check_if_in_view() {
+          var window_height = $window.height();
+          var window_top_position = $window.scrollTop();
+          var window_bottom_position =
+            window_top_position + window_height - 200;
+
+          $.each($animation_elements, function () {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = element_top_position + element_height;
+            //check to see if this current container is within viewport
+            if (element_top_position <= window_bottom_position) {
+              $element.addClass("in-view");
+            } else {
+              $element.removeClass("in-view");
+            }
+          });
+        }
+        $window.on("scroll resize", check_if_in_view);
+        $window.trigger("scroll");
+      });
+    </script>
+  </body>
 </html>
