@@ -3492,6 +3492,7 @@ html {
     margin-right: -1rem;
   } */
 }
+
 .op-slider .slick-track {
   display: flex;
   gap: 20px;
@@ -3499,21 +3500,35 @@ html {
 .op-slider .slick-list {
   overflow: unset !important;
 }
+
+.banner-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+
+
+#leftDoctor, #rightAvailability {
+  will-change: transform;
+  pointer-events: none;
+}
+
 .animation-element.in-view .anim-img img {
   margin-top: -30px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 .in-view .anim-img-down img {
   margin-top: 30px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 @media (max-width: 768px) {
   .animation-element.in-view .anim-img img {
     margin-top: -15px;
-    transition: all 1s;
+    transition: all 0.5s;
   }
   .in-view .anim-img-down img {
     margin-top: 15px;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 }

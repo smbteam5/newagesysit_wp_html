@@ -7,7 +7,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sys IT - Golang Development</title>
+    <title>Sys IT - Cash-Docs</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -26,32 +26,8 @@
     <link href="style.css" rel="stylesheet" />
   </head>
 
-  <body class="overflow-x-hidden lg:overflow-x-visible font-inter">
-    <div
-      class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 hidden p-[15px]"
-      id="videoModal"
-    >
-      <div
-        class="bg-white rounded-lg overflow-hidden w-full max-w-3xl relative"
-      >
-        <div class="relative pb-9/16">
-          <iframe
-            id="youtubePlayer"
-            class="w-full h-[400px]"
-            src=""
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <button
-          class="absolute top-0 right-0 m-2 text-white bg-red-600 rounded-full p-2 w-[30px] h-[30px] flex justify-center items-center"
-          id="closeModal"
-        >
-          &times;
-        </button>
-      </div>
-    </div>
+  <body class="font-inter overflow-x-hidden">
+   
 
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
@@ -1849,36 +1825,43 @@
       <!-- mobile-menu end-->
     </header>
 
-    <section class="mt-20 md:mt-40">
+    <section class="mt-40">
       <div class="container flex flex-col items-center justify-center">
-        <div class="mx-auto">
+        <div class="mx-auto w-[80%]">
           <!-- Heading -->
-          <h1
-            class="text-[38px] md:text-[60px] font-bold leading-snug text-center"
-          >
-            An Affiliate Platform for
-            <span
-              class="bg-gradient-to-r from-orange-500 via-purple-500 to-blue-600 bg-clip-text text-transparent"
-            >
-              Driving Sales Growth
-            </span>
-            and
-            <span
-              class="bg-gradient-to-r from-orange-500 via-purple-500 to-blue-600 bg-clip-text text-transparent"
-              >Candidate Hiring</span
-            >
-            <span class="text-black"> through Referrals</span>
-          </h1>
+       <h1
+  class="text-[38px] md:text-[60px] font-bold leading-snug text-[#2A2D30] text-center space-y-2"
+>
+  <span class="block animate-reveal">
+    Revolutionizing Doctor-Patient
+  </span>
+
+  <span class="block animate-reveal">
+    Relations & 
+    <span
+      class="bg-gradient-to-r from-[#FF8214]  to-[#4361EE] bg-clip-text text-transparent"
+    >
+      Doctor Appointments
+    </span>
+  </span>
+
+  <span class="block animate-reveal text-black">
+    With a Mobile Application
+  </span>
+</h1>
+
+
+
+          <!-- Subheading -->
         </div>
         <div
-          class="flex flex-col sm:flex-row gap-4 mb-10 sm:mb-12 mt-10 items-center"
+          class="flex flex-col justify-center items-center sm:flex-row gap-4 mb-10 sm:mb-12 mt-10"
         >
           <a
             class="bg-[#FF8214] group text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
           >
-            <span class="truncate whitespace-nowrap overflow-hidden block">
-              Let’s Build Your App 
-            </span>
+            Let’s Build Your App
+
             <div
               class="relative w-[30px] h-[30px] inline-block ml-4 rounded-full z-10 ripple-wrapper"
             >
@@ -1945,32 +1928,54 @@
         </div>
       </div>
     </section>
+    
+<section class="relative  mt-10">
+  <div class="flex w-full justify-center items-center  gap-4 relative container">
+    <!-- Left floating doctor image -->
+    <img 
+      src="./img/Doctor.png" 
+      alt="doc" 
+      class="h-auto absolute left-0 top-0 z-10" 
+      id="leftDoctor"
+    />
+    
+    <!-- Right floating availability image -->
+    <img 
+      src="./img/Availability.png" 
+      alt="doc" 
+      class="h-auto absolute -right-16   z-10" 
+      id="rightAvailability"
+    />
+    
+    <!-- Banner images wrapper -->
+    <div
+      id="bannerWrapper"
+      class="banner-wrapper  flex justify-center gap-3 relative w-full"
+    >
 
-    <section class="flex justify-center items-center group">
-      <div
-        class="container flex justify-center items-center py-12 rounded-[24px]"
-      >
-        <div
-          class="w-[100%] h-fit lg:h-[80vh] mx-auto overflow-hidden rounded-[24px] bg-white flex items-center justify-center"
-        >
-          <img
-            src="./img/bungee-zoom.png"
-            alt="Zoom Image"
-            class="object-cover will-change-transform block rounded-[24px]"
-            id="zoom-img"
-            style="width: 60%; transform: scale(0.8)"
-          />
-        </div>
-        <img class="" />
-      </div>
-    </section>
+    
+      <img
+        src="./img/cds-banner.jpg"
+        alt="banner"
+        class="w-1/2 h-auto  origin-center"
+        id="banner1" 
+      />
+      <img 
+        src="./img/cds-banner-1.jpg" 
+        alt="banner" 
+        class="w-1/2 h-auto  origin-center"
+        id="banner2"
+      />
+    </div>
+  </div>
+</section>
 
-    <section class="pt-8 bg-white text-[#2A2D30]">
+    <section class="mt-16 px-6 pt-16 md:px-20 bg-white text-[#2A2D30]">
       <div class="container grid grid-cols-1 lg:grid-cols-2">
         <!-- Heading -->
         <div class="mb-12">
           <h2
-            class="text-[35px] md:text-[50px] font-bold leading-tight lg:w-[80%]"
+            class="text-[35px] md:text-[50px] text-[#2A2D30] font-bold leading-tight lg:w-[80%]"
           >
             Client Overview & Partnership
           </h2>
@@ -1980,16 +1985,24 @@
         <div class="grid mb-12">
           <div class="text-lg leading-relaxed">
             <p class="text-[20px] md:text-[28px]">
-              Bungee, a dynamic US-based startup, recognized common challenges
-              faced by most companies: the intensive efforts required to boost
-              sales and expedite the hiring process for qualified candidates.
-              With a mission to address these issues, Bungee set out to develop
-              a comprehensive platform to bridge these crucial gaps effectively.
+              CashDocs stands at the forefront of healthcare innovation, founded
+              by a unique partnership between a medical professional and a legal
+              expert. United by the vision to transform how patients and doctors
+              communicate, they have developed CashDocs—an application tailored
+              to bridge gaps in the healthcare system. This platform is
+              dedicated to enhancing patient experiences by simplifying how
+              appointments are scheduled, medical questions are addressed, and
+              overall health is managed. CashDocs leverages cutting-edge digital
+              solutions to advance the healthcare industry, embodying the
+              founders' mission to modernize interactions between patients and
+              doctors, thereby ensuring efficiency and convenience are at the
+              heart of care.
             </p>
           </div>
         </div>
       </div>
     </section>
+
     <section class="container py-10">
       <!-- Details Box -->
       <div
@@ -2000,9 +2013,9 @@
           <h4 class="font-bold text-[20px] md:text-[28px] mb-2">Industry</h4>
           <p class="relative w-fit">
             <a
-              href="https://newagesysit.com/social-media-application-development-services/"
+              href="https://newagesysit.com/healthcare-software-development-services/"
               class="hover:text-blue-500"
-              >HR & Recruitment</a
+              >Healthcare</a
             >
             <span
               class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
@@ -2018,22 +2031,13 @@
               <a
                 href="https://newagesysit.com/app-development-service/"
                 class="hover:text-blue-500"
-                >Web App Development</a
-              >
-              <span
-                class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
-              ></span>
-            </li>
-            <li class="w-fit relative">
-              <a
-                href="https://newagesysit.com/app-development-service/"
-                class="hover:text-blue-500"
                 >Mobile App Development</a
               >
               <span
                 class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
               ></span>
             </li>
+            <li>Web Development</li>
             <li class="w-fit relative">
               <a
                 href="https://newagesysit.com/ui-ux-design-services/"
@@ -2084,289 +2088,443 @@
       </div>
     </section>
 
-    <section class="mt-8 md:mt-20">
-      <div class="container flex flex-col lg:flex-row justify-center">
-        <div class="w-full lg:w-[90%] text-center">
+    <section class="px-6 py-12 md:px-20 bg-white text-[#2A2D30]">
+      <div class="container grid grid-cols-1 lg:grid-cols-2">
+        <!-- Heading -->
+        <div class="mb-12">
           <h2
-            class="text-[34px] md:text-[50px] text-[#2A2D30] font-bold text-center mb-3"
+            class="text-[35px] md:text-[50px] font-bold leading-tight lg:w-[80%]"
           >
-            The Solution That Streamlined the Employee
-            <br />
-            Referral Processes
+            Simplifying Healthcare Accessibility & Communication with a Unified
+            Platform
           </h2>
         </div>
 
-        <!-- Arrow Controls -->
-      </div>
-
-      <!-- Slider -->
-
-      <div
-        class="md:mt-12 p-4 grid grid-cols-1 lg:grid-cols-2 gap-[20px] container"
-      >
-        <!-- CARD 1 -->
-
-        <div
-          class="w-full h-auto lg:h-[460px] p-2 text-center flex items-center bg-[#F5FAFE] rounded-[16px]"
-        >
-          <div class="p-6">
-            <div class="mb-4">
-              <h2 class="text-[28px] font-bold text-[#111827]">
-                Connecting customers and candidates
-              </h2>
-            </div>
-            <p class="text-[18px] text-[#4B5563] leading-relaxed">
-              The affiliate platform serves as a dynamic space for individuals
-              to transition into “Bungees,” acting as vital connectors between
-              businesses and job seekers, as well as facilitating connections
-              between buyers and sellers. This feature streamlines the
-              acquisition process for both customers and candidates.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div
-          class="w-full h-auto lg:h-[460px] p-2 text-center flex items-center bg-[#FFF0E3] rounded-[16px]"
-        >
-          <div class="p-6">
-            <div class="flex gap-3 mb-4">
-              <h2 class="text-[28px] font-semibold text-[#111827]">
-                Matching candidates and facilitating connections
-              </h2>
-            </div>
-            <p class="text-[18px] text-[#4B5563] leading-relaxed">
-              At its core, Bungees play a pivotal role in matching candidates
-              with suitable job opportunities and connecting buyers with
-              sellers. The platform functions as a catalyst for these
-              connections, enhancing the efficiency of the overall recruitment
-              and transaction processes.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div
-          class="w-full h-auto lg:h-[460px] p-2 text-center flex items-center bg-[#E4F9F3] rounded-[16px]"
-        >
-          <div class="p-6">
-            <div class="mb-4">
-              <h2 class="text-[28px] font-semibold text-[#111827]">
-                Personalized referral links
-              </h2>
-            </div>
-            <p class="text-[18px] text-[#4B5563] leading-relaxed">
-              Each Bungee is equipped with an independent link, providing a
-              personalized touch to their engagement on the platform. These
-              unique links can be easily shared across various social channels,
-              extending the platform’s reach and creating individualized
-              connections.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div
-          class="w-full h-auto lg:h-[460px] p-2 text-center flex items-center bg-[#FFE2E4] rounded-[16px]"
-        >
-          <div class="p-6">
-            <div class="mb-4">
-              <h2 class="text-[28px] font-semibold text-[#111827]">
-                Compensation for successful referrals
-              </h2>
-            </div>
-            <p class="text-[18px] text-[#4B5563] leading-relaxed">
-              If an individual secures a job opportunity through the platform,
-              the corresponding Bungee is duly compensated. This innovative
-              compensation model encourages active participation, allowing
-              Bungees to function either as employees or as independent
-              connectors, contributing to the versatility of the platform’s
-              functionality.
+        <!-- Content Grid -->
+        <div class="grid mb-12">
+          <div class="text-lg leading-relaxed">
+            <p class="text-[20px] md:text-[28px]">
+              Our strategy for CashDocs involves building a powerful
+              Doctor-Patient connection platform, meticulously designed to
+              simplify healthcare interactions for both doctors and patients,
+              ensuring adherence to the strictest security and compliance
+              protocols. Through our unified expertise and creative
+              methodologies, we developed a platform intended to significantly
+              enhance healthcare accessibility and communication, marking a step
+              forward in the evolution of healthcare services.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-10 md:py-16 bg-white text-left">
-      <div class="container mx-auto md:px-4">
-        <!-- Heading -->
-        <h2
-          class="text-[34px] md:text-[50px] font-bold text-[#111827] mb-6 leading-normal"
-        >
-          Functionalities
+    <section
+      id="parallax-section-1"
+      class="relative h-[40vh] lg:h-[70vh] bg-black overflow-hidden bg-center bg-no-repeat bg-contain"
+    >
+      <!-- Optional: Overlay content here -->
+    </section>
+
+    <section class="px-6 pt-5 md:px-20 bg-white text-[#2A2D30]">
+      <div class="container mx-auto text-left">
+        <!-- Section Title -->
+        <h2 class="text-[35px] md:text-[50px] font-bold mb-6 xl:w-[70%]">
+          The Solution that Established an Effortless Doctor-Patient Connection
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          <!-- card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf1.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Customized application form
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              The application form was expertly implemented with a user-friendly
-              interface to create detailed candidate profiles. Backend systems
-              were developed to store and manage data provided by candidates.
-            </p>
+
+        <!-- Description -->
+        <p class="text-[20px] md:text-[28px] leading-relaxed mb-8 text-left">
+          The development of the CashDocs platform marks a significant
+          advancement in the way healthcare access and communication are
+          facilitated. By constructing a comprehensive Doctor-Patient connection
+          platform, complete with sophisticated search capabilities, secure
+          registration, and stringent data protection measures, we've tackled
+          the primary obstacles facing healthcare providers and patients alike.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-5 bg-white">
+      <div class="container pb-10">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+          <div class="accordion faq-accordion w-full">
+            <div class="flex flex-wrap relative">
+              <div class="basis-full text-black">
+                <div class="px-[6px]">
+                  <div
+                    class="min-h-[30px] group/1 border-b border-[#e9eef1] acc-wrap p-4 rounded-[16px]"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleUniqueAccordion(this)"
+                      data-img-index="0"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >01
+                        <span class="custom-dashed-small mx-3"></span>Enhanced
+                        doctor search functionality
+                      </span>
+                      <span
+                        class="arrow-wrapper opacity-0 group-hover/1:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="Plus Icon"
+                            class="w-8 h-8 transform transition-transform duration-300"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="minus Icon"
+                            class="w-8 h-8 rotate-90 transform transition-transform duration-300"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                        class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                      >
+                        <p>
+                          We've implemented an advanced search capability that
+                          allows users to effortlessly locate top-tier doctors
+                          across a range of specialties such as neurology,
+                          dentistry, gynecology, cardiology, pediatrics,
+                          ophthalmology, travel medicine, and primary care. This
+                          feature supports patients in making well-informed
+                          choices regarding their healthcare providers.
+                        </p>
+                      </div>
+                      <div class="w-full block lg:hidden">
+                        <img
+                          src="./img/cdf-1.png"
+                          alt="H 1"
+                          class="w-full h-fit rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="min-h-[30px] group/2 border-b border-[#e9eef1] acc-wrap p-4 rounded-[16px]"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleUniqueAccordion(this)"
+                      data-img-index="1"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >02
+                        <span class="custom-dashed-small mx-3"></span>Tailored
+                        application design
+                      </span>
+                      <span
+                        class="arrow-wrapper opacity-0 group-hover/2:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="Plus Icon"
+                            class="w-8 h-8 transform transition-transform duration-300"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="minus Icon"
+                            class="w-8 h-8 rotate-90 transform transition-transform duration-300"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                      >
+                        <p>
+                          Our dedicated team crafted the application from the
+                          ground up, specifically designed to align with
+                          CashDocs' detailed requirements and preferences.
+                          Through a collaborative process, we integrated key
+                          features and functionalities to ensure the platform
+                          effectively serves the distinct needs of both doctors
+                          and patients.
+                        </p>
+                      </div>
+                      <div class="w-full block lg:hidden">
+                        <img
+                          src="./img/cdf-2.png"
+                          alt="Healthcare App 1"
+                          class="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="min-h-[30px] border-b group/3 border-[#e9eef1] acc-wrap p-4 rounded-[16px]"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleUniqueAccordion(this)"
+                      data-img-index="2"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >03
+                        <span class="custom-dashed-small mx-3"></span
+                        >Streamlined doctor registration process
+                      </span>
+                      <span
+                        class="arrow-wrapper opacity-0 group-hover/3:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="Plus Icon"
+                            class="w-8 h-8 transform transition-transform duration-300"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="minus Icon"
+                            class="w-8 h-8 rotate-90 transform transition-transform duration-300"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                      >
+                        <p>
+                          We established an efficient registration procedure for
+                          doctors, enabling them to share comprehensive details
+                          about their services. To uphold the platform's
+                          quality, each doctor profile is rigorously verified by
+                          the admin team, guaranteeing the reliability and
+                          trustworthiness of the healthcare professionals
+                          listed.
+                        </p>
+                      </div>
+                      <div class="w-full block lg:hidden">
+                        <img
+                        src="./img/cdf-3.png"
+                          alt="Healthcare App 1"
+                          class="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="min-h-[30px] border-b group/4 border-[#e9eef1] acc-wrap p-4 rounded-[16px]"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleUniqueAccordion(this)"
+                      data-img-index="3"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >04
+                        <span class="custom-dashed-small mx-3"></span
+                        >Geographical search options
+                      </span>
+                      <span
+                        class="arrow-wrapper opacity-0 group-hover/4:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="Plus Icon"
+                            class="w-8 h-8 transform transition-transform duration-300"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="minus Icon"
+                            class="w-8 h-8 rotate-90 transform transition-transform duration-300"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                      >
+                        <p>
+                          With the location-based search feature, patients can
+                          conveniently find healthcare providers in their
+                          immediate area, making access to medical services more
+                          accessible than ever.
+                        </p>
+                      </div>
+                      <div class="w-full block lg:hidden">
+                        <img
+                         src="./img/cdf-4.png"
+                          alt="Healthcare App 1"
+                          class="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="min-h-[30px] group/5 border-b border-[#e9eef1] acc-wrap p-4 rounded-[16px]"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleUniqueAccordion(this)"
+                      data-img-index="4"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                      >
+                        05
+                        <span class="custom-dashed-small mx-3"></span
+                        >HIPAA-compliant data protection
+                      </span>
+                      <span
+                        class="arrow-wrapper opacity-0 group-hover/5:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="Plus Icon"
+                            class="w-8 h-8 transform transition-transform duration-300"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="minus Icon"
+                            class="w-8 h-8 rotate-90 transform transition-transform duration-300"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                      >
+                        <p>
+                          Acknowledging the critical importance of data security
+                          in the healthcare sector, we've implemented strong
+                          encryption practices to protect patient information,
+                          adhering to HIPAA standards. This commitment ensures
+                          the utmost confidentiality and security of medical
+                          data within the platform.
+                        </p>
+                      </div>
+                      <div class="w-full block lg:hidden">
+                        <img
+                          src="./img/cdf-5.png"
+                          alt="Healthcare App 1"
+                          class="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="min-h-[30px] group/6 border-b border-[#e9eef1] acc-wrap p-4 rounded-[16px]"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-[#2A2D30] py-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleUniqueAccordion(this)"
+                      data-img-index="5"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >06
+                        <span class="custom-dashed-small mx-3"></span
+                        >Promotional sponsor profile
+                      </span>
+                      <span
+                        class="arrow-wrapper opacity-0 group-hover/6:opacity-100 transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="Plus Icon"
+                            class="w-8 h-8 transform transition-transform duration-300"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow.svg"
+                            alt="minus Icon"
+                            class="w-8 h-8 rotate-90 transform transition-transform duration-300"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                    class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
+                      >
+                        <p>
+                          We introduced a sponsor profile feature for doctors
+                          seeking to increase their visibility and promotional
+                          reach. This optional service allows healthcare
+                          providers to make an additional monthly investment to
+                          highlight their profiles, attracting more patients and
+                          enhancing their practice's exposure.
+                        </p>
+                      </div>
+                      <div class="w-full block lg:hidden">
+                        <img
+                          src="./img/cdf-6.png"
+                          alt="Healthcare App 1"
+                          class="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Card -->
           <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
+            id="accordionImageContainer"
+            class="max-w-[600px] relative overflow-hidden hidden lg:flex justify-center"
           >
-            <img src="./img/bf2.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              User interface and experience
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              An intuitive and user-friendly interface was crafted for both
-              candidates and companies, ensuring a seamless experience through
-              usability testing. The focus was on optimizing the overall user
-              journey.
-            </p>
-          </div>
-
-          <!-- Card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf3.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Video interviews
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              The integration of a video conferencing API enabled direct video
-              interviews. Real-time chat functionality and calendar integration
-              enhanced candidate communication and streamlined the interview
-              scheduling.
-            </p>
-          </div>
-
-          <!-- Card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf4.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Payment integration (Stripe)
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              The Stripe payment gateway was integrated to handle transactions
-              securely. Also, features were implemented to manage referral
-              payments, track successful transactions, and handle
-              payment-related issues.
-            </p>
-          </div>
-
-          <!-- Card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf5.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Applicant Tracking System
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              Effective Integration with the application form was enabled, which
-              ensured automatic updates of the ATS (Applicant Tracking System)
-              with the candidate’s data.
-            </p>
-          </div>
-          <!-- card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf6.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Independent referral links
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              A unique link generation system helped share personalized referral
-              links across social media. Integrating racking mechanisms lets
-              associate referrals with specific Bungees for accurate reward
-              calculations.
-            </p>
-          </div>
-
-          <!-- card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf7.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Invoices
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              The identification and tracking of invoices related to referral
-              transactions were seamlessly integrated. The platform was designed
-              to work with financial systems to store and manage invoices.
-            </p>
-          </div>
-          <!-- card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf8.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              QR code scanning
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              The platform has QR code scanning functionality, with customers
-              receiving QR codes through registered mail for referral
-              redemption. Backend systems verified and processed QR code data to
-              credit referral rewards.
-            </p>
-          </div>
-          <!-- card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf9.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Referral bonus
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              A referral bonus feature helped referrers receive a bonus (%) upon
-              hiring referred candidates. ATS integration enabled automatic
-              triggering of bonus calculations upon positive candidate outcomes.
-            </p>
-          </div>
-          <!-- card -->
-          <div
-            class="flex flex-col items-start text-left p-5 border border-[#0000001A] rounded-[16px]"
-          >
-            <img src="./img/bf10.svg" alt="HIPAA" class="w-18 h-18 mb-6" />
-            <h3 class="text-[28px] font-semibold text-[#111827] mb-6 text-left">
-              Security measures
-            </h3>
-            <p class="text-[18px] text-[#4B5563]">
-              Comprehensive security measures were implemented to safeguard user
-              data, payment information, and sensitive details, ensuring a
-              secure and trustworthy platform for all users.
-            </p>
+            <img
+              id="accordionImage"
+              src="./img/cdf-1.png"
+              alt="Healthcare App"
+              class="w-full h-auto rounded-[24px] transition-opacity duration-300 opacity-100 absolute inset-0 object-fit"
+            />
+            <img
+              id="accordionImageNext"
+              src=""
+              alt=""
+              class="w-full h-auto rounded-[24px] transition-opacity duration-300 opacity-0 absolute inset-0 object-fit"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pb-10 px-6 md:px-12 md:my-10">
+    <section class="py-10 px-6 md:px-12 md:my-10">
       <div
-        class="container mx-auto bg-[#6981F1] min-h-[320px] pt-10 lg:pt-0 px-6 md:px-12 rounded-[24px] flex flex-col lg:flex-row justify-between gap-6 overflow-hidden "
+        class="container mx-auto bg-gradient-to-r from-[#4361EE] to-[#6981F1] min-h-[320px] pt-10 lg:pt-0 px-6 md:px-12 rounded-[24px] flex flex-col lg:flex-row md:items-center justify-between gap-6"
       >
-        <div class="py-[50px]">
+        <div>
           <h2
-            class="text-2xl md:text-[40px] font-bold text-white leading-normal mb-2"
+            class="text-2xl md:text-[40px] font-bold text-white leading-normal"
           >
             Build Your Dream App with Precision
           </h2>
-          <p class="text-white lg:w-[70%] text-[18px] md:text-[22px]">
+          <p class="text-[23px] text-white">
             Tell us about your project. Let’s move ahead with a tailored
             approach and scale your business like never before!
           </p>
           <button
-            class="mt-5 inline-flex items-center gap-2 text-[18px] font-medium border bg-black group border-[#111827] text-white px-4 py-2 rounded-lg hover:bg-black/80 transition-colors"
+            class="mt-5 inline-flex items-center gap-2 text-[18px] font-medium border bg-black group border-[#111827] text-white px-4 py-3 rounded-lg hover:bg-black/80 transition-colors"
           >
             Make Your App a Success
             <div
@@ -2387,155 +2545,620 @@
           </button>
         </div>
 
-        <div
-          class="w-full max-w-[350px] flex flex-col justify-end overflow-hidden"
-        >
+        <div class="w-full max-w-[350px] flex flex-col justify-end">
           <img
-            src="./img/dream-app.png"
+            src="./img/dream-app 1.png"
             alt="Build Image"
-            class="w-full h-auto object-contain lg:pr-[80px]"
+            class="w-full h-auto object-contain"
           />
         </div>
       </div>
     </section>
 
-    <section class="py-10 md:py-16 bg-white text-[#111827]">
+    <section class="faq py-10 md:py-[80px]">
       <div class="container">
-        <div>
+        <div class="dev_head text-[20px] text-center">
           <h2
-            class="text-[34px] md:text-[50px] font-bold text-[#111827] mb-4 leading-normal"
+            class="text-[28px] md:text-[36px] min-992px:text-[50px] text-[#2A2D30] font-bold text-center min-992px:leading-[55px] mb-2"
           >
-            Key Features 
+            Key Features
           </h2>
-          <p
-            class="text-[#4B5563] text-[18px] md:text-[28px] mb-12 leading-normal lg:max-w-[80%]"
-          >
-            Through meticulous planning and strategic execution, NewAgeSysIT
-            collaborated with Bungee to implement a robust set of platform
-            modules, enhancing the functionality and user experience of the
-            Bungee platform. The following features were seamlessly implemented.
-          </p>
         </div>
-      </div>
-      <div class="container mx-auto px-4 flex flex-col xl:flex-row items-start">
-        <div
-          class="pt-0 xl:block xl:sticky xl:top-[25px] h-full w-full xl:w-1/2"
-        >
-          <div class="w-full lg:px-[80px] space-y-4">
-            <div>
-              <img src="./img/kfeat.png" alt="" />
+
+        <div class="flex items-center mt-10 p-[6px] mb-5">
+          <div class="text-[18px] font-semibold text-[#626970] uppercase">
+            FOR PATIENTS
+          </div>
+          <div class="flex-1 border-b border-b-[#48494a] ml-2"></div>
+        </div>
+
+        <div class="slider_wrapper w-full mx-auto relative text-[18px]">
+          <div class="accordion faq-accordion">
+            <div class="flex flex-wrap relative">
+              <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
+                <div class="px-[6px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                        class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >01 <span class="custom-dashed-small mx-3"></span>Doctor
+                        search and discovery
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                        <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            CashDocs enables patients to book both video visits
+                            and in-clinic appointments.
+                          </li>
+                          <li>
+                            Search for doctors by specialty, location, insurance
+                            acceptance, and patient ratings.
+                          </li>
+                          <li>
+                            Access detailed profiles showcasing doctors'
+                            qualifications, experience, and areas of expertise.
+                          </li>
+                          <li>
+                            Read reviews and testimonials from other patients.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >02
+                        <span class="custom-dashed-small mx-3"></span
+                        >Appointment booking and management
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Easily schedule appointments online at any time,
+                            viewing doctors' real-time availability.
+                          </li>
+                          <li>
+                            Select your preferred date, time, and type of
+                            appointment (in-person or video consultation).
+                          </li>
+                          <li>
+                            Manage, reschedule, or cancel appointments
+                            conveniently.
+                          </li>
+                          <li>
+                            Get timely reminders and notifications for your
+                            appointments.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >03
+                        <span class="custom-dashed-small mx-3"></span
+                        >Telemedicine
+                      </span>
+
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Engage in video consultations for prompt, convenient
+                            care directly from your home.
+                          </li>
+                          <li>
+                            Video visits are set for 15 minutes, with the option
+                            to request an extension during the call for an
+                            additional fee.
+                          </li>
+                          <li>
+                            Discuss health issues, receive diagnoses, and obtain
+                            prescriptions remotely.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="basis-full md:basis-1/2 lg:basis-1/2 text-black mt-[15px] min-768px:mt-[0px]"
+              >
+                <div class="px-[6px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >04
+                        <span class="custom-dashed-small mx-3"></span>Medical
+                        records management
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Securely store and access your medical records,
+                            including prescriptions, lab results, and
+                            immunization records.
+                          </li>
+                          <li>
+                            Easily share your medical records with authorized
+                            healthcare providers.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >05<span class="custom-dashed-small mx-3"></span
+                        >Medication management
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Set reminders for medication intake and monitor
+                            refill requirements.
+                          </li>
+                          <li>
+                            Order prescription refills through the app, where
+                            available.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >06 <span class="custom-dashed-small mx-3"></span>In-app
+                        messaging
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Stay informed with updates and notifications from
+                            doctors about appointments and health advice.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="flex items-center mt-10 mb-5 p-[6px]">
+          <div class="text-[18px] font-semibold text-[#626970] uppercase">
+            For Medical Practitioners
+          </div>
+          <div class="flex-1 border-b border-[#626970] ml-2"></div>
+        </div>
 
-        <div class="max-w-4xl mx-auto space-y-4 w-full mt-12 xl:mt-0 xl:w-1/2">
-          <div class="space-y-4">
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                Customized application form
-              </h4>
+        <div class="slider_wrapper w-full mx-auto relative text-[18px]">
+          <div class="accordion faq-accordion">
+            <div class="flex flex-wrap relative">
+              <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
+                <div class="px-[6px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >01
+                        <span class="custom-dashed-small mx-3"></span>Account
+                        setup and onboarding
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Doctors can register to create a medical
+                            practitioner account, simplifying the onboarding
+                            process.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >02
+                        <span class="custom-dashed-small mx-3"></span
+                        >Appointment management
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Efficiently view and manage patient appointments.
+                          </li>
+                          <li>
+                            Adjust availability and book appointments online.
+                          </li>
+                          <li>
+                            Send appointment reminders and confirmations to
+                            ensure patient attendance.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >03<span class="custom-dashed-small mx-3"></span
+                        >Telemedicine
+                      </span>
 
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Business owners can create job openings with a fully
-                  customizable application form, which will allow the applicants
-                  to fill out the details such as their profile details, skills,
-                  experience, and any other specific information that the
-                  business owner requests.
-                </p>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Perform remote video consultations with patients.
+                          </li>
+                          <li>
+                            During consultations, access patients' medical
+                            histories and records for informed care.
+                          </li>
+                          <li>
+                            Electronically prescribe medications, where
+                            permitted.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                Video interviews
-              </h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Facilitating seamless communication, users can directly
-                  engage, chat, and schedule interviews within the platform once
-                  matched.
-                </p>
-              </div>
-            </div>
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                Payment integration (Stripe)
-              </h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Ensuring secure and smooth transactions for referrals, Stripe
-                  integration provides a reliable payment gateway within the
-                  platform.
-                </p>
-              </div>
-            </div>
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                Integration with Applicant Tracking System
-              </h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Efficiently managing job openings and tracking applicants, the
-                  platform seamlessly integrates with companies' Applicant
-                  Tracking Systems for a streamlined recruitment process.
-                </p>
-              </div>
-            </div>
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                Independent referral links
-              </h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Bungees can share personalized referral links across various
-                  social media platforms, extending the reach of the referral
-                  program.
-                </p>
-              </div>
-            </div>
-
-            <!-- 1 -->
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">Invoices</h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Simplifying financial tracking, users can easily identify and
-                  monitor invoices associated with referral transactions after
-                  payment.
-                </p>
-              </div>
-            </div>
-            <!-- 2 -->
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                QR code scanning
-              </h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Streamlining the referral redemption process, users can
-                  utilize QR Codes sent via registered email for a hassle-free
-                  experience.
-                </p>
-              </div>
-            </div>
-            <!-- 3 -->
-            <div class="rounded-[16px] bg-[#F5FAFE] min-h-[250px] p-6">
-              <h4 class="font-bold text-[28px] text-[#2A2D30]">
-                Referral bonus
-              </h4>
-
-              <div class="mt-4 pb-4 text-black">
-                <p class="full-text text-[18px] text-[#2A2D30]">
-                  Encouraging active participation, the app incorporates bonus
-                  incentives for successful referrals that result in interviews
-                  or hiring, creating a rewarding experience for users.
-                </p>
+              <div
+                class="basis-full md:basis-1/2 lg:basis-1/2 text-black mt-[15px] min-768px:mt-[0px]"
+              >
+                <div class="px-[6px]">
+                  <div class="bg-[#F0F3FF] rounded-[10px] min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >04 <span class="custom-dashed-small mx-3"></span>In-app
+                        messaging
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Facilitate direct communication with patients via
+                            messages.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >05
+                        <span class="custom-dashed-small mx-3"></span>Patient
+                        communication
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Securely interact with patients through messaging or
+                            video calls, sharing test results, diagnoses, and
+                            treatment plans digitally.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#F0F3FF] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-black py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span
+                          class="font-semibold text-[18px] md:text-[28px] text-nowrap"
+                        >06
+                        <span class="custom-dashed-small mx-3"></span>Practice
+                        management
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/plus-accordion.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/minus-accordion.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-black">
+                          <ul class="list-disc pl-8 text-[18px] md:text-[23px]">
+                          <li>
+                            Securely manage patient data and medical records.
+                          </li>
+                          <li>
+                            Oversee appointments, referrals, and billing details
+                            with ease.
+                          </li>
+                          <li>
+                            Handle appointment requests and manage bookings
+                            online.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2543,434 +3166,312 @@
       </div>
     </section>
 
-    <section class="py-10 md:py-16 bg-white text-left">
+    <section class="pt-10 md:pt-16 bg-white text-left">
       <div class="container mx-auto md:px-4">
+        <!-- Heading -->
         <h2
-          class="text-[34px] md:text-[50px] font-bold text-[#111827] mb-4 leading-normal"
+          class="text-[34px] md:text-[50px] font-bold text-[#2A2D30] mb-4 leading-normal"
         >
-          Our Project Challenges
+          Project Challenges
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-0 pt-10">
-          <div class="flex flex-col justify-between items-start text-left mt-5">
-            <div>
-              <img src="./img/opc.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
-              <h3
-                class="text-[28px] font-semibold text-[#111827] mb-2 text-left"
-              >
-                Standing out in the market
-              </h3>
-              <p class="text-[18px] text-[#4B5563]">
-                Distinguishing Bungee’s platform in a competitive landscape
-                while ensuring alignment with the target audience presented a
-                noteworthy challenge. Balancing the uniqueness of the concept
-                with market expectations required a thoughtful strategy to
-                position Bungee’s platform in the market successfully. Bungee
-                encountered difficulties in acquiring the necessary technical
-                expertise for its platform development.
-              </p>
-            </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Card -->
+          <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#2A2D30] mb-2 text-left">
+              Lack of a Smart Scheduling System
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+              CashDocs pinpointed a critical gap in the healthcare
+              system—patients frequently encounter obstacles when trying to
+              schedule appointments, resulting in care delays and a decrease in
+              patient satisfaction.
+            </p>
           </div>
-          <!-- 2 -->
-          <div class="flex flex-col justify-between items-start text-left mt-5">
-            <div>
-              <img src="./img/opc.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
-              <h3
-                class="text-[28px] font-semibold text-[#111827] mb-2 text-left"
-              >
-                Adapting to technological changes
-              </h3>
-              <p class="text-[18px] text-[#4B5563]">
-                The challenge of synchronizing the development process with the
-                evolving landscape of device and software compatibility required
-                proactive measures. Bungee faced the task of ensuring that its
-                platform remained technologically robust and adaptable to
-                ongoing advancements, emphasizing the need for a flexible and
-                forward-looking development approach.
-              </p>
-            </div>
+
+          <!-- Card -->
+          <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#2A2D30] mb-2 text-left">
+              Absence of Doctor-Patient Connection
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+              The core challenge is to devise a solution that streamlines the
+              appointment booking process while simultaneously strengthening the
+              bond between doctors and patients.
+            </p>
           </div>
-          <!-- 3 -->
-          <div class="flex flex-col justify-between items-start text-left mt-5">
-            <div>
-              <img src="./img/opc.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
-              <h3
-                class="text-[28px] font-semibold text-[#111827] mb-2 text-left"
-              >
-                User-friendly interface design
-              </h3>
-              <p class="text-[18px] text-[#4B5563]">
-                Crafting an interface that is both visually appealing and
-                user-friendly proved to be a delicate challenge for Bungee.
-                Striking the right balance between an engaging design and
-                precise navigation was crucial to meet user expectations.
-                Ensuring simplicity in navigation without compromising
-                functionality emerged as a pivotal aspect, underscoring the
-                importance of meticulous user experience design.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-[#F0F3FF] py-10 md:py-[80px] lg:!pt-[150px] !pt-[60px]">
-      <div class="container">
-        <div
-          class="flex gap-6 lg:w-[80%] w-full justify-center mx-auto animation-element relative"
-        >
-          <div class="md:flex-1 anim-img-down">
-            <img src="./img/app1.png" alt="" />
-          </div>
-          <div class="md:flex-1 anim-img">
-            <img src="./img/app2.png" alt="" />
-          </div>
-          <div class="md:flex-1 anim-img-down">
-            <img src="./img/app3.png" alt="" />
+
+          <!-- Card -->
+          <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#2A2D30] mb-2 text-left">
+              Delays in Patient Engagement
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+              The goal is to create a tech-powered platform that enables
+              effortless communication, boosts patient engagement, and increases
+              satisfaction levels by ensuring patients have timely access to
+              medical care.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#FFF] py-10 md:pt-[80px]">
-      <div class="container">
-        <h2
-          class="text-[34px] md:text-[50px] font-bold text-[#111827] mb-4 leading-normal"
-        >
+    <section class="bg-white text-[#2A2D30] py-12">
+      <div class="container mx-auto">
+        <!-- Title -->
+        <h2 class="text-3xl md:text-[50px] font-bold text-left mb-10">
           Our Process
         </h2>
-        <div class="op-slider mt-4 md:mt-10">
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop1.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 1</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Discovery & Planning</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop2.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 2</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Prototyping</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <!-- 3 -->
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop3.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 3</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Design</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <!-- 4 -->
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop8.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 4</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Coding and development</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <!-- 5 -->
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop9.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 5</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Testing</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <!-- 6 -->
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop10.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 6</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Deployment</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <!-- 7 -->
-          <div>
-            <div
-              class="flex justify-between flex-col h-[320px] bg-[#F0F3FF] rounded-[16px] p-5"
-            >
-              <div class="icon">
-                <img src="./img/bop11.svg" alt="" />
-              </div>
-              <div class="dec">
-                <span class="uppercase">step 7</span>
-                <h3 class="text-[18px] lg:text-[20px] mt-2">
-                  <b>Post-launch support and maintenance</b>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="arrow_wrap flex gap-4 justify-end mt-6">
-          <span
-            class="ds-left-arrow group cursor-pointer relative w-[40px] h-[40px] inline-block"
-          >
-            <img
-              src="./img/Carousel Prev.svg"
-              alt="Left Arrow"
-              class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0"
-            />
 
-            <img
-              src="./img/Carousel Next.svg"
-              alt="Right Arrow"
-              class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 rotate-180"
-            />
-          </span>
+        <!-- Process Steps Container -->
+        <div class="bg-[#F0F3FF] p-6 md:p-12 rounded-2xl py-10">
+          <div class="relative">
+            <!-- Line connecting image centers -->
+            <div
+              class="absolute top-[40px] hidden lg:block left-0 right-[100px] xl:right-[185px] h-px bg-[#C0C8FF] z-0"
+            ></div>
 
-          <span
-            class="ds-right-arrow group cursor-pointer relative w-[40px] h-[40px] inline-block"
-          >
-            <img
-              src="./img/Carousel Prev.svg"
-              alt="Left Arrow"
-              class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0 rotate-180"
-            />
-            <img
-              src="./img/Carousel Next.svg"
-              alt="Right Arrow"
-              class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-            />
-          </span>
-        </div>
-      </div>
-    </section>
-    <section class="pb-10 lg:pb-0">
-      <div class="container">
-        <div class="py-6 lg:pt-20 mb-4">
-          <h1
-            class="text-[28px] md:text-[50px] font-[700] mb-[10px] min-1024px:leading-[60px] text-center"
-          >
-            Technology Stack
-          </h1>
-          <div class="flex flex-wrap max-w-[600px] mx-auto justify-center">
-            <div class="w-full sm:w-1/2 md:w-1/3">
-              <div class="p-[10px]">
-                <div class="ts-item rounded-[10px] p-[20px] text-center">
-                  <div class="flex flex-col items-center">
-                    <div
-                      class="w-[130px] h-[130px] rounded-[32px] bg-[#F5FAFE] flex justify-center items-center"
-                    >
-                      <img
-                        src="./img/tic-React native.svg"
-                        alt="React"
-                        class="w-16 h-16 mx-auto"
-                      />
-                    </div>
-                    <p class="mt-2 text-sm font-medium">React Native</p>
-                  </div>
+            <!-- Grid container -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-4 gap-12 text-left relative z-10"
+            >
+              <!-- Step 1 -->
+              <div class="flex flex-col items-center lg:items-start text-left">
+                <div class="bg-[#F0F3FF] lg:pr-8">
+                  <img
+                    src="./img/pro-1.svg"
+                    alt="Step 1"
+                    class="w-20 h-20 bg"
+                  />
                 </div>
-              </div>
-            </div>
-            <!-- 2 -->
-            <div class="w-full sm:w-1/2 md:w-1/3">
-              <div class="p-[10px]">
-                <div class="ts-item p-[20px] text-center">
-                  <div class="flex flex-col items-center">
-                    <div
-                      class="w-[130px] h-[130px] rounded-[32px] bg-[#F5FAFE] flex justify-center items-center"
-                    >
-                      <img
-                        src="./img/tic-reactjs.svg"
-                        alt="React"
-                        class="w-16 h-16 mx-auto"
-                      />
-                    </div>
-                    <p class="mt-2 text-sm font-medium">React JS</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 3 -->
 
-            <!-- 4 -->
-            <div class="w-full sm:w-1/2 md:w-1/3">
-              <div class="p-[10px]">
-                <div class="ts-item p-[20px] text-center">
-                  <div class="flex flex-col items-center">
-                    <div
-                      class="w-[130px] h-[130px] rounded-[32px] bg-[#F5FAFE] flex justify-center items-center"
-                    >
-                      <img
-                        src="./img/next-js.svg"
-                        alt="React"
-                        class="w-16 h-16 mx-auto"
-                      />
-                    </div>
-                    <p class="mt-2 text-sm font-medium">Next JS</p>
-                  </div>
-                </div>
+                <p class="text-sm text-[#626970] font-bold mt-8 mb-1">STEP 1</p>
+                <p class="text-[16px] md:text-[28px] font-bold text-[#2A2D30]">
+                  Discovery & Planning
+                </p>
               </div>
-            </div>
 
-            <div class="w-full sm:w-1/2 md:w-1/3">
-              <div class="p-[10px]">
-                <div class="ts-item p-[20px] text-center">
-                  <div class="flex flex-col items-center">
-                    <div
-                      class="w-[130px] h-[130px] rounded-[32px] bg-[#F5FAFE] flex justify-center items-center"
-                    >
-                      <img
-                        src="./img/tic-Node.js.svg"
-                        alt="React"
-                        class="w-16 h-16 mx-auto"
-                      />
-                    </div>
-                    <p class="mt-2 text-sm font-medium">Node JS</p>
-                  </div>
+              <!-- Step 2 -->
+              <div class="flex flex-col items-center lg:items-start text-left">
+                <div class="bg-[#F0F3FF] lg:px-8">
+                  <img src="./img/pro-2.svg" alt="Step 2" class="w-20 h-20" />
                 </div>
+
+                <p class="text-sm text-[#626970] font-bold mt-8 mb-1 lg:pl-8">
+                  STEP 2
+                </p>
+                <p
+                  class="text-[16px] md:text-[28px] font-bold text-[#2A2D30] text-nowrap lg:pl-8"
+                >
+                  UI/UX Design
+                </p>
               </div>
-            </div>
 
-            <div class="w-full sm:w-1/2 md:w-1/3">
-              <div class="p-[10px]">
-                <div class="ts-item p-[20px] text-center">
-                  <div class="flex flex-col items-center">
-                    <div
-                      class="w-[130px] h-[130px] rounded-[32px] bg-[#F5FAFE] flex justify-center items-center"
-                    >
-                      <img
-                        src="./img/nest-js.png"
-                        alt="React"
-                        class="w-16 h-16 mx-auto"
-                      />
-                    </div>
-                    <p class="mt-2 text-sm font-medium">Nest JS</p>
-                  </div>
+              <!-- Step 3 -->
+              <div class="flex flex-col items-center lg:items-start text-left">
+                <div class="bg-[#F0F3FF] lg:px-8">
+                  <img src="./img/pro-3.svg" alt="Step 3" class="w-20 h-20" />
                 </div>
+
+                <p class="text-sm text-[#626970] font-bold mt-8 mb-1 lg:pl-8">
+                  STEP 3
+                </p>
+                <p
+                  class="text-[16px] md:text-[28px] font-bold text-[#2A2D30] lg:pl-8"
+                >
+                  Development
+                </p>
               </div>
-            </div>
 
-            <div class="w-full sm:w-1/2 md:w-1/3">
-              <div class="p-[10px]">
-                <div class="ts-item p-[20px] text-center">
-                  <div class="flex flex-col items-center">
-                    <div
-                      class="w-[130px] h-[130px] rounded-[32px] bg-[#F5FAFE] flex justify-center items-center"
-                    >
-                      <img
-                        src="./img/mysql.svg"
-                        alt="React"
-                        class="w-16 h-16 mx-auto"
-                      />
-                    </div>
-                    <p class="mt-2 text-sm font-medium">MySql</p>
-                  </div>
+              <!-- Step 4 -->
+              <div class="flex flex-col items-center lg:items-start text-left">
+                <div class="bg-[#F0F3FF] lg:px-8">
+                  <img src="./img/pro-4.svg" alt="Step 4" class="w-20 h-20" />
                 </div>
+
+                <p class="text-sm text-[#626970] font-bold mt-8 mb-1">STEP 4</p>
+                <p class="text-[16px] md:text-[28px] font-bold text-[#2A2D30]">
+                  Deployment
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="container mb-4">
-        <div class="p-6 lg:p-16">
-          <h3
-            class="text-[28px] md:text-[50px] font-[700] lg:mb-[30px] min-1024px:leading-[60px] text-center text-black"
-          >
-            Key Results
-          </h3>
 
-          <div class="grid grid-cols-1 xl:grid-cols-2 gap-5 pt-[20px]">
-            <div>
-              <div
-                class="flex gap-4 bg-[#F5FAFE] rounded-[16px] p-6 border border-[#D9DFFC] h-full"
-              >
-                <div>
-                  <img src="./img/black-check.svg" alt="Results tick" />
-                </div>
-                <div class="flex-1">
-                  <div>
-                    <h2 class="lg:text-[22px] text-[20px] font-[700]">
-                      Improved talent and customer acquisition:
-                    </h2>
-                    <p
-                      class="text-[#65686C] text-md lg:text-lg mb-4 font-light"
-                    >
-                      The client expressed immense satisfaction, sharing
-                      positive reviews on both Google and Clutch.
-                    </p>
-                  </div>
-                </div>
-              </div>
+    <section class="py-16 bg-white text-center text-[#2A2D30] container">
+      <h2 class="text-3xl md:text-[50px] font-bold mb-12">Technology Stack</h2>
+      <div
+        class="flex flex-wrap justify-center items-center mt-12 gap-14 mx-auto max-w-5xl"
+      >
+        <!-- Item -->
+        <div class="flex flex-col items-center space-y-4">
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/tic-swift.svg" alt="JavaScript" class="w-20 h-20" />
+          </div>
+          <span class="text-gray-800 font-medium">iOS (Swift)</span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex flex-col items-center space-y-4">
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/tic-Kotlin.svg" alt="Branch IO" class="w-20 h-20" />
+          </div>
+          <span class="text-gray-800 font-medium">Android (Kotlin)</span>
+        </div>
+
+        <div class="flex flex-col items-center space-y-4">
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/tic-Node.js.svg" alt="Node JS" class="w-20 h-20" />
+          </div>
+          <span class="text-gray-800 font-medium">Node JS</span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex flex-col items-center space-y-4">
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/tic-nestjs.svg" alt="NestJS" class="w-20 h-20" />
+          </div>
+          <span class="text-gray-800 font-medium">Nest JS</span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex flex-col items-center space-y-4">
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/tic-reactjs.svg" alt="React" class="w-24 h-24" />
+          </div>
+          <span class="text-gray-800 font-medium">React</span>
+        </div>
+        <div class="flex flex-col items-center space-y-4">
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/next-js.svg" alt="React" class="w-24 h-24" />
+          </div>
+          <span class="text-gray-800 font-medium">Next JS</span>
+        </div>
+
+        <!-- Item -->
+        <div
+          class="flex flex-col items-center space-y-4 col-span-2 sm:col-span-1 md:col-span-1"
+        >
+          <div
+            class="bg-[#f5faff] rounded-[32px] p-8 w-36 h-36 flex justify-center items-center"
+          >
+            <img src="./img/tic-mysql.svg" alt="MySQL" class="w-20 h-20" />
+          </div>
+          <span class="text-gray-800 font-medium">MySql</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-12 md:px-20 md:py-24 bg-white text-[#2A2D30]">
+      <div class="container mx-auto">
+        <h2 class="text-[35px] md:text-[50px] font-bold mb-6 xl:w-[70%]">
+          Results
+        </h2>
+
+        <!-- Description -->
+        <p class="text-[20px] md:text-[28px] leading-relaxed mb-8 text-left">
+          CashDocs has transformed the landscape of healthcare access and
+          communication, ensuring patients enjoy streamlined appointment
+          scheduling, advanced telemedicine services, and secure management of
+          medical records. For medical professionals, it simplifies the
+          management of appointments, broadens the scope of telemedicine, and
+          fosters better communication with patients. As a result, CashDocs
+          makes healthcare more accessible, efficient, and focused on patient
+          needs, thereby redefining excellence in digital healthcare platforms.
+        </p>
+
+        <!-- Result Cards Grid -->
+        <div class="grid lg:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img
+              src="./img/Progress Pie Chart.svg"
+              alt="tick"
+              class="w-20 h-20"
+            />
+            <div class="ml-5">
+              <p class="text-[#626970] text-[23px]">
+                Medical professionals saw a 30% decrease in administrative
+                burdens, with more time for direct patient care.
+              </p>
             </div>
-            <div>
-              <div
-                class="flex gap-4 bg-[#F5FAFE] rounded-[16px] p-6 border border-[#D9DFFC] h-full"
-              >
-                <div>
-                  <img src="./img/black-check.svg" alt="Results tick" />
-                </div>
-                <div class="flex-1">
-                  <div>
-                    <h2 class="lg:text-[22px] text-[20px] font-[700]">
-                      Effective push notifications:
-                    </h2>
-                    <p
-                      class="text-[#65686C] text-md lg:text-lg mb-4 font-light"
-                    >
-                      Bungee push notifications achieved a remarkable 90% open
-                      rate, surpassing email engagement at 23%, enhancing
-                      communication efficiency.
-                    </p>
-                  </div>
-                </div>
-              </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img
+              src="./img/Progress Pie Chart (1).svg"
+              alt="tick"
+              class="w-20 h-20"
+            />
+            <div class="ml-5">
+              <p class="text-[#626970] text-[23px]">
+                The efficiency of appointment scheduling improved by 40%, with
+                more convenient online bookings for patients.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img
+              src="./img/Progress Pie Chart (2).svg"
+              alt="tick"
+              class="w-20 h-20"
+            />
+            <div class="ml-5">
+              <p class="text-[#626970] text-[23px]">
+                Telemedicine services saw a 50% increase in usage, with
+                essential virtual consultations for patients from their homes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img
+              src="./img/Progress Pie Chart (3).svg"
+              alt="tick"
+              class="w-20 h-20"
+            />
+            <div class="ml-5">
+              <p class="text-[#626970] text-[23px]">
+                A 35% increase in patient satisfaction led to improved
+                communication and streamlined healthcare processes.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section
       class="bg-[url('./img/lets-discuss-bg.png')] bg-cover bg-center text-white"
     >
@@ -2981,40 +3482,36 @@
           >
             <div class="ld_left_wrap text-white">
               <h2
-                class="text-[28px] md:text-[36px] min-992px:text-[50px] font-medium text-white md:mb-[15px] leading-normal mb-4"
+                class="text-[28px] md:text-[50px] min-992px:text-[50px] font-bold text-white md:mb-[25px]"
               >
-                Are you experiencing <br />
-                similar challenges?
+                Are you experiencing similar challenges?
               </h2>
-              <p class="text-[#DEE3E9] md:text-[24px] text-[18px]">
+              <p class="text-[23px] text-[#DEE3E9]">
                 Share your challenges and our team will craft a personalized
-                proposal. Gert expert advice and unlock your growth potential.
+                proposal. Get expert advice and unlock your growth potential.
               </p>
-              <div class="flex mb-10 sm:mb-12 mt-10">
-                <a
-                  class="bg-[#FF8214] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+              <a
+                class="bg-[#FF8214] mt-12 group text-white text-[16px] md:text-md font-normal py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+              >
+                Discuss with our experts
+                <div
+                  class="relative w-[30px] h-[30px] inline-block ml-4 rounded-full z-10 ripple-wrapper"
                 >
-                  Duscuss with our experts
+                  <!-- Outgoing arrow -->
+                  <img
+                    src="./img/Arrow Wrapper.svg"
+                    alt="Arrow Right"
+                    class="absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-0 mx-auto my-auto"
+                  />
 
-                  <div
-                    class="relative w-[30px] h-[30px] inline-block ml-4 rounded-full z-10 ripple-wrapper"
-                  >
-                    <!-- Outgoing arrow -->
-                    <img
-                      src="./img/Arrow Wrapper.svg"
-                      alt="Arrow Right"
-                      class="absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-0 mx-auto my-auto"
-                    />
-
-                    <!-- Incoming arrow -->
-                    <img
-                      src="./img/Arrow Wrapper.svg"
-                      alt="Arrow Right"
-                      class="absolute top-[100%] left-[-100%] w-full transition-all duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-100 opacity-0"
-                    />
-                  </div>
-                </a>
-              </div>
+                  <!-- Incoming arrow -->
+                  <img
+                    src="./img/Arrow Wrapper.svg"
+                    alt="Arrow Right"
+                    class="absolute top-[100%] left-[-100%] w-full transition-all duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-100 opacity-0"
+                  />
+                </div>
+              </a>
             </div>
           </div>
           <div
@@ -3085,14 +3582,8 @@
       </div>
     </section>
 
-    <!-- <script
-      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js"
-      type="text/javascript"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -3100,195 +3591,48 @@
     <script src="script.js"></script>
 
     <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      window.addEventListener("load", () => {
-        // Only activate for large screens and above (min-width: 1024px)
-        if (window.matchMedia("(min-width: 1024px)").matches) {
-          const wrapper = document.querySelector("#hcss-wrapper");
-          const items = gsap.utils.toArray(".hcss-item");
-          const totalScrollWidth = wrapper.scrollWidth + 100;
-          const scrollAmount = totalScrollWidth - window.innerWidth;
-
-          gsap.to(wrapper, {
-            x: () => `-${scrollAmount}px`,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".health-case-study-slider-ccs",
-              start: "top top",
-              end: () => `+=${scrollAmount}`,
-              scrub: 1,
-              pin: true,
-              anticipatePin: 1,
-              snap: 1 / (items.length - 1),
-            },
-          });
-        }
-      });
-
-      gsap.to("#zoom-img", {
-        scale: 1.2,
-        width: "100%",
-        opacity: 1,
-
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#zoom-img",
-          start: "top bottom",
-          end: "top top",
-          scrub: true,
-        },
-      });
-    </script>
-    <script>
-      function activateTabDesktop(tabId) {
-        const tabButtons = document.querySelectorAll(".tab-button");
-        const tabContents = document.querySelectorAll(".tab-content");
-        tabButtons.forEach((btn) => {
-          btn.classList.remove("bg-[#2A2D30]", "shadow", "text-white");
-          btn.classList.add("text-[#626970]");
-        });
-        const currentButton = document.querySelector(
-          `.tab-button[data-tab="${tabId}"]`
-        );
-        if (currentButton) {
-          currentButton.classList.remove("text-[#626970]");
-          currentButton.classList.add("bg-[#2A2D30]", "shadow", "text-white");
-        }
-        tabContents.forEach((content) => {
-          content.classList.toggle(
-            "hidden",
-            content.getAttribute("data-content") !== tabId
-          );
-        });
-      }
-      document.querySelectorAll(".tab-button").forEach((button) => {
-        button.addEventListener("click", () =>
-          activateTabDesktop(button.getAttribute("data-tab"))
-        );
-      });
-      // Activate first tab by default
-      if (document.querySelector(".tab-button"))
-        activateTabDesktop(
-          document.querySelector(".tab-button").getAttribute("data-tab")
-        );
-
-      // New Tabs
-      function activateTabNew(tabId) {
-        const tabNewButtons = document.querySelectorAll(".tab-new-button");
-        const tabNewContents = document.querySelectorAll(".tab-new-content");
-        tabNewButtons.forEach((btn) => {
-          btn.classList.remove("bg-[#2A2D30]", "shadow", "text-white");
-          btn.classList.add("text-[#626970]");
-        });
-        const currentButton = document.querySelector(
-          `.tab-new-button[data-new-tab="${tabId}"]`
-        );
-        if (currentButton) {
-          currentButton.classList.remove("text-[#626970]");
-          currentButton.classList.add("bg-[#2A2D30]", "shadow", "text-white");
-        }
-        tabNewContents.forEach((content) => {
-          content.classList.toggle(
-            "hidden",
-            content.getAttribute("data-new-content") !== tabId
-          );
-          content.classList.toggle(
-            "pointer-events-none",
-            content.getAttribute("data-new-content") !== tabId
-          );
-        });
-      }
-      document.querySelectorAll(".tab-new-button").forEach((button) => {
-        button.addEventListener("click", () =>
-          activateTabNew(button.getAttribute("data-new-tab"))
-        );
-      });
-      if (document.querySelector(".tab-new-button"))
-        activateTabNew(
-          document.querySelector(".tab-new-button").getAttribute("data-new-tab")
-        );
-
-      // Mobile Tabs
-      function activateTabMobile(tabId) {
-        const tabMobButtons = document.querySelectorAll(".tab-mob-button");
-        const tabMobContents = document.querySelectorAll(".tab-mob-content");
-        tabMobButtons.forEach((btn) => {
-          btn.classList.remove("bg-[#2A2D30]", "text-white", "shadow");
-          btn.classList.add("bg-[#F5FAFE]", "text-[#626970]");
-        });
-        const currentButton = document.querySelector(
-          `.tab-mob-button[data-mob-tab="${tabId}"]`
-        );
-        if (currentButton) {
-          currentButton.classList.remove("bg-[#F5FAFE]", "text-[#626970]");
-          currentButton.classList.add("bg-[#2A2D30]", "text-white", "shadow");
-        }
-        tabMobContents.forEach((content) => {
-          if (content.getAttribute("data-mob-content") === tabId) {
-            content.classList.remove(
-              "max-h-0",
-              "opacity-0",
-              "overflow-hidden",
-              "pointer-events-none"
-            );
-            content.classList.add(
-              "max-h-[9999px]",
-              "opacity-100",
-              "pointer-events-auto"
-            );
-          } else {
-            content.classList.remove(
-              "max-h-[9999px]",
-              "opacity-100",
-              "pointer-events-auto"
-            );
-            content.classList.add(
-              "max-h-0",
-              "opacity-0",
-              "overflow-hidden",
-              "pointer-events-none"
-            );
-          }
-        });
-      }
-      document.querySelectorAll(".tab-mob-button").forEach((button) => {
-        button.addEventListener("click", () =>
-          activateTabMobile(button.getAttribute("data-mob-tab"))
-        );
-      });
-      if (document.querySelector(".tab-mob-button"))
-        activateTabMobile(
-          document.querySelector(".tab-mob-button").getAttribute("data-mob-tab")
-        );
+   
+     
 
       const imageSources = [
-        "./img/roadmapp-1.png",
-        "./img/roadmap_image_1.png",
-        "./img/roadmap_image_3.png",
-        "./img/roadmap_image_4.png",
-        "./img/women-using-pc.jpg",
-        "./img/man-using-pc.jpg",
+        "./img/cdf-1.png",
+        "./img/cdf-2.png",
+        "./img/cdf-3.png",
+        "./img/cdf-4.png",
+        "./img/cdf-5.png",
+        "./img/cdf-6.png"
       ];
 
       function toggleUniqueAccordion(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
+        const outerDiv = button.closest(".acc-wrap");
 
         // Collapse all
-        document.querySelectorAll(".accordion-content").forEach((item) => {
-          item.classList.remove("show");
-          item.parentElement.classList.remove("bg-[#E8F2FC]");
-        });
         document
-          .querySelectorAll(".arrow-icon")
-          .forEach((icon) => icon.classList.remove("-rotate-90"));
+          .querySelectorAll(".accordion-content")
+          .forEach((item) => item.classList.remove("show"));
+        document
+          .querySelectorAll(".arrow-wrapper")
+          .forEach((el) => el.classList.remove("!opacity-100"));
+        document
+          .querySelectorAll(".arrow-wrapper img")
+          .forEach((img) => img.classList.remove("-rotate-90"));
+        document.querySelectorAll(".acc-wrap").forEach((item) => {
+          item.style.backgroundColor = "#FFFFFF";
+        });
 
         if (!isOpen) {
           content.classList.add("show");
-          button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
-          content.parentElement.classList.add("bg-[#E8F2FC]");
-          // Smooth image fade
+          outerDiv.style.backgroundColor = "#E8F2FC";
+
+          const arrowWrapper = button.querySelector(".arrow-wrapper");
+          const arrowImg = button.querySelector(".arrow-wrapper img");
+
+          arrowWrapper?.classList.add("!opacity-100"); // keep visible even without hover
+          arrowImg?.classList.add("-rotate-90"); // rotate on open
+
+          // Image fade logic (unchanged)
           const imgIndex = button.getAttribute("data-img-index");
           const newSrc = imageSources[imgIndex];
           const currentImg = document.getElementById("accordionImage");
@@ -3300,134 +3644,113 @@
             currentImg.classList.remove("opacity-100");
             currentImg.classList.add("opacity-0");
 
-            // After fade completes, swap image sources
             setTimeout(() => {
               currentImg.src = newSrc;
               currentImg.classList.remove("opacity-0");
               currentImg.classList.add("opacity-100");
               nextImg.classList.remove("opacity-100");
-              nextImg.src = ""; // Optional cleanup
-            }, 300); // matches transition duration
+              nextImg.src = "";
+            }, 300);
           }
         }
       }
 
-      function toggleHealthAccordion(button) {
-        const itemContainer = button.closest(".accordion-item-container");
+  
 
-        const content = button.nextElementSibling;
 
-        const isOpen = itemContainer.classList.contains("accordion-open");
+      function toggleAccordion(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.classList.contains("show");
 
-        document
-          .querySelectorAll(".accordion-item-container")
-          .forEach((container) => {
-            container.classList.remove("accordion-open");
+    // Close all accordion items
+    const accordionItems = document.querySelectorAll(".accordion-content");
+    accordionItems.forEach((item) => {
+      item.classList.remove("show");
+    });
 
-            container
-              .querySelector(".health-accordion-content")
-              .classList.remove("show");
-          });
+    // Rotate all accordion icons
+    const accordionIcons = document.querySelectorAll(".transform");
+    accordionIcons.forEach((icon) => {
+      icon.classList.remove("rotate-180");
+    });
 
-        if (!isOpen) {
-          itemContainer.classList.add("accordion-open");
-
-          content.classList.add("show");
-        }
-      }
-
-      $(document).ready(function () {
-        $(".op-slider").slick({
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          arrows: true,
-          dots: false,
-          infinite: false,
-          autoplaySpeed: 0,
-          autoplay: false,
-          prevArrow: $(".ds-left-arrow"),
-          nextArrow: $(".ds-right-arrow"),
-          responsive: [
-            { breakpoint: 991, settings: { slidesToShow: 3 } },
-            { breakpoint: 767, settings: { slidesToShow: 2 } },
-          ],
-        });
-      });
+    // Open the clicked accordion item if it was closed
+    if (!isOpen) {
+      content.classList.add("show");
+      button.querySelector("span:last-child").classList.add("rotate-180");
+    }
+  }
     </script>
+   
 
-    <script>
-      $(document).ready(function () {
-        const $hiddenSection = $(".card-set-hidden");
-        const $loadMoreBtn = $("#loadMoreBtn");
+<script>
+gsap.registerPlugin(ScrollTrigger);
 
-        let hasUserToggled = false;
+// ---------------------------
+// Initial states
+// ---------------------------
 
-        function handleResponsiveVisibility() {
-          if (window.innerWidth < 768) {
-            if (!hasUserToggled) {
-              $hiddenSection.addClass("hidden");
-              $loadMoreBtn.show().text("Show More");
-            }
-          } else {
-            $hiddenSection.removeClass("hidden");
-            $loadMoreBtn.hide();
-          }
-        }
+// Floating images start below and hidden
+gsap.set("#leftDoctor", { y: "100%", opacity: 0 });
+gsap.set("#rightAvailability", { y: "100%", opacity: 0 });
 
-        // Initial visibility check
-        handleResponsiveVisibility();
 
-        // Only trigger if user has not manually toggled
-        $(window).on("resize", function () {
-          if (!hasUserToggled) {
-            handleResponsiveVisibility();
-          }
-        });
+// ---------------------------
+// On page load animations
+// ---------------------------
+gsap.to(["#leftDoctor", "#rightAvailability"], {
+  y: "0%",
+  opacity: 1,
+  duration: 1.5,
+  ease: "power2.out"
+});
 
-        $loadMoreBtn.on("click", function () {
-          const isHidden = $hiddenSection.hasClass("hidden");
+// ---------------------------
+// Scroll animations
+// ---------------------------
 
-          if (isHidden) {
-            $hiddenSection.removeClass("hidden");
-            $loadMoreBtn.text("Show Less");
-          } else {
-            // Scroll to top of card before collapsing
-            const cardTop = $(".card-set").offset().top;
-            $("html, body").animate({ scrollTop: cardTop }, 300, function () {
-              $hiddenSection.addClass("hidden");
-              $loadMoreBtn.text("Show More");
-            });
-          }
+// Floating doctor image (left)
+// Floating doctor image (left) - very slight right + up
+gsap.to("#leftDoctor", {
+  scrollTrigger: {
+    trigger: ".banner-wrapper",
+    start: "top center",
+    end: "bottom center",
+    scrub: 1
+  },
+  xPercent: 15,   // small right movement relative to wrapper width
+  yPercent: -25,  // move upward
+  ease: "power2.inOut"
+});
 
-          hasUserToggled = true;
-        });
-      });
-      jQuery(document).ready(function () {
-        var $animation_elements = $(".animation-element");
-        var $window = $(window);
-        var isAlreadyRun = false;
+// Floating availability image (right) - only upward
+gsap.to("#rightAvailability", {
+  scrollTrigger: {
+    trigger: ".banner-wrapper",
+    start: "top center",
+    end: "bottom center",
+    scrub: 1
+  },
+  yPercent: -50,  // only move up
+  ease: "power2.inOut"
+});
 
-        function check_if_in_view() {
-          var window_height = $window.height();
-          var window_top_position = $window.scrollTop();
-          var window_bottom_position = window_top_position + window_height - 200;
 
-          $.each($animation_elements, function () {
-            var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = element_top_position + element_height;
-            //check to see if this current container is within viewport
-            if (element_top_position <= window_bottom_position) {
-              $element.addClass("in-view");
-            } else {
-              $element.removeClass("in-view");
-            }
-          });
-        }
-        $window.on("scroll resize", check_if_in_view);
-        $window.trigger("scroll");
-      });
-    </script>
-  </body>
+gsap.fromTo(
+  ".banner-wrapper",
+  { scale: 0.8, transformOrigin: "center center" }, // start smaller
+  {
+    scrollTrigger: {
+      trigger: ".banner-wrapper",
+      start: "top center",
+      end: "bottom center",
+      scrub: 1
+    },
+    scale: 1, // grow back to full size
+    ease: "power2.out"
+  }
+);
+</script>
+
+</body>
 </html>
