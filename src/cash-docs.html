@@ -2193,7 +2193,7 @@
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content !overflow-hidden">
+                   <div class="accordion-content !overflow-hidden opacity-0 max-h-0 transition-all duration-300">
                       <div
                         class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
@@ -2207,13 +2207,15 @@
                           choices regarding their healthcare providers.
                         </p>
                       </div>
-                      <div class="w-full block lg:hidden">
-                        <img
-                          src="./img/cdf-1.png"
-                          alt="H 1"
-                          class="w-full h-fit rounded-lg"
-                        />
-                      </div>
+                       <div class="w-full block lg:hidden">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                      <img
+                        src="./img/cdf-1.png"
+                        alt="Healthcare App 1"
+                        class="w-full h-full object-contain rounded-lg"
+                      />
+                    </div>
+                  </div>
                     </div>
                   </div>
                   <div
@@ -2530,7 +2532,7 @@
           <h2
             class="text-2xl md:text-[40px] font-bold text-white leading-normal"
           >
-            Build Your Dream App with Precision
+            Building Your Dream App with Precision
           </h2>
           <p class="text-[23px] text-white">
             Tell us about your project. Let’s move ahead with a tailored
@@ -3230,7 +3232,7 @@
         <h2
           class="text-[34px] md:text-[50px] font-bold text-[#2A2D30] mb-4 leading-normal"
         >
-          Project Challenges
+         Our Project Challenges
         </h2>
 
         <!-- Grid -->
@@ -3414,7 +3416,7 @@
           >
             <img src="./img/tic-reactjs.svg" alt="React" class="w-24 h-24" />
           </div>
-          <span class="text-gray-800 font-medium">React</span>
+          <span class="text-gray-800 font-medium">React JS</span>
         </div>
         <div class="flex flex-col items-center space-y-4">
           <div
@@ -3658,57 +3660,72 @@
         "./img/cdf-6.png",
       ];
 
-      function toggleUniqueAccordion(button) {
-        const content = button.nextElementSibling;
-        const isOpen = content.classList.contains("show");
-        const outerDiv = button.closest(".acc-wrap");
+     function toggleUniqueAccordion(button) {
+  const content = button.nextElementSibling;
+  const isOpen = content.classList.contains("show");
+  const outerDiv = button.closest(".acc-wrap");
 
-        // Collapse all
-        document
-          .querySelectorAll(".accordion-content")
-          .forEach((item) => item.classList.remove("show"));
-        document
-          .querySelectorAll(".arrow-wrapper")
-          .forEach((el) => el.classList.remove("!opacity-100"));
-        document
-          .querySelectorAll(".arrow-wrapper img")
-          .forEach((img) => img.classList.remove("-rotate-90"));
-        document.querySelectorAll(".acc-wrap").forEach((item) => {
-          item.style.backgroundColor = "#FFFFFF";
-        });
+  // Close all accordions
+  document.querySelectorAll(".accordion-content").forEach((item) => {
+    item.classList.remove("show");
+    item.style.maxHeight = "0px";
+    item.style.opacity = "0";
+  });
+  
+  // Reset all styles
+  document.querySelectorAll(".arrow-wrapper").forEach((el) => 
+    el.classList.remove("!opacity-100")
+  );
+  document.querySelectorAll(".arrow-wrapper img").forEach((img) => 
+    img.classList.remove("-rotate-90")
+  );
+  document.querySelectorAll(".acc-wrap").forEach((item) => {
+    item.style.backgroundColor = "#FFFFFF";
+  });
 
-        if (!isOpen) {
-          content.classList.add("show");
-          outerDiv.style.backgroundColor = "#E8F2FC";
+  if (!isOpen) {
+    // Open accordion
+    content.classList.add("show");
+    content.style.maxHeight = content.scrollHeight + "px";
+    content.style.opacity = "1";
+    outerDiv.style.backgroundColor = "#E8F2FC";
 
-          const arrowWrapper = button.querySelector(".arrow-wrapper");
-          const arrowImg = button.querySelector(".arrow-wrapper img");
+    // Handle arrow
+    const arrowWrapper = button.querySelector(".arrow-wrapper");
+    const arrowImg = button.querySelector(".arrow-wrapper img");
+    arrowWrapper?.classList.add("!opacity-100");
+    arrowImg?.classList.add("-rotate-90");
 
-          arrowWrapper?.classList.add("!opacity-100"); // keep visible even without hover
-          arrowImg?.classList.add("-rotate-90"); // rotate on open
+    // Image fade logic
+    const imgIndex = button.getAttribute("data-img-index");
+    const newSrc = imageSources[imgIndex];
+    const currentImg = document.getElementById("accordionImage");
+    const nextImg = document.getElementById("accordionImageNext");
 
-          // Image fade logic (unchanged)
-          const imgIndex = button.getAttribute("data-img-index");
-          const newSrc = imageSources[imgIndex];
-          const currentImg = document.getElementById("accordionImage");
-          const nextImg = document.getElementById("accordionImageNext");
+    if (currentImg && nextImg) {
+      nextImg.src = newSrc;
+      nextImg.classList.add("opacity-100");
+      currentImg.classList.remove("opacity-100");
+      currentImg.classList.add("opacity-0");
 
-          if (currentImg && nextImg) {
-            nextImg.src = newSrc;
-            nextImg.classList.add("opacity-100");
-            currentImg.classList.remove("opacity-100");
-            currentImg.classList.add("opacity-0");
+      setTimeout(() => {
+        currentImg.src = newSrc;
+        currentImg.classList.remove("opacity-0");
+        currentImg.classList.add("opacity-100");
+        nextImg.classList.remove("opacity-100");
+        nextImg.src = "";
+      }, 300);
+    }
 
-            setTimeout(() => {
-              currentImg.src = newSrc;
-              currentImg.classList.remove("opacity-0");
-              currentImg.classList.add("opacity-100");
-              nextImg.classList.remove("opacity-100");
-              nextImg.src = "";
-            }, 300);
-          }
-        }
-      }
+    // Recalculate height after image loads
+    const img = content.querySelector('img');
+    if (img) {
+      img.onload = () => {
+        content.style.maxHeight = content.scrollHeight + "px";
+      };
+    }
+  }
+}
 
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
