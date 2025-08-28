@@ -1819,6 +1819,18 @@ video {
   transition: max-height 1s ease;
 }
 
+.unique-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.unique-accordion-content.shows {
+  max-height: 650px;
+  transition: max-height 1s ease;
+}
+
+
 @media (min-width: 640px) {
   .innova-item:nth-child(2),
   .innova-item:nth-child(4),
@@ -1854,6 +1866,9 @@ video {
 
 @media (max-width: 768px) {
   .accordion-content.show {
+    overflow-y: auto;
+  }
+  .unique-accordion-content.shows {
     overflow-y: auto;
   }
 }
@@ -2440,6 +2455,18 @@ body.modal-open {
   display: none;
 }
 .faq-accordion .rotate-180 .minus-icon {
+  display: block;
+}
+.unique-accordion .plus-icon {
+  display: block;
+}
+.unique-accordion .minus-icon {
+  display: none;
+}
+.unique-accordion .rotate-180 .plus-icon {
+  display: none;
+}
+.unique-accordion .rotate-180 .minus-icon {
   display: block;
 }
 
