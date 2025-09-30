@@ -3570,11 +3570,34 @@ html {
   background: linear-gradient(180deg, #9E9E9E 0%, #666666 100%);
 }
 
-.gradient-border-ppc > .inner {
+.gradient-border-ppc > .inner1 {
   border-radius: 58px;
   background: linear-gradient(139.03deg,#09090B 23.24%,#5C5C71 170.59%);
   padding: 2.5rem; /* same as p-10 */
 }
+.gradient-border-ppc > .inner2 {
+  border-radius: 58px;
+ background: linear-gradient(315deg, #09090B 23.24%, #5C5C71 170.59%);
+
+  padding: 2.5rem; /* same as p-10 */
+}
+.gradient-border-ppc > .inner3 {
+  border-radius: 58px;
+  background: linear-gradient(45deg, #09090B 23.24%, #5C5C71 170.59%);
+
+  padding: 2.5rem; /* same as p-10 */
+}
+.gradient-border-ppc > .inner4 {
+  border-radius: 58px;
+  background: linear-gradient(225deg, #09090B 23.24%, #5C5C71 170.59%);
+
+  padding: 2.5rem; /* same as p-10 */
+}
+
+
+
+
+
 
 
 @layer utilities {
@@ -3592,38 +3615,29 @@ html {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #999999a4 100%);
     rotate: 180deg;
   }
-}
 
-/* 
-@keyframes marqueepcc {
-  0% {
-    transform: translateY(100%);
+  .gradient-border-ppc-t {
+    @apply relative;
   }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.animate-marquee-pcc {
-  display: flex;
-  flex-direction: column;
-  animation: marqueepcc 20s linear infinite;
-}
-
-@keyframes marqueepcc_reverse {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
+  @media (max-width: 1023px) {
+  .gradient-border-ppc-t::after {
+     content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #999999a4 100%);
+    transform: rotate(180deg);
   }
 }
+}
 
-.animate-marquee-pcc-reverse {
-  display: flex;
-  flex-direction: column;
-  animation: marqueepcc_reverse 20s linear infinite;
-} */
+
+
+
+
+
 
 
   @keyframes marquee-pcc {
@@ -3658,18 +3672,33 @@ html {
         animation-play-state: paused;
       }
 
-     @keyframes radial-move {
+
+
+@keyframes animate-marquee-pcc-horizontal {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-80%);
+        }
+      }
+
+ .animate-marquee-pcc-horizontal {
+        animation: animate-marquee-pcc-horizontal 25s linear infinite;
+      }
+
+
+@keyframes radial-move {
   0% {
-    background: radial-gradient(circle, rgba(0, 128, 0, 0.763) 0%, rgba(0,128,0,0.05) 100%);
+    background: radial-gradient(circle, rgba(0,128,0,0.76) 0%, rgba(0,128,0,0.05) 100%);
   }
   50% {
-    background: radial-gradient(circle, rgba(0, 128, 0, 0.485) 40%, rgba(0,128,0,0) 100%);
+    background: radial-gradient(circle, rgba(0,128,0,0.48) 40%, rgba(0,128,0,0) 100%);
   }
   100% {
-    background: radial-gradient(circle, rgba(0, 128, 0, 0.744) 0%, rgba(0,128,0,0.05) 100%);
+    background: radial-gradient(circle, rgba(0,128,0,0.74) 0%, rgba(0,128,0,0.05) 100%);
   }
 }
-
 .animate-radial {
   animation: radial-move 6s ease-in-out infinite;
 }
