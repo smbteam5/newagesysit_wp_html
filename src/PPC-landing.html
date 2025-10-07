@@ -98,6 +98,35 @@
       .mobile-slider .owl-nav {
         margin-top: 40px;
       }
+
+      /* Fix for Magnific Popup spacing issue */
+      .mfp-iframe-scaler {
+        position: absolute !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .mfp-ready .mfp-iframe-scaler {
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        width: auto !important;
+      }
+
+      /* Ensure no extra space from Magnific Popup when not active */
+      .mfp-bg, .mfp-wrap {
+        display: none !important;
+      }
+
+      .mfp-ready .mfp-bg, .mfp-ready .mfp-wrap {
+        display: block !important;
+      }
     </style>
   </head>
 
@@ -2235,7 +2264,7 @@
           Your Business’s Future
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid lg:grid-cols-2 gap-8">
           <!-- Card 1 -->
           <div class="gradient-border-ppc">
             <div class="inner1 text-left relative h-[350px] overflow-hidden">
@@ -2245,7 +2274,7 @@
                 iOS App Development
               </h3>
               <p
-                class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full lg:w-[80%]"
+                class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full xl:w-[80%]"
               >
                 With programming languages such as Swift, React Native, and
                 Java, we build custom iOS mobile apps that work seamlessly
@@ -2272,7 +2301,7 @@
                 Android App Development
               </h3>
               <p
-                class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full lg:w-[80%]"
+                class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full xl:w-[80%]"
               >
                 We build Android mobile applications with rich user experiences
                 and intuitive user interfaces, while offering a competitive edge
@@ -2324,7 +2353,7 @@
                 UI/UX & Maintenance
               </h3>
               <p
-                class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full lg:w-[80%]"
+                class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full xl:w-[80%]"
               >
                 Our UI/UX experts create user-centric and intuitive interfaces
                 that scale engagement and brand identity, while making sure your
@@ -2379,7 +2408,8 @@
               Let’s turn your idea into a custom mobile app
             </h2>
             <p class="text-[#8C8C8C] mb-6 text-[23px]">
-              Schedule a call to discuss how we can support you.
+              Book a complimentary consultation call today to discuss your needs
+              and how we can assist you.
             </p>
             <a
               href="#"
@@ -2550,10 +2580,22 @@
 
     <section class="client_experiences">
       <div class="container">
-        <div class="mdw mb-5">
-          <h2 class="sechd text-center about_txt">
-            <span>Client Case Studies</span>
+        <div class="text-[20px] text-center max-w-6xl mx-auto mb-10 px-4">
+          <h2
+            class="text-[28px] text-white md:text-[36px] min-992px:text-[40px] font-[700] text-center min-992px:leading-[55px] mb-2"
+          >
+            Case Studies that Resonate with Our Chatbot <br />
+            Development Expertise
           </h2>
+          <p
+            class="text-base md:text-[22px] min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
+          >
+            Deep dive into the heartfelt words from our clients about their
+            experiences with the AI innovation we’ve offered to their
+            businesses. With custom AI chatbot development, we have helped
+            businesses transform and deliver the best to their clients for
+            everlasting success.
+          </p>
         </div>
       </div>
       <div class="owl-carousel owl-theme client_says">
@@ -3561,22 +3603,6 @@
                       Entertainment
                     </h3>
                   </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-health.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Healthcare
-                    </h3>
-                  </div>
 
                   <!-- Duplicate set for infinite loop -->
                   <div
@@ -3643,319 +3669,6 @@
                       Entertainment
                     </h3>
                   </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-health.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Healthcare
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="h-[500px] lg:h-[600px] overflow-hidden flex flex-col justify-center items-center lg:hidden"
-            >
-              <div class="animate-marquee-pcc-horizontal flex space-x-6">
-                <!-- First set of tiles -->
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-construction.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Construction
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-logistic.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Logistics
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-ecom.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    E-Commerce
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-entertainment.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Entertainment
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-health.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Healthcare
-                  </h3>
-                </div>
-
-                <!-- Duplicate set for infinite loop -->
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-construction.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Construction
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-logistic.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Logistics
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-ecom.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    E-Commerce
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-entertainment.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Entertainment
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-health.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Healthcare
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="animate-marquee-pcc-horizontal-reverse flex space-x-6 mt-6"
-              >
-                <!-- First set of tiles -->
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-construction.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Construction
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-logistic.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Logistics
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-ecom.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    E-Commerce
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-entertainment.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Entertainment
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-health.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Healthcare
-                  </h3>
-                </div>
-
-                <!-- Duplicate set for infinite loop -->
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-construction.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Construction
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-logistic.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Logistics
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-ecom.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    E-Commerce
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-entertainment.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Entertainment
-                  </h3>
-                </div>
-                <div
-                  class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] flex-shrink-0"
-                >
-                  <div class="flex items-start justify-start mb-4">
-                    <img
-                      src="./img/pcc-ic-health.svg"
-                      alt="icon"
-                      class="w-[70px] h-[70px]"
-                    />
-                  </div>
-                  <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                    Healthcare
-                  </h3>
                 </div>
               </div>
             </div>
@@ -3964,21 +3677,166 @@
               <h2 class="text-4xl md:text-5xl font-semibold mb-6">
                 We Have Our Hands on Every Industry
               </h2>
+
               <p class="text-[#FFFFFFB2] text-[23px] mb-8">
                 Our journey is really big and inspiring. We've come a long way,
                 working with many industries, and here's a list of them to let
                 you know that your industry is covered.
               </p>
-
-              <a
-                href="#"
-                class="inline-block p-[2px] /* Controls the border thickness */ rounded-full bg-gradient-to-r from-[#35e09e] via-[#e313fe] to-[#008CFF] group /* Required for the group-hover effect */"
+              <div
+                class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
               >
-                <span
-                  class="block px-8 py-3 /* Adds space between the text and the border */ font-semibold text-white bg-black rounded-full group-hover:bg-gray-800 /* Optional: Makes the inside lighter on hover */ transition-colors"
-                >
-                  Schedule Your Free Consultation
-                </span>
+                <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- First set of tiles -->
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-health.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Healthcare
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-education.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Education
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-on-demand.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      On-Demand
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-finance.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Finance
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-wellness.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Wellness
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-construction.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Construction
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-logistic.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Logistics
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-ecom.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      E-Commerce
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-entertainment.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Entertainment
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="text-white">
+                <div class="with-transparency">
+                  <span>Schedule Your Free Consultation</span>
+                  <svg
+                    width="7"
+                    height="12"
+                    viewBox="0 0 7 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                      stroke="white"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </a>
             </div>
           </div>
@@ -4008,13 +3866,13 @@
 
     <!-- Desktop Version -->
     <section
-      class="relative w-full h-[400vh] bg-black text-white hidden lg:block"
+      class="relative w-full h-[400vh] bg-black text-white hidden lg:block z-20"
       id="scroll-section-desktop"
     >
+    
+   
       <!-- Sticky wrapper-->
-      <!-- <div
-        class="absolute inset-0 w-full top-10 bg-gradient-to-br from-black via-black to-[#596cfba1]"
-      ></div> -->
+    
       <div class="text-[20px] text-center max-w-6xl mx-auto mb-10 px-4">
         <h2
           class="text-[28px] text-white md:text-[36px] min-992px:text-[50px] font-[700] text-center min-992px:leading-[55px] mb-2"
@@ -4029,13 +3887,15 @@
           deliver stunning results for your business.
         </p>
       </div>
-      <div class="sticky top-0 h-screen flex flex-col justify-center">
+      <div class="sticky top-0 h-screen flex flex-col justify-center ">
+          
         <!-- Progress bar -->
         <div class="h-1 bg-gray-800 w-full">
           <div id="progress-bar" class="h-1 bg-blue-500 w-0"></div>
         </div>
 
-        <div class="grid lg:grid-cols-2 py-16 container">
+        <div class="grid lg:grid-cols-2 py-16 container  ">
+          
           <!-- Left content -->
           <div class="pr-10">
             <div class="step-content space-y-2">
@@ -5454,7 +5314,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/aws"
+                                src="./img/tic_AWS Bedrock.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -5554,7 +5414,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/vllm"
+                                src="./img/tic_vLLM.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -5574,7 +5434,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/"
+                                src="./img/Text Generation Inference.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -5774,7 +5634,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/vertex."
+                                src="./img/tic_Vertex AutoML.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -5934,7 +5794,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/"
+                                src="./img/tic_seldon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -5974,7 +5834,7 @@
               <div class="basis-full md:basis-1/2 lg:basis-1/2 text-black">
                 <div class="px-[6px]">
                   <div
-                    class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3 lg:mt-0"
+                    class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3 md:mt-0"
                   >
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
@@ -6230,7 +6090,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/s3"
+                                src="./img/tic_Amazon S3.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -6580,7 +6440,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/aws"
+                                src="./img/AWS  SSM.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -6940,7 +6800,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/cloud"
+                                src="./img/tic_AWS CloudFront.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -7000,7 +6860,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Amplify"
+                                src="./img/tic_AWS Amplify.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -7120,11 +6980,11 @@
         <p
           class="text-[18px] sm:text-[23] text-[#8C8C8C] mb-10 leading-relaxed"
         >
-          NewAgeSysIT responsibly builds AI with your DATA, your RULES, and your
+          NewAgeSysAI responsibly builds AI with your DATA, your RULES, and your
           CONTROL on the same page. What does this mean? We maintain
           privacy-first standards to provide services that prioritize your data
-          security and sovereignty, working to make your peace of mind our top
-          concern.
+          security and sovereignty, ensuring it is not repurposed without your
+          consent.
         </p>
         <button
           class="px-8 py-3 bg-[#FF5B14] text-white font-semibold rounded-full shadow-lg transition duration-300"
@@ -7156,8 +7016,8 @@
             Your App Idea Deserves the Best Team
           </h2>
           <p class="text-[18px] md:text-[23px] text-indigo-200">
-            You know your app needs more, so do our experts. We take good care
-            of your app and build it with top-notch quality.
+            You know that your app needs more; so do our experts. We take good
+            care of your app and build it with top-notch quality.
           </p>
         </div>
 
@@ -7180,8 +7040,6 @@
               placeholder="Phone"
               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
             />
-
-           
 
             <textarea
               placeholder="Project Idea"
@@ -7784,4 +7642,5 @@
       });
     </script>
   </body>
-</html>
+</html>   
+  

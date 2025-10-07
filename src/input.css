@@ -3814,6 +3814,7 @@ html {
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-bottom: 20px;
 }
 .client_says .item .item-top .it-right .itr-item {
   text-align: center;
@@ -3844,6 +3845,15 @@ html {
     gap: 10px;
   }
 }
+@media (max-width: 992px) {
+  .client_says .item .item-last {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+
 .client_says .item .item-last .il-left {
   flex: 1;
 }
@@ -3955,3 +3965,32 @@ html {
 }
 
 
+ .with-transparency {
+      position: relative;
+      display: inline-flex;
+      gap: 15px;
+      align-items: center;
+      padding: 15px 30px;
+      border-radius: 45px;
+    }
+
+    .with-transparency:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-image-source: linear-gradient(91.27deg, #70E7CC 0.72%, #008CFF 25.99%, #6E40F1 70.44%, #DF4ACA 99.48%);
+      border-radius: inherit;
+      --m: conic-gradient(#000 0 0);
+      mask: var(--m) content-box exclude, var(--m);
+      pointer-events: none;
+    }
+
+    @supports (background: linear-gradient(in lch, red 0 0)) {
+      .with-transparency:before {
+        background: linear-gradient(91.5deg, #3FDB9F 0.84%, #E51CFF 51.5%, #008CFF 100%);
+      }
+    }
+  
+
+background: linear-gradient(204.8deg, #000000 47.8%, #596DFB 166.74%);
