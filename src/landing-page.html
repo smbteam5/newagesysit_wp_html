@@ -28,6 +28,15 @@
         background-clip: text;
         -webkit-background-clip: text;
       }
+      #progress {
+        background: #22d3ee;
+      }
+      .step {
+        will-change: transform, opacity;
+      }
+      .pe-none {
+        pointer-events: none;
+      }
     </style>
   </head>
 
@@ -1857,7 +1866,6 @@
     <section
       class="relative flex h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)]"
     >
-      <!-- Hero Background Image -->
       <img
         alt="banner"
         fetchpriority="high"
@@ -1869,6 +1877,50 @@
 
       <!-- Content Container -->
       <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <span class="absolute bottom-0 left-1/2 z-[99] translate-x-[-50%]">
+          <svg
+            width="1600"
+            height="890"
+            viewBox="0 0 1600 890"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_f_6793_6660)">
+              <ellipse
+                cx="455"
+                cy="149"
+                rx="455"
+                ry="149"
+                transform="matrix(1 0 0 -1 339 1037)"
+                fill="white"
+                fill-opacity="0.2"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_6793_6660"
+                x="-661"
+                y="-261"
+                width="2910"
+                height="2298"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="500"
+                  result="effect1_foregroundBlur_6793_6660"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </span>
         <div
           class="w-full md:w-full self-center min-768px:pb-[40px] text-center"
         >
@@ -2502,9 +2554,16 @@
           <div class="flex flex-col sm:flex-row gap-6 h-inherit items-end">
             <!-- Card 1 -->
             <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[425px]"
+              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[425px] relative overflow-hidden"
             >
-              <div>
+              <div class="absolute left-0 w-full h-full">
+                <img
+                  src="./img/pattern-eclipse.webp"
+                  alt=""
+                  class="object-cover"
+                />
+              </div>
+              <div class="relative">
                 <h3 class="text-4xl font-bold mb-2">30+</h3>
                 <p
                   class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
@@ -2520,9 +2579,16 @@
 
             <!-- Card 2 -->
             <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[465px]"
+              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[465px] relative overflow-hidden"
             >
-              <div>
+              <div class="absolute left-0 w-full h-full">
+                <img
+                  src="./img/pattern-eclipse.webp"
+                  alt=""
+                  class="object-cover"
+                />
+              </div>
+              <div class="relative">
                 <h3 class="text-4xl font-bold mb-2">100+</h3>
                 <p
                   class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
@@ -2538,9 +2604,16 @@
 
             <!-- Card 3 -->
             <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[500px]"
+              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[500px] relative overflow-hidden"
             >
-              <div>
+              <div class="absolute left-0 w-full h-full">
+                <img
+                  src="./img/pattern-eclipse.webp"
+                  alt=""
+                  class="object-cover"
+                />
+              </div>
+              <div class="relative">
                 <h3 class="text-4xl font-bold mb-2">#1</h3>
                 <p
                   class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
@@ -2751,10 +2824,11 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#000]">
+
+    <section class="bg-[#000] py-[50px] lg:py-[100px]">
       <div class="container">
         <div
-          class="relative overflow-hidden rounded-[20px] mx-auto p-px before:content-[''] before:absolute before:inset-0 before:w-full before:h-full"
+          class="relative overflow-hidden rounded-[20px] mx-auto p-px before:content-[''] before:absolute before:inset-0 before:w-full before:h-full md:mb-[-250px]"
           style="
             --tw-gradient-from: #3fdb9f;
             --tw-gradient-via: #e51cff;
@@ -3143,8 +3217,171 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#000] md:py-[80px] py-[40px] text-white">
-      <div class="border-b border-[#ffffff40] py-[30px]">
+
+    <section
+      class="py-[50px] lg:pb-[100px] md:pt-[250px]"
+      x-data="{ active: 'isra' }"
+    >
+      <div class="container">
+        <h2 class="text-2xl md:text-3xl font-bold leading-tight mb-[60px]">
+          Client Testimonials that Reflect <br />
+          Our Expertise & Dedication
+        </h2>
+
+        <!-- Tabs -->
+        <div class="flex border-b border-gray-300 mb-8 text-lg font-medium">
+          <button
+            @click="active = 'isra'"
+            :class="active === 'isra' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+            class="pb-3 transition-colors flex flex-1 justify-center"
+          >
+            <img src="./img/isra.svg" alt="" />
+          </button>
+          <button
+            @click="active = 'lcard'"
+            :class="active === 'lcard' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+            class="pb-3 transition-colors flex flex-1 justify-center"
+          >
+            <img src="./img/lcard.svg" alt="" />
+          </button>
+          <button
+            @click="active = 'carup'"
+            :class="active === 'carup' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+            class="pb-3 transition-colors flex flex-1 justify-center"
+          >
+            <img src="./img/car-up.svg" alt="" />
+          </button>
+          <button
+            @click="active = 'whipflip'"
+            :class="active === 'whipflip' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+            class="pb-3 transition-colors flex flex-1 justify-center"
+          >
+            <img src="./img/whipflip.svg" alt="" />
+          </button>
+        </div>
+
+        <!-- ISRA Pane -->
+        <div
+          x-show="active === 'isra'"
+          x-transition
+          class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
+        >
+          <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+            <div class="relative">
+              <video
+                src="./video/isra.mp4"
+                class="rounded-lg w-full h-[200px] object-cover"
+                poster="./images/iman.webp"
+                muted
+              ></video>
+              <span
+                class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded"
+                >01:50</span
+              >
+            </div>
+
+            <div>
+              <p class="text-xl leading-relaxed mb-4 text-[32px]">
+                “From every single moment, from the beginning till the end, they
+                were there for me. They were very systematic and methodical in
+                every single step and …”
+              </p>
+              <p class="font-[500]">IMAN KHAWAJA</p>
+              <p class="text-sm text-gray-600 mb-6">Owner – ISRA</p>
+            </div>
+          </div>
+          <div>
+            <div class="flex mt-4 gap-[20px]">
+              <div class="self-end">
+                <a
+                  href="#"
+                  class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
+                >
+                  <span> Read Full Customer Story </span>
+                  <span>
+                    <svg
+                      width="8"
+                      height="14"
+                      viewBox="0 0 10 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132C1.09575 16.0551 1.0641 16.1049 1.04251 16.1598C1.02091 16.2147 1.0098 16.2736 1.0098 16.333C1.0098 16.3924 1.02091 16.4513 1.04251 16.5062C1.0641 16.5611 1.09575 16.6109 1.13563 16.6528Z"
+                        fill="#4361EE"
+                        stroke="#4361EE"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="px-[20px] border-l border-[#A3ACB5]">
+                <p class="text-3xl font-[500]">30%</p>
+                <p class="text-sm text-gray-600">Growth in profit margins</p>
+              </div>
+              <div class="px-[20px] border-l border-[#A3ACB5]">
+                <p class="text-3xl font-[500]">40%</p>
+                <p class="text-sm text-gray-600">Faster legal reviews</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- LCard Pane -->
+        <div
+          x-show="active === 'lcard'"
+          x-transition
+          class="bg-[#eaf8fe] rounded-xl p-6 md:p-8"
+        >
+          <p class="text-xl leading-relaxed mb-4 text-[32px]">
+            “The LCard app transformed our communication and workflow. Their
+            team went beyond expectations.”
+          </p>
+          <p class="font-semibold">SARAH LANE</p>
+          <p class="text-sm text-gray-600 mb-6">Founder – LCard</p>
+          <a href="#" class="text-indigo-600 font-medium hover:underline"
+            >Read Full Customer Story →</a
+          >
+        </div>
+
+        <!-- Car-Up Pane -->
+        <div
+          x-show="active === 'carup'"
+          x-transition
+          class="bg-[#fff3d7] rounded-xl p-6 md:p-8"
+        >
+          <p class="text-xl leading-relaxed mb-4 text-[32px]">
+            “Car-Up’s operational speed increased drastically after adopting
+            their app development approach.”
+          </p>
+          <p class="font-semibold">JOHN DOE</p>
+          <p class="text-sm text-gray-600 mb-6">CEO – Car-Up</p>
+          <a href="#" class="text-indigo-600 font-medium hover:underline"
+            >Read Full Customer Story →</a
+          >
+        </div>
+
+        <!-- Whipflip Pane -->
+        <div
+          x-show="active === 'whipflip'"
+          x-transition
+          class="bg-[#f2f1ff] rounded-xl p-6 md:p-8"
+        >
+          <p class="text-xl leading-relaxed mb-4 text-[32px]">
+            “Whipflip saw a 200% increase in user satisfaction. Their UX and dev
+            expertise truly stood out.”
+          </p>
+          <p class="font-semibold">EMILY ROSS</p>
+          <p class="text-sm text-gray-600 mb-6">Owner – Whipflip</p>
+          <a href="#" class="text-indigo-600 font-medium hover:underline"
+            >Read Full Customer Story →</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- steps -->
+    <section id="steps" class="relative bg-[#000] pt-[100px]">
+      <!-- Top progress bar -->
+      <div class="py-[30px]">
         <div class="container">
           <h2
             class="sechd text-left text-[30px] leading-[48px] mt-[30px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal mb-4"
@@ -3153,45 +3390,172 @@
           </h2>
         </div>
       </div>
-      <div class="py-[40px]">
-        <div class="container">
-          <div class="grid md:grid-cols-2 gap-8 md:px-[0px]">
-            <div>
-              <span
-                class="text-[18px] md:text-[20px] font-medium text-white md:mb-[15px] leading-normal mb-4 opacity-[.7]"
-                >STEP 01</span
-              >
-              <h2
-                class="text-[42px] md:text-[48px] font-medium text-white md:mb-[15px] leading-normal mb-4"
-              >
-                Plan
-              </h2>
-            </div>
-            <div>
-              <h3
-                class="text-[22px] md:text-[30px] font-medium text-white md:mb-[15px] leading-normal mb-4"
-              >
-                Requirements brief, prioritizing backlogs, roadmaps, high-level
-                architecture, and estimation of efforts and timeline.
-              </h3>
-              <div class="mt-[30px]">
-                <video
-                  class="ai_video rounded-[15px]"
-                  poster=""
-                  autoplay
-                  muted
-                  loop
-                  playsinline
+
+      <!-- Stage: stacked full-viewport steps -->
+      <div class="relative h-screen">
+        <div class="absolute left-0 top-0 w-screen h-1 bg-white/10 z-[60]">
+          <div id="progress" class="h-full origin-left scale-x-0"></div>
+        </div>
+        <!-- STEP 01 -->
+        <section
+          class="step absolute inset-0 flex items-center justify-center text-white"
+        >
+          <div class="w-full px-6 md:px-10">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <span
+                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
+                  >STEP 01</span
                 >
-                  <source src="./video/tw1.mp4" type="video/mp4" />
-                  <source src="./video/tw1.webm" type="video/webm" />
-                </video>
+                <h2
+                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
+                >
+                  Plan
+                </h2>
+              </div>
+              <div>
+                <p
+                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
+                >
+                  Requirements brief, backlog prioritization, roadmap,
+                  high-level architecture, and estimates.
+                </p>
+                <div class="mt-6">
+                  <video
+                    class="rounded-[15px] w-full"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                    <source src="./video/tw1.mp4" type="video/mp4" />
+                    <source src="./video/tw1.webm" type="video/webm" />
+                  </video>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- STEP 02 -->
+        <section class="step absolute inset-0 flex items-center justify-center">
+          <div class="w-full px-6 md:px-10">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <span
+                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
+                  >STEP 02</span
+                >
+                <h2
+                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
+                >
+                  Plan
+                </h2>
+              </div>
+              <div>
+                <p
+                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
+                >
+                  Requirements brief, backlog prioritization, roadmap,
+                  high-level architecture, and estimates.
+                </p>
+                <div class="mt-6">
+                  <video
+                    class="rounded-[15px] w-full"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                    <source src="./video/tw1.mp4" type="video/mp4" />
+                    <source src="./video/tw1.webm" type="video/webm" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 03 -->
+        <section class="step absolute inset-0 flex items-center justify-center">
+          <div class="w-full px-6 md:px-10">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <span
+                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
+                  >STEP 03</span
+                >
+                <h2
+                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
+                >
+                  Plan
+                </h2>
+              </div>
+              <div>
+                <p
+                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
+                >
+                  Requirements brief, backlog prioritization, roadmap,
+                  high-level architecture, and estimates.
+                </p>
+                <div class="mt-6">
+                  <video
+                    class="rounded-[15px] w-full"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                    <source src="./video/tw1.mp4" type="video/mp4" />
+                    <source src="./video/tw1.webm" type="video/webm" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 04 -->
+        <section class="step absolute inset-0 flex items-center justify-center">
+          <div class="w-full px-6 md:px-10">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <span
+                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
+                  >STEP 04</span
+                >
+                <h2
+                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
+                >
+                  Plan
+                </h2>
+              </div>
+              <div>
+                <p
+                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
+                >
+                  Requirements brief, backlog prioritization, roadmap,
+                  high-level architecture, and estimates.
+                </p>
+                <div class="mt-6">
+                  <video
+                    class="rounded-[15px] w-full"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                  >
+                    <source src="./video/tw1.mp4" type="video/mp4" />
+                    <source src="./video/tw1.webm" type="video/webm" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
+    <!-- end -->
     <section class="hero-business">
       <div class="hero-bg" id="heroBg"></div>
       <div class="hero-bg--prev" id="heroBgPrev"></div>
@@ -3499,6 +3863,7 @@
         </div>
       </div>
     </section>
+
     <section
       class="trusted-partners bg-[#000000] pt-[40px] lg:pt-[80px] lg:pb-7"
     >
@@ -4515,6 +4880,7 @@
         </div>
       </div>
     </section>
+
     <section class="ai-vision gen-ai-vision bg-[#000] pt-[40px] lg:pt-[80px]">
       <div class="container mx-auto px-4">
         <div class="sec-head">
@@ -4685,6 +5051,7 @@
         </div>
       </div>
     </section>
+
     <section
       class="trusted-providers horizontal-scrolling flex flex-col gap-5 py-[50px] lg:py-[100px] bg-[#000]"
     >
@@ -6336,11 +6703,18 @@
           </form>
         </div>
       </div>
+      <div class="text-center">
+        <img src="./img/newage-logo-footer.webp" alt="logo" class="mx-auto" />
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <script>
       gsap.registerPlugin(ScrollTrigger);
       document.querySelectorAll(".animatedText").forEach((section) => {
@@ -6558,6 +6932,113 @@
           });
         });
       })();
+    </script>
+    <script>
+      // gsap.registerPlugin(ScrollTrigger);
+
+      const container = document.querySelector("#steps");
+      const steps = gsap.utils.toArray("#steps .step");
+      const progressEl = document.querySelector("#progress");
+
+      // --- Setup: first visible, rest hidden below ---
+      steps.forEach((el, i) => {
+        gsap.set(el, {
+          autoAlpha: i === 0 ? 1 : 0,
+          y: i === 0 ? 0 : 40, // hidden steps sit slightly down
+          zIndex: steps.length - i,
+        });
+        if (i !== 0) el.classList.add("pe-none");
+      });
+
+      let current = 0; // active step index
+      const D_OUT = 0.25; // out duration
+      const D_IN = 0.35; // in duration
+
+      const showStep = (nextIdx) => {
+        if (nextIdx === current || nextIdx < 0 || nextIdx >= steps.length)
+          return;
+
+        const prev = steps[current];
+        const next = steps[nextIdx];
+
+        // Kill any running tweens on these elements to avoid backlog on fast back-scroll
+        gsap.killTweensOf([prev, next]);
+
+        // Fully hide previous first (no overlap)
+        gsap.to(prev, {
+          autoAlpha: 0,
+          y: -40,
+          duration: D_OUT,
+          ease: "power2.out",
+          overwrite: "auto",
+          onComplete: () => {
+            prev.classList.add("pe-none");
+            gsap.set(prev, { zIndex: steps.length - nextIdx - 1 });
+          },
+        });
+
+        // Then show the next
+        gsap.fromTo(
+          next,
+          { autoAlpha: 0, y: 40 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: D_IN,
+            ease: "power2.out",
+            overwrite: "auto",
+            onStart: () => {
+              next.classList.remove("pe-none");
+              gsap.set(next, { zIndex: steps.length + 10 }); // ensure on top during transition
+            },
+            onComplete: () => {
+              gsap.set(next, { zIndex: steps.length - nextIdx });
+            },
+          }
+        );
+
+        current = nextIdx;
+
+        // Progress bar jumps to the active step fraction
+        const discrete = (current + 1) / steps.length;
+        gsap.to(progressEl, { scaleX: discrete, duration: 0.2, ease: "none" });
+      };
+
+      // --- Pin the whole section; no scrub so transitions are time-based in both directions ---
+      const pinST = ScrollTrigger.create({
+        id: "steps-pin",
+        trigger: container,
+        start: "top -20%",
+        end: () => "+=" + steps.length * window.innerHeight,
+        pin: true,
+        anticipatePin: 1,
+        scrub: false, // <-- key change for fast reverse: not tied to scroll distance
+        snap: {
+          snapTo: (value) => {
+            const seg = 1 / (steps.length - 1);
+            return Math.round(value / seg) * seg; // snap per step
+          },
+          duration: 0.25,
+          ease: "power1.out",
+        },
+        onUpdate: (self) => {
+          // Decide target step based on progress
+          const target = Math.round(self.progress * (steps.length - 1));
+          if (target !== current) showStep(target);
+        },
+        invalidateOnRefresh: true,
+      });
+
+      // Initialize progress bar to step 1
+      gsap.set(progressEl, {
+        scaleX: 1 / steps.length,
+        transformOrigin: "left center",
+      });
+
+      // Keep measurements + snapping accurate on resize
+      const onResize = () => ScrollTrigger.refresh();
+      window.addEventListener("resize", onResize);
+      window.addEventListener("orientationchange", onResize);
     </script>
   </body>
 </html>
