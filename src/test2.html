@@ -2,78 +2,151 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GSAP Brightness Scroll Reveal</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-    <style>
-      body {
-        margin: 0;
-        background: #0a0a0a;
-        font-family: "Poppins", sans-serif;
-        color: #fff;
-        overflow-x: hidden;
-      }
-
-      section {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      h1 span {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        line-height: 1.2;
-        max-width: 900px;
-        text-align: center;
-
-        /* Start with dim gradient */
-        display: block;
-        background: linear-gradient(to right, #fff 50%, #5c5757 50%);
-        color: transparent;
-        background-size: 200% 100%;
-        background-position-x: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-
-      .spacer {
-        height: 150vh;
-        background: #111;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Testimonials Tabs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <section>
-      <h1 class="animatedText">
-        <span
-          >Transform your business with our IT consulting and cybersecurity
-          services.</span
+  <body class="bg-[#fdfdfd] text-gray-900 antialiased">
+    <section class="max-w-5xl mx-auto px-6 py-12" x-data="{ active: 'isra' }">
+      <!-- Heading -->
+      <h2 class="text-2xl md:text-3xl font-bold leading-tight mb-8">
+        Client Testimonials that Reflect <br />
+        Our Expertise & Dedication
+      </h2>
+
+      <!-- Tabs -->
+      <div
+        class="flex space-x-8 border-b border-gray-300 mb-8 text-lg font-medium"
+      >
+        <button
+          @click="active = 'isra'"
+          :class="active === 'isra' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+          class="pb-3 transition-colors"
         >
-      </h1>
+          ISRA
+        </button>
+        <button
+          @click="active = 'lcard'"
+          :class="active === 'lcard' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+          class="pb-3 transition-colors"
+        >
+          LCard
+        </button>
+        <button
+          @click="active = 'carup'"
+          :class="active === 'carup' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+          class="pb-3 transition-colors"
+        >
+          Car-Up
+        </button>
+        <button
+          @click="active = 'whipflip'"
+          :class="active === 'whipflip' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+          class="pb-3 transition-colors"
+        >
+          Whipflip
+        </button>
+      </div>
+
+      <!-- ISRA Pane -->
+      <div
+        x-show="active === 'isra'"
+        x-transition
+        class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
+      >
+        <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+          <div class="relative">
+            <video
+              src="./video/isra.mp4"
+              class="rounded-lg w-full h-[200px] object-cover"
+              controls
+            ></video>
+            <span
+              class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded"
+              >01:50</span
+            >
+          </div>
+
+          <div>
+            <p class="text-xl leading-relaxed mb-4">
+              “From every single moment, from the beginning till the end, they
+              were there for me. They were very systematic and methodical in
+              every single step and …”
+            </p>
+            <p class="font-semibold">IMAN KHAWAJA</p>
+            <p class="text-sm text-gray-600 mb-6">Owner – ISRA</p>
+
+            <a
+              href="#"
+              class="text-indigo-600 font-medium hover:underline mb-6 inline-block"
+            >
+              Read Full Customer Story →
+            </a>
+
+            <div class="flex space-x-8 mt-4">
+              <div>
+                <p class="text-3xl font-bold">30%</p>
+                <p class="text-sm text-gray-600">Growth in profit margins</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold">40%</p>
+                <p class="text-sm text-gray-600">Faster legal reviews</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LCard Pane -->
+      <div
+        x-show="active === 'lcard'"
+        x-transition
+        class="bg-[#eaf8fe] rounded-xl p-6 md:p-8"
+      >
+        <p class="text-xl leading-relaxed mb-4">
+          “The LCard app transformed our communication and workflow. Their team
+          went beyond expectations.”
+        </p>
+        <p class="font-semibold">SARAH LANE</p>
+        <p class="text-sm text-gray-600 mb-6">Founder – LCard</p>
+        <a href="#" class="text-indigo-600 font-medium hover:underline"
+          >Read Full Customer Story →</a
+        >
+      </div>
+
+      <!-- Car-Up Pane -->
+      <div
+        x-show="active === 'carup'"
+        x-transition
+        class="bg-[#fff3d7] rounded-xl p-6 md:p-8"
+      >
+        <p class="text-xl leading-relaxed mb-4">
+          “Car-Up’s operational speed increased drastically after adopting their
+          app development approach.”
+        </p>
+        <p class="font-semibold">JOHN DOE</p>
+        <p class="text-sm text-gray-600 mb-6">CEO – Car-Up</p>
+        <a href="#" class="text-indigo-600 font-medium hover:underline"
+          >Read Full Customer Story →</a
+        >
+      </div>
+
+      <!-- Whipflip Pane -->
+      <div
+        x-show="active === 'whipflip'"
+        x-transition
+        class="bg-[#f2f1ff] rounded-xl p-6 md:p-8"
+      >
+        <p class="text-xl leading-relaxed mb-4">
+          “Whipflip saw a 200% increase in user satisfaction. Their UX and dev
+          expertise truly stood out.”
+        </p>
+        <p class="font-semibold">EMILY ROSS</p>
+        <p class="text-sm text-gray-600 mb-6">Owner – Whipflip</p>
+        <a href="#" class="text-indigo-600 font-medium hover:underline"
+          >Read Full Customer Story →</a
+        >
+      </div>
     </section>
-
-    <div class="spacer"></div>
-
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-      document.querySelectorAll(".animatedText").forEach((section) => {
-        const textEl = section.querySelectorAll("span");
-        gsap.to(textEl, {
-          scrollTrigger: {
-            trigger: textEl,
-            start: "top 80%",
-            end: "bottom 30%",
-            scrub: true,
-          },
-          backgroundPositionX: "0%", // gradient sweep
-          filter: "brightness(1.5)", // brighten up
-          ease: "none",
-        });
-      });
-    </script>
   </body>
 </html>
