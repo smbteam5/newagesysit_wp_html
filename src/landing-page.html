@@ -13,6 +13,14 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
@@ -36,6 +44,85 @@
       }
       .pe-none {
         pointer-events: none;
+      }
+    </style>
+    <style>
+      /* Owl Carousel Custom Styles */
+      .owl-carousel .owl-nav {
+        /* position: absolute; */
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        pointer-events: none;
+      }
+
+      .owl-carousel .owl-nav button {
+        background: black !important;
+        border-radius: 50% !important;
+        width: 50px;
+        height: 50px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        pointer-events: all;
+        border: 1px solid #fff !important;
+        transition: all 0.3s ease;
+      }
+
+      .owl-carousel .owl-nav button:hover {
+        background: rgba(0, 0, 0, 0.8) !important;
+        transform: scale(1.1);
+      }
+
+      .owl-carousel .owl-nav button span {
+        display: none;
+      }
+
+      .owl-carousel .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .owl-carousel .owl-dots .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .owl-carousel .owl-dots .owl-dot.active {
+        background: white;
+        transform: scale(1.2);
+      }
+
+      .owl-carousel .owl-dots .owl-dot span {
+        display: none;
+      }
+
+      /* Custom carousel styling */
+      .owl-carousel .item {
+        padding: 0 15px;
+      }
+
+      .mobile-slider .owl-dots .owl-dot {
+        display: none;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .mobile-slider .owl-nav {
+        margin-top: 40px;
       }
     </style>
   </head>
@@ -1864,7 +1951,7 @@
     </header>
 
     <section
-      class="relative flex h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)]"
+      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
     >
       <img
         alt="banner"
@@ -1877,62 +1964,21 @@
 
       <!-- Content Container -->
       <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <span class="absolute bottom-0 left-1/2 z-[99] translate-x-[-50%]">
-          <svg
-            width="1600"
-            height="890"
-            viewBox="0 0 1600 890"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g filter="url(#filter0_f_6793_6660)">
-              <ellipse
-                cx="455"
-                cy="149"
-                rx="455"
-                ry="149"
-                transform="matrix(1 0 0 -1 339 1037)"
-                fill="white"
-                fill-opacity="0.2"
-              />
-            </g>
-            <defs>
-              <filter
-                id="filter0_f_6793_6660"
-                x="-661"
-                y="-261"
-                width="2910"
-                height="2298"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                />
-                <feGaussianBlur
-                  stdDeviation="500"
-                  result="effect1_foregroundBlur_6793_6660"
-                />
-              </filter>
-            </defs>
-          </svg>
+        <span class="absolute bottom-0 w-full left-0">
+          <img src="./img/Light_Effect.webp" alt="" />
         </span>
         <div
-          class="w-full md:w-full self-center min-768px:pb-[40px] text-center"
+          class="w-full md:w-full self-center min-768px:pb-[40px] text-center pb-[40px]"
         >
           <h1
-            class="text-[45px] md:text-[60px] font-bold md:leading-[80px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
+            class="text-[45px] md:text-[50px] font-bold md:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
           >
             Redefining Your Business Success <br />
             With Apps &amp; Software That Scale
           </h1>
-          <p class="text-white text-[26px] mt-[20px]">
+          <p class="text-white lg:text-[26px] text-[18px] mt-[20px]">
             Award-Winning Digital Transformation Company with Strategic
-            <br />
+            <br class="hidden lg:block" />
             Innovation Turning Brands into Industry Leaders 
           </p>
           <div class="text-center flex justify-center mt-5">
@@ -2016,11 +2062,11 @@
 
       <!-- Awards / Recognition Scrolling Bar -->
       <div
-        class="border-gradient absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
+        class="border-gradient relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
       >
         <div class="container mx-auto w-full max-w-[1456px] px-4">
           <div
-            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white"
+            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white xl:text-left text-center"
           >
             <!-- Left Text -->
             <p
@@ -2143,11 +2189,11 @@
     </section>
 
     <section
-      class="overflow-hidden py-15 md:py-30 lg:py-40 xl:py-52.5 bg-[#0D0D0D]"
+      class="overflow-hidden py-[50px] md:py-30 lg:py-40 xl:py-52.5 bg-[#0D0D0D]"
     >
       <div class="container mx-auto w-full max-w-[1456px] px-4">
         <h2
-          class="animatedText mx-auto max-w-[940px] text-justify text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white lg:text-center"
+          class="animatedText mx-auto max-w-[940px] text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white text-center"
         >
           <span>As a Clutch 5-rated & #1 software development</span
           ><span> company in the U.S., NewAgeSysIT believes in</span>
@@ -2173,7 +2219,7 @@
       </div> -->
     </section>
 
-    <section class="pt-0 pb-15 xl:py-20 bg-[#0D0D0D]">
+    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
       <div class="container mx-auto w-full max-w-[1456px] px-4">
         <h2
           class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
@@ -2530,12 +2576,501 @@
       </div>
     </section>
 
+    <section class="bg-black py-8 md:py-20 px-4">
+      <div class="container mx-auto text-center">
+        <!-----desktop section--->
+        <div
+          class="hidden lg:grid grid-cols-10 gap-6 mb-16 max-w-[95%] mx-auto"
+        >
+          <div class="flex flex-col col-span-2">
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=_AG--jyDX3c"
+              >
+                <img
+                  src="./img/client-img-1.webp"
+                  alt="Roger J. Guipre"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    ROGER J CLAPPE
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO,WhipFlip</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer mt-3">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+              >
+                <img
+                  src="./img/client-img-2.webp"
+                  alt="Bob Salesno"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Larry Seibel
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO,Car-Upp</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 col-span-6 pt-20">
+            <div
+              class="relative group cursor-pointer h-[220px] xl:h-[350px] w-auto"
+            >
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
+              >
+                <img
+                  src="./img/client-img-3.webp"
+                  alt="Chris Ordway"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Rob Salerno
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, CliquePrize App
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="relative group cursor-pointer h-[220px] xl:h-[350px] mt-14"
+            >
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=PttTsDGO2AA"
+              >
+                <img
+                  src="./img/client-img-4.webp"
+                  alt="Imran Charania"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Chris O'Rorke
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Guaranteed Tip Sheet
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[350px]"
+            >
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
+              >
+                <img
+                  src="./img/client-img-5.webp"
+                  alt="David Chabukashvili"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Iman Khawaja
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col col-span-2">
+            <div class="relative group cursor-pointer row-span-2">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+              >
+                <img
+                  src="./img/client-img-6.webp"
+                  alt="Larry Gebel"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    David Chabukashvili
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer row-span-2 mt-3">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=slRQbxC1UoI"
+              >
+                <img
+                  src="./img/client-img-7.webp"
+                  alt="Larry Gebel"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Donut Man app
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-----mobile section--->
+        <div class="lg:hidden">
+          <div
+            class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto"
+          >
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=_AG--jyDX3c"
+              >
+                <img
+                  src="./img/client-img-1.webp"
+                  alt="Roger J. Clappe"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    ROGER J CLAPPE
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, WhipFlip</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+              >
+                <img
+                  src="./img/client-img-2.webp"
+                  alt="Larry Seibel"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Larry Seibel
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, Car-Upp</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
+              >
+                <img
+                  src="./img/client-img-3.webp"
+                  alt="Rob Salerno"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Rob Salerno
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, CliquePrize App
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=PttTsDGO2AA"
+              >
+                <img
+                  src="./img/client-img-4.webp"
+                  alt="Chris O'Rorke"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Chris O'Rorke
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Guaranteed Tip Sheet
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
+              >
+                <img
+                  src="./img/client-img-5.webp"
+                  alt="Iman Khawaja"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Iman Khawaja
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+              >
+                <img
+                  src="./img/client-img-6.webp"
+                  alt="David Chabukashvili"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    David Chabukashvili
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=slRQbxC1UoI"
+              >
+                <img
+                  src="./img/client-img-7.webp"
+                  alt="Rob Evans"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Donut Man app
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center lg:-mt-20">
+          <h3
+            class="text-[28px] md:text-[40px] font-semibold text-white mb-4 max-w-2xl mx-auto"
+          >
+            Our Work Made the Difference, <br class="sm:hidden" />
+            Their Words Tell the Story
+          </h3>
+          <p class="text-gray-400 mb-8 text-[18px] max-w-2xl mx-auto">
+            Here's what our clients across the globe have shared about their
+            experiences with NewAgeSysIT. Listen to their words that reflect our
+            expertise and commitment.
+          </p>
+          <button
+            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[18px]"
+          >
+            Read Success Stories
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-black py-[50px] lg:py-[100px]">
       <div class="container">
         <div
-          class="text-white flex flex-col lg:flex-row justify-between gap-12 items-end"
+          class="text-white flex flex-col lg:flex-row justify-between gap-12 items-end flex-wrap"
         >
-          <div class="max-w-[25%]">
+          <div class="lg:max-w-[25%] w-full">
             <h2 class="text-4xl font-[500] leading-tight mb-6">
               Ensuring<br />
               Businesses<br />
@@ -2551,19 +3086,21 @@
               innovations.
             </p>
           </div>
-          <div class="flex flex-col sm:flex-row gap-6 h-inherit items-end">
+          <div
+            class="flex flex-col lg:flex-row gap-6 h-inherit items-end flex-wrap"
+          >
             <!-- Card 1 -->
             <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[425px] relative overflow-hidden"
+              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 lg:w-64 flex flex-col justify-end lg:h-[425px] relative overflow-hidden w-full pb-0 h-auto"
             >
               <div class="absolute left-0 w-full h-full">
                 <img
                   src="./img/pattern-eclipse.webp"
                   alt=""
-                  class="object-cover"
+                  class="object-cover w-full h-full"
                 />
               </div>
-              <div class="relative">
+              <div class="relative pb-6">
                 <h3 class="text-4xl font-bold mb-2">30+</h3>
                 <p
                   class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
@@ -2579,16 +3116,16 @@
 
             <!-- Card 2 -->
             <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[465px] relative overflow-hidden"
+              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 lg:w-64 flex flex-col justify-end lg:h-[465px] relative overflow-hidden w-full pb-0 h-auto"
             >
               <div class="absolute left-0 w-full h-full">
                 <img
                   src="./img/pattern-eclipse.webp"
                   alt=""
-                  class="object-cover"
+                  class="object-cover w-full h-full"
                 />
               </div>
-              <div class="relative">
+              <div class="relative pb-6">
                 <h3 class="text-4xl font-bold mb-2">100+</h3>
                 <p
                   class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
@@ -2604,16 +3141,16 @@
 
             <!-- Card 3 -->
             <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 w-64 flex flex-col justify-end h-[500px] relative overflow-hidden"
+              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 lg:w-64 flex flex-col justify-end lg:h-[500px] relative overflow-hidden w-full pb-0 h-auto"
             >
               <div class="absolute left-0 w-full h-full">
                 <img
                   src="./img/pattern-eclipse.webp"
                   alt=""
-                  class="object-cover"
+                  class="object-cover w-full h-full"
                 />
               </div>
-              <div class="relative">
+              <div class="relative pb-6">
                 <h3 class="text-4xl font-bold mb-2">#1</h3>
                 <p
                   class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
@@ -2630,8 +3167,66 @@
         </div>
       </div>
     </section>
+    <section
+      class="relative overflow-hidden bg-[#0b0b0d] py-16 md:py-24 xl:hidden block"
+    >
+      <div class="container">
+        <div
+          class="grid md:grid-cols-2 grid-col-1 items-center gap-10 md:p-[25px] p-[15px] border border-[#2A2D30]"
+        >
+          <div class="relative">
+            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
+              Your Problems?
+            </h2>
+            <ul class="divide-y divide-white/5">
+              <li
+                class="flex items-center gap-3 py-[10px] text-white/80 bg-black rounded-tr-[999px] overflow-hidden mr-[2px] mt-[1px]"
+              >
+                <span class="text-white/40">○</span>
+                <span>Delays &amp; budget overruns?</span>
+              </li>
+              <li
+                class="flex items-center gap-3 py-[10px] text-white/80 bg-black rounded-br-[999px] overflow-hidden mr-[2px] mt-[1px]"
+              >
+                <span class="text-white/40">○</span>
+                <span>No innovation from your tech partner?</span>
+              </li>
+              <li class="flex items-center gap-3 py-[10px] text-white/80">
+                <span class="text-white/40">○</span>
+                <span>Weak communication &amp; missed deadlines?</span>
+              </li>
+            </ul>
+          </div>
+          <div class="relative">
+            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
+              Our Solutions!
+            </h2>
+            <ul class="divide-y divide-white/5">
+              <li
+                class="flex items-center gap-3 py-[10px] text-white/80 bg-black rounded-br-[999px] overflow-hidden mr-[2px] mt-[1px]"
+              >
+                <span class="text-white/40">○</span>
+                <span>No innovation from your tech partner?</span>
+              </li>
+              <li class="flex items-center gap-3 py-[10px] text-white/80">
+                <span class="text-white/40">○</span>
+                <span>AI-driven and intelligent solutions.</span>
+              </li>
+              <li
+                class="flex items-center gap-3 py-[10px] text-white/80 bg-black rounded-tr-[999px] overflow-hidden mr-[2px] mt-[1px]"
+              >
+                <span class="text-white/40">○</span>
+                <span>Transparent and flexible approach.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="relative overflow-hidden bg-[#0b0b0d] py-16 md:py-24">
+    <section
+      class="relative overflow-hidden bg-[#0b0b0d] py-16 md:py-24 xl:block hidden"
+    >
       <!-- faint arcs (left & right) -->
       <div class="pointer-events-none absolute inset-0 -z-10">
         <!-- left arcs -->
@@ -2698,7 +3293,7 @@
           </div>
         </div>
 
-        <div class="relative mx-auto h-72 w-72 md:h-96 md:w-96">
+        <div class="relative mx-auto h-72 w-72 md:h-96 md:w-96 hidden md:block">
           <!-- outer soft halo -->
           <div
             class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15)_0%,transparent_70%)]"
@@ -2707,7 +3302,6 @@
           <!-- ring stack -->
           <div class="absolute inset-0 flex items-center justify-center z-[9]">
             <!-- outer -->
-            <!-- bg-[conic-gradient(from_180deg_at_50%_50%,#3b5ad9_0%,#5b6ff3_25%,#2546d0_50%,#3b5ad9_75%,#5b6ff3_100%)]  -->
             <div
               class="absolute h-[120%] w-[120%] rounded-full opacity-90 border border-[#ffffff2b]"
             ></div>
@@ -2725,7 +3319,6 @@
             <div
               class="absolute h-[50%] w-[50%] rounded-full bg-[radial-gradient(circle_at_center,#7aa1ff_0%,#3a57d8_60%,#2741a0_100%)] border border-[#ffffff30]"
             ></div>
-            <!-- lightbulb icon (svg so it matches the screenshot style) -->
             <svg
               class="absolute"
               width="69"
@@ -2743,36 +3336,6 @@
             </svg>
           </div>
         </div>
-
-        <!-- <div
-          class="relative pl-[30px] left-[-100px] border border-[#ffffff29] border-r-0 rounded-tl-[999px] rounded-bl-[999px] pt-[20px]"
-        >
-          <span
-            class="absolute left-0 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-white/15 to-transparent md:block"
-          ></span>
-
-          <h2
-            class="mb-6 text-2xl font-extrabold text-white md:text-3xl text-right md:text-right lg:text-3xl"
-          >
-            Our Solutions!
-          </h2>
-          <ul class="divide-y divide-white/5">
-            <div>
-              <li class="flex items-center justify-end gap-3 py-6 text-white/80">
-                <span>100% in-house team, no outsourcing.</span>
-                <span class="text-white/40">○</span>
-              </li>
-              <li class="flex items-center justify-end gap-3 py-6 text-white/80">
-                <span>AI-driven and intelligent solutions.</span>
-                <span class="text-white/40">○</span>
-              </li>
-            </div>
-            <li class="flex items-center justify-end gap-3 py-6 text-white/80">
-              <span>Transparent and flexible approach.</span>
-              <span class="text-white/40">○</span>
-            </li>
-          </ul>
-        </div> -->
 
         <div
           class="relative left-[-100px] border-[#ffffff29] !border-r-0 rounded-tl-[999px] rounded-bl-[999px] pt-[20px] overflow-hidden border border-y bg-[linear-gradient(90deg,rgba(22,22,34,0.6)_-2.33%,#161A22_28.97%,#7C81DA_72.18%,rgba(88,88,136,0)_98.51%)] before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[#000]"
@@ -2825,6 +3388,223 @@
       </div>
     </section>
 
+    <section
+      class="w-full mx-auto px-4 bg-[#000] md:pt-[100px] md:pb-[0px] py-[50px]"
+    >
+      <div class="container">
+        <div
+          class="relative flex flex-col md:flex-row items-center justify-between bg-[linear-gradient(89.96deg,#4361EE_31.02%,#293481_51.12%,#0D1330_99.96%)] text-white rounded-lg shadow-lg p-4 md:p-6 overflow-hidden"
+        >
+          <!-- Left text -->
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <h2 class="text-[22px] md:text-[26px] font-semibold">
+              Got Problems?
+              <span class="text-[#dbeafe] font-normal"
+                >Let Us Help You With the Right Solution</span
+              >
+            </h2>
+          </div>
+
+          <!-- Button -->
+          <a
+            href="#"
+            class="flex items-center gap-2 bg-gradient-to-r from-[#FF8214] to-[#FF8214] hover:from-[#FF8214] hover:to-[#FF8214] text-white font-semibold px-5 py-3 rounded-full shadow-md transition-all duration-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 5.5C2 4.12 3.12 3 4.5 3h3a1 1 0 011 1v3a1 1 0 01-.293.707l-1.414 1.414a16.001 16.001 0 007.586 7.586l1.414-1.414A1 1 0 0117 15.5h3a1 1 0 011 1v3c0 1.38-1.12 2.5-2.5 2.5A18.5 18.5 0 012 5.5z"
+              />
+            </svg>
+            Schedule a Free Call Today
+          </a>
+
+          <span
+            class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ffffff00_100%)]"
+          ></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-vision gen-ai-vision bg-[#000] pt-[40px] lg:pt-[80px]">
+      <div class="container mx-auto px-4">
+        <div class="sec-head">
+          <h2
+            class="sechd text-left text-[30px] leading-[48px] mt-[30px] md:mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal"
+          >
+            Services We Provide to Turn Your
+            <br class="hidden md:inline" />
+            Vision Into a Digital Reality
+          </h2>
+        </div>
+
+        <div
+          class="ai-edge pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5"
+        >
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp1.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Customer <br />
+                  Service Support
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Build an NLP-powered support system with Gen-AI-powered
+                  chatbots for streamlined customer service.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp2.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Complex <br />
+                  Task Automation
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Leverage Gen AI's intelligent capabilities to computerize the
+                  recurring and cumbersome tasks and scale the daily operational
+                  efficiency.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp3.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Adaptation <br />
+                  Efficiency
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Eliminate challenges specific to upscaling and
+                  integration-specific concerns to keep up with the tech-driven
+                  and fast-paced world.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp4.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Demand <br />
+                  Forecasting
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Analyze previous records and current activities to predict
+                  customer and trend-related forecasts to design exceptional
+                  supply and demand plans.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Tailored <br />
+                  Customer Experiences
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Create custom interfaces and interactive user experiences
+                  according to the business requirements and the user
+                  preferences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp6.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Optimization of <br />
+                  Complex Design
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Streamline your creative workflows and make optimal solutions
+                  quicker than ever, compared to conventional design methods.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp7.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Optimization of <br />
+                  Complex Design
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Streamline your creative workflows and make optimal solutions
+                  quicker than ever, compared to conventional design methods.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./images/svp8.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[24px]">
+                  Optimization of <br />
+                  Complex Design
+                </h2>
+                <p class="font-normal text-white/70 pt-5">
+                  Streamline your creative workflows and make optimal solutions
+                  quicker than ever, compared to conventional design methods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-[#000] py-[50px] lg:py-[100px]">
       <div class="container">
         <div
@@ -2844,7 +3624,7 @@
           "
         >
           <div class="bg-[#20212B] overflow-hidden rounded-[20px]">
-            <div class="grid md:grid-cols-2 gap-8 md:px-[0px]">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 md:px-[0px]">
               <!-- LEFT SECTION -->
               <div class="flex gap-4 relative md:px-[40px] vertical-sliders">
                 <div
@@ -3193,7 +3973,7 @@
 
               <!-- RIGHT SECTION -->
               <div
-                class="flex flex-col justify-center text-white relative items-baseline md:pr-[40px]"
+                class="flex flex-col justify-center text-white relative items-baseline lg:pr-[40px] p-[25px]"
               >
                 <h2
                   class="sechd text-left text-[34px] leading-[48px] lg:text-[38px] lg:leading-[50px] lg:mt-0 xl:text-[40px] xl:leading-[50px] text-white font-normal mb-[15px]"
@@ -3227,164 +4007,323 @@
           Client Testimonials that Reflect <br />
           Our Expertise & Dedication
         </h2>
+        <div class="hidden lg:block">
+          <div class="flex border-b border-gray-300 mb-8 text-lg font-medium">
+            <button
+              @click="active = 'isra'"
+              :class="active === 'isra' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+              class="pb-3 transition-colors flex flex-1 justify-center"
+            >
+              <img src="./img/isra.svg" alt="" />
+            </button>
+            <button
+              @click="active = 'lcard'"
+              :class="active === 'lcard' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+              class="pb-3 transition-colors flex flex-1 justify-center"
+            >
+              <img src="./img/lcard.svg" alt="" />
+            </button>
+            <button
+              @click="active = 'carup'"
+              :class="active === 'carup' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+              class="pb-3 transition-colors flex flex-1 justify-center"
+            >
+              <img src="./img/car-up.svg" alt="" />
+            </button>
+            <button
+              @click="active = 'whipflip'"
+              :class="active === 'whipflip' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
+              class="pb-3 transition-colors flex flex-1 justify-center"
+            >
+              <img src="./img/whipflip.svg" alt="" />
+            </button>
+          </div>
 
-        <!-- Tabs -->
-        <div class="flex border-b border-gray-300 mb-8 text-lg font-medium">
-          <button
-            @click="active = 'isra'"
-            :class="active === 'isra' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-            class="pb-3 transition-colors flex flex-1 justify-center"
-          >
-            <img src="./img/isra.svg" alt="" />
-          </button>
-          <button
-            @click="active = 'lcard'"
-            :class="active === 'lcard' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-            class="pb-3 transition-colors flex flex-1 justify-center"
-          >
-            <img src="./img/lcard.svg" alt="" />
-          </button>
-          <button
-            @click="active = 'carup'"
-            :class="active === 'carup' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-            class="pb-3 transition-colors flex flex-1 justify-center"
-          >
-            <img src="./img/car-up.svg" alt="" />
-          </button>
-          <button
-            @click="active = 'whipflip'"
-            :class="active === 'whipflip' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-            class="pb-3 transition-colors flex flex-1 justify-center"
-          >
-            <img src="./img/whipflip.svg" alt="" />
-          </button>
-        </div>
+          <div class="overflow-hidden">
+            <!-- ISRA Pane -->
+            <div
+              x-show="active === 'isra'"
+              x-transition
+              class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
+            >
+              <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+                <div class="relative max-w-[220px] mx-auto">
+                  <video
+                    src="./video/isra.mp4"
+                    class="rounded-lg w-full h-[200px] object-cover"
+                    poster="./images/iman.webp"
+                    muted
+                  ></video>
+                  <span
+                    class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded"
+                    >01:50</span
+                  >
+                </div>
 
-        <!-- ISRA Pane -->
-        <div
-          x-show="active === 'isra'"
-          x-transition
-          class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
-        >
-          <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
-            <div class="relative">
-              <video
-                src="./video/isra.mp4"
-                class="rounded-lg w-full h-[200px] object-cover"
-                poster="./images/iman.webp"
-                muted
-              ></video>
-              <span
-                class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded"
-                >01:50</span
+                <div>
+                  <p class="text-xl leading-relaxed mb-4 text-[32px]">
+                    “From every single moment, from the beginning till the end,
+                    they were there for me. They were very systematic and
+                    methodical in every single step and …”
+                  </p>
+                  <p class="font-[500]">IMAN KHAWAJA</p>
+                  <p class="text-sm text-gray-600 mb-6">Owner – ISRA</p>
+                </div>
+              </div>
+              <div>
+                <div class="flex mt-4 gap-[20px]">
+                  <div class="self-end">
+                    <a
+                      href="#"
+                      class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
+                    >
+                      <span> Read Full Customer Story </span>
+                      <span>
+                        <svg
+                          width="8"
+                          height="14"
+                          viewBox="0 0 10 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132C1.09575 16.0551 1.0641 16.1049 1.04251 16.1598C1.02091 16.2147 1.0098 16.2736 1.0098 16.333C1.0098 16.3924 1.02091 16.4513 1.04251 16.5062C1.0641 16.5611 1.09575 16.6109 1.13563 16.6528Z"
+                            fill="#4361EE"
+                            stroke="#4361EE"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="px-[20px] border-l border-[#A3ACB5]">
+                    <p class="text-3xl font-[500]">30%</p>
+                    <p class="text-sm text-gray-600">
+                      Growth in profit margins
+                    </p>
+                  </div>
+                  <div class="px-[20px] border-l border-[#A3ACB5]">
+                    <p class="text-3xl font-[500]">40%</p>
+                    <p class="text-sm text-gray-600">Faster legal reviews</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- LCard Pane -->
+            <div
+              x-show="active === 'lcard'"
+              x-transition
+              class="bg-[#eaf8fe] rounded-xl p-6 md:p-8"
+            >
+              <p class="text-xl leading-relaxed mb-4 text-[32px]">
+                “The LCard app transformed our communication and workflow. Their
+                team went beyond expectations.”
+              </p>
+              <p class="font-semibold">SARAH LANE</p>
+              <p class="text-sm text-gray-600 mb-6">Founder – LCard</p>
+              <a href="#" class="text-indigo-600 font-medium hover:underline"
+                >Read Full Customer Story →</a
               >
             </div>
 
-            <div>
+            <!-- Car-Up Pane -->
+            <div
+              x-show="active === 'carup'"
+              x-transition
+              class="bg-[#fff3d7] rounded-xl p-6 md:p-8"
+            >
               <p class="text-xl leading-relaxed mb-4 text-[32px]">
-                “From every single moment, from the beginning till the end, they
-                were there for me. They were very systematic and methodical in
-                every single step and …”
+                “Car-Up’s operational speed increased drastically after adopting
+                their app development approach.”
               </p>
-              <p class="font-[500]">IMAN KHAWAJA</p>
-              <p class="text-sm text-gray-600 mb-6">Owner – ISRA</p>
+              <p class="font-semibold">JOHN DOE</p>
+              <p class="text-sm text-gray-600 mb-6">CEO – Car-Up</p>
+              <a href="#" class="text-indigo-600 font-medium hover:underline"
+                >Read Full Customer Story →</a
+              >
+            </div>
+
+            <!-- Whipflip Pane -->
+            <div
+              x-show="active === 'whipflip'"
+              x-transition
+              class="bg-[#f2f1ff] rounded-xl p-6 md:p-8"
+            >
+              <p class="text-xl leading-relaxed mb-4 text-[32px]">
+                “Whipflip saw a 200% increase in user satisfaction. Their UX and
+                dev expertise truly stood out.”
+              </p>
+              <p class="font-semibold">EMILY ROSS</p>
+              <p class="text-sm text-gray-600 mb-6">Owner – Whipflip</p>
+              <a href="#" class="text-indigo-600 font-medium hover:underline"
+                >Read Full Customer Story →</a
+              >
             </div>
           </div>
-          <div>
-            <div class="flex mt-4 gap-[20px]">
-              <div class="self-end">
-                <a
-                  href="#"
-                  class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
+        </div>
+        <div class="block lg:hidden relative">
+          <div class="swiper ctt_testimonials">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="ctt_item bg-[#fdeeea] rounded-xl p-6 md:p-8 text-gray-900"
                 >
-                  <span> Read Full Customer Story </span>
-                  <span>
-                    <svg
-                      width="8"
-                      height="14"
-                      viewBox="0 0 10 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+                    <div class="relative max-w-[220px] mx-auto">
+                      <video
+                        src="./video/isra.mp4"
+                        class="rounded-lg w-full h-[200px] object-cover"
+                        poster="./images/iman.webp"
+                        muted
+                        controls
+                      ></video>
+                      <span
+                        class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded"
+                      >
+                        01:50
+                      </span>
+                    </div>
+
+                    <div>
+                      <p
+                        class="mb-4 text-[22px] lg:text-[32px] leading-relaxed"
+                      >
+                        “From every single moment, from the beginning till the
+                        end, they were there for me. They were very systematic
+                        and methodical in every single step and …”
+                      </p>
+                      <p class="font-medium">IMAN KHAWAJA</p>
+                      <p class="text-sm text-gray-600 mb-6">Owner – ISRA</p>
+                    </div>
+                  </div>
+
+                  <div class="flex mt-4 gap-5">
+                    <div class="self-end">
+                      <a
+                        href="#"
+                        class="text-indigo-600 font-medium hover:underline inline-flex gap-2 items-center"
+                      >
+                        <span>Read Full Customer Story</span>
+                        <svg
+                          width="8"
+                          height="14"
+                          viewBox="0 0 10 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132Z"
+                            fill="#4361EE"
+                            stroke="#4361EE"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="px-5 border-l border-[#A3ACB5]">
+                      <p class="text-3xl font-medium text-gray-900">30%</p>
+                      <p class="text-sm text-gray-600">
+                        Growth in profit margins
+                      </p>
+                    </div>
+
+                    <div class="px-5 border-l border-[#A3ACB5]">
+                      <p class="text-3xl font-medium text-gray-900">40%</p>
+                      <p class="text-sm text-gray-600">Faster legal reviews</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 (duplicate content for demo; replace as needed) -->
+              <div class="swiper-slide">
+                <div
+                  class="ctt_item bg-[#fdeeea] rounded-xl p-6 md:p-8 text-gray-900"
+                >
+                  <!-- same inner markup as above or your second testimonial -->
+                  <!-- ... -->
+                  <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
+                    <div class="relative max-w-[220px] mx-auto">
+                      <video
+                        src="./video/isra.mp4"
+                        class="rounded-lg w-full h-[200px] object-cover"
+                        poster="./images/iman.webp"
+                        muted
+                        controls
+                      ></video>
+                      <span
+                        class="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded"
+                        >01:50</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="mb-4 text-[22px] lg:text-[32px] leading-relaxed"
+                      >
+                        “Second testimonial content goes here. Tweak copy as
+                        needed…”
+                      </p>
+                      <p class="font-medium">ANOTHER PERSON</p>
+                      <p class="text-sm text-gray-600 mb-6">Role – Company</p>
+                    </div>
+                  </div>
+
+                  <div class="flex mt-4 gap-5">
+                    <a
+                      href="#"
+                      class="text-indigo-600 font-medium hover:underline inline-flex gap-2 items-center"
                     >
-                      <path
-                        d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132C1.09575 16.0551 1.0641 16.1049 1.04251 16.1598C1.02091 16.2147 1.0098 16.2736 1.0098 16.333C1.0098 16.3924 1.02091 16.4513 1.04251 16.5062C1.0641 16.5611 1.09575 16.6109 1.13563 16.6528Z"
-                        fill="#4361EE"
-                        stroke="#4361EE"
-                      />
-                    </svg>
-                  </span>
-                </a>
-              </div>
-              <div class="px-[20px] border-l border-[#A3ACB5]">
-                <p class="text-3xl font-[500]">30%</p>
-                <p class="text-sm text-gray-600">Growth in profit margins</p>
-              </div>
-              <div class="px-[20px] border-l border-[#A3ACB5]">
-                <p class="text-3xl font-[500]">40%</p>
-                <p class="text-sm text-gray-600">Faster legal reviews</p>
+                      Read Full Customer Story
+                      <svg
+                        width="8"
+                        height="14"
+                        viewBox="0 0 10 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.13563 16.6528 ... Z"
+                          fill="#4361EE"
+                          stroke="#4361EE"
+                        />
+                      </svg>
+                    </a>
+                    <div class="px-5 border-l border-[#A3ACB5]">
+                      <p class="text-3xl font-medium text-gray-900">25%</p>
+                      <p class="text-sm text-gray-600">Cost reduction</p>
+                    </div>
+                    <div class="px-5 border-l border-[#A3ACB5]">
+                      <p class="text-3xl font-medium text-gray-900">60%</p>
+                      <p class="text-sm text-gray-600">Faster onboarding</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Pagination & nav -->
+            <!-- <div class="testimonial-pagination !relative !mt-6"></div> -->
+            <!-- <div class="flex justify-end gap-3 mt-3">
+              <button
+                class="swiper-button-prev !static !m-0 !w-10 !h-10 rounded-full bg-white/10 hover:bg-white/20"
+              ></button>
+              <button
+                class="swiper-button-next !static !m-0 !w-10 !h-10 rounded-full bg-white/10 hover:bg-white/20"
+              ></button>
+            </div> -->
           </div>
-        </div>
-        <!-- LCard Pane -->
-        <div
-          x-show="active === 'lcard'"
-          x-transition
-          class="bg-[#eaf8fe] rounded-xl p-6 md:p-8"
-        >
-          <p class="text-xl leading-relaxed mb-4 text-[32px]">
-            “The LCard app transformed our communication and workflow. Their
-            team went beyond expectations.”
-          </p>
-          <p class="font-semibold">SARAH LANE</p>
-          <p class="text-sm text-gray-600 mb-6">Founder – LCard</p>
-          <a href="#" class="text-indigo-600 font-medium hover:underline"
-            >Read Full Customer Story →</a
-          >
-        </div>
-
-        <!-- Car-Up Pane -->
-        <div
-          x-show="active === 'carup'"
-          x-transition
-          class="bg-[#fff3d7] rounded-xl p-6 md:p-8"
-        >
-          <p class="text-xl leading-relaxed mb-4 text-[32px]">
-            “Car-Up’s operational speed increased drastically after adopting
-            their app development approach.”
-          </p>
-          <p class="font-semibold">JOHN DOE</p>
-          <p class="text-sm text-gray-600 mb-6">CEO – Car-Up</p>
-          <a href="#" class="text-indigo-600 font-medium hover:underline"
-            >Read Full Customer Story →</a
-          >
-        </div>
-
-        <!-- Whipflip Pane -->
-        <div
-          x-show="active === 'whipflip'"
-          x-transition
-          class="bg-[#f2f1ff] rounded-xl p-6 md:p-8"
-        >
-          <p class="text-xl leading-relaxed mb-4 text-[32px]">
-            “Whipflip saw a 200% increase in user satisfaction. Their UX and dev
-            expertise truly stood out.”
-          </p>
-          <p class="font-semibold">EMILY ROSS</p>
-          <p class="text-sm text-gray-600 mb-6">Owner – Whipflip</p>
-          <a href="#" class="text-indigo-600 font-medium hover:underline"
-            >Read Full Customer Story →</a
-          >
+          <div class="testimonial-pagination !mt-6 absolute"></div>
         </div>
       </div>
     </section>
     <!-- steps -->
-    <section id="steps" class="relative bg-[#000] pt-[100px]">
+    <section id="steps" class="relative bg-[#000] lg:pt-[100px] sm:pt-[0px]">
       <!-- Top progress bar -->
       <div class="py-[30px]">
-        <div class="container">
+        <div class="lg:container w-full px-6">
           <h2
-            class="sechd text-left text-[30px] leading-[48px] mt-[30px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal mb-4"
+            class="sechd text-left text-[30px] leading-[48px] md:mt-[30px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal md:mb-4"
           >
             Our Process
           </h2>
@@ -3401,7 +4340,7 @@
           class="step absolute inset-0 flex items-center justify-center text-white"
         >
           <div class="w-full px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
                   class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
@@ -3422,7 +4361,7 @@
                 </p>
                 <div class="mt-6">
                   <video
-                    class="rounded-[15px] w-full"
+                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
                     autoplay
                     muted
                     loop
@@ -3440,7 +4379,7 @@
         <!-- STEP 02 -->
         <section class="step absolute inset-0 flex items-center justify-center">
           <div class="w-full px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
                   class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
@@ -3461,7 +4400,7 @@
                 </p>
                 <div class="mt-6">
                   <video
-                    class="rounded-[15px] w-full"
+                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
                     autoplay
                     muted
                     loop
@@ -3479,7 +4418,7 @@
         <!-- STEP 03 -->
         <section class="step absolute inset-0 flex items-center justify-center">
           <div class="w-full px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
                   class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
@@ -3500,7 +4439,7 @@
                 </p>
                 <div class="mt-6">
                   <video
-                    class="rounded-[15px] w-full"
+                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
                     autoplay
                     muted
                     loop
@@ -3518,7 +4457,7 @@
         <!-- STEP 04 -->
         <section class="step absolute inset-0 flex items-center justify-center">
           <div class="w-full px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
                   class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
@@ -3539,7 +4478,7 @@
                 </p>
                 <div class="mt-6">
                   <video
-                    class="rounded-[15px] w-full"
+                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
                     autoplay
                     muted
                     loop
@@ -3560,8 +4499,8 @@
       <div class="hero-bg" id="heroBg"></div>
       <div class="hero-bg--prev" id="heroBgPrev"></div>
 
-      <div class="hero-inner h-full w-full text-white">
-        <div class="container">
+      <div class="hero-inner text-white">
+        <div class="lg:container px-[20px]">
           <h2
             class="sechd text-left text-[30px] leading-[48px] mt-[30px] mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal absolute top-[40px] z-[99]"
           >
@@ -3616,7 +4555,7 @@
             <div
               class="swiper-slide"
               tabindex="0"
-              data-bg="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop"
+              data-bg="./img/entertainment.jpg"
               aria-label="Healthcare"
             >
               <div class="relative flex flex-col items-start lg:pl-[15px]">
@@ -3652,7 +4591,7 @@
             <div
               class="swiper-slide"
               tabindex="0"
-              data-bg="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop"
+              data-bg="./img/game-app.jpg"
               aria-label="Healthcare"
             >
               <div class="relative flex flex-col items-start lg:pl-[15px]">
@@ -3688,7 +4627,7 @@
             <div
               class="swiper-slide"
               tabindex="0"
-              data-bg="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop"
+              data-bg="./img/on-demand.jpg"
               aria-label="Healthcare"
             >
               <div class="relative flex flex-col items-start lg:pl-[15px]">
@@ -3724,7 +4663,7 @@
             <div
               class="swiper-slide"
               tabindex="0"
-              data-bg="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop"
+              data-bg="./img/pet-care.jpg"
               aria-label="Healthcare"
             >
               <div class="relative flex flex-col items-start lg:pl-[15px]">
@@ -3760,7 +4699,7 @@
             <div
               class="swiper-slide"
               tabindex="0"
-              data-bg="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop"
+              data-bg="./img/real-estate.jpg"
               aria-label="Healthcare"
             >
               <div class="relative flex flex-col items-start lg:pl-[15px]">
@@ -3796,7 +4735,7 @@
             <div
               class="swiper-slide"
               tabindex="0"
-              data-bg="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop"
+              data-bg="./img/restaurant.jpg"
               aria-label="Healthcare"
             >
               <div class="relative flex flex-col items-start lg:pl-[15px]">
@@ -3860,1194 +4799,6 @@
             </svg>
           </div>
           <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="trusted-partners bg-[#000000] pt-[40px] lg:pt-[80px] lg:pb-7"
-    >
-      <div class="container mx-auto px-4">
-        <!-- Desktop grid (hidden on < md) -->
-        <div
-          class="tp-row tp-desk-show hidden md:flex items-center justify-center flex-wrap gap-4"
-        >
-          <!-- Left column (desktop only ~≥ xl) -->
-          <div class="tpr-left desk-show hidden xl:flex flex-col gap-4">
-            <div class="tp-vid-item w-[210px]">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/whipflip-ceo.jpg"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/whipflip-ceo.jpg"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-
-                    <!-- gradient overlay (replaces ::before) -->
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    <div class="muteunmute absolute top-3 right-3 z-10 hidden">
-                      <img
-                        src="./images/mute.svg"
-                        class="unmute hidden"
-                        alt="unmute button"
-                        loading="lazy"
-                      />
-                      <img
-                        src="./images/unmute.svg"
-                        class="mute hidden"
-                        alt="mute button"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px] mt-3">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/LARRY-SEIBEL-CARUP.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/LARRY-SEIBEL-CARUP.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Middle column -->
-          <div
-            class="tpr-middle flex flex-wrap gap-4 xl:justify-start justify-center"
-          >
-            <div class="tp-vid-item w-[210px]">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/Rob-Salerno-1-1-1.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/Rob-Salerno-1-1-1.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px] mt-5 md:mt-0">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/cris.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/cris.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px]">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/iman.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/iman.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mobile-only duplicates hidden on md+ -->
-            <div class="tp-vid-item w-[210px] mob-show block md:hidden">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/whipflip-ceo.jpg"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/whipflip-ceo.jpg"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px] mob-show block md:hidden">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/LARRY-SEIBEL-CARUP.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/LARRY-SEIBEL-CARUP.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px] mob-show block md:hidden">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/David-Chabukashvili-1-1-1.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/David-Chabukashvili-1-1-1.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px] mob-show block md:hidden">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/rob-evans.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/rob-evans.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right column (desktop only ~≥ xl) -->
-          <div class="tpr-right desk-show hidden xl:flex flex-col gap-4">
-            <div class="tp-vid-item w-[210px]">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/David-Chabukashvili-1-1-1.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/David-Chabukashvili-1-1-1.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tp-vid-item w-[210px] mt-3">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/rob-evans.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/rob-evans.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile carousel container (visible only on < md).
-             Keeping your owl classes; Tailwind provides spacing/typography. -->
-        <div
-          class="tp-mob-slider tp-mob-show owl-carousel owl-theme md:hidden grid grid-cols-1 gap-4 mt-6"
-        >
-          <!-- Slide 1 -->
-          <div class="tp-vid-item">
-            <div class="card_col relative">
-              <div class="video_card overflow-hidden rounded-md h-[250px]">
-                <div class="video_card_inner relative w-full h-full">
-                  <div class="video_poster absolute inset-0 w-full h-full">
-                    <img
-                      src="./images/whipflip-ceo.jpg"
-                      alt="SysIT Client Testimonial"
-                      loading="lazy"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <video
-                    class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                    muted
-                    poster="./images/whipflip-ceo.jpg"
-                    autoplay
-                    loop
-                    playsinline
-                    webkit-playsinline
-                  >
-                    <source src="#" type="video/mp4" />
-                    <source src="#" type="video/webm" />
-                    Your browser does not support HTML5 video.
-                  </video>
-                  <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                  ></div>
-                  <div
-                    class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                  >
-                    <img
-                      src="./images/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="muteunmute absolute top-3 right-3 z-10 hidden">
-                    <img
-                      src="./images/mute.svg"
-                      class="unmute hidden"
-                      alt="unmute button"
-                      loading="lazy"
-                    />
-                    <img
-                      src="./images/unmute.svg"
-                      class="mute hidden"
-                      alt="mute button"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div
-                    class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                  >
-                    <span class="cl-nm">Edgar</span>
-                    <span class="cl-dt text-white/50 text-sm"
-                      >CEO, Street Smart 242</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="tp-vid-item mt-3">
-            <div class="card_col relative">
-              <div class="video_card overflow-hidden rounded-md h-[250px]">
-                <div class="video_card_inner relative w-full h-full">
-                  <div class="video_poster absolute inset-0 w-full h-full">
-                    <img
-                      src="./images/LARRY-SEIBEL-CARUP.webp"
-                      alt="SysIT Client Testimonial"
-                      loading="lazy"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <video
-                    class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                    muted
-                    poster="./images/LARRY-SEIBEL-CARUP.webp"
-                    autoplay
-                    loop
-                    playsinline
-                    webkit-playsinline
-                  >
-                    <source src="#" type="video/mp4" />
-                    <source src="#" type="video/webm" />
-                    Your browser does not support HTML5 video.
-                  </video>
-                  <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                  ></div>
-                  <div
-                    class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                  >
-                    <img
-                      src="./images/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div
-                    class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                  >
-                    <span class="cl-nm">Edgar</span>
-                    <span class="cl-dt text-white/50 text-sm"
-                      >CEO, Street Smart 242</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="tp-vid-item">
-            <div class="tp-vid-item">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/Rob-Salerno-1-1-1.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/Rob-Salerno-1-1-1.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="tp-vid-item mt-5 mob-mt-0">
-            <div class="tp-vid-item">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/cris.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/cris.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="tp-vid-item">
-            <div class="tp-vid-item">
-              <div class="card_col relative">
-                <div class="video_card overflow-hidden rounded-md h-[250px]">
-                  <div class="video_card_inner relative w-full h-full">
-                    <div class="video_poster absolute inset-0 w-full h-full">
-                      <img
-                        src="./images/iman.webp"
-                        alt="SysIT Client Testimonial"
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                    <video
-                      class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                      muted
-                      poster="./images/iman.webp"
-                      autoplay
-                      loop
-                      playsinline
-                      webkit-playsinline
-                    >
-                      <source src="#" type="video/mp4" />
-                      <source src="#" type="video/webm" />
-                      Your browser does not support HTML5 video.
-                    </video>
-                    <div
-                      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                    ></div>
-                    <div
-                      class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                    >
-                      <img
-                        src="./images/video-play.svg"
-                        alt="Play Button"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                    >
-                      <span class="cl-nm">Edgar</span>
-                      <span class="cl-dt text-white/50 text-sm"
-                        >CEO, Street Smart 242</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="tp-vid-item">
-            <div class="card_col relative">
-              <div class="video_card overflow-hidden rounded-md h-[250px]">
-                <div class="video_card_inner relative w-full h-full">
-                  <div class="video_poster absolute inset-0 w-full h-full">
-                    <img
-                      src="./images/David-Chabukashvili-1-1-1.webp"
-                      alt="SysIT Client Testimonial"
-                      loading="lazy"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <video
-                    class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                    muted
-                    poster="./images/David-Chabukashvili-1-1-1.webp"
-                    autoplay
-                    loop
-                    playsinline
-                    webkit-playsinline
-                  >
-                    <source src="#" type="video/mp4" />
-                    <source src="#" type="video/webm" />
-                    Your browser does not support HTML5 video.
-                  </video>
-                  <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                  ></div>
-                  <div
-                    class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                  >
-                    <img
-                      src="./images/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div
-                    class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                  >
-                    <span class="cl-nm">Edgar</span>
-                    <span class="cl-dt text-white/50 text-sm"
-                      >CEO, Street Smart 242</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 7 -->
-          <div class="tp-vid-item mt-3">
-            <div class="card_col relative">
-              <div class="video_card overflow-hidden rounded-md h-[250px]">
-                <div class="video_card_inner relative w-full h-full">
-                  <div class="video_poster absolute inset-0 w-full h-full">
-                    <img
-                      src="./images/rob-evans.webp"
-                      alt="SysIT Client Testimonial"
-                      loading="lazy"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <video
-                    class="card_vid w-full h-full object-cover object-top rounded-lg transition-transform duration-1000"
-                    muted
-                    poster="./images/rob-evans.webp"
-                    autoplay
-                    loop
-                    playsinline
-                    webkit-playsinline
-                  >
-                    <source src="#" type="video/mp4" />
-                    <source src="#" type="video/webm" />
-                    Your browser does not support HTML5 video.
-                  </video>
-                  <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90"
-                  ></div>
-                  <div
-                    class="video_play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-                  >
-                    <img
-                      src="./images/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div
-                    class="video_caption absolute bottom-4 text-white flex flex-col w-full uppercase z-10 items-center"
-                  >
-                    <span class="cl-nm">Edgar</span>
-                    <span class="cl-dt text-white/50 text-sm"
-                      >CEO, Street Smart 242</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom copy -->
-        <div class="tb-bottom text-center flex flex-col gap-4 mt-10 lg:-mt-14">
-          <h2
-            class="text-white text-3xl md:text-4xl font-semibold leading-tight"
-          >
-            <span class="d-block block">Real Words of Our Clients That</span>
-            <span class="d-block block">Reflect Our Expertise</span>
-          </h2>
-          <p class="max-w-[60%] mx-auto p-0 text-white/80">
-            Here are the quotes from our clients from their experiences with the
-            transformations we’ve created in their businesses with GenAI. Our
-            AI-centric solutions have helped them drive change and contribute to
-            business success and growth.
-          </p>
-          <div class="mb-5">
-            <a
-              href="#"
-              class="btn-knowmore inline-flex items-center gap-2 px-5 py-3 rounded-[45px] bg-white text-black font-medium hover:bg-white/90 transition"
-            >
-              Read Success Stories
-              <span>
-                <svg
-                  width="7"
-                  height="11"
-                  viewBox="0 0 7 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                    stroke="#212121"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ai-vision gen-ai-vision bg-[#000] pt-[40px] lg:pt-[80px]">
-      <div class="container mx-auto px-4">
-        <div class="sec-head">
-          <h2
-            class="sechd text-left text-[30px] leading-[48px] mt-[30px] mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal"
-          >
-            Services We Provide to Turn Your
-            <br class="hidden md:inline" />
-            Vision Into a Digital Reality
-          </h2>
-        </div>
-
-        <div
-          class="ai-edge pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5"
-        >
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp1.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Customer <br />
-                  Service Support
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Build an NLP-powered support system with Gen-AI-powered
-                  chatbots for streamlined customer service.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp2.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Complex <br />
-                  Task Automation
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Leverage Gen AI's intelligent capabilities to computerize the
-                  recurring and cumbersome tasks and scale the daily operational
-                  efficiency.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4 -->
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp3.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Adaptation <br />
-                  Efficiency
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Eliminate challenges specific to upscaling and
-                  integration-specific concerns to keep up with the tech-driven
-                  and fast-paced world.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5 -->
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp4.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Demand <br />
-                  Forecasting
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Analyze previous records and current activities to predict
-                  customer and trend-related forecasts to design exceptional
-                  supply and demand plans.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6 -->
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Tailored <br />
-                  Customer Experiences
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Create custom interfaces and interactive user experiences
-                  according to the business requirements and the user
-                  preferences.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 7 -->
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp6.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Optimization of <br />
-                  Complex Design
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Streamline your creative workflows and make optimal solutions
-                  quicker than ever, compared to conventional design methods.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp7.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Optimization of <br />
-                  Complex Design
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Streamline your creative workflows and make optimal solutions
-                  quicker than ever, compared to conventional design methods.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./images/svp8.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[24px]">
-                  Optimization of <br />
-                  Complex Design
-                </h2>
-                <p class="font-normal text-white/70 pt-5">
-                  Streamline your creative workflows and make optimal solutions
-                  quicker than ever, compared to conventional design methods.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -6711,10 +6462,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+
     <script>
       gsap.registerPlugin(ScrollTrigger);
       document.querySelectorAll(".animatedText").forEach((section) => {
@@ -6731,6 +6484,25 @@
           ease: "none",
         });
       });
+    </script>
+    <script>
+      // var swiper = new Swiper(".ctt_testimonials", {
+      // slidesPerView: 1, // <-- exactly one slide visible
+      // spaceBetween: 0,
+      // loop: false,
+      // autoHeight: true, // grows with content
+      // grabCursor: true,
+      // keyboard: { enabled: true },
+      // mousewheel: { forceToAxis: true },
+      // pagination: {
+      //   el: ".testimonial-pagination",
+      //   clickable: true,
+      // },
+      // navigation: {
+      //   nextEl: ".swiper-button-next__tl",
+      //   prevEl: ".swiper-button-prev__tl",
+      // },
+      // });
     </script>
     <script>
       function createContinuousSwiper(selector, reverse = false) {
@@ -6756,78 +6528,6 @@
 
       createContinuousSwiper(".swiper-up", false); // scroll upward
       createContinuousSwiper(".swiper-down", true); // scroll downward
-    </script>
-    <script>
-      const bg = document.getElementById("heroBg");
-      const bgPrev = document.getElementById("heroBgPrev");
-
-      function swapBackground(url) {
-        const currentUrl = bg.style.backgroundImage;
-        console.log(currentUrl);
-
-        if (currentUrl) {
-          bgPrev.style.backgroundImage = currentUrl;
-          bgPrev.style.opacity = 1;
-          void bgPrev.offsetWidth;
-        }
-        bg.style.backgroundImage = `url("${url}")`;
-        requestAnimationFrame(() => {
-          bgPrev.style.opacity = 0;
-        });
-      }
-
-      const swiper = new Swiper("#industriesSwiper", {
-        slidesPerView: 3,
-        spaceBetween: 0,
-        centeredSlides: false,
-        loop: false,
-        dots: false,
-        grabCursor: true,
-        breakpoints: {
-          640: { slidesPerView: 2, spaceBetween: 0 },
-          960: { slidesPerView: 3, spaceBetween: 0 },
-          1280: { slidesPerView: 4, spaceBetween: 0 },
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: { el: ".swiper-pagination", enabled: false },
-        on: {
-          init(sw) {
-            const first = sw.slides[sw.activeIndex];
-            swapBackground(first.dataset.bg);
-          },
-          slideChange(sw) {
-            const active = sw.slides[sw.activeIndex];
-            swapBackground(active.dataset.bg);
-          },
-        },
-      });
-
-      function attachPreviewHandlers(slideEl) {
-        console.log(slideEl, "slideElslideEl");
-
-        const show = () => swapBackground(slideEl.dataset.bg);
-        const reset = () => {
-          const active = swiper.slides[swiper.activeIndex];
-          swapBackground(active.dataset.bg);
-        };
-
-        slideEl.addEventListener("mouseenter", show);
-        slideEl.addEventListener("focus", show);
-        slideEl.addEventListener("mouseleave", reset);
-        slideEl.addEventListener("blur", reset);
-        slideEl.addEventListener("click", () => {
-          swiper.slideTo([...swiper.slides].indexOf(slideEl));
-        });
-      }
-
-      swiper.slides.forEach(attachPreviewHandlers);
-
-      swiper.on("resize", () => {
-        swiper.slides.forEach(attachPreviewHandlers);
-      });
     </script>
     <script>
       (function () {
@@ -7012,33 +6712,273 @@
         end: () => "+=" + steps.length * window.innerHeight,
         pin: true,
         anticipatePin: 1,
-        scrub: false, // <-- key change for fast reverse: not tied to scroll distance
+        scrub: false,
         snap: {
           snapTo: (value) => {
             const seg = 1 / (steps.length - 1);
-            return Math.round(value / seg) * seg; // snap per step
+            return Math.round(value / seg) * seg;
           },
           duration: 0.25,
           ease: "power1.out",
         },
         onUpdate: (self) => {
-          // Decide target step based on progress
           const target = Math.round(self.progress * (steps.length - 1));
           if (target !== current) showStep(target);
         },
         invalidateOnRefresh: true,
       });
 
-      // Initialize progress bar to step 1
       gsap.set(progressEl, {
         scaleX: 1 / steps.length,
         transformOrigin: "left center",
       });
 
-      // Keep measurements + snapping accurate on resize
       const onResize = () => ScrollTrigger.refresh();
       window.addEventListener("resize", onResize);
       window.addEventListener("orientationchange", onResize);
+    </script>
+    <script>
+      $(function () {
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        const $carousel = $(".owl-carousel");
+        console.log("Carousel elements found:", $carousel.length);
+
+        if ($carousel.length > 0) {
+          try {
+            $carousel.owlCarousel({
+              loop: true,
+              margin: 10,
+              nav: true,
+              dots: true,
+              autoplay: false,
+              items: 1,
+              responsive: {
+                0: {
+                  items: 1,
+                },
+                768: {
+                  items: 2,
+                },
+                1024: {
+                  items: 2,
+                },
+              },
+              // navText: [
+              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>',
+              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>',
+              // ],
+              onInitialized: function (event) {
+                console.log(
+                  "Owl Carousel initialized successfully with",
+                  event.item.count,
+                  "items"
+                );
+              },
+              onChanged: function (event) {
+                console.log("Slide changed to:", event.item.index);
+              },
+            });
+
+            console.log("Owl Carousel initialization attempted");
+          } catch (error) {
+            console.error("Error initializing Owl Carousel:", error);
+          }
+        } else {
+          console.error("No .owl-carousel elements found in the DOM");
+          console.log(
+            'Available elements with "owl" class:',
+            $('[class*="owl"]').length
+          );
+        }
+      });
+    </script>
+    <script>
+      // const bg = document.getElementById("heroBg");
+      // const bgPrev = document.getElementById("heroBgPrev");
+
+      // function swapBackground(url) {
+      //   const currentUrl = bg.style.backgroundImage;
+      //   console.log(currentUrl);
+
+      //   if (currentUrl) {
+      //     bgPrev.style.backgroundImage = currentUrl;
+      //     bgPrev.style.opacity = 1;
+      //     void bgPrev.offsetWidth;
+      //   }
+      //   bg.style.backgroundImage = `url("${url}")`;
+      //   requestAnimationFrame(() => {
+      //     bgPrev.style.opacity = 0;
+      //   });
+      // }
+
+      // const swiper = new Swiper("#industriesSwiper", {
+      //   slidesPerView: 3,
+      //   spaceBetween: 0,
+      //   centeredSlides: false,
+      //   loop: false,
+      //   dots: false,
+      //   grabCursor: true,
+      //   breakpoints: {
+      //     640: { slidesPerView: 2, spaceBetween: 0 },
+      //     960: { slidesPerView: 3, spaceBetween: 0 },
+      //     1280: { slidesPerView: 4, spaceBetween: 0 },
+      //   },
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      //   pagination: { el: ".swiper-pagination", enabled: false },
+      //   on: {
+      //     init(sw) {
+      //       const first = sw.slides[sw.activeIndex];
+      //       swapBackground(first.dataset.bg);
+      //     },
+      //     slideChange(sw) {
+      //       const active = sw.slides[sw.activeIndex];
+      //       swapBackground(active.dataset.bg);
+      //     },
+      //   },
+      // });
+
+      // function attachPreviewHandlers(slideEl) {
+      //   console.log(slideEl, "slideElslideEl");
+
+      //   const show = () => swapBackground(slideEl.dataset.bg);
+      //   const reset = () => {
+      //     const active = swiper.slides[swiper.activeIndex];
+      //     swapBackground(active.dataset.bg);
+      //   };
+
+      //   slideEl.addEventListener("mouseenter", show);
+      //   slideEl.addEventListener("focus", show);
+      //   slideEl.addEventListener("mouseleave", reset);
+      //   slideEl.addEventListener("blur", reset);
+      //   slideEl.addEventListener("click", () => {
+      //     swiper.slideTo([...swiper.slides].indexOf(slideEl));
+      //   });
+      // }
+
+      // swiper.slides.forEach(attachPreviewHandlers);
+
+      // swiper.on("resize", () => {
+      //   swiper.slides.forEach(attachPreviewHandlers);
+      // });
+    </script>
+    <script>
+      // ---------- Background swap helpers (unchanged) ----------
+      const bg = document.getElementById("heroBg");
+      const bgPrev = document.getElementById("heroBgPrev");
+
+      function swapBackground(url) {
+        const currentUrl = bg.style.backgroundImage;
+        if (currentUrl) {
+          bgPrev.style.backgroundImage = currentUrl;
+          bgPrev.style.opacity = 1;
+          void bgPrev.offsetWidth; // reflow to apply transition
+        }
+        bg.style.backgroundImage = `url("${url}")`;
+        requestAnimationFrame(() => {
+          bgPrev.style.opacity = 0;
+        });
+      }
+
+      // ---------- TESTIMONIALS SWIPER (1 per view) ----------
+      (() => {
+        const container = document.querySelector("#testimonialsSwiper");
+        if (!container) return;
+
+        const testimonialSwiper = new Swiper(container, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: false,
+          autoHeight: true,
+          grabCursor: true,
+          keyboard: { enabled: true },
+          mousewheel: { forceToAxis: true },
+          pagination: {
+            el: container.querySelector(".ts-pagination"),
+            clickable: true,
+          },
+          navigation: {
+            nextEl: container.querySelector(".ts-next"),
+            prevEl: container.querySelector(".ts-prev"),
+          },
+        });
+      })();
+
+      // ---------- INDUSTRIES SWIPER (background swap) ----------
+      (() => {
+        const container = document.querySelector("#industriesSwiper");
+        if (!container) return;
+
+        const industriesSwiper = new Swiper(container, {
+          slidesPerView: 3,
+          spaceBetween: 0,
+          centeredSlides: false,
+          loop: false,
+          grabCursor: true,
+          breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 0 },
+            960: { slidesPerView: 3, spaceBetween: 0 },
+            1280: { slidesPerView: 4, spaceBetween: 0 },
+          },
+          navigation: {
+            nextEl: container.querySelector(".ind-next"),
+            prevEl: container.querySelector(".ind-prev"),
+          },
+          pagination: {
+            el: container.querySelector(".ind-pagination"),
+            enabled: false,
+          },
+          on: {
+            init(sw) {
+              const first = sw.slides[sw.activeIndex];
+              if (first && first.dataset.bg) swapBackground(first.dataset.bg);
+            },
+            slideChange(sw) {
+              const active = sw.slides[sw.activeIndex];
+              if (active && active.dataset.bg)
+                swapBackground(active.dataset.bg);
+            },
+          },
+        });
+
+        // Hover/keyboard preview handlers
+        function attachPreviewHandlers(slideEl) {
+          const show = () =>
+            slideEl.dataset.bg && swapBackground(slideEl.dataset.bg);
+          const reset = () => {
+            const active =
+              industriesSwiper.slides[industriesSwiper.activeIndex];
+            if (active && active.dataset.bg) swapBackground(active.dataset.bg);
+          };
+
+          slideEl.addEventListener("mouseenter", show);
+          slideEl.addEventListener("focus", show);
+          slideEl.addEventListener("mouseleave", reset);
+          slideEl.addEventListener("blur", reset);
+          slideEl.addEventListener("click", () => {
+            industriesSwiper.slideTo(
+              [...industriesSwiper.slides].indexOf(slideEl)
+            );
+          });
+        }
+
+        industriesSwiper.slides.forEach(attachPreviewHandlers);
+        industriesSwiper.on("resize", () => {
+          industriesSwiper.slides.forEach(attachPreviewHandlers);
+        });
+      })();
     </script>
   </body>
 </html>
