@@ -554,14 +554,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
 .\!container {
   width: 100% !important;
   margin-right: auto !important;
@@ -570,53 +562,61 @@ video {
   padding-left: 1rem !important;
 }
 
-@media (min-width: 600px) {
-  .container {
-    max-width: 600px;
-  }
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 
+@media (min-width: 600px) {
   .\!container {
     max-width: 600px !important;
+  }
+
+  .container {
+    max-width: 600px;
   }
 }
 
 @media (min-width: 728px) {
-  .container {
-    max-width: 728px;
-  }
-
   .\!container {
     max-width: 728px !important;
+  }
+
+  .container {
+    max-width: 728px;
   }
 }
 
 @media (min-width: 984px) {
-  .container {
-    max-width: 984px;
-  }
-
   .\!container {
     max-width: 984px !important;
+  }
+
+  .container {
+    max-width: 984px;
   }
 }
 
 @media (min-width: 1240px) {
-  .container {
-    max-width: 1240px;
-  }
-
   .\!container {
     max-width: 1240px !important;
+  }
+
+  .container {
+    max-width: 1240px;
   }
 }
 
 @media (min-width: 1400px) {
-  .container {
-    max-width: 1400px;
-  }
-
   .\!container {
     max-width: 1400px !important;
+  }
+
+  .container {
+    max-width: 1400px;
   }
 }
 
@@ -723,6 +723,10 @@ video {
 
 .-right-\[5\%\] {
   right: -5%;
+}
+
+.-top-7 {
+  top: -1.75rem;
 }
 
 .-top-\[22\%\] {
@@ -2001,6 +2005,10 @@ video {
   height: 46px;
 }
 
+.h-\[48px\] {
+  height: 48px;
+}
+
 .h-\[50\%\] {
   height: 50%;
 }
@@ -2055,6 +2063,10 @@ video {
 
 .h-\[70px\] {
   height: 70px;
+}
+
+.h-\[74px\] {
+  height: 74px;
 }
 
 .h-\[75\%\] {
@@ -2494,6 +2506,10 @@ video {
   width: 60px;
 }
 
+.w-\[64px\] {
+  width: 64px;
+}
+
 .w-\[65px\] {
   width: 65px;
 }
@@ -2504,6 +2520,10 @@ video {
 
 .w-\[70px\] {
   width: 70px;
+}
+
+.w-\[74px\] {
+  width: 74px;
 }
 
 .w-\[75\%\] {
@@ -2986,6 +3006,18 @@ video {
 
 .rotate-\[-45deg\] {
   --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-50 {
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -6290,6 +6322,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -6478,6 +6515,10 @@ video {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.\!leading-\[50px\] {
+  line-height: 50px !important;
 }
 
 .leading-7 {
@@ -6905,6 +6946,11 @@ video {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(255 93 0 / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(0 31 92 / var(--tw-text-opacity));
 }
 
 .text-slate-300 {
@@ -12235,6 +12281,10 @@ footer ul li {
   height: 2px;
 }
 
+.z-index-1 {
+  z-index: 1;
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -12493,6 +12543,10 @@ footer ul li {
 
 .hover\:bg-black\/80:hover {
   background-color: rgb(0 0 0 / 0.8);
+}
+
+.hover\:bg-black\/90:hover {
+  background-color: rgb(0 0 0 / 0.9);
 }
 
 .hover\:bg-blue-50:hover {
@@ -13322,12 +13376,20 @@ footer ul li {
     height: 200px;
   }
 
+  .md\:h-\[256px\] {
+    height: 256px;
+  }
+
   .md\:h-\[280px\] {
     height: 280px;
   }
 
   .md\:h-\[350px\] {
     height: 350px;
+  }
+
+  .md\:h-\[380px\] {
+    height: 380px;
   }
 
   .md\:h-\[400px\] {
@@ -13352,6 +13414,10 @@ footer ul li {
 
   .md\:h-\[47px\] {
     height: 47px;
+  }
+
+  .md\:h-\[500px\] {
+    height: 500px;
   }
 
   .md\:h-screen {
@@ -13986,6 +14052,11 @@ footer ul li {
     padding-bottom: 0.75rem;
   }
 
+  .md\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
   .md\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
@@ -14043,6 +14114,10 @@ footer ul li {
 
   .md\:pb-4 {
     padding-bottom: 1rem;
+  }
+
+  .md\:pb-40 {
+    padding-bottom: 10rem;
   }
 
   .md\:pb-5 {
@@ -14547,6 +14622,10 @@ footer ul li {
     margin-bottom: 5rem;
   }
 
+  .lg\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .lg\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -14687,8 +14766,16 @@ footer ul li {
     height: 70vh;
   }
 
+  .lg\:h-\[750px\] {
+    height: 750px;
+  }
+
   .lg\:h-\[80vh\] {
     height: 80vh;
+  }
+
+  .lg\:h-\[850px\] {
+    height: 850px;
   }
 
   .lg\:h-\[985px\] {
@@ -14993,6 +15080,10 @@ footer ul li {
     gap: 2.5rem;
   }
 
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
   .lg\:gap-36 {
     gap: 9rem;
   }
@@ -15084,6 +15175,10 @@ footer ul li {
 
   .lg\:p-12 {
     padding: 3rem;
+  }
+
+  .lg\:p-14 {
+    padding: 3.5rem;
   }
 
   .lg\:p-16 {
@@ -15413,8 +15508,18 @@ footer ul li {
     line-height: 2.25rem;
   }
 
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .lg\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
@@ -15889,6 +15994,11 @@ footer ul li {
     padding-right: 10rem;
   }
 
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .xl\:px-\[180px\] {
     padding-left: 180px;
     padding-right: 180px;
@@ -15937,6 +16047,10 @@ footer ul li {
     padding-left: 6rem;
   }
 
+  .xl\:pl-8 {
+    padding-left: 2rem;
+  }
+
   .xl\:pl-\[calc\(\(100vw-1440px\)\/2\)\] {
     padding-left: calc((100vw - 1440px) / 2);
   }
@@ -15947,6 +16061,10 @@ footer ul li {
 
   .xl\:pr-20 {
     padding-right: 5rem;
+  }
+
+  .xl\:pr-8 {
+    padding-right: 2rem;
   }
 
   .xl\:pt-\[20\%\] {
@@ -16009,6 +16127,10 @@ footer ul li {
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:\!leading-\[70px\] {
+    line-height: 70px !important;
   }
 
   .xl\:leading-\[50px\] {
