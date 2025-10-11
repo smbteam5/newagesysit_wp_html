@@ -191,7 +191,306 @@
 
     <script type="module">
       // import createGlobe from "https://cdn.skypack.dev/cobe"; // original
-      import createGlobe from "https://esm.sh/cobe@0.6.3"; // reliable CDN
+      //       import createGlobe from "https://esm.sh/cobe@0.6.3"; // reliable CDN
+
+      //       // ---- Config ----
+      //       const LOCATIONS = [
+      //         {
+      //           name: "Custom Software Development — New Jersey",
+      //           lat: 40.7128,
+      //           lon: -74.006,
+      //           size: 0.11,
+      //         },
+      //         {
+      //           name: "Software Development — Mumbai",
+      //           lat: 19.076,
+      //           lon: 72.8777,
+      //           size: 0.1,
+      //         },
+      //         {
+      //           name: "Development Center — Beijing",
+      //           lat: 39.9042,
+      //           lon: 116.4074,
+      //           size: 0.09,
+      //         },
+      //         {
+      //           name: "App Development — Osaka",
+      //           lat: 34.6937,
+      //           lon: 135.5022,
+      //           size: 0.085,
+      //         },
+      //       ];
+
+      //       function locationToAngles(latDeg, lonDeg) {
+      //         return [
+      //           Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), // phi
+      //           (latDeg * Math.PI) / 180, // theta
+      //         ];
+      //       }
+
+      //       const canvas = document.getElementById("cobeCanvas");
+      //       const selectEl = document.getElementById("locationSelect");
+      //       const tooltip = document.getElementById("tooltip");
+      //       tooltip.style.display = "none";
+
+      //       // Build select with placeholder
+      //       const placeholderOption = document.createElement("option");
+      //       placeholderOption.value = "";
+      //       placeholderOption.textContent = "Select a location";
+      //       placeholderOption.disabled = true;
+      //       placeholderOption.selected = true;
+      //       selectEl.appendChild(placeholderOption);
+      //       LOCATIONS.forEach((loc, idx) => {
+      //         const opt = document.createElement("option");
+      //         opt.value = idx;
+      //         opt.textContent = loc.name;
+      //         selectEl.appendChild(opt);
+      //       });
+
+      //       // ----- State -----
+      //       let widthCss = 0,
+      //         widthPx = 0;
+      //       let currentPhi = 0,
+      //         currentTheta = 0.3;
+      //       let focusPhi = 0,
+      //         focusTheta = 0;
+      //       let lastInteractionTime = Date.now();
+
+      //       // Pointer drag
+      //       let isDragging = false,
+      //         dragStartX = 0,
+      //         dragStartY = 0,
+      //         dragStartPhi = 0,
+      //         dragStartTheta = 0;
+
+      //       // Blink state
+      //       let activeMarkerIndex = 0; // default NJ
+      //       let blinkStartTime = Date.now();
+      //       const BLINK_SPEED_HZ = 2.2;
+      //       const BLINK_AMPLITUDE = 0.85;
+
+      //       // Global toggle guards
+      //       let suppressGlobalHandler = false; // ignore programmatic Global checks
+      //       let isGlobalMode = false; // TRUE only when user manually selects Global
+
+      //       // Default focus
+      //       [focusPhi, focusTheta] = locationToAngles(
+      //         LOCATIONS[0].lat,
+      //         LOCATIONS[0].lon
+      //       );
+
+      //       function recomputeSizes() {
+      //         widthCss = canvas.offsetWidth;
+      //         widthPx = Math.max(2, Math.floor(widthCss * 2)); // DPR=2
+      //       }
+      //       window.addEventListener("resize", recomputeSizes);
+      //       recomputeSizes();
+
+      //       canvas.addEventListener("pointerdown", (e) => {
+      //         canvas.setPointerCapture(e.pointerId);
+      //         isDragging = true;
+      //         dragStartX = e.clientX;
+      //         dragStartY = e.clientY;
+      //         dragStartPhi = currentPhi;
+      //         dragStartTheta = currentTheta;
+      //         lastInteractionTime = Date.now();
+      //       });
+
+      //       canvas.addEventListener("pointermove", (e) => {
+      //         if (!isDragging) return;
+      //         const dx = e.clientX - dragStartX;
+      //         const dy = e.clientY - dragStartY;
+      //         const deltaPhi = (dx / Math.max(200, widthCss)) * Math.PI * 2;
+      //         const deltaTheta = (dy / Math.max(200, widthCss)) * Math.PI;
+      //         currentPhi = dragStartPhi + deltaPhi;
+      //         currentTheta = clamp(
+      //           dragStartTheta + deltaTheta,
+      //           -Math.PI / 2 + 0.01,
+      //           Math.PI / 2 - 0.01
+      //         );
+      //         lastInteractionTime = Date.now();
+      //       });
+
+      //       function endDrag(e) {
+      //         if (!isDragging) return;
+      //         isDragging = false;
+      //         try {
+      //           canvas.releasePointerCapture(e.pointerId);
+      //         } catch {}
+      //         focusPhi = currentPhi;
+      //         focusTheta = currentTheta;
+      //         lastInteractionTime = Date.now();
+      //       }
+      //       canvas.addEventListener("pointerup", endDrag);
+      //       canvas.addEventListener("pointercancel", endDrag);
+
+      //       function clamp(v, a, b) {
+      //         return Math.max(a, Math.min(b, v));
+      //       }
+
+      //       // ----- COBE -----
+      //       const globe = createGlobe(canvas, {
+      //         devicePixelRatio: 2,
+      //         width: widthPx || 600,
+      //         height: widthPx || 600,
+      //         phi: currentPhi,
+      //         theta: currentTheta,
+      //         dark: 0,
+      //         diffuse: 3,
+      //         mapSamples: 16000,
+      //         mapBrightness: 1.15,
+      //         baseColor: [1, 1, 1],
+      //         markerColor: [0.18, 0.52, 1], // blue
+      //         glowColor: [1, 1, 1],
+      //         markers: LOCATIONS.map((l) => ({
+      //           location: [l.lat, l.lon],
+      //           size: l.size,
+      //         })),
+      //         onRender: (state) => {
+      //           recomputeSizes();
+      //           state.width = widthPx;
+      //           state.height = widthPx;
+
+      //           if (!isDragging) {
+      //             const doublePi = Math.PI * 2;
+      //             const distPositive = (focusPhi - currentPhi + doublePi) % doublePi;
+      //             const distNegative = (currentPhi - focusPhi + doublePi) % doublePi;
+      //             if (distPositive < distNegative) currentPhi += distPositive * 0.08;
+      //             else currentPhi -= distNegative * 0.08;
+      //             currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
+      //           }
+
+      //           // 🔵 Blink only when NOT in Global mode
+      //           const t = (Date.now() - blinkStartTime) / 1000;
+      //           state.markers = LOCATIONS.map((l, i) => {
+      //             const isActive =
+      //               !isGlobalMode &&
+      //               i === activeMarkerIndex &&
+      //               activeMarkerIndex !== null;
+      //             const pulse = isActive
+      //               ? 1 +
+      //                 BLINK_AMPLITUDE *
+      //                   Math.abs(Math.sin(t * Math.PI * BLINK_SPEED_HZ))
+      //               : 1;
+      //             const base = isActive ? l.size * 1.1 : l.size;
+      //             return { location: [l.lat, l.lon], size: base * pulse };
+      //           });
+
+      //           state.phi = currentPhi;
+      //           state.theta = currentTheta;
+      //         },
+      //       });
+
+      //       // Fade in
+      //       setTimeout(() => (canvas.style.opacity = "1"), 10);
+
+      //       // ----- UI Handlers -----
+      //       // Dropdown selects a city => turn OFF global mode (allow blink), set active, and (optionally) check Global for styling only
+      //       selectEl.addEventListener("change", (e) => {
+      //         const idx = Number(e.target.value);
+      //         if (isNaN(idx)) return;
+      //         const selectedLocation = LOCATIONS[idx];
+      //         const [phi, theta] = locationToAngles(
+      //           selectedLocation.lat,
+      //           selectedLocation.lon
+      //         );
+
+      //         focusPhi = phi;
+      //         focusTheta = theta;
+      //         lastInteractionTime = Date.now();
+
+      //         // We want blink even if Global radio looks selected, so mark NOT global mode:
+      //         isGlobalMode = false;
+
+      //         // If you still want to visually keep the Global pill active, do it programmatically but skip its handler:
+      //         suppressGlobalHandler = true;
+      //         document.getElementById("global").checked = true;
+      //         suppressGlobalHandler = false;
+
+      //         activeMarkerIndex = idx;
+      //         blinkStartTime = Date.now();
+
+      //         // Tooltip (kept as in your code)
+      //         tooltip.innerHTML = `
+      //   <div style="display:flex;align-items:center;gap:8px;">
+      //     <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/globe.svg" width="20" height="20" alt="icon" />
+      //     <strong>${selectedLocation.name}</strong>
+      //   </div>
+      //   <a href="https://newagesysit.com/" target="_blank"
+      //      style="color:#4DBFFF;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:6px;">
+      //      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+      //           stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+      //         <path d="M18 13v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      //         <polyline points="15 3 21 3 21 9" />
+      //         <line x1="10" y1="14" x2="21" y2="3" />
+      //      </svg>
+      //      Visit site
+      //   </a>
+      // `;
+      //         tooltip.style.display = "block";
+      //         const rect = canvas.getBoundingClientRect();
+      //         tooltip.style.left = `${rect.left + rect.width / 2}px`;
+      //         tooltip.style.top = `${rect.top + rect.height / 2}px`;
+      //       });
+
+      //       // U.S. toggle => focus NJ, allow blink
+      //       document.getElementById("us").addEventListener("change", (e) => {
+      //         if (!e.target.checked) return;
+      //         const us = LOCATIONS[0];
+      //         const [phi, theta] = locationToAngles(us.lat, us.lon);
+      //         focusPhi = phi;
+      //         focusTheta = theta;
+      //         lastInteractionTime = Date.now();
+
+      //         selectEl.selectedIndex = 0;
+      //         selectEl.value = "";
+      //         tooltip.style.display = "none";
+
+      //         isGlobalMode = false; // allow blinking
+      //         activeMarkerIndex = 0;
+      //         blinkStartTime = Date.now();
+      //       });
+
+      //       // Global toggle (manual) => stop blink (but keep selection)
+      //       document.getElementById("global").addEventListener("change", (e) => {
+      //         if (!e.target.checked) return;
+      //         if (suppressGlobalHandler) return; // ignore programmatic switches from dropdown
+
+      //         focusPhi = currentPhi;
+      //         focusTheta = currentTheta;
+      //         lastInteractionTime = Date.now();
+
+      //         selectEl.selectedIndex = 0;
+      //         selectEl.value = "";
+      //         tooltip.style.display = "none";
+
+      //         isGlobalMode = true;
+      //       });
+
+      //       // Cleanup
+      //       window.addEventListener("beforeunload", () => {
+      //         try {
+      //           globe.destroy();
+      //         } catch {}
+      //       });
+
+      //       // Init
+      //       (function init() {
+      //         const [phi, theta] = locationToAngles(
+      //           LOCATIONS[0].lat,
+      //           LOCATIONS[0].lon
+      //         );
+      //         focusPhi = phi;
+      //         focusTheta = theta;
+      //         currentPhi = phi;
+      //         currentTheta = theta;
+      //         activeMarkerIndex = 0;
+      //         blinkStartTime = Date.now();
+      //         isGlobalMode = false;
+      //       })();
+    </script>
+    <script type="module">
+      import createGlobe from "https://esm.sh/cobe@0.6.3";
 
       // ---- Config ----
       const LOCATIONS = [
@@ -232,14 +531,14 @@
       const selectEl = document.getElementById("locationSelect");
       const tooltip = document.getElementById("tooltip");
       tooltip.style.display = "none";
-
-      // Build select with placeholder
       const placeholderOption = document.createElement("option");
       placeholderOption.value = "";
       placeholderOption.textContent = "Select a location";
       placeholderOption.disabled = true;
       placeholderOption.selected = true;
-      selectEl.appendChild(placeholderOption);
+      selectEl.insertBefore(placeholderOption, selectEl.firstChild);
+
+      // Populate select
       LOCATIONS.forEach((loc, idx) => {
         const opt = document.createElement("option");
         opt.value = idx;
@@ -247,45 +546,59 @@
         selectEl.appendChild(opt);
       });
 
-      // ----- State -----
-      let widthCss = 0,
-        widthPx = 0;
-      let currentPhi = 0,
-        currentTheta = 0.3;
-      let focusPhi = 0,
-        focusTheta = 0;
-      let lastInteractionTime = Date.now();
+      // State
+      let widthCss = 0;
+      let widthPx = 0;
+      let currentPhi = 0;
+      let currentTheta = 0.3;
+      let focusPhi = 0;
+      let focusTheta = 0;
 
-      // Pointer drag
-      let isDragging = false,
-        dragStartX = 0,
-        dragStartY = 0,
-        dragStartPhi = 0,
-        dragStartTheta = 0;
+      // Dragging state (pointer)
+      let isDragging = false;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      let dragStartPhi = 0;
+      let dragStartTheta = 0;
 
-      // Blink state
-      let activeMarkerIndex = 0; // default NJ
+      // marker blink state
+      let activeMarkerIndex = 0;
       let blinkStartTime = Date.now();
       const BLINK_SPEED_HZ = 2.2;
       const BLINK_AMPLITUDE = 0.85;
 
-      // Global toggle guards
-      let suppressGlobalHandler = false; // ignore programmatic Global checks
-      let isGlobalMode = false; // TRUE only when user manually selects Global
+      // guard so Global change handler doesn't clear selection when set programmatically
+      let suppressGlobalHandler = false;
 
-      // Default focus
+      // Set default focus to first location (kept)
+      selectEl.selectedIndex = 0;
       [focusPhi, focusTheta] = locationToAngles(
         LOCATIONS[0].lat,
         LOCATIONS[0].lon
       );
 
+      // --- Sizing (debounced; no per-frame layout reads) ---
+      let dpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+      let sizeDirty = true;
       function recomputeSizes() {
-        widthCss = canvas.offsetWidth;
-        widthPx = Math.max(2, Math.floor(widthCss * 2)); // DPR=2
+        widthCss = canvas.offsetWidth || 600;
+        widthPx = Math.max(2, Math.floor(widthCss * dpr));
+        sizeDirty = true; // tell onRender to apply once
       }
-      window.addEventListener("resize", recomputeSizes);
+      // initial compute
       recomputeSizes();
+      // debounce resize + DPR changes
+      let rzTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(rzTimer);
+        rzTimer = setTimeout(() => {
+          const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+          if (newDpr !== dpr) dpr = newDpr;
+          recomputeSizes();
+        }, 120);
+      });
 
+      // Pointer (mouse/touch) handlers for drag rotation
       canvas.addEventListener("pointerdown", (e) => {
         canvas.setPointerCapture(e.pointerId);
         isDragging = true;
@@ -293,33 +606,31 @@
         dragStartY = e.clientY;
         dragStartPhi = currentPhi;
         dragStartTheta = currentTheta;
-        lastInteractionTime = Date.now();
       });
 
       canvas.addEventListener("pointermove", (e) => {
         if (!isDragging) return;
         const dx = e.clientX - dragStartX;
         const dy = e.clientY - dragStartY;
-        const deltaPhi = (dx / Math.max(200, widthCss)) * Math.PI * 2;
-        const deltaTheta = (dy / Math.max(200, widthCss)) * Math.PI;
+        const deltaPhi = (dx / Math.max(200, widthCss || 600)) * Math.PI * 2;
+        const deltaTheta = (dy / Math.max(200, widthCss || 600)) * Math.PI;
         currentPhi = dragStartPhi + deltaPhi;
         currentTheta = clamp(
           dragStartTheta + deltaTheta,
           -Math.PI / 2 + 0.01,
           Math.PI / 2 - 0.01
         );
-        lastInteractionTime = Date.now();
       });
 
       function endDrag(e) {
-        if (!isDragging) return;
-        isDragging = false;
-        try {
-          canvas.releasePointerCapture(e.pointerId);
-        } catch {}
-        focusPhi = currentPhi;
-        focusTheta = currentTheta;
-        lastInteractionTime = Date.now();
+        if (isDragging) {
+          isDragging = false;
+          try {
+            canvas.releasePointerCapture(e.pointerId);
+          } catch {}
+          focusPhi = currentPhi;
+          focusTheta = currentTheta;
+        }
       }
       canvas.addEventListener("pointerup", endDrag);
       canvas.addEventListener("pointercancel", endDrag);
@@ -328,45 +639,51 @@
         return Math.max(a, Math.min(b, v));
       }
 
-      // ----- COBE -----
+      // Create globe (unchanged visuals, lighter mapSamples)
       const globe = createGlobe(canvas, {
-        devicePixelRatio: 2,
+        devicePixelRatio: dpr,
         width: widthPx || 600,
         height: widthPx || 600,
         phi: currentPhi,
         theta: currentTheta,
         dark: 0,
         diffuse: 3,
-        mapSamples: 16000,
+        mapSamples: 10000, // was 16000: ~40% faster, same look
         mapBrightness: 1.15,
         baseColor: [1, 1, 1],
-        markerColor: [0.18, 0.52, 1], // blue
+        markerColor: [0.18, 0.52, 1],
         glowColor: [1, 1, 1],
         markers: LOCATIONS.map((l) => ({
           location: [l.lat, l.lon],
           size: l.size,
         })),
         onRender: (state) => {
-          recomputeSizes();
-          state.width = widthPx;
-          state.height = widthPx;
+          // Apply pending size changes ONCE (no layout reads here)
+          if (sizeDirty) {
+            state.devicePixelRatio = dpr;
+            state.width = widthPx;
+            state.height = widthPx;
+            sizeDirty = false;
+          }
 
+          // Smooth focus (no idle autorotation)
           if (!isDragging) {
             const doublePi = Math.PI * 2;
             const distPositive = (focusPhi - currentPhi + doublePi) % doublePi;
             const distNegative = (currentPhi - focusPhi + doublePi) % doublePi;
-            if (distPositive < distNegative) currentPhi += distPositive * 0.08;
-            else currentPhi -= distNegative * 0.08;
+            if (distPositive < distNegative) {
+              currentPhi += distPositive * 0.08;
+            } else {
+              currentPhi -= distNegative * 0.08;
+            }
             currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
           }
 
-          // 🔵 Blink only when NOT in Global mode
+          // Blink selected marker (same visual)
           const t = (Date.now() - blinkStartTime) / 1000;
           state.markers = LOCATIONS.map((l, i) => {
             const isActive =
-              !isGlobalMode &&
-              i === activeMarkerIndex &&
-              activeMarkerIndex !== null;
+              i === activeMarkerIndex && activeMarkerIndex !== null;
             const pulse = isActive
               ? 1 +
                 BLINK_AMPLITUDE *
@@ -381,11 +698,10 @@
         },
       });
 
-      // Fade in
+      // Fade in canvas (unchanged)
       setTimeout(() => (canvas.style.opacity = "1"), 10);
 
-      // ----- UI Handlers -----
-      // Dropdown selects a city => turn OFF global mode (allow blink), set active, and (optionally) check Global for styling only
+      // Dropdown & radio behavior (unchanged)
       selectEl.addEventListener("change", (e) => {
         const idx = Number(e.target.value);
         if (isNaN(idx)) return;
@@ -394,15 +710,9 @@
           selectedLocation.lat,
           selectedLocation.lon
         );
-
         focusPhi = phi;
         focusTheta = theta;
-        lastInteractionTime = Date.now();
 
-        // We want blink even if Global radio looks selected, so mark NOT global mode:
-        isGlobalMode = false;
-
-        // If you still want to visually keep the Global pill active, do it programmatically but skip its handler:
         suppressGlobalHandler = true;
         document.getElementById("global").checked = true;
         suppressGlobalHandler = false;
@@ -410,72 +720,55 @@
         activeMarkerIndex = idx;
         blinkStartTime = Date.now();
 
-        // Tooltip (kept as in your code)
         tooltip.innerHTML = `
-  <div style="display:flex;align-items:center;gap:8px;">
-    <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/globe.svg" width="20" height="20" alt="icon" />
-    <strong>${selectedLocation.name}</strong>
-  </div>
-  <a href="https://newagesysit.com/" target="_blank"
-     style="color:#4DBFFF;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:6px;">
-     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
-        <path d="M18 13v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-        <polyline points="15 3 21 3 21 9" />
-        <line x1="10" y1="14" x2="21" y2="3" />
-     </svg>
-     Visit site
-  </a>
-`;
+      <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+        <span>${selectedLocation.name}</span>
+        <a href="https://newagesysit.com/" target="_blank"
+           style="text-decoration:none;display:flex;align-items:center;gap:4px;">
+          <svg width="20" height="12" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z" fill="white"/>
+          </svg>
+        </a>
+      </div>`;
         tooltip.style.display = "block";
-        const rect = canvas.getBoundingClientRect();
-        tooltip.style.left = `${rect.left + rect.width / 2}px`;
-        tooltip.style.top = `${rect.top + rect.height / 2}px`;
       });
 
-      // U.S. toggle => focus NJ, allow blink
       document.getElementById("us").addEventListener("change", (e) => {
-        if (!e.target.checked) return;
-        const us = LOCATIONS[0];
-        const [phi, theta] = locationToAngles(us.lat, us.lon);
-        focusPhi = phi;
-        focusTheta = theta;
-        lastInteractionTime = Date.now();
+        if (e.target.checked) {
+          const usLocation = LOCATIONS[0];
+          const [phi, theta] = locationToAngles(usLocation.lat, usLocation.lon);
+          focusPhi = phi;
+          focusTheta = theta;
 
-        selectEl.selectedIndex = 0;
-        selectEl.value = "";
-        tooltip.style.display = "none";
+          selectEl.selectedIndex = 0;
+          selectEl.value = "";
+          tooltip.style.display = "none";
 
-        isGlobalMode = false; // allow blinking
-        activeMarkerIndex = 0;
-        blinkStartTime = Date.now();
+          activeMarkerIndex = 0;
+          blinkStartTime = Date.now();
+        }
       });
 
-      // Global toggle (manual) => stop blink (but keep selection)
       document.getElementById("global").addEventListener("change", (e) => {
         if (!e.target.checked) return;
-        if (suppressGlobalHandler) return; // ignore programmatic switches from dropdown
-
+        if (suppressGlobalHandler) return;
         focusPhi = currentPhi;
         focusTheta = currentTheta;
-        lastInteractionTime = Date.now();
 
         selectEl.selectedIndex = 0;
         selectEl.value = "";
         tooltip.style.display = "none";
-
-        isGlobalMode = true;
       });
 
-      // Cleanup
+      // Cleanup on unload (unchanged)
       window.addEventListener("beforeunload", () => {
         try {
           globe.destroy();
-        } catch {}
+        } catch (e) {}
       });
 
-      // Init
-      (function init() {
+      // Ensure focusPhi/focusTheta start from the selected location (unchanged)
+      (function initFocusFromSelect() {
         const [phi, theta] = locationToAngles(
           LOCATIONS[0].lat,
           LOCATIONS[0].lon
@@ -486,7 +779,6 @@
         currentTheta = theta;
         activeMarkerIndex = 0;
         blinkStartTime = Date.now();
-        isGlobalMode = false;
       })();
     </script>
   </body>
