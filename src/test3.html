@@ -2,309 +2,453 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,viewport-fit=cover"
-    />
-    <title>Pinned Steps – Fast Reverse, No Overlap</title>
-
-    <!-- Tailwind (CDN for demo). In your app, use your build -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>COBE Globe — dropdown, idle rotate, drag</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
-      html,
-      body {
-        margin: 0;
+      :root {
+        --max-width: 720px;
+      }
+      .map-view .card {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 1rem;
+      }
+      .map-view #globeWrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        border-radius: 14px;
+        overflow: hidden;
+        touch-action: none;
+      }
+      .map-view canvas {
+        width: 100%;
         height: 100%;
-        background: #0b1020;
+        display: block;
+        opacity: 0;
+        transition: opacity 600ms ease;
+        background: transparent;
+        cursor: grab;
       }
-      #progress {
-        background: #22d3ee;
-      } /* teal-400 */
-      .step {
-        will-change: transform, opacity;
+      .map-view canvas:active {
+        cursor: grabbing;
       }
-      .pe-none {
-        pointer-events: none;
+      .map-view .controls {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 0.8rem 0;
+        flex-wrap: wrap;
+        user-select: none;
+        background-color: #fff;
+      }
+      .map-view select,
+      .map-view button {
+        height: inherit;
+        appearance: none;
+        -webkit-appearance: none;
+        font-size: 14px;
+        padding: 6px 14px !important;
+        border-radius: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: rgba(0, 0, 0, 0.03);
+        cursor: pointer;
+      }
+      .map-view select {
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000000'%20viewBox='0%200%2030.727%2030.727'%3E%3Cpath%20d='M29.994%2C10.183L15.363%2C24.812L0.733%2C10.184c-0.977-0.978-0.977-2.561%2C0-3.536c0.977-0.977%2C2.559-0.976%2C3.536%2C0%20%20%20%20l11.095%2C11.093L26.461%2C6.647c0.977-0.976%2C2.559-0.976%2C3.535%2C0C30.971%2C7.624%2C30.971%2C9.206%2C29.994%2C10.183z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em;
+        padding-right: 2.5em;
+      }
+      .map-view .small {
+        font-size: 13px;
+        padding: 6px 8px;
+      }
+      @media (max-width: 420px) {
+        .map-view .controls {
+          gap: 0.4rem;
+          padding: 0.6rem 0;
+        }
+        .map-view select,
+        .map-view button {
+          padding: 6px 8px;
+          font-size: 13px;
+        }
+      }
+      .map-view .toggle-wrapper {
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        overflow: hidden;
+        border: 4px solid black;
+        width: 285px;
+        font-family: sans-serif;
+        background-color: #000;
+      }
+      .map-view input[type="radio"] {
+        display: none;
+      }
+      .map-view .toggle-label {
+        flex: 1;
+        text-align: center;
+        padding: 12px 0;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .map-view .us-label {
+        background: white;
+        color: black;
+        border-radius: 45px;
+      }
+      .map-view .global-label {
+        background: black;
+        color: gray;
+      }
+      .map-view #global:checked ~ .toggle-wrapper .us-label {
+        background: black;
+        color: gray;
+      }
+      .map-view #global:checked ~ .toggle-wrapper .global-label {
+        background: white;
+        color: black;
+        border-radius: 45px;
+      }
+      .map-view #us:checked ~ .toggle-wrapper .us-label {
+        background: white;
+        color: black;
+      }
+      .map-view #us:checked ~ .toggle-wrapper .global-label {
+        background: black;
+        color: gray;
       }
     </style>
   </head>
-  <body class="text-white antialiased">
-    <!-- Spacer before (demo only) -->
-    <div class="h-[120vh] flex items-center justify-center opacity-60">
-      <p class="text-lg md:text-xl">Scroll down to the steps…</p>
-    </div>
-
-    <!-- =================== PINNED STEPS =================== -->
-    <section id="steps" class="relative h-screen">
-      <!-- Top progress bar -->
-      <div class="fixed left-0 top-0 w-screen h-1 bg-white/10 z-[60]">
-        <div id="progress" class="h-full origin-left scale-x-0"></div>
-      </div>
-
-      <!-- Stage: stacked full-viewport steps -->
-      <div class="relative h-full">
-        <!-- STEP 01 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full max-w-6xl px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4"
-                  >STEP 01</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4"
-                >
-                  Plan
-                </h2>
-              </div>
-              <div>
-                <p class="text-[20px] md:text-[28px] leading-normal opacity-90">
-                  Requirements brief, backlog prioritization, roadmap,
-                  high-level architecture, and estimates.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/tw1.mp4" type="video/mp4" />
-                    <source src="./video/tw1.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
+  <body>
+    <section class="map-view">
+      <div class="card">
+        <div class="controls" style="margin-top: 0.6rem">
+          <div>
+            <input type="radio" name="toggle" id="us" checked />
+            <input type="radio" name="toggle" id="global" />
+            <div class="toggle-wrapper">
+              <label for="us" class="toggle-label us-label"
+                >U.S. locations</label
+              >
+              <label for="global" class="toggle-label global-label"
+                >Global Map</label
+              >
             </div>
           </div>
-        </section>
+          <select id="locationSelect" class="small"></select>
+        </div>
 
-        <!-- STEP 02 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full max-w-6xl px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4"
-                  >STEP 02</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4"
-                >
-                  Design
-                </h2>
-              </div>
-              <div>
-                <p class="text-[20px] md:text-[28px] leading-normal opacity-90">
-                  Wireframes, UX flows, design system, and prototype validation.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/tw2.mp4" type="video/mp4" />
-                    <source src="./video/tw2.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div
+          id="tooltip"
+          style="
+            position: absolute;
+            padding: 12px 14px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 999;
+            left: 384px;
+            display: none;
+            top: 50% !important;
+            right: 0;
+            width: 300px;
+          "
+        ></div>
 
-        <!-- STEP 03 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full max-w-6xl px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4"
-                  >STEP 03</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4"
-                >
-                  Build
-                </h2>
-              </div>
-              <div>
-                <p class="text-[20px] md:text-[28px] leading-normal opacity-90">
-                  Iterative development, CI/CD, automated testing, and feature
-                  flags.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/tw3.mp4" type="video/mp4" />
-                    <source src="./video/tw3.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 04 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full max-w-6xl px-6 md:px-10">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4"
-                  >STEP 04</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4"
-                >
-                  Launch
-                </h2>
-              </div>
-              <div>
-                <p class="text-[20px] md:text-[28px] leading-normal opacity-90">
-                  Release readiness, monitoring, SLOs, and continuous
-                  optimization.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/tw4.mp4" type="video/mp4" />
-                    <source src="./video/tw4.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div id="globeWrap">
+          <canvas id="cobeCanvas"></canvas>
+        </div>
       </div>
     </section>
-    <!-- ===================================================== -->
 
-    <!-- Spacer after (demo only) -->
-    <div class="h-[140vh]"></div>
+    <script type="module">
+      import createGlobe from "https://cdn.skypack.dev/cobe";
 
-    <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
+      // ---- Locations ----
+      const LOCATIONS = [
+        {
+          name: "Custom Software Development — New Jersey",
+          lat: 40.7128,
+          lon: -74.006,
+          size: 0.11,
+        },
+        {
+          name: "Software Development — Mumbai",
+          lat: 19.076,
+          lon: 72.8777,
+          size: 0.1,
+        },
+        {
+          name: "Development Center — Beijing",
+          lat: 39.9042,
+          lon: 116.4074,
+          size: 0.09,
+        },
+        {
+          name: "App Development — Osaka",
+          lat: 34.6937,
+          lon: 135.5022,
+          size: 0.085,
+        },
+      ];
 
-      const container = document.querySelector("#steps");
-      const steps = gsap.utils.toArray("#steps .step");
-      const progressEl = document.querySelector("#progress");
+      // Lat/Lon -> COBE angles
+      function locationToAngles(latDeg, lonDeg) {
+        return [
+          Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), // phi
+          (latDeg * Math.PI) / 180, // theta
+        ];
+      }
 
-      // --- Setup: first visible, rest hidden below ---
-      steps.forEach((el, i) => {
-        gsap.set(el, {
-          autoAlpha: i === 0 ? 1 : 0,
-          y: i === 0 ? 0 : 40, // hidden steps sit slightly down
-          zIndex: steps.length - i,
-        });
-        if (i !== 0) el.classList.add("pe-none");
+      const canvas = document.getElementById("cobeCanvas");
+      const selectEl = document.getElementById("locationSelect");
+      const tooltip = document.getElementById("tooltip");
+
+      // Build dropdown (with placeholder)
+      const ph = document.createElement("option");
+      ph.value = "";
+      ph.textContent = "Select a location";
+      ph.disabled = true;
+      ph.selected = true;
+      selectEl.appendChild(ph);
+      LOCATIONS.forEach((loc, idx) => {
+        const opt = document.createElement("option");
+        opt.value = idx;
+        opt.textContent = loc.name;
+        selectEl.appendChild(opt);
       });
 
-      let current = 0; // active step index
-      const D_OUT = 0.25; // out duration
-      const D_IN = 0.35; // in duration
+      // ---------- State ----------
+      let widthCss = 0,
+        widthPx = 0;
+      let currentPhi = 0,
+        currentTheta = 0.3;
+      let focusPhi = 0,
+        focusTheta = 0;
+      let lastInteractionTime = Date.now();
 
-      const showStep = (nextIdx) => {
-        if (nextIdx === current || nextIdx < 0 || nextIdx >= steps.length)
-          return;
+      // Drag state
+      let isDragging = false,
+        dragStartX = 0,
+        dragStartY = 0,
+        dragStartPhi = 0,
+        dragStartTheta = 0;
 
-        const prev = steps[current];
-        const next = steps[nextIdx];
+      // Marker state
+      let activeMarkerIndex = 0; // default: NJ selected
+      let blinkStartTime = Date.now();
+      const BLINK_SPEED_HZ = 2.2; // pulses/sec
+      const BLINK_AMPLITUDE = 0.85; // 0..1
 
-        // Kill any running tweens on these elements to avoid backlog on fast back-scroll
-        gsap.killTweensOf([prev, next]);
+      // Prevent the Global handler from clearing active marker when we check it programmatically
+      let suppressGlobalHandler = false;
 
-        // Fully hide previous first (no overlap)
-        gsap.to(prev, {
-          autoAlpha: 0,
-          y: -40,
-          duration: D_OUT,
-          ease: "power2.out",
-          overwrite: "auto",
-          onComplete: () => {
-            prev.classList.add("pe-none");
-            gsap.set(prev, { zIndex: steps.length - nextIdx - 1 });
-          },
-        });
+      // Default focus: first location
+      [focusPhi, focusTheta] = locationToAngles(
+        LOCATIONS[0].lat,
+        LOCATIONS[0].lon
+      );
 
-        // Then show the next
-        gsap.fromTo(
-          next,
-          { autoAlpha: 0, y: 40 },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: D_IN,
-            ease: "power2.out",
-            overwrite: "auto",
-            onStart: () => {
-              next.classList.remove("pe-none");
-              gsap.set(next, { zIndex: steps.length + 10 }); // ensure on top during transition
-            },
-            onComplete: () => {
-              gsap.set(next, { zIndex: steps.length - nextIdx });
-            },
-          }
+      // Responsive sizing
+      function recomputeSizes() {
+        widthCss = canvas.offsetWidth;
+        widthPx = Math.max(2, Math.floor(widthCss * 2)); // DPR=2
+      }
+      window.addEventListener("resize", recomputeSizes);
+      recomputeSizes();
+
+      // Pointer drag
+      canvas.addEventListener("pointerdown", (e) => {
+        canvas.setPointerCapture(e.pointerId);
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        dragStartPhi = currentPhi;
+        dragStartTheta = currentTheta;
+        lastInteractionTime = Date.now();
+      });
+
+      canvas.addEventListener("pointermove", (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - dragStartX;
+        const dy = e.clientY - dragStartY;
+        const deltaPhi = (dx / Math.max(200, widthCss)) * Math.PI * 2; // full width ≈ 2π
+        const deltaTheta = (dy / Math.max(200, widthCss)) * Math.PI; // vertical maps to ±π/2
+        currentPhi = dragStartPhi + deltaPhi;
+        currentTheta = clamp(
+          dragStartTheta + deltaTheta,
+          -Math.PI / 2 + 0.01,
+          Math.PI / 2 - 0.01
         );
-
-        current = nextIdx;
-
-        // Progress bar jumps to the active step fraction
-        const discrete = (current + 1) / steps.length;
-        gsap.to(progressEl, { scaleX: discrete, duration: 0.2, ease: "none" });
-      };
-
-      // --- Pin the whole section; no scrub so transitions are time-based in both directions ---
-      const pinST = ScrollTrigger.create({
-        id: "steps-pin",
-        trigger: container,
-        start: "top top",
-        end: () => "+=" + steps.length * window.innerHeight,
-        pin: true,
-        anticipatePin: 1,
-        scrub: false, // <-- key change for fast reverse: not tied to scroll distance
-        snap: {
-          snapTo: (value) => {
-            const seg = 1 / (steps.length - 1);
-            return Math.round(value / seg) * seg; // snap per step
-          },
-          duration: 0.25,
-          ease: "power1.out",
-        },
-        onUpdate: (self) => {
-          // Decide target step based on progress
-          const target = Math.round(self.progress * (steps.length - 1));
-          if (target !== current) showStep(target);
-        },
-        invalidateOnRefresh: true,
+        lastInteractionTime = Date.now();
       });
 
-      // Initialize progress bar to step 1
-      gsap.set(progressEl, {
-        scaleX: 1 / steps.length,
-        transformOrigin: "left center",
+      function endDrag(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        try {
+          canvas.releasePointerCapture(e.pointerId);
+        } catch {}
+        focusPhi = currentPhi;
+        focusTheta = currentTheta;
+        lastInteractionTime = Date.now();
+      }
+      canvas.addEventListener("pointerup", endDrag);
+      canvas.addEventListener("pointercancel", endDrag);
+
+      function clamp(v, a, b) {
+        return Math.max(a, Math.min(b, v));
+      }
+
+      // ------ COBE globe ------
+      const globe = createGlobe(canvas, {
+        devicePixelRatio: 2,
+        width: widthPx || 600,
+        height: widthPx || 600,
+        phi: currentPhi,
+        theta: currentTheta,
+        dark: 0,
+        diffuse: 3,
+        mapSamples: 16000,
+        mapBrightness: 1.15,
+        baseColor: [1, 1, 1], // white globe
+        markerColor: [0.18, 0.52, 1], // BLUE markers
+        glowColor: [1, 1, 1],
+        markers: LOCATIONS.map((l) => ({
+          location: [l.lat, l.lon],
+          size: l.size,
+        })),
+        onRender: (state) => {
+          // Keep canvas crisp on resize
+          recomputeSizes();
+          state.width = widthPx;
+          state.height = widthPx;
+
+          // Smooth focus easing
+          if (!isDragging) {
+            const TWO_PI = Math.PI * 2;
+            const forward = (focusPhi - currentPhi + TWO_PI) % TWO_PI;
+            const backward = (currentPhi - focusPhi + TWO_PI) % TWO_PI;
+            if (forward < backward) currentPhi += forward * 0.08;
+            else currentPhi -= backward * 0.08;
+            currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
+          }
+
+          // Rebuild markers each frame for pulsing active one
+          const t = (Date.now() - blinkStartTime) / 1000;
+          state.markers = LOCATIONS.map((l, i) => {
+            const isActive =
+              i === activeMarkerIndex && activeMarkerIndex !== null;
+            const pulse = isActive
+              ? 1 +
+                BLINK_AMPLITUDE *
+                  Math.abs(Math.sin(t * Math.PI * BLINK_SPEED_HZ))
+              : 1;
+            const base = isActive ? l.size * 1.1 : l.size; // +10% base so it's obvious even at pulse trough
+            return { location: [l.lat, l.lon], size: base * pulse };
+          });
+
+          state.phi = currentPhi;
+          state.theta = currentTheta;
+        },
       });
 
-      // Keep measurements + snapping accurate on resize
-      const onResize = () => ScrollTrigger.refresh();
-      window.addEventListener("resize", onResize);
-      window.addEventListener("orientationchange", onResize);
+      // Fade-in
+      setTimeout(() => (canvas.style.opacity = "1"), 10);
+
+      // Dropdown select -> focus & blink that marker
+      selectEl.addEventListener("change", (e) => {
+        const idx = Number(e.target.value);
+        if (Number.isNaN(idx)) return;
+
+        const selected = LOCATIONS[idx];
+        const [phi, theta] = locationToAngles(selected.lat, selected.lon);
+        focusPhi = phi;
+        focusTheta = theta;
+        lastInteractionTime = Date.now();
+
+        // Programmatically switch to Global but don't trigger its clear behavior
+        suppressGlobalHandler = true;
+        document.getElementById("global").checked = true;
+        suppressGlobalHandler = false;
+
+        // Blink this marker
+        activeMarkerIndex = idx;
+        blinkStartTime = Date.now();
+
+        // Tooltip
+        tooltip.textContent = selected.name;
+        tooltip.style.display = "block";
+        const rect = canvas.getBoundingClientRect();
+        tooltip.style.left = `${rect.left + rect.width / 2}px`;
+        tooltip.style.top = `${rect.top + rect.height / 2}px`;
+      });
+
+      // Radio: U.S. (index 0)
+      document.getElementById("us").addEventListener("change", (e) => {
+        if (!e.target.checked) return;
+        const us = LOCATIONS[0];
+        const [phi, theta] = locationToAngles(us.lat, us.lon);
+        focusPhi = phi;
+        focusTheta = theta;
+        lastInteractionTime = Date.now();
+
+        // reset dropdown UI (keep placeholder visible)
+        selectEl.selectedIndex = 0;
+
+        // Blink NJ marker
+        activeMarkerIndex = 0;
+        blinkStartTime = Date.now();
+
+        tooltip.style.display = "none";
+      });
+
+      // Radio: Global (do NOT clear active marker when switched programmatically)
+      document.getElementById("global").addEventListener("change", (e) => {
+        if (!e.target.checked) return;
+        if (suppressGlobalHandler) return; // ignore programmatic switch
+
+        // Keep current orientation; keep blinking as-is
+        focusPhi = currentPhi;
+        focusTheta = currentTheta;
+        lastInteractionTime = Date.now();
+
+        // Clear dropdown UI only
+        selectEl.selectedIndex = 0;
+        tooltip.style.display = "none";
+      });
+
+      // Cleanup
+      window.addEventListener("beforeunload", () => {
+        try {
+          globe.destroy();
+        } catch {}
+      });
+
+      // Initialize angles + blink to match defaults
+      (function init() {
+        const [phi, theta] = locationToAngles(
+          LOCATIONS[0].lat,
+          LOCATIONS[0].lon
+        );
+        focusPhi = phi;
+        focusTheta = theta;
+        currentPhi = phi;
+        currentTheta = theta;
+        activeMarkerIndex = 0;
+        blinkStartTime = Date.now();
+      })();
     </script>
   </body>
 </html>
