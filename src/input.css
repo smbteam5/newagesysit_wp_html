@@ -3593,6 +3593,7 @@ html {
 }
 
 .hero-inner {
+  width: 100vw;
   max-width: 100%;
   height: 100%;
   margin: 0;
@@ -3685,7 +3686,7 @@ html {
 }
 @media (max-width: 992px) {
   .hidden-area {
-    height: 150px !important;
+    height: 150px;
   }
 }
 .swiper-slide.swiper-slide-active .hidden-area {
@@ -3743,7 +3744,12 @@ html {
   gap: 10px;
 }
 .vertical-sliders .swiper {
-  height: 600px;
+  padding-top: 20px;
+}
+@media (min-width: 992px) {
+  .vertical-sliders .swiper {
+    height: 600px;
+  }
 }
 .vertical-sliders .swiper-slide {
   display: flex;
@@ -3793,25 +3799,18 @@ footer ul li {
 .gradient-border-ppc > .inner1 {
   border-radius: 58px;
   background: linear-gradient(139.03deg, #09090b 23.24%, #5c5c71 170.59%);
- 
 }
 .gradient-border-ppc > .inner2 {
   border-radius: 58px;
   background: linear-gradient(315deg, #09090b 23.24%, #5c5c71 170.59%);
-
-
 }
 .gradient-border-ppc > .inner3 {
   border-radius: 58px;
   background: linear-gradient(45deg, #09090b 23.24%, #5c5c71 170.59%);
-
- 
 }
 .gradient-border-ppc > .inner4 {
   border-radius: 58px;
   background: linear-gradient(225deg, #09090b 23.24%, #5c5c71 170.59%);
-
- 
 }
 
 @layer utilities {
@@ -4269,7 +4268,7 @@ footer ul li {
   z-index: 99;
   top: -30px !important;
   left: 50% !important;
-  width: 100px !important;
+  width: 100% !important;
   height: 20px;
   display: flex;
   justify-content: center;
@@ -4279,7 +4278,7 @@ footer ul li {
 }
 .testimonial-pagination.swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
-  width: 30px;
+  flex: 1;
   border-radius: 0;
   height: 2px;
 }
@@ -4433,4 +4432,16 @@ footer ul li {
 .map-view #us:checked ~ .toggle-wrapper .global-label {
   background: black;
   color: gray;
+}
+[aria-expanded="false"] .faq-item-closed {
+  display: block;
+}
+[aria-expanded="false"] .faq-item-opened {
+  display: none !important;
+}
+[aria-expanded="true"] .faq-item-closed {
+  display: none !important;
+}
+[aria-expanded="true"] .faq-item-opened {
+  display: block;
 }
