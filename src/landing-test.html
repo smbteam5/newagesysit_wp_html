@@ -1,3751 +1,415 @@
-<!DOCTYPE html>
-<html
-  lang="en"
-  data-wf-page="66a7a63e1e34a58610234fea"
-  data-wf-site="66a7a63e1e34a58610234fe4"
->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sys IT - Landing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+<!-- just old -->
+<script type="module">
+  import createGlobe from "https://esm.sh/cobe@0.6.3";
 
-    <link href="style.css" rel="stylesheet" />
-    <style>
-      h2.animatedText span {
-        display: block;
-        background: linear-gradient(to right, #fff 50%, #5c5757 50%);
-        color: transparent;
-        background-size: 200% 100%;
-        background-position-x: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-      #progress {
-        background: #22d3ee;
-      }
-      .step {
-        will-change: transform, opacity;
-      }
-      .pe-none {
-        pointer-events: none;
-      }
-    </style>
-    <style>
-      /* Owl Carousel Custom Styles */
-      .owl-carousel .owl-nav {
-        /* position: absolute; */
-        top: 50%;
-        width: 100%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: center;
-        padding: 0 20px;
-        pointer-events: none;
-      }
+  // ---- Config (unchanged) ----
+  const LOCATIONS = [
+    // Existing
+    {
+      name: "Custom Software Development — New Jersey",
+      lat: 40.7128,
+      lon: -74.006,
+      size: 0.11,
+    },
+    {
+      name: "App Development in Jacksonville",
+      lat: 30.3322,
+      lon: -81.6557,
+      size: 0.085,
+    },
+    {
+      name: "App Development in Philadelphia",
+      lat: 39.9526,
+      lon: -75.1652,
+      size: 0.085,
+    },
+    {
+      name: "App Development in Tampa",
+      lat: 27.9506,
+      lon: -82.4572,
+      size: 0.085,
+    },
+    {
+      name: "App Development in Miami",
+      lat: 25.7617,
+      lon: -80.1918,
+      size: 0.085,
+    },
+    {
+      name: "App Development in Atlanta",
+      lat: 33.749,
+      lon: -84.388,
+      size: 0.085,
+    },
+    {
+      name: "App Development in Charlotte",
+      lat: 35.2271,
+      lon: -80.8431,
+      size: 0.085,
+    },
+    {
+      name: "App Development in New York",
+      lat: 40.7128,
+      lon: -74.006,
+      size: 0.085,
+    },
 
-      .owl-carousel .owl-nav button {
-        background: black !important;
-        border-radius: 50% !important;
-        width: 50px;
-        height: 50px;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        pointer-events: all;
-        border: 1px solid #fff !important;
-        transition: all 0.3s ease;
-      }
+    {
+      name: "Mobile App Development in Virginia",
+      lat: 37.5407,
+      lon: -77.436,
+      size: 0.082,
+    }, // Richmond
+    {
+      name: "Mobile App Development in Georgia",
+      lat: 33.749,
+      lon: -84.388,
+      size: 0.082,
+    }, // Atlanta
+    {
+      name: "Mobile App Development in Pennsylvania",
+      lat: 40.2732,
+      lon: -76.8867,
+      size: 0.082,
+    }, // Harrisburg
 
-      .owl-carousel .owl-nav button:hover {
-        background: rgba(0, 0, 0, 0.8) !important;
-        transform: scale(1.1);
-      }
+    {
+      name: "Staff Augmentation in California",
+      lat: 34.0522,
+      lon: -118.2437,
+      size: 0.082,
+    }, // Los Angeles
+    {
+      name: "App Development in Philly",
+      lat: 39.9526,
+      lon: -75.1652,
+      size: 0.081,
+    }, // Same as Philadelphia
+    {
+      name: "Staff Augmentation in Texas",
+      lat: 30.2672,
+      lon: -97.7431,
+      size: 0.082,
+    }, // Austin
+    {
+      name: "Staff Augmentation in New York",
+      lat: 40.7128,
+      lon: -74.006,
+      size: 0.082,
+    },
 
-      .owl-carousel .owl-nav button span {
-        display: none;
-      }
+    // International
+    {
+      name: "Staff Augmentation in South Africa",
+      lat: -26.2041,
+      lon: 28.0473,
+      size: 0.083,
+    }, // Johannesburg
+  ];
 
-      .owl-carousel .owl-dots {
-        text-align: center;
-        margin-top: 20px;
-      }
+  function locationToAngles(latDeg, lonDeg) {
+    return [
+      Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), // phi
+      (latDeg * Math.PI) / 180, // theta
+    ];
+  }
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-      .owl-carousel .owl-dots .owl-dot {
-        display: inline-block;
-        margin: 0 5px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
+  const canvas = document.getElementById("cobeCanvas");
+  const selectEl = document.getElementById("locationSelect");
+  const tooltip = document.getElementById("tooltip");
 
-      .owl-carousel .owl-dots .owl-dot.active {
-        background: white;
-        transform: scale(1.2);
-      }
+  // Populate select (unchanged)
+  tooltip.style.display = "none";
+  const placeholderOption = document.createElement("option");
+  placeholderOption.value = "";
+  placeholderOption.textContent = "Select a location";
+  placeholderOption.disabled = true;
+  placeholderOption.selected = true;
+  selectEl.insertBefore(placeholderOption, selectEl.firstChild);
+  LOCATIONS.forEach((loc, idx) => {
+    const opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = loc.name;
+    selectEl.appendChild(opt);
+  });
 
-      .owl-carousel .owl-dots .owl-dot span {
-        display: none;
-      }
+  // ---- State (unchanged core) ----
+  let currentPhi = 0;
+  let currentTheta = 0.3;
+  let focusPhi = 0;
+  let focusTheta = 0;
 
-      /* Custom carousel styling */
-      .owl-carousel .item {
-        padding: 0 15px;
-      }
+  let isDragging = false;
+  let dragStartX = 0,
+    dragStartY = 0,
+    dragStartPhi = 0,
+    dragStartTheta = 0;
 
-      .mobile-slider .owl-dots .owl-dot {
-        display: none;
-        margin: 0 5px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      .mobile-slider .owl-nav {
-        margin-top: 40px;
-      }
-    </style>
-     <style>
-      /* Define the animation keyframe for the marquee effect (assuming Tailwind doesn't provide this by default) */
-      @keyframes scroll {
-        from {
-          transform: translateX(0);
+  let activeMarkerIndex = 0;
+  let blinkStartTime = Date.now();
+  const BLINK_SPEED_HZ = 2.2;
+  const BLINK_AMPLITUDE = 0.85;
+
+  let suppressGlobalHandler = false;
+
+  // ---- Sizing & robustness ----
+  let dpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+  let widthCss = 0;
+  let widthPx = 0;
+  let sizeDirty = true;
+  let lastNonZeroCss = 600; // fallback to avoid 0×0 canvas
+
+  function recomputeSizes() {
+    // Prefer parent size; fall back to canvas; never allow 0
+    const parent = canvas.parentElement;
+    const cssW = Math.max(
+      parent ? parent.clientWidth : 0,
+      canvas.clientWidth || 0,
+      0
+    );
+    widthCss = cssW > 20 ? cssW : lastNonZeroCss;
+    lastNonZeroCss = widthCss;
+
+    widthPx = Math.max(2, Math.floor(widthCss * dpr));
+    sizeDirty = true;
+  }
+
+  // Initial sizing
+  recomputeSizes();
+
+  // Keep an eye on actual layout changes (more reliable than window.resize alone)
+  const ro = new ResizeObserver(() => {
+    const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+    if (newDpr !== dpr) dpr = newDpr;
+    recomputeSizes();
+  });
+  try {
+    ro.observe(canvas.parentElement || canvas);
+  } catch {}
+
+  // Also listen to window resize (covers zoom / viewport changes)
+  let rzTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(rzTimer);
+    rzTimer = setTimeout(() => {
+      const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+      if (newDpr !== dpr) dpr = newDpr;
+      recomputeSizes();
+    }, 120);
+  });
+
+  // Refresh when tab becomes visible again
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+      if (newDpr !== dpr) dpr = newDpr;
+      recomputeSizes();
+      // nudge the blink so markers re-pulse immediately
+      blinkStartTime = Date.now();
+    }
+  });
+
+  // ---- Pointer controls (unchanged) ----
+  canvas.addEventListener("pointerdown", (e) => {
+    canvas.setPointerCapture(e.pointerId);
+    isDragging = true;
+    dragStartX = e.clientX;
+    dragStartY = e.clientY;
+    dragStartPhi = currentPhi;
+    dragStartTheta = currentTheta;
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStartX;
+    const dy = e.clientY - dragStartY;
+    const denom = Math.max(200, widthCss || 600);
+    const deltaPhi = (dx / denom) * Math.PI * 2;
+    const deltaTheta = (dy / denom) * Math.PI;
+    currentPhi = dragStartPhi + deltaPhi;
+    currentTheta = clamp(
+      dragStartTheta + deltaTheta,
+      -Math.PI / 2 + 0.01,
+      Math.PI / 2 - 0.01
+    );
+  });
+  function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    try {
+      canvas.releasePointerCapture(e.pointerId);
+    } catch {}
+    focusPhi = currentPhi;
+    focusTheta = currentTheta;
+  }
+  canvas.addEventListener("pointerup", endDrag);
+  canvas.addEventListener("pointercancel", endDrag);
+
+  // ---- Globe lifecycle (allows re-init on WebGL restore) ----
+  let globe = null;
+  function buildGlobe() {
+    if (globe) {
+      try {
+        globe.destroy();
+      } catch {}
+      globe = null;
+    }
+
+    globe = createGlobe(canvas, {
+      devicePixelRatio: dpr,
+      width: widthPx || 600,
+      height: widthPx || 600,
+      phi: currentPhi,
+      theta: currentTheta,
+      dark: 0,
+      diffuse: 2.5,
+      mapSamples: 5000, // lighter, fast
+      mapBrightness: 1.15,
+      baseColor: [1, 1, 1],
+      markerColor: [0.18, 0.52, 1],
+      glowColor: [1, 1, 1],
+      markers: LOCATIONS.map((l) => ({
+        location: [l.lat, l.lon],
+        size: l.size,
+      })),
+      onRender: (state) => {
+        // apply pending size changes once
+        if (sizeDirty) {
+          state.devicePixelRatio = dpr;
+          state.width = widthPx;
+          state.height = widthPx;
+          sizeDirty = false;
         }
-        to {
-          transform: translateX(-100%);
+
+        // Smooth focus (no idle autorotation)
+        if (!isDragging) {
+          const TWO_PI = Math.PI * 2;
+          const dp = (focusPhi - currentPhi + TWO_PI) % TWO_PI;
+          const dn = (currentPhi - focusPhi + TWO_PI) % TWO_PI;
+          currentPhi += (dp < dn ? dp : -dn) * 0.08;
+          currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
         }
-      }
-      .animate-scroll {
-        animation: scroll 40s linear infinite;
-      }
 
-      /* Border gradient for the awards bar */
-      .border-gradient {
-        border-top: 1px solid transparent;
-        background-clip: padding-box;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, #1a2254d6 0%, #7b7fffa6 50%, #1a22549c 100%);
-        background-origin: border-box;
-      }
-
-      /* RINGS COMPUTATION (FIXED) */
-      /* Rings compute their transform from CSS variables */
-      #rings .ring {
-        opacity: 0;
-        /* FIX: Changed transform to use a new variable --offset for GSAP to animate.
-               The final position is based on --base + --offset */
-        transform: translate(-50%, 0)
-          translate3d(0, calc((var(--base, 0) + var(--offset, 0)) * 1px), 0);
-        will-change: transform, opacity, filter;
-      }
-
-      /* When the page has loaded, play intro anim with a stagger set in JS */
-      .rings-loaded #rings .ring {
-        animation: ring-in 1000ms cubic-bezier(0.9, 0.9, 0, 1) both;
-        animation-delay: var(--delay, 0ms);
-      }
-
-      @keyframes ring-in {
-        from {
-          opacity: 0;
-          filter: blur(8px);
-          /* Animation starts from a higher position */
-          transform: translate(-50%, 0)
-            translate3d(0, calc((var(--base, 0) - 80) * 1px), 0);
-        }
-        to {
-          opacity: var(--opacity, 0.1);
-          filter: blur(0);
-          /* FIX: Ensure 'to' state also uses the new variable for a clean starting point (where --offset is 0) */
-          transform: translate(-50%, 0)
-            translate3d(0, calc((var(--base, 0) + var(--offset, 0)) * 1px), 0);
-        }
-      }
-
-      /* Hero slight parallax on scroll (we’ll update inline style from JS) */
-      #hero {
-        transition: transform 120ms linear, opacity 200ms ease;
-        will-change: transform, opacity;
-      }
-    </style>
-    <style>
-      /* Enable rendering skip for offscreen lazy images and reserve space to prevent CLS */
-      img[loading="lazy"] {
-        content-visibility: auto;
-        contain-intrinsic-size: 1px 300px; /* fallback size; adjust as needed */
-      }
-
-      /* Respect user motion preferences to reduce animation cost */
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation: none !important;
-          transition: none !important;
-          scroll-behavior: auto !important;
-        }
-      }
-    </style>
-  </head>
-
-  <body class="overflow-x-hidden lg:overflow-x-visible font-inter">
-    <div
-      class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 hidden p-[15px]"
-      id="videoModal"
-    >
-      <div
-        class="bg-white rounded-lg overflow-hidden w-full max-w-3xl relative"
-      >
-        <div class="relative pb-9/16">
-          <iframe
-            id="youtubePlayer"
-            class="w-full h-[400px]"
-            src=""
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <button
-          class="absolute top-0 right-0 m-2 text-white bg-red-600 rounded-full p-2 w-[30px] h-[30px] flex justify-center items-center"
-          id="closeModal"
-        >
-          &times;
-        </button>
-      </div>
-    </div>
-
-    <header
-      class="top-0 left-0 right-0 fixed text-white z-[100]"
-      style="background-color: rgba(0, 10, 31) !important"
-    >
-      <div
-        class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto"
-      >
-        <nav class="flex">
-          <a href="#">
-            <img
-              src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
-              class="h-[40px] md:h-[47px]"
-              alt=""
-            />
-          </a>
-          <ul class="hidden lg:flex items-center justify-center lg:ml-6">
-            <li class="relative px-4 group">
-              <button class="cursor-default">Services</button>
-              <div
-                class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform"
-              >
-                <div
-                  class="relative w-full p-4 bg-white shadow-xl top-6 rounded-xl"
-                >
-                  <div
-                    class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm"
-                  ></div>
-                  <div class="relative z-10 justify-between">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 p-8 pb-0">
-                      <div>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          SOFTWARE DEVELOPMENT
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="/custom-software-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Custom Software Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/software-product-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Software Product Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/saas-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Saas Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/web-application-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Web Application Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="//newagesysit.com/app-development-service/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Mobile App Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/maintenance-and-support/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Maintenance and Support
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          CLOUD SERVICES
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Cloud Managed Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Cloud Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              AWS
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Cloud Application Development
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          IDEATION AND DESIGN
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              UI/UX Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              UX/UI Design
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              MVP Design
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          MVP Design
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps Consulting Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps CI/CD Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps Development Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps Implementation Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevSecOps Services
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          EMERGING TECHNOLOGIES
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              AI/ML
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              AR/VR
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Data Science and Analytics
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Blockchain
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Robotic Process Automation
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          STARTUP SERVICES
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Minimal Viable Product (MVP)
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Product Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Maintenance & Support
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Start-up Advisory / Consulting
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          Start-up Advisory / Consulting
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Digital Transformation
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              IT Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Implementation Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              IT Security and Cybersecurity
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          Workforce Management
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Staff Augmentation
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Dedicated Development Team
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              QA & Testing
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="relative px-4 group">
-              <a href="#" class="cursor-default">Portfolio </a>
-            </li>
-            <li class="relative px-4 group">
-              <a href="#" class="cursor-default">Blog </a>
-            </li>
-            <li class="relative px-4 group">
-              <a href="#" class="cursor-default">Contact </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="hidden lg:flex">
-          <ul>
-            <li>
-              <button
-                class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-4 rounded uppercase xl:w-auto"
-              >
-                GET A QUOTE
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
-          <button class="py-2 px-3 rounded uppercase">
-            <img class="max-w-6" src="./img/call.png" alt="call" />
-          </button>
-          <button id="mobile-menu-button" class="xl:hidden">
-            <svg
-              class="w-7 h-7 text-white fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- mobile-menu start-->
-      <div id="mobile-menu" class="hidden w-full min-h-screen lg:hidden">
-        <nav class="p-4 container mx-auto">
-          <ul
-            class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
-          >
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Services
-                <svg
-                  class="w-4 h-4 ml-2 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  ></path>
-                </svg>
-              </button>
-              <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
-                <div class="relative z-10 pb-5">
-                  <div
-                    class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh]"
-                  >
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      SOFTWARE DEVELOPMENT
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="/custom-software-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Custom Software Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/software-product-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Software Product Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/saas-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Saas Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/web-application-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Web Application Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="//newagesysit.com/app-development-service/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Mobile App Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/maintenance-and-support/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Maintenance and Support
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      CLOUD SERVICES
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Cloud Managed Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Cloud Consulting
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          AWS
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Cloud Application Development
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      IDEATION AND DESIGN
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          UI/UX Consulting
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          UX/UI Design
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          MVP Design
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      MVP Design
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps Consulting Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps CI/CD Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps Development Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps Implementation Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevSecOps Services
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      EMERGING TECHNOLOGIES
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          AI/ML
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          AR/VR
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Data Science and Analytics
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Blockchain
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Robotic Process Automation
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      STARTUP SERVICES
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Minimal Viable Product (MVP)
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Product Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Maintenance & Support
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Start-up Advisory / Consulting
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Industries
-                <svg
-                  class="w-4 h-4 ml-2 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  ></path>
-                </svg>
-              </button>
-              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
-                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
-                  <ul class="text-[15px] space-y-3">
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/transportation.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Transportation</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/on-demand.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>On Demand</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/healthcare.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Healthcare</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/social-networking.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Social Networking</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/entertainment.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Entertainment</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/travel.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Travel</div>
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="text-[15px] space-y-3">
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/restaurant.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Restaurant</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/e-commerce.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>E-commerce</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/uber-like.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Uber Like Platform</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/saas.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>SaaS</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/game-app.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Game App</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/fintech.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>FinTech</div>
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="text-[15px] space-y-3">
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/wellness.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Wellness</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/realestate.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Real Estate</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/education.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Education</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/petcare.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Pet Care</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/door-to-door.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Door to Door Sales</div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Technologies
-                <svg
-                  class="w-4 h-4 ml-2 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  ></path>
-                </svg>
-              </button>
-              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
-                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
-                  <div class="grid grid-cols-1">
-                    <ul class="text-[15px] space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/ios.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>iOS</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/android.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Android</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/react-native.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>React Native</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/python.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Python</div>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="text-[15px] space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/flutter.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Flutter</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/php.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>PHP</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/nodejs.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Node JS</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/mainframe.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Mainframe</div>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="text-[15px] space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/coldfusion.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>ColdFusion</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/rubyrails.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Ruby on Rails</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/xamarin.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Xamarin</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Portfolio
-              </button>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Blog
-              </button>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!-- mobile-menu end-->
-    </header>
-
-    <section id="hero-banner"
-      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
-    >
-      <img
-        alt="banner"
-        fetchpriority="high"
-        loading="eager"
-        decoding="async"
-        class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
-        src="./img/bnr-landing.webp"
-      />
-
-      <!-- Content Container -->
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <span class="absolute bottom-0 w-full left-0 z-[9]">
-          <img src="./img/Light_Effect.webp" alt="" />
-        </span>
-        <div
-          class="w-full md:w-full self-center min-768px:pb-[40px] pb-[40px]"
-        >
-          <h1
-            class="text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
-          >
-            Redefining Your Business Success <br />
-            With Apps &amp; Software That Scale
-          </h1>
-          <p class="text-white lg:text-[26px] text-[18px] mt-[20px]">
-            Award-Winning Digital Transformation Company with Strategic
-            <br class="hidden lg:block" />
-            Innovation Turning Brands into Industry Leaders 
-          </p>
-          <div class="text-center flex justify-center mt-5">
-            <button
-              data-slot="button"
-              class="group relative inline-flex h-12 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap hover:scale-105 disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-10 mt-8 lg:mt-10"
-              style="
-                translate: none;
-                rotate: none;
-                scale: none;
-                transform: translate(0px, 0px);
-                opacity: 1;
-              "
-            >
-              <span
-                class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
-                >Get a Free Project Estimate<svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  class="transition-transform duration-300 ease-in-out group-hover:rotate-45"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.5 8L6 18.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="square"
-                  ></path>
-                  <path
-                    d="M8 6.68793L17.2692 7.23081L17.812 16.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="square"
-                  ></path>
-                </svg>
-                <span
-                  class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ff5a1463_100%)]"
-                ></span
-              ></span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Radial Rings (Animated Glow Layers) -->
-      <div id="rings" class="absolute left-1/2 top-[38%] h-[500px] w-screen -translate-x-1/2 -translate-y-[25.25px] block xl:top-[30%] xl:h-full xl:w-[calc(100vw-300px)]">
-  <!-- Ring 1 -->
-  <span class="ring absolute left-1/2 inline-block aspect-[1300/571] h-[500px] w-[calc(100vw-100px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-300px)]"
-        style="--base:129.737; --opacity:0.02; --amp:80;"></span>
-
-  <!-- Ring 2 -->
-  <span class="ring absolute left-1/2 inline-block aspect-[1100/471] h-[500px] w-[calc(100vw-300px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-500px)]"
-        style="--base:208.114; --opacity:0.05; --amp:110;"></span>
-
-  <!-- Ring 3 -->
-  <span class="ring absolute left-1/2 inline-block aspect-[900/371] h-[500px] w-[calc(100vw-500px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-700px)]"
-        style="--base:286.491; --opacity:0.05; --amp:130;"></span>
-
-  <!-- Ring 4 -->
-  <span class="ring absolute left-1/2 inline-block aspect-[700/271] h-[500px] w-[calc(100vw-700px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-900px)]"
-        style="--base:364.868; --opacity:0.10; --amp:160;"></span>
-
-  <!-- Ring 5 -->
-  <span class="ring absolute left-1/2 inline-block aspect-[500/171] h-[500px] w-[calc(100vw-900px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-1100px)]"
-        style="--base:443.246; --opacity:0.20; --amp:190;"></span>
-
-  <!-- Core Glow -->
-  <span class="ring absolute left-1/2 inline-block aspect-[300/71] h-[500px] w-[calc(100vw-1100px)] -translate-x-1/2 rounded-t-full bg-[#5871F0] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-1300px)]"
-        style="--base:521.623; --opacity:1; --amp:240;"></span>
-</div>
-
-      <!-- Awards / Recognition Scrolling Bar -->
-      <div
-        class="border-gradient relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
-      >
-        <div class="container mx-auto w-full max-w-[1456px] px-4">
-          <div
-            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white xl:text-left text-center"
-          >
-            <!-- Left Text -->
-            <p
-              class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
-            >
-              Recognized for building the best solutions for startups,
-              businesses, and enterprises
-            </p>
-
-            <!-- Right Logo Marquee -->
-            <div
-              class="group flex w-full gap-x-4 overflow-hidden select-none xl:max-w-[829px]"
-            >
-              <!-- Scroll Set 1 -->
-              <ul
-                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
-              >
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/Deloitte.svg"
-                    alt="Deloitte"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/Inc.svg"
-                    alt="Inc 5000"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/uspaacc.svg"
-                    alt="USPAACC"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/NJBIZ.svg"
-                    alt="NJBIZ"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/Fastest1.svg"
-                    alt="Fastest Growing Company"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-              </ul>
-
-              <!-- Scroll Set 2 (duplicate for continuous loop) -->
-              <ul
-                aria-hidden="true"
-                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
-              >
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/Deloitte.svg"
-                    alt="Deloitte"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/Inc.svg"
-                    alt="Inc 5000"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/uspaacc.svg"
-                    alt="USPAACC"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/NJBIZ.svg"
-                    alt="NJBIZ"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-                <li class="relative aspect-[167/36] w-full min-w-40">
-                  <img
-                    src="./img/Fastest.svg"
-                    alt="Fastest Growing Company"
-                    class="absolute inset-0 size-full object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="overflow-hidden py-[50px] md:py-30 lg:py-40 xl:py-52.5 bg-[#0D0D0D]"
-    >
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <h2
-          class="animatedText mx-auto max-w-[940px] text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white text-center"
-        >
-          <span>As a Clutch 5-rated & #1 software development</span
-          ><span> company in the U.S., NewAgeSysIT believes in</span>
-          <span>crafting boundless solutions to build, design, and</span>
-          <span>scale AI, mobile, and web-based solutions that</span>
-          <span>drive business growth.</span>
-        </h2>
-      </div>
-      <!-- <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <p
-          class="animatedText mx-auto max-w-[940px] text-justify text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white lg:text-start"
-        >
-          <span
-            >Transform your business with our IT consulting and cybersecurity
-            services.Transform your business with our IT consulting and
-            cybersecurity services.Transform your business with our IT
-            consulting and cybersecurity services.Transform your business with
-            our IT consulting and cybersecurity services.Transform your business
-            with our IT consulting and cybersecurity services.Transform your
-            business with our IT consulting and cybersecurity services.</span
-          >
-        </p>
-      </div> -->
-    </section>
-
-    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <h2
-          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
-          aria-label="Recognized For Excellence"
-        >
-          Recognized For Excellence
-        </h2>
-        <div class="hidden grid-cols-3 gap-8 xl:grid">
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px]">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="UpCity"
-                    loading="lazy"
-                    width="200"
-                    height="65"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/upcity.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    Top-rated mobile app solution providers in New Jersey
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px]">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="Entrepreneur"
-                    loading="lazy"
-                    width="224"
-                    height="42"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/entrep.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    App of the year – L-Card
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] h-full">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="Clutch"
-                    loading="lazy"
-                    width="130"
-                    height="37"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/clutch.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    Top global leaders in mobile app development
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] h-full">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="BusinessofApps"
-                    loading="lazy"
-                    width="254"
-                    height="45"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/business.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] h-full">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="GoodFirms"
-                    loading="lazy"
-                    width="216"
-                    height="30"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/goodfirms.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px]">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="DesignRush"
-                    loading="lazy"
-                    width="284"
-                    height="64"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/designrush.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    Redefining service excellence
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px]">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="Clutch"
-                    loading="lazy"
-                    width="130"
-                    height="37"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/clutch.svg"
-                  />
-                  <p class="text-base text-white/60 xl:max-w-[256px]">
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="UpCity"
-                  loading="lazy"
-                  width="200"
-                  height="65"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/upcity.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  Top-rated mobile app solution providers in New Jersey
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Entrepreneur"
-                  loading="lazy"
-                  width="224"
-                  height="42"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/entrep.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  App of the year – L-Card
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Clutch"
-                  loading="lazy"
-                  width="130"
-                  height="37"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/clutch.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  Top global leaders in mobile app development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="BusinessofApps"
-                  loading="lazy"
-                  width="254"
-                  height="45"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/business.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="GoodFirms"
-                  loading="lazy"
-                  width="216"
-                  height="30"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/goodfirms.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="DesignRush"
-                  loading="lazy"
-                  width="284"
-                  height="64"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/designrush.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  Redefining service excellence
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Clutch"
-                  loading="lazy"
-                  width="130"
-                  height="37"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/clutch.svg"
-                />
-                <p class="text-base text-white/60 xl:max-w-[256px]">
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[#0D0D0D] py-8 md:py-20 px-4">
-      <div class="container mx-auto text-center">
-        <!-----desktop section--->
-        <div
-          class="hidden lg:grid grid-cols-10 gap-6 mb-16 max-w-[95%] mx-auto"
-        >
-          <div class="flex flex-col col-span-2">
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=_AG--jyDX3c"
-              >
-                <img
-                  src="./img/client-img-1.webp"
-                  alt="Roger J. Guipre"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    ROGER J CLAPPE
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO,WhipFlip</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer mt-3">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
-              >
-                <img
-                  src="./img/client-img-2.webp"
-                  alt="Bob Salesno"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Larry Seibel
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO,Car-Upp</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-6 col-span-6 pt-20">
-            <div
-              class="relative group cursor-pointer h-[220px] xl:h-[350px] w-auto"
-            >
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
-              >
-                <img
-                  src="./img/client-img-3.webp"
-                  alt="Chris Ordway"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Rob Salerno
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">
-                    CEO, CliquePrize App
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div
-              class="relative group cursor-pointer h-[220px] xl:h-[350px] mt-14"
-            >
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=PttTsDGO2AA"
-              >
-                <img
-                  src="./img/client-img-4.webp"
-                  alt="Imran Charania"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Chris O'Rorke
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">
-                    CEO, Guaranteed Tip Sheet
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div
-              class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[350px]"
-            >
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
-              >
-                <img
-                  src="./img/client-img-5.webp"
-                  alt="David Chabukashvili"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Iman Khawaja
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="flex flex-col col-span-2">
-            <div class="relative group cursor-pointer row-span-2">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
-              >
-                <img
-                  src="./img/client-img-6.webp"
-                  alt="Larry Gebel"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    David Chabukashvili
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer row-span-2 mt-3">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=slRQbxC1UoI"
-              >
-                <img
-                  src="./img/client-img-7.webp"
-                  alt="Larry Gebel"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
-                  <p class="text-xs text-gray-300 truncate">
-                    CEO, Donut Man app
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-----mobile section--->
-        <div class="lg:hidden">
-          <div
-            class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto"
-          >
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=_AG--jyDX3c"
-              >
-                <img
-                  src="./img/client-img-1.webp"
-                  alt="Roger J. Clappe"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    ROGER J CLAPPE
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, WhipFlip</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
-              >
-                <img
-                  src="./img/client-img-2.webp"
-                  alt="Larry Seibel"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Larry Seibel
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, Car-Upp</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
-              >
-                <img
-                  src="./img/client-img-3.webp"
-                  alt="Rob Salerno"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Rob Salerno
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">
-                    CEO, CliquePrize App
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=PttTsDGO2AA"
-              >
-                <img
-                  src="./img/client-img-4.webp"
-                  alt="Chris O'Rorke"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Chris O'Rorke
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">
-                    CEO, Guaranteed Tip Sheet
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
-              >
-                <img
-                  src="./img/client-img-5.webp"
-                  alt="Iman Khawaja"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    Iman Khawaja
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
-              >
-                <img
-                  src="./img/client-img-6.webp"
-                  alt="David Chabukashvili"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
-                    David Chabukashvili
-                  </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="relative group cursor-pointer">
-              <a
-                class="popup-youtube"
-                href="https://www.youtube.com/watch?v=slRQbxC1UoI"
-              >
-                <img
-                  src="./img/client-img-7.webp"
-                  alt="Rob Evans"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
-                >
-                  <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  >
-                    <img
-                      src="./img/video-play.svg"
-                      alt="Play Button"
-                      loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
-                    />
-                  </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
-                  <p class="text-xs text-gray-300 truncate">
-                    CEO, Donut Man app
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center lg:-mt-20">
-          <h3
-            class="text-[24px] md:text-[32px] font-semibold text-white mb-4 max-w-2xl mx-auto"
-          >
-            Here’s What Industry Leaders Talk About <br class="sm:hidden" />
-            The Results They Achieved With Us
-          </h3>
-          <p class="text-gray-400 mb-8 text-[18px] max-w-2xl mx-auto">
-            Learn why entrepreneurs and businesses trust NewAgeSys for the best
-            solutions that make their customer journeys refined, reliable, and
-            efficient.
-          </p>
-          <button
-            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[18px]"
-          >
-            Read Success Stories
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[#0D0D0D] py-[50px] lg:py-[100px]">
-      <div class="container">
-        <div
-          class="text-white flex flex-col lg:flex-row lg:justify-between gap-12 items-end flex-wrap"
-        >
-          <div class="lg:max-w-[25%] w-full">
-            <h2 class="text-4xl font-[500] leading-tight mb-6">
-              Ensuring<br />
-              Businesses<br />
-              Innovate, Scale,<br />
-              and Succeed
-            </h2>
-            <p class="text-gray-300 leading-relaxed">
-              NewAgeSysIT is dedicated to alleviating your most challenging
-              hurdles, multiplying results, and putting your business and
-              customers at the heart of each innovation. Our digital
-              transformation solutions range from web and mobile development
-              solutions to cloud-based solutions and cutting-edge AI-powered
-              innovations.
-            </p>
-          </div>
-          <div
-            class="flex flex-col lg:flex-row gap-6 h-inherit lg:items-end items-center flex-wrap"
-          >
-            <!-- Card 1 -->
-            <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 lg:w-64 flex flex-col justify-end lg:h-[425px] relative overflow-hidden w-full pb-0 h-auto"
-            >
-              <div class="absolute left-0 w-full h-full">
-                <img
-                  src="./img/pattern-eclipse.webp"
-                  alt=""
-                  class="object-cover w-full h-full"
-                />
-              </div>
-              <div class="relative pb-6">
-                <h3 class="text-4xl font-bold mb-2">30+</h3>
-                <p
-                  class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
-                >
-                  Years in Digital Solutions
-                </p>
-                <p class="text-gray-200 text-sm leading-relaxed">
-                  As a leading web and mobile app solutions company, we hold our
-                  legacy, helping businesses of all sizes thrive.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 lg:w-64 flex flex-col justify-end lg:h-[465px] relative overflow-hidden w-full pb-0 h-auto"
-            >
-              <div class="absolute left-0 w-full h-full">
-                <img
-                  src="./img/pattern-eclipse.webp"
-                  alt=""
-                  class="object-cover w-full h-full"
-                />
-              </div>
-              <div class="relative pb-6">
-                <h3 class="text-4xl font-bold mb-2">100+</h3>
-                <p
-                  class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
-                >
-                  Projects Delivered
-                </p>
-                <p class="text-gray-200 text-sm leading-relaxed">
-                  We expand our capabilities to ensure businesses achieve
-                  significant growth with futuristic digital solutions.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-              class="bg-gradient-to-b from-[#6ea6ff]/50 to-[#2a56ff]/60 rounded-2xl p-6 lg:w-64 flex flex-col justify-end lg:h-[500px] relative overflow-hidden w-full pb-0 h-auto"
-            >
-              <div class="absolute left-0 w-full h-full">
-                <img
-                  src="./img/pattern-eclipse.webp"
-                  alt=""
-                  class="object-cover w-full h-full"
-                />
-              </div>
-              <div class="relative pb-6">
-                <h3 class="text-4xl font-bold mb-2">#1</h3>
-                <p
-                  class="text-sm uppercase tracking-wide text-gray-200 font-semibold mb-2"
-                >
-                  App Developer in NJ, FL, NY
-                </p>
-                <p class="text-gray-200 text-sm leading-relaxed">
-                  Our AI/ML specialists, cloud experts, developers, and
-                  designers take your business to the next level.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section
-      class="relative overflow-hidden bg-[#0D0D0D] py-16 md:py-24 xl:hidden block"
-    >
-      <div class="container">
-        <div
-          class="grid md:grid-cols-2 grid-col-1 items-center gap-10 md:p-[25px] p-[15px] border border-[#2A2D30]"
-        >
-          <div class="relative">
-            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
-              Your Problems?
-            </h2>
-            <ul class="divide-y divide-white/5">
-              <li
-                class="flex items-center gap-3 py-[10px] text-white/80 bg-[#0D0D0D] rounded-tr-[999px] overflow-hidden mr-[2px] mt-[1px]"
-              >
-                <span class="text-white/40">○</span>
-                <span>Delays &amp; budget overruns?</span>
-              </li>
-              <li
-                class="flex items-center gap-3 py-[10px] text-white/80 bg-[#0D0D0D] rounded-br-[999px] overflow-hidden mr-[2px] mt-[1px]"
-              >
-                <span class="text-white/40">○</span>
-                <span>No innovation from your tech partner?</span>
-              </li>
-              <li class="flex items-center gap-3 py-[10px] text-white/80">
-                <span class="text-white/40">○</span>
-                <span>Weak communication &amp; missed deadlines?</span>
-              </li>
-            </ul>
-          </div>
-          <div class="relative">
-            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
-              Our Solutions!
-            </h2>
-            <ul class="divide-y divide-white/5">
-              <li
-                class="flex items-center gap-3 py-[10px] text-white/80 bg-[#0D0D0D] rounded-br-[999px] overflow-hidden mr-[2px] mt-[1px]"
-              >
-                <span class="text-white/40">○</span>
-                <span>No innovation from your tech partner?</span>
-              </li>
-              <li class="flex items-center gap-3 py-[10px] text-white/80">
-                <span class="text-white/40">○</span>
-                <span>AI-driven and intelligent solutions.</span>
-              </li>
-              <li
-                class="flex items-center gap-3 py-[10px] text-white/80 bg-[#0D0D0D] rounded-tr-[999px] overflow-hidden mr-[2px] mt-[1px]"
-              >
-                <span class="text-white/40">○</span>
-                <span>Transparent and flexible approach.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="relative overflow-hidden bg-[#0D0D0D] py-16 md:py-24 xl:block hidden"
-    >
-      <!-- faint arcs (left & right) -->
-      <div class="pointer-events-none absolute inset-0 -z-10">
-        <!-- left arcs -->
-        <div
-          class="absolute left-[-35%] top-1/2 -translate-y-1/2 h-[1200px] w-[1200px] rounded-full border border-white/10"
-        ></div>
-        <div
-          class="absolute left-[-25%] top-1/2 -translate-y-1/2 h-[900px] w-[900px] rounded-full border border-white/10"
-        ></div>
-        <!-- right arcs -->
-        <div
-          class="absolute right-[-35%] top-1/2 -translate-y-1/2 h-[1200px] w-[1200px] rounded-full border border-white/10"
-        ></div>
-        <div
-          class="absolute right-[-25%] top-1/2 -translate-y-1/2 h-[900px] w-[900px] rounded-full border border-white/10"
-        ></div>
-      </div>
-
-      <div
-        class="mx-auto grid grid-cols-1 items-center gap-10 px-6 md:grid-cols-[1fr_auto_1fr] md:gap-8"
-      >
-        <div
-          class="relative right-[-100px] border-[#ffffff29] !border-l-0 rounded-tr-[999px] rounded-br-[999px] pt-[20px] overflow-hidden border border-y bg-[linear-gradient(90deg,rgba(22,22,34,0.6)_-2.33%,#161A22_28.97%,#7C81DA_72.18%,rgba(88,88,136,0)_98.51%)] before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[#0D0D0D]"
-        >
-          <span
-            class="absolute right-0 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-white/15 to-transparent md:block"
-          ></span>
-
-          <div class="relative">
-            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
-              Your Problems?
-            </h2>
-            <ul class="divide-y divide-white/5">
-              <div
-                class="border border-l-0 border-white/0 rounded-tr-[999px] rounded-br-[999px] relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(22, 22, 34, 0) 0.96%,
-                    #161622 20.25%,
-                    #585888 53.08%,
-                    rgb(18 18 37 / 0%) 98.56%
-                  );
-                "
-              >
-                <li
-                  class="flex items-center gap-3 py-6 text-white/80 bg-[#0D0D0D] rounded-tr-[999px] overflow-hidden mr-[2px] mt-[1px]"
-                >
-                  <span class="text-white/40">○</span>
-                  <span>Delays &amp; budget overruns?</span>
-                </li>
-                <li
-                  class="flex items-center gap-3 py-6 text-white/80 bg-[#0D0D0D] rounded-br-[999px] overflow-hidden mr-[2px] mt-[1px]"
-                >
-                  <span class="text-white/40">○</span>
-                  <span>No innovation from your tech partner?</span>
-                </li>
-              </div>
-              <li class="flex items-center gap-3 py-6 text-white/80">
-                <span class="text-white/40">○</span>
-                <span>Weak communication &amp; missed deadlines?</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative mx-auto h-72 w-72 md:h-96 md:w-96 hidden md:block">
-          <!-- outer soft halo -->
-          <div
-            class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15)_0%,transparent_70%)]"
-          ></div>
-
-          <!-- ring stack -->
-          <div class="absolute inset-0 flex items-center justify-center z-[9]">
-            <!-- outer -->
-            <div
-              class="absolute h-[120%] w-[120%] rounded-full opacity-90 border border-[#ffffff2b]"
-            ></div>
-
-            <!-- mid -->
-            <div
-              class="absolute h-[100%] w-[100%] rounded-full bg-[radial-gradient(circle_at_center,#6b8cff_0%,#3352d6_50%,#2a3f9c_100%)] opacity-90"
-            ></div>
-
-            <!-- inner -->
-            <div
-              class="absolute h-[75%] w-[75%] rounded-full bg-[radial-gradient(circle_at_center,#7aa1ff_0%,#3a57d8_60%,#2741a0_100%)] border border-[#ffffff30]"
-            ></div>
-
-            <div
-              class="absolute h-[50%] w-[50%] rounded-full bg-[radial-gradient(circle_at_center,#7aa1ff_0%,#3a57d8_60%,#2741a0_100%)] border border-[#ffffff30]"
-            ></div>
-            <svg
-              class="absolute"
-              width="69"
-              height="111"
-              viewBox="0 0 89 111"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M30.8772 90.1833H57.5009V83.8654H30.8772V90.1833ZM42.8879 2.15545C42.8879 1.40179 43.4724 0.787109 44.1891 0.787109C44.9057 0.787109 45.4903 1.40179 45.4903 2.15545V10.1142C45.4903 10.8679 44.9057 11.4826 44.1891 11.4826C43.4724 11.4826 42.8879 10.8679 42.8879 10.1142V2.15545ZM87.0777 45.8889C87.7944 45.8889 88.3789 46.5036 88.3789 47.2572C88.3789 48.0109 87.7944 48.6255 87.0777 48.6255H79.5095C78.7928 48.6255 78.2083 48.0109 78.2083 47.2572C78.2083 46.5036 78.7928 45.8889 79.5095 45.8889H87.0777ZM8.86946 45.8889C9.58613 45.8889 10.1707 46.5036 10.1707 47.2572C10.1707 48.0109 9.58613 48.6255 8.86946 48.6255H1.30119C0.584522 48.6255 0 48.0109 0 47.2572C0 46.5036 0.584522 45.8889 1.30119 45.8889H8.86946ZM27.6509 14.4007C28.0118 15.0528 27.7983 15.8866 27.1782 16.2662C26.5581 16.6456 25.7652 16.4212 25.4043 15.7691L21.6227 8.87921C21.2619 8.22711 21.4753 7.39333 22.0954 7.01376C22.7155 6.63426 23.5084 6.85875 23.8694 7.51084L27.6509 14.4007ZM81.9757 68.6265C82.5958 69.0007 82.8093 69.8345 82.4535 70.4867C82.0977 71.1387 81.3048 71.3632 80.6847 70.9891L74.1381 67.0124C73.518 66.6383 73.3046 65.8045 73.6603 65.1523C74.0161 64.5002 74.809 64.2757 75.4292 64.6499L81.9757 68.6265ZM14.2473 27.5012C14.8674 27.8807 15.0809 28.7145 14.72 29.3666C14.3591 30.0187 13.5662 30.2432 12.9461 29.8637L6.39951 25.887C5.77941 25.5075 5.56593 24.6737 5.92681 24.0216C6.28768 23.3695 7.0806 23.145 7.70073 23.5245L14.2473 27.5012ZM62.9757 15.7634C62.6199 16.4155 61.827 16.64 61.2069 16.2659C60.5868 15.8917 60.3733 15.0579 60.7291 14.4057L64.5106 7.52137C64.8664 6.86927 65.6593 6.64478 66.2794 7.01893C66.8995 7.39309 67.113 8.22691 66.7572 8.87905L62.9757 15.7634ZM7.70099 70.9827C7.08089 71.3622 6.28802 71.1377 5.92707 70.4856C5.5662 69.8335 5.77967 68.9997 6.39977 68.6201L12.9463 64.6435C13.5664 64.264 14.3593 64.4885 14.7203 65.1406C15.0811 65.7927 14.8677 66.6264 14.2476 67.006L7.70099 70.9827ZM75.4294 29.8573C74.8093 30.2315 74.0165 30.007 73.6606 29.3549C73.3048 28.7028 73.5183 27.869 74.1384 27.4947L80.6849 23.5181C81.305 23.1439 82.0979 23.3684 82.4538 24.0205C82.8096 24.6726 82.5961 25.5064 81.976 25.8806L75.4294 29.8573ZM44.1904 18.3868C51.7688 18.3868 58.631 21.6206 63.6016 26.8427C68.5675 32.0648 71.6426 39.2806 71.6426 47.2556C71.6426 50.9383 70.9818 54.4714 69.7772 57.7265C68.537 61.0725 66.7224 64.1139 64.4657 66.7115L64.4606 66.7169C62.9104 68.9404 61.6753 71.3671 60.7501 74.0022C59.9216 76.3594 59.3473 78.8716 59.0169 81.5441C59.1643 81.6456 59.3016 81.7685 59.4236 81.9075L59.4185 81.9129C59.8404 82.3779 60.0996 83.0086 60.0996 83.6928V91.5501C60.0996 94.3989 59.0322 96.9967 57.3142 98.8835C56.6128 99.6586 55.7995 100.311 54.91 100.813C54.417 103.507 53.4056 105.875 52.0637 107.612C50.5286 109.6 48.5566 110.787 46.3811 110.787H41.9896C39.8141 110.787 37.842 110.787 36.307 107.612C34.9652 105.875 33.9537 103.507 33.4606 100.813C32.5711 100.311 31.7579 99.6533 31.0564 98.8835C29.3384 96.9967 28.2711 94.3991 28.2711 91.5501V83.6928C28.2711 83.0567 28.4947 82.4741 28.8607 82.0197C28.8912 81.9823 28.9217 81.9449 28.9522 81.9075C29.0742 81.7738 29.2114 81.6509 29.3588 81.544C29.0284 78.8715 28.4541 76.3539 27.6256 74.0022C26.7005 71.367 25.4654 68.9404 23.9151 66.7169C21.6583 64.1192 19.8438 61.0725 18.5986 57.7265C17.3939 54.4713 16.7332 50.9383 16.7332 47.2555C16.7332 39.2861 19.8083 32.0697 24.7742 26.8427C29.7502 21.6206 36.6118 18.3868 44.1904 18.3868ZM61.7617 28.7777C57.2635 24.0473 51.0522 21.1235 44.1904 21.1235C37.3285 21.1235 31.1173 24.0472 26.619 28.7777C22.1208 33.508 19.3404 40.0398 19.3404 47.2557C19.3404 50.6124 19.9351 53.8088 21.0229 56.7432C22.1513 59.79 23.8133 62.564 25.8871 64.9372C25.9329 64.9907 25.9735 65.0441 26.0091 65.1029C27.7068 67.5349 29.0588 70.1915 30.0652 73.067C30.9496 75.5845 31.5696 78.2732 31.9204 81.1327H56.4401C56.7959 78.2732 57.416 75.5792 58.2954 73.067C59.3018 70.1967 60.6538 67.5455 62.3413 65.1189C64.5473 62.5693 66.2093 59.7953 67.3377 56.7485C68.4254 53.8141 69.0202 50.6177 69.0202 47.2557C69.0405 40.0399 66.2548 33.5025 61.7617 28.7777ZM64.0439 49.4204C64.0794 49.0676 64.1049 48.7042 64.1201 48.3407C64.1404 47.9345 64.1506 47.571 64.1506 47.2557C64.1506 42.8353 62.8443 38.7249 60.6181 35.3362C58.3309 31.8512 55.0627 29.136 51.2353 27.618C50.5644 27.3507 49.8173 27.7088 49.563 28.4144C49.3089 29.1199 49.6494 29.9056 50.3204 30.173C53.6496 31.4932 56.4909 33.861 58.4833 36.8863C60.4148 39.826 61.5482 43.4019 61.5482 47.2557C61.5482 47.6192 61.5432 47.9345 61.5279 48.2018V48.2071C61.5127 48.5171 61.4923 48.8325 61.4568 49.1425C61.3856 49.8908 61.904 50.5644 62.6156 50.6392C63.3323 50.714 63.9676 50.1687 64.0439 49.4204ZM53.1717 98.6696C53.2073 98.6482 53.248 98.6322 53.2836 98.6162C54.0968 98.2313 54.8338 97.6808 55.4539 96.9966C56.44 95.9115 57.1364 94.4951 57.3956 92.9129L30.9905 92.9183C31.2497 94.5003 31.946 95.9169 32.9321 97.0019C33.5522 97.6808 34.2842 98.2366 35.1025 98.6215C35.1381 98.6375 35.1736 98.6536 35.2041 98.6696C36.0123 99.0331 36.8917 99.2362 37.8116 99.2362H50.5694C51.4894 99.2308 52.3686 99.0331 53.1717 98.6696ZM36.3785 101.85C36.8309 103.448 37.5018 104.827 38.3252 105.891C39.3672 107.243 40.6481 108.05 41.995 108.05H46.3865C47.7335 108.05 49.0143 107.243 50.0563 105.891C50.8797 104.827 51.5506 103.443 52.003 101.85C51.5354 101.93 51.0576 101.967 50.5696 101.967H37.8118C37.3238 101.967 36.8462 101.93 36.3785 101.85Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section id="steps" class="relative bg-[#0D0D0D] lg:pt-[100px] sm:pt-[0px]">
-      <!-- Top progress bar -->
-      <div class="py-[30px]">
-        <div class="lg:container w-full px-6">
-          <h2
-            class="sechd text-left text-[30px] leading-[48px] md:mt-[30px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal md:mb-4"
-          >
-            Our Process
-          </h2>
-        </div>
-      </div>
-
-      <!-- Stage: stacked full-viewport steps -->
-      <div class="relative h-screen">
-        <div class="absolute left-0 top-0 w-screen h-1 bg-white/10 z-[60]">
-          <div id="progress" class="h-full origin-left scale-x-0"></div>
-        </div>
-        <!-- STEP 01 -->
-        <section
-          class="step absolute inset-0 flex items-center justify-center text-white"
-        >
-          <div class="w-full px-6 md:px-10">
-            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
-                  >STEP 01</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
-                >
-                  Plan
-                </h2>
-              </div>
-              <div>
-                <p
-                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
-                >
-                  Requirements brief, backlog prioritization, roadmap,
-                  high-level architecture, and estimates.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/tw1.mp4" type="video/mp4" />
-                    <source src="./video/tw1.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 02 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full px-6 md:px-10">
-            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
-                  >STEP 02</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
-                >
-                  Design
-                </h2>
-              </div>
-              <div>
-                <p
-                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
-                >
-                  Mapping user flows, wireframes, building clickable prototypes,
-                  annotated design specifications, and design systems.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/step2.mp4" type="video/mp4" />
-                    <source src="./video/step2.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 03 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full px-6 md:px-10">
-            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
-                  >STEP 03</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
-                >
-                  Build
-                </h2>
-              </div>
-              <div>
-                <p
-                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
-                >
-                  Source code, APIs, CI/CD pipelines, test coverage reports,
-                  staging environment, and integration docs.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/step3.mp4" type="video/mp4" />
-                    <source src="./video/step3.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 04 -->
-        <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full px-6 md:px-10">
-            <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
-              <div>
-                <span
-                  class="block text-[18px] md:text-[20px] font-medium opacity-70 mb-4 text-white"
-                  >STEP 04</span
-                >
-                <h2
-                  class="text-[40px] md:text-[54px] font-medium leading-tight mb-4 text-white"
-                >
-                  Launch
-                </h2>
-              </div>
-              <div>
-                <p
-                  class="text-[20px] md:text-[28px] leading-normal opacity-90 text-white"
-                >
-                  Go-live checklist, observability dashboards, data migration
-                  handling, launch, and post-launch optimization plan.
-                </p>
-                <div class="mt-6">
-                  <video
-                    class="rounded-[15px] w-full h-[220px] lg:h-[300px] object-cover"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                  >
-                    <source src="./video/step4.mp4" type="video/mp4" />
-                    <source src="./video/step4.webm" type="video/webm" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <!-- end -->
-
-    <section class="hero-business">
-      <div class="hero-bg" id="heroBg"></div>
-      <div class="hero-bg--prev" id="heroBgPrev"></div>
-
-      <div class="hero-inner text-white">
-        <div class="lg:container px-[20px]">
-          <h2
-            class="sechd text-left text-[30px] leading-[48px] mt-[30px] mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal absolute top-[40px] z-[99]"
-          >
-            Achieving Business Excellence with <br />
-            Cross-Industry Experience
-          </h2>
-        </div>
-
-        <!-- Swiper slider start-->
-        <div class="swiper industries h-full" id="industriesSwiper" aria-label="Industry list controlling background">
-          <div class="swiper-wrapper">
-            <!-- 1 -->
-            <div class="swiper-slide" tabindex="0"
-                 data-bg="./img/healthcare.jpg"
-                 aria-label="Healthcare">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Healthcare</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We build and integrate digital healthcare solutions that encompass the entire chain of care delivery.
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/ecommerce.jpg" aria-label="E-Commerce">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">E-Commerce</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We automate your e-commerce operations with the latest technologies and in line with the market trend
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 3 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/fintech.jpg" aria-label="Fintech">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Fintech</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    Our fintech solutions incorporate every aspect of digital finance and analytics, ensuring compliance and security
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 4 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/wellness.jpg" aria-label="Wellness">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Wellness</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We develop wellness platforms that focus on personalized care, progress monitoring, and a healthy lifestyle.
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 5 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/education.jpg" aria-label="Education">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Education</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We adopt an interactive learning approach that scales engagement and makes knowledge easily accessible
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 6 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/real-estate.jpg" aria-label="Real Estate">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Real Estate</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    With smart real estate apps, we focus on simplifying transactions, property search, and management.
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 7 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/social-net.jpg" aria-label="Social Networking">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Social Networking</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We develop social networking experiences to create meaningful interactions and drive more social engagement.
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 8 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/entertainment.jpg" aria-label="Entertainment">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Entertainment</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    Our solutions are customized to meet the industry requirements, ranging from streaming apps to interactive media. 
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 9 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/travel.jpg" aria-label="Travel">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Travel</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We build travel platforms that streamline itineraries, travel bookings, and customized trip planning.
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- 10 -->
-            <div class="swiper-slide" tabindex="0" data-bg="./img/restaurant.jpg" aria-label="Restaurant">
-              <div class="relative flex flex-col items-start lg:pl-[15px]">
-                <div class="slide-title">Restaurant</div>
-                <div class="hidden-area">
-                  <p class="text-[18px] text-white font-[400]">
-                    We offer restaurant management and ordering solutions that scale dining experiences and operations.
-                  </p>
-                  <a href="#" class="text-[18px] text-white inline-flex gap-2 items-center font-[400]">
-                    <span>Learn More</span>
-                    <span>
-                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none">
-                        <path d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z" fill="#F5FAFE"/>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Swiper slider end-->
-      </div>
-    </section>
-
-    <section class="py-[50px] lg:pb-[100px] md:pt-[250px]"
-      x-data="{ active: 'isra' }"
-    >
-      <div class="container">
-        <h2 class="text-2xl md:text-3xl font-bold leading-tight mb-[60px]">
-          Client Testimonials that Reflect <br />
-          Our Expertise & Dedication
-        </h2>
-        <div class="hidden lg:block">
-          <div class="flex border-b border-gray-300 mb-8 text-lg font-medium">
-            <button
-              @click="active = 'isra'"
-              :class="active === 'isra' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-              class="pb-3 transition-colors flex flex-1 justify-center"
-            >
-              <img
-    :src="active === 'isra' ? './img/isra.svg' : './img/isra-grey.svg'"
-    alt=""
-  />
-            </button>
-            <button
-              @click="active = 'lcard'"
-              :class="active === 'lcard' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-              class="pb-3 transition-colors flex flex-1 justify-center"
-            >
-              <img
-    :src="active === 'lcard' ? './img/lcard.svg' : './img/lcard-grey.svg'"
-    alt=""
-  />
-            </button>
-            <button
-              @click="active = 'carup'"
-              :class="active === 'carup' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-              class="pb-3 transition-colors flex flex-1 justify-center"
-            >
-            <img
-    :src="active === 'carup' ? './img/car-up.svg' : './img/carup-grey.svg'"
-    alt=""
-  />
-              <!-- <img src="./img/car-up.svg" alt="" /> -->
-            </button>
-            <button
-              @click="active = 'whipflip'"
-              :class="active === 'whipflip' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400'"
-              class="pb-3 transition-colors flex flex-1 justify-center"
-            >
-              <!-- <img src="./img/whipflip.svg" alt="" /> -->
-              <img
-    :src="active === 'whipflip' ? './img/whipflip.svg' : './img/whip-grey.svg'"
-    alt=""
-  />
-            </button>
-          </div>
-
-          <div class="overflow-hidden">
-            <!-- ISRA Pane -->
-            <div
-              x-show="active === 'isra'"
-              x-transition
-              class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
-            >
-              <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
-                <div class="relative max-w-[220px] mx-auto">
-                  <video
-                    src="./video/isra.mp4"
-                    class="rounded-lg w-full h-[200px] object-cover"
-                    poster="./images/iman.webp"
-                    muted
-                  ></video>
-                  <span
-                    class="absolute bottom-2 left-2 bg-[#0D0D0D] text-white text-xs px-2 py-0.5 rounded"
-                    >01:50</span
-                  >
-                </div>
-
-                <div>
-                  <p class="text-xl leading-relaxed mb-4 text-[32px]">
-                    “From every single moment, from the beginning till the end,
-                    they were there for me. They were very systematic and
-                    methodical in every single step and …”
-                  </p>
-                  <p class="font-[500]">IMAN KHAWAJA</p>
-                  <p class="text-sm text-gray-600 mb-6">Owner – ISRA</p>
-                </div>
-              </div>
-              <div>
-                <div class="flex mt-4 gap-[20px]">
-                  <div class="self-end">
-                    <a
-                      href="#"
-                      class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
-                    >
-                      <span> Read Full Customer Story </span>
-                      <span>
-                        <svg
-                          width="8"
-                          height="14"
-                          viewBox="0 0 10 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132Z"
-                            fill="#4361EE"
-                            stroke="#4361EE"
-                          />
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                  <div class="px-[20px] border-l border-[#A3ACB5]">
-                    <p class="text-3xl font-[500]">30%</p>
-                    <p class="text-sm text-gray-600">
-                      Growth in profit margins
-                    </p>
-                  </div>
-                  <div class="px-[20px] border-l border-[#A3ACB5]">
-                    <p class="text-3xl font-[500]">40%</p>
-                    <p class="text-sm text-gray-600">Faster legal reviews</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- LCard Pane -->
-            <div
-              x-show="active === 'lcard'"
-              x-transition
-              class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
-            >
-              <div>
-                <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
-                  <div class="relative max-w-[220px] mx-auto">
-                    <video
-                      src="./video/isra.mp4"
-                      class="rounded-lg w-full h-[200px] object-cover"
-                      poster="./images/LARRY-SEIBEL-CARUP.webp"
-                      muted
-                    ></video>
-                    <span
-                      class="absolute bottom-2 left-2 bg-[#0D0D0D] text-white text-xs px-2 py-0.5 rounded"
-                      >01:50</span
-                    >
-                  </div>
-
-                  <div>
-                    <p class="text-xl leading-relaxed mb-4 text-[32px]">
-                      “They delivered everything on time and it was of great
-                      quality. They go above and beyond to meet yourrequirements
-                      and deliver the product you are looking for….”
-                    </p>
-                    <p class="font-[500]">Larry Siebel</p>
-                    <p class="text-sm text-gray-600 mb-6">Founder -LCard App</p>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex mt-4 gap-[20px]">
-                    <div class="self-end">
-                      <a
-                        href="#"
-                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
-                      >
-                        <span> Read Full Customer Story </span>
-                        <span>
-                          <svg
-                            width="8"
-                            height="14"
-                            viewBox="0 0 10 18"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132Z"
-                              fill="#4361EE"
-                              stroke="#4361EE"
-                            />
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                    <div class="px-[20px] border-l border-[#A3ACB5]">
-                      <p class="text-3xl font-[500]">30%</p>
-                      <p class="text-sm text-gray-600">
-                        Growth in profit margins
-                      </p>
-                    </div>
-                    <div class="px-[20px] border-l border-[#A3ACB5]">
-                      <p class="text-3xl font-[500]">40%</p>
-                      <p class="text-sm text-gray-600">Faster legal reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Whipflip Pane -->
-            <div
-              x-show="active === 'whipflip'"
-              x-transition
-              class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
-            >
-              <div>
-                <div class="grid md:grid-cols-[200px_1fr] gap-6 items-start">
-                  <div class="relative max-w-[220px] mx-auto">
-                    <video
-                      src="./video/isra.mp4"
-                      class="rounded-lg w-full h-[200px] object-cover"
-                      poster="./images/LARRY-SEIBEL-CARUP.webp"
-                      muted
-                    ></video>
-                    <span
-                      class="absolute bottom-2 left-2 bg-[#0D0D0D] text-white text-xs px-2 py-0.5 rounded"
-                      >01:50</span
-                    >
-                  </div>
-
-                  <div>
-                    <p class="text-xl leading-relaxed mb-4 text-[32px]">
-                      “They are very knowledgeable in the sense that they have
-                      built so many of these types of applications that
-                      they..”
-                    </p>
-                    <p class="font-[500]">Larry Siebel</p>
-                    <p class="text-sm text-gray-600 mb-6">
-                      Founder -CAR-UP App
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex mt-4 gap-[20px]">
-                    <div class="self-end">
-                      <a
-                        href="#"
-                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
-                      >
-                        <span> Read Full Customer Story </span>
-                        <span>
-                          <svg
-                            width="8"
-                            height="14"
-                            viewBox="0 0 10 18"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132Z"
-                              fill="#4361EE"
-                              stroke="#4361EE"
-                            />
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                    <div class="px-[20px] border-l border-[#A3ACB5]">
-                      <p class="text-3xl font-[500]">30%</p>
-                      <p class="text-sm text-gray-600">
-                        Growth in profit margins
-                      </p>
-                    </div>
-                    <div class="px-[20px] border-l border-[#A3ACB5]">
-                      <p class="text-3xl font-[500]">40%</p>
-                      <p class="text-sm text-gray-600">Faster legal reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-pagination !mt-6 absolute"></div>
-        </div>
-      </div>
-    </div>
-    <section class="map-view py-[60px]">
-      <div class="pb-[40px] text-center container">
-        <h2
-          class="sechd text-black font-normal mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[38px] leading-[56px] xl:text-[52px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
-        >
-          Creating Digital Solutions Beyond Boundaries
-        </h2>
-        <p class="text-black md:w-[70%] mx-auto">
-          At NewAgeSysIT, we bring digital solutions to build the best out of
-          your business through innovation and advancement. Through services
-          that extend beyond your geographical boundaries, we cater to
-          industries and businesses of all sizes, with real impact and future.
-        </p>
-      </div>
-      <div class="card mx-auto relative hidden lg:block">
-        <div class="controls" style="margin-top: 0.6rem">
-          <div>
-            <input type="radio" name="toggle" id="us" checked />
-            <input type="radio" name="toggle" id="global" />
-
-            <!-- Toggle switch -->
-            <div class="toggle-wrapper">
-              <label for="us" class="toggle-label us-label"
-                >U.S. locations</label
-              >
-              <label for="global" class="toggle-label global-label"
-                >Global Map</label
-              >
-            </div>
-          </div>
-          <select id="locationSelect" class="small"></select>
-          <!-- <button id="fitButton" class="small">Fit / Center</button> -->
-
-          <!-- <div class="legend" style="margin-left: 0.6rem">
-          <div class="dot-swatch" aria-hidden="true"></div>
-          <div>Marker</div>
-        </div> -->
-        </div>
-        <div
-          id="tooltip"
-          style="
-            position: absolute;
-            padding: 12px 30px;
-            background: rgba(0, 0, 0, 0.85);
-            color: white;
-            font-size: 15px;
-            border-radius: 6px;
-            pointer-events: auto;
-            z-index: 9999;
-            left: 50%;
-            display: none;
-            top: calc(50% + 60px);
-            right: 0;
-            width: 320px;
-            line-height: 1.4;
-            border-radius:45px;
-          "
-        ></div>
-        <div id="globeWrap">
-          <canvas id="cobeCanvas"></canvas>
-        </div>
-      </div>
-      <div class="block lg:hidden">
-        <div class="controls" style="margin-top: 0.6rem">
-          <div>
-            <input
-              type="radio"
-              name="toggle"
-              id="us_mob"
-              checked
-              class="mobile-only"
-            />
-            <input type="radio" name="toggle" id="global_mob" class="mobile-only" />
-
-            <!-- Toggle switch -->
-            <div class="toggle-wrapper">
-              <label for="us_mob" class="toggle-label us-label_mob"
-                >U.S. locations</label
-              >
-              <label for="global_mob" class="toggle-label global-label_mob"
-                >Global Map</label
-              >
-            </div>
-          </div>
-
-          <select id="locationSelect-mob">
-            <option value="">All Services</option>
-            <!-- U.S. options -->
-            <option value="nj" data-region="us">
-              Custom Software Development — New Jersey
-            </option>
-            <option value="jax" data-region="us">
-              App Development in Jacksonville
-            </option>
-            <option value="phl" data-region="us">
-              App Development in Philadelphia
-            </option>
-            <option value="tpa" data-region="us">
-              App Development in Tampa
-            </option>
-            <option value="mia" data-region="us">
-              App Development in Miami
-            </option>
-            <option value="atl" data-region="us">
-              App Development in Atlanta
-            </option>
-            <option value="clt" data-region="us">
-              App Development in Charlotte
-            </option>
-            <option value="nyc" data-region="us">
-              App Development in New York
-            </option>
-            <option value="va" data-region="us">
-              Mobile App Development in Virginia
-            </option>
-            <option value="ga" data-region="us">
-              Mobile App Development in Georgia
-            </option>
-            <option value="pa" data-region="us">
-              Mobile App Development in Pennsylvania
-            </option>
-            <option value="ca-staff" data-region="us">
-              Staff Augmentation in California
-            </option>
-            <option value="tx-staff" data-region="us">
-              Staff Augmentation in Texas
-            </option>
-            <option value="ny-staff" data-region="us">
-              Staff Augmentation in New York
-            </option>
-            <!-- Global example -->
-            <option value="za-staff" data-region="global">
-              Staff Augmentation in South Africa
-            </option>
-          </select>
-        </div>
-
-        <div class="container">
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-[50px]"
-            id="servicesGrid"
-          >
-            <!-- 1 -->
-            <!-- flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white -->
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="nj"
-              data-region="us"
-            >
-              <span>Custom Software Development — New Jersey</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="jax"
-              data-region="us"
-            >
-              <span>App Development in Jacksonville</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="phl"
-              data-region="us"
-            >
-              <span>App Development in Philadelphia</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248
+        // Blink active marker
+        const t = (Date.now() - blinkStartTime) / 1000;
+        state.markers = LOCATIONS.map((l, i) => {
+          const active = i === activeMarkerIndex && activeMarkerIndex != null;
+          const pulse = active
+            ? 1 +
+              BLINK_AMPLITUDE * Math.abs(Math.sin(t * Math.PI * BLINK_SPEED_HZ))
+            : 1;
+          const base = active ? l.size * 1.1 : l.size;
+          return { location: [l.lat, l.lon], size: base * pulse };
+        });
+
+        state.phi = currentPhi;
+        state.theta = currentTheta;
+      },
+    });
+  }
+
+  // Default focus
+  [focusPhi, focusTheta] = locationToAngles(LOCATIONS[0].lat, LOCATIONS[0].lon);
+  currentPhi = focusPhi;
+  currentTheta = focusTheta;
+  activeMarkerIndex = null;
+  blinkStartTime = Date.now();
+
+  // Build the globe
+  buildGlobe();
+
+  // Fade in
+  setTimeout(() => (canvas.style.opacity = "1"), 20);
+
+  // ---- WebGL context loss / restore handling ----
+  // Some browsers will drop WebGL contexts under memory pressure or after inactivity.
+  canvas.addEventListener(
+    "webglcontextlost",
+    (e) => {
+      // Prevent default so we can restore ourselves.
+      e.preventDefault();
+      // No need to do anything else here; wait for restore event.
+      // Optionally, you could show a subtle "reloading" state.
+    },
+    { passive: false }
+  );
+
+  canvas.addEventListener("webglcontextrestored", () => {
+    // Recompute sizes & DPR (in case environment changed)
+    const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+    if (newDpr !== dpr) dpr = newDpr;
+    recomputeSizes();
+    // Rebuild with the *current* state (phi/theta/markers preserved)
+    buildGlobe();
+  });
+
+  // ---- Controls (unchanged behavior) ----
+  selectEl.addEventListener("change", (e) => {
+    const idx = Number(e.target.value);
+    if (isNaN(idx)) return;
+    const selectedLocation = LOCATIONS[idx];
+    const [phi, theta] = locationToAngles(
+      selectedLocation.lat,
+      selectedLocation.lon
+    );
+    focusPhi = phi;
+    focusTheta = theta;
+
+    suppressGlobalHandler = true;
+    document.getElementById("global").checked = true;
+    suppressGlobalHandler = false;
+
+    activeMarkerIndex = idx;
+    blinkStartTime = Date.now();
+
+    tooltip.innerHTML = `
+      <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+        <span>${selectedLocation.name}</span>
+        <a href="https://newagesysit.com/" target="_blank"
+           style="text-decoration:none;display:flex;align-items:center;gap:4px;">
+          <svg width="20" height="12" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z" fill="white"/>
+          </svg>
+        </a>
+      </div>`;
+    tooltip.style.display = "block";
+  });
+
+  document.getElementById("us").addEventListener("change", (e) => {
+    if (e.target.checked) {
+      const usLocation = LOCATIONS[0];
+      const [phi, theta] = locationToAngles(usLocation.lat, usLocation.lon);
+      focusPhi = phi;
+      focusTheta = theta;
+
+      selectEl.selectedIndex = 0;
+      selectEl.value = "";
+      tooltip.style.display = "none";
+
+      activeMarkerIndex = null;
+      // blinkStartTime = Date.now();
+    }
+  });
+
+  document.getElementById("global").addEventListener("change", (e) => {
+    if (!e.target.checked) return;
+    if (suppressGlobalHandler) return;
+
+    // Keep current orientation; clear dropdown only
+    focusPhi = currentPhi;
+    focusTheta = currentTheta;
+    selectEl.selectedIndex = 0;
+    selectEl.value = "";
+    tooltip.style.display = "none";
+  });
+
+  // Cleanup on unload
+  window.addEventListener("beforeunload", () => {
+    try {
+      ro.disconnect();
+    } catch {}
+    try {
+      globe?.destroy();
+    } catch {}
+  });
+</script>
