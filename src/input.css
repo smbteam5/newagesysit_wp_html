@@ -4344,6 +4344,12 @@ footer ul li {
   background-position: right 1rem center;
   background-size: 1em;
   padding-right: 3em !important;
+  background-size: 12px;
+}
+@media (max-width: 768px) {
+  .map-view select {
+    height: 48px;
+  }
 }
 .map-view .small {
   font-size: 14px;
@@ -4412,24 +4418,29 @@ footer ul li {
 }
 
 /* When "Global Map" is selected */
-.map-view #global:checked ~ .toggle-wrapper .us-label {
+.map-view #global:checked ~ .toggle-wrapper .us-label,
+.map-view #global_mob:checked ~ .toggle-wrapper .us-label_mob {
   background: black;
   color: gray;
 }
 
-.map-view #global:checked ~ .toggle-wrapper .global-label {
+.map-view #global:checked ~ .toggle-wrapper .global-label,
+.map-view #global_mob:checked ~ .toggle-wrapper .global-label_mob {
   background: white;
   color: black;
   border-radius: 45px;
 }
 
 /* When "U.S. locations" is selected */
-.map-view #us:checked ~ .toggle-wrapper .us-label {
+.map-view #us:checked ~ .toggle-wrapper .us-label_mob,
+.map-view #us_mob:checked ~ .toggle-wrapper .us-label_mob {
   background: white;
   color: black;
+  border-radius: 45px;
 }
 
-.map-view #us:checked ~ .toggle-wrapper .global-label {
+.map-view #us:checked ~ .toggle-wrapper .global-label_mob,
+.map-view #us_mob:checked ~ .toggle-wrapper .global-label_mob {
   background: black;
   color: gray;
 }
