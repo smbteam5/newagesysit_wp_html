@@ -1009,6 +1009,10 @@ video {
   top: -60%;
 }
 
+.top-\[0px\] {
+  top: 0px;
+}
+
 .top-\[10\%\] {
   top: 10%;
 }
@@ -1059,10 +1063,6 @@ video {
 
 .top-\[35px\] {
   top: 35px;
-}
-
-.top-\[38\%\] {
-  top: 38%;
 }
 
 .top-\[40px\] {
@@ -4849,10 +4849,6 @@ video {
   background-image: radial-gradient(circle at center,rgba(59,130,246,0.15) 0%,transparent 70%);
 }
 
-.bg-\[url\(\'\.\/images\/bg-cta\.webp\'\)\] {
-  background-image: url('./images/bg-cta.webp');
-}
-
 .bg-\[url\(\'\.\/img\/antroid-bg\.png\'\)\] {
   background-image: url('./img/antroid-bg.png');
 }
@@ -4867,6 +4863,10 @@ video {
 
 .bg-\[url\(\'\.\/img\/bdr-toprow\.png\'\)\] {
   background-image: url('./img/bdr-toprow.png');
+}
+
+.bg-\[url\(\'\.\/img\/bg-cta-cta\.webp\'\)\] {
+  background-image: url('./img/bg-cta-cta.webp');
 }
 
 .bg-\[url\(\'\.\/img\/bg-dd\.jpg\'\)\] {
@@ -5700,11 +5700,6 @@ video {
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
-}
-
-.py-0\.5 {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
 }
 
 .py-1 {
@@ -11091,7 +11086,7 @@ html {
 
 .hero-business {
   position: relative;
-  min-height: 550px;
+  min-height: 650px;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -11103,7 +11098,7 @@ html {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   transition: opacity 420ms ease;
   z-index: -2;
@@ -12376,6 +12371,10 @@ footer ul li {
   display: block;
 }
 
+#hero-banner {
+  transition: opacity 0.3s ease;
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -12902,12 +12901,20 @@ footer ul li {
   left: 0px;
 }
 
+.group:hover .group-hover\:top-\[-20px\] {
+  top: -20px;
+}
+
 .group:hover .group-hover\:top-\[0\] {
   top: 0;
 }
 
 .group:hover .group-hover\:h-\[calc\(100\%-80px\)\] {
   height: calc(100% - 80px);
+}
+
+.group:hover .group-hover\:w-\[calc\(100\%\+50px\)\] {
+  width: calc(100% + 50px);
 }
 
 .group:hover .group-hover\:w-full {
@@ -15056,8 +15063,8 @@ footer ul li {
     min-width: 900px;
   }
 
-  .lg\:max-w-\[25\%\] {
-    max-width: 25%;
+  .lg\:max-w-\[33\%\] {
+    max-width: 33%;
   }
 
   .lg\:max-w-\[420px\] {
@@ -15819,16 +15826,16 @@ footer ul li {
     right: 70px;
   }
 
+  .xl\:top-\[20\%\] {
+    top: 20%;
+  }
+
   .xl\:top-\[200px\] {
     top: 200px;
   }
 
   .xl\:top-\[25px\] {
     top: 25px;
-  }
-
-  .xl\:top-\[30\%\] {
-    top: 30%;
   }
 
   .xl\:top-\[75px\] {
@@ -17175,41 +17182,9 @@ footer ul li {
   }
 }
 
-@media (min-width: 1600px) {
-  .min-1600px\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
-  .min-1600px\:mb-6 {
-    margin-bottom: 1.5rem;
-  }
-
-  .min-1600px\:mt-6 {
-    margin-top: 1.5rem;
-  }
-
-  .min-1600px\:h-\[calc\(75vh\)\] {
-    height: calc(75vh);
-  }
-
-  .min-1600px\:p-16 {
-    padding: 4rem;
-  }
-
-  .min-1600px\:text-\[18px\] {
-    font-size: 18px;
-  }
-
-  .min-1600px\:text-\[23px\] {
-    font-size: 23px;
-  }
-
-  .min-1600px\:text-\[28px\] {
-    font-size: 28px;
-  }
-
-  .min-1600px\:text-\[38px\] {
-    font-size: 38px;
+@media (min-width: 1680px) {
+  .min-1680px\:top-\[38\%\] {
+    top: 38%;
   }
 }
 
@@ -17272,16 +17247,16 @@ footer ul li {
   }
 }
 
-@media (max-width: 470px) {
-  .max-470px\:w-full {
+@media (max-width: 640px) {
+  .max-640px\:w-full {
     width: 100%;
   }
 
-  .max-470px\:flex-col {
+  .max-640px\:flex-col {
     flex-direction: column;
   }
 
-  .max-470px\:gap-0 {
+  .max-640px\:gap-0 {
     gap: 0px;
   }
 }
@@ -17344,12 +17319,12 @@ footer ul li {
   }
 }
 
-@media (max-width: 470px) {
-  .max-470px\:\[\&\>\.m-item\:not\(\:last-child\)\]\:border-b-2>.m-item:not(:last-child) {
+@media (max-width: 640px) {
+  .max-640px\:\[\&\>\.m-item\:not\(\:last-child\)\]\:border-b-2>.m-item:not(:last-child) {
     border-bottom-width: 2px;
   }
 
-  .max-470px\:\[\&\>\.m-item\:not\(\:last-child\)\]\:border-\[\#2b2b2b\]>.m-item:not(:last-child) {
+  .max-640px\:\[\&\>\.m-item\:not\(\:last-child\)\]\:border-\[\#2b2b2b\]>.m-item:not(:last-child) {
     --tw-border-opacity: 1;
     border-color: rgb(43 43 43 / var(--tw-border-opacity));
   }
