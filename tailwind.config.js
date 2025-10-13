@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
         sans: ["Poppins", "sans-serif"],
         blogHeading: ["Montserrat", "sans-serif"],
         blogBody: ["Open Sans", "sans-serif"],
