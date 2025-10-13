@@ -9345,6 +9345,7 @@
           lon: -74.006,
           size: 0.085,
         },
+
         {
           name: "Mobile App Development in Virginia",
           lat: 37.5407,
@@ -9363,6 +9364,7 @@
           lon: -76.8867,
           size: 0.082,
         }, // Harrisburg
+
         {
           name: "Staff Augmentation in California",
           lat: 34.0522,
@@ -9387,6 +9389,7 @@
           lon: -74.006,
           size: 0.082,
         },
+
         // International
         {
           name: "Staff Augmentation in South Africa",
@@ -9403,13 +9406,10 @@
         ];
       }
       const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-      const getDpr = () =>
-        Math.min(2, Math.max(1, window.devicePixelRatio || 1));
 
       const canvas = document.getElementById("cobeCanvas");
       const selectEl = document.getElementById("locationSelect");
       const tooltip = document.getElementById("tooltip");
-      const TWO_PI = Math.PI * 2;
 
       // Populate select (unchanged)
       tooltip.style.display = "none";
@@ -9426,102 +9426,97 @@
         selectEl.appendChild(opt);
       });
 
-      // ---- State ----
+      // ---- State (unchanged core) ----
       let currentPhi = 0;
       let currentTheta = 0.3;
       let focusPhi = 0;
       let focusTheta = 0;
+
       let isDragging = false;
       let dragStartX = 0,
         dragStartY = 0,
         dragStartPhi = 0,
         dragStartTheta = 0;
-      let activeMarkerIndex = null; // Changed to null for safety
+
+      let activeMarkerIndex = 0;
       let blinkStartTime = Date.now();
       const BLINK_SPEED_HZ = 2.2;
       const BLINK_AMPLITUDE = 0.85;
+
       let suppressGlobalHandler = false;
 
-      // ---- Sizing & robustness (Optimized) ----
-      let dpr = getDpr();
+      // ---- Sizing & robustness ----
+      let dpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
       let widthCss = 0;
       let widthPx = 0;
       let sizeDirty = true;
-      let lastNonZeroCss = 600; // fallback
+      let lastNonZeroCss = 600; // fallback to avoid 0×0 canvas
 
       function recomputeSizes() {
-        const newDpr = getDpr();
-        if (newDpr !== dpr) {
-          dpr = newDpr;
-          sizeDirty = true;
-        }
-
+        // Prefer parent size; fall back to canvas; never allow 0
         const parent = canvas.parentElement;
-        // Prefer parent size, fall back to canvas size, ensure minimum for render
         const cssW = Math.max(
           parent ? parent.clientWidth : 0,
           canvas.clientWidth || 0,
           0
         );
-        const newWidthCss = cssW > 20 ? cssW : lastNonZeroCss;
+        widthCss = cssW > 20 ? cssW : lastNonZeroCss;
+        lastNonZeroCss = widthCss;
 
-        if (newWidthCss !== widthCss) {
-          widthCss = newWidthCss;
-          lastNonZeroCss = widthCss;
-          widthPx = Math.max(2, Math.floor(widthCss * dpr));
-          sizeDirty = true;
-        }
+        widthPx = Math.max(2, Math.floor(widthCss * dpr));
+        sizeDirty = true;
       }
 
       // Initial sizing
       recomputeSizes();
 
-      // Keep an eye on actual layout changes
+      // Keep an eye on actual layout changes (more reliable than window.resize alone)
       const ro = new ResizeObserver(() => {
+        const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+        if (newDpr !== dpr) dpr = newDpr;
         recomputeSizes();
       });
       try {
         ro.observe(canvas.parentElement || canvas);
       } catch {}
 
-      // Also listen to window resize (Covers zoom/viewport changes - Debounced)
+      // Also listen to window resize (covers zoom / viewport changes)
       let rzTimer;
       window.addEventListener("resize", () => {
         clearTimeout(rzTimer);
         rzTimer = setTimeout(() => {
+          const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+          if (newDpr !== dpr) dpr = newDpr;
           recomputeSizes();
-        }, 100); // Slightly more aggressive debounce (100ms)
+        }, 120);
       });
 
       // Refresh when tab becomes visible again
       document.addEventListener("visibilitychange", () => {
         if (!document.hidden) {
+          const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+          if (newDpr !== dpr) dpr = newDpr;
           recomputeSizes();
           // nudge the blink so markers re-pulse immediately
           blinkStartTime = Date.now();
         }
       });
 
-      // ---- Pointer controls (unchanged - efficient) ----
-      const handlePointerDown = (e) => {
-        // Only process primary button (LMB or touch)
-        if (e.button !== 0 && e.pointerType !== "touch") return;
-
+      // ---- Pointer controls (unchanged) ----
+      canvas.addEventListener("pointerdown", (e) => {
         canvas.setPointerCapture(e.pointerId);
         isDragging = true;
         dragStartX = e.clientX;
         dragStartY = e.clientY;
         dragStartPhi = currentPhi;
         dragStartTheta = currentTheta;
-      };
-
-      const handlePointerMove = (e) => {
+      });
+      canvas.addEventListener("pointermove", (e) => {
         if (!isDragging) return;
         const dx = e.clientX - dragStartX;
         const dy = e.clientY - dragStartY;
-        // Use the *current* CSS width for better responsiveness
         const denom = Math.max(200, widthCss || 600);
-        const deltaPhi = (dx / denom) * TWO_PI;
+        const deltaPhi = (dx / denom) * Math.PI * 2;
         const deltaTheta = (dy / denom) * Math.PI;
         currentPhi = dragStartPhi + deltaPhi;
         currentTheta = clamp(
@@ -9529,9 +9524,8 @@
           -Math.PI / 2 + 0.01,
           Math.PI / 2 - 0.01
         );
-      };
-
-      const endDrag = (e) => {
+      });
+      function endDrag(e) {
         if (!isDragging) return;
         isDragging = false;
         try {
@@ -9539,29 +9533,19 @@
         } catch {}
         focusPhi = currentPhi;
         focusTheta = currentTheta;
-      };
-
-      canvas.addEventListener("pointerdown", handlePointerDown);
-      canvas.addEventListener("pointermove", handlePointerMove);
+      }
       canvas.addEventListener("pointerup", endDrag);
       canvas.addEventListener("pointercancel", endDrag);
-      canvas.addEventListener("pointerleave", endDrag); // Added for safety
 
       // ---- Globe lifecycle (allows re-init on WebGL restore) ----
       let globe = null;
-
       function buildGlobe() {
         if (globe) {
           try {
             globe.destroy();
-          } catch (e) {
-            console.warn("Error destroying previous globe:", e);
-          }
+          } catch {}
           globe = null;
         }
-
-        // Ensure size variables are up to date before creation
-        recomputeSizes();
 
         globe = createGlobe(canvas, {
           devicePixelRatio: dpr,
@@ -9576,13 +9560,12 @@
           baseColor: [1, 1, 1],
           markerColor: [0.18, 0.52, 1],
           glowColor: [1, 1, 1],
-          // Initial marker creation outside of onRender for performance
           markers: LOCATIONS.map((l) => ({
             location: [l.lat, l.lon],
             size: l.size,
           })),
           onRender: (state) => {
-            // Apply pending size changes only once per change
+            // apply pending size changes once
             if (sizeDirty) {
               state.devicePixelRatio = dpr;
               state.width = widthPx;
@@ -9590,20 +9573,20 @@
               sizeDirty = false;
             }
 
-            // Smooth focus (Rotation logic - efficient)
+            // Smooth focus (no idle autorotation)
             if (!isDragging) {
+              const TWO_PI = Math.PI * 2;
               const dp = (focusPhi - currentPhi + TWO_PI) % TWO_PI;
               const dn = (currentPhi - focusPhi + TWO_PI) % TWO_PI;
-              // Shorter path rotation
               currentPhi += (dp < dn ? dp : -dn) * 0.08;
-              // Smooth vertical tilt
               currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
             }
 
-            // Blink active marker (Must re-create array, but calculation is minimal)
+            // Blink active marker
             const t = (Date.now() - blinkStartTime) / 1000;
             state.markers = LOCATIONS.map((l, i) => {
-              const active = i === activeMarkerIndex;
+              const active =
+                i === activeMarkerIndex && activeMarkerIndex != null;
               const pulse = active
                 ? 1 +
                   BLINK_AMPLITUDE *
@@ -9620,17 +9603,14 @@
       }
 
       // Default focus
-      // Use first location (New Jersey)
-      if (LOCATIONS.length > 0) {
-        [focusPhi, focusTheta] = locationToAngles(
-          LOCATIONS[0].lat,
-          LOCATIONS[0].lon
-        );
-        currentPhi = focusPhi;
-        currentTheta = focusTheta;
-        activeMarkerIndex = null;
-        blinkStartTime = Date.now();
-      }
+      [focusPhi, focusTheta] = locationToAngles(
+        LOCATIONS[0].lat,
+        LOCATIONS[0].lon
+      );
+      currentPhi = focusPhi;
+      currentTheta = focusTheta;
+      activeMarkerIndex = null;
+      blinkStartTime = Date.now();
 
       // Build the globe
       buildGlobe();
@@ -9638,25 +9618,32 @@
       // Fade in
       setTimeout(() => (canvas.style.opacity = "1"), 20);
 
-      // ---- WebGL context loss / restore handling (Robust and unchanged) ----
+      // ---- WebGL context loss / restore handling ----
+      // Some browsers will drop WebGL contexts under memory pressure or after inactivity.
       canvas.addEventListener(
         "webglcontextlost",
         (e) => {
+          // Prevent default so we can restore ourselves.
           e.preventDefault();
+          // No need to do anything else here; wait for restore event.
+          // Optionally, you could show a subtle "reloading" state.
         },
         { passive: false }
       );
 
       canvas.addEventListener("webglcontextrestored", () => {
+        // Recompute sizes & DPR (in case environment changed)
+        const newDpr = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+        if (newDpr !== dpr) dpr = newDpr;
         recomputeSizes();
+        // Rebuild with the *current* state (phi/theta/markers preserved)
         buildGlobe();
       });
 
-      // ---- Controls (Updated event listeners) ----
+      // ---- Controls (unchanged behavior) ----
       selectEl.addEventListener("change", (e) => {
         const idx = Number(e.target.value);
-        if (isNaN(idx) || idx < 0 || idx >= LOCATIONS.length) return;
-
+        if (isNaN(idx)) return;
         const selectedLocation = LOCATIONS[idx];
         const [phi, theta] = locationToAngles(
           selectedLocation.lat,
@@ -9665,66 +9652,55 @@
         focusPhi = phi;
         focusTheta = theta;
 
-        // Set 'global' radio button state, but suppress the handler
         suppressGlobalHandler = true;
-        const globalRadio = document.getElementById("global");
-        if (globalRadio) globalRadio.checked = true;
+        document.getElementById("global").checked = true;
         suppressGlobalHandler = false;
 
         activeMarkerIndex = idx;
         blinkStartTime = Date.now();
 
-        // Tooltip update
-        if (tooltip) {
-          tooltip.innerHTML = `
-        <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
-          <span>${selectedLocation.name}</span>
-          <a href="https://newagesysit.com/" target="_blank"
-            style="text-decoration:none;display:flex;align-items:center;gap:4px;">
-            <svg width="20" height="12" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z" fill="white"/>
-            </svg>
-          </a>
-        </div>`;
-          tooltip.style.display = "block";
-        }
+        tooltip.innerHTML = `
+      <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+        <span>${selectedLocation.name}</span>
+        <a href="https://newagesysit.com/" target="_blank"
+           style="text-decoration:none;display:flex;align-items:center;gap:4px;">
+          <svg width="20" height="12" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z" fill="white"/>
+          </svg>
+        </a>
+      </div>`;
+        tooltip.style.display = "block";
       });
 
-      document.getElementById("us")?.addEventListener("change", (e) => {
-        if (!e.target.checked) return;
-
-        if (LOCATIONS.length > 0) {
+      document.getElementById("us").addEventListener("change", (e) => {
+        if (e.target.checked) {
           const usLocation = LOCATIONS[0];
           const [phi, theta] = locationToAngles(usLocation.lat, usLocation.lon);
           focusPhi = phi;
           focusTheta = theta;
-        }
 
-        if (selectEl) {
           selectEl.selectedIndex = 0;
           selectEl.value = "";
+          tooltip.style.display = "none";
+
+          activeMarkerIndex = null;
+          // blinkStartTime = Date.now();
         }
-        if (tooltip) tooltip.style.display = "none";
-        activeMarkerIndex = null;
       });
 
-      document.getElementById("global")?.addEventListener("change", (e) => {
+      document.getElementById("global").addEventListener("change", (e) => {
         if (!e.target.checked) return;
         if (suppressGlobalHandler) return;
 
         // Keep current orientation; clear dropdown only
         focusPhi = currentPhi;
         focusTheta = currentTheta;
-
-        if (selectEl) {
-          selectEl.selectedIndex = 0;
-          selectEl.value = "";
-        }
-        if (tooltip) tooltip.style.display = "none";
-        activeMarkerIndex = null;
+        selectEl.selectedIndex = 0;
+        selectEl.value = "";
+        tooltip.style.display = "none";
       });
 
-      // Cleanup on unload (Crucial for preventing leaks)
+      // Cleanup on unload
       window.addEventListener("beforeunload", () => {
         try {
           ro.disconnect();
@@ -9733,113 +9709,6 @@
           globe?.destroy();
         } catch {}
       });
-    </script>
-
-    <script>
-      (() => {
-        const radioUS = document.getElementById("us_mob");
-        const radioGlobal = document.getElementById("global_mob");
-        const select = document.getElementById("locationSelect-mob");
-        const cards = Array.from(document.querySelectorAll(".service-card"));
-
-        // Make sure the first option behaves as "All Services"
-        if (select && select.options.length) {
-          const first = select.options[0];
-          first.disabled = false;
-          if (first.value !== "") first.value = "";
-        }
-
-        const scope = () => (radioUS && radioUS.checked ? "us" : "global");
-
-        // NEW: one-shot override to show US data after any radio change
-        let forceUSOnce = false;
-
-        // Cache card IDs
-        const cardIds = new Set(cards.map((c) => c.dataset.id || ""));
-
-        function syncSelectOptions() {
-          if (!select) return;
-          const sc = scope();
-          const opts = Array.from(select.options);
-
-          opts.forEach((opt, i) => {
-            if (i === 0) {
-              opt.hidden = false;
-              return;
-            } // Always show "All Services"
-            const r = opt.dataset.region || "global";
-            opt.hidden = sc === "us" && r !== "us";
-          });
-
-          const sel = select.selectedOptions && select.selectedOptions[0];
-          const selectedValue = select.value || "";
-          const selectionHidden = !!(sel && sel.hidden);
-          const noMatchingCards = selectedValue && !cardIds.has(selectedValue);
-
-          if (selectionHidden || noMatchingCards) {
-            select.selectedIndex = 0;
-            select.value = "";
-          }
-        }
-
-        function applyFilters() {
-          // If forceUSOnce is set, treat scope as 'us' just for this run
-          const scEffective = forceUSOnce ? "us" : scope();
-          const selectedId = select?.value || "";
-
-          cards.forEach((card) => {
-            const region = card.dataset.region || "global";
-            const id = card.dataset.id || "";
-
-            const passScope = scEffective === "us" ? region === "us" : true;
-            const passSelect = selectedId ? id === selectedId : true;
-
-            const show = passScope && passSelect;
-            card.classList.toggle("hidden", !show);
-          });
-
-          // one-shot consumed
-          forceUSOnce = false;
-        }
-
-        if (select) {
-          const onSelectChange = () => {
-            applyFilters();
-          };
-          select.addEventListener("change", onSelectChange);
-          select.addEventListener("input", onSelectChange); // iOS/Safari safety
-        }
-
-        if (radioUS) {
-          radioUS.addEventListener("change", () => {
-            // Reset select and force US view once
-            if (select) {
-              select.selectedIndex = 0;
-              select.value = "";
-            }
-            forceUSOnce = true;
-            syncSelectOptions();
-            applyFilters();
-          });
-        }
-
-        if (radioGlobal) {
-          radioGlobal.addEventListener("change", () => {
-            // Reset select and force US view once (your requirement)
-            if (select) {
-              select.selectedIndex = 0;
-              select.value = "";
-            }
-            forceUSOnce = true;
-            syncSelectOptions(); // show all options again
-            applyFilters(); // but show US cards this time
-          });
-        }
-
-        // Init
-        syncSelectOptions();
-        applyFilters();
-      })();
     </script>
 
     <!-- end -->
