@@ -1919,7 +1919,8 @@
     <!-- Hero Section -->
     <section class="w-full px-6 py-20 md:py-40 text-center">
       <div
-        class="container mx-auto py-8  md:py-1"
+        id="heroSection"
+        class="container mx-auto py-8 md:py-1 transform scale-75 opacity-0"
       >
         <h1
           class="text-4xl lg:text-6xl font-bold mb-10 !leading-[40px] md:!leading-[50px]  xl:!leading-[70px]"
@@ -2015,7 +2016,7 @@
     </section>
 
     <!-- Overview Section -->
-    <section class="w-full py-10 lg:py-20 lg:py-40 px-4 md:px-8">
+    <section class="w-full py-10 lg:py-20  px-4 md:px-8">
       <div class="container mx-auto">
         <div class="mb-10 md:mb-20 lg:mb-40">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
@@ -2143,11 +2144,13 @@
 
     <!-- Solution Details Section -->
     <section
-      class="w-full py-12 lg:py-20 px-4 md:px-8 text-left md:text-center"
+      class="  w-full py-12 lg:py-20 px-4 md:px-8 text-left md:text-center"
     >
       <div class="container mx-auto">
+         <div id="content" class="opacity-0 translate-y-20">
         <h2
           class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 !leading-[36px] lg:!leading-[50px] max-w-4xl mx-auto"
+         
         >
           The Solution that Streamlined Transport Operations with Centralized
           ERP & Mobility System
@@ -2163,13 +2166,15 @@
           We have also designed a user-friendly iOS App to complement the ERP
           system and a user-friendly interface for easy adoption.
         </p>
+        </div>
       </div>
     </section>
 
     <!-- Application Overview Section -->
     <section
-      class="w-full py-12 lg:py-20 px-4 md:px-8 text-left md:text-center"
+      class="h-[80vh] w-full py-12 lg:py-20 px-4 md:px-8 text-left md:text-center"
     >
+     <div id="content1" class="opacity-0 translate-y-20 w-full">
       <div
         class="container mx-auto bg-light-blue rounded-2xl p-6 md:p-10 lg:p-32"
       >
@@ -2190,6 +2195,7 @@
           spreadsheets.
         </p>
       </div>
+    </di>
     </section>
 
     <!-- CTA Section -->
@@ -2250,7 +2256,9 @@
           Key Features
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div id="content2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5
+        opacity-0 translate-y-20
+        ">
           <!-- Feature 1 -->
           <div class="bg-light-blue p-6 md:p-10 rounded-2xl">
             <div class="bg-center bg-cover w-12 h-12 mb-4">
@@ -2359,6 +2367,8 @@
               Customizable reports to enable business insights and compliance.
             </p>
           </div>
+
+          
         </div>
       </div>
     </section>
@@ -2402,7 +2412,7 @@
     </section>
 
     <!-- Banner Section 2 -->
-    <section class="w-full">
+    <section id="zoomSection" class="w-full transform scale-75 opacity-60">
       <div
         class="h-[350px] md:h-[500px] lg:h-[750px] w-full bg-cover bg-center"
         style="background-image: url('./img/cft-sec-img-3.webp')"
@@ -3440,5 +3450,67 @@
         });
       });
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to("#content", {
+    y: 0,              // move to normal position
+    opacity: 1,        // fade in
+    duration: 0.6,       // 0.5s animation
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#content",
+      start: "top 70%",  // when top of content hits 70% of viewport
+      toggleActions: "play none none reverse", // play on enter, reverse on leave
+    },
+  });
+  gsap.to("#content1", {
+    y: 0,              // move to normal position
+    opacity: 1,        // fade in
+    duration: 0.6,       // 0.5s animation
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#content1",
+      start: "top 70%",  // when top of content hits 70% of viewport
+      toggleActions: "play none none reverse", // play on enter, reverse on leave
+    },
+  });
+  gsap.to("#content2", {
+    y: 0,              // move to normal position
+    opacity: 1,        // fade in
+    duration: 0.6,       // 0.5s animation
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#content2",
+      start: "top 70%",  // when top of content hits 70% of viewport
+      toggleActions: "play none none reverse", // play on enter, reverse on leave
+    },
+  });
+  
+  gsap.to("#zoomSection", {
+    scale: 1,            // zoom to actual size
+    opacity: 1,          // fade in
+    duration: 0.8,       // speed
+    ease: "power2.out",  // smooth, no overshoot
+    scrollTrigger: {
+      trigger: "#zoomSection",
+      start: "top 80%",  // start when section top hits 80% of viewport
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // Hero section animation on page load
+  gsap.to("#heroSection", {
+    scale: 1,            // scale to normal size
+    opacity: 1,          // fade in
+    duration: 1.2,       // duration
+    ease: "power3.out",  // smooth easing
+    delay: 0.3,          // small delay after page load
+  });
+
+</script>
   </body>
 </html>
