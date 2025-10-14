@@ -11265,6 +11265,7 @@ html {
   height: 100%;
   margin: 0;
   left: 0;
+  position: absolute;
 }
 
 @media (min-width: 1024px) {
@@ -12350,7 +12351,7 @@ footer ul li {
 
 .map-view .controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 20px;
   justify-content: center;
   padding: 0.8rem 0;
   flex-wrap: wrap;
@@ -12885,6 +12886,31 @@ footer ul li {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #rings {
     top: 38% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .swiper-navs {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    gap: 10px;
+  }
+
+  .swiper-navs svg {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .swiper-navs .swiper-button-next,
+  .swiper-navs .swiper-button-prev {
+    position: unset;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff1c;
+    border-radius: 50%;
   }
 }
 
@@ -14777,10 +14803,6 @@ footer ul li {
     padding-bottom: 2rem;
   }
 
-  .md\:pb-\[0px\] {
-    padding-bottom: 0px;
-  }
-
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
   }
@@ -15325,6 +15347,10 @@ footer ul li {
 
   .lg\:mt-\[152px\] {
     margin-top: 152px;
+  }
+
+  .lg\:mt-\[30px\] {
+    margin-top: 30px;
   }
 
   .lg\:block {
@@ -15964,6 +15990,11 @@ footer ul li {
     padding-bottom: 100px;
   }
 
+  .lg\:py-\[50px\] {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .lg\:py-\[80px\] {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -15991,6 +16022,10 @@ footer ul li {
 
   .lg\:pb-5 {
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:pb-\[0px\] {
+    padding-bottom: 0px;
   }
 
   .lg\:pb-\[100px\] {
@@ -16736,6 +16771,10 @@ footer ul li {
 
   .xl\:pr-8 {
     padding-right: 2rem;
+  }
+
+  .xl\:pt-\[100px\] {
+    padding-top: 100px;
   }
 
   .xl\:pt-\[20\%\] {
@@ -17750,6 +17789,12 @@ footer ul li {
 @media (min-width: 1680px) {
   .min-1680px\:top-\[38\%\] {
     top: 38%;
+  }
+}
+
+@media (max-width: 1360px) {
+  .max-1360px\:hidden {
+    display: none;
   }
 }
 

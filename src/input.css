@@ -3598,6 +3598,7 @@ html {
   height: 100%;
   margin: 0;
   left: 0;
+  position: absolute;
 }
 @media (min-width: 1024px) {
   .hero-inner {
@@ -4317,7 +4318,7 @@ footer ul li {
 }
 .map-view .controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 20px;
   justify-content: center;
   padding: 0.8rem 0;
   flex-wrap: wrap;
@@ -4805,5 +4806,28 @@ footer ul li {
   only screen and (min-resolution: 2dppx) {
   #rings {
     @apply !top-[38%];
+  }
+}
+@media (max-width: 992px) {
+  .swiper-navs {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    gap: 10px;
+  }
+  .swiper-navs svg {
+    width: 100%;
+    padding: 12px;
+  }
+  .swiper-navs .swiper-button-next,
+  .swiper-navs .swiper-button-prev {
+    position: unset;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff1c;
+    border-radius: 50%;
   }
 }
