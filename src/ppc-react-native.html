@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PPC-Landing Page</title>
+    <title>PPC-React Native</title>
 
     <!-- Google Fonts - Inter and Manrope -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Owl Carousel CSS -->
     <link
@@ -110,33 +113,21 @@
       }
 
       /* Custom styles for the gradients - Tailwind's utility classes are good, but a bit of custom CSS for the specific dark gradients can be cleaner for a faithful reproduction. */
-      .gradient-1 {
-        background: linear-gradient(
-          135deg,
-          rgba(37, 34, 73, 0.7) 0%,
-          rgba(13, 11, 29, 0.7) 100%
-        );
+      .gradient-1-ppc {
+       background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 46, 49, 0) 101.94%);
+
       }
-      .gradient-2 {
-        background: linear-gradient(
-          135deg,
-          rgba(29, 28, 41, 0.7) 0%,
-          rgba(13, 11, 29, 0.7) 100%
-        );
+      .gradient-2-ppc {
+       background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
+
       }
-      .gradient-3 {
-        background: linear-gradient(
-          135deg,
-          rgba(62, 34, 73, 0.7) 0%,
-          rgba(13, 11, 29, 0.7) 100%
-        );
+      .gradient-3-ppc {
+       background: linear-gradient(136.57deg, rgba(116, 60, 168, 0.38) 1.71%, rgba(19, 34, 20, 0) 101.9%);
+
       }
-      .gradient-4 {
-        background: linear-gradient(
-          135deg,
-          rgba(38, 38, 38, 0.7) 0%,
-          rgba(13, 11, 29, 0.7) 100%
-        );
+      .gradient-4-ppc {
+      background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
+
       }
       /* Ensure the background of the body matches the image */
       body {
@@ -145,7 +136,7 @@
     </style>
   </head>
 
-  <body class="bg-black font-inter">
+  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
       style="background-color: rgba(0, 10, 31) !important"
@@ -1074,49 +1065,40 @@
     </header>
 
     <section
-      class="bg-contain bg-top bg-no-repeat flex items-center pb-24 h-full relative overflow-hidden"
+      class="h-full xl:h-[100vh] bg-contain bg-top bg-no-repeat flex justify-center items-center py-32  relative "
     >
       <div
-        class="absolute inset-0 z-40 bg-contain bg-top bg-no-repeat pointer-events-none bg-[url('./img/bg-transparent.svg')]"
-      ></div>
-      <div
-        class="absolute z-0 bottom-[-125px] md:bottom-[-120px] lg:bottom-[-130px] xl:bottom-[-65px] 2xl:bottom-[-30px] left-1/2 -translate-x-1/2 w-full h-[500px] lg:h-[600px] 2xl:h-[60%] 2xl:w-full bg-[url('./img/glow-mobile.svg')] bg-cover bg-center bg-no-repeat"
+        class="absolute scale-150 md:scale-105 top-[200px] md:top-[50px] left-0 right-0 bottom-0 z-20 bg-contain bg-top bg-no-repeat pointer-events-none bg-[url('./img/bg-transparent.svg')]"
       ></div>
 
+       
       <div
-        class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)] pointer-events-none"
+        class="absolute z-40 bottom-[-310px] xl:bottom-[-410px] left-1/2 -translate-x-1/2 w-full h-[630px] lg:h-[600px] 2xl:h-[60%] 2xl:w-full bg-[url('./img/effect-ppc-react.webp')] bg-cover bg-center bg-no-repeat pointer-events-none"
       ></div>
 
-      <div
-        class="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"
-      ></div>
+    
 
       <div
-        class="absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
-      ></div>
-
-      <div
-        class="container flex flex-col items-center justify-center pt-[40%] md:pt-[20%] lg:pt-[40%] xl:pt-[20%] z-40"
+        class="container flex flex-col items-center justify-center pt-[20%]  xl:pt-[20%] z-40"
       >
-        <div class="relative flex flex-col items-center justify-center">
+        <div class=" relative flex flex-col items-center justify-center">
           <h1
-            class="text-[30px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
+            class="text-[28px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
           >
-            We Build Custom Apps to <br class="hidden lg:block" />
-            Let Your Business Scale & Thrive
+           Build High-Performance <br class="hidden lg:block" />
+           React Native Apps Real Quick
+
           </h1>
           <p
-            class="text-[18px] md:text-[23px] mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
+            class="text-[14px] md:text-[23px] md:mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
           >
-            We offer custom iOS, Android & cross-platform apps that align with
-            your business’s expectations. As a leading custom app development
-            company, we build apps to ensure your business continues to grow,
-            earn, and scale.
+           Develop lightning-fast, user-friendly mobile and web applications with the exceptional capabilities of React Native.
+
           </p>
           <a
-            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
           >
-            Get a Free Quote in 1 Hour
+           Get Started
 
             <img
               src="./img/arrow-right-white.svg"
@@ -1130,221 +1112,68 @@
               class="absolute bottom-0"
             />
           </a>
+       
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="
+              absolute lg:hidden bottom-[-120px] rounded-full h-[80px] w-[80px]
+              " />
+         
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="absolute  top-[-120px] left-[30px] rounded-full h-[120px] w-[120px] hidden lg:block" />
+          
+       
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="
 
-          <div
-            class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 left-[4%] -top-[22%]"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-1.svg"
-                alt="decorative"
-                class="w-14 h-14"
-              />
-              <p>
-                Coding Since <span class="font-semibold text-[28px]">1994</span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 left-[20%] -top-[46%]"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-2.svg"
-                alt="decorative"
-                class="w-14 h-14"
-              />
-              <p>
-                <span class="font-semibold text-[28px]">95%</span>
-                Client Satisfaction
-              </p>
-            </div>
-          </div>
-          <div
-            class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 -right-[1%] -top-[25%]"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-3.svg"
-                alt="decorative"
-                class="w-14 h-14"
-              />
-              <p>
-                <span class="font-semibold text-[28px]">5-Star</span> In Clutch
-              </p>
-            </div>
-          </div>
-          <div
-            class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 -right-[5%] top-[35%]"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-4.svg"
-                alt="decorative"
-                class="w-14 h-14"
-              />
-              <p><span class="font-semibold text-[28px]">600+</span> Apps</p>
-            </div>
-          </div>
+              absolute  right-[30px] top-[-75px] rounded-full h-[80px] w-[80px] rotate-180 hidden lg:block" />
+
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="
+
+              absolute  right-[25px] bottom-0 rounded-full h-[100px] w-[100px] rotate-180 hidden lg:block" />
+
+
         </div>
 
-        <div
-          class="flex flex-col justify-center items-center mt-5 lg:hidden space-y-3"
-        >
-          <div
-            class="w-full p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[18px] flex items-center justify-start gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-1.svg"
-                alt="decorative"
-                class="w-12 h-12"
-              />
-              <p>
-                Coding Since <span class="font-semibold text-[20px]">1994</span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="w-full p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[18px] flex items-center justify-start gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-2.svg"
-                alt="decorative"
-                class="w-12 h-12"
-              />
-              <p>
-                <span class="font-semibold text-[20px]">95%</span>
-                Client Satisfaction
-              </p>
-            </div>
-          </div>
-          <div
-            class="w-full p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[18px] flex items-center justify-start gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-3.svg"
-                alt="decorative"
-                class="w-12 h-12"
-              />
-              <p>
-                <span class="font-semibold text-[20px]">5-Star</span> In Clutch
-              </p>
-            </div>
-          </div>
-          <div
-            class="w-full p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50"
-          >
-            <div
-              class="px-8 py-2 text-[#F5FAFE] text-[18px] flex items-center justify-start gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-            >
-              <img
-                src="./img/ppc-hero-ic-4.svg"
-                alt="decorative"
-                class="w-12 h-12"
-              />
-              <p><span class="font-semibold text-[20px]">600+</span> Apps</p>
-            </div>
-          </div>
-        </div>
+      
 
-        <div class="relative w-full mt-4 md: lg:mt-[152px] xl:mt-14">
+        <div class="relative w-full mt-32 md: lg:mt-[152px] xl:mt-14 z-50">
           <div
-            class="relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5 backdrop-blur-[20px] recognition-section-ppc md:bg-black/20"
+            class="relative  px-6 md:px-12 py-5 backdrop-blur-[15px] recognition-section-ppc md:bg-black/20 grid grid-cols-1 lg:grid-cols-3"
           >
             <!-- Left text -->
-            <div class="lg:w-[40%] text-center lg:text-left">
+            <div class=" text-center lg:text-left p-5 md:p-10">
               <p
                 class="text-white text-base text-[16px] md:text-[18px] leading-snug"
               >
-                Recognized for building the best solutions for startups,
-                businesses, and enterprises
+                Recognized for delivering the best solutions for businesses of all sizes and across industries
+
               </p>
             </div>
 
-            <!-- Logos Marquee -->
-            <div class="w-full overflow-hidden">
-              <div
-                class="flex items-center gap-10 logos-arquee whitespace-nowrap"
-              >
-                <!-- First set of logos -->
-                <img
-                  src="./img/Deloitte-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/Inc5000-1 (1).svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/uspaacc-1-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/NJBIZ-1-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/50Fastest-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
+           <div class="flex justify-center items-center p-5">
+             <img
+             src="./img/clutch-ppc.svg"
+             alt="clutch-logo"
+             class="w-[70%] h-auto"
+             />
+           </div>
 
-                <!-- Duplicate set for seamless loop -->
-                <img
-                  src="./img/Deloitte-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/Inc5000-1 (1).svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/uspaacc-1-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/NJBIZ-1-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-                <img
-                  src="./img/50Fastest-1.svg"
-                  alt="logo"
-                  class="w-[120px] md:w-[160px] flex-shrink-0"
-                />
-              </div>
-            </div>
+           <div class="flex justify-center items-center p-5 md:p-10 lg:p-5">
+             <img
+             src="./img/30years-ppc.svg"
+             alt="30+years-logo"
+             class="w-full h-auto"
+             />
+           </div>
+
           </div>
         </div>
+
+
       </div>
     </section>
 
-    <section class="bg-black py-10 xl:py-20">
-      <div class="container max-w-[1440px] mx-auto px-4 text-center">
+    <section class="bg-black py-20 xl:pt-40 relative">
+
+      
+      <div class="container max-w-[1440px] mx-auto px-4 text-center relative z-20">
         <h2
           class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
         >
@@ -1356,11 +1185,11 @@
         <div class="grid lg:grid-cols-3 gap-8">
           <!-- Card 1 -->
           <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col
-            relative
-            "
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
           >
-          <div class="absolute inset-y-0 right-0 w-full  bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">
                 Kickoff in 7-10 days
@@ -1383,7 +1212,9 @@
           <div
             class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
           >
-            <div class="absolute inset-y-0 right-0 w-full  bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">
                 99.9% uptime practices
@@ -1406,7 +1237,9 @@
           <div
             class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col overflow-hidden relative"
           >
-            <div class="absolute inset-y-0 right-0 w-full  bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">
                 24/7 monitoring
@@ -1427,6 +1260,16 @@
               />
             </div>
           </div>
+        </div>
+
+        <div class="flex justify-center items-center mt-10">
+           <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-light py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto"
+          >
+         Book Free Consultation
+
+            
+          </a>
         </div>
       </div>
     </section>
@@ -1517,11 +1360,12 @@
             >
               Let’s Build Real Apps
             </h2>
-            <h2 class="text-[30px] md:text-[50px] font-bold leading-normal">
+            <h2 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold leading-normal">
               With Real Results
             </h2>
             <p
-              class="text-[22px] text-[#ffffff82] !font-extralight leading-relaxed mt-6"
+              class="text-[18px] md:text-[20px] lg:text-[22px]
+                text-[#ffffffbc] !font-extralight leading-relaxed mt-6"
             >
               At NewAgeSysIT, we have expert React Native teams who rapidly
               build world-class apps backed by the recognition of global brands.
@@ -1539,14 +1383,14 @@
                 <img
                   src="./img/proven-track.svg"
                   alt="decorative"
-                  class="w-20 h-20 mb-4"
+                  class="  w-24 h-24  lg:w-12 lg:h-12 mb-4"
                 />
               </div>
 
               <div class="pl-4">
-                <h4 class="font-bold text-[28px]">Proven Track Record</h4>
+                <h4 class="font-bold text-[23px]">Proven Track Record</h4>
                 <div class="mt-4 pb-4">
-                  <p class="full-text text-[16px] text-[]">
+                  <p class="full-text text-[16px] font-[200]">
                     With an exceptional track record of building React Native
                     applications, we have consistently demonstrated our ability
                     to win the trust of our clients.
@@ -1559,14 +1403,14 @@
                 <img
                   src="./img/exe-reult.svg"
                   alt="decorative"
-                  class="w-20 h-20 mb-4"
+                  class="  w-24 h-24  lg:w-12 lg:h-12 mb-4"
                 />
               </div>
 
               <div class="pl-4">
-                <h4 class="font-bold text-[28px]">Exceptional Results</h4>
+                <h4 class="font-bold text-[23px]">Exceptional Results</h4>
                 <div class="mt-4 pb-4">
-                  <p class="full-text text-[16px] text-[]">
+                  <p class="full-text text-[16px] font-[200]">
                     Our team is always ready to build your projects
                     independently or augment your in-house team to deliver
                     unparalleled results for your business success.
@@ -1579,14 +1423,14 @@
                 <img
                   src="./img/time-t0-market.svg"
                   alt="decorative"
-                  class="w-20 h-20 mb-4"
+                  class="  w-24 h-24  lg:w-12 lg:h-12 mb-4"
                 />
               </div>
 
               <div class="pl-4">
-                <h4 class="font-bold text-[28px]">Time-to-Market</h4>
+                <h4 class="font-bold text-[23px]">Time-to-Market</h4>
                 <div class="mt-4 pb-4">
-                  <p class="full-text text-[16px] text-[]">
+                  <p class="full-text text-[16px] font-[200]">
                     We’ve made efforts to bring the best applications to the
                     market in weeks, ensuring your business chases opportunities
                     at the right and ideal time.
@@ -1599,14 +1443,14 @@
                 <img
                   src="./img/proven-track.svg"
                   alt="decorative"
-                  class="w-20 h-20 mb-4"
+                 class="  w-24 h-24  lg:w-12 lg:h-12 mb-4"
                 />
               </div>
 
               <div class="pl-4">
-                <h4 class="font-bold text-[28px]">AI-Native Development</h4>
+                <h4 class="font-bold text-[23px]">AI-Native Development</h4>
                 <div class="mt-4 pb-4">
-                  <p class="full-text text-[16px] text-[]">
+                  <p class="full-text text-[16px] font-[200]">
                     By integrating AI into every phase of our process and
                     scaling everything possible, we ensure that we speed up
                     delivery without compromising quality.
@@ -1619,14 +1463,14 @@
                 <img
                   src="./img/proven-track.svg"
                   alt="decorative"
-                  class="w-20 h-20 mb-4"
+                 class="  w-24 h-24  lg:w-12 lg:h-12 mb-4"
                 />
               </div>
 
               <div class="pl-4">
-                <h4 class="font-bold text-[28px]">Cross-Platform Efficiency</h4>
+                <h4 class="font-bold text-[23px]">Cross-Platform Efficiency</h4>
                 <div class="mt-4 pb-4">
-                  <p class="full-text text-[16px] text-[]">
+                  <p class="full-text text-[16px] font-[200]">
                     Using a unified, quality-centric codebase, we deliver native
                     performance across various platforms, including iOS,
                     Android, and web platforms.
@@ -1640,30 +1484,33 @@
     </section>
 
     <section
-      class="relative text-white py-10 md:py-24 px-4 overflow-hidden min-h-[700px] md:min-h-[600px] flex flex-col items-center justify-end md:justify-center text-center bg-[linear-gradient(269.67deg,#122043_37.19%,#3D3392_94.98%)]"
+      class="relative text-white py-10 md:py-24 px-5 overflow-hidden min-h-[800px] md:min-h-[600px] flex flex-col items-center justify-start xl:justify-center text-center bg-[linear-gradient(269.67deg,#122043_37.19%,#3D3392_94.98%)]"
     >
       <!-- Background overlay image -->
       <div
-        class="absolute inset-0 bg-[url('./img/radi-2.webp')] bg-left bg-no-repeat bg-contain z-10 w-[500px]"
-      ></div>
+        class="absolute  z-10 left-0 top-0 h-full hidden lg:block"
+      >
+    <img src="./img/radi-2.webp" alt="Background" class="w-full h-full object-cover" />
+    </div>
 
       <!-- Right side decorative image -->
       <div
-        class="absolute right-0 bottom-1/2 transform translate-y-1/2 w-[300px] md:w-[550px] z-20 hidden md:block"
+        class="absolute right-0 bottom-0  md:-bottom-7 w-[300px] xl:w-[400px]  z-20 "
       >
         <img
           src="./img/ppc-img-mob-hand.webp"
           alt="React Native Development"
-          class="w-full h-full object-contain opacity-80"
+          class="w-full h-auto  opacity-80"
         />
       </div>
 
-      <div class="relative max-w-4xl mx-auto text-left z-30">
-        <h1 class="text-[30px] sm:text-[50px] font-semibold mb-6 leading-tight">
+<div class="container">
+ <div class="relative max-w-3xl mx-auto text-left z-30">
+        <h1 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold mb-6 leading-tight">
           Ready to Scale Your React Native App Development Journey?
         </h1>
         <p
-          class="text-[18px] sm:text-[23] text-[#8C8C8C] mb-10 leading-relaxed"
+          class="text-[18px] sm:text-[23] text-[#8C8C8C] mb-3 lg:mb-10 leading-relaxed max-w-xl"
         >
           See how our React Native developers can help you scale your app
           development with a free call.
@@ -1674,18 +1521,21 @@
           Book a Discovery Call
         </button>
       </div>
+</div>
+     
+
     </section>
 
     <section class="bg-black py-20">
       <div class="container mx-auto px-4">
         <div class="py-12">
           <h2
-            class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal"
+            class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0  text-white font-semibold"
           >
             Our Services
           </h2>
           <p
-            class="text-center text-[18px] md:text-[22px] text-[#FFFFFFB3] mt-5 lg:mt-0 leading-relaxed"
+            class="text-center text-[18px] md:text-[22px] text-[#FFFFFFB3] md:mt-5 lg:mt-0 leading-relaxed"
           >
             Our React Native development services can help your app go live
             faster across iOS, Android, and the web, while ensuring effortless
@@ -1844,19 +1694,28 @@
             </div>
           </div>
         </div>
+        <div class="flex justify-center items-center mt-10 w-full">
+           <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-light py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto max-w-[90%] md:max-w-none"
+          >
+            <span class="truncate">Hire React Native Developers for your project</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="md:p-5 lg:p-20 bg-black">
+    <section class="md:p-5 lg:p-20 bg-black p-5">
       <div
-        class="p-5 md:p-16 md:rounded-[12px] container mx-auto min-h-[300px] flex justify-between items-center text-left book-a-call-section-ppc relative overflow-hidden"
+        class="p-5 md:p-16 md:rounded-[12px] container mx-auto  min-h-[400px] lg:min-h-[300px] flex flex-col lg:justify-between items-start xl:flex-row xl:items-center text-left book-a-call-section-ppc relative overflow-hidden rounded-[12px]"
       >
         <div
-          class="absolute inset-[50px] bg-cover bottom-[-10px] bg-center rounded-[12px] left-[40%] bg-[url('./img/radi-1.webp')]"
-        ></div>
+          class="absolute bottom-0 right-0"
+        >
+      <img src="./img/radi-1.webp" alt="Hero Illustration" class="" />
+      </div>
         <div>
           <h2
-            class="text-3xl md:text-[40px] max-w-3xl mb-8 text-white leading-[40px] md:leading-[50px] font-semibold"
+            class="text-3xl md:text-[40px] max-w-3xl mb-1 text-white leading-[40px] md:leading-[50px] font-semibold"
           >
             Have an App Idea in Mind?
           </h2>
@@ -1869,8 +1728,9 @@
         </div>
         <a
           href="https://newagesysit.com/appcost"
-          class="rounded-full bg-[#FF5B14] text-white font-semibold py-2 px-4 md:px-9 mt-5 hover:opacity-90 transition-opacity"
+          class="rounded-full bg-[#FF5B14] text-white font-semibold py-3 px-4 md:px-10 mt-5 hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-md z-10"
         >
+        <img src="./img/call.svg" alt="call" class="inline mr-2" />
           Book a call
         </a>
       </div>
@@ -1889,7 +1749,9 @@
           <div
             class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
           >
-            <div class="absolute inset-y-0 right-0 w-full  bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
             <div class="text-left p-8 flex-grow pb-0">
               <h4 class="text-white text-[23px] font-semibold mb-6">
                 Startups
@@ -1921,7 +1783,9 @@
           <div
             class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
           >
-            <div class="absolute inset-y-0 right-0 w-full  bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
             <div class="text-left p-8 flex-grow pb-0">
               <h4 class="text-white text-[23px] font-semibold mb-6">SMBs</h4>
 
@@ -1954,7 +1818,9 @@
           <div
             class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
           >
-            <div class="absolute inset-y-0 right-0 w-full  bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
             <div class="text-left p-8 flex-grow pb-0">
               <h4 class="text-white text-[23px] font-semibold mb-6">
                 Enterprises
@@ -1984,77 +1850,87 @@
             </div>
           </div>
         </div>
+        <div class="flex justify-center items-center mt-10 w-full">
+           <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-light py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto"
+          >
+         Book Free Consultation
+
+            
+          </a>
+        </div>
       </div>
     </section>
+
     <section class="py-10 md:py-20 bg-black">
       <div
-        class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-4"
+        class="container mx-auto flex flex-col lg:flex-row gap-8 items-start px-4"
       >
-        <div class="text-white space-y-8 mb-10 lg:mb-0">
-          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+        <div class="text-white space-y-8 mb-10 lg:mb-0 w-full lg:w-[40%]">
+          <h1 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold lg:leading-[70px]">
             Why React Native <br />
             With Us?
           </h1>
           <a
             href="#"
-            class="inline-block px-8 py-3 text-white font-extralight rounded-full text-lg transition duration-300 bg-[#FF5B14]"
+            class="inline-block px-8 py-3 text-white font-light rounded-full text-lg transition duration-300 bg-[#FF5B14]"
           >
             Ask about your specific stack <span class="ml-2">&rsaquo;</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-[60%]">
           <div
-            class="p-6 rounded-xl border border-gray-700/50 gradient-1 min-h-[200px] flex flex-col justify-between why-react-native-ppc"
+            class="p-6 rounded-xl border border-gray-700/50 gradient-1-ppc min-h-[200px] flex flex-col justify-between "
           >
             <div>
-              <p class="text-[50px] font-bold text-white/50 mb-4">01</p>
-              <h3 class="text-2xl font-semibold text-white mb-2">
+              <p class="text-[64px] font-semibold text-white/50 mb-4">01</p>
+              <h3 class="font-manrope text-[24px]  font-[400] text-white mb-2">
                 Time-to-Market
               </h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80]">
+            <p class="text-sm text-[#FFFFFF80] font-manrope">
               Single codebase + proven pipelines (EAS/OTA, Fastlane).
             </p>
           </div>
 
           <div
-            class="p-6 rounded-xl border border-gray-700/50 gradient-2 min-h-[200px] flex flex-col justify-between why-react-native-ppc"
+            class="p-6 rounded-xl border border-gray-700/50 gradient-2-ppc min-h-[200px] flex flex-col justify-between "
           >
             <div>
-              <p class="text-[50px] font-bold text-white/50 mb-4">02</p>
-              <h3 class="text-2xl font-semibold text-white mb-2">
+              <p class="text-[64px] font-semibold text-white/50 mb-4">02</p>
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
                 Reliability at Scale
               </h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80]">
+            <p class="text-sm text-[#FFFFFF80] font-manrope">
               Error monitoring (Sentry/Crashlytics), perf budgets, 99.9% uptime
               practices.
             </p>
           </div>
 
           <div
-            class="p-6 rounded-xl border border-gray-700/50 gradient-3 min-h-[200px] flex flex-col justify-between why-react-native-ppc"
+            class="p-6 rounded-xl border border-gray-700/50 gradient-3-ppc min-h-[200px] flex flex-col justify-between "
           >
             <div>
-              <p class="text-[50px] font-bold text-white/50 mb-4">03</p>
-              <h3 class="text-2xl font-semibold text-white mb-2">Lower TCO</h3>
+              <p class="text-[64px] font-semibold text-white/50 mb-4">03</p>
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">Lower TCO</h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80]">
+            <p class="text-sm text-[#FFFFFF80] font-manrope">
               Shared code + automated testing (Detox/Appium).
             </p>
           </div>
 
           <div
-            class="p-6 rounded-xl border border-gray-700/50 gradient-4 min-h-[200px] flex flex-col justify-between why-react-native-ppc"
+            class="p-6 rounded-xl border border-gray-700/50 gradient-4-ppc min-h-[200px] flex flex-col justify-between "
           >
             <div>
-              <p class="text-[50px] font-bold text-white/50 mb-4">04</p>
-              <h3 class="text-2xl font-semibold text-white mb-2">
+              <p class="text-[64px] font-semibold text-white/50 mb-4">04</p>
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
                 Compliance-Ready
               </h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80]">HIPAA/GDPR as needed.</p>
+            <p class="text-sm text-[#FFFFFF80] font-manrope">HIPAA/GDPR as needed.</p>
           </div>
         </div>
       </div>
@@ -2064,12 +1940,12 @@
       <div class="container">
         <div class="text-[20px] text-center">
           <h2
-            class="text-[28px] md:text-[36px] min-992px:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
+            class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
           >
             React Native Capabilities
           </h2>
           <p
-            class="text-base md:text-[18px] min-992px:max-w-[70%] mx-auto leading-normal text-[#FFFFFFB2]"
+            class="text-base md:text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto leading-normal text-[#FFFFFFB2]"
           >
             With the right technology, you can effectively build a successful
             mobile app. At NewAgeSysIT, we are adept at delivering React Native
@@ -2119,7 +1995,7 @@
                               class="flex items-center justify-center border rounded-xl px-1 md:px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-reactjs.svg"
+                                src="./img/"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2159,7 +2035,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-swift.svg"
+                                src="./img/"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2229,7 +2105,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-AWS.svg"
+                                src="./img/tic -OAuth 2.0.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
@@ -2249,7 +2125,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-google-cloud.svg"
+                                src="./img/sso"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2269,7 +2145,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-azure.svg"
+                                src="./img/tic-Stripe.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2290,7 +2166,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-docker.svg"
+                                src="./img/apple-173_svgrepo.com.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2310,7 +2186,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Kubernetes.svg"
+                                src="./img/gpay"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2360,7 +2236,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Stripe.svg"
+                                src="./img/"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2420,7 +2296,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/firebase-1-1.svg"
+                                src="./img/tic-jest.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2796,7 +2672,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-jest.svg"
+                                src="./img/firebase-1-1.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2816,7 +2692,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Vitest.svg"
+                                src="./img/aws-black.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2856,7 +2732,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Cypress.svg"
+                                src="./img/tic-Sentry.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
                               />
@@ -2899,10 +2775,10 @@
       </div>
     </section>
 
-    <section class="timeline-section">
+    <section class="timeline-section py-12">
       <div class="text-[20px] text-center">
         <h2
-          class="text-[28px] md:text-[36px] min-992px:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
+          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto text-white"
         >
           How Does it Work?
         </h2>
@@ -3742,13 +3618,13 @@
 
         <div class="text-center lg:-mt-20">
           <h3
-            class="text-[28px] md:text-[40px] font-semibold text-white mb-4 max-w-2xl mx-auto"
+            class="text-[30px] md:text-[40px] font-semibold text-white mb-4 w-full md:max-w-2xl mx-auto"
           >
             Here’s What Our Clients Say About
             <br class="sm:hidden" />
             The Results They’ve Made With Us
           </h3>
-          <p class="text-gray-400 mb-8 text-[18px] max-w-2xl mx-auto">
+          <p class="text-gray-400 mb-8 text-[18px] md:text-[20px] w-full md:max-w-2xl mx-auto">
             We have not only made the customer journeys smoother, but also
             helped businesses and entrepreneurs achieve remarkable results with
             our services. Hear from our clients as they talk about how we have
@@ -3763,7 +3639,7 @@
       </div>
     </section>
 
-    <section class="py-8 md:py-20 bg-black">
+    <section class="py-8 md:py-32 bg-black">
       <div class="container">
         <div
           class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
@@ -3781,7 +3657,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-health.svg"
+                        src="./img/ppc-react-health.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3792,28 +3668,13 @@
                       Healthcare
                     </h3>
                   </div>
+                 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-education.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Education
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-on-demand.svg"
+                        src="./img/pcc-ic-finance.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3829,7 +3690,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-finance.svg"
+                        src="./img/ppc-health-saas.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3845,7 +3706,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-wellness.svg"
+                        src="./img/ppc-health-rts.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3856,12 +3717,13 @@
                       Real-Time Systems
                     </h3>
                   </div>
+
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-health.svg"
+                        src="./img/ppc-health-iot.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3877,7 +3739,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-health.svg"
+                        src="./img/ppc-react-health.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3888,28 +3750,13 @@
                       Healthcare
                     </h3>
                   </div>
+                 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-education.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Education
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-on-demand.svg"
+                        src="./img/pcc-ic-finance.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3925,7 +3772,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-finance.svg"
+                        src="./img/ppc-health-saas.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3941,7 +3788,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-wellness.svg"
+                        src="./img/ppc-health-rts.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3952,12 +3799,13 @@
                       Real-Time Systems
                     </h3>
                   </div>
+
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-health.svg"
+                        src="./img/ppc-health-iot.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3968,6 +3816,7 @@
                       IoT
                     </h3>
                   </div>
+
                 </div>
               </div>
 
@@ -3980,7 +3829,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-construction.svg"
+                        src="./img/ppc-health-blockchain.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -3996,7 +3845,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-logistic.svg"
+                        src="./img/ppc-health-on-demand.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4007,12 +3856,13 @@
                       On-Demand
                     </h3>
                   </div>
+
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-ecom.svg"
+                        src="./img/ppc-health-education.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4028,7 +3878,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-entertainment.svg"
+                        src="./img/ppc-health-wellness.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4044,7 +3894,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-construction.svg"
+                        src="./img/ppc-health-transportation.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4060,7 +3910,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-construction.svg"
+                        src="./img/ppc-health-blockchain.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4076,7 +3926,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-logistic.svg"
+                        src="./img/ppc-health-on-demand.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4087,12 +3937,13 @@
                       On-Demand
                     </h3>
                   </div>
+
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-ecom.svg"
+                        src="./img/ppc-health-education.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4108,7 +3959,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-entertainment.svg"
+                        src="./img/ppc-health-wellness.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4124,7 +3975,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-construction.svg"
+                        src="./img/ppc-health-transportation.svg"
                         alt="icon"
                         class="w-[70px] h-[70px]"
                       />
@@ -4135,16 +3986,21 @@
                       Transportation
                     </h3>
                   </div>
+
+                 
+                 
+                
+             
                 </div>
               </div>
             </div>
 
-            <div class="text-left text-white p-4 md:p-10">
-              <h2 class="text-[28px] md:text-[40px] font-semibold mb-6">
+            <div class="text-center  lg:text-left text-white p-2 md:p-10">
+              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
                 We Serve These Industries
               </h2>
 
-              <p class="text-[#FFFFFFB2] text-[18px] md:text-[23px] mb-8">
+              <p class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8">
                 Our journey is something more than inspiring. We’ve come a long
                 way with experience in serving across multiple industries.
                 Here’s a glance at them.
@@ -4153,7 +4009,7 @@
                 class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
               >
                 <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <!-- First set of tiles -->
+                
 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
@@ -4174,7 +4030,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-education.svg"
+                        src="./img/pcc-ic-finance.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4188,7 +4044,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-on-demand.svg"
+                        src="./img/ppc-health-saas.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4202,7 +4058,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-finance.svg"
+                        src="./img/ppc-health-rts.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4216,7 +4072,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-wellness.svg"
+                        src="./img/ppc-health-iot.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4230,7 +4086,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-construction.svg"
+                        src="./img/ppc-health-blockchain.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4244,7 +4100,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-logistic.svg"
+                        src="./img/ppc-health-on-demand.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4258,7 +4114,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-ecom.svg"
+                        src="./img/ppc-health-education.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4272,7 +4128,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-entertainment.svg"
+                        src="./img/ppc-health-wellness.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4286,7 +4142,7 @@
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
-                        src="./img/pcc-ic-entertainment.svg"
+                        src="./img/ppc-health-transportation.svg"
                         alt="icon"
                         class="w-[70px] h-[70px] mr-5"
                       />
@@ -4327,11 +4183,52 @@
       </div>
     </section>
 
+<section class="relative  overflow-hidden py-16 md:py-24 text-center 
+bg-[url('./img/ppc-cta-bg-mobile.webp')] bg-center bg-cover md:bg-[url('./img/4tab.webp')] md:bg-left md:bg-contain 
+xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  bg-[#070916]
+">
+  <!-- Background Gradient or Glow -->
+ 
+
+  <div class="container relative z-10 mx-auto px-4 py-20
+  
+  ">
+    <!-- Heading -->
+    <h2 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight max-w-3xl mx-auto">
+      Ready to hire a React Native developer <br class="hidden md:block" />
+      from our team?
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-gray-400 mt-6 text-[16px] md:text-[18px] max-w-2xl mx-auto leading-relaxed">
+      Scale your business’s success with our dedicated React Native developers.
+      We provide the right set of skills, adaptable solutions, and a commitment
+      to your goals with an expert for your application development needs.
+    </p>
+
+    <!-- Button -->
+    <div class="mt-8">
+      <a
+        href="#"
+        class="inline-block bg-[#FF6B2C] text-white font-medium py-3 px-6 rounded-full text-[16px] hover:bg-[#ff804d] transition-colors"
+      >
+        Hire a React Native Developer
+      </a>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
     <section class="faq py-10 md:py-[80px]">
       <div class="container">
         <div class="dev_head text-[20px] text-center">
           <h2
-            class="text-[28px] md:text-[36px] min-992px:text-[50px] text-white font-bold text-center min-992px:leading-[55px] mb-2"
+            class="text-[28px] md:text-[36px] lg:text-[50px] text-white font-bold text-center lg:leading-[55px] mb-2"
           >
             Frequently Asked Questions
           </h2>
@@ -4371,7 +4268,7 @@
                       </span>
                     </button>
                     <div class="accordion-content">
-                      <div class="p-4 text-white/50 text-[18px] font-[200]">
+                      <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
                         <p>
                           Yes. React Native is an excellent choice for working
                           with existing native applications. With React Native,
@@ -4416,7 +4313,7 @@
                       </span>
                     </button>
                     <div class="accordion-content">
-                      <div class="p-4 text-white/50 text-[18px] font-[200]">
+                     <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
                         <p>
                           We have an efficient team of React Native developers
                           who employ several strategies to ensure your app
@@ -4460,7 +4357,7 @@
                       </span>
                     </button>
                     <div class="accordion-content">
-                      <div class="p-4 text-white/50 text-[18px] font-[200]">
+                      <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
                         <p>
                           Estimating the cost of a React Native development
                           project depends on the features, complexity, and
@@ -4507,7 +4404,7 @@
                       </span>
                     </button>
                     <div class="accordion-content">
-                      <div class="p-4 text-white/50 text-[18px] font-[200]">
+                     <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
                         <p>
                           We have React Native experts who adhere to the highest
                           standards for data encryption, implement robust
@@ -4529,8 +4426,6 @@
       </div>
     </section>
     <!-- Desktop Version -->
-
-  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -4636,8 +4531,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-  
 
     <script>
       $(".client_says").owlCarousel({
