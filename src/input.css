@@ -4457,21 +4457,24 @@ footer ul li {
   display: block;
 }
 
-
-.border-image-ppc-react{
+.border-image-ppc-react {
   position: relative;
-  background: linear-gradient(149.06deg, #0E0A0F 5.9%, #211723 104.22%);
- 
+  background: linear-gradient(149.06deg, #0e0a0f 5.9%, #211723 104.22%);
+
   border-radius: 20px;
   overflow: hidden;
 }
 
 .border-image-ppc-react::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
-  background: linear-gradient(141.26deg, rgba(78, 54, 86, 0.8) 11.03%, rgba(68, 49, 73, 0.5) 90.53%);
+  background: linear-gradient(
+    141.26deg,
+    rgba(78, 54, 86, 0.8) 11.03%,
+    rgba(68, 49, 73, 0.5) 90.53%
+  );
   border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -4480,35 +4483,49 @@ footer ul li {
 }
 
 .border-image-ppc-react::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 70%;
   transform: translateX(-50%);
   width: 60%;
   height: 100%;
-  background: 
-    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%) top/100% 1px,
-    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%) bottom/100% 1px;
-  
+  background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        transparent 100%
+      )
+      top/100% 1px,
+    linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        transparent 100%
+      )
+      bottom/100% 1px;
+
   background-repeat: no-repeat;
   z-index: 2;
 }
 
-
-.ppc-service-card{
+.ppc-service-card {
   position: relative;
-  background: linear-gradient(121.18deg, #0B0C18 19.18%, #2D2F68 106.05%);
+  background: linear-gradient(121.18deg, #0b0c18 19.18%, #2d2f68 106.05%);
   border-radius: 20px;
   overflow: hidden;
 }
 
 .ppc-service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
-  background: linear-gradient(121.15deg, rgba(90, 110, 252, 0.8) 31.16%, rgba(90, 110, 254, 0.5) 90.89%);
+  background: linear-gradient(
+    121.15deg,
+    rgba(90, 110, 252, 0.8) 31.16%,
+    rgba(90, 110, 254, 0.5) 90.89%
+  );
   border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -4516,18 +4533,17 @@ footer ul li {
   -webkit-mask-composite: xor;
 }
 
-
-.book-a-call-section-ppc{
-  background: linear-gradient(286.61deg, #2C43AC 26.07%, #00000D 130.6%);
-
+.book-a-call-section-ppc {
+  background: linear-gradient(286.61deg, #2c43ac 26.07%, #00000d 130.6%);
 }
 
-.why-react-native-ppc{
-background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 46, 49, 0) 101.94%);
-
+.why-react-native-ppc {
+  background: linear-gradient(
+    138.28deg,
+    rgba(23, 45, 152, 0.57) 5.99%,
+    rgba(14, 46, 49, 0) 101.94%
+  );
 }
-
-
 
 .timeline {
   overflow: hidden;
@@ -4645,15 +4661,15 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
 @media (max-width: 768px) {
   .timeline__item:nth-child(even)::before {
     /* left: 18px; */
-            content: "";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 2px;
-        background: #253047;
-        z-index: 1;
-        width: 50px;
-        left: 15px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    background: #253047;
+    z-index: 1;
+    width: 50px;
+    left: 15px;
   }
 }
 .timeline__item:nth-child(even) .timeline__content {
@@ -4663,10 +4679,10 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
 @media (max-width: 768px) {
   .timeline__item:nth-child(even) .timeline__content {
     grid-column: 1;
-    
   }
-  .timeline__item:nth-child(even) .timeline__content::before,.timeline__item:nth-child(odd) .timeline__content::before {
-   display: none;
+  .timeline__item:nth-child(even) .timeline__content::before,
+  .timeline__item:nth-child(odd) .timeline__content::before {
+    display: none;
   }
 }
 .timeline__item:nth-child(odd) .timeline__content {
@@ -4726,7 +4742,7 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
     content: "";
     width: 1px;
     left: 50%;
-    background-color: #2279FF;
+    background-color: #2279ff;
     height: 100%;
     filter: grayscale(1);
     top: -125px;
@@ -4739,7 +4755,7 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
     width: 1px;
     height: 100%;
     left: 50%;
-    background-color: #2279FF;
+    background-color: #2279ff;
     filter: grayscale(1);
     height: 0;
     top: -125px;
@@ -4751,7 +4767,7 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
     width: 1px;
     height: 100%;
     left: 50%;
-    background-color: #2279FF;
+    background-color: #2279ff;
     transition: all 3s;
     filter: grayscale(0);
     top: 0;
@@ -4761,7 +4777,7 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
     content: "";
     width: 1px;
     left: 50%;
-    background-color: #2279FF;
+    background-color: #2279ff;
     height: 100%;
     transition: all 3s;
     filter: grayscale(0);
@@ -4783,4 +4799,11 @@ background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 4
   position: absolute;
   width: 100%;
   height: 100%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  #rings {
+    @apply !top-[38%];
+  }
 }

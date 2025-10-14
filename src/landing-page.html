@@ -40,12 +40,22 @@
         background-clip: text;
         -webkit-background-clip: text;
       }
+      @media (max-width: 1024px) {
+        h2.animatedText span {
+          display: inline;
+        }
+      }
       #progress {
         background: #4361ee;
       }
       #steps {
         will-change: transform;
         transform: translateZ(0);
+      }
+      @media (max-width: 992px) {
+        #steps {
+          margin-top: 50px !important;
+        }
       }
       #steps .step {
         backface-visibility: hidden;
@@ -2053,7 +2063,7 @@
             class="text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
           >
             Redefining Your Business Success
-            <br class="hidden min-768px:block" />
+            <br class="hidden lg:block" />
             With Apps &amp; Software That Scale
           </h1>
           <p class="text-white lg:text-[26px] text-[18px] mt-[20px]">
@@ -3177,9 +3187,9 @@
         >
           <div class="min-1240px:max-w-[33%] w-full">
             <h2 class="text-4xl font-[500] leading-tight mb-6">
-              Ensuring<br />
-              Businesses<br />
-              Innovate, Scale,<br />
+              Ensuring<br class="hidden lg:block" />
+              Businesses<br class="hidden lg:block" />
+              Innovate, Scale,<br class="hidden lg:block" />
               and Succeed
             </h2>
             <p class="text-gray-300 leading-relaxed lg:text-[20px] text-[18px]">
@@ -3570,7 +3580,7 @@
             class="sechd text-left text-[30px] leading-[48px] mt-[30px] md:mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal"
           >
             Services We Provide to Turn Your
-            <br class="hidden md:inline" />
+            <br class="hidden lg:inline" />
             Vision Into a Digital Reality
           </h2>
         </div>
@@ -3995,7 +4005,8 @@
                 <h2
                   class="sechd text-left text-[34px] leading-[48px] lg:text-[38px] lg:leading-[50px] lg:mt-0 xl:text-[40px] xl:leading-[50px] text-white font-normal mb-[15px]"
                 >
-                  Launch Your AI Solution<br />With an Expert Team at Helm
+                  Launch Your AI Solution<br class="hidden lg:block" />With an
+                  Expert Team at Helm
                 </h2>
                 <p class="text-slate-300 mb-6 leading-relaxed">
                   AI has been the new lifeline for businesses, with brands
@@ -4022,7 +4033,10 @@
       x-data="{ active: 'isra' }"
     >
       <div class="container">
-        <h2 class="text-2xl md:text-3xl font-bold leading-tight mb-[60px]">
+        <!-- sechd text-left text-[34px] leading-[48px] lg:text-[38px] lg:leading-[50px] lg:mt-0 xl:text-[40px] xl:leading-[50px] text-white font-normal mb-[15px] -->
+        <h2
+          class="sechd text-left text-[32px] leading-[48px] lg:text-[36px] lg:leading-[50px] lg:mt-0 xl:text-[38px] xl:leading-[50px] text-black font-normal mb-[15px] pb-[50px]"
+        >
           Client Testimonials that Reflect <br />
           Our Expertise & Dedication
         </h2>
@@ -4121,7 +4135,7 @@
                   </p>
                   <p class="font-[500]">IMAN KHAWAJA</p>
                   <p class="lg:text-[20px] text-[18px] text-gray-600 mb-6">
-                    Owner – Whipflip
+                    Owner – ISRA
                   </p>
                 </div>
               </div>
@@ -4130,7 +4144,7 @@
                   <div class="self-end flex-1">
                     <a
                       href="#"
-                      class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
+                      class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center lg:text-[22px] text-[18px]"
                     >
                       <span> Read Full Customer Story </span>
                       <span>
@@ -4166,6 +4180,100 @@
             <!-- LCard Pane -->
             <div
               x-show="active === 'lcard'"
+              x-transition
+              class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
+            >
+              <!--  -->
+              <div>
+                <div class="grid md:grid-cols-[400px_1fr] gap-6 items-start">
+                  <div
+                    class="relative max-w-[330px] mx-auto h-[330px] rounded-[15px] overflow-hidden"
+                  >
+                    <a
+                      href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+                      class="popup-youtube"
+                    >
+                      <img
+                        src="./img/David-Chabukashvili-1-1-1.webp"
+                        alt=""
+                        class="w-full h-full object-cover"
+                      />
+                      <div
+                        class="absolute bottom-2 left-2 bg-[#00000040] border border-[#C3C9D080] text-white text-xs px-[10px] py-[5px] gap-[10px] flex items-center rounded-[45px]"
+                      >
+                        <svg
+                          width="24"
+                          height="25"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 0.787109C5.38275 0.787109 0 6.16988 0 12.7871C0 19.4043 5.38275 24.787 12 24.787C18.6172 24.787 23.9999 19.4043 23.9999 12.7871C23.9999 6.16988 18.6172 0.787109 12 0.787109ZM12 2.50139C17.6907 2.50139 22.2856 7.09635 22.2856 12.7871C22.2856 18.4778 17.6907 23.0728 12 23.0728C6.30922 23.0728 1.71428 18.4778 1.71428 12.7871C1.71428 7.09635 6.30922 2.50139 12 2.50139ZM9.74997 7.35852C9.12831 7.37337 8.58729 7.90389 8.5714 8.66208V16.9031C8.59263 17.914 9.54843 18.5273 10.3839 18.046L17.0982 13.9121C17.4641 13.6863 17.7142 13.2718 17.7142 12.7871C17.7142 12.3023 17.4641 11.8878 17.0982 11.6621L10.3839 7.52814C10.175 7.40783 9.95719 7.35354 9.74997 7.35852Z"
+                            fill="white"
+                          />
+                        </svg>
+
+                        <span>01:50</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <p class="text-xl leading-relaxed mb-4 text-[32px]">
+                      “They delivered everything on time and it was of great
+                      quality. They go above and beyond to meet yourrequirements
+                      and deliver the product you are looking for….”
+                    </p>
+                    <p class="font-[500]">David Chabukashvili</p>
+                    <p class="lg:text-[20px] text-[18px] text-gray-600 mb-6">
+                      Founder -LCard App
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex mt-4 gap-[20px] lg:px-[35px]">
+                    <div class="self-end flex-1">
+                      <a
+                        href="#"
+                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center lg:text-[22px] text-[18px]"
+                      >
+                        <span> Read Full Customer Story </span>
+                        <span>
+                          <svg
+                            width="8"
+                            height="14"
+                            viewBox="0 0 10 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132C1.09575 16.0551 1.0641 16.1049 1.04251 16.1598C1.02091 16.2147 1.0098 16.2736 1.0098 16.333C1.0098 16.3924 1.02091 16.4513 1.04251 16.5062C1.0641 16.5611 1.09575 16.6109 1.13563 16.6528Z"
+                              fill="#4361EE"
+                              stroke="#4361EE"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="px-[20px] border-l border-[#A3ACB5] flex-1">
+                      <p class="text-[50px] font-[500]">30%</p>
+                      <p class="text-sm text-gray-600">
+                        Growth in profit margins
+                      </p>
+                    </div>
+                    <div class="px-[20px] border-l border-[#A3ACB5] flex-1">
+                      <p class="text-[50px] font-[500]">40%</p>
+                      <p class="text-sm text-gray-600">Faster legal reviews</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car-Up Pane -->
+            <div
+              x-show="active === 'carup'"
               x-transition
               class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
             >
@@ -4221,100 +4329,7 @@
                     <div class="self-end flex-1">
                       <a
                         href="#"
-                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
-                      >
-                        <span> Read Full Customer Story </span>
-                        <span>
-                          <svg
-                            width="8"
-                            height="14"
-                            viewBox="0 0 10 18"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.13563 16.6528C1.21568 16.7381 1.32445 16.7864 1.43812 16.7871C1.49454 16.7876 1.55047 16.776 1.60248 16.7529C1.6545 16.7298 1.7015 16.6958 1.74062 16.6528L8.87353 9.11222C8.91359 9.07042 8.9454 9.02063 8.96711 8.96574C8.98882 8.91084 9 8.85193 9 8.79243C9 8.73293 8.98882 8.67403 8.96711 8.61913C8.9454 8.56423 8.91359 8.51444 8.87353 8.47265L1.74062 0.930487C1.7014 0.886164 1.65415 0.850635 1.60167 0.826014C1.5492 0.801393 1.49257 0.788184 1.43517 0.787172C1.37777 0.786161 1.32076 0.797367 1.26754 0.820125C1.21431 0.842883 1.16596 0.876727 1.12537 0.919643C1.08477 0.962559 1.05276 1.01367 1.03123 1.06993C1.0097 1.1262 0.999102 1.18647 1.00006 1.24715C1.00102 1.30783 1.01351 1.36769 1.0368 1.42317C1.06009 1.47864 1.0937 1.5286 1.13563 1.57006L7.96604 8.79243L1.13563 16.0132C1.09575 16.0551 1.0641 16.1049 1.04251 16.1598C1.02091 16.2147 1.0098 16.2736 1.0098 16.333C1.0098 16.3924 1.02091 16.4513 1.04251 16.5062C1.0641 16.5611 1.09575 16.6109 1.13563 16.6528Z"
-                              fill="#4361EE"
-                              stroke="#4361EE"
-                            />
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                    <div class="px-[20px] border-l border-[#A3ACB5] flex-1">
-                      <p class="text-[50px] font-[500]">30%</p>
-                      <p class="text-sm text-gray-600">
-                        Growth in profit margins
-                      </p>
-                    </div>
-                    <div class="px-[20px] border-l border-[#A3ACB5] flex-1">
-                      <p class="text-[50px] font-[500]">40%</p>
-                      <p class="text-sm text-gray-600">Faster legal reviews</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Car-Up Pane -->
-            <div
-              x-show="active === 'carup'"
-              x-transition
-              class="bg-[#fdeeea] rounded-xl p-6 md:p-8"
-            >
-              <div>
-                <div class="grid md:grid-cols-[400px_1fr] gap-6 items-start">
-                  <div
-                    class="relative max-w-[330px] mx-auto h-[330px] rounded-[15px] overflow-hidden"
-                  >
-                    <a
-                      href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
-                      class="popup-youtube"
-                    >
-                      <img
-                        src="./img/David-Chabukashvili-1-1-1.webp"
-                        alt=""
-                        class="w-full h-full object-cover"
-                      />
-                      <div
-                        class="absolute bottom-2 left-2 bg-[#00000040] border border-[#C3C9D080] text-white text-xs px-[10px] py-[5px] gap-[10px] flex items-center rounded-[45px]"
-                      >
-                        <svg
-                          width="24"
-                          height="25"
-                          viewBox="0 0 24 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12 0.787109C5.38275 0.787109 0 6.16988 0 12.7871C0 19.4043 5.38275 24.787 12 24.787C18.6172 24.787 23.9999 19.4043 23.9999 12.7871C23.9999 6.16988 18.6172 0.787109 12 0.787109ZM12 2.50139C17.6907 2.50139 22.2856 7.09635 22.2856 12.7871C22.2856 18.4778 17.6907 23.0728 12 23.0728C6.30922 23.0728 1.71428 18.4778 1.71428 12.7871C1.71428 7.09635 6.30922 2.50139 12 2.50139ZM9.74997 7.35852C9.12831 7.37337 8.58729 7.90389 8.5714 8.66208V16.9031C8.59263 17.914 9.54843 18.5273 10.3839 18.046L17.0982 13.9121C17.4641 13.6863 17.7142 13.2718 17.7142 12.7871C17.7142 12.3023 17.4641 11.8878 17.0982 11.6621L10.3839 7.52814C10.175 7.40783 9.95719 7.35354 9.74997 7.35852Z"
-                            fill="white"
-                          />
-                        </svg>
-
-                        <span>01:50</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <p class="text-xl leading-relaxed mb-4 text-[32px]">
-                      “They delivered everything on time and it was of great
-                      quality. They go above and beyond to meet yourrequirements
-                      and deliver the product you are looking for….”
-                    </p>
-                    <p class="font-[500]">David Chabukashvili</p>
-                    <p class="lg:text-[20px] text-[18px] text-gray-600 mb-6">
-                      Founder -LCard App
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex mt-4 gap-[20px] lg:px-[35px]">
-                    <div class="self-end flex-1">
-                      <a
-                        href="#"
-                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
+                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center lg:text-[22px] text-[18px]"
                       >
                         <span> Read Full Customer Story </span>
                         <span>
@@ -4405,7 +4420,7 @@
                     <div class="self-end flex-1">
                       <a
                         href="#"
-                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center"
+                        class="text-indigo-600 font-medium hover:underline inline-flex gap-[10px] items-center lg:text-[22px] text-[18px]"
                       >
                         <span> Read Full Customer Story </span>
                         <span>
@@ -4494,7 +4509,7 @@
                       </p>
                       <p class="font-medium">IMAN KHAWAJA</p>
                       <p class="lg:text-[20px] text-[18px] text-gray-600 mb-6">
-                        Owner – Whipflip
+                        Owner – ISRA
                       </p>
                     </div>
                   </div>
@@ -5015,9 +5030,9 @@
       <div class="hero-inner text-white">
         <div class="lg:px-[50px] px-[25px]">
           <h2
-            class="sechd text-left text-[30px] leading-[48px] mt-[30px] mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal absolute top-[40px] z-[99]"
+            class="sechd text-left text-[30px] leading-[40px] mt-[30px] mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal absolute top-[40px] z-[99]"
           >
-            Achieving Business Excellence with <br />
+            Achieving Business Excellence with <br class="hidden lg:block" />
             Cross-Industry Experience
           </h2>
         </div>
@@ -5476,7 +5491,7 @@
     <section class="map-view py-[60px] bg-[#fff]">
       <div class="pb-[40px] text-center container">
         <h2
-          class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[38px] leading-[56px] xl:text-[52px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
+          class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 leading-[40px] xl:text-[50px] xl:leading-[56px] max-[1550px]:text-[36px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[40px]"
         >
           Creating Digital Solutions Beyond Boundaries
         </h2>
@@ -5841,7 +5856,7 @@
       <div class="container mx-auto px-4">
         <div class="sec-head">
           <h2
-            class="sechd text-center text-white font-normal text-[38px] lg:leading-[56px] xl:text-[52px] xl:leading-[56px] lg:text-[38px] max-[1550px]:leading-[48px] md:text-[30px] md:leading-[48px] mt-[30px] mb-[40px]"
+            class="sechd text-center text-white font-normal text-[32px] lg:leading-[56px] xl:text-[48px] xl:leading-[52px] lg:text-[36px] max-[1550px]:leading-[44px] md:leading-[40px] mt-[30px] mb-[40px]"
           >
             Powered By Trusted Cloud Providers
           </h2>
@@ -5921,7 +5936,7 @@
     <section class="partners bg-[#0D0D0D] pt-10">
       <div class="container mx-auto px-4">
         <h2
-          class="sechd text-center text-white font-normal text-[38px] lg:leading-[56px] xl:text-[52px] xl:leading-[56px] lg:text-[38px] max-[1550px]:leading-[48px] md:text-[30px] md:leading-[48px] mt-[30px] mb-[40px]"
+          class="sechd text-center text-white font-normal text-[32px] lg:leading-[56px] xl:text-[48px] xl:leading-[52px] lg:text-[36px] max-[1550px]:leading-[44px] md:leading-[40px] mt-[30px] mb-[40px]"
         >
           <span class="block">Our Al Partnerships</span>
         </h2>
@@ -6011,7 +6026,9 @@
         <!-- Accordion -->
         <div class="accordion mt-5" id="technologyStackAccordion">
           <!-- Turn the bootstrap row into a responsive grid -->
-          <div class="row mt-5 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div
+            class="row mt-5 grid grid-cols-1 lg:grid-cols-2 gap-6 pt-[40px] lg:pt-[0px]"
+          >
             <!-- LEFT COLUMN -->
             <div class="col-lg-6 space-y-4">
               <!-- Item 1 -->
@@ -7956,41 +7973,43 @@
                 <div class="form-group mb-3">
                   <input
                     type="text"
-                    placeholder="Name"
+                    placeholder="Name *"
                     class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
                   />
                 </div>
                 <div class="form-group mb-3">
                   <input
                     type="text"
-                    placeholder="Email Address"
+                    placeholder="Email *"
                     class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
                   />
                 </div>
                 <div class="form-group mb-3">
                   <input
                     type="text"
-                    placeholder="Phone Number"
+                    placeholder="Phone *"
                     class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
                   />
                 </div>
                 <div class="form-group mb-3">
                   <input
                     type="text"
-                    placeholder="Company"
+                    placeholder="Company *"
                     class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
                   />
                 </div>
                 <div class="form-group mb-3">
-                  <input
-                    type="text"
-                    placeholder="Role"
-                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
-                  />
+                  <textarea
+                    name="user_role"
+                    placeholder="Message"
+                    rows="8"
+                    class="w-full h-[100px] px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                    aria-label="Role Description"
+                  ></textarea>
                 </div>
-                <div class="form-group mb-3">
+                <!-- <div class="form-group mb-3">
                   <select
-                    class="w-full border border-[#A0B6C5] text-gray-500 rounded px-[15px] py-[10px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    class="w-full border border-[#A0B6C5] text-gray-500 rounded px-[15px] py-[10px] focus:outline-none focus:ring-2 focus:ring-blue-400 bg-[#fff] min-h-[45px]"
                   >
                     <option disabled selected>Project Type</option>
                     <option>Option 1</option>
@@ -7999,13 +8018,13 @@
                 </div>
                 <div class="form-group mb-3">
                   <select
-                    class="w-full border border-[#A0B6C5] text-gray-500 rounded px-[15px] py-[10px] focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    class="w-full border border-[#A0B6C5] text-gray-500 rounded px-[15px] py-[10px] focus:outline-none focus:ring-2 focus:ring-blue-400 bg-[#fff] min-h-[45px]"
                   >
                     <option disabled selected>Budget</option>
                     <option>Option 1</option>
                     <option>Option 2</option>
                   </select>
-                </div>
+                </div> -->
                 <div class="form-group mb-3">
                   <button
                     class="text-[18px] px-[15px] py-[10px] bg-[#121314] w-full rounded-[5px] text-white"
@@ -8039,10 +8058,10 @@
             <div class="space-y-4">
               <div>
                 <h2
-                  class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[36px] leading-[54px] xl:text-[50px] xl:leading-[56px] max-[1550px]:text-[36px] max-[1550px]:leading-[46px] max-992px:text-[28px] max-992px:leading-[46px]"
+                  class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[36px] leading-[54px] xl:text-[50px] xl:leading-[56px] max-[1550px]:text-[36px] max-[1550px]:leading-[46px] max-992px:text-[28px] max-992px:leading-[40px]"
                 >
-                  Frequently <br class="hidden md:block" />
-                  asked <br class="hidden md:block" />
+                  Frequently <br class="hidden lg:block" />
+                  asked <br class="hidden lg:block" />
                   questions
                 </h2>
               </div>
@@ -8185,8 +8204,8 @@
                 >
                   <div class="accordion-body px-3 pb-4 pt-3">
                     <p>
-                      Yes. Our 100% in-house team develops all our projects—no
-                      outsourcing—ensuring quality control, faster
+                      Yes. All our projects are developed by our 100% in-house
+                      team—no outsourcing—ensuring quality control, faster
                       communication, and reliable delivery.
                     </p>
                   </div>
@@ -8616,7 +8635,8 @@
                 >
                   <div class="accordion-body px-3 pb-4 pt-3">
                     <p>
-                      Yes. We design scalable solutions that handle more users,
+                      Yes. We design solutions with scalability in mind,
+                      ensuring your application can handle increased users,
                       features, and market demands without compromising
                       performance.
                     </p>
@@ -9060,28 +9080,37 @@
         });
       })();
     </script>
+
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
+      // --- NEW FIX: Normalize Scroll for Synchronization and Smoother Feel ---
+      // This attempts to put scrolling on the same thread as GSAP, which should eliminate
+      // the source of the jerking/jittering, especially on mobile/iOS.
+      ScrollTrigger.normalizeScroll(true);
+
       const container = document.querySelector("#steps");
       const steps = gsap.utils.toArray("#steps .step");
-      const progressEl = document.querySelector("#progress"); // --- small CSS hints (can also go in your stylesheet) --- // makes Safari/iOS less likely to white-flash on layer changes
+      const progressEl = document.querySelector("#progress");
 
-      gsap.set(container, { force3D: true });
+      // --- AGGRESSIVE CSS HINTS FOR PERFORMANCE ---
+      gsap.set(container, { force3D: true, willChange: "transform" });
       gsap.set(steps, {
         willChange: "transform, opacity",
         backfaceVisibility: "hidden",
       });
-      gsap.set(progressEl, { transformOrigin: "left center" }); // --- stable viewport height helper (iOS-safe) ---
+      gsap.set(progressEl, { transformOrigin: "left center" });
 
+      // --- stable viewport height helper (iOS-safe) ---
       const getStableVH = () => {
         // Prefer screen.height on iOS (address bar collapses change innerHeight)
         const iOS =
           /iPad|iPhone|iPod/.test(navigator.userAgent) ||
           (navigator.userAgent.includes("Mac") && "ontouchend" in document);
         return iOS ? screen.height : window.innerHeight;
-      }; // --- initial state ---
+      };
 
+      // --- initial state ---
       steps.forEach((el, i) => {
         gsap.set(el, {
           autoAlpha: i === 0 ? 1 : 0,
@@ -9103,6 +9132,7 @@
         const next = steps[nextIdx];
         gsap.killTweensOf([prev, next]);
 
+        // Animate out previous step
         gsap.to(prev, {
           autoAlpha: 0,
           y: -40,
@@ -9115,6 +9145,7 @@
           },
         });
 
+        // Animate in next step
         gsap.fromTo(
           next,
           { autoAlpha: 0, y: 40 },
@@ -9142,7 +9173,7 @@
       const mm = ScrollTrigger.matchMedia;
 
       mm({
-        // Desktop & tablets in landscape
+        // Desktop & tablets in landscape (scrub is OK here)
         "(min-width: 768px)": function () {
           const pinST = ScrollTrigger.create({
             id: "steps-pin-desktop",
@@ -9150,8 +9181,9 @@
             start: "top top",
             end: () => "+=" + steps.length * (getStableVH() * 0.5),
             pin: true,
+            // Moderate settings now that normalizeScroll is active
             anticipatePin: 1,
-            scrub: 0.1,
+            scrub: 0.2,
             snap: false,
             onUpdate: (self) => {
               const target = Math.round(self.progress * (steps.length - 1));
@@ -9160,7 +9192,7 @@
             invalidateOnRefresh: true,
           });
 
-          gsap.set(progressEl, { scaleX: 1 / steps.length }); // Throttled refresh on resize/orientation
+          gsap.set(progressEl, { scaleX: 1 / steps.length });
 
           let t;
           const onResize = () => {
@@ -9169,9 +9201,10 @@
           };
           window.addEventListener("resize", onResize);
           window.addEventListener("orientationchange", onResize);
-        }, // Mobile phones
+        },
 
-        "(max-width: 767px)": function () {
+        // Mobile phones (Force transform pin & add tiny scrub)
+        "(max-width: 768px)": function () {
           const iOS =
             /iPad|iPhone|iPod/.test(navigator.userAgent) ||
             (navigator.userAgent.includes("Mac") && "ontouchend" in document);
@@ -9179,13 +9212,14 @@
           const pinST = ScrollTrigger.create({
             id: "steps-pin-mobile",
             trigger: container,
-            start: "top 80px", // MODIFICATION: Reduced pin duration from 0.85x VH to 0.4x VH per step
+            start: "top 100px",
             end: () => "+=" + steps.length * (getStableVH() * 0.4),
-            pin: true, // KEY: avoid position:fixed flashes on iOS by forcing transform pin
-            pinType: iOS ? "transform" : "fixed",
+            pin: true,
+            pinType: "transform",
+            // Moderate settings now that normalizeScroll is active
             anticipatePin: 1,
-            scrub: false,
-            snap: false, // KEY: snaps on mobile often cause the white flicker
+            scrub: 0.2,
+            snap: false,
             onUpdate: (self) => {
               const target = Math.round(self.progress * (steps.length - 1));
               if (target !== current) showStep(target);
@@ -9193,11 +9227,7 @@
             invalidateOnRefresh: true,
           });
 
-          gsap.set(progressEl, { scaleX: 1 / steps.length }); // Reduce refresh churn from URL bar show/hide
-
-          ScrollTrigger.config({
-            autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-          });
+          gsap.set(progressEl, { scaleX: 1 / steps.length });
 
           let t;
           const onResize = () => {
@@ -10389,7 +10419,7 @@
 
           // Tooltip update... (your original tooltip logic)
           if (tooltip) {
-          tooltip.innerHTML = `
+            tooltip.innerHTML = `
         <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
           <span>${selectedLocation.name}</span>
           <a href="https://newagesysit.com/" target="_blank"
@@ -10399,8 +10429,8 @@
             </svg>
           </a>
         </div>`;
-          tooltip.style.display = "block";
-        }
+            tooltip.style.display = "block";
+          }
         });
 
         document.getElementById("us")?.addEventListener("change", (e) => {
