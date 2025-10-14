@@ -2052,7 +2052,8 @@
           <h1
             class="text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
           >
-            Redefining Your Business Success <br />
+            Redefining Your Business Success
+            <br class="hidden min-768px:block" />
             With Apps &amp; Software That Scale
           </h1>
           <p class="text-white lg:text-[26px] text-[18px] mt-[20px]">
@@ -3289,7 +3290,7 @@
     >
       <div class="container">
         <div
-          class="grid md:grid-cols-2 grid-col-1 items-center gap-10 md:p-[25px] p-[15px] border border-[#2A2D30]"
+          class="grid md:grid-cols-2 grid-col-1 gap-10 md:p-[25px] p-[15px] border border-[#2A2D30]"
         >
           <div class="relative">
             <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
@@ -4829,7 +4830,7 @@
       </div>
     </section>
     <!-- steps -->
-    <section id="steps" class="relative bg-[#0D0D0D] lg:pt-[100px] sm:pt-[0px]">
+    <section id="steps" class="relative bg-[#0D0D0D] lg:pt-[50px] sm:pt-[0px]">
       <!-- Top progress bar -->
       <div class="py-[30px]">
         <div class="lg:container w-full px-6">
@@ -4842,7 +4843,7 @@
       </div>
 
       <!-- Stage: stacked full-viewport steps -->
-      <div class="relative h-screen">
+      <div class="relative md:h-[calc(100vh-140px)] h-screen">
         <div class="absolute left-0 top-0 w-screen h-1 bg-white/10 z-[60]">
           <div id="progress" class="h-full origin-left scale-x-0"></div>
         </div>
@@ -4850,7 +4851,7 @@
         <section
           class="step absolute inset-0 flex items-center justify-center text-white"
         >
-          <div class="w-full px-6 md:px-10">
+          <div class="w-full px-6 md:px-10 container">
             <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
@@ -4889,7 +4890,7 @@
 
         <!-- STEP 02 -->
         <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full px-6 md:px-10">
+          <div class="w-full px-6 md:px-10 container">
             <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
@@ -4928,7 +4929,7 @@
 
         <!-- STEP 03 -->
         <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full px-6 md:px-10">
+          <div class="w-full px-6 md:px-10 container">
             <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
@@ -4967,7 +4968,7 @@
 
         <!-- STEP 04 -->
         <section class="step absolute inset-0 flex items-center justify-center">
-          <div class="w-full px-6 md:px-10">
+          <div class="w-full px-6 md:px-10 container">
             <div class="grid lg:grid-cols-2 grid-col-1 gap-8">
               <div>
                 <span
@@ -8038,10 +8039,10 @@
             <div class="space-y-4">
               <div>
                 <h2
-                  class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[38px] leading-[56px] xl:text-[52px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
+                  class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[36px] leading-[54px] xl:text-[50px] xl:leading-[56px] max-[1550px]:text-[36px] max-[1550px]:leading-[46px] max-992px:text-[28px] max-992px:leading-[46px]"
                 >
-                  Frequently <br />
-                  asked <br />
+                  Frequently <br class="hidden md:block" />
+                  asked <br class="hidden md:block" />
                   questions
                 </h2>
               </div>
@@ -9064,27 +9065,23 @@
 
       const container = document.querySelector("#steps");
       const steps = gsap.utils.toArray("#steps .step");
-      const progressEl = document.querySelector("#progress");
+      const progressEl = document.querySelector("#progress"); // --- small CSS hints (can also go in your stylesheet) --- // makes Safari/iOS less likely to white-flash on layer changes
 
-      // --- small CSS hints (can also go in your stylesheet) ---
-      // makes Safari/iOS less likely to white-flash on layer changes
       gsap.set(container, { force3D: true });
       gsap.set(steps, {
         willChange: "transform, opacity",
         backfaceVisibility: "hidden",
       });
-      gsap.set(progressEl, { transformOrigin: "left center" });
+      gsap.set(progressEl, { transformOrigin: "left center" }); // --- stable viewport height helper (iOS-safe) ---
 
-      // --- stable viewport height helper (iOS-safe) ---
       const getStableVH = () => {
         // Prefer screen.height on iOS (address bar collapses change innerHeight)
         const iOS =
           /iPad|iPhone|iPod/.test(navigator.userAgent) ||
           (navigator.userAgent.includes("Mac") && "ontouchend" in document);
         return iOS ? screen.height : window.innerHeight;
-      };
+      }; // --- initial state ---
 
-      // --- initial state ---
       steps.forEach((el, i) => {
         gsap.set(el, {
           autoAlpha: i === 0 ? 1 : 0,
@@ -9142,7 +9139,6 @@
         gsap.to(progressEl, { scaleX: discrete, duration: 0.2, ease: "none" });
       };
 
-      // --- ScrollTrigger setup with mobile/desktop variants ---
       const mm = ScrollTrigger.matchMedia;
 
       mm({
@@ -9151,8 +9147,8 @@
           const pinST = ScrollTrigger.create({
             id: "steps-pin-desktop",
             trigger: container,
-            start: "top -110px",
-            end: () => "+=" + steps.length * getStableVH(),
+            start: "top top",
+            end: () => "+=" + steps.length * (getStableVH() * 0.5),
             pin: true,
             anticipatePin: 1,
             scrub: 0.1,
@@ -9164,9 +9160,8 @@
             invalidateOnRefresh: true,
           });
 
-          gsap.set(progressEl, { scaleX: 1 / steps.length });
+          gsap.set(progressEl, { scaleX: 1 / steps.length }); // Throttled refresh on resize/orientation
 
-          // Throttled refresh on resize/orientation
           let t;
           const onResize = () => {
             clearTimeout(t);
@@ -9174,9 +9169,8 @@
           };
           window.addEventListener("resize", onResize);
           window.addEventListener("orientationchange", onResize);
-        },
+        }, // Mobile phones
 
-        // Mobile phones
         "(max-width: 767px)": function () {
           const iOS =
             /iPad|iPhone|iPod/.test(navigator.userAgent) ||
@@ -9185,11 +9179,9 @@
           const pinST = ScrollTrigger.create({
             id: "steps-pin-mobile",
             trigger: container,
-            start: "top 80px",
-            // shorter pin distance on mobile (less repaint), and stable height
-            end: () => "+=" + steps.length * (getStableVH() * 0.85),
-            pin: true,
-            // KEY: avoid position:fixed flashes on iOS by forcing transform pin
+            start: "top 80px", // MODIFICATION: Reduced pin duration from 0.85x VH to 0.4x VH per step
+            end: () => "+=" + steps.length * (getStableVH() * 0.4),
+            pin: true, // KEY: avoid position:fixed flashes on iOS by forcing transform pin
             pinType: iOS ? "transform" : "fixed",
             anticipatePin: 1,
             scrub: false,
@@ -9201,9 +9193,8 @@
             invalidateOnRefresh: true,
           });
 
-          gsap.set(progressEl, { scaleX: 1 / steps.length });
+          gsap.set(progressEl, { scaleX: 1 / steps.length }); // Reduce refresh churn from URL bar show/hide
 
-          // Reduce refresh churn from URL bar show/hide
           ScrollTrigger.config({
             autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
           });
@@ -9945,7 +9936,522 @@
         } catch {}
       });
     </script> -->
+    <script>
+      const LOCATIONS = [
+        // Existing
+        {
+          name: "Custom Software Development in New Jersey",
+          lat: 40.7128,
+          lon: -74.006,
+          size: 0.11,
+        },
+        {
+          name: "App Development in Jacksonville",
+          lat: 30.3322,
+          lon: -81.6557,
+          size: 0.085,
+        },
+        {
+          name: "App Development in Philadelphia",
+          lat: 39.9526,
+          lon: -75.1652,
+          size: 0.085,
+        },
+        {
+          name: "App Development in Tampa",
+          lat: 27.9506,
+          lon: -82.4572,
+          size: 0.085,
+        },
+        {
+          name: "App Development in Miami",
+          lat: 25.7617,
+          lon: -80.1918,
+          size: 0.085,
+        },
+        {
+          name: "App Development in Atlanta",
+          lat: 33.749,
+          lon: -84.388,
+          size: 0.085,
+        },
+        {
+          name: "App Development in Charlotte",
+          lat: 35.2271,
+          lon: -80.8431,
+          size: 0.085,
+        },
+        {
+          name: "App Development in New York",
+          lat: 40.7128,
+          lon: -74.006,
+          size: 0.085,
+        },
+        {
+          name: "Mobile App Development in Virginia",
+          lat: 37.5407,
+          lon: -77.436,
+          size: 0.082,
+        },
+        {
+          name: "Mobile App Development in Georgia",
+          lat: 33.749,
+          lon: -84.388,
+          size: 0.082,
+        },
+        {
+          name: "Mobile App Development in Pennsylvania",
+          lat: 40.2732,
+          lon: -76.8867,
+          size: 0.082,
+        },
+        {
+          name: "Staff Augmentation in California",
+          lat: 34.0522,
+          lon: -118.2437,
+          size: 0.082,
+        },
+        {
+          name: "App Development in Philly",
+          lat: 39.9526,
+          lon: -75.1652,
+          size: 0.081,
+        },
+        {
+          name: "Staff Augmentation in Texas",
+          lat: 30.2672,
+          lon: -97.7431,
+          size: 0.082,
+        },
+        {
+          name: "Staff Augmentation in New York",
+          lat: 40.7128,
+          lon: -74.006,
+          size: 0.082,
+        },
+        // International
+        {
+          name: "Staff Augmentation in South Africa",
+          lat: -26.2041,
+          lon: 28.0473,
+          size: 0.083,
+        },
+      ];
 
+      function locationToAngles(latDeg, lonDeg) {
+        return [
+          Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), // phi
+          (latDeg * Math.PI) / 180, // theta
+        ];
+      }
+      const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+      const getDpr = () =>
+        Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+      const TWO_PI = Math.PI * 2;
+      const BLINK_SPEED_HZ = 2.2;
+      const BLINK_AMPLITUDE = 0.85;
+
+      // -------------------------------------------
+      // 2. Global State (Used across load/unload cycles)
+      // -------------------------------------------
+      let globe = null;
+      let createGlobe = null; // Will store the imported function
+      let canvas = null;
+      let selectEl = null;
+      let tooltip = null;
+      let ro = null; // ResizeObserver
+
+      // Globe rotation state
+      let currentPhi = 0;
+      let currentTheta = 0.3;
+      let focusPhi = 0;
+      let focusTheta = 0;
+      let isDragging = false;
+      let dragStartX = 0,
+        dragStartY = 0,
+        dragStartPhi = 0,
+        dragStartTheta = 0;
+      let activeMarkerIndex = null;
+      let blinkStartTime = Date.now();
+      let suppressGlobalHandler = false;
+
+      // Sizing state
+      let dpr = getDpr();
+      let widthCss = 0;
+      let widthPx = 0;
+      let sizeDirty = true;
+      let lastNonZeroCss = 600;
+
+      // -------------------------------------------
+      // 3. Helper Functions (Moved for clean scope)
+      // -------------------------------------------
+
+      function recomputeSizes() {
+        const newDpr = getDpr();
+        if (newDpr !== dpr) {
+          dpr = newDpr;
+          sizeDirty = true;
+        }
+
+        const parent = canvas.parentElement;
+        const cssW = Math.max(
+          parent ? parent.clientWidth : 0,
+          canvas.clientWidth || 0,
+          0
+        );
+        const newWidthCss = cssW > 20 ? cssW : lastNonZeroCss;
+
+        if (newWidthCss !== widthCss) {
+          widthCss = newWidthCss;
+          lastNonZeroCss = widthCss;
+          widthPx = Math.max(2, Math.floor(widthCss * dpr));
+          sizeDirty = true;
+        }
+      }
+
+      function removeEventListeners() {
+        canvas.removeEventListener("pointerdown", handlePointerDown);
+        canvas.removeEventListener("pointermove", handlePointerMove);
+        canvas.removeEventListener("pointerup", endDrag);
+        canvas.removeEventListener("pointercancel", endDrag);
+        canvas.removeEventListener("pointerleave", endDrag);
+        canvas.removeEventListener("webglcontextlost", handleContextLost);
+        canvas.removeEventListener(
+          "webglcontextrestored",
+          handleContextRestored
+        );
+        window.removeEventListener("resize", debouncedResizeHandler); // cleanup resize
+        document.removeEventListener(
+          "visibilitychange",
+          visibilityChangeHandler
+        ); // cleanup visibility
+      }
+
+      // Sizing/Event handlers needed inside/outside scope
+      let rzTimer;
+      const debouncedResizeHandler = () => {
+        clearTimeout(rzTimer);
+        rzTimer = setTimeout(() => {
+          recomputeSizes();
+        }, 100);
+      };
+      const visibilityChangeHandler = () => {
+        if (!document.hidden) {
+          recomputeSizes();
+          blinkStartTime = Date.now();
+        }
+      };
+
+      // Pointer controls (need to be defined outside as they use global state)
+      const handlePointerDown = (e) => {
+        if (e.button !== 0 && e.pointerType !== "touch") return;
+        canvas.setPointerCapture(e.pointerId);
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        dragStartPhi = currentPhi;
+        dragStartTheta = currentTheta;
+      };
+      const handlePointerMove = (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - dragStartX;
+        const dy = e.clientY - dragStartY;
+        const denom = Math.max(200, widthCss || 600);
+        const deltaPhi = (dx / denom) * TWO_PI;
+        const deltaTheta = (dy / denom) * Math.PI;
+        currentPhi = dragStartPhi + deltaPhi;
+        currentTheta = clamp(
+          dragStartTheta + deltaTheta,
+          -Math.PI / 2 + 0.01,
+          Math.PI / 2 - 0.01
+        );
+      };
+      const endDrag = (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        try {
+          canvas.releasePointerCapture(e.pointerId);
+        } catch {}
+        focusPhi = currentPhi;
+        focusTheta = currentTheta;
+      };
+
+      // Context handlers
+      const handleContextLost = (e) => {
+        e.preventDefault();
+      };
+      const handleContextRestored = () => {
+        recomputeSizes();
+        buildGlobe();
+      };
+
+      // -------------------------------------------
+      // 4. Globe Init/Destroy Functions
+      // -------------------------------------------
+
+      function buildGlobe() {
+        if (!createGlobe || !canvas) return; // Must have loaded module and elements
+
+        // 4a. Cleanup previous globe (if any)
+        if (globe) {
+          try {
+            globe.destroy();
+          } catch (e) {
+            console.warn("Error destroying previous globe:", e);
+          }
+          globe = null;
+        }
+        removeEventListeners(); // Remove old listeners before adding new ones
+
+        // 4b. Setup initial state and sizing
+        recomputeSizes();
+
+        // Default focus (only set if not dragging)
+        if (!isDragging && LOCATIONS.length > 0) {
+          [focusPhi, focusTheta] = locationToAngles(
+            LOCATIONS[0].lat,
+            LOCATIONS[0].lon
+          );
+          currentPhi = focusPhi;
+          currentTheta = focusTheta;
+          activeMarkerIndex = null;
+          blinkStartTime = Date.now();
+        }
+
+        // 4c. Create the globe
+        globe = createGlobe(canvas, {
+          devicePixelRatio: dpr,
+          width: widthPx || 600,
+          height: widthPx || 600,
+          phi: currentPhi,
+          theta: currentTheta,
+          dark: 0,
+          diffuse: 2.5,
+          mapSamples: 5000,
+          mapBrightness: 1.15,
+          baseColor: [1, 1, 1],
+          markerColor: [0.18, 0.52, 1],
+          glowColor: [1, 1, 1],
+          markers: LOCATIONS.map((l) => ({
+            location: [l.lat, l.lon],
+            size: l.size,
+          })),
+          onRender: (state) => {
+            if (sizeDirty) {
+              state.devicePixelRatio = dpr;
+              state.width = widthPx;
+              state.height = widthPx;
+              sizeDirty = false;
+            }
+
+            if (!isDragging) {
+              const dp = (focusPhi - currentPhi + TWO_PI) % TWO_PI;
+              const dn = (currentPhi - focusPhi + TWO_PI) % TWO_PI;
+              currentPhi += (dp < dn ? dp : -dn) * 0.08;
+              currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
+            }
+
+            const t = (Date.now() - blinkStartTime) / 1000;
+            state.markers = LOCATIONS.map((l, i) => {
+              const active = i === activeMarkerIndex;
+              const pulse = active
+                ? 1 +
+                  BLINK_AMPLITUDE *
+                    Math.abs(Math.sin(t * Math.PI * BLINK_SPEED_HZ))
+                : 1;
+              const base = active ? l.size * 1.1 : l.size;
+              return { location: [l.lat, l.lon], size: base * pulse };
+            });
+
+            state.phi = currentPhi;
+            state.theta = currentTheta;
+          },
+        });
+
+        // 4d. Add event listeners back
+        canvas.addEventListener("pointerdown", handlePointerDown);
+        canvas.addEventListener("pointermove", handlePointerMove);
+        canvas.addEventListener("pointerup", endDrag);
+        canvas.addEventListener("pointercancel", endDrag);
+        canvas.addEventListener("pointerleave", endDrag);
+        canvas.addEventListener("webglcontextlost", handleContextLost, {
+          passive: false,
+        });
+        canvas.addEventListener("webglcontextrestored", handleContextRestored);
+        window.addEventListener("resize", debouncedResizeHandler);
+        document.addEventListener("visibilitychange", visibilityChangeHandler);
+
+        // 4e. Fade in
+        setTimeout(() => (canvas.style.opacity = "1"), 20);
+
+        // 4f. Initialize ResizeObserver (if not already)
+        if (!ro) {
+          ro = new ResizeObserver(() => {
+            recomputeSizes();
+          });
+          try {
+            ro.observe(canvas.parentElement || canvas);
+          } catch {}
+        }
+      }
+
+      function destroyGlobe() {
+        if (globe) {
+          // Persist the current rotation before destroying
+          focusPhi = currentPhi;
+          focusTheta = currentTheta;
+          try {
+            globe.destroy();
+          } catch {}
+          globe = null;
+        }
+        // Remove WebGL-specific and Pointer listeners to clean up memory
+        removeEventListeners();
+        canvas.style.opacity = "0"; // Fade out
+      }
+
+      // -------------------------------------------
+      // 5. Initial Setup and Observer Logic
+      // -------------------------------------------
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        canvas = document.getElementById("cobeCanvas");
+        selectEl = document.getElementById("locationSelect");
+        tooltip = document.getElementById("tooltip");
+
+        if (!canvas) return;
+
+        // Populate select (run once)
+        tooltip.style.display = "none";
+        const placeholderOption = document.createElement("option");
+        placeholderOption.value = "";
+        placeholderOption.textContent = "Select a location";
+        placeholderOption.disabled = true;
+        placeholderOption.selected = true;
+        selectEl.insertBefore(placeholderOption, selectEl.firstChild);
+        LOCATIONS.forEach((loc, idx) => {
+          const opt = document.createElement("option");
+          opt.value = idx;
+          opt.textContent = loc.name;
+          selectEl.appendChild(opt);
+        });
+
+        // Dynamic import the Cobe library (only fetches the file once)
+        const module = await import("https://esm.sh/cobe@0.6.3");
+        createGlobe = module.default;
+
+        // Determine the target for the observer (use canvas as the best indicator)
+        const targetElement = canvas;
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.0, // Load/unload instantly when entering/leaving view
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Load/build the globe when it enters the viewport
+              buildGlobe();
+            } else {
+              // Destroy/unload the globe when it leaves the viewport
+              destroyGlobe();
+            }
+          });
+        }, observerOptions);
+
+        observer.observe(targetElement);
+
+        // -------------------------------------------
+        // 6. Controls (Updated to call destroyGlobe on unload)
+        // -------------------------------------------
+
+        selectEl.addEventListener("change", (e) => {
+          const idx = Number(e.target.value);
+          if (isNaN(idx) || idx < 0 || idx >= LOCATIONS.length) return;
+
+          const selectedLocation = LOCATIONS[idx];
+          const [phi, theta] = locationToAngles(
+            selectedLocation.lat,
+            selectedLocation.lon
+          );
+          focusPhi = phi;
+          focusTheta = theta;
+
+          suppressGlobalHandler = true;
+          const globalRadio = document.getElementById("global");
+          if (globalRadio) globalRadio.checked = true;
+          suppressGlobalHandler = false;
+
+          activeMarkerIndex = idx;
+          blinkStartTime = Date.now();
+
+          // Tooltip update... (your original tooltip logic)
+          if (tooltip) {
+          tooltip.innerHTML = `
+        <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+          <span>${selectedLocation.name}</span>
+          <a href="https://newagesysit.com/" target="_blank"
+            style="text-decoration:none;display:flex;align-items:center;gap:4px;">
+            <svg width="20" height="12" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z" fill="white"/>
+            </svg>
+          </a>
+        </div>`;
+          tooltip.style.display = "block";
+        }
+        });
+
+        document.getElementById("us")?.addEventListener("change", (e) => {
+          if (!e.target.checked) return;
+
+          if (LOCATIONS.length > 0) {
+            const usLocation = LOCATIONS[0];
+            const [phi, theta] = locationToAngles(
+              usLocation.lat,
+              usLocation.lon
+            );
+            focusPhi = phi;
+            focusTheta = theta;
+          }
+
+          if (selectEl) {
+            selectEl.selectedIndex = 0;
+            selectEl.value = "";
+          }
+          if (tooltip) tooltip.style.display = "none";
+          activeMarkerIndex = null;
+        });
+
+        document.getElementById("global")?.addEventListener("change", (e) => {
+          if (!e.target.checked) return;
+          if (suppressGlobalHandler) return;
+
+          // Keep current orientation; clear dropdown only
+          focusPhi = currentPhi;
+          focusTheta = currentTheta;
+
+          if (selectEl) {
+            selectEl.selectedIndex = 0;
+            selectEl.value = "";
+          }
+          if (tooltip) tooltip.style.display = "none";
+          activeMarkerIndex = null;
+        });
+
+        // Final cleanup on full page unload
+        window.addEventListener("beforeunload", () => {
+          try {
+            ro?.disconnect();
+          } catch {}
+          destroyGlobe(); // ensure it's destroyed one last time
+        });
+      });
+    </script>
+
+    <!-- end -->
+    <!-- end -->
     <script>
       (() => {
         const radioUS = document.getElementById("us_mob");
