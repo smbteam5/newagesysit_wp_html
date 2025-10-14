@@ -3131,7 +3131,7 @@
           </div>
         </div>
 
-        <div class="text-center lg:-mt-20">
+        <div class="text-center min-1240px:-mt-20 max-1240px:mt-0">
           <h3
             class="text-[24px] md:text-[32px] font-semibold text-white mb-4 max-w-2xl mx-auto"
           >
@@ -3174,7 +3174,7 @@
         <div
           class="text-white flex flex-col lg:flex-row lg:justify-between gap-12 items-end flex-wrap"
         >
-          <div class="lg:max-w-[33%] w-full">
+          <div class="min-1240px:max-w-[33%] w-full">
             <h2 class="text-4xl font-[500] leading-tight mb-6">
               Ensuring<br />
               Businesses<br />
@@ -5850,12 +5850,12 @@
           <div class="anim-right pt-5">
             <div class="marquee-right">
               <div
-                class="horizontal-right-scroll flex gap-[50px] border-y-2 border-[#2b2b2b] justify-center max-992px:gap-[15px] max-640px:flex-col max-640px:gap-0 max-640px:[&>.m-item:not(:last-child)]:border-b-2 max-640px:[&>.m-item:not(:last-child)]:border-[#2b2b2b]"
+                class="horizontal-right-scroll flex gap-[50px] border-y-2 border-[#2b2b2b] justify-center max-992px:gap-[15px] max-768px:flex-col max-768px:gap-0 max-768px:[&>.m-item:not(:last-child)]:border-b-2 max-768px:[&>.m-item:not(:last-child)]:border-[#2b2b2b]"
               >
                 <!-- Item 1 -->
 
                 <div
-                  class="m-item p-5 border-x border-[#2b2b2b] bg-transparent flex flex-col items-center justify-center h-auto w-[220px] flex-none max-768px:w-[100px] max-768px:p-[10px] max-768px:[&:not(:last-child)]:border-b-2 max-768px:[&:not(:last-child)]:border-[#2b2b2b] max-768px:py-[15px] max-640px:w-full"
+                  class="m-item p-5 border-x border-[#2b2b2b] bg-transparent flex flex-col items-center justify-center h-auto w-[220px] flex-none max-768px:w-full max-768px:p-[10px] max-768px:[&:not(:last-child)]:border-b-2 max-768px:[&:not(:last-child)]:border-[#2b2b2b] max-768px:py-[15px] max-640px:w-full"
                 >
                   <div class="m-item--inside">
                     <ul class="m-item-ul mb-0">
@@ -5930,7 +5930,7 @@
           <div class="row g-4 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <div
-                class="parter-card h-100 bg-white/10 rounded-[12px] p-5 flex gap-[15px] text-white flex-col md:flex-row"
+                class="parter-card bg-white/10 rounded-[12px] p-5 flex gap-[15px] text-white flex-col md:flex-row h-full"
               >
                 <div class="icon-box sagemaker-icon">
                   <picture>
@@ -5961,7 +5961,7 @@
 
             <div>
               <div
-                class="parter-card h-100 bg-white/10 rounded-[12px] p-5 flex gap-[15px] text-white flex-col md:flex-row"
+                class="parter-card h-full bg-white/10 rounded-[12px] p-5 flex gap-[15px] text-white flex-col md:flex-row"
               >
                 <div class="icon-box bedrock-icon">
                   <picture>
@@ -9185,7 +9185,7 @@
           const pinST = ScrollTrigger.create({
             id: "steps-pin-mobile",
             trigger: container,
-            start: "top 20px",
+            start: "top 80px",
             // shorter pin distance on mobile (less repaint), and stable height
             end: () => "+=" + steps.length * (getStableVH() * 0.85),
             pin: true,
@@ -9502,7 +9502,7 @@
       })();
     </script>
 
-    <script type="module">
+    <!-- <script type="module">
       import createGlobe from "https://esm.sh/cobe@0.6.3";
 
       // ---- Config (unchanged) ----
@@ -9944,7 +9944,7 @@
           globe?.destroy();
         } catch {}
       });
-    </script>
+    </script> -->
 
     <script>
       (() => {
