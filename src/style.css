@@ -2170,6 +2170,10 @@ video {
   min-height: 1500px;
 }
 
+.min-h-\[150px\] {
+  min-height: 150px;
+}
+
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -4209,6 +4213,11 @@ video {
   background-color: rgb(26 35 54 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#1B1D1E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 29 30 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#1D2829\] {
   --tw-bg-opacity: 1;
   background-color: rgb(29 40 41 / var(--tw-bg-opacity));
@@ -4915,6 +4924,10 @@ video {
 
 .bg-\[linear-gradient\(90deg\2c rgba\(22\2c 22\2c 34\2c 0\.6\)_-2\.33\%\2c \#161A22_28\.97\%\2c \#7C81DA_72\.18\%\2c rgba\(88\2c 88\2c 136\2c 0\)_98\.51\%\)\] {
   background-image: linear-gradient(90deg,rgba(22,22,34,0.6) -2.33%,#161A22 28.97%,#7C81DA 72.18%,rgba(88,88,136,0) 98.51%);
+}
+
+.bg-\[linear-gradient\(91\.5deg\2c _\#3FDB9F_0\.84\%\2c _\#E51CFF_51\.5\%\2c _\#008CFF_100\%\)\] {
+  background-image: linear-gradient(91.5deg, #3FDB9F 0.84%, #E51CFF 51.5%, #008CFF 100%);
 }
 
 .bg-\[linear-gradient\(to_bottom\2c \#000_0\%\2c rgba\(0\2c 0\2c 0\2c 0\.8\)_30\%\2c rgba\(0\2c 0\2c 0\2c 0\.3\)_90\%\2c transparent_100\%\)\] {
@@ -7187,6 +7200,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-\[-1px_1px_32px_-14px_\#E51CFF\] {
+  --tw-shadow: -1px 1px 32px -14px #E51CFF;
+  --tw-shadow-colored: -1px 1px 32px -14px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-\[0_0_5px_2px_\#00AA4F\] {
   --tw-shadow: 0 0 5px 2px #00AA4F;
   --tw-shadow-colored: 0 0 5px 2px var(--tw-shadow-color);
@@ -7420,10 +7439,6 @@ video {
 
 .\[-webkit-mask-size\:cover\] {
   -webkit-mask-size: cover;
-}
-
-.\[background\:linear-gradient\(\#20212B\2c \#20212B\)_padding-box\2c linear-gradient\(90deg\2c \#00ffc3\2c \#8a5bff\)_border-box\] {
-  background: linear-gradient(#20212B,#20212B) padding-box,linear-gradient(90deg,#00ffc3,#8a5bff) border-box;
 }
 
 .\[mask-image\:radial-gradient\(circle\2c rgba\(0\2c 0\2c 0\2c 1\)_70\%\2c rgba\(0\2c 0\2c 0\2c 0\)_100\%\)\] {
@@ -11317,7 +11332,7 @@ html {
   position: absolute;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .hero-inner {
     width: calc(100vw - 15px) !important;
     height: 100%;
@@ -11482,9 +11497,24 @@ html {
   padding-top: 20px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .vertical-sliders .swiper {
     height: 600px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vertical-sliders .swiper {
+    height: 300px;
+    padding-bottom: 20px;
+  }
+
+  .ctt_testimonials .swiper-wrapper .swiper-slide {
+    height: inherit !important;
+  }
+
+  .ctt_testimonials .swiper-wrapper .swiper-slide .ctt_item {
+    height: 100% !important;
   }
 }
 
@@ -12464,7 +12494,7 @@ footer ul li {
 
 @media (max-width: 420px) {
   .map-view .controls {
-    gap: 0.4rem;
+    gap: 20px;
     padding: 0.6rem 0;
   }
 
@@ -15482,10 +15512,6 @@ footer ul li {
     height: 116px;
   }
 
-  .lg\:h-\[300px\] {
-    height: 300px;
-  }
-
   .lg\:h-\[350px\] {
     height: 350px;
   }
@@ -15572,6 +15598,10 @@ footer ul li {
 
   .lg\:min-h-\[200px\] {
     min-height: 200px;
+  }
+
+  .lg\:min-h-\[250px\] {
+    min-height: 250px;
   }
 
   .lg\:min-h-\[300px\] {
@@ -16947,6 +16977,10 @@ footer ul li {
     font-size: 24px;
   }
 
+  .xl\:text-\[28px\] {
+    font-size: 28px;
+  }
+
   .xl\:text-\[38px\] {
     font-size: 38px;
   }
@@ -17854,9 +17888,15 @@ footer ul li {
   .min-1240px\:-mt-20 {
     margin-top: -5rem;
   }
+}
 
-  .min-1240px\:max-w-\[33\%\] {
+@media (min-width: 1380px) {
+  .min-1380px\:max-w-\[33\%\] {
     max-width: 33%;
+  }
+
+  .min-1380px\:justify-between {
+    justify-content: space-between;
   }
 }
 
@@ -17937,6 +17977,10 @@ footer ul li {
   .max-1360px\:hidden {
     display: none;
   }
+
+  .max-1360px\:text-center {
+    text-align: center;
+  }
 }
 
 @media (max-width: 1240px) {
@@ -17968,6 +18012,14 @@ footer ul li {
 }
 
 @media (max-width: 992px) {
+  .max-992px\:order-1 {
+    order: 1;
+  }
+
+  .max-992px\:order-2 {
+    order: 2;
+  }
+
   .max-992px\:gap-\[15px\] {
     gap: 15px;
   }

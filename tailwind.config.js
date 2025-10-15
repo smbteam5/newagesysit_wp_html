@@ -49,6 +49,7 @@ module.exports = {
         "min-992px": "992px",
         "min-1024px": "1024px",
         "min-1240px": "1240px",
+        "min-1380px": "1380px",
         "min-1440px": "1440px",
         "min-1680px": "1680px",
         "max-1360px": { max: "1360px" },
