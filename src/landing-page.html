@@ -5879,7 +5879,7 @@
             color: white;
             font-size: 15px;
             border-radius: 6px;
-            pointer-events: auto;
+            pointer-events: none;
             z-index: 9999;
             left: 50%;
             display: none;
@@ -5905,17 +5905,18 @@
           <div>
             <input
               type="radio"
-              name="toggle"
+              name="toggle_mob"
               id="us_mob"
               checked
               class="mobile-only"
             />
             <input
               type="radio"
-              name="toggle"
+              name="toggle_mob"
               id="global_mob"
               class="mobile-only"
             />
+
             <div class="toggle-wrapper">
               <label for="us_mob" class="toggle-label us-label_mob"
                 >U.S. locations</label
@@ -5926,7 +5927,8 @@
             </div>
           </div>
 
-          <select id="categorySelect-mob"></select>
+          <select id="categorySelect-mob" class="small"></select>
+          <!-- NOTE: no locationSelect-mob - we dynamically render cards in servicesGrid -->
         </div>
 
         <div class="container">
@@ -5934,213 +5936,7 @@
             class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-[50px]"
             id="servicesGrid"
           >
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="nj"
-              data-region="us"
-            >
-              <span>Custom Software Development — New Jersey</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="jax"
-              data-region="us"
-            >
-              <span>App Development in Jacksonville</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="phl"
-              data-region="us"
-            >
-              <span>App Development in Philadelphia</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="tpa"
-              data-region="us"
-            >
-              <span>App Development in Tampa</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="atl"
-              data-region="us"
-            >
-              <span>App Development in Atlanta</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="nyc"
-              data-region="us"
-            >
-              <span>App Development in New York</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="tx-staff"
-              data-region="us"
-            >
-              <span>Staff Augmentation in Texas</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white"
-              data-id="za-staff"
-              data-region="global"
-            >
-              <span>Staff Augmentation in South Africa</span>
-              <a
-                href="https://newagesysit.com/"
-                target="_blank"
-                aria-label="Open"
-              >
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 10 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </a>
-            </div>
+            <!-- dynamically-rendered mobile cards will go here -->
           </div>
         </div>
       </div>
@@ -9820,774 +9616,1082 @@
     </script>
 
     <script>
-/*
-  Globe script — updated:
-   - fixes mobile category select (categorySelect-mob)
-   - marker click detection & tooltip for all markers
-   - smooth drag + inertia retained
-   - defensive & optimized marker updates
-*/
-(async function () {
-  /* ---------- configuration ---------- */
-  const CATEGORIES = [
-    { id: "custom", name: "Custom Software Development" },
-    { id: "app", name: "App Development" },
-    { id: "mobile", name: "Mobile App Development" },
-    { id: "staff", name: "Staff Augmentation" },
-  ];
-
-  const LOCATIONS = [
-    { name: "Custom Software Development in New Jersey", lat: 40.7128, lon: -74.006, size: 0.083, categoryId: "custom" },
-    { name: "App Development in Jacksonville", lat: 30.3322, lon: -81.6557, size: 0.085, categoryId: "app" },
-    { name: "App Development in Philadelphia", lat: 39.9526, lon: -75.1652, size: 0.085, categoryId: "app" },
-    { name: "App Development in Tampa", lat: 27.9506, lon: -82.4572, size: 0.085, categoryId: "app" },
-    { name: "App Development in Miami", lat: 25.7617, lon: -80.1918, size: 0.085, categoryId: "app" },
-    { name: "App Development in Atlanta", lat: 33.749, lon: -84.388, size: 0.085, categoryId: "app" },
-    { name: "App Development in Charlotte", lat: 35.2271, lon: -80.8431, size: 0.085, categoryId: "app" },
-    { name: "App Development in New York", lat: 40.7128, lon: -74.006, size: 0.085, categoryId: "app" },
-    { name: "Mobile App Development in Virginia", lat: 37.5407, lon: -77.436, size: 0.082, categoryId: "mobile" },
-    { name: "Mobile App Development in Georgia", lat: 33.749, lon: -84.388, size: 0.082, categoryId: "mobile" },
-    { name: "Mobile App Development in Pennsylvania", lat: 40.2732, lon: -76.8867, size: 0.082, categoryId: "mobile" },
-    { name: "Staff Augmentation in California", lat: 34.0522, lon: -118.2437, size: 0.082, categoryId: "staff" },
-    { name: "Staff Augmentation in Texas", lat: 30.2672, lon: -97.7431, size: 0.082, categoryId: "staff" },
-    { name: "Staff Augmentation in New York", lat: 40.7128, lon: -74.006, size: 0.082, categoryId: "staff" },
-    { name: "Staff Augmentation in South Africa", lat: -26.2041, lon: 28.0473, size: 0.083, categoryId: "staff" },
-  ];
-
-  const CONTEXT_LOST_OPTIONS = { passive: false };
-  const RESIZE_DEBOUNCE_MS = 180;
-  const OBSERVER_ROOT_MARGIN = "0px 0px -30% 0px";
-  const OBSERVER_THRESHOLD = 0.25;
-  const MAX_DPR = 2;
-  const MOBILE_SAMPLE_THRESHOLD = 768;
-  const MOBILE_SAMPLES = 1500;
-  const DESKTOP_SAMPLES = 5000;
-  const BLINK_SPEED_HZ = 2.2;
-  const BLINK_AMPLITUDE = 0.85;
-  const TWO_PI = Math.PI * 2;
-
-  /* ---------- precompute/enrich locations ---------- */
-  const ENRICHED_LOCATIONS = LOCATIONS.map((l, idx) => {
-    const cat = CATEGORIES.find((c) => c.id === l.categoryId);
-    const groupName = cat ? cat.name : "Other";
-    const region = (l.lat >= 24 && l.lat <= 49 && l.lon >= -125 && l.lon <= -66) ? "us" : "global";
-    return { ...l, _idx: idx, groupName, region };
-  });
-
-  /* ---------- state ---------- */
-  let globe = null;
-  let canvas = null;
-  let categorySelect = null;
-  let mobileCategorySelect = null; // mobile category select element
-  let mobileLocationSelect = null;  // (existing) locationSelect-mob for listing locations
-  let tooltip = null;
-  let ro = null;
-  let activeLocations = ENRICHED_LOCATIONS.slice();
-
-  // rotation & smooth drag state
-  let currentPhi = 0, currentTheta = 0.3;
-  let focusPhi = 0, focusTheta = 0;
-  let targetPhi = 0, targetTheta = 0;
-  let isDragging = false;
-  let dragStartX = 0, dragStartY = 0, dragStartTargetPhi = 0, dragStartTargetTheta = 0;
-  let lastPointerTime = 0, lastPointerPhi = 0, lastPointerTheta = 0;
-  let pointerVelPhi = 0, pointerVelTheta = 0;
-  let inertiaActive = false, inertiaVelPhi = 0, inertiaVelTheta = 0;
-
-  // click detection
-  let pointerDownTime = 0, pointerDownX = 0, pointerDownY = 0;
-
-  // smoothing params
-  const DRAG_FOLLOW = 0.22;
-  const INERTIA_DECAY = 3.8;
-  const MIN_INERTIA_VEL = 0.00002;
-  let lastFrameTime = null;
-
-  // marker state
-  let activeMarkerIndex = null;
-  let dpr = Math.min(MAX_DPR, Math.max(1, window.devicePixelRatio || 1));
-  let widthCss = 0, widthPx = 0, sizeDirty = true, lastNonZeroCss = 600;
-
-  /* ---------- helpers ---------- */
-  const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
-  const getDpr = () => Math.min(MAX_DPR, Math.max(1, window.devicePixelRatio || 1));
-  const getGlobeCanvas = () => document.getElementById("cobeCanvas") || null;
-
-  function normalizeAngle(a) { const r = a % TWO_PI; return r < 0 ? r + TWO_PI : r; }
-  function shortestAngleDiff(from, to) {
-    const a = normalizeAngle(from);
-    const b = normalizeAngle(to);
-    let diff = b - a;
-    if (diff > Math.PI) diff -= TWO_PI;
-    if (diff < -Math.PI) diff += TWO_PI;
-    return diff;
-  }
-
-  function recomputeSizes() {
-    if (!canvas) return;
-    const newDpr = getDpr();
-    if (newDpr !== dpr) { dpr = newDpr; sizeDirty = true; }
-    const parent = canvas.parentElement;
-    const cssW = Math.max(parent ? parent.clientWidth : 0, canvas.clientWidth || 0, 0);
-    const newWidthCss = cssW > 20 ? cssW : lastNonZeroCss;
-    if (newWidthCss !== widthCss) {
-      widthCss = newWidthCss; lastNonZeroCss = widthCss;
-      widthPx = Math.max(2, Math.floor(widthCss * dpr));
-      sizeDirty = true;
-    }
-  }
-
-  /* ---------- shared resize ---------- */
-  let resizeTimer = null;
-  function sharedResizeHandler() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      try { recomputeSizes(); if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === "function") window.ScrollTrigger.refresh(); } catch {}
-    }, RESIZE_DEBOUNCE_MS);
-  }
-  function ensureSharedResize() {
-    if (ensureSharedResize._attached) return;
-    window.removeEventListener("resize", sharedResizeHandler);
-    window.addEventListener("resize", sharedResizeHandler, { passive: true });
-    ensureSharedResize._attached = true;
-  }
-
-  /* ---------- canvas webgl hooks ---------- */
-  function ensureCanvasWebglHooks() {
-    const c = getGlobeCanvas(); if (!c) return false;
-    if (!c.__addWebglLost) {
-      c.__addWebglLost = fn => c.addEventListener('webglcontextlost', fn, CONTEXT_LOST_OPTIONS);
-      c.__removeWebglLost = fn => c.removeEventListener('webglcontextlost', fn, CONTEXT_LOST_OPTIONS);
-    }
-    return true;
-  }
-
-  /* ---------- pointer & inertia ---------- */
-  function computeTargetFromDrag(dx, dy, basePhi, baseTheta) {
-    const denom = Math.max(200, widthCss || 600);
-    const tPhi = basePhi + (dx/denom) * TWO_PI;
-    const tTheta = clamp(baseTheta + (dy/denom) * Math.PI, -Math.PI/2 + 0.01, Math.PI/2 - 0.01);
-    return [tPhi, tTheta];
-  }
-
-  const handlePointerDown = (e) => {
-    if (e.button !== 0 && e.pointerType !== 'touch') return;
-    try { canvas.setPointerCapture && canvas.setPointerCapture(e.pointerId); } catch {}
-    isDragging = true;
-    inertiaActive = false;
-    pointerVelPhi = pointerVelTheta = 0;
-
-    dragStartX = e.clientX; dragStartY = e.clientY;
-    dragStartTargetPhi = targetPhi = currentPhi;
-    dragStartTargetTheta = targetTheta = currentTheta;
-    lastPointerTime = performance.now();
-    lastPointerPhi = targetPhi;
-    lastPointerTheta = targetTheta;
-
-    // click detection start
-    pointerDownTime = Date.now();
-    pointerDownX = e.clientX;
-    pointerDownY = e.clientY;
-  };
-
-  const handlePointerMove = (e) => {
-    if (!isDragging) return;
-    const dx = e.clientX - dragStartX;
-    const dy = e.clientY - dragStartY;
-    const [newTargetPhi, newTargetTheta] = computeTargetFromDrag(dx, dy, dragStartTargetPhi, dragStartTargetTheta);
-
-    const now = performance.now();
-    const dt = Math.max(1, now - lastPointerTime);
-    const deltaPhi = shortestAngleDiff(lastPointerPhi, newTargetPhi);
-    const deltaTheta = newTargetTheta - lastPointerTheta;
-    pointerVelPhi = deltaPhi / dt;
-    pointerVelTheta = deltaTheta / dt;
-
-    targetPhi = newTargetPhi; targetTheta = newTargetTheta;
-    lastPointerPhi = newTargetPhi; lastPointerTheta = newTargetTheta; lastPointerTime = now;
-  };
-
-  const endDrag = (e) => {
-    // if called by pointercancel/leave: e may be undefined or not pointerup
-    const wasPointerUp = e && e.type === 'pointerup';
-    if (!isDragging && !wasPointerUp) return;
-    // allow if dragging or pointerup
-    try { canvas.releasePointerCapture && canvas.releasePointerCapture(e && e.pointerId); } catch {}
-    isDragging = false;
-
-    // detect click: short press + small movement
-    if (wasPointerUp) {
-      const dt = Date.now() - (pointerDownTime || 0);
-      const moveDist = Math.hypot((e.clientX||0) - (pointerDownX||0), (e.clientY||0) - (pointerDownY||0));
-      const CLICK_TIME_MS = 260;
-      const CLICK_MOVE_PX = 8;
-      if (dt < CLICK_TIME_MS && moveDist < CLICK_MOVE_PX) {
-        // treat as click
-        handleCanvasClick(e.clientX, e.clientY);
-      }
-    }
-
-    // inertia
-    inertiaVelPhi = pointerVelPhi; inertiaVelTheta = pointerVelTheta;
-    if (!isFinite(inertiaVelPhi)) inertiaVelPhi = 0;
-    if (!isFinite(inertiaVelTheta)) inertiaVelTheta = 0;
-    inertiaActive = Math.abs(inertiaVelPhi) > MIN_INERTIA_VEL || Math.abs(inertiaVelTheta) > MIN_INERTIA_VEL;
-
-    // preserve current pose for focus
-    focusPhi = currentPhi; focusTheta = currentTheta;
-  };
-
-  const handleContextLost = (e) => { e.preventDefault(); };
-  const handleContextRestored = () => { recomputeSizes(); buildGlobe(); };
-
-  /* ---------- UI: populate category selects ---------- */
-  function populateCategorySelects() {
-    const desktop = document.getElementById('categorySelect');
-    if (desktop) {
-      desktop.innerHTML = '';
-      const all = document.createElement('option'); all.value=''; all.textContent='All Categories'; desktop.appendChild(all);
-      CATEGORIES.forEach(c => { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; desktop.appendChild(o); });
-    }
-
-    const mobile = document.getElementById('categorySelect-mob');
-    if (mobile) {
-      mobile.innerHTML = '';
-      const all = document.createElement('option'); all.value=''; all.textContent = 'All Categories'; mobile.appendChild(all);
-      CATEGORIES.forEach(c => { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; mobile.appendChild(o); });
-    }
-  }
-
-  function currentScope() {
-    const r = document.getElementById('us');
-    return (r && r.checked) ? 'us' : 'global';
-  }
-
-  function computeActiveLocations(categoryId, scope) {
-    return ENRICHED_LOCATIONS.filter(loc => {
-      const catMatch = !categoryId || loc.categoryId === categoryId;
-      const scopeMatch = scope === 'global' ? true : loc.region === 'us';
-      return catMatch && scopeMatch;
-    });
-  }
-
-  function populateMobileLocationSelect(list) {
-    const mobileLoc = document.getElementById('locationSelect-mob');
-    if (!mobileLoc) return;
-    mobileLoc.innerHTML = '';
-    const all = document.createElement('option'); all.value=''; all.textContent='All Services'; mobileLoc.appendChild(all);
-    list.forEach(loc => {
-      const opt = document.createElement('option');
-      opt.value = String(loc._idx);
-      opt.dataset.region = loc.region;
-      opt.textContent = loc.name;
-      mobileLoc.appendChild(opt);
-    });
-  }
-
-  /* ---------- marker cache / cobe init ---------- */
-  function updateMarkerCacheInPlace() {
-    const locs = activeLocations || [];
-    const newMarkers = locs.map(l => ({
-      location: [l.lat, l.lon],
-      baseSize: (typeof l.size === 'number' ? l.size : 1),
-      size: (typeof l.size === 'number' ? l.size : 1),
-      _srcIdx: l._idx
-    }));
-
-    if (!window.__cobe_markerCache) {
-      window.__cobe_markerCache = newMarkers;
-      window.__cobe_markerCache._forVersion = locs.map(l => l._idx).join(',');
-      return;
-    }
-
-    if (Array.isArray(window.__cobe_markerCache)) {
-      window.__cobe_markerCache.splice(0, window.__cobe_markerCache.length, ...newMarkers);
-    } else {
-      window.__cobe_markerCache = newMarkers;
-    }
-    window.__cobe_markerCache._forVersion = locs.map(l => l._idx).join(',');
-  }
-
-  function locationToAngles(latDeg, lonDeg) {
-    return [Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), (latDeg * Math.PI) / 180];
-  }
-
-  function computeCentroid(locs) {
-    if (!locs || locs.length === 0) return null;
-    let sumLat = 0, sumLon = 0;
-    for (const l of locs) { sumLat += l.lat; sumLon += l.lon; }
-    return { lat: sumLat / locs.length, lon: sumLon / locs.length };
-  }
-
-  function findNearestIndexToPoint(locs, lat, lon) {
-    if (!locs || locs.length === 0) return -1;
-    let best = 0, bestD = Infinity;
-    for (let i=0;i<locs.length;i++){
-      const dlat = locs[i].lat - lat, dlon = locs[i].lon - lon, ds = dlat*dlat + dlon*dlon;
-      if (ds < bestD) { bestD = ds; best = i; }
-    }
-    return best;
-  }
-
-  /* ---------- projection helper (for hit testing) ----------
-     This computes an approximate 2D screen position for a lat/lon given
-     the current globe orientation (currentPhi/currentTheta). We:
-       - convert lat/lon -> 3D unit vector
-       - rotate by currentPhi (Y) then currentTheta (X)
-       - check z > 0 (visible hemisphere)
-       - map x,y to pixel coordinates with simple orthographic mapping
-     This is accurate enough for clicking/picking markers on the visible hemisphere.
-  */
-  function latLonToScreen(latDeg, lonDeg, out = {}) {
-    if (!canvas) return null;
-    const lat = (latDeg * Math.PI) / 180;
-    const lon = (lonDeg * Math.PI) / 180;
-
-    // 3D point on unit sphere
-    const x0 = Math.cos(lat) * Math.cos(lon);
-    const y0 = Math.sin(lat);
-    const z0 = Math.cos(lat) * Math.sin(lon);
-
-    // rotate around Y by currentPhi
-    const a = currentPhi;
-    const ca = Math.cos(a), sa = Math.sin(a);
-    const x1 = ca * x0 + sa * z0;
-    const z1 = -sa * x0 + ca * z0;
-    const y1 = y0;
-
-    // rotate around X by currentTheta
-    const b = currentTheta;
-    const cb = Math.cos(b), sb = Math.sin(b);
-    const y2 = cb * y1 - sb * z1;
-    const z2 = sb * y1 + cb * z1;
-    const x2 = x1;
-
-    // only if point is on front-facing hemisphere (z2 > 0) it's visible
-    const visible = z2 > 0.0001;
-
-    // map x2 (-1..1) -> canvas px; y2 (-1..1) -> canvas px (flipped Y).
-    // we use the canvas client width/height (css), not device pixels, for pointer coords.
-    const rect = canvas.getBoundingClientRect();
-    const cx = rect.width / 2;
-    const cy = rect.height / 2;
-
-    // orthographic mapping
-    const screenX = cx + (x2 * cx);
-    const screenY = cy - (y2 * cy);
-
-    out.x = screenX;
-    out.y = screenY;
-    out.visible = visible;
-    out.z = z2;
-    out.rect = rect;
-    return out;
-  }
-
-  /* ---------- initOptimizedGlobe ---------- */
-  async function initOptimizedGlobe(canvasEl) {
-    if (!canvasEl) throw new Error("Canvas not found");
-    const module = await import("https://esm.sh/cobe@0.6.3");
-    const createGlobeFn = module.default;
-
-    const localDpr = Math.min(MAX_DPR, Math.max(1, window.devicePixelRatio || 1));
-    const localWidthCss = Math.max((canvasEl.parentElement && canvasEl.parentElement.clientWidth) || canvasEl.clientWidth || 600, 100);
-    const localWidthPx = Math.max(2, Math.floor(localWidthCss * localDpr));
-    const mapSamples = (window.innerWidth < MOBILE_SAMPLE_THRESHOLD || localWidthCss < 480) ? MOBILE_SAMPLES : DESKTOP_SAMPLES;
-
-    if (!window.__cobe_markerCache) window.__cobe_markerCache = [];
-
-    const globeInstance = createGlobeFn(canvasEl, {
-      devicePixelRatio: localDpr,
-      width: localWidthPx,
-      height: localWidthPx,
-      phi: typeof currentPhi === "number" ? currentPhi : 0,
-      theta: typeof currentTheta === "number" ? currentTheta : 0,
-      dark: 0,
-      diffuse: 2.55,
-      mapSamples,
-      mapBrightness: 2.0,
-      mapBaseBrightness: 0.0,
-      baseColor: [1, 1, 1],
-      markerColor: [0.18, 0.52, 1],
-      glowColor: [1, 1, 1],
-      markers: window.__cobe_markerCache,
-      onRender: (state) => {
-        // frame timing
-        const now = performance.now();
-        if (lastFrameTime === null) lastFrameTime = now;
-        const dt = Math.max(1, now - lastFrameTime); // ms
-        const dtSec = dt / 1000;
-        lastFrameTime = now;
-
-        // defensive markers ref
-        const markers = Array.isArray(state.markers) ? state.markers : (Array.isArray(window.__cobe_markerCache) ? window.__cobe_markerCache : []);
-
-        // sizing once
-        if (sizeDirty) {
-          state.devicePixelRatio = localDpr;
-          state.width = localWidthPx;
-          state.height = localWidthPx;
-          sizeDirty = false;
-        }
-
-        // DRAG / INERTIA / AUTO-ROTATE
-        if (isDragging) {
-          // follow the pointer target smoothly
-          const diff = shortestAngleDiff(currentPhi, targetPhi);
-          currentPhi = currentPhi + diff * DRAG_FOLLOW;
-          currentTheta += (targetTheta - currentTheta) * DRAG_FOLLOW;
-          focusPhi = currentPhi; focusTheta = currentTheta;
-          inertiaActive = false;
-        } else if (inertiaActive) {
-          currentPhi += inertiaVelPhi * dt;
-          currentTheta += inertiaVelTheta * dt;
-          const decay = Math.exp(-INERTIA_DECAY * dtSec);
-          inertiaVelPhi *= decay;
-          inertiaVelTheta *= decay;
-          if (Math.abs(inertiaVelPhi) < MIN_INERTIA_VEL && Math.abs(inertiaVelTheta) < MIN_INERTIA_VEL) {
-            inertiaActive = false; inertiaVelPhi = inertiaVelTheta = 0;
-            focusPhi = currentPhi; focusTheta = currentTheta;
-          }
-        } else {
-          // auto-rotate to focus
-          const dp = (focusPhi - currentPhi + TWO_PI) % TWO_PI;
-          const dn = (currentPhi - focusPhi + TWO_PI) % TWO_PI;
-          currentPhi += (dp < dn ? dp : -dn) * 0.08;
-          currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
-        }
-
-        // update markers in-place (pulse)
-        const tsec = (Date.now() - (window.__cobe_blinkStartTime || Date.now())) / 1000;
-        for (let i = 0; i < markers.length; i++) {
-          const m = markers[i];
-          if (!m) continue;
-          if (typeof m.baseSize !== "number") m.baseSize = typeof m.size === "number" ? m.size : 1;
-          const active = (typeof activeMarkerIndex === "number") && i === activeMarkerIndex;
-          if (active) {
-            const pulse = 1 + BLINK_AMPLITUDE * Math.abs(Math.sin(tsec * Math.PI * BLINK_SPEED_HZ));
-            const base = m.baseSize * 1.1;
-            m.size = base * pulse;
-          } else {
-            m.size = m.baseSize;
-          }
-        }
-
-        state.markers = markers;
-        state.phi = currentPhi;
-        state.theta = currentTheta;
-      }
-    });
-
-    return globeInstance;
-  }
-
-  /* ---------- build / destroy ---------- */
-  async function buildGlobe() {
-    canvas = getGlobeCanvas();
-    if (!canvas) return;
-
-    if (globe) { try { globe.destroy(); } catch (e) {} globe = null; }
-
-    try {
-      canvas.removeEventListener("pointerdown", handlePointerDown);
-      canvas.removeEventListener("pointermove", handlePointerMove);
-      canvas.removeEventListener("pointerup", endDrag);
-      canvas.removeEventListener("pointercancel", endDrag);
-      canvas.removeEventListener("pointerleave", endDrag);
-      if (canvas.__removeWebglLost) canvas.__removeWebglLost(handleContextLost);
-      else canvas.removeEventListener("webglcontextlost", handleContextLost);
-      canvas.removeEventListener("webglcontextrestored", handleContextRestored);
-      window.removeEventListener("resize", sharedResizeHandler);
-    } catch (e) {}
-
-    recomputeSizes();
-    updateMarkerCacheInPlace();
-
-    if (!activeLocations || activeLocations.length === 0) activeMarkerIndex = null;
-    else activeMarkerIndex = Math.min(activeMarkerIndex ?? 0, Math.max(0, activeLocations.length - 1));
-
-    if (!isDragging && activeLocations && activeLocations.length > 0) {
-      const l0 = activeLocations[0];
-      [focusPhi, focusTheta] = locationToAngles(l0.lat, l0.lon);
-      currentPhi = focusPhi; currentTheta = focusTheta;
-      activeMarkerIndex = 0;
-      window.__cobe_blinkStartTime = Date.now();
-    }
-
-    try { globe = await initOptimizedGlobe(canvas); } catch (err) { console.error("initOptimizedGlobe failed", err); return; }
-
-    // pointer listeners
-    canvas.addEventListener("pointerdown", handlePointerDown);
-    canvas.addEventListener("pointermove", handlePointerMove);
-    canvas.addEventListener("pointerup", endDrag);
-    canvas.addEventListener("pointercancel", endDrag);
-    canvas.addEventListener("pointerleave", endDrag);
-
-    // webgl lost/restored
-    if (canvas.__addWebglLost) canvas.__addWebglLost(handleContextLost);
-    else canvas.addEventListener("webglcontextlost", handleContextLost, CONTEXT_LOST_OPTIONS);
-    canvas.addEventListener("webglcontextrestored", handleContextRestored);
-
-    ensureSharedResize();
-    setTimeout(() => { try { canvas.style.opacity = "1"; } catch {} }, 20);
-
-    if (!ro) {
-      try { ro = new ResizeObserver(() => recomputeSizes()); ro.observe(canvas.parentElement || canvas); } catch (e) {}
-    }
-  }
-
-  function destroyGlobe() {
-    if (globe) { try { globe.destroy(); } catch (e) {} globe = null; }
-    try {
-      canvas && canvas.removeEventListener("pointerdown", handlePointerDown);
-      canvas && canvas.removeEventListener("pointermove", handlePointerMove);
-      canvas && canvas.removeEventListener("pointerup", endDrag);
-      canvas && canvas.removeEventListener("pointercancel", endDrag);
-      canvas && canvas.removeEventListener("pointerleave", endDrag);
-      if (canvas && canvas.__removeWebglLost) canvas.__removeWebglLost(handleContextLost);
-      else canvas && canvas.removeEventListener("webglcontextlost", handleContextLost);
-      canvas && canvas.removeEventListener("webglcontextrestored", handleContextRestored);
-    } catch (e) {}
-    try { if (canvas) canvas.style.opacity = "0"; } catch (e) {}
-  }
-
-  /* ---------- handle category changes ---------- */
-  function onCategoryChangeDesktop() {
-    const categoryId = (categorySelect && categorySelect.value) ? categorySelect.value : '';
-    const scope = currentScope();
-    activeLocations = computeActiveLocations(categoryId, scope);
-    populateMobileLocationSelect(activeLocations);
-    updateMarkerCacheInPlace();
-
-    if (!activeLocations || activeLocations.length === 0) { activeMarkerIndex = null; return; }
-    const centroid = computeCentroid(activeLocations);
-    if (centroid) {
-      const [phi,theta] = locationToAngles(centroid.lat, centroid.lon);
-      focusPhi = phi; focusTheta = theta;
-    }
-    activeMarkerIndex = findNearestIndexToPoint(activeLocations, centroid.lat, centroid.lon);
-    window.__cobe_blinkStartTime = Date.now();
-  }
-
-  function onCategoryChangeMobile() {
-    const categoryId = (mobileCategorySelect && mobileCategorySelect.value) ? mobileCategorySelect.value : '';
-    const scope = (document.getElementById('us_mob') && document.getElementById('us_mob').checked) ? 'us' : 'global';
-    activeLocations = computeActiveLocations(categoryId, scope);
-    populateMobileLocationSelect(activeLocations);
-    updateMarkerCacheInPlace();
-
-    if (!activeLocations || activeLocations.length === 0) { activeMarkerIndex = null; return; }
-    const centroid = computeCentroid(activeLocations);
-    if (centroid) {
-      const [phi,theta] = locationToAngles(centroid.lat, centroid.lon);
-      focusPhi = phi; focusTheta = theta;
-    }
-    activeMarkerIndex = findNearestIndexToPoint(activeLocations, centroid.lat, centroid.lon);
-    window.__cobe_blinkStartTime = Date.now();
-  }
-
-  function onMobileLocationSelected(e) {
-    const val = e.target.value;
-    if (!val) { activeMarkerIndex = null; tooltip && (tooltip.style.display='none'); return; }
-    const origIdx = Number(val);
-    const idxInActive = activeLocations.findIndex(a => a._idx === origIdx);
-    if (idxInActive === -1) return;
-    const loc = activeLocations[idxInActive];
-    const [phi,theta] = locationToAngles(loc.lat, loc.lon);
-    focusPhi = phi; focusTheta = theta;
-    activeMarkerIndex = idxInActive;
-    window.__cobe_blinkStartTime = Date.now();
-    // display tooltip near marker
-    showTooltipForIndex(idxInActive);
-  }
-
-  /* ---------- show tooltip for markers ---------- */
-  function showTooltipForIndex(markerIndex, screenX, screenY) {
-    const marker = (window.__cobe_markerCache && window.__cobe_markerCache[markerIndex]) ? window.__cobe_markerCache[markerIndex] : null;
-    if (!marker) return;
-    // find corresponding location in activeLocations (marker array corresponds to activeLocations order)
-    const loc = activeLocations[markerIndex];
-    if (!loc) return;
-    if (!tooltip) return;
-
-    // position tooltip: prefer provided coordinates else compute from lat/lon
-    let px = screenX, py = screenY;
-    if (typeof px === 'undefined' || typeof py === 'undefined') {
-      const scr = latLonToScreen(loc.lat, loc.lon);
-      if (!scr) return;
-      px = scr.x; py = scr.y;
-    }
-
-    // place tooltip centered above the marker
-    const rect = canvas ? canvas.getBoundingClientRect() : { left: 0, top: 0 };
-    // convert canvas-local px to page px (canvas rect offsets)
-    const left = (rect.left || 0) + px;
-    const top = (rect.top || 0) + py;
-
-    tooltip.innerHTML = `<div style="display:flex;align-items:center;justify-content:space-between"><span style="max-width:220px">${loc.name}</span><a href="https://newagesysit.com/" target="_blank" style="margin-left:8px;color:#9ecbff;text-decoration:underline">Open</a></div>`;
-    tooltip.style.display = 'block';
-
-    // clamp tooltip to viewport nicely (put right/left/top)
-    const tipRect = tooltip.getBoundingClientRect();
-    const pageLeft = Math.max(8, left - tipRect.width/2);
-    const pageTop = Math.max(8, top - tipRect.height - 12);
-    // position using left/top (page coordinates)
-    tooltip.style.left = `${pageLeft}px`;
-    tooltip.style.top = `${pageTop}px`;
-  }
-
-  /* ---------- canvas click handling (hit test markers) ---------- */
-  function handleCanvasClick(clientX, clientY) {
-    if (!canvas) return;
-    // compute click relative to canvas rect
-    const rect = canvas.getBoundingClientRect();
-    const localX = clientX - rect.left;
-    const localY = clientY - rect.top;
-
-    // find nearest visible marker within threshold
-    const markers = Array.isArray(window.__cobe_markerCache) ? window.__cobe_markerCache : [];
-    let bestIdx = -1, bestDist = Infinity;
-    // threshold in px (approx): adapt to canvas size
-    const threshold = Math.max(12, Math.min(28, Math.round(rect.width * 0.04)));
-
-    for (let i=0;i<markers.length;i++){
-      const m = markers[i];
-      const loc = activeLocations[i];
-      if (!loc) continue;
-      const scr = latLonToScreen(loc.lat, loc.lon);
-      if (!scr || !scr.visible) continue;
-      const dx = scr.x - localX, dy = scr.y - localY, d2 = dx*dx + dy*dy;
-      if (d2 < bestDist) { bestDist = d2; bestIdx = i; }
-    }
-
-    if (bestIdx !== -1 && bestDist <= (threshold*threshold)) {
-      // marker clicked
-      activeMarkerIndex = bestIdx;
-      window.__cobe_blinkStartTime = Date.now();
-      // rotate to marker smoothly by updating focus
-      const loc = activeLocations[bestIdx];
-      const [phi,theta] = locationToAngles(loc.lat, loc.lon);
-      focusPhi = phi; focusTheta = theta;
-      // show tooltip at click
-      showTooltipForIndex(bestIdx, localX, localY);
-    } else {
-      // clicked empty space -> hide tooltip
-      tooltip && (tooltip.style.display = 'none');
-    }
-  }
-
-  /* ---------- init wiring ---------- */
-  function initOnDomReady() {
-    if (initOnDomReady._done) return;
-    initOnDomReady._done = true;
-
-    try {
-      Object.defineProperty(window, "__globeHelpers", {
-        value: { ensureSharedResize, ensureCanvasWebglHooks, recomputeSizes, buildGlobe, destroyGlobe },
-        configurable: true, enumerable: false, writable: false
-      });
-    } catch (e) {}
-
-    ensureSharedResize();
-    ensureCanvasWebglHooks();
-
-    canvas = getGlobeCanvas();
-    categorySelect = document.getElementById('categorySelect');
-    mobileCategorySelect = document.getElementById('categorySelect-mob');
-    mobileLocationSelect = document.getElementById('locationSelect-mob');
-    tooltip = document.getElementById('tooltip');
-
-    populateCategorySelects();
-
-    // initial active list
-    activeLocations = computeActiveLocations('', currentScope());
-    populateMobileLocationSelect(activeLocations);
-    updateMarkerCacheInPlace();
-
-    // desktop category events
-    if (categorySelect) {
-      categorySelect.removeEventListener('change', onCategoryChangeDesktop);
-      categorySelect.addEventListener('change', onCategoryChangeDesktop);
-    }
-
-    // mobile category events
-    if (mobileCategorySelect) {
-      mobileCategorySelect.removeEventListener('change', onCategoryChangeMobile);
-      mobileCategorySelect.addEventListener('change', onCategoryChangeMobile);
-    }
-
-    if (mobileLocationSelect) {
-      mobileLocationSelect.removeEventListener('change', onMobileLocationSelected);
-      mobileLocationSelect.addEventListener('change', onMobileLocationSelected);
-    }
-
-    // radio toggles (desktop)
-    document.getElementById('us')?.addEventListener('change', () => {
-      activeLocations = computeActiveLocations(categorySelect ? categorySelect.value : '', currentScope());
-      populateMobileLocationSelect(activeLocations);
-      updateMarkerCacheInPlace();
-      if (activeLocations.length) {
-        const centroid = computeCentroid(activeLocations);
-        if (centroid) { const [phi,theta] = locationToAngles(centroid.lat, centroid.lon); focusPhi = phi; focusTheta = theta; }
-        activeMarkerIndex = Math.min(activeMarkerIndex ?? 0, Math.max(0, activeLocations.length - 1));
-        window.__cobe_blinkStartTime = Date.now();
-      } else activeMarkerIndex = null;
-    });
-
-    document.getElementById('global')?.addEventListener('change', (e) => {
-      if (!e.target.checked) return;
-      activeLocations = computeActiveLocations(categorySelect ? categorySelect.value : '', currentScope());
-      populateMobileLocationSelect(activeLocations);
-      updateMarkerCacheInPlace();
-      if (activeLocations.length) {
-        const centroid = computeCentroid(activeLocations);
-        if (centroid) { const [phi,theta] = locationToAngles(centroid.lat, centroid.lon); focusPhi = phi; focusTheta = theta; }
-        activeMarkerIndex = Math.min(activeMarkerIndex ?? 0, Math.max(0, activeLocations.length - 1));
-        window.__cobe_blinkStartTime = Date.now();
-      } else activeMarkerIndex = null;
-    });
-
-    // mobile radios (mirror desktop logic for mobile-only selects)
-    document.getElementById('us_mob')?.addEventListener('change', () => {
-      // treat mobile category select scope update similarly
-      onCategoryChangeMobile();
-    });
-    document.getElementById('global_mob')?.addEventListener('change', () => {
-      onCategoryChangeMobile();
-    });
-
-    // setup existing mobile filters/cards safely (unchanged)
-    try { setupMobileFilters(); } catch (e) {}
-
-    // observe canvas for viewport entry/exit
-    const target = getGlobeCanvas();
-    if (target) {
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) buildGlobe();
-          else destroyGlobe();
+      (async function () {
+        /* ---------- config ---------- */
+        const CATEGORIES = [
+          { id: "custom", name: "Custom Software Development" },
+          { id: "app", name: "App Development" },
+          { id: "mobile", name: "Mobile App Development" },
+          { id: "staff", name: "Staff Augmentation" },
+        ];
+
+        const LOCATIONS = [
+          {
+            name: "Custom Software Development in New Jersey",
+            lat: 40.7128,
+            lon: -74.006,
+            size: 0.083,
+            categoryId: "custom",
+            id: "nj",
+          },
+          {
+            name: "App Development in Jacksonville",
+            lat: 30.3322,
+            lon: -81.6557,
+            size: 0.085,
+            categoryId: "app",
+            id: "jax",
+          },
+          {
+            name: "App Development in Philadelphia",
+            lat: 39.9526,
+            lon: -75.1652,
+            size: 0.085,
+            categoryId: "app",
+            id: "phl",
+          },
+          {
+            name: "App Development in Tampa",
+            lat: 27.9506,
+            lon: -82.4572,
+            size: 0.085,
+            categoryId: "app",
+            id: "tpa",
+          },
+          {
+            name: "App Development in Miami",
+            lat: 25.7617,
+            lon: -80.1918,
+            size: 0.085,
+            categoryId: "app",
+            id: "mia",
+          },
+          {
+            name: "App Development in Atlanta",
+            lat: 33.749,
+            lon: -84.388,
+            size: 0.085,
+            categoryId: "app",
+            id: "atl",
+          },
+          {
+            name: "App Development in Charlotte",
+            lat: 35.2271,
+            lon: -80.8431,
+            size: 0.085,
+            categoryId: "app",
+            id: "clt",
+          },
+          {
+            name: "App Development in New York",
+            lat: 40.7128,
+            lon: -74.006,
+            size: 0.085,
+            categoryId: "app",
+            id: "nyc",
+          },
+          {
+            name: "Mobile App Development in Virginia",
+            lat: 37.5407,
+            lon: -77.436,
+            size: 0.082,
+            categoryId: "mobile",
+            id: "va",
+          },
+          {
+            name: "Mobile App Development in Georgia",
+            lat: 33.749,
+            lon: -84.388,
+            size: 0.082,
+            categoryId: "mobile",
+            id: "ga",
+          },
+          {
+            name: "Mobile App Development in Pennsylvania",
+            lat: 40.2732,
+            lon: -76.8867,
+            size: 0.082,
+            categoryId: "mobile",
+            id: "pa",
+          },
+          {
+            name: "Staff Augmentation in California",
+            lat: 34.0522,
+            lon: -118.2437,
+            size: 0.082,
+            categoryId: "staff",
+            id: "ca",
+          },
+          {
+            name: "Staff Augmentation in Texas",
+            lat: 30.2672,
+            lon: -97.7431,
+            size: 0.082,
+            categoryId: "staff",
+            id: "tx-staff",
+          },
+          {
+            name: "Staff Augmentation in New York",
+            lat: 40.7128,
+            lon: -74.006,
+            size: 0.082,
+            categoryId: "staff",
+            id: "ny-staff",
+          },
+          {
+            name: "Staff Augmentation in South Africa",
+            lat: -26.2041,
+            lon: 28.0473,
+            size: 0.083,
+            categoryId: "staff",
+            id: "za-staff",
+          },
+        ];
+
+        /* ---------- derived/enriched ---------- */
+        const ENRICHED_LOCATIONS = LOCATIONS.map((l, idx) => {
+          const cat = CATEGORIES.find((c) => c.id === l.categoryId);
+          const groupName = cat ? cat.name : "Other";
+          const region =
+            l.lat >= 24 && l.lat <= 49 && l.lon >= -125 && l.lon <= -66
+              ? "us"
+              : "global";
+          return { ...l, _idx: idx, groupName, region };
         });
-      }, { root: null, rootMargin: OBSERVER_ROOT_MARGIN, threshold: OBSERVER_THRESHOLD });
-      obs.observe(target);
-    }
 
-    window.addEventListener('beforeunload', () => { try { ro && ro.disconnect(); } catch (e) {} destroyGlobe(); });
+        /* ---------- state ---------- */
+        let globe = null;
+        let canvas = null;
+        let categorySelect = null;
+        let mobileCategorySelect = null;
+        let tooltip = null;
+        let ro = null;
+        let activeLocations = ENRICHED_LOCATIONS.slice();
 
-    try { recomputeSizes(); } catch (e) {}
-  }
+        let currentPhi = 0,
+          currentTheta = 0.3;
+        let focusPhi = 0,
+          focusTheta = 0;
+        let targetPhi = 0,
+          targetTheta = 0;
+        let lastFrameTime = null;
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initOnDomReady, { once: true });
-  else initOnDomReady();
+        let isDragging = false;
+        let dragStartX = 0,
+          dragStartY = 0,
+          dragStartTargetPhi = 0,
+          dragStartTargetTheta = 0;
+        let lastPointerTime = 0,
+          lastPointerPhi = 0,
+          lastPointerTheta = 0;
+        let pointerVelPhi = 0,
+          pointerVelTheta = 0;
+        let inertiaActive = false,
+          inertiaVelPhi = 0,
+          inertiaVelTheta = 0;
 
-  /* ---------- expose small debug helpers (optional) ---------- */
-  try {
-    window.__globeHelpers = Object.assign(window.__globeHelpers || {}, {
-      showTooltipForIndex,
-      handleCanvasClick,
-      updateMarkerCacheInPlace
-    });
-  } catch (e) {}
-})();
-</script>
+        let activeMarkerIndex = null;
+
+        /* ---------- tuning ---------- */
+        const MAX_DPR = 2;
+        const RESIZE_DEBOUNCE_MS = 120;
+        const TWO_PI = Math.PI * 2;
+        const BLINK_SPEED_HZ = 2.2;
+        const BLINK_AMPLITUDE = 0.85;
+        const DRAG_FOLLOW = 0.22;
+        const INERTIA_DECAY = 3.8;
+        const MIN_INERTIA_VEL = 0.00002;
+        const MOBILE_SAMPLE_THRESHOLD = 768;
+        const MOBILE_SAMPLES = 1500;
+        const DESKTOP_SAMPLES = 5000;
+
+        /* ---------- helpers ---------- */
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+        function normalizeAngle(a) {
+          const r = a % TWO_PI;
+          return r < 0 ? r + TWO_PI : r;
+        }
+        function shortestAngleDiff(from, to) {
+          const a = normalizeAngle(from),
+            b = normalizeAngle(to);
+          let diff = b - a;
+          if (diff > Math.PI) diff -= TWO_PI;
+          if (diff < -Math.PI) diff += TWO_PI;
+          return diff;
+        }
+        function locationToAngles(latDeg, lonDeg) {
+          return [
+            Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2),
+            (latDeg * Math.PI) / 180,
+          ];
+        }
+        function computeCentroid(locs) {
+          if (!locs || locs.length === 0) return null;
+          let sumLat = 0,
+            sumLon = 0;
+          for (const l of locs) {
+            sumLat += l.lat;
+            sumLon += l.lon;
+          }
+          return { lat: sumLat / locs.length, lon: sumLon / locs.length };
+        }
+
+        /* ---------- UI population ---------- */
+        function populateCategorySelects() {
+          const desktop = document.getElementById("categorySelect");
+          if (desktop) {
+            desktop.innerHTML = "";
+            const all = document.createElement("option");
+            all.value = "";
+            all.textContent = "All Categories";
+            desktop.appendChild(all);
+            CATEGORIES.forEach((c) => {
+              const o = document.createElement("option");
+              o.value = c.id;
+              o.textContent = c.name;
+              desktop.appendChild(o);
+            });
+          }
+          const mobile = document.getElementById("categorySelect-mob");
+          if (mobile) {
+            mobile.innerHTML = "";
+            const all = document.createElement("option");
+            all.value = "";
+            all.textContent = "All Categories";
+            mobile.appendChild(all);
+            CATEGORIES.forEach((c) => {
+              const o = document.createElement("option");
+              o.value = c.id;
+              o.textContent = c.name;
+              mobile.appendChild(o);
+            });
+          }
+        }
+
+        function computeActiveLocations(categoryId, scope) {
+          return ENRICHED_LOCATIONS.filter((loc) => {
+            const catMatch = !categoryId || loc.categoryId === categoryId;
+            const scopeMatch = scope === "global" ? true : loc.region === "us";
+            return catMatch && scopeMatch;
+          });
+        }
+
+        /* ---------- mobile grid ---------- */
+        function slugify(s) {
+          return String(s || "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+        }
+        function renderMobileServicesGrid(list) {
+          const grid = document.getElementById("servicesGrid");
+          if (!grid) return;
+          grid.innerHTML = "";
+          list.forEach((loc) => {
+            const idStr = loc.id || slugify(loc.name) || `loc-${loc._idx}`;
+            const card = document.createElement("div");
+            card.className =
+              "service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white";
+            card.dataset.id = idStr;
+            card.dataset.region = loc.region;
+
+            const span = document.createElement("span");
+            span.textContent = loc.name;
+            const a = document.createElement("a");
+            a.href = "https://newagesysit.com/";
+            a.target = "_blank";
+            a.setAttribute("aria-label", "Open");
+            a.innerHTML = `<svg width="20" height="12" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z" fill="white"/></svg>`;
+
+            card.appendChild(span);
+            card.appendChild(a);
+
+            card.addEventListener("click", (ev) => {
+              ev.preventDefault();
+              ev.stopPropagation();
+              const idx = activeLocations.findIndex((l) => l._idx === loc._idx);
+              if (idx === -1) return;
+              activeMarkerIndex = idx;
+              const [phi, theta] = locationToAngles(loc.lat, loc.lon);
+              focusPhi = phi;
+              focusTheta = theta;
+              window.__cobe_blinkStartTime = Date.now();
+              try {
+                const scr = latLonToScreen(loc.lat, loc.lon);
+                if (scr && scr.visible) showTooltipForIndex(idx, scr.x, scr.y);
+                else showTooltipForIndex(idx);
+              } catch {
+                showTooltipForIndex(idx);
+              }
+            });
+
+            grid.appendChild(card);
+          });
+        }
+
+        /* ---------- marker cache ---------- */
+        function updateMarkerCacheInPlace() {
+          const locs = activeLocations || [];
+          const newMarkers = locs.map((l) => ({
+            location: [l.lat, l.lon],
+            baseSize: typeof l.size === "number" ? l.size : 1,
+            size: typeof l.size === "number" ? l.size : 1,
+            _srcIdx: l._idx,
+          }));
+          if (!window.__cobe_markerCache) {
+            window.__cobe_markerCache = newMarkers;
+            window.__cobe_markerCache._forVersion = locs
+              .map((l) => l._idx)
+              .join(",");
+            return;
+          }
+          if (Array.isArray(window.__cobe_markerCache)) {
+            window.__cobe_markerCache.splice(
+              0,
+              window.__cobe_markerCache.length,
+              ...newMarkers
+            );
+          } else window.__cobe_markerCache = newMarkers;
+          window.__cobe_markerCache._forVersion = locs
+            .map((l) => l._idx)
+            .join(",");
+        }
+
+        /* ---------- lat/lon -> screen ---------- */
+        function latLonToScreen(latDeg, lonDeg, out = {}) {
+          if (!canvas) return null;
+          const lat = (latDeg * Math.PI) / 180;
+          const lon = (lonDeg * Math.PI) / 180;
+          const x0 = Math.cos(lat) * Math.cos(lon);
+          const y0 = Math.sin(lat);
+          const z0 = Math.cos(lat) * Math.sin(lon);
+
+          const a = currentPhi;
+          const ca = Math.cos(a),
+            sa = Math.sin(a);
+          const x1 = ca * x0 + sa * z0;
+          const z1 = -sa * x0 + ca * z0;
+          const y1 = y0;
+          const b = currentTheta;
+          const cb = Math.cos(b),
+            sb = Math.sin(b);
+          const y2 = cb * y1 - sb * z1;
+          const z2 = sb * y1 + cb * z1;
+          const x2 = x1;
+
+          const visible = z2 > 0.0001;
+          const rect = canvas.getBoundingClientRect();
+          const cx = rect.width / 2;
+          const cy = rect.height / 2;
+          const screenX = cx + x2 * cx;
+          const screenY = cy - y2 * cy;
+
+          out.x = screenX;
+          out.y = screenY;
+          out.visible = visible;
+          out.z = z2;
+          out.rect = rect;
+          return out;
+        }
+
+        /* ---------- tooltip ---------- */
+        function showTooltipForIndex(markerIndex, screenX, screenY) {
+          const marker =
+            window.__cobe_markerCache && window.__cobe_markerCache[markerIndex]
+              ? window.__cobe_markerCache[markerIndex]
+              : null;
+          if (!marker) return;
+          const loc = activeLocations[markerIndex];
+          if (!loc) return;
+          if (!tooltip) return;
+
+          let px = screenX,
+            py = screenY;
+          if (typeof px === "undefined" || typeof py === "undefined") {
+            const scr = latLonToScreen(loc.lat, loc.lon);
+            if (!scr) return;
+            px = scr.x;
+            py = scr.y;
+          }
+
+          const rect = canvas
+            ? canvas.getBoundingClientRect()
+            : { left: 0, top: 0 };
+          const left = (rect.left || 0) + px;
+          const top = (rect.top || 0) + py;
+          tooltip.innerHTML = `<div style="display:flex;align-items:center;justify-content:space-between"><span style="max-width:220px">${loc.name}</span><a href="https://newagesysit.com/" target="_blank" style="margin-left:8px;color:#9ecbff;text-decoration:underline">Open</a></div>`;
+          tooltip.style.display = "block";
+          tooltip.style.pointerEvents = "auto";
+          const tipRect = tooltip.getBoundingClientRect();
+          const pageLeft = Math.max(8, left - tipRect.width / 2);
+          const pageTop = Math.max(8, top - tipRect.height - 12);
+          tooltip.style.left = `${pageLeft}px`;
+          tooltip.style.top = `${pageTop}px`;
+          setTimeout(() => {
+            try {
+              tooltip.style.pointerEvents = "none";
+            } catch {}
+          }, 2000);
+        }
+
+        /* ---------- click hit test ---------- */
+        function handleCanvasClick(clientX, clientY) {
+          if (!canvas) return;
+          const rect = canvas.getBoundingClientRect();
+          const localX = clientX - rect.left,
+            localY = clientY - rect.top;
+          const markers = Array.isArray(window.__cobe_markerCache)
+            ? window.__cobe_markerCache
+            : [];
+          let bestIdx = -1,
+            bestDist = Infinity;
+          const threshold = Math.max(
+            12,
+            Math.min(28, Math.round(rect.width * 0.04))
+          );
+          for (let i = 0; i < markers.length; i++) {
+            const loc = activeLocations[i];
+            if (!loc) continue;
+            const scr = latLonToScreen(loc.lat, loc.lon);
+            if (!scr || !scr.visible) continue;
+            const dx = scr.x - localX,
+              dy = scr.y - localY,
+              d2 = dx * dx + dy * dy;
+            if (d2 < bestDist) {
+              bestDist = d2;
+              bestIdx = i;
+            }
+          }
+          if (bestIdx !== -1 && bestDist <= threshold * threshold) {
+            activeMarkerIndex = bestIdx;
+            window.__cobe_blinkStartTime = Date.now();
+            const loc = activeLocations[bestIdx];
+            const [phi, theta] = locationToAngles(loc.lat, loc.lon);
+            focusPhi = phi;
+            focusTheta = theta;
+            showTooltipForIndex(bestIdx, localX, localY);
+          } else tooltip && (tooltip.style.display = "none");
+        }
+
+        /* ---------- cobe init ---------- */
+        async function initOptimizedGlobe(canvasEl) {
+          if (!canvasEl) throw new Error("Canvas not found");
+          const module = await import("https://esm.sh/cobe@0.6.3");
+          const createGlobeFn = module.default;
+
+          const localDpr = Math.min(
+            MAX_DPR,
+            Math.max(1, window.devicePixelRatio || 1)
+          );
+          const parentRect =
+            canvasEl.parentElement &&
+            canvasEl.parentElement.getBoundingClientRect();
+          const localWidthCss = Math.max(
+            parentRect ? parentRect.width : canvasEl.clientWidth || 600,
+            100
+          );
+          const localWidthPx = Math.max(
+            2,
+            Math.floor(localWidthCss * localDpr)
+          );
+          const mapSamples =
+            window.innerWidth < MOBILE_SAMPLE_THRESHOLD || localWidthCss < 480
+              ? MOBILE_SAMPLES
+              : DESKTOP_SAMPLES;
+          if (!window.__cobe_markerCache) window.__cobe_markerCache = [];
+
+          const globeInstance = createGlobeFn(canvasEl, {
+            devicePixelRatio: localDpr,
+            width: localWidthPx,
+            height: localWidthPx,
+            phi: typeof currentPhi === "number" ? currentPhi : 0,
+            theta: typeof currentTheta === "number" ? currentTheta : 0,
+            dark: 0,
+            diffuse: 2.55,
+            mapSamples,
+            mapBrightness: 2.0,
+            mapBaseBrightness: 0.0,
+            baseColor: [1, 1, 1],
+            markerColor: [0.18, 0.52, 1],
+            glowColor: [1, 1, 1],
+            markers: window.__cobe_markerCache,
+            onRender: (state) => {
+              const now = performance.now();
+              if (lastFrameTime === null) lastFrameTime = now;
+              const dt = Math.max(1, now - lastFrameTime);
+              const dtSec = dt / 1000;
+              lastFrameTime = now;
+
+              if (isDragging) {
+                // smoother follow (we already update currentPhi/currentTheta during pointermove)
+                const diff = shortestAngleDiff(currentPhi, targetPhi);
+                currentPhi = currentPhi + diff * DRAG_FOLLOW;
+                currentTheta += (targetTheta - currentTheta) * DRAG_FOLLOW;
+                inertiaActive = false;
+              } else if (inertiaActive) {
+                currentPhi += inertiaVelPhi * dt;
+                currentTheta += inertiaVelTheta * dt;
+                const decay = Math.exp(-INERTIA_DECAY * dtSec);
+                inertiaVelPhi *= decay;
+                inertiaVelTheta *= decay;
+                if (
+                  Math.abs(inertiaVelPhi) < MIN_INERTIA_VEL &&
+                  Math.abs(inertiaVelTheta) < MIN_INERTIA_VEL
+                ) {
+                  inertiaActive = false;
+                  inertiaVelPhi = inertiaVelTheta = 0;
+                  focusPhi = currentPhi;
+                  focusTheta = currentTheta;
+                }
+              } else {
+                const dp = (focusPhi - currentPhi + TWO_PI) % TWO_PI;
+                const dn = (currentPhi - focusPhi + TWO_PI) % TWO_PI;
+                currentPhi += (dp < dn ? dp : -dn) * 0.08;
+                currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
+              }
+
+              const markers = Array.isArray(state.markers)
+                ? state.markers
+                : Array.isArray(window.__cobe_markerCache)
+                ? window.__cobe_markerCache
+                : [];
+              const tsec =
+                (Date.now() - (window.__cobe_blinkStartTime || Date.now())) /
+                1000;
+              for (let i = 0; i < markers.length; i++) {
+                const m = markers[i];
+                if (!m) continue;
+                if (typeof m.baseSize !== "number")
+                  m.baseSize = typeof m.size === "number" ? m.size : 1;
+                const active =
+                  typeof activeMarkerIndex === "number" &&
+                  i === activeMarkerIndex;
+                if (active) {
+                  const pulse =
+                    1 +
+                    BLINK_AMPLITUDE *
+                      Math.abs(Math.sin(tsec * Math.PI * BLINK_SPEED_HZ));
+                  const base = m.baseSize * 1.1;
+                  m.size = base * pulse;
+                } else m.size = m.baseSize;
+              }
+
+              state.markers = markers;
+              state.phi = currentPhi;
+              state.theta = currentTheta;
+              currentPhi = state.phi;
+              currentTheta = state.theta;
+            },
+          });
+
+          return globeInstance;
+        }
+
+        /* ---------- sizing & rebuild helpers ---------- */
+        let _lastParentWidth = 0,
+          _lastParentHeight = 0;
+        const SIZE_CHANGE_THRESHOLD_PX = 2;
+        function getParentContentSize() {
+          const parent =
+            document.getElementById("globeWrap") ||
+            (canvas && canvas.parentElement);
+          if (!parent) return { w: 0, h: 0 };
+          return {
+            w: Math.round(parent.clientWidth),
+            h: Math.round(parent.clientHeight),
+          };
+        }
+        function resizeCanvasToParentSquare() {
+          if (!canvas) return;
+          const parent =
+            document.getElementById("globeWrap") || canvas.parentElement;
+          if (!parent) return;
+          const rect = parent.getBoundingClientRect();
+          const cssW = Math.max(2, Math.round(rect.width));
+          const cssH = Math.max(2, Math.round(rect.height));
+          const dpr = Math.min(
+            MAX_DPR,
+            Math.max(1, window.devicePixelRatio || 1)
+          );
+          const pxW = Math.max(2, Math.floor(cssW * dpr));
+          const pxH = Math.max(2, Math.floor(cssH * dpr));
+          if (canvas.width !== pxW || canvas.height !== pxH) {
+            canvas.width = pxW;
+            canvas.height = pxH;
+            canvas.style.width = `${cssW}px`;
+            canvas.style.height = `${cssH}px`;
+          }
+          return { cssW, cssH };
+        }
+
+        let _rebuildTimer = null;
+        function recomputeAndRebuildDebounced() {
+          clearTimeout(_rebuildTimer);
+          _rebuildTimer = setTimeout(() => {
+            try {
+              const { w: pw, h: ph } = getParentContentSize();
+              if (
+                Math.abs(pw - _lastParentWidth) <= SIZE_CHANGE_THRESHOLD_PX &&
+                Math.abs(ph - _lastParentHeight) <= SIZE_CHANGE_THRESHOLD_PX
+              ) {
+                resizeCanvasToParentSquare();
+                return;
+              }
+              _lastParentWidth = pw;
+              _lastParentHeight = ph;
+              destroyGlobe();
+              buildGlobe();
+            } catch (e) {
+              try {
+                resizeCanvasToParentSquare();
+              } catch {}
+            }
+          }, RESIZE_DEBOUNCE_MS);
+        }
+
+        // ---------- improved pointer handlers: require real drag (threshold) ----------
+        let isPointerDown = false;
+        let pointerDownX = 0,
+          pointerDownY = 0;
+        let pointerDownTime = 0;
+
+        // drag start thresholds (px)
+        const DRAG_START_THRESHOLD_MOUSE = 6;
+        const DRAG_START_THRESHOLD_TOUCH = 2;
+
+        // click detection thresholds
+        const CLICK_TIME_MS = 260;
+        const CLICK_MOVE_PX = 8;
+
+        // stable flag for listener attachment
+        let pointerListenersAttached = false;
+
+        function handlePointerDownGlobal(e) {
+          if (!canvas) return;
+
+          // For mouse require left button
+          if (
+            e.pointerType === "mouse" &&
+            typeof e.button === "number" &&
+            e.button !== 0
+          )
+            return;
+
+          // capture pointer where possible
+          try {
+            canvas.setPointerCapture && canvas.setPointerCapture(e.pointerId);
+          } catch {}
+
+          isPointerDown = true;
+          isDragging = false; // only become true after threshold
+          pointerDownX = e.clientX;
+          pointerDownY = e.clientY;
+          pointerDownTime = Date.now();
+
+          // initialize velocity trackers
+          lastPointerTime = performance.now();
+          lastPointerPhi = currentPhi;
+          lastPointerTheta = currentTheta;
+          pointerVelPhi = 0;
+          pointerVelTheta = 0;
+
+          // keep drag start targets ready (useful when threshold is exceeded)
+          dragStartTargetPhi = targetPhi = currentPhi;
+          dragStartTargetTheta = targetTheta = currentTheta;
+
+          // hide tooltip while potential drag starts
+          try {
+            tooltip && (tooltip.style.display = "none");
+          } catch {}
+        }
+
+        function handlePointerMoveGlobal(e) {
+          if (!canvas) return;
+
+          // If pointer isn't down, ignore (this prevents hover movement)
+          // Also ignore hover on mouse where no primary button is pressed.
+          const hasPrimaryButton =
+            typeof e.buttons === "number" ? (e.buttons & 1) !== 0 : false;
+          if (!isPointerDown && !hasPrimaryButton && e.pointerType !== "touch")
+            return;
+
+          // If pointerDown was missed but primary button is pressed, consider it a pointerdown (defensive).
+          if (!isPointerDown && hasPrimaryButton) {
+            // simulate pointerdown state
+            isPointerDown = true;
+            pointerDownX = e.clientX;
+            pointerDownY = e.clientY;
+            pointerDownTime = Date.now();
+            dragStartTargetPhi = targetPhi = currentPhi;
+            dragStartTargetTheta = targetTheta = currentTheta;
+            lastPointerTime = performance.now();
+            lastPointerPhi = currentPhi;
+            lastPointerTheta = currentTheta;
+          }
+
+          // If we haven't started an actual drag (threshold), check threshold first
+          if (!isDragging) {
+            const dx0 = e.clientX - pointerDownX;
+            const dy0 = e.clientY - pointerDownY;
+            const distSq = dx0 * dx0 + dy0 * dy0;
+            const threshold =
+              e.pointerType === "touch"
+                ? DRAG_START_THRESHOLD_TOUCH
+                : DRAG_START_THRESHOLD_MOUSE;
+            if (distSq < threshold * threshold) {
+              // haven't exceeded threshold yet — do not move globe
+              return;
+            }
+            // threshold exceeded -> begin dragging
+            isDragging = true;
+            // set drag starting anchor from the moment drag actually started
+            dragStartX = pointerDownX;
+            dragStartY = pointerDownY;
+            dragStartTargetPhi = targetPhi = currentPhi;
+            dragStartTargetTheta = targetTheta = currentTheta;
+            lastPointerTime = performance.now();
+            lastPointerPhi = currentPhi;
+            lastPointerTheta = currentTheta;
+          }
+
+          // Now we are dragging -> update rotation and velocity
+          const dx = e.clientX - dragStartX;
+          const dy = e.clientY - dragStartY;
+          const denom = Math.max(200, canvas.clientWidth || 600);
+          const newPhi = dragStartTargetPhi + (dx / denom) * TWO_PI;
+          const newTheta = clamp(
+            dragStartTargetTheta + (dy / denom) * Math.PI,
+            -Math.PI / 2 + 0.01,
+            Math.PI / 2 - 0.01
+          );
+
+          // compute velocity for inertia
+          const now = performance.now();
+          const dt = Math.max(1, now - lastPointerTime);
+          const deltaPhi = shortestAngleDiff(lastPointerPhi, newPhi);
+          const deltaTheta = newTheta - lastPointerTheta;
+          pointerVelPhi = deltaPhi / dt;
+          pointerVelTheta = deltaTheta / dt;
+
+          // update targets and tactile immediate update
+          targetPhi = newPhi;
+          targetTheta = newTheta;
+
+          const fastFollow = 0.9; // immediate feel
+          const diff = shortestAngleDiff(currentPhi, newPhi);
+          currentPhi = currentPhi + diff * fastFollow;
+          currentTheta = currentTheta + (newTheta - currentTheta) * fastFollow;
+
+          lastPointerPhi = newPhi;
+          lastPointerTheta = newTheta;
+          lastPointerTime = now;
+        }
+
+        function handlePointerUpGlobal(e) {
+          if (!canvas) return;
+
+          // release capture
+          try {
+            canvas.releasePointerCapture &&
+              canvas.releasePointerCapture(e && e.pointerId);
+          } catch {}
+
+          // If we never started a real drag, this was a tap/click — handle click
+          const clickTime = Date.now() - (pointerDownTime || 0);
+          const moveDx = (e.clientX || pointerDownX) - pointerDownX;
+          const moveDy = (e.clientY || pointerDownY) - pointerDownY;
+          const moveDist = Math.hypot(moveDx, moveDy);
+
+          if (!isDragging) {
+            // treat as click if short and small movement
+            if (clickTime < CLICK_TIME_MS && moveDist < CLICK_MOVE_PX) {
+              handleCanvasClick(e.clientX, e.clientY);
+            }
+            // reset pointer flags
+            isPointerDown = false;
+            isDragging = false;
+            pointerVelPhi = pointerVelTheta = 0;
+            inertiaActive = false;
+            return;
+          }
+
+          // if we were dragging, start inertia using the last velocities
+          inertiaVelPhi = pointerVelPhi;
+          inertiaVelTheta = pointerVelTheta;
+          if (!isFinite(inertiaVelPhi)) inertiaVelPhi = 0;
+          if (!isFinite(inertiaVelTheta)) inertiaVelTheta = 0;
+          inertiaActive =
+            Math.abs(inertiaVelPhi) > MIN_INERTIA_VEL ||
+            Math.abs(inertiaVelTheta) > MIN_INERTIA_VEL;
+
+          // reset pointer-down flags
+          isPointerDown = false;
+          isDragging = false;
+        }
+
+        function attachPointerListenersToCanvas() {
+          if (!canvas || pointerListenersAttached) return;
+          canvas.addEventListener("pointerdown", handlePointerDownGlobal, {
+            passive: true,
+          });
+          canvas.addEventListener("pointermove", handlePointerMoveGlobal, {
+            passive: true,
+          });
+          canvas.addEventListener("pointerup", handlePointerUpGlobal, {
+            passive: true,
+          });
+          canvas.addEventListener("pointercancel", handlePointerUpGlobal, {
+            passive: true,
+          });
+          canvas.addEventListener("pointerleave", handlePointerUpGlobal, {
+            passive: true,
+          });
+          canvas.addEventListener("click", (ev) => {
+            handleCanvasClick(ev.clientX, ev.clientY);
+          });
+          pointerListenersAttached = true;
+        }
+
+        function detachPointerListenersFromCanvas() {
+          if (!canvas || !pointerListenersAttached) return;
+          canvas.removeEventListener("pointerdown", handlePointerDownGlobal);
+          canvas.removeEventListener("pointermove", handlePointerMoveGlobal);
+          canvas.removeEventListener("pointerup", handlePointerUpGlobal);
+          canvas.removeEventListener("pointercancel", handlePointerUpGlobal);
+          canvas.removeEventListener("pointerleave", handlePointerUpGlobal);
+          pointerListenersAttached = false;
+        }
+
+        /* ---------- build/destroy globe ---------- */
+        async function buildGlobe() {
+          canvas = document.getElementById("cobeCanvas");
+          if (!canvas) return;
+          try {
+            canvas.style.touchAction = "none";
+            canvas.style.userSelect = "none";
+            canvas.style.webkitUserDrag = "none";
+          } catch (e) {}
+          const sizes = resizeCanvasToParentSquare();
+          if (sizes) {
+            _lastParentWidth = sizes.cssW;
+            _lastParentHeight = sizes.cssH;
+          }
+
+          if (globe) {
+            try {
+              globe.destroy();
+            } catch {}
+            globe = null;
+          }
+          updateMarkerCacheInPlace();
+          if (!activeLocations || activeLocations.length === 0)
+            activeMarkerIndex = null;
+          else
+            activeMarkerIndex = Math.min(
+              activeMarkerIndex ?? 0,
+              Math.max(0, activeLocations.length - 1)
+            );
+
+          if (!isDragging && activeLocations && activeLocations.length > 0) {
+            const l0 = activeLocations[0];
+            [focusPhi, focusTheta] = locationToAngles(l0.lat, l0.lon);
+            currentPhi = focusPhi;
+            currentTheta = focusTheta;
+            activeMarkerIndex = 0;
+            window.__cobe_blinkStartTime = Date.now();
+          }
+
+          try {
+            globe = await initOptimizedGlobe(canvas);
+          } catch (err) {
+            console.error("initOptimizedGlobe failed", err);
+            return;
+          }
+
+          // attach pointer listeners once
+          attachPointerListenersToCanvas();
+
+          // ResizeObserver: observe wrapper and debounce rebuilds
+          try {
+            if (ro) {
+              try {
+                ro.disconnect();
+              } catch {}
+              ro = null;
+            }
+            ro = new ResizeObserver(() => recomputeAndRebuildDebounced());
+            const wrapper =
+              document.getElementById("globeWrap") || canvas.parentElement;
+            if (wrapper) ro.observe(wrapper);
+          } catch (e) {
+            ro = null;
+          }
+
+          // show canvas once
+          try {
+            if (!canvas.style.opacity || canvas.style.opacity === "0") {
+              requestAnimationFrame(() => {
+                try {
+                  canvas.style.opacity = "1";
+                } catch {}
+              });
+            }
+          } catch {}
+        }
+
+        function destroyGlobe() {
+          // detach pointer listeners to be safe
+          detachPointerListenersFromCanvas();
+          if (globe) {
+            try {
+              globe.destroy();
+            } catch {}
+            globe = null;
+          }
+        }
+
+        /* ---------- category handlers ---------- */
+        function onCategoryChangeDesktop() {
+          const categoryId =
+            categorySelect && categorySelect.value ? categorySelect.value : "";
+          const scope =
+            document.getElementById("us") &&
+            document.getElementById("us").checked
+              ? "us"
+              : "global";
+          activeLocations = computeActiveLocations(categoryId, scope);
+          renderMobileServicesGrid(activeLocations);
+          updateMarkerCacheInPlace();
+          if (!activeLocations || activeLocations.length === 0) {
+            activeMarkerIndex = null;
+            return;
+          }
+          const centroid = computeCentroid(activeLocations);
+          if (centroid) {
+            const [phi, theta] = locationToAngles(centroid.lat, centroid.lon);
+            focusPhi = phi;
+            focusTheta = theta;
+          }
+          window.__cobe_blinkStartTime = Date.now();
+        }
+
+        function onCategoryChangeMobile() {
+          const categoryId =
+            mobileCategorySelect && mobileCategorySelect.value
+              ? mobileCategorySelect.value
+              : "";
+          const scope =
+            document.getElementById("us_mob") &&
+            document.getElementById("us_mob").checked
+              ? "us"
+              : "global";
+          activeLocations = computeActiveLocations(categoryId, scope);
+          renderMobileServicesGrid(activeLocations);
+          updateMarkerCacheInPlace();
+          if (!activeLocations || activeLocations.length === 0) {
+            activeMarkerIndex = null;
+            return;
+          }
+          const centroid = computeCentroid(activeLocations);
+          if (centroid) {
+            const [phi, theta] = locationToAngles(centroid.lat, centroid.lon);
+            focusPhi = phi;
+            focusTheta = theta;
+          }
+          window.__cobe_blinkStartTime = Date.now();
+        }
+
+        /* ---------- init wiring ---------- */
+        function initOnDomReady() {
+          if (initOnDomReady._done) return;
+          initOnDomReady._done = true;
+
+          canvas = document.getElementById("cobeCanvas");
+          categorySelect = document.getElementById("categorySelect");
+          mobileCategorySelect = document.getElementById("categorySelect-mob");
+          tooltip = document.getElementById("tooltip");
+
+          populateCategorySelects();
+
+          activeLocations = computeActiveLocations(
+            "",
+            document.getElementById("us") &&
+              document.getElementById("us").checked
+              ? "us"
+              : "global"
+          );
+          renderMobileServicesGrid(activeLocations);
+          updateMarkerCacheInPlace();
+
+          if (categorySelect) {
+            categorySelect.removeEventListener(
+              "change",
+              onCategoryChangeDesktop
+            );
+            categorySelect.addEventListener("change", onCategoryChangeDesktop);
+          }
+          if (mobileCategorySelect) {
+            mobileCategorySelect.removeEventListener(
+              "change",
+              onCategoryChangeMobile
+            );
+            mobileCategorySelect.addEventListener(
+              "change",
+              onCategoryChangeMobile
+            );
+          }
+
+          document
+            .getElementById("us")
+            ?.addEventListener("change", onCategoryChangeDesktop);
+          document
+            .getElementById("global")
+            ?.addEventListener("change", onCategoryChangeDesktop);
+
+          document
+            .getElementById("us_mob")
+            ?.addEventListener("change", onCategoryChangeMobile);
+          document
+            .getElementById("global_mob")
+            ?.addEventListener("change", onCategoryChangeMobile);
+
+          const target = document.getElementById("cobeCanvas");
+          if (target) {
+            const obs = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) buildGlobe();
+                  else destroyGlobe();
+                });
+              },
+              { root: null, rootMargin: "0px 0px -30% 0px", threshold: 0.25 }
+            );
+            obs.observe(target);
+          }
+
+          try {
+            if (canvas && canvas.getBoundingClientRect().height > 0)
+              buildGlobe();
+          } catch {}
+        }
+
+        if (document.readyState === "loading")
+          document.addEventListener("DOMContentLoaded", initOnDomReady, {
+            once: true,
+          });
+        else initOnDomReady();
+
+        /* ---------- expose helpers ---------- */
+        try {
+          window.__globeHelpers = Object.assign(window.__globeHelpers || {}, {
+            renderMobileServicesGrid,
+            updateMarkerCacheInPlace,
+            buildGlobe,
+            destroyGlobe,
+            showTooltipForIndex,
+          });
+        } catch (e) {}
+      })();
+    </script>
   </body>
 </html>
