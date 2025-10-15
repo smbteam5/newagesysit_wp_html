@@ -817,6 +817,14 @@ video {
   bottom: 60px;
 }
 
+.bottom-\[80\%\] {
+  bottom: 80%;
+}
+
+.bottom-\[90px\] {
+  bottom: 90px;
+}
+
 .end-2 {
   inset-inline-end: 0.5rem;
 }
@@ -999,6 +1007,10 @@ video {
 
 .right-\[45px\] {
   right: 45px;
+}
+
+.right-\[50px\] {
+  right: 50px;
 }
 
 .top-0 {
@@ -1889,6 +1901,10 @@ video {
   height: 15px;
 }
 
+.h-\[160px\] {
+  height: 160px;
+}
+
 .h-\[180px\] {
   height: 180px;
 }
@@ -1921,6 +1937,10 @@ video {
   height: 22px;
 }
 
+.h-\[234px\] {
+  height: 234px;
+}
+
 .h-\[300px\] {
   height: 300px;
 }
@@ -1947,6 +1967,10 @@ video {
 
 .h-\[350px\] {
   height: 350px;
+}
+
+.h-\[354px\] {
+  height: 354px;
 }
 
 .h-\[35px\] {
@@ -2448,6 +2472,10 @@ video {
 
 .w-\[22px\] {
   width: 22px;
+}
+
+.w-\[280px\] {
+  width: 280px;
 }
 
 .w-\[30\%\] {
@@ -3466,6 +3494,11 @@ video {
   white-space: nowrap;
 }
 
+.hyphens-auto {
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -3476,6 +3509,10 @@ video {
 
 .text-nowrap {
   text-wrap: nowrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .break-keep {
@@ -5006,6 +5043,10 @@ video {
   background-image: url('./img/bg-transparent.svg');
 }
 
+.bg-\[url\(\'\.\/img\/bg_blank\.png\'\)\] {
+  background-image: url('./img/bg_blank.png');
+}
+
 .bg-\[url\(\'\.\/img\/bg_ce\.png\'\)\] {
   background-image: url('./img/bg_ce.png');
 }
@@ -5092,6 +5133,30 @@ video {
 
 .bg-\[url\(\'\.\/img\/ppc-cta-bg-mobile\.webp\'\)\] {
   background-image: url('./img/ppc-cta-bg-mobile.webp');
+}
+
+.bg-\[url\(\'\.\/img\/ppc-enterprise\.png\'\)\] {
+  background-image: url('./img/ppc-enterprise.png');
+}
+
+.bg-\[url\(\'\.\/img\/ppc-kickoff\.png\'\)\] {
+  background-image: url('./img/ppc-kickoff.png');
+}
+
+.bg-\[url\(\'\.\/img\/ppc-monitoring\.png\'\)\] {
+  background-image: url('./img/ppc-monitoring.png');
+}
+
+.bg-\[url\(\'\.\/img\/ppc-smb\.png\'\)\] {
+  background-image: url('./img/ppc-smb.png');
+}
+
+.bg-\[url\(\'\.\/img\/ppc-startup\.png\'\)\] {
+  background-image: url('./img/ppc-startup.png');
+}
+
+.bg-\[url\(\'\.\/img\/ppc-uptime\.png\'\)\] {
+  background-image: url('./img/ppc-uptime.png');
 }
 
 .bg-\[url\(\'\.\/img\/quran_easy_bg\.jpg\'\)\] {
@@ -12613,7 +12678,7 @@ footer ul li {
 }
 
 .border-image-ppc-react::before {
-  content: "";
+  /* content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
@@ -12626,7 +12691,7 @@ footer ul li {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
-  -webkit-mask-composite: xor;
+  -webkit-mask-composite: xor; */
 }
 
 .border-image-ppc-react::after {
@@ -12635,7 +12700,7 @@ footer ul li {
   top: 0;
   left: 70%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 30%;
   height: 100%;
   background: linear-gradient(
         90deg,
@@ -12643,14 +12708,14 @@ footer ul li {
         rgba(255, 255, 255, 0.8) 50%,
         transparent 100%
       )
-      top/100% 1px,
+      top/100% 0.5px,
     linear-gradient(
         90deg,
         transparent 0%,
         rgba(255, 255, 255, 0.8) 50%,
         transparent 100%
       )
-      bottom/100% 1px;
+      bottom/100% 0.5px;
   background-repeat: no-repeat;
   z-index: 2;
 }
@@ -13011,6 +13076,26 @@ footer ul li {
     background-color: #ffffff1c;
     border-radius: 50%;
   }
+}
+
+.border-image-ppc-golang{
+  background: linear-gradient(284.5deg, #2C43AC 28.3%, #00000D 147.13%);
+  position: relative;
+  border-radius: 20px;
+}
+
+.border-image-ppc-golang::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(283.69deg, #9E9E9E 33.15%, #666666 99.11%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 @media (min-width: 1024px) {
@@ -13889,6 +13974,10 @@ footer ul li {
     bottom: -95px;
   }
 
+  .md\:bottom-\[10\%\] {
+    bottom: 10%;
+  }
+
   .md\:bottom-\[85px\] {
     bottom: 85px;
   }
@@ -13913,12 +14002,20 @@ footer ul li {
     left: 165px;
   }
 
+  .md\:left-\[50px\] {
+    left: 50px;
+  }
+
   .md\:right-40 {
     right: 10rem;
   }
 
   .md\:top-16 {
     top: 4rem;
+  }
+
+  .md\:top-\[20px\] {
+    top: 20px;
   }
 
   .md\:top-\[235px\] {
@@ -14291,6 +14388,10 @@ footer ul li {
 
   .md\:w-\[138px\] {
     width: 138px;
+  }
+
+  .md\:w-\[150px\] {
+    width: 150px;
   }
 
   .md\:w-\[160px\] {
@@ -14701,6 +14802,10 @@ footer ul li {
 
   .md\:bg-\[url\(\'\.\/img\/pcc-circle-bg\.webp\'\)\] {
     background-image: url('./img/pcc-circle-bg.webp');
+  }
+
+  .md\:bg-\[url\(\'\.\/img\/ppc-blank-bg\.png\'\)\] {
+    background-image: url('./img/ppc-blank-bg.png');
   }
 
   .md\:bg-\[url\(\'\.\/img\/ruby_rails\.jpg\'\)\] {
@@ -15321,6 +15426,10 @@ footer ul li {
     bottom: -80px;
   }
 
+  .lg\:bottom-\[30\%\] {
+    bottom: 30%;
+  }
+
   .lg\:left-10 {
     left: 2.5rem;
   }
@@ -15367,6 +15476,10 @@ footer ul li {
 
   .lg\:top-\[155px\] {
     top: 155px;
+  }
+
+  .lg\:top-\[40px\] {
+    top: 40px;
   }
 
   .lg\:top-auto {
@@ -16985,6 +17098,11 @@ footer ul li {
     padding-bottom: 5rem;
   }
 
+  .xl\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .xl\:py-52 {
     padding-top: 13rem;
     padding-bottom: 13rem;
@@ -17232,6 +17350,14 @@ footer ul li {
   .min-375px\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .min-375px\:pl-0 {
+    padding-left: 0px;
+  }
+
+  .min-375px\:pl-2 {
+    padding-left: 0.5rem;
   }
 }
 

@@ -4490,7 +4490,7 @@ footer ul li {
 }
 
 .border-image-ppc-react::before {
-  content: "";
+  /* content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
@@ -4503,7 +4503,7 @@ footer ul li {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
-  -webkit-mask-composite: xor;
+  -webkit-mask-composite: xor; */
 }
 
 .border-image-ppc-react::after {
@@ -4512,7 +4512,7 @@ footer ul li {
   top: 0;
   left: 70%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 30%;
   height: 100%;
   background: linear-gradient(
         90deg,
@@ -4520,14 +4520,14 @@ footer ul li {
         rgba(255, 255, 255, 0.8) 50%,
         transparent 100%
       )
-      top/100% 1px,
+      top/100% 0.5px,
     linear-gradient(
         90deg,
         transparent 0%,
         rgba(255, 255, 255, 0.8) 50%,
         transparent 100%
       )
-      bottom/100% 1px;
+      bottom/100% 0.5px;
 
   background-repeat: no-repeat;
   z-index: 2;
@@ -4858,4 +4858,25 @@ footer ul li {
     background-color: #ffffff1c;
     border-radius: 50%;
   }
+}
+
+
+.border-image-ppc-golang{
+  background: linear-gradient(284.5deg, #2C43AC 28.3%, #00000D 147.13%);
+  position: relative;
+  border-radius: 20px;
+}
+
+.border-image-ppc-golang::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(283.69deg, #9E9E9E 33.15%, #666666 99.11%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
