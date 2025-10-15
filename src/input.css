@@ -4559,6 +4559,11 @@ footer ul li {
   );
 }
 
+
+:root {
+  --stub: clamp(28px, 5vw, 64px);
+}
+
 .timeline {
   overflow: hidden;
   padding: clamp(32px, 5vw, 72px) 0;
@@ -4643,6 +4648,7 @@ footer ul li {
     left: 18px;
   }
 }
+
 .timeline__item::before {
   content: "";
   position: absolute;
@@ -4683,7 +4689,7 @@ footer ul li {
     background: #253047;
     z-index: 1;
     width: 50px;
-    left: 15px;
+    left: 18px;
   }
 }
 .timeline__item:nth-child(even) .timeline__content {
