@@ -187,6 +187,11 @@
         animation-delay: var(--delay, 0ms);
       }
 
+      /* @media (min-width: 768px) {
+        .rings-loaded #rings .ring {
+          opacity: 0.2 !important;
+        }
+      } */
       @keyframes ring-in {
         from {
           opacity: 0;
@@ -2057,7 +2062,7 @@
           <img src="./img/glow.png" alt="" class="w-auto" />
         </span>
         <div
-          class="w-full md:w-full self-center min-768px:pb-[40px] text-center pb-[40px]"
+          class="w-full md:w-full self-center min-768px:pb-[40px] text-center pb-[40px] relative z-[9]"
         >
           <h1
             class="text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
@@ -2118,45 +2123,210 @@
       <!-- Radial Rings (Animated Glow Layers) -->
       <div
         id="rings"
-        class="absolute left-1/2 top-[20%] h-[500px] w-screen -translate-x-1/2 -translate-y-[25.25px] block xl:top-[20%] xl:h-full xl:w-[calc(100vw-300px)] min-1680px:top-[38%]"
+        class="absolute left-1/2 top-[20%] h-[500px] w-screen -translate-x-1/2 -translate-y-[25.25px] xl:top-[20%] xl:h-full xl:w-[calc(100vw-300px)] min-1680px:top-[38%] block"
       >
-        <!-- Ring 1 -->
+                       
         <span
-          class="ring absolute left-1/2 inline-block aspect-[1300/571] h-[500px] w-[calc(100vw-100px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-300px)]"
+          class="ring absolute left-1/2 inline-block aspect-[1300/571] md:h-[500px] md:w-[calc(100vw-100px)] w-[calc(100vw-100px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-300px)]"
           style="--base: 129.737; --opacity: 0.02; --amp: 80"
         ></span>
 
-        <!-- Ring 2 -->
+                       
         <span
-          class="ring absolute left-1/2 inline-block aspect-[1100/471] h-[500px] w-[calc(100vw-300px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-500px)]"
+          class="ring absolute left-1/2 inline-block aspect-[1100/471] md:h-[500px] md:w-[calc(100vw-300px)] w-[calc(100vw-300px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-500px)]"
           style="--base: 208.114; --opacity: 0.05; --amp: 110"
         ></span>
 
-        <!-- Ring 3 -->
+                       
         <span
-          class="ring absolute left-1/2 inline-block aspect-[900/371] h-[500px] w-[calc(100vw-500px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-700px)]"
+          class="ring absolute left-1/2 inline-block aspect-[900/371] md:h-[500px] md:w-[calc(100vw-500px)] w-[calc(100vw-500px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-700px)]"
           style="--base: 286.491; --opacity: 0.05; --amp: 130"
         ></span>
 
-        <!-- Ring 4 -->
+                       
         <span
-          class="ring absolute left-1/2 inline-block aspect-[700/271] h-[500px] w-[calc(100vw-700px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-900px)]"
+          class="ring absolute left-1/2 inline-block aspect-[700/271] md:h-[500px] md:w-[calc(100vw-700px)] w-[calc(100vw-700px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-900px)]"
           style="--base: 364.868; --opacity: 0.1; --amp: 160"
         ></span>
 
-        <!-- Ring 5 -->
+                       
         <span
-          class="ring absolute left-1/2 inline-block aspect-[500/171] h-[500px] w-[calc(100vw-900px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-1100px)]"
+          class="ring absolute left-1/2 inline-block aspect-[500/171] md:h-[500px] md:w-[calc(100vw-900px)] w-[calc(100vw-900px)] -translate-x-1/2 rounded-t-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-1100px)]"
           style="--base: 443.246; --opacity: 0.2; --amp: 190"
         ></span>
 
-        <!-- Core Glow -->
+                       
         <span
-          class="ring absolute left-1/2 inline-block aspect-[300/71] h-[500px] w-[calc(100vw-1100px)] -translate-x-1/2 rounded-t-full bg-[#5871F0] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-1300px)]"
+          class="ring absolute left-1/2 inline-block aspect-[300/71] md:h-[500px] md:w-[calc(100vw-1100px)] w-[calc(100vw-1100px)] -translate-x-1/2 rounded-t-full bg-[#5871F0] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0)_0%,#ffffff_100%)] xl:h-full xl:w-[calc(100vw-1300px)]"
           style="--base: 521.623; --opacity: 1; --amp: 240"
         ></span>
+             
       </div>
-
+      <div
+        class="absolute left-0 bottom-[-20%] min-1680px:top-[38%] md:hidden block w-full"
+      >
+        <svg
+          width="100%"
+          height="601"
+          viewBox="0 0 390 601"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- <rect
+            width="100%"
+            height="674"
+            transform="translate(-121 92)"
+            fill="url(#paint0_radial_7231_11853)"
+          /> -->
+          <circle
+            opacity="0.02"
+            cx="195"
+            cy="650"
+            r="650"
+            fill="url(#paint1_radial_7231_11853)"
+          />
+          <circle
+            opacity="0.05"
+            cx="195"
+            cy="650"
+            r="550"
+            fill="url(#paint2_radial_7231_11853)"
+          />
+          <circle
+            opacity="0.05"
+            cx="195"
+            cy="650"
+            r="450"
+            fill="url(#paint3_radial_7231_11853)"
+          />
+          <circle
+            opacity="0.1"
+            cx="195"
+            cy="650"
+            r="350"
+            fill="url(#paint4_radial_7231_11853)"
+          />
+          <circle
+            opacity="0.2"
+            cx="195"
+            cy="650"
+            r="250"
+            fill="url(#paint5_radial_7231_11853)"
+          />
+          <g filter="url(#filter0_d_7231_11853)">
+            <circle cx="195" cy="650" r="150" fill="#5871F0" />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_7231_11853"
+              x="-38"
+              y="412"
+              width="466"
+              height="466"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feMorphology
+                radius="13"
+                operator="dilate"
+                in="SourceAlpha"
+                result="effect1_dropShadow_7231_11853"
+              />
+              <feOffset dy="-5" />
+              <feGaussianBlur stdDeviation="35" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.841346 0 0 0 0 0.933894 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_7231_11853"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_7231_11853"
+                result="shape"
+              />
+            </filter>
+            <radialGradient
+              id="paint0_radial_7231_11853"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(316 237) rotate(90) scale(237 316)"
+            >
+              <stop stop-color="#002DFF" />
+              <stop offset="1" stop-color="#070916" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial_7231_11853"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(650)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint2_radial_7231_11853"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(550)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint3_radial_7231_11853"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(450)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint4_radial_7231_11853"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(350)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint5_radial_7231_11853"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(250)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
       <!-- Awards / Recognition Scrolling Bar -->
       <div
         class="border-gradient relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
