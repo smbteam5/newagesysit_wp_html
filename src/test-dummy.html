@@ -2,23 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>COBE Globe — dropdown, idle rotate, drag</title>
+    <title>COBE Globe — dropdown, idle rotate, drag, hover</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
       :root {
         --max-width: 720px;
       }
-      /* body {
-        margin: 0;
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial;
-        display: flex;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
-        background: #000;
-        color: #111;
-      } */
       .map-view .card {
         width: 100%;
         max-width: var(--max-width);
@@ -32,7 +21,6 @@
         margin: 0 auto;
         border-radius: 14px;
         overflow: hidden;
-        /* background: white; */
         touch-action: none; /* allow pointer events for drag */
       }
       .map-view canvas {
@@ -191,7 +179,6 @@
             <input type="radio" name="toggle" id="us" checked />
             <input type="radio" name="toggle" id="global" />
 
-            <!-- Toggle switch -->
             <div class="toggle-wrapper">
               <label for="us" class="toggle-label us-label"
                 >U.S. locations</label
@@ -202,12 +189,6 @@
             </div>
           </div>
           <select id="locationSelect" class="small"></select>
-          <!-- <button id="fitButton" class="small">Fit / Center</button> -->
-
-          <!-- <div class="legend" style="margin-left: 0.6rem">
-          <div class="dot-swatch" aria-hidden="true"></div>
-          <div>Marker</div>
-        </div> -->
         </div>
         <div
           id="tooltip"
@@ -218,8 +199,8 @@
             color: white;
             font-size: 15px;
             border-radius: 6px;
-            pointer-events: auto; /* 👈 enables click inside tooltip */
-            z-index: 9999; /* 👈 stays above canvas */
+            pointer-events: auto;
+            z-index: 9999;
             left: 384px;
             display: none;
             top: 50%;
@@ -234,8 +215,7 @@
       </div>
     </section>
     <script type="module">
-      // import createGlobe from "https://cdn.skypack.dev/cobe"; // original
-      import createGlobe from "https://esm.sh/cobe@0.6.3"; // more reliable CDN
+      import createGlobe from "https://esm.sh/cobe@0.6.3"; // reliable CDN
 
       // ---- Config ----
       const LOCATIONS = [
@@ -266,17 +246,16 @@
       ];
 
       function locationToAngles(latDeg, lonDeg) {
-        // Math.PI
+        // Convert lat/lon degrees to spherical phi/theta radians
         return [
-          Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), // phi
-          (latDeg * Math.PI) / 180, // theta
+          Math.PI - ((lonDeg * Math.PI) / 180 - Math.PI / 2), // phi (longitude)
+          (latDeg * Math.PI) / 180, // theta (latitude)
         ];
       }
 
       const canvas = document.getElementById("cobeCanvas");
       const selectEl = document.getElementById("locationSelect");
       const tooltip = document.getElementById("tooltip");
-      // const fitButton = document.getElementById("fitButton");
       tooltip.style.display = "none";
       const placeholderOption = document.createElement("option");
       placeholderOption.value = "";
@@ -301,7 +280,7 @@
       let focusPhi = 0;
       let focusTheta = 0;
       let lastInteractionTime = Date.now();
-      const idleRotationSpeed = 0.0008; // radians per frame-ish (unused but kept)
+      const idleRotationSpeed = 0.0008;
 
       // Dragging state (pointer)
       let isDragging = false;
@@ -309,6 +288,14 @@
       let dragStartY = 0;
       let dragStartPhi = 0;
       let dragStartTheta = 0;
+
+      // Marker hover state
+      let mouseX = -1;
+      let mouseY = -1;
+      // Tolerance in scaled pixels (DPR=2)
+      const HIT_TOLERANCE_PX = 15;
+      let hoveredMarkerIndex = null;
+      let lastHoveredMarkerIndex = null;
 
       // marker blink state
       let activeMarkerIndex = 0; // default: first marker
@@ -346,7 +333,14 @@
       });
 
       canvas.addEventListener("pointermove", (e) => {
+        // Update mouse position relative to the canvas for hover check
+        const rect = canvas.getBoundingClientRect();
+        // Scale position by DPR (2) for accurate canvas coordinates
+        mouseX = (e.clientX - rect.left) * 2;
+        mouseY = (e.clientY - rect.top) * 2;
+
         if (!isDragging) return;
+
         const dx = e.clientX - dragStartX;
         const dy = e.clientY - dragStartY;
         // convert deltas to angle offsets; sensitivity tuned for comfortable dragging
@@ -372,6 +366,10 @@
           focusPhi = currentPhi;
           focusTheta = currentTheta;
           lastInteractionTime = Date.now();
+          // Restore grab cursor if not hovering
+          if (hoveredMarkerIndex === null) {
+            canvas.style.cursor = "grab";
+          }
         }
       }
       canvas.addEventListener("pointerup", endDrag);
@@ -380,6 +378,30 @@
       // Utility clamp
       function clamp(v, a, b) {
         return Math.max(a, Math.min(b, v));
+      }
+
+      // Utility to convert lat/lon and apply rotation to get 3D/screen position
+      function getLocationPosition(latDeg, lonDeg, phi, theta, width) {
+        // 1. Convert to spherical coordinates (phi, theta)
+        const [locPhi, locTheta] = locationToAngles(latDeg, lonDeg);
+
+        // 2. Adjust for globe rotation
+        const dPhi = locPhi - phi;
+        // Calculate the x, y, z coordinates on a unit sphere (simplified projection)
+        const x = Math.cos(locTheta) * Math.sin(dPhi);
+        const y = Math.sin(locTheta);
+        const z = Math.cos(locTheta) * Math.cos(dPhi);
+
+        // If z is negative, the point is on the backside (not visible)
+        if (z < 0) return null;
+
+        // 3. Project 3D point (x, y) to 2D screen coordinates
+        const scale = width / 2;
+        const screenX = x * scale + scale;
+        // y-axis is inverted in screen coordinates
+        const screenY = -y * scale + scale;
+
+        return [screenX, screenY];
       }
 
       // Create globe with your look, now with BLUE markers + blink
@@ -394,7 +416,7 @@
         mapSamples: 16000,
         mapBrightness: 1.15,
         baseColor: [1, 1, 1], // white globe
-        markerColor: [0.18, 0.52, 1], // BLUE markers  <-- CHANGED
+        markerColor: [0.18, 0.52, 1], // BLUE markers
         glowColor: [1, 1, 1],
         markers: LOCATIONS.map((l) => ({
           location: [l.lat, l.lon],
@@ -408,7 +430,7 @@
           if (!isDragging) {
             let intendedFocusPhi = focusPhi;
 
-            // Smooth approach to focus without idle rotation
+            // Smooth approach to focus
             const doublePi = Math.PI * 2;
             const distPositive =
               (intendedFocusPhi - currentPhi + doublePi) % doublePi;
@@ -423,6 +445,58 @@
 
             currentTheta = currentTheta * 0.92 + focusTheta * 0.08;
           }
+
+          // --- HOVER DETECTION LOGIC (in onRender) ---
+          lastHoveredMarkerIndex = hoveredMarkerIndex;
+          hoveredMarkerIndex = null;
+
+          if (!isDragging && mouseX > 0 && mouseY > 0) {
+            const globeWidth = state.width;
+            // Tolerance is multiplied by 2 because the canvas is rendered at DPR=2
+            const tolerance = HIT_TOLERANCE_PX * 2;
+
+            LOCATIONS.forEach((loc, i) => {
+              const pos = getLocationPosition(
+                loc.lat,
+                loc.lon,
+                currentPhi,
+                currentTheta,
+                globeWidth
+              );
+
+              if (pos) {
+                const [screenX, screenY] = pos;
+                const dx = mouseX - screenX;
+                const dy = mouseY - screenY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < tolerance) {
+                  hoveredMarkerIndex = i;
+                }
+              }
+            });
+          }
+
+          // Check for hover change and log
+          if (hoveredMarkerIndex !== lastHoveredMarkerIndex) {
+            if (hoveredMarkerIndex !== null) {
+              // Mouse just entered a marker area
+              console.log(
+                "Marker HOVER IN:",
+                LOCATIONS[hoveredMarkerIndex].name
+              );
+              canvas.style.cursor = "pointer";
+            } else if (lastHoveredMarkerIndex !== null) {
+              // Mouse just left a marker area
+              console.log(
+                "Marker HOVER OUT:",
+                LOCATIONS[lastHoveredMarkerIndex].name
+              );
+              // Restore cursor based on drag state
+              canvas.style.cursor = isDragging ? "grabbing" : "grab";
+            }
+          }
+          // ---------------------------------------------
 
           // --- Rebuild markers each frame so selected one can "blink" ---
           const t = (Date.now() - blinkStartTime) / 1000;
@@ -451,6 +525,10 @@
         const idx = Number(e.target.value);
         if (isNaN(idx)) return; // Don't proceed if placeholder is selected
         const selectedLocation = LOCATIONS[idx];
+
+        // Log selection to console (as requested for the "click" interaction)
+        console.log("Location Selected from Dropdown:", selectedLocation.name);
+
         const angs = locationToAngles(LOCATIONS[idx].lat, LOCATIONS[idx].lon);
         focusPhi = angs[0];
         focusTheta = angs[1];
@@ -465,7 +543,7 @@
         activeMarkerIndex = idx;
         blinkStartTime = Date.now();
 
-        // Tooltip preserved
+        // Tooltip update
         tooltip.innerHTML = `
   <div style="display:flex;align-items:center;gap:8px; align-items:center; justify-content:space-between">
     <span>${selectedLocation.name}</span>
@@ -491,13 +569,13 @@
       document.getElementById("us").addEventListener("change", (e) => {
         if (e.target.checked) {
           // Focus on U.S. (New Jersey)
-          const usLocation = LOCATIONS[0]; // Assuming first in array is New Jersey
+          const usLocation = LOCATIONS[0];
           const [phi, theta] = locationToAngles(usLocation.lat, usLocation.lon);
           focusPhi = phi;
           focusTheta = theta;
           lastInteractionTime = Date.now();
 
-          // Optional: update dropdown to match (keep placeholder)
+          // Update dropdown to match (keep placeholder)
           selectEl.selectedIndex = 0;
           selectEl.value = "";
           tooltip.style.display = "none";
@@ -517,11 +595,10 @@
         focusTheta = currentTheta;
         lastInteractionTime = Date.now();
 
-        // Clear dropdown selection ONLY; keep current blinking marker
+        // Clear dropdown selection ONLY
         selectEl.selectedIndex = 0;
         selectEl.value = "";
         tooltip.style.display = "none";
-        // NOTE: we do NOT clear activeMarkerIndex here
       });
 
       // Cleanup on unload
@@ -531,7 +608,7 @@
         } catch (e) {}
       });
 
-      // Ensure focusPhi/focusTheta start from the selected location
+      // Initialize focus
       (function initFocusFromSelect() {
         const [phi, theta] = locationToAngles(
           LOCATIONS[0].lat,
