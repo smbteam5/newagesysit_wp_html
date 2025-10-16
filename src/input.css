@@ -3598,8 +3598,9 @@ html {
   height: 100%;
   margin: 0;
   left: 0;
+  position: absolute;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .hero-inner {
     width: calc(100vw - 15px) !important;
     height: 100%;
@@ -3746,9 +3747,32 @@ html {
 .vertical-sliders .swiper {
   padding-top: 20px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .vertical-sliders .swiper {
     height: 600px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vertical-sliders .swiper {
+    height: 300px;
+    padding-bottom: 20px;
+  }
+  .ctt_testimonials .swiper-wrapper .swiper-slide {
+    height: inherit !important;
+  }
+  .ctt_testimonials .swiper-wrapper .swiper-slide .ctt_item {
+    height: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .ctt_testimonials.swiper-autoheight .swiper-wrapper {
+    height: 900px !important;
+  }
+}
+@media (max-width: 474px) {
+  .ctt_testimonials.swiper-autoheight .swiper-wrapper {
+    height: 1000px !important;
   }
 }
 .vertical-sliders .swiper-slide {
@@ -4317,7 +4341,7 @@ footer ul li {
 }
 .map-view .controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 20px;
   justify-content: center;
   padding: 0.8rem 0;
   flex-wrap: wrap;
@@ -4371,7 +4395,7 @@ footer ul li {
 }
 @media (max-width: 420px) {
   .map-view .controls {
-    gap: 0.4rem;
+    gap: 20px;
     padding: 0.6rem 0;
   }
   .map-view select,
@@ -4466,7 +4490,7 @@ footer ul li {
 }
 
 .border-image-ppc-react::before {
-  content: "";
+  /* content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
@@ -4479,7 +4503,7 @@ footer ul li {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
-  -webkit-mask-composite: xor;
+  -webkit-mask-composite: xor; */
 }
 
 .border-image-ppc-react::after {
@@ -4488,7 +4512,7 @@ footer ul li {
   top: 0;
   left: 70%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 30%;
   height: 100%;
   background: linear-gradient(
         90deg,
@@ -4496,14 +4520,14 @@ footer ul li {
         rgba(255, 255, 255, 0.8) 50%,
         transparent 100%
       )
-      top/100% 1px,
+      top/100% 0.5px,
     linear-gradient(
         90deg,
         transparent 0%,
         rgba(255, 255, 255, 0.8) 50%,
         transparent 100%
       )
-      bottom/100% 1px;
+      bottom/100% 0.5px;
 
   background-repeat: no-repeat;
   z-index: 2;
@@ -4543,6 +4567,10 @@ footer ul li {
     rgba(23, 45, 152, 0.57) 5.99%,
     rgba(14, 46, 49, 0) 101.94%
   );
+}
+
+:root {
+  --stub: clamp(28px, 5vw, 64px);
 }
 
 .timeline {
@@ -4629,6 +4657,7 @@ footer ul li {
     left: 18px;
   }
 }
+
 .timeline__item::before {
   content: "";
   position: absolute;
@@ -4669,7 +4698,7 @@ footer ul li {
     background: #253047;
     z-index: 1;
     width: 50px;
-    left: 15px;
+    left: 18px;
   }
 }
 .timeline__item:nth-child(even) .timeline__content {
@@ -4806,4 +4835,48 @@ footer ul li {
   #rings {
     @apply !top-[38%];
   }
+}
+@media (max-width: 992px) {
+  .swiper-navs {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    gap: 10px;
+  }
+  .swiper-navs svg {
+    width: 100%;
+    padding: 12px;
+  }
+  .swiper-navs .swiper-button-next,
+  .swiper-navs .swiper-button-prev {
+    position: unset;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff1c;
+    border-radius: 50%;
+  }
+}
+
+
+.border-image-ppc-golang{
+  background: linear-gradient(284.5deg, #2C43AC 28.3%, #00000D 147.13%);
+  position: relative;
+  border-radius: 20px;
+}
+
+.border-image-ppc-golang::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(283.69deg, #9E9E9E 33.15%, #666666 99.11%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }

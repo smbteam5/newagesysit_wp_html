@@ -1,0 +1,4611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPC-Golang</title>
+
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+      /* Owl Carousel Custom Styles */
+      .owl-carousel .owl-nav {
+        /* position: absolute; */
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        pointer-events: none;
+      }
+
+      .owl-carousel .owl-nav button {
+        background: black !important;
+        border-radius: 50% !important;
+        width: 50px;
+        height: 50px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        pointer-events: all;
+        border: 1px solid #fff !important;
+        transition: all 0.3s ease;
+      }
+
+      .owl-carousel .owl-nav button:hover {
+        background: rgba(0, 0, 0, 0.8) !important;
+        transform: scale(1.1);
+      }
+
+      .owl-carousel .owl-nav button span {
+        display: none;
+      }
+
+      .owl-carousel .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .owl-carousel .owl-dots .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .owl-carousel .owl-dots .owl-dot.active {
+        background: white;
+        transform: scale(1.2);
+      }
+
+      .owl-carousel .owl-dots .owl-dot span {
+        display: none;
+      }
+
+      /* Custom carousel styling */
+      .owl-carousel .item {
+        padding: 0 15px;
+      }
+
+      .mobile-slider .owl-dots .owl-dot {
+        display: none;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .mobile-slider .owl-nav {
+        margin-top: 40px;
+      }
+
+      /* Custom styles for the gradients - Tailwind's utility classes are good, but a bit of custom CSS for the specific dark gradients can be cleaner for a faithful reproduction. */
+      .gradient-1-ppc {
+       background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 46, 49, 0) 101.94%);
+
+      }
+      .gradient-2-ppc {
+       background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
+
+      }
+      .gradient-3-ppc {
+       background: linear-gradient(136.57deg, rgba(116, 60, 168, 0.38) 1.71%, rgba(19, 34, 20, 0) 101.9%);
+
+      }
+      .gradient-4-ppc {
+      background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
+
+      }
+      /* Ensure the background of the body matches the image */
+      body {
+        background-color: #0d0b1d; /* Very dark background */
+      }
+    </style>
+  </head>
+
+  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
+    <header
+      class="top-0 left-0 right-0 fixed text-white z-[100]"
+      style="background-color: rgba(0, 10, 31) !important"
+    >
+      <div
+        class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto"
+      >
+        <nav class="flex">
+          <a href="#">
+            <img
+              src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
+              class="h-[40px] md:h-[47px]"
+              alt=""
+            />
+          </a>
+        </nav>
+
+        <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
+          <button class="py-2 px-3 rounded uppercase">
+            <img class="max-w-6" src="./img/call.png" alt="call" />
+          </button>
+          <button id="mobile-menu-button" class="xl:hidden">
+            <svg
+              class="w-7 h-7 text-white fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- mobile-menu start-->
+      <div id="mobile-menu" class="hidden w-full min-h-screen lg:hidden">
+        <nav class="p-4 container mx-auto">
+          <ul
+            class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
+          >
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Services
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
+                <div class="relative z-10 pb-5">
+                  <div
+                    class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh]"
+                  >
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      SOFTWARE DEVELOPMENT
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="/custom-software-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Custom Software Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/software-product-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Software Product Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/saas-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Saas Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/web-application-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Web Application Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="//newagesysit.com/app-development-service/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Mobile App Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/maintenance-and-support/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Maintenance and Support
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      CLOUD SERVICES
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Managed Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AWS
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Application Development
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      IDEATION AND DESIGN
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          UI/UX Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          UX/UI Design
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          MVP Design
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      MVP Design
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Consulting Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps CI/CD Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Development Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Implementation Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevSecOps Services
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      EMERGING TECHNOLOGIES
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AI/ML
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AR/VR
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Data Science and Analytics
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Blockchain
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Robotic Process Automation
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      STARTUP SERVICES
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Minimal Viable Product (MVP)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Product Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Maintenance & Support
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Start-up Advisory / Consulting
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      Start-up Advisory / Consulting
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Digital Transformation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          IT Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Implementation Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          IT Security and Cybersecurity
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      Workforce Management
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Staff Augmentation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Dedicated Development Team
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          QA & Testing
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Industries
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
+                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/transportation.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Transportation</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/on-demand.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>On Demand</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/healthcare.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Healthcare</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/social-networking.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Social Networking</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/entertainment.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Entertainment</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/travel.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Travel</div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/restaurant.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Restaurant</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/e-commerce.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>E-commerce</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/uber-like.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Uber Like Platform</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/saas.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>SaaS</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/game-app.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Game App</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/fintech.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>FinTech</div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/wellness.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Wellness</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/realestate.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Real Estate</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/education.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Education</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/petcare.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Pet Care</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/door-to-door.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Door to Door Sales</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Technologies
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
+                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
+                  <div class="grid grid-cols-1">
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/ios.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>iOS</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/android.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Android</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/react-native.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>React Native</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/python.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Python</div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/flutter.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Flutter</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/php.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>PHP</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/nodejs.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Node JS</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/mainframe.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Mainframe</div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/coldfusion.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>ColdFusion</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/rubyrails.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Ruby on Rails</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/xamarin.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Xamarin</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Portfolio
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Blog
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile-menu end-->
+    </header>
+
+    <section
+      class="h-full lg:h-[100vh] bg-contain bg-top bg-no-repeat flex justify-center items-center py-32  relative "
+    >
+      <div
+        class="absolute scale-150 md:scale-125 top-[200px] md:top-[50px] left-0 right-0 bottom-0 z-20 bg-contain bg-top bg-no-repeat pointer-events-none bg-[url('./img/bg-transparent.svg')] h-[80%]"
+      ></div>
+
+       
+      <div
+        class="absolute z-40 bottom-[-390px] md:bottom-[-600px] lg:bottom-[-490px] xl:bottom-[-520px] left-1/2 -translate-x-1/2 w-[150%]   bg-[url('./img/effect-ppc-react.webp')] bg-cover bg-center bg-no-repeat pointer-events-none h-full opacity-80"
+      ></div>
+
+    
+
+      <div
+        class="container flex flex-col items-center justify-center pt-[10%] md:pt-[5%] lg:pt-[30%] xl:pt-[15%] z-40"
+      >
+        <div class=" relative flex flex-col items-center justify-center">
+          <h1
+            class="text-[28px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
+          >
+           Build High-Performance <br class="hidden lg:block" />
+           React Native Apps Real Quick
+
+          </h1>
+          <p
+            class="text-[14px] md:text-[23px] md:mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
+          >
+           Develop lightning-fast, user-friendly mobile and web applications with the exceptional capabilities of React Native.
+
+          </p>
+          <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 pl-4 pr-3 rounded-full flex items-center  justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+          >
+           Get Started
+
+            <img
+              src="./img/arrow-right-white.svg"
+              alt="arrow-right"
+              class="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-6"
+            />
+
+            <img
+              src="./img/Ellipse 444.svg"
+              alt="arrow-right"
+              class="absolute bottom-0"
+            />
+          </a>
+       
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="
+              absolute lg:hidden bottom-[-120px] rounded-full h-[80px] w-[80px]
+              " />
+         
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="absolute  top-[-120px] left-[30px] rounded-full h-[120px] w-[120px] hidden lg:block" />
+          
+       
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="
+
+              absolute  right-[30px] top-[-75px] rounded-full h-[80px] w-[80px] rotate-180 hidden lg:block" />
+
+              <img src="./img/reacticon.webp" alt="Hero Illustration" class="
+
+              absolute  right-[25px] bottom-0 rounded-full h-[100px] w-[100px] rotate-180 hidden lg:block" />
+
+
+        </div>
+
+      
+
+        <div class="relative w-full mt-32 md: lg:mt-[35px] xl:mt-14 z-50">
+          <div
+            class="relative  px-6 md:px-12 py-5 backdrop-blur-[15px] recognition-section-ppc md:bg-black/20 grid grid-cols-1   lg:grid-cols-3"
+          >
+            <!-- Left text -->
+            <div class=" text-center lg:text-left p-5 md:p-10 lg:p-2 xl:p-5" >
+              <p
+                class="text-white text-base text-[16px] md:text-[18px] leading-snug"
+              >
+                Recognized for delivering the best solutions for businesses of all sizes and across industries
+
+              </p>
+            </div>
+
+           <div class="flex justify-center items-center p-5 ">
+             <img
+             src="./img/clutch-ppc.svg"
+             alt="clutch-logo"
+             class=" w-[60%] md:w-[50%] lg:w-[100%] xl:w-[70%] h-auto"
+             />
+           </div>
+
+           <div class="flex justify-center items-center p-5 md:p-10 lg:p-5">
+             <img
+             src="./img/30years-ppc.svg"
+             alt="30+years-logo"
+             class="w-full h-auto"
+             />
+           </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+   
+    <!-- Section 1: Hero Consultation -->
+    <section
+      class="bg-black flex justify-center items-center pb-8 lg:py-20 px-5 relative bg-no-repeat"
+    >
+      <div
+        class="bg-[#09090B] container px-4 border border-gray-700 rounded-[58px] lg:min-h-[700px] flex justify-center items-start relative"
+      >
+        <div class="grid lg:grid-cols-2 gap-10 items-center py-8 px-3 md:p-12">
+          <!-- Left Content -->
+          <div class="space-y-5 lg:space-y-10 w-full md:w-[90%] h-full">
+            <h2
+              class="text-white text-[30px] md:text-[50px] font-semibold mb-4 leading-[40px] md:leading-[60px] lg:mt-32"
+            >
+            Are you worried about hiring the wrong developers for your project?
+
+            </h2>
+            <p class="text-gray-300 mb-6 text-[18px] lg:text-[23px]">
+              We let you hire the best Go developers hassle-free; connect, and let’s start building something awesome!
+            </p>
+            <div
+              class="hidden lg:flex flex-col items-start xl:flex-row xl:items-center gap-3 mt-10"
+            >
+              <img src="./img//avatar-group.webp" alt="Clients" class="h-10" />
+              <span class="text-[23px] text-gray-400"
+                >Endorsed by the trust of clients worldwide</span
+              >
+            </div>
+          </div>
+
+          <!-- Right Form -->
+          <div class="flex justify-end">
+            <form
+              class="space-y-5 lg:space-y-10 p-2 md:p-6 w-full xl:w-[80%] flex flex-col justify-end"
+            >
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full bg-transparent border border-gray-600 rounded-[17px] px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[60px]"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="w-full bg-transparent border border-gray-600 rounded-[17px] px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[60px]"
+              />
+              <input
+                type="text"
+                placeholder="Phone"
+                class="w-full bg-transparent border border-gray-600 rounded-[17px] px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[60px]"
+              />
+              <textarea
+                rows="8"
+                placeholder="Project Idea"
+                class="w-full bg-transparent border border-gray-600 rounded-[17px] px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              ></textarea>
+              <a
+                type="submit"
+                class="w-full xl:w-[70%] 2xl:w-1/2 text-[16px] md:text-[18px] text-center font-semibold bg-[#FF5B14] text-white rounded-full p-4 hover:opacity-90"
+              >
+                Request Consultation
+              </a>
+            </form>
+          </div>
+
+          <div class="flex flex-col lg:hidden items-center gap-3 mt-3">
+            <img src="./img//avatar-group.webp" alt="Clients" class="h-10" />
+            <span
+              class="text-[18px] lg:text-[23px] text-gray-400 text-center md:text-left"
+              >Endorsed by the trust of clients worldwide</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="bg-black pt-0 pb-20  md:py-20 lg:pt-44 xl:pt-40 relative">
+
+      
+      <div class="container max-w-[1440px] mx-auto px-4 text-center relative z-20">
+        <h2
+          class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
+        >
+        Benefits of Hiring Golang Developers 
+
+        </h2>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
+          <!-- Card 1 -->
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Quality
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+              Golang developers help you with scalable, clean, and flexible coding approaches. Using built-in testing and powerful concurrency capabilities, we ensure building high-performing apps with the fewest bugs. 
+
+              </p>
+            </div>
+            <div class="w-full pb-12 flex justify-center items-center">
+              <img
+                src="./img/Kickoff-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div>
+          </div>
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+               Speed
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+              Our experts deliver your projects faster and ensure the simplicity and flexibility of Golang applications. Turn your apps into highly responsible ones and minimize development cycles with the concurrency model. 
+
+              </p>
+            </div>
+            <div class="w-full pb-12 flex justify-center items-center">
+              <img
+                src="./img/uptime-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div>
+          </div>
+          <div
+            class=" h-[600px]  "
+          >
+          <div class="h-[354px] relative border border-image-ppc-react">
+             <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+             Guarantee
+
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+               By hiring our pre-vetted Golang developers, you can ensure lasting stability and reliability. We also help you future-proof your apps using maintainable and well-documented code with high performance. 
+
+              </p>
+            </div>
+          </div>
+           <div class="h-[234px] mt-3 border border-image-ppc-golang flex justify-start items-center">
+              <div class="pl-8">
+                <p class="text-white text-[20px] font-semibold ">
+                   Get a Free Consultation
+                </p>
+                 <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden "
+          >
+       Enquire Now
+
+            
+          </a>
+              </div>
+
+           </div>
+           
+          </div>
+        </div>
+
+      
+      </div>
+    </section>
+
+
+ <section class="bg-black pt-0 pb-20  md:py-20 lg:pt-44 xl:pt-40 relative">
+
+      
+      <div class="container max-w-[1440px] mx-auto px-4 text-center relative z-20">
+        <h2
+          class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
+        >
+          Benefits of Working With Our
+          <br class="hidden lg:block" />
+          React Native Developers
+        </h2>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Kickoff in 7-10 days
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+                Get your React Native project started and quickly streamlined
+                with a smoother onboarding process and setup.
+              </p>
+            </div>
+            <div class="w-full pb-12 flex justify-center items-center">
+              <img
+                src="./img/Kickoff-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div>
+          </div>
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                99.9% uptime practices
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+                We adhere to enterprise-specific DevOps and CI/CD processes to
+                make sure your app experiences the least to no downtime.
+              </p>
+            </div>
+            <div class="w-full pb-12 flex justify-center items-center">
+              <img
+                src="./img/uptime-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div>
+          </div>
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col overflow-hidden relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                24/7 monitoring
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+                Our team is committed to paying close attention to detail,
+                ensuring that your React Native apps remain stable, secure, and
+                perform optimally.
+              </p>
+            </div>
+            <div class="w-full flex justify-center items-center">
+              <img
+                src="./img/monitoring-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center mt-10">
+           <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto"
+          >
+         Book Free Consultation
+
+            
+          </a>
+        </div>
+      </div>
+    </section>
+
+       <section class="py-10 md:py-20 bg-black">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row gap-8 items-start px-4"
+      >
+        <div class="text-white space-y-8 mb-10 lg:mb-0 w-full lg:w-[40%]">
+          <h1 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold lg:leading-[70px]">
+            Why React Native <br />
+            With Us?
+          </h1>
+          <a
+            href="#"
+            class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14]"
+          >
+            Ask about your specific stack <span class="ml-2">&rsaquo;</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 w-full lg:w-[60%]">
+          <div
+            class="p-6 rounded-tl-xl border  gradient-1-ppc min-h-[200px] flex flex-col justify-between "
+          >
+            <div>
+              <p class="text-[64px] font-semibold text-white/50 mb-4">01</p>
+              <h3 class="font-manrope text-[24px]  font-[400] text-white mb-2">
+                Time-to-Market
+              </h3>
+            </div>
+            <p class="text-sm text-[#FFFFFF80] font-manrope">
+            Single codebase & proven pipelines (EAS/OTA, Fastlane).
+
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-tl-xl border  gradient-2-ppc min-h-[200px] flex flex-col justify-between "
+          >
+            <div>
+              <p class="text-[64px] font-semibold text-white/50 mb-4">02</p>
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
+                Reliability at Scale
+              </h3>
+            </div>
+            <p class="text-sm text-[#FFFFFF80] font-manrope">
+           Error monitoring (Sentry/Crashlytics), performance budgets, and 99.9% uptime practices.
+
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-tl-xl border  gradient-3-ppc min-h-[200px] flex flex-col justify-between "
+          >
+            <div>
+              <p class="text-[64px] font-semibold text-white/50 mb-4">03</p>
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">Lower TCO</h3>
+            </div>
+            <p class="text-sm text-[#FFFFFF80] font-manrope">
+           shared code & automated testing (Detox/Appium).
+
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-tl-xl border  gradient-4-ppc min-h-[200px] flex flex-col justify-between "
+          >
+            <div>
+              <p class="text-[64px] font-semibold text-white/50 mb-4">04</p>
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
+                Compliance-Ready
+              </h3>
+            </div>
+            <p class="text-sm text-[#FFFFFF80] font-manrope">HIPAA/GDPR as necessitated.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-20">
+      <div class="container mx-auto px-4">
+        <div class="py-12">
+          <h2
+            class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0  text-white font-semibold"
+          >
+            Our Services
+          </h2>
+          <p
+            class="text-center text-[18px] md:text-[22px] text-[#FFFFFFB3] md:mt-5 lg:mt-0 leading-relaxed"
+          >
+            Our React Native development services can help your app go live
+            faster across iOS, Android, and the web, while ensuring effortless
+            performance on every platform.
+          </p>
+        </div>
+
+        <div
+          class="pt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-5"
+        >
+        
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-2.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  React Native iOS
+                  <br />
+                  App Development
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Our team of experts brings life to your iOS applications with
+                  a sleek, user-friendly design that is not only functional but
+                  also high-performing. With our team of specialists at the
+                  helm, we ensure there is no compromise in quality, and you get
+                  a reliable experience across all iOS devices.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-3.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Cross-Platform Migration Services
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  If you feel stressed about going through multiple versions of
+                  your app, we are here to help you out. We take your existing
+                  app and make it function effortlessly across iOS and Android
+                  with the advanced React Native technology, i.e, with one code
+                  to work for all platforms, interesting, isn’t it?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-4.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  React Native UI/UX Design Services
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  When it comes to user experience, design speaks for itself.
+                  Our React Native experts help you build an intuitive yet easy
+                  app design for users to make navigation effortless. Regardless
+                  of making a new start or moving for a rebrand, our team makes
+                  sure your app works not just better, but the best.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  React Native App Customization Services
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Understanding the unique nature of your business, we customize
+                  your application to align with your specific business needs,
+                  incorporating new features or changing the way things work. By
+                  keeping the business goals and the nature of the app
+                  optimized, we let you achieve your goals.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-6.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  React Native Consulting & Support
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  If you’re not sure about where to begin, we are here to guide
+                  you through the process. To pick the ideal tools and keep
+                  things functioning great post-launch. Our team is always ready
+                  to guide and support you to keep your app updated and growing
+                  as you scale your business.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-7.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  React Native Maintenance & Support
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  After your app goes live, our responsibility doesn’t end. We
+                  provide continuous support for keeping your app secure,
+                  updating it as required, and ensuring it continues to function
+                  efficiently. We can help you with whatever you require, and
+                  whenever you wish to have it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-10 w-full">
+           <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto max-w-[90%] md:max-w-none"
+          >
+            <span class="truncate">Hire React Native Developers for your project</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+  <section class="faq py-10 md:py-[80px] bg-black text-white">
+      <div class="container">
+        <div class="text-[20px] text-center">
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
+          >
+            React Native Capabilities
+          </h2>
+          <p
+            class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto leading-normal text-[#FFFFFFB2]"
+          >
+            With the right technology, you can effectively build a successful
+            mobile app. At NewAgeSysIT, we are adept at delivering React Native
+            applications with the best expertise, ensuring we choose the right
+            set of languages and frameworks to align with your goals. Using
+            React native, we offer avant-garde solutions to ensure a seamless
+            experience across every platform.
+          </p>
+        </div>
+        <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+          <div class="accordion faq-accordion">
+            <div class="flex flex-wrap relative">
+              <div class="basis-full lg:basis-1/2 text-black">
+                <div class="px-[6px]">
+                  <div class="bg-[#20212B] rounded-[10px] min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Frontend & Core </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-1 md:px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/TypeScript.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                TypeScript
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Navigation.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Navigation
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic-React-Redux.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Redux Toolkit / Zustand
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/React Query.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                React Query
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Auth & Payments </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic -OAuth 2.0.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                OAuth2
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/SSO.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                SSO
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic-Stripe.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Stripe
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/apple-173_svgrepo.com.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Apple Pay
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic - gpay.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Google Pay
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">CI/CD & Testing </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Fastlane.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Fastlane
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/EAS.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                EAS
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/OTA.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                OTA
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic-jest.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Jest
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Detox.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Detox
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Appium.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Appium
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basis-full lg:basis-1/2 text-black">
+                <div class="px-[6px]">
+                  <div
+                    class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3 lg:mt-0"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Native Modules </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Camera.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2 "
+                              >
+                                Camera
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Sensors.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Sensors
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/BLE.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                BLE
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Maps.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Maps / Geo
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Push Notifications.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Push Notifications
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">App Experience </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Offline-first.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Offline-first
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Sync.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Sync
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Realtime.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2 "
+                              >
+                                Realtime
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Feature Flags.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Feature Flags
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Analyticss.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1" 
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Analytics
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/B Testing.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                A/B Testing
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Cloud & Monitoring </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/firebase-1-1.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Firebase
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic-aws.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                AWS
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic-google-cloud.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                GCP
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic-Sentry.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Sentry
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/Crashlytics.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Crashlytics
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <section class="timeline-section py-12">
+      <div class="text-[20px] text-center">
+        <h2
+          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto text-white"
+        >
+          How Does it Work?
+        </h2>
+      </div>
+      <div class="timeline">
+        <div class="container">
+          <ol class="timeline__list">
+            <li class="timeline__item">
+              <div class="timeline__content">
+                <h2>01</h2>
+                <h3>Planning & Requirements Analysis</h3>
+                <p>
+                  We initially define the app's goals, target audience,
+                  features, and technology stack. We then build wireframes and
+                  UI mockups to establish a clear vision.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__content">
+                <h2>02</h2>
+                <h3>Project Setup</h3>
+                <p>
+                  Our team then sets up the React Native environment, assesses
+                  the project, initiates and configures Git, and uses
+                  Android/iOS emulators to carry out testing.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__content">
+                <h2>03</h2>
+                <h3>UI/UX Development</h3>
+                <p>
+                  We then build screens using React Native components, execute
+                  navigation, and implement responsive styling to match the app
+                  design.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__content">
+                <h2>04</h2>
+                <h3>App Functionality & Integration</h3>
+                <p>
+                  By adding core logic, we manage state and integrate with APIs,
+                  databases, and third-party services to ensure a dynamic data
+                  flow mechanism.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__content">
+                <h2>05</h2>
+                <h3>Testing & Debugging</h3>
+                <p>
+                  Our team implements unit and integration testing on various
+                  devices to ensure a bug-free experience and maintain stability
+                  and performance.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__content">
+                <h2>06</h2>
+                <h3>Deployment & Maintenance</h3>
+                <p>
+                  We then generate release builds, initiate Play Store/App Store
+                  publishing, monitor performance, fix bugs, and release updates
+                  on a continuous basis.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+   <section class="py-8 md:py-32 bg-black">
+      <div class="container">
+        <div
+          class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
+        >
+          <div
+            class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:px-5 min-h-[600px]"
+          >
+            <div class="hidden lg:grid md:grid-cols-2 gap-6">
+              <!-- First Column - Moving Up -->
+              <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                <div class="animate-marquee-pcc space-y-6">
+                  <!-- First set of tiles -->
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-react-health.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Healthcare
+                    </h3>
+                  </div>
+                 
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-finance.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Fintech
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-saas.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      SaaS
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-rts.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Real-Time Systems
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-iot.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      IoT
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-react-health.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Healthcare
+                    </h3>
+                  </div>
+                 
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-finance.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Fintech
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-saas.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      SaaS
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-rts.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Real-Time Systems
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-iot.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      IoT
+                    </h3>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Second Column - Moving Down -->
+              <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                <div class="animate-marquee-pcc-reverse space-y-6">
+                  <!-- First set of tiles -->
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-blockchain.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Blockchain
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-on-demand.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      On-Demand
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-education.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Education
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-wellness.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Wellness
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-transportation.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Transportation
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-blockchain.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Blockchain
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-on-demand.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      On-Demand
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-education.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Education
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-wellness.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Wellness
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-transportation.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Transportation
+                    </h3>
+                  </div>
+
+                 
+                 
+                
+             
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center  lg:text-left text-white p-2 md:p-10">
+              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
+                We Serve These Industries
+              </h2>
+
+              <p class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8">
+                Our journey is something more than inspiring. We’ve come a long
+                way with experience in serving across multiple industries.
+                Here’s a glance at them.
+              </p>
+              <div
+                class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
+              >
+                <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-health.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Healthcare
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/pcc-ic-finance.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Fintech
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-saas.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      SaaS
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-rts.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Real-Time Systems
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-iot.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      IoT
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-blockchain.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Blockchain
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-on-demand.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      On-Demand
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-education.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Education
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-wellness.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Wellness
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img
+                        src="./img/ppc-health-transportation.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                      Transportation
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center mt-3 lg:justify-start"
+              >
+                <a href="#" class="text-white">
+                  <div class="with-transparency">
+                    <span>Schedule Your Free Consultation</span>
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+   
+
+ 
+
+  
+
+  
+
+    <section class="client_experiences">
+      <div class="container">
+        <div class="text-[20px] text-center max-w-6xl mx-auto mb-10 px-4">
+          <h2
+            class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2"
+          >
+            Our Success Stories
+          </h2>
+          <p
+            class="text-[18px] md:text-[22px] min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
+          >
+            Delve into the client success stories we have built with our
+            expertise in delivering top-quality deliverables for their
+            businesses.
+          </p>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme client_says">
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>Lcard</h2>
+              <p>
+                A stunning digital business card app with a personalized and
+                interactive profile where a user can create and share unlimited
+                digital cards for different customers.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>100k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>300k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Lcard.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/David-Chabukashvili-1-1-1.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>David-Chabukashvili</h3>
+                  <p>Founder - L-Card App</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  They delivered everything on time and it was of great quality.
+                  They go above and beyond to meet your requirements and deliver
+                  the product you are looking for…
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>ISRA</h2>
+              <p>
+                An On-demand service-providing application that effortlessly
+                connects customers with hairstylist professionals and make-up
+                artists on schedule.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Isra.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/iman.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Iman Khwaja</h3>
+                  <p>Owner - ISRA</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end,
+                  they were there for me. <br />They were very systematic and
+                  methodical in every single step and…
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>WhipFlip</h2>
+              <p>
+                An on-demand app connects you with a network of experts, from
+                car buying and selling professionals to dedicated concierges who
+                ensure smooth appointment scheduling.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/WhipFlip.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/whipflip-ceo.jpg" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Roger C Clappe</h3>
+                  <p>CEO - WhipFlip</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end,
+                  they were there for me. They were very systematic and
+                  methodical in every single step and …..
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>Car-up</h2>
+              <p>
+                Car-Up offers the most convenient and transparent auto repair
+                service, disrupting the industry with unparalleled customer
+                service.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Car-up.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/LARRY-SEIBEL-CARUP.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Larry Seibel</h3>
+                  <p>Founder- Car-Up App</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end,
+                  they were there for me. They were very systematic and
+                  methodical in every single step and …
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-8 md:py-20 px-4">
+      <div class="container mx-auto text-center">
+        <!-----desktop section--->
+        <div class="hidden lg:grid grid-cols-10 gap-6 mb-16">
+          <div class="flex flex-col col-span-2">
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=_AG--jyDX3c"
+              >
+                <img
+                  src="./img/client-img-1.webp"
+                  alt="Roger J. Guipre"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    ROGER J CLAPPE
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO,WhipFlip</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer mt-3">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+              >
+                <img
+                  src="./img/client-img-2.webp"
+                  alt="Bob Salesno"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Larry Seibel
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO,Car-Upp</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 col-span-6 pt-20">
+            <div
+              class="relative group cursor-pointer h-[220px] xl:h-[350px] w-auto"
+            >
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
+              >
+                <img
+                  src="./img/client-img-3.webp"
+                  alt="Chris Ordway"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Rob Salerno
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, CliquePrize App
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="relative group cursor-pointer h-[220px] xl:h-[350px] mt-14"
+            >
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=PttTsDGO2AA"
+              >
+                <img
+                  src="./img/client-img-4.webp"
+                  alt="Imran Charania"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Chris O'Rorke
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Guaranteed Tip Sheet
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[350px]"
+            >
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
+              >
+                <img
+                  src="./img/client-img-5.webp"
+                  alt="David Chabukashvili"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Iman Khawaja
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col col-span-2">
+            <div class="relative group cursor-pointer row-span-2">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+              >
+                <img
+                  src="./img/client-img-6.webp"
+                  alt="Larry Gebel"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    David Chabukashvili
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer row-span-2 mt-3">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=slRQbxC1UoI"
+              >
+                <img
+                  src="./img/client-img-7.webp"
+                  alt="Larry Gebel"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Donut Man app
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-----mobile section--->
+        <div class="lg:hidden">
+          <div
+            class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto"
+          >
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=_AG--jyDX3c"
+              >
+                <img
+                  src="./img/client-img-1.webp"
+                  alt="Roger J. Clappe"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    ROGER J CLAPPE
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, WhipFlip</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+              >
+                <img
+                  src="./img/client-img-2.webp"
+                  alt="Larry Seibel"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Larry Seibel
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, Car-Upp</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
+              >
+                <img
+                  src="./img/client-img-3.webp"
+                  alt="Rob Salerno"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Rob Salerno
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, CliquePrize App
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=PttTsDGO2AA"
+              >
+                <img
+                  src="./img/client-img-4.webp"
+                  alt="Chris O'Rorke"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Chris O'Rorke
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Guaranteed Tip Sheet
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
+              >
+                <img
+                  src="./img/client-img-5.webp"
+                  alt="Iman Khawaja"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    Iman Khawaja
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+              >
+                <img
+                  src="./img/client-img-6.webp"
+                  alt="David Chabukashvili"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">
+                    David Chabukashvili
+                  </p>
+                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="relative group cursor-pointer">
+              <a
+                class="popup-youtube"
+                href="https://www.youtube.com/watch?v=slRQbxC1UoI"
+              >
+                <img
+                  src="./img/client-img-7.webp"
+                  alt="Rob Evans"
+                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                />
+                <div
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                >
+                  <div
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <img
+                      src="./img/video-play.svg"
+                      alt="Play Button"
+                      loading="lazy"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                    />
+                  </div>
+                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
+                  <p class="text-xs text-gray-300 truncate">
+                    CEO, Donut Man app
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center lg:-mt-20">
+          <h3
+            class="text-[30px] md:text-[40px] font-[400] text-white mb-4 w-full md:max-w-2xl mx-auto"
+          >
+            Here’s What Our Clients Say About
+            <br class="sm:hidden" />
+            The Results They’ve Made With Us
+          </h3>
+          <p class="text-gray-400 mb-8 text-[18px] md:text-[20px] w-full md:max-w-2xl mx-auto">
+            We have not only made the customer journeys smoother, but also
+            helped businesses and entrepreneurs achieve remarkable results with
+            our services. Hear from our clients as they talk about how we have
+            helped them achieve their goals!
+          </p>
+          <button
+            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[18px] inline-flex items-center gap-2"
+          >
+            Read Success Stories
+            <span class="inline-flex items-center">
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+ 
+
+ <section class="bg-black py-10 xl:py-20">
+      <div class="container max-w-[1440px] mx-auto px-4 text-center">
+        <h2
+          class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
+        >
+          How Does it Work for Your Business?
+        </h2>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow pb-0">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Startups
+              </h4>
+
+              <ul
+                class="list-disc space-y-2 text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed pl-5 border-b pb-4"
+              >
+                <li>
+                  Budget constraints may make it difficult to get started.
+                </li>
+              
+                <li>You would need to launch quickly as time runs out.</li>
+                <li>Scaling can be hard due to limited resources.</li>
+              </ul>
+              <p class="text-white text-[23px] font-semibold mt-2">
+                We can help you!
+              </p>
+            </div>
+            <div class="w-full lg:pb-12  flex justify-center items-center">
+              <img
+                src="./img/Startups-img.webp"
+                alt="decorative"
+                class="w-[300px] h-auto rounded-b-[20px] object-contain mix-hard-light"
+              />
+            </div>
+          </div>
+
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow pb-0">
+              <h4 class="text-white text-[23px] font-semibold mb-6">SMBs</h4>
+
+              <ul
+                class="list-disc space-y-2 text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed pl-5 border-b pb-4"
+              >
+                <li>Outgrowing existing systems can keep you in a dilemma.</li>
+                <li>
+                  Optimizing quick needs with long-term growth sounds
+                  challenging.
+                </li>
+                <li>
+                  Finding a cost-effective solution to grow with you is
+                  necessary.
+                </li>
+              </ul>
+              <p class="text-white text-[23px] font-semibold mt-2">
+                We can make it easier!
+              </p>
+            </div>
+            <div class="w-full lg:pb-12 flex justify-center items-center">
+              <img
+                src="./img/SMBs-img.webp"
+                alt="decorative"
+                class="w-[300px] h-auto rounded-b-[20px] object-contain mix-hard-light"
+              />
+            </div>
+          </div>
+
+          <div
+            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+          >
+            <div
+              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div class="text-left p-8 flex-grow pb-0">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Enterprises
+              </h4>
+
+              <ul
+                class="list-disc space-y-2 text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed pl-5 border-b pb-4"
+              >
+                <li>Optimizing and enhancing large-scale processes.</li>
+                <li>
+                  Handling complex systems and operations can be challenging.
+                </li>
+                <li>
+                  You need a globally scalable solution for your business.
+                </li>
+              </ul>
+              <p class="text-white text-[23px] font-semibold mt-2">
+                We can keep it smooth!
+              </p>
+            </div>
+            <div class="w-full lg:pb-12 flex justify-center items-center ">
+              <img
+                src="./img/Enterprises-img.webp"
+                alt="decorative"
+                class="w-[300px] h-auto rounded-b-[20px] object-contain  mix-hard-light"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-10 w-full">
+           <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto"
+          >
+         Book Free Consultation
+
+            
+          </a>
+        </div>
+      </div>
+    </section>
+
+<section class="relative  overflow-hidden py-16 md:py-24 text-center 
+bg-[url('./img/ppc-cta-bg-mobile.webp')] bg-center bg-cover  md:bg-[url('./img/4tab.webp')] md:bg-left md:bg-cover 
+xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  bg-[#070916]
+">
+  <!-- Background Gradient or Glow -->
+ 
+
+  <div class="container relative z-10 mx-auto px-4 py-20
+  
+  ">
+    <!-- Heading -->
+    <h2 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight max-w-3xl mx-auto">
+      Ready to hire a React Native developer <br class="hidden md:block" />
+      from our team?
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-gray-400 mt-6 text-[16px] md:text-[18px] max-w-2xl mx-auto leading-relaxed">
+      Scale your business’s success with our dedicated React Native developers.
+      We provide the right set of skills, adaptable solutions, and a commitment
+      to your goals with an expert for your application development needs.
+    </p>
+
+    <!-- Button -->
+    <div class="mt-8">
+      <a
+        href="#"
+        class="inline-block bg-[#FF6B2C] text-white font-medium py-3 px-6 rounded-full text-[16px] hover:bg-[#ff804d] transition-colors"
+      >
+        Hire a React Native Developer
+      </a>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+    <section class="faq py-10 md:py-[80px]">
+      <div class="container">
+        <div class="dev_head text-[20px] text-center">
+          <h2
+            class="text-[28px] md:text-[36px] lg:text-[50px] text-white font-bold text-center lg:leading-[55px] mb-2"
+          >
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+          <div class="accordion faq-accordion">
+            <div class="flex justify-center relative">
+              <div class="w-full lg:w-[80%] text-white">
+                <div class="px-[6px]">
+                  <div
+                    class="bg-black min-h-[80px] border-b border-[#c4b2b22c] mb-4"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >Can you integrate React Native with my existing app?
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Yes. React Native is an excellent choice for working
+                          with existing native applications. With React Native,
+                          you can incorporate new features or screens while
+                          maintaining the current native code intact. If you
+                          wish to add cross-platform functionalities to specific
+                          areas of the application or improve certain features,
+                          React Native can enable seamless integration with the
+                          existing setup. Without rewriting the app, you can
+                          enjoy the advantages of React Native.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-black min-h-[80px] border-b border-[#c4b2b22c] mb-4"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-medium"
+                        >How can you optimize React Native apps for performance?
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                     <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          We have an efficient team of React Native developers
+                          who employ several strategies to ensure your app
+                          performs well. This involves effective memory
+                          management, lazy loading, and optimization of images
+                          and assets to minimize load times. We also manage to
+                          keep re-renders under control, ensuring the app
+                          remains responsive. We also monitor JavaScript thread
+                          performance to ensure seamless operations.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-black min-h-[80px] border-b border-[#c4b2b22c] mb-4"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-medium"
+                        >What is the estimated cost of a React Native project?
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Estimating the cost of a React Native development
+                          project depends on the features, complexity, and
+                          project timelines. Considering a simple app with
+                          standard functionality, you may need to invest between
+                          $10,000 and $30,000. For advanced features, such as
+                          custom designs or third-party integrations, the cost
+                          can range from $30,000 to over $60,000. Other complex
+                          apps, such as e-commerce apps, can cost up to $100,000
+                          or more. To obtain a detailed estimate for your React
+                          Native project, please contact us.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-black min-h-[80px] border-b border-[#c4b2b22c] mb-4"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-medium"
+                        >How do you ensure security in cross-platform app
+                        development using React Native?
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                     <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          We have React Native experts who adhere to the highest
+                          standards for data encryption, implement robust
+                          authentication methods, and ensure that sensitive
+                          information remains secure. We also follow an updated
+                          approach towards the latest security patches and track
+                          for potential vulnerabilities. To ensure that users’
+                          data remains safe, we maintain the app's compliance
+                          with privacy standards.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Desktop Version -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const $carousel = $(".owl-carousel");
+        console.log("Carousel elements found:", $carousel.length);
+
+        if ($carousel.length > 0) {
+          try {
+            $carousel.owlCarousel({
+              loop: true,
+              margin: 10,
+              nav: true,
+              dots: true,
+              autoplay: false,
+              items: 1,
+              responsive: {
+                0: {
+                  items: 1,
+                },
+                768: {
+                  items: 2,
+                },
+                1024: {
+                  items: 2,
+                },
+              },
+              // navText: [
+              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>',
+              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>',
+              // ],
+              onInitialized: function (event) {
+                console.log(
+                  "Owl Carousel initialized successfully with",
+                  event.item.count,
+                  "items"
+                );
+              },
+              onChanged: function (event) {
+                console.log("Slide changed to:", event.item.index);
+              },
+            });
+
+            console.log("Owl Carousel initialization attempted");
+          } catch (error) {
+            console.error("Error initializing Owl Carousel:", error);
+          }
+        } else {
+          console.error("No .owl-carousel elements found in the DOM");
+          console.log(
+            'Available elements with "owl" class:',
+            $('[class*="owl"]').length
+          );
+        }
+      });
+
+      // Backup initialization in case document.ready doesn't work
+      $(window).on("load", function () {
+        if (!$(".owl-carousel").hasClass("owl-loaded")) {
+          console.log("Attempting backup initialization...");
+          $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            autoplay: false,
+            items: 1,
+            navText: [
+              '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>',
+              '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>',
+            ],
+          });
+        }
+      });
+    </script>
+
+    <script>
+      function toggleAccordionPPC(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Close all accordion items
+        const accordionItems = document.querySelectorAll(
+          ".accordion-content-ppc"
+        );
+        accordionItems.forEach((item) => {
+          item.classList.remove("show");
+        });
+
+        // Rotate all accordion icons
+        const accordionIcons = document.querySelectorAll(".transform");
+        accordionIcons.forEach((icon) => {
+          icon.classList.remove("rotate-180");
+        });
+
+        // Open the clicked accordion item if it was closed
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+      $(".client_says").owlCarousel({
+        stagePadding: 200,
+        loop: true,
+        margin: 80,
+        dots: false,
+        items: 1,
+        lazyLoad: true,
+        nav: true,
+        autoplay: false,
+        autoplayTimeout: 3000,
+        smartSpeed: 800,
+        // navText: [
+        //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+        //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+        // ],
+        responsive: {
+          0: {
+            items: 1,
+            stagePadding: 20,
+          },
+          600: {
+            items: 1,
+            stagePadding: 50,
+          },
+          1000: {
+            items: 1,
+            stagePadding: 200,
+          },
+          1200: {
+            items: 1,
+            stagePadding: 250,
+          },
+          1400: {
+            items: 1,
+            stagePadding: 300,
+          },
+          1600: {
+            items: 1,
+            stagePadding: 350,
+          },
+          1800: {
+            items: 1,
+            stagePadding: 400,
+          },
+        },
+      });
+    </script>
+    <script>
+      $(function () {
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          // disableOn: 700,
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+    <script>
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+        document
+          .querySelectorAll(".accordion-content")
+          .forEach((item) => item.classList.remove("show"));
+        document
+          .querySelectorAll(".transform")
+          .forEach((icon) => icon.classList.remove("rotate-180"));
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+    <script>
+      (function () {
+        const SELECTOR = ".timeline__item";
+        const CLASS_NAME = "in-view";
+
+        const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
+          (el) => !el.classList.contains(CLASS_NAME)
+        );
+        if (!all.length) return;
+
+        // --- Helper for manual checks (used by Locomotive & fallback) ---
+        function hasEntered(el, offset = 0.9) {
+          const r = el.getBoundingClientRect();
+          const vh =
+            window.innerHeight || document.documentElement.clientHeight;
+          const triggerY = vh * offset; // 0.9 => 90% of viewport height
+          return r.top <= triggerY && r.bottom >= 0;
+        }
+
+        // --- If LocomotiveScroll is present, use its scroll event ---
+        if (window.locoScroll) {
+          const loco = window.locoScroll;
+          const pending = new Set(all);
+
+          function check() {
+            pending.forEach((el) => {
+              if (hasEntered(el)) {
+                el.classList.add(CLASS_NAME);
+                pending.delete(el);
+              }
+            });
+            if (!pending.size && loco.off) {
+              loco.off("scroll", check);
+              window.removeEventListener("resize", check);
+            }
+          }
+
+          loco.on("scroll", check);
+          window.addEventListener("resize", check, { passive: true });
+          // initial pass
+          check();
+          return;
+        }
+
+        // --- Prefer IntersectionObserver when no LocomotiveScroll ---
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add(CLASS_NAME);
+                  obs.unobserve(entry.target); // ONCE
+                }
+              });
+            },
+            {
+              root: null,
+              threshold: 0.15, // fire when ~15% visible
+              rootMargin: "0px 0px -10% 0px", // a touch earlier
+            }
+          );
+
+          all.forEach((el) => io.observe(el));
+          return;
+        }
+
+        // --- Fallback: plain scroll listener ---
+        const pending = new Set(all);
+        function checkFallback() {
+          pending.forEach((el) => {
+            if (hasEntered(el)) {
+              el.classList.add(CLASS_NAME);
+              pending.delete(el);
+            }
+          });
+          if (!pending.size) {
+            window.removeEventListener("scroll", checkFallback);
+            window.removeEventListener("resize", checkFallback);
+          }
+        }
+        window.addEventListener("scroll", checkFallback, { passive: true });
+        window.addEventListener("resize", checkFallback, { passive: true });
+        checkFallback();
+      })();
+    </script>
+    // Get all elements with
+  </body>
+</html>
+
+
