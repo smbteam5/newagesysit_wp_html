@@ -1731,6 +1731,10 @@ video {
   display: table;
 }
 
+.\!grid {
+  display: grid !important;
+}
+
 .grid {
   display: grid;
 }
@@ -2800,6 +2804,10 @@ video {
   max-width: 22px;
 }
 
+.max-w-\[250px\] {
+  max-width: 250px;
+}
+
 .max-w-\[25px\] {
   max-width: 25px;
 }
@@ -2892,6 +2900,11 @@ video {
   max-width: 970px;
 }
 
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -2918,6 +2931,10 @@ video {
 
 .flex-none {
   flex: none;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
 }
 
 .flex-shrink-0 {
@@ -5080,8 +5097,8 @@ video {
   background-image: url('./img/bg-transparent.svg');
 }
 
-.bg-\[url\(\'\.\/img\/bg_blank\.png\'\)\] {
-  background-image: url('./img/bg_blank.png');
+.bg-\[url\(\'\.\/img\/bg_blank\.webp\'\)\] {
+  background-image: url('./img/bg_blank.webp');
 }
 
 .bg-\[url\(\'\.\/img\/bg_ce\.png\'\)\] {
@@ -5172,28 +5189,28 @@ video {
   background-image: url('./img/ppc-cta-bg-mobile.webp');
 }
 
-.bg-\[url\(\'\.\/img\/ppc-enterprise\.png\'\)\] {
-  background-image: url('./img/ppc-enterprise.png');
+.bg-\[url\(\'\.\/img\/ppc-enterprise\.webp\'\)\] {
+  background-image: url('./img/ppc-enterprise.webp');
 }
 
-.bg-\[url\(\'\.\/img\/ppc-kickoff\.png\'\)\] {
-  background-image: url('./img/ppc-kickoff.png');
+.bg-\[url\(\'\.\/img\/ppc-kickoff\.webp\'\)\] {
+  background-image: url('./img/ppc-kickoff.webp');
 }
 
-.bg-\[url\(\'\.\/img\/ppc-monitoring\.png\'\)\] {
-  background-image: url('./img/ppc-monitoring.png');
+.bg-\[url\(\'\.\/img\/ppc-monitoring\.webp\'\)\] {
+  background-image: url('./img/ppc-monitoring.webp');
 }
 
-.bg-\[url\(\'\.\/img\/ppc-smb\.png\'\)\] {
-  background-image: url('./img/ppc-smb.png');
+.bg-\[url\(\'\.\/img\/ppc-smb\.webp\'\)\] {
+  background-image: url('./img/ppc-smb.webp');
 }
 
-.bg-\[url\(\'\.\/img\/ppc-startup\.png\'\)\] {
-  background-image: url('./img/ppc-startup.png');
+.bg-\[url\(\'\.\/img\/ppc-startup\.webp\'\)\] {
+  background-image: url('./img/ppc-startup.webp');
 }
 
-.bg-\[url\(\'\.\/img\/ppc-uptime\.png\'\)\] {
-  background-image: url('./img/ppc-uptime.png');
+.bg-\[url\(\'\.\/img\/ppc-uptime\.webp\'\)\] {
+  background-image: url('./img/ppc-uptime.webp');
 }
 
 .bg-\[url\(\'\.\/img\/quran_easy_bg\.jpg\'\)\] {
@@ -6869,6 +6886,11 @@ video {
 .text-\[\#000\] {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-\[\#00D4FF\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 212 255 / var(--tw-text-opacity));
 }
 
 .text-\[\#030202\] {
@@ -12579,7 +12601,7 @@ footer ul li {
   width: 100%;
   height: 100%;
   display: block;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 600ms ease;
   background: transparent;
   cursor: grab;
@@ -13410,6 +13432,11 @@ footer ul li {
   border-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#1a1919\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 25 25 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-\[\#3A4ED0\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(58 78 208 / var(--tw-bg-opacity));
@@ -13963,6 +13990,10 @@ footer ul li {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:max-w-none {
+    max-width: none;
   }
 
   .sm\:basis-1\/2 {
@@ -14896,8 +14927,8 @@ footer ul li {
     background-image: url('./img/pcc-circle-bg.webp');
   }
 
-  .md\:bg-\[url\(\'\.\/img\/ppc-blank-bg\.png\'\)\] {
-    background-image: url('./img/ppc-blank-bg.png');
+  .md\:bg-\[url\(\'\.\/img\/ppc-blank-bg\.webp\'\)\] {
+    background-image: url('./img/ppc-blank-bg.webp');
   }
 
   .md\:bg-\[url\(\'\.\/img\/ruby_rails\.jpg\'\)\] {
@@ -15486,6 +15517,10 @@ footer ul li {
     position: sticky;
   }
 
+  .lg\:bottom-0 {
+    bottom: 0px;
+  }
+
   .lg\:bottom-5 {
     bottom: 1.25rem;
   }
@@ -15635,6 +15670,10 @@ footer ul li {
 
   .lg\:\!mr-0 {
     margin-right: 0px !important;
+  }
+
+  .lg\:-mt-10 {
+    margin-top: -2.5rem;
   }
 
   .lg\:-mt-20 {
@@ -16221,6 +16260,10 @@ footer ul li {
     border-radius: 9999px;
   }
 
+  .lg\:rounded-none {
+    border-radius: 0px;
+  }
+
   .lg\:rounded-l-lg {
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -16306,6 +16349,10 @@ footer ul li {
 
   .lg\:p-5 {
     padding: 1.25rem;
+  }
+
+  .lg\:p-6 {
+    padding: 1.5rem;
   }
 
   .lg\:p-9 {
@@ -16897,6 +16944,11 @@ footer ul li {
     grid-column: span 2 / span 2;
   }
 
+  .xl\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .xl\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -16951,6 +17003,10 @@ footer ul li {
 
   .xl\:h-\[300px\] {
     height: 300px;
+  }
+
+  .xl\:h-\[320px\] {
+    height: 320px;
   }
 
   .xl\:h-\[350px\] {
