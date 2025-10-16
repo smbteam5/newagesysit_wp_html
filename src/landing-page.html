@@ -214,6 +214,16 @@
         transition: transform 120ms linear, opacity 200ms ease;
         will-change: transform, opacity;
       }
+
+      /* Calendly loading spinner animation */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
 
@@ -3717,9 +3727,9 @@
           </div>
 
           <!-- Button -->
-          <a
-            href="#"
-            class="flex items-center gap-2 bg-gradient-to-r from-[#FF8214] to-[#FF8214] hover:from-[#FF8214] hover:to-[#FF8214] text-white font-semibold px-5 py-3 rounded-full shadow-md transition-all duration-200"
+          <button
+            id="openCalendlyModal"
+            class="bg-[#FF5B14] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -3735,8 +3745,9 @@
                 d="M2 5.5C2 4.12 3.12 3 4.5 3h3a1 1 0 011 1v3a1 1 0 01-.293.707l-1.414 1.414a16.001 16.001 0 007.586 7.586l1.414-1.414A1 1 0 0117 15.5h3a1 1 0 011 1v3c0 1.38-1.12 2.5-2.5 2.5A18.5 18.5 0 012 5.5z"
               />
             </svg>
-            Schedule a Free Call Today
-          </a>
+            <span class="hidden md:inline">Schedule a Free Call Today</span>
+            <span class="inline md:hidden">Schedule a Call</span>
+          </button>
 
           <span
             class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ffffff00_100%)]"
@@ -9431,6 +9442,26 @@
           fixedContentPos: false,
         });
       });
+
+      // Calendly popup
+      $(".calendly-popup").magnificPopup({
+        type: "iframe",
+        mainClass: "mfp-fade",
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        iframe: {
+          patterns: {
+            calendly: {
+              index: "calendly.com/",
+              id: function (url) {
+                return url;
+              },
+              src: "%id%",
+            },
+          },
+        },
+      });
     </script>
     <script>
       $(document).ready(function () {
@@ -10953,6 +10984,168 @@
         // expose one method for debugging in console
         window._globeRebuild = startBuild;
       })();
+    </script>
+
+    <!-- Calendly Modal -->
+    <div
+      id="calendlyModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          width: 90%;
+          max-width: 1000px;
+          height: 90vh;
+          background: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+        "
+      >
+        <button
+          id="closeCalendlyModal"
+          style="
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+          "
+        >
+          ×
+        </button>
+
+        <!-- Loading Spinner -->
+        <div
+          id="calendlyLoader"
+          style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <div
+            style="
+              width: 50px;
+              height: 50px;
+              border: 4px solid #f3f3f3;
+              border-top: 4px solid #ff5b14;
+              border-radius: 50%;
+              animation: spin 1s linear infinite;
+            "
+          ></div>
+          <p style="color: #666; font-size: 14px; margin: 0">
+            Loading Calendly...
+          </p>
+        </div>
+
+        <iframe
+          id="calendlyIframe"
+          src=""
+          style="
+            width: 100%;
+            height: 100%;
+            border: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+          "
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+      // Calendly Modal functionality
+      const calendlyModal = document.getElementById("calendlyModal");
+      const calendlyIframe = document.getElementById("calendlyIframe");
+      const calendlyLoader = document.getElementById("calendlyLoader");
+      const openCalendlyBtn = document.getElementById("openCalendlyModal");
+      const closeCalendlyBtn = document.getElementById("closeCalendlyModal");
+
+      openCalendlyBtn.addEventListener("click", function () {
+        // Show modal with loader
+        calendlyModal.style.display = "flex";
+        calendlyLoader.style.display = "flex";
+        calendlyIframe.style.opacity = "0";
+        document.body.style.overflow = "hidden";
+
+        // Load Calendly
+        calendlyIframe.src =
+          "https://calendly.com/newagesysit-sales/30min?embed_domain=" +
+          window.location.hostname +
+          "&embed_type=Inline";
+      });
+
+      // Hide loader when iframe loads
+      calendlyIframe.addEventListener("load", function () {
+        if (this.src) {
+          setTimeout(() => {
+            calendlyLoader.style.display = "none";
+            calendlyIframe.style.opacity = "1";
+          }, 500); // Small delay to ensure content is rendered
+        }
+      });
+
+      closeCalendlyBtn.addEventListener("click", function () {
+        calendlyModal.style.display = "none";
+        calendlyIframe.src = "";
+        document.body.style.overflow = "auto";
+      });
+
+      // Close on click outside
+      calendlyModal.addEventListener("click", function (e) {
+        if (e.target === calendlyModal) {
+          calendlyModal.style.display = "none";
+          calendlyIframe.src = "";
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // Close on ESC key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && calendlyModal.style.display === "flex") {
+          calendlyModal.style.display = "none";
+          calendlyIframe.src = "";
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // Close button hover effect
+      closeCalendlyBtn.addEventListener("mouseenter", function () {
+        this.style.background = "rgba(255,91,20,0.9)";
+        this.style.transform = "rotate(90deg)";
+      });
+      closeCalendlyBtn.addEventListener("mouseleave", function () {
+        this.style.background = "rgba(0,0,0,0.6)";
+        this.style.transform = "rotate(0deg)";
+      });
     </script>
   </body>
 </html>
