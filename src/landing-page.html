@@ -78,8 +78,14 @@
         opacity: 0;
         transition: opacity 0.6s ease, transform 0.6s ease;
         transform: translateY(20px);
+        animation: 1s cubic-bezier(0.65, 0, 0.35, 1) both fadeInUp;
       }
-
+      .fade-target.para {
+        animation-delay: 2s;
+      }
+      .fade-target.bnr-btn {
+        animation-delay: 3s;
+      }
       .fade-in {
         opacity: 1 !important;
         transform: translateY(0) !important;
@@ -2239,7 +2245,7 @@
           <!-- Paragraph -->
           <p
             id="animated-paragraph"
-            class="fade-target text-white lg:text-[26px] text-[18px] mt-[20px]"
+            class="fade-target text-white lg:text-[26px] text-[18px] mt-[20px] para"
           >
             Award-Winning Digital Transformation Company with Strategic
             <br class="hidden lg:block" />
@@ -2249,7 +2255,7 @@
           <!-- Button -->
           <div
             id="animated-button"
-            class="fade-target text-center flex justify-center mt-5"
+            class="fade-target text-center flex justify-center mt-5 bnr-btn"
           >
             <button
               data-slot="button"
@@ -2362,7 +2368,7 @@
       <img
         src="./img/banner.webp"
         alt=""
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px]"
+        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom"
       />
       <!-- Mobile radial rings (SVG fallback) -->
       <div
