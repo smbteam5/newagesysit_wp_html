@@ -9749,29 +9749,29 @@
       });
     </script>
     <script>
-      (function () {
-        const html = document.documentElement;
-        const rings = document.querySelectorAll("#rings .ring");
-        const hero = document.getElementById("hero");
+      // (function () {
+      //   const html = document.documentElement;
+      //   const rings = document.querySelectorAll("#rings .ring");
+      //   const hero = document.getElementById("hero");
 
-        function onScroll() {
-          // Example: log scroll position or update transforms
-          const scrollY = window.scrollY;
-          // Do something with scrollY and elements
-          // e.g., hero.style.transform = `translateY(${scrollY * 0.2}px)`;
-        }
+      //   function onScroll() {
+      //     // Example: log scroll position or update transforms
+      //     const scrollY = window.scrollY;
+      //     // Do something with scrollY and elements
+      //     // e.g., hero.style.transform = `translateY(${scrollY * 0.2}px)`;
+      //   }
 
-        window.addEventListener("scroll", onScroll); // Optional: if you want it to run on scroll too
+      //   window.addEventListener("scroll", onScroll); // Optional: if you want it to run on scroll too
 
-        // 1) On load: play ring intro with stagger
-        window.addEventListener("load", () => {
-          rings.forEach((el, i) => {
-            el.style.setProperty("--delay", i * 120 + "ms"); // stagger
-          });
-          html.classList.add("rings-loaded");
-          onScroll(); // now this will work
-        });
-      })();
+      //   // 1) On load: play ring intro with stagger
+      //   window.addEventListener("load", () => {
+      //     rings.forEach((el, i) => {
+      //       el.style.setProperty("--delay", i * 120 + "ms"); // stagger
+      //     });
+      //     html.classList.add("rings-loaded");
+      //     onScroll(); // now this will work
+      //   });
+      // })();
     </script>
 
     <!-- three.js + OrbitControls (kept non-module for compatibility with your existing script style) -->
