@@ -1,423 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Locations Filter (Mobile)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Hero Rings — Smooth Init</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-      /* Minimal helpers so the demo looks sane without Tailwind */
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
-          sans-serif;
-        background: #0b0b0b;
-        color: #fff;
+      :root {
+        --design-w: 1440;
+        --ring-min: 260px;
+        --ring-max: 1800px;
+        --ring-color: rgba(255, 255, 255, 1);
+        --blue-color: #5871f0;
+
+        /* Animation tuning */
+        --ring-dur: 1.5s;
+        --ring-ease: cubic-bezier(0.22, 1, 0.36, 1); /* smoother ease-out */
       }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 16px;
+
+      .absolute-center {
+        position: absolute;
+        left: 50%;
+        bottom: -15%;
+        transform: translate(-50%, 0);
+        width: 100vw;
+        height: 100vh;
+        min-height: 100svh;
+        overflow: hidden;
+        pointer-events: none; /* avoid accidental work */
+        contain: layout paint style; /* isolate for perf */
       }
-      .grid {
-        display: grid;
-        gap: 16px;
-      }
-      @media (min-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr 1fr;
+      @media (min-width: 1600px) {
+        .absolute-center {
+          bottom: -38% !important;
         }
       }
-      .controls {
-        display: grid;
-        gap: 12px;
-        padding: 12px 16px;
+
+      /* Keyframes */
+      @keyframes ring-bounce {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, 0)
+            translate3d(
+              0,
+              calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px),
+              0
+            )
+            scale(1) translateZ(0);
+        }
+        10% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px + var(--amp, 70px)), 0)
+            scale(1) translateZ(0);
+        }
+        30%,
+        50% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px - var(--amp, 40px)), 0)
+            scale(var(--scale-up, 1.05)) translateZ(0);
+        }
+        100% {
+          opacity: var(--opacity, 0.02);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px), 0) scale(1) translateZ(0);
+        }
       }
-      .toggle-wrapper {
-        display: inline-flex;
-        gap: 12px;
-        background: #121212;
-        border: 1px solid #222;
-        border-radius: 999px;
-        padding: 6px;
+
+      /* Base ring style — animation is attached but PAUSED initially */
+      .ring {
+        position: absolute;
+        left: 50%;
+        --size-px: var(--size, 1300);
+
+        width: clamp(
+          var(--ring-min),
+          calc(var(--size-px) * (100svw / var(--design-w))),
+          var(--ring-max)
+        );
+        aspect-ratio: 1 / 0.44;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(255, 255, 255, 0) 0%,
+          var(--ring-color) 100%
+        );
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+        opacity: 0; /* matches 0% keyframe */
+        filter: blur(0);
+        transform: translate(-50%, 0)
+          translate3d(
+            0,
+            calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px),
+            0
+          )
+          scale(1) translateZ(0);
+
+        /* smoother first frame: attach animation paused */
+        animation: ring-bounce var(--ring-dur) var(--ring-ease) forwards paused;
+        animation-delay: var(--delay, 0ms);
+
+        /* micro-optimizations */
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
       }
-      .toggle-wrapper label {
-        padding: 8px 14px;
-        border-radius: 999px;
-        cursor: pointer;
-        user-select: none;
-        border: 1px solid transparent;
+
+      @supports not (width: 1svw) {
+        .ring {
+          width: clamp(
+            var(--ring-min),
+            calc(var(--size-px) * (100vw / var(--design-w))),
+            var(--ring-max)
+          );
+        }
       }
-      /* visual active state (pure CSS) */
-      #us_mob:checked ~ .toggle-wrapper label[for="us_mob"],
-      #global_mob:checked ~ .toggle-wrapper label[for="global_mob"] {
-        background: #1f1f1f;
-        border-color: #2a2a2a;
+
+      .ring-final {
+        background: var(--blue-color);
       }
-      select {
-        width: 100%;
-        padding: 10px 12px;
-        border-radius: 8px;
-        border: 1px solid #2a2a2a;
-        background: #121212;
-        color: #fff;
+
+      /* When ready, we flip to running—no layout jump */
+      .rings-run .ring {
+        animation-play-state: running;
       }
-      .card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        background: #040303;
-        padding: 15px 20px;
-        border-radius: 45px;
-      }
-      .card a {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        text-decoration: none;
-        color: #fff;
-      }
-      .hidden {
-        display: none !important;
+
+      /* Respect reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .ring {
+          animation: none;
+          opacity: var(--opacity, 0.05);
+          transform: translate(-50%, 0)
+            translate3d(0, calc(var(--base, 0) * 1px), 0) scale(1);
+        }
       }
     </style>
   </head>
-  <body>
-    <div class="block lg:hidden">
-      <div class="controls" style="margin-top: 0.6rem">
-        <div style="display: grid; gap: 8px">
-          <!-- Radios -->
-          <input
-            type="radio"
-            name="toggle"
-            id="us_mob"
-            checked
-            style="display: none"
-          />
-          <input
-            type="radio"
-            name="toggle"
-            id="global_mob"
-            style="display: none"
-          />
-          <!-- Toggle -->
-          <div class="toggle-wrapper">
-            <label for="us_mob" class="toggle-label us-label_mob"
-              >U.S. locations</label
-            >
-            <label for="global_mob" class="toggle-label global-label_mob"
-              >Global Map</label
-            >
-          </div>
-        </div>
 
-        <!-- Select: keep value="" for All Services; each option needs data-region + unique value -->
-        <select id="locationSelect-mob">
-          <option value="">All Services</option>
-          <!-- U.S. options -->
-          <option value="nj" data-region="us">
-            Custom Software Development — New Jersey
-          </option>
-          <option value="jax" data-region="us">
-            App Development in Jacksonville
-          </option>
-          <option value="phl" data-region="us">
-            App Development in Philadelphia
-          </option>
-          <option value="tpa" data-region="us">App Development in Tampa</option>
-          <option value="mia" data-region="us">App Development in Miami</option>
-          <option value="atl" data-region="us">
-            App Development in Atlanta
-          </option>
-          <option value="clt" data-region="us">
-            App Development in Charlotte
-          </option>
-          <option value="nyc" data-region="us">
-            App Development in New York
-          </option>
-          <option value="va" data-region="us">
-            Mobile App Development in Virginia
-          </option>
-          <option value="ga" data-region="us">
-            Mobile App Development in Georgia
-          </option>
-          <option value="pa" data-region="us">
-            Mobile App Development in Pennsylvania
-          </option>
-          <option value="ca-staff" data-region="us">
-            Staff Augmentation in California
-          </option>
-          <option value="tx-staff" data-region="us">
-            Staff Augmentation in Texas
-          </option>
-          <option value="ny-staff" data-region="us">
-            Staff Augmentation in New York
-          </option>
-          <!-- Global example -->
-          <option value="za-staff" data-region="global">
-            Staff Augmentation in South Africa
-          </option>
-        </select>
-      </div>
+  <body class="bg-black text-white">
+    <section
+      id="hero-banner"
+      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
+    >
+      <img
+        alt="banner"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
+        src="./img/bnr-landing.webp"
+      />
 
-      <div class="container">
-        <div class="grid" id="servicesGrid">
-          <!-- Cards: each needs .service-card + data-id (match option value) + data-region -->
-          <div class="service-card card" data-id="nj" data-region="us">
-            <span>Custom Software Development — New Jersey</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <span
+          class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
+        >
+          <img src="./img/glow.png" alt="" class="w-auto" />
+        </span>
 
-          <div class="service-card card" data-id="jax" data-region="us">
-            <span>App Development in Jacksonville</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="service-card card" data-id="phl" data-region="us">
-            <span>App Development in Philadelphia</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="service-card card" data-id="tpa" data-region="us">
-            <span>App Development in Tampa</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="service-card card" data-id="atl" data-region="us">
-            <span>App Development in Atlanta</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="service-card card" data-id="nyc" data-region="us">
-            <span>App Development in New York</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="service-card card" data-id="tx-staff" data-region="us">
-            <span>Staff Augmentation in Texas</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
-            >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <!-- Global example -->
-          <div
-            class="service-card card"
-            data-id="za-staff"
-            data-region="global"
+        <div class="w-full text-center pb-[40px] relative z-[9]">
+          <h1
+            id="animated-heading"
+            class="text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
           >
-            <span>Staff Augmentation in South Africa</span>
-            <a
-              href="https://newagesysit.com/"
-              target="_blank"
-              aria-label="Open"
+            <span class="word" style="animation-delay: 0ms">Redefining</span>
+            <span class="word" style="animation-delay: 150ms">Your</span>
+            <span class="word" style="animation-delay: 300ms">Business</span>
+            <span class="word" style="animation-delay: 450ms">Success</span
+            ><br class="hidden lg:block" />
+            <span class="word" style="animation-delay: 600ms">With</span>
+            <span class="word" style="animation-delay: 750ms">Apps</span>
+            <span class="word" style="animation-delay: 900ms">&</span>
+            <span class="word" style="animation-delay: 1050ms">Software</span>
+            <span class="word" style="animation-delay: 1200ms">That</span>
+            <span class="word" style="animation-delay: 1350ms">Scale</span>
+          </h1>
+
+          <p
+            id="animated-paragraph"
+            class="fade-target text-white lg:text-[26px] text-[18px] mt-[20px]"
+          >
+            Award-Winning Digital Transformation Company with Strategic
+            <br class="hidden lg:block" />
+            Innovation Turning Brands into Industry Leaders
+          </p>
+
+          <div
+            id="animated-button"
+            class="fade-target text-center flex justify-center mt-5"
+          >
+            <button
+              data-slot="button"
+              class="group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap hover:scale-105 disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-10 mt-8 lg:mt-10"
             >
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 10 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
               >
-                <path
-                  d="M1.56265 8.46826L8.4799 2.43411L8.3534 6.91126C8.34669 7.14861 8.53259 7.36171 8.76865 7.38729C8.88668 7.40023 8.99489 7.36363 9.07447 7.29422C9.15404 7.2248 9.20499 7.12256 9.20819 7.00387L9.364 1.48918C9.37071 1.25183 9.18482 1.03873 8.94875 1.01315L3.46411 0.41882C3.2282 0.393111 3.03113 0.565027 3.02457 0.802242C3.01787 1.03959 3.20376 1.25269 3.43983 1.27827L7.89271 1.76067L0.9753 7.79496C0.803713 7.94464 0.796019 8.21694 0.958127 8.40277C1.12023 8.5886 1.3909 8.61808 1.56265 8.46826Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
+                Get a Free Project Estimate
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  class="transition-transform duration-300 ease-in-out group-hover:rotate-45"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.5 8L6 18.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                  ></path>
+                  <path
+                    d="M8 6.68793L17.2692 7.23081L17.812 16.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                  ></path>
+                </svg>
+                <span
+                  class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ff5a1463_100%)]"
+                ></span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- Rings -->
+      <div id="rings" class="absolute-center">
+        <span
+          class="ring"
+          style="
+            --base: 129.737;
+            --opacity: 0.02;
+            --delay: 2750ms;
+            --size: 1400;
+            --amp: 70px;
+            --scale-up: 1.05;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 208.114;
+            --opacity: 0.05;
+            --delay: 2600ms;
+            --size: 1100;
+            --amp: 60px;
+            --scale-up: 1.04;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 286.491;
+            --opacity: 0.05;
+            --delay: 1250ms;
+            --size: 900;
+            --amp: 50px;
+            --scale-up: 1.03;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 364.868;
+            --opacity: 0.1;
+            --delay: 800ms;
+            --size: 700;
+            --amp: 40px;
+            --scale-up: 1.02;
+          "
+        ></span>
+        <span
+          class="ring"
+          style="
+            --base: 443.246;
+            --opacity: 0.2;
+            --delay: 150ms;
+            --size: 500;
+            --amp: 30px;
+            --scale-up: 1.01;
+          "
+        ></span>
+        <span
+          class="ring ring-final"
+          style="
+            --base: 521.623;
+            --opacity: 1;
+            --delay: 0ms;
+            --size: 300;
+            --amp: 20px;
+            --scale-up: 1.005;
+          "
+        ></span>
+      </div>
+
+      <!-- Mobile fallback SVG (unchanged) -->
+      <div
+        class="absolute left-0 bottom-[-20%] min-1680px:top-[38%] md:hidden block w-full"
+      >
+        <svg
+          width="100%"
+          height="601"
+          viewBox="0 0 390 601"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            opacity="0.02"
+            cx="195"
+            cy="650"
+            r="650"
+            fill="url(#paint1_radial)"
+          />
+          <circle
+            opacity="0.05"
+            cx="195"
+            cy="650"
+            r="550"
+            fill="url(#paint2_radial)"
+          />
+          <circle
+            opacity="0.05"
+            cx="195"
+            cy="650"
+            r="450"
+            fill="url(#paint3_radial)"
+          />
+          <circle
+            opacity="0.1"
+            cx="195"
+            cy="650"
+            r="350"
+            fill="url(#paint4_radial)"
+          />
+          <circle
+            opacity="0.2"
+            cx="195"
+            cy="650"
+            r="250"
+            fill="url(#paint5_radial)"
+          />
+          <g filter="url(#filter0_d)">
+            <circle cx="195" cy="650" r="150" fill="#5871F0" />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d"
+              x="-38"
+              y="412"
+              width="466"
+              height="466"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feGaussianBlur stdDeviation="35" />
+            </filter>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(195 650) rotate(90) scale(650)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Awards Bar (unchanged) -->
+      <div
+        class="border-gradient relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
+      >
+        <div class="container mx-auto w-full max-w-[1456px] px-4">
+          <div
+            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white xl:text-left text-center"
+          >
+            <p
+              class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
+            >
+              Recognized for building the best solutions for startups,
+              businesses, and enterprises
+            </p>
+            <div
+              class="group flex w-full gap-x-4 overflow-hidden select-none xl:max-w-[829px]"
+            >
+              <ul
+                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
+              >
+                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+              </ul>
+              <ul
+                aria-hidden="true"
+                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
+              >
+                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script>
-      (() => {
-        const radioUS = document.getElementById("us_mob");
-        const radioGlobal = document.getElementById("global_mob");
-        const select = document.getElementById("locationSelect-mob");
-        const cards = Array.from(document.querySelectorAll(".service-card"));
+      // Smooth-start: attach animation paused by default, then start after two RAFs
+      (function () {
+        const ringsWrap = document.getElementById("rings");
+        if (!ringsWrap) return;
 
-        // Return current scope
-        const scope = () => (radioUS.checked ? "us" : "global");
+        // Ensure initial paint uses paused animations (already via CSS),
+        // then flip to running after layout settles.
+        const start = () => {
+          // Force a reflow to lock initial styles
+          // eslint-disable-next-line no-unused-expressions
+          ringsWrap.offsetHeight;
 
-        // Show/hide select options based on scope
-        function syncSelectOptions() {
-          const sc = scope();
-          const opts = Array.from(select.options);
-
-          opts.forEach((opt, i) => {
-            if (i === 0) {
-              opt.hidden = false;
-              return;
-            } // Always show "All Services"
-            const r = opt.dataset.region || "global";
-            opt.hidden = sc === "us" && r !== "us";
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              ringsWrap.classList.add("rings-run");
+            });
           });
+        };
 
-          // If current selection is now hidden, reset to All Services
-          if (select.selectedOptions[0]?.hidden) select.value = "";
+        if (
+          document.readyState === "complete" ||
+          document.readyState === "interactive"
+        ) {
+          start();
+        } else {
+          document.addEventListener("DOMContentLoaded", start, { once: true });
         }
-
-        // Filter cards based on scope + select value
-        function applyFilters() {
-          const sc = scope();
-          // In Global, ignore the select (show everything)
-          const selectedId = sc === "global" ? "" : select.value || "";
-
-          cards.forEach((card) => {
-            const region = card.dataset.region || "global";
-            const id = card.dataset.id || "";
-
-            const passScope = sc === "us" ? region === "us" : true;
-            const passSelect = selectedId ? id === selectedId : true;
-
-            const show = passScope && passSelect;
-            card.classList.toggle("hidden", !show);
-          });
-        }
-
-        // Events
-        select.addEventListener("change", () => {
-          if (scope() === "global") select.value = ""; // ignore select in Global
-          applyFilters();
-        });
-        // iOS/Safari safety
-        select.addEventListener("input", () => {
-          if (scope() === "global") select.value = "";
-          applyFilters();
-        });
-
-        radioUS.addEventListener("change", () => {
-          syncSelectOptions();
-          applyFilters();
-        });
-
-        radioGlobal.addEventListener("change", () => {
-          select.value = ""; // reset to All Services on Global
-          syncSelectOptions(); // show all options
-          applyFilters(); // show all cards
-        });
-
-        // Init
-        syncSelectOptions();
-        applyFilters();
       })();
     </script>
   </body>
