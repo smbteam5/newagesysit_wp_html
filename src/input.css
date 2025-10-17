@@ -4489,22 +4489,7 @@ footer ul li {
   overflow: hidden;
 }
 
-.border-image-ppc-react::before {
-  /* content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  background: linear-gradient(
-    141.26deg,
-    rgba(78, 54, 86, 0.8) 11.03%,
-    rgba(68, 49, 73, 0.5) 90.53%
-  );
-  border-radius: inherit;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask-composite: xor; */
-}
+
 
 .border-image-ppc-react::after {
   content: "";
@@ -4861,7 +4846,7 @@ footer ul li {
 }
 
 .border-image-ppc-golang {
-  background: linear-gradient(284.5deg, #2c43ac 28.3%, #00000d 147.13%);
+  /* background: linear-gradient(284.5deg, #2c43ac 28.3%, #00000d 147.13%); */
   position: relative;
   border-radius: 20px;
 }
@@ -4873,6 +4858,105 @@ footer ul li {
   border-radius: 20px;
   padding: 1px;
   background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ppc-golang-card-bg-with-border{
+  background: linear-gradient(149.06deg, #0E0A0F 5.9%, #211723 104.22%);
+  position: relative;
+  border-radius: 20px;
+}
+
+.ppc-golang-card-bg-with-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(141.26deg, rgba(78, 54, 86, 0.8) 11.03%, rgba(68, 49, 73, 0.5) 90.53%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ppc-golang-card-border{
+  position: relative;
+  border-radius: 20px;
+}
+
+.ppc-golang-card-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(141.26deg, rgba(78, 54, 86, 0.8) 11.03%, rgba(68, 49, 73, 0.5) 90.53%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ppc-golang-card-gradient1{
+  position: relative;
+  background: linear-gradient(284.5deg, #09090B 28.3%, #5C5C71 147.13%);
+ 
+}
+
+.ppc-golang-card-gradient1::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 58px;
+  padding: 1px;
+  background: linear-gradient(283.69deg, #9E9E9E 33.15%, #666666 99.11%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ppc-golang-card-gradient2{
+  position: relative;
+  background: linear-gradient(121.18deg, #0B0C18 19.18%, #2D2F68 106.05%);
+ 
+}
+
+.ppc-golang-card-gradient2::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 58px;
+  padding: 1px;
+  background: linear-gradient(283.69deg, #9E9E9E 33.15%, #666666 99.11%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ppc-golang-card-gradient3{
+  position: relative;
+  background: linear-gradient(284.5deg, #09090B 28.3%, #5C5C71 147.13%);
+ 
+}
+
+.ppc-golang-card-gradient3::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 58px;
+  padding: 1px;
+  background: linear-gradient(283.69deg, #9E9E9E 33.15%, #666666 99.11%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;

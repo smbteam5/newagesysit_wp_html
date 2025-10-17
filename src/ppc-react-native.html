@@ -151,20 +151,23 @@
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
     <div class="overflow-hidden">
       <section
-        class="h-full lg:h-[100vh] bg-contain bg-top bg-no-repeat flex justify-center items-center py-32 relative"
+        class=" bg-contain bg-top bg-no-repeat flex justify-center items-center pt-32  pb-20 relative"
       >
         <div
-          class="absolute scale-150 md:scale-125 top-[200px] md:top-[50px] left-0 right-0 bottom-0 z-20 bg-contain bg-top bg-no-repeat pointer-events-none bg-[url('./img/bg-transparent.svg')] h-[80%]"
+          class="absolute scale-150 md:scale-125 top-[200px] md:top-[50px] left-0 right-0 bottom-0 z-20 bg-contain bg-top bg-no-repeat pointer-events-none bg-[url('./img/bg-transparent.svg')]  lg:bg-[url('./img/pcc-react-native-banner-round.svg')]  h-[100%] 
+          min-1440px:h-[75%] min-1920px:h-[70%]"
         ></div>
 
-        <div
-          class="absolute z-40 bottom-[-390px] md:bottom-[-600px] lg:bottom-[-490px] xl:bottom-[-520px] left-1/2 -translate-x-1/2 w-[150%] bg-[url('./img/effect-ppc-react.webp')] bg-cover bg-center bg-no-repeat pointer-events-none h-full opacity-80"
-        ></div>
+        <!-- <div
+          class="absolute z-40 bottom-[-390px] min-768px:bottom-[-600px] min-1024px:bottom-[-490px] min-1240px:bottom-[-440px] min-1440px:bottom-[-445px] 
+          min-1920px:bottom-[-485px]
+            left-1/2 -translate-x-1/2 w-[150%] bg-[url('./img/effect-ppc-react.webp')] bg-cover bg-center bg-no-repeat pointer-events-none h-full "
+        ></div> -->
 
         <div
-          class="container flex flex-col items-center justify-center pt-[10%] md:pt-[5%] lg:pt-[30%] xl:pt-[15%] z-40"
+          class="container flex flex-col items-center justify-center pt-[10%] md:pt-[5%] lg:pt-[16%] xl:pt-[5%] z-40"
         >
-          <div class="relative flex flex-col items-center justify-center">
+          <div class="relative flex flex-col items-center justify-center pb-32  lg:pb-[60px] xl:pb-48">
             <h1
               class="text-[28px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
             >
@@ -172,13 +175,13 @@
               React Native Apps Real Quick
             </h1>
             <p
-              class="text-[14px] md:text-[23px] md:mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
+              class="text-[14px] md:text-[23px] md:mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[70%] p-2"
             >
               Develop lightning-fast, user-friendly mobile and web applications
               with the exceptional capabilities of React Native.
             </p>
             <a
-              class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+              class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden z-10"
             >
               Get Started
 
@@ -198,7 +201,7 @@
             <img
               src="./img/reacticon.webp"
               alt="Hero Illustration"
-              class="absolute lg:hidden bottom-[-120px] rounded-full h-[80px] w-[80px]"
+              class="absolute lg:hidden bottom-[20px] rounded-full h-[80px] w-[80px] z-10"
             />
 
             <img
@@ -210,17 +213,25 @@
             <img
               src="./img/reacticon.webp"
               alt="Hero Illustration"
-              class="absolute right-[30px] top-[-75px] rounded-full h-[80px] w-[80px] rotate-180 hidden lg:block"
+              class="absolute right-[-30px] top-[-75px] rounded-full h-[80px] w-[80px] rotate-180 hidden lg:block"
             />
 
             <img
               src="./img/reacticon.webp"
               alt="Hero Illustration"
-              class="absolute right-[25px] bottom-0 rounded-full h-[100px] w-[100px] rotate-180 hidden lg:block"
+              class="absolute right-[-30px] bottom-[40px] rounded-full h-[100px] w-[100px] rotate-180 hidden lg:block"
             />
+
+             <div class="absolute z-0 bottom-[20px]  md:bottom-[40px] lg:bottom-[60px] xl:bottom-[70px] left-0 w-full translate-y-1/2 ">
+              <img
+                src="./img/glow-new.png"
+                alt="Glow"
+                class="w-full h-full opacity-100  mx-auto "
+              />
+            </div>
           </div>
 
-          <div class="relative w-full mt-32 md: lg:mt-[35px] xl:mt-14 z-50">
+          <div class="relative w-full  z-50">
             <div
               class="relative px-6 md:px-12 py-5 backdrop-blur-[15px] recognition-section-ppc md:bg-black/20 grid grid-cols-1 lg:grid-cols-3"
             >
@@ -254,7 +265,7 @@
         </div>
       </section>
 
-      <section class="bg-black pt-0 pb-20 md:py-20 lg:pt-44 xl:pt-40 relative">
+      <section class="bg-black py-12 relative">
         <div
           class="container max-w-[1440px] mx-auto px-4 text-center relative z-20"
         >
