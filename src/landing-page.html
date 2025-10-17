@@ -5941,6 +5941,28 @@
           <select id="categoryList" class="small"></select>
         </div>
 
+        <!-- SEO-friendly location links (hidden but crawlable) -->
+        <div class="hidden" aria-hidden="true">
+          <h3>Our Service Locations</h3>
+          <ul>
+            <li><a href="https://newagesysit.com/custom-software-development-new-jersey/" target="_blank" rel="noopener">Custom Software Development in New Jersey</a></li>
+            <li><a href="https://newagesysit.com/app-development-jacksonville/" target="_blank" rel="noopener">App Development in Jacksonville</a></li>
+            <li><a href="https://newagesysit.com/app-development-philadelphia/" target="_blank" rel="noopener">App Development in Philadelphia</a></li>
+            <li><a href="https://newagesysit.com/app-development-tampa/" target="_blank" rel="noopener">App Development in Tampa</a></li>
+            <li><a href="https://newagesysit.com/app-development-miami/" target="_blank" rel="noopener">App Development in Miami</a></li>
+            <li><a href="https://newagesysit.com/app-development-atlanta/" target="_blank" rel="noopener">App Development in Atlanta</a></li>
+            <li><a href="https://newagesysit.com/app-development-charlotte/" target="_blank" rel="noopener">App Development in Charlotte</a></li>
+            <li><a href="https://newagesysit.com/app-development-newyork/" target="_blank" rel="noopener">App Development in New York</a></li>
+            <li><a href="https://newagesysit.com/mobile-app-development-company-virginia/" target="_blank" rel="noopener">Mobile App Development in Virginia</a></li>
+            <li><a href="https://newagesysit.com/mobile-app-development-company-georgia/" target="_blank" rel="noopener">Mobile App Development in Georgia</a></li>
+            <li><a href="https://newagesysit.com/app-development-service-pennsylvania/" target="_blank" rel="noopener">Mobile App Development in Pennsylvania</a></li>
+            <li><a href="https://newagesysit.com/staff-augmentation-california/" target="_blank" rel="noopener">Staff Augmentation in California</a></li>
+            <li><a href="https://newagesysit.com/staff-augmentation-texas/" target="_blank" rel="noopener">Staff Augmentation in Texas</a></li>
+            <li><a href="https://newagesysit.com/staff-augmentation-ny/" target="_blank" rel="noopener">Staff Augmentation in New York</a></li>
+            <li><a href="https://newagesysit.com/staff-augmentation-sa/" target="_blank" rel="noopener">Staff Augmentation in South Africa</a></li>
+          </ul>
+        </div>
+
         <div
           id="container"
           style="
@@ -10721,12 +10743,12 @@
         // ---------- interactivity ----------
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.enablePan = false;
-        // lock zoom to a fixed close distance
-        controls.enableZoom = false;
-        controls.minDistance = CAMERA_DISTANCE_CLOSE; // lock distance
-        controls.maxDistance = CAMERA_DISTANCE_CLOSE;
+        // Enable zoom with distance limits for Google Earth-like zoom
+        controls.enableZoom = true;
+        controls.minDistance = 80; // Closest zoom (zoomed in)
+        controls.maxDistance = 200; // Farthest zoom (zoomed out)
         controls.rotateSpeed = 0.6;
-        controls.zoomSpeed = 1.0;
+        controls.zoomSpeed = 1.2; // Zoom speed (higher = faster zoom)
         controls.enableDamping = true;
         controls.dampingFactor = 0.09;
         controls.autoRotate = false;
@@ -10756,6 +10778,18 @@
           }
         }
         window.addEventListener("pointermove", onPointerMove);
+
+        // Prevent page scroll when mouse wheel is used over the globe
+        containerEl.addEventListener("wheel", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }, { passive: false });
+
+        // Also prevent scroll on the canvas directly
+        renderer.domElement.addEventListener("wheel", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }, { passive: false });
 
         // Tooltip elements
         const markerTooltip = document.getElementById("markerTooltip");
@@ -10826,25 +10860,39 @@
           markers.forEach((marker, index) => {
             const entry = document.createElement("div");
             entry.style.cssText =
-              "display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 0;";
+              "padding: 6px 0;";
             if (index > 0) {
               entry.style.borderTop = "1px solid rgba(255,255,255,0.2)";
             }
+
+            // Make the entire entry a clickable link
+            const link = document.createElement("a");
+            link.href = marker.meta.url || "#";
+            link.target = "_blank";
+            link.rel = "noopener";
+            link.style.cssText =
+              "display: flex; align-items: center; justify-content: space-between; gap: 12px; color: inherit; text-decoration: none; transition: color 0.2s;";
+            
+            // Add hover effect
+            link.addEventListener("mouseenter", () => {
+              link.style.color = "#4fc3ff";
+            });
+            link.addEventListener("mouseleave", () => {
+              link.style.color = "inherit";
+            });
 
             const nameSpan = document.createElement("span");
             nameSpan.textContent = marker.meta.name;
             nameSpan.style.cssText =
               "flex: 1; white-space: normal; line-height: 1.4;";
 
-            const link = document.createElement("a");
-            link.href = marker.meta.url || "#";
-            link.target = "_blank";
-            link.rel = "noopener";
-            link.textContent = "→";
-            link.style.cssText =
-              "color: #4fc3ff; text-decoration: none; font-size: 18px; font-weight: bold; flex-shrink: 0;";
+            const arrow = document.createElement("span");
+            arrow.textContent = "→";
+            arrow.style.cssText =
+              "color: #4fc3ff; font-size: 18px; font-weight: bold; flex-shrink: 0;";
 
-            entry.appendChild(nameSpan);
+            link.appendChild(nameSpan);
+            link.appendChild(arrow);
             entry.appendChild(link);
             tooltipContent.appendChild(entry);
           });
