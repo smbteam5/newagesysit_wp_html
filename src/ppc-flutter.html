@@ -7219,7 +7219,7 @@
                   >
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordion(this)"
                     >
                       <h3 class="font-normal">
                         Can you create a custom Flutter application for my business?
@@ -7259,7 +7259,7 @@
                   >
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordion(this)"
                     >
                       <h3 class="font-medium">
                         How long will it take to build a Flutter app?
@@ -7298,7 +7298,7 @@
                   >
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordion(this)"
                     >
                       <h3 class="font-medium">
                         Is it possible to migrate an existing application to Flutter?
@@ -7337,7 +7337,7 @@
                   >
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordion(this)"
                     >
                       <h3 class="font-medium">
                         How much will it cost to create a Flutter app?
@@ -7662,7 +7662,24 @@
       });
     </script>
 
+<script>
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+        document
+          .querySelectorAll(".accordion-content")
+          .forEach((item) => item.classList.remove("show"));
+        document
+          .querySelectorAll(".transform")
+          .forEach((icon) => icon.classList.remove("rotate-180"));
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
     <script>
+      
       function toggleAccordionPPC(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
