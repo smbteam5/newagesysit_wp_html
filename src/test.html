@@ -4,179 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ring Animation</title>
-    <style>
-      #rings {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .ring {
-        position: absolute;
-        left: 50%;
-        width: var(--size, 1300px);
-        height: var(--size, 1300px);
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        animation: ring-bounce 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-      }
-
-      .ring-final {
-        background-color: rgba(
-          0,
-          123,
-          255,
-          0.5
-        ); /* Adjust to your preferred color */
-        opacity: 0;
-        animation: ring-bounce-final 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-      }
-
-      @keyframes ring-bounce {
-        0% {
-          opacity: 0;
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px))
-            scale(1);
-        }
-        10% {
-          opacity: var(--opacity, 0.02);
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px + var(--amp, 70px))) scale(1);
-        }
-        30% {
-          opacity: var(--opacity, 0.02);
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px - var(--amp, 40px)))
-            scale(var(--scale-up, 1.05));
-        }
-        50% {
-          opacity: var(--opacity, 0.02);
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px - var(--amp, 40px)))
-            scale(var(--scale-up, 1.05));
-        }
-        100% {
-          opacity: var(--opacity, 0.02);
-          transform: translateX(-50%) translateY(calc(var(--base, 0) * 1px))
-            scale(1);
-        }
-      }
-
-      @keyframes ring-bounce-final {
-        0% {
-          opacity: 0;
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px))
-            scale(1);
-        }
-        10% {
-          opacity: var(--opacity, 0.1);
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px + var(--amp, 50px))) scale(1);
-        }
-        30% {
-          opacity: var(--opacity, 0.2);
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px - var(--amp, 50px)))
-            scale(1.05);
-        }
-        50% {
-          opacity: var(--opacity, 0.2);
-          transform: translateX(-50%)
-            translateY(calc(var(--base, 0) * 1px - var(--amp, 50px)))
-            scale(1.05);
-        }
-        100% {
-          opacity: var(--opacity, 1);
-          transform: translateX(-50%) translateY(calc(var(--base, 0) * 1px))
-            scale(1);
-        }
-      }
-
-      .rings-loaded .ring {
-        animation-delay: var(--delay, 0ms);
-      }
-
-      .rings-loaded .ring-final {
-        animation-delay: var(--delay, 0ms);
-      }
-    </style>
   </head>
+  <style>
+    .container {
+      padding: 100px 0;
+      background: url(https://picsum.photos/800/300?image=1069) fixed;
+    }
+    .button {
+      width: 200px;
+      height: 50px;
+      cursor: pointer;
+      color: #fff;
+      margin: auto;
+      border: 3px solid transparent;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      background: url(https://picsum.photos/800/300?image=1069) padding-box
+          fixed,
+        linear-gradient(-45deg, #2ae88a 0%, #08aeea 100%) border-box;
+    }
+    .button:hover {
+      background: linear-gradient(-45deg, #2ae88a 0%, #08aeea 100%) border-box;
+    }
+  </style>
   <body>
-    <div id="rings">
-      <span
-        class="ring"
-        style="
-          --base: 129.737;
-          --opacity: 0.02;
-          --delay: 750ms;
-          --size: 1300;
-          --amp: 70px;
-          --scale-up: 1.05;
-        "
-      ></span>
-      <span
-        class="ring"
-        style="
-          --base: 208.114;
-          --opacity: 0.05;
-          --delay: 600ms;
-          --size: 1100;
-          --amp: 60px;
-          --scale-up: 1.04;
-        "
-      ></span>
-      <span
-        class="ring"
-        style="
-          --base: 286.491;
-          --opacity: 0.05;
-          --delay: 450ms;
-          --size: 900;
-          --amp: 50px;
-          --scale-up: 1.03;
-        "
-      ></span>
-      <span
-        class="ring"
-        style="
-          --base: 364.868;
-          --opacity: 0.1;
-          --delay: 300ms;
-          --size: 700;
-          --amp: 40px;
-          --scale-up: 1.02;
-        "
-      ></span>
-      <span
-        class="ring"
-        style="
-          --base: 443.246;
-          --opacity: 0.2;
-          --delay: 150ms;
-          --size: 500;
-          --amp: 30px;
-          --scale-up: 1.01;
-        "
-      ></span>
-      <span
-        class="ring ring-final"
-        style="
-          --base: 521.623;
-          --opacity: 1;
-          --delay: 0ms;
-          --size: 300;
-          --amp: 20px;
-          --scale-up: 1.005;
-        "
-      ></span>
+    <div class="container">
+      <div class="button">Some text</div>
     </div>
   </body>
 </html>
