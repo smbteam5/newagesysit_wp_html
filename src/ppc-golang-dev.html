@@ -114,20 +114,32 @@
 
       /* Custom styles for the gradients - Tailwind's utility classes are good, but a bit of custom CSS for the specific dark gradients can be cleaner for a faithful reproduction. */
       .gradient-1-ppc {
-       background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 46, 49, 0) 101.94%);
-
+        background: linear-gradient(
+          138.28deg,
+          rgba(23, 45, 152, 0.57) 5.99%,
+          rgba(14, 46, 49, 0) 101.94%
+        );
       }
       .gradient-2-ppc {
-       background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
-
+        background: linear-gradient(
+          133.93deg,
+          rgba(255, 255, 255, 0.34) -12.26%,
+          rgba(41, 12, 46, 0) 98.71%
+        );
       }
       .gradient-3-ppc {
-       background: linear-gradient(136.57deg, rgba(116, 60, 168, 0.38) 1.71%, rgba(19, 34, 20, 0) 101.9%);
-
+        background: linear-gradient(
+          136.57deg,
+          rgba(116, 60, 168, 0.38) 1.71%,
+          rgba(19, 34, 20, 0) 101.9%
+        );
       }
       .gradient-4-ppc {
-      background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
-
+        background: linear-gradient(
+          133.93deg,
+          rgba(255, 255, 255, 0.34) -12.26%,
+          rgba(41, 12, 46, 0) 98.71%
+        );
       }
       /* Ensure the background of the body matches the image */
       body {
@@ -1064,14 +1076,25 @@
       <!-- mobile-menu end-->
     </header>
 
-   
- <section
-      class=" bg-contain bg-top bg-no-repeat flex items-center pb-24 h-full relative overflow-hidden "
+   <section
+      class=" bg-contain  bg-no-repeat flex items-center pb-24 h-full relative overflow-hidden "
     >
-    <div
+    <!-- <div
     class="absolute inset-0  z-40  bg-contain bg-top bg-no-repeat pointer-events-none 
      bg-[url('./img/bg-transparent.svg')]"  
-    ></div>
+    ></div> -->
+    <div class="absolute  z-40 top-[100px] md:top-0 pointer-events-none h-full md:h-[87%]">
+      <img 
+        src="./img/bg-pcc-gola-mob.svg" 
+        alt="" 
+        class="lg:hidden w-full h-[60%] md:h-full object-cover md:object-contain object-top"
+      />
+      <img 
+        src="./img/bg-pcc-gola.svg" 
+        alt="" 
+        class="hidden lg:block w-full h-full object-contain object-top xl:object-cover"
+      />
+    </div>
      <div class="absolute z-0 bottom-[-125px] md:bottom-[-120px] lg:bottom-[-130px] xl:bottom-[-65px] 2xl:bottom-[-30px] left-1/2 -translate-x-1/2 w-full  h-[500px] lg:h-[600px] 2xl:h-[60%] 2xl:w-full bg-[url('./img/glow-mobile.svg')] bg-cover bg-center bg-no-repeat"></div>
 
        <div class=" hidden absolute z-10  bottom-0 left-1/2 -translate-x-1/2 w-full  h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)]   xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)]  pointer-events-none"></div>
@@ -1081,54 +1104,58 @@
        <div class="absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"></div>
 
 
-         <img src="./img/man1.svg"
+         <!-- <img src="./img/man1.svg"
         alt="particles"
         class="absolute top-1/3 left-[80px]  w-[200px] pointer-events-none z-50"
       />
          <img src="./img/man2.svg"
         alt="particles"
-        class="absolute top-1/3 right-[80px]  w-[200px] pointer-events-none z-50"
+        class="absolute top-[25%] right-[80px]  w-[200px] pointer-events-none z-50"
       />
          <img src="./img/ppc-rect-1.svg"
         alt="particles"
-        class="absolute top-0 left-[120px]  w-[130px] pointer-events-none z-50"
+        class=" hidden lg:block absolute top-0 left-[120px]  w-[130px] pointer-events-none z-50"
       />
          <img src="./img/ppc-rect-2.svg"
         alt="particles"
-        class="absolute top-[30px] right-[120px]  w-[130px] pointer-events-none z-50"
+        class="hidden lg:block absolute top-[30px] right-[120px]  w-[130px] pointer-events-none z-50"
       />
          <img src="./img/ppc-rect-3.svg"
         alt="particles"
-        class="absolute bottom-[100px] left-[150px]  w-[130px] pointer-events-none z-40"
+        class="absolute bottom-[110px] left-[175px]  w-[130px] pointer-events-none z-40"
       />
          <img src="./img/ppc-rect-3.svg"
         alt="particles"
-        class="absolute bottom-[30px] left-[80px]  w-[130px] pointer-events-none z-40 rotate-180"
+        class="absolute bottom-[60px] left-[80px]  w-[130px] pointer-events-none z-40 rotate-180"
       />
          <img src="./img/ppc-rect-4.svg"
         alt="particles"
-        class="absolute bottom-[50px] right-0  w-[130px] pointer-events-none z-50"
+        class="absolute bottom-[160px] right-[80px]  w-[130px] pointer-events-none z-50"
       />
+         <img src="./img/rect-5.svg"
+        alt="particles"
+        class="absolute bottom-[160px] right-[220px]  w-[130px] pointer-events-none z-50"
+      /> -->
 
        
       <div
-        class="container flex flex-col items-center justify-center pt-[40%] md:pt-[20%] lg:pt-[40%] xl:pt-[20%] z-40"
+        class="container flex flex-col items-center justify-center pt-[55%]   md:pt-[30%] lg:pt-[15%]  xl:pt-[20%] z-40"
       >
         <div class="relative flex flex-col items-center justify-center">
           <h1
-            class="text-[30px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
+            class="text-[30px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
           >
            Hire Vetted Golang Developers 
              <br class="hidden lg:block" />
             Effortlessly & Quickly
           </h1>
           <p
-            class="text-[18px] md:text-[23px] mt-5  text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
+            class="text-[16px] md:text-[23px] xl:mt-5  text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
           >
            Augment your development process with certified Go Developers— pre-vetted, risk-free hiring and flexible contracts. 
           </p>
           <a
-            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
           >Hire Golang Developers Now
 
             <img
@@ -1150,7 +1177,7 @@
       
 
         <div
-          class="relative w-full mt-4 md: lg:mt-[152px] xl:mt-14  z-50"
+          class="relative w-full mt-[390px] md:mt-[400px]  lg:mt-[100px] xl:mt-14  z-50"
         >
           <div
             class="relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5 backdrop-blur-[20px] recognition-section-ppc  md:bg-black/20 "
@@ -1230,31 +1257,34 @@
       </div>
     </section>
 
-   
-    <!-- Section 1: Hero Consultation -->
+    <!-- Section 2: Consultation Form -->
     <section
       class="bg-black flex justify-center items-center pb-8 lg:pb-20 px-5 relative bg-no-repeat"
     >
       <div
-        class="bg-[#09090B] container px-4 border border-gray-700 rounded-[58px] lg:min-h-[700px] flex justify-center items-start relative"
+        class="bg-[#09090B] container px-4 border border-gray-800 rounded-[58px] lg:min-h-[700px] flex justify-center items-start relative"
       >
         <div class="grid lg:grid-cols-2 gap-10 items-center py-8 px-3 md:p-12">
           <!-- Left Content -->
-          <div class="space-y-5 lg:space-y-10 w-full md:w-[90%] h-full">
+          <div class="space-y-5 lg:space-y-10 w-full md:w-full h-full">
             <h2
-              class="text-white text-[30px] md:text-[50px] font-semibold mb-4 leading-[40px] md:leading-[60px] lg:mt-32"
+              class="text-white text-[28px] md:text-[36px] lg:text-[40px] font-semibold mb-4 leading-[50px] lg:leading-[60px] lg:mt-20 xl:mt-28"
             >
-            Are you worried about hiring the wrong developers for your project?
-
+              Are you worried about hiring the wrong developers for your
+              project?
             </h2>
-            <p class="text-gray-300 mb-6 text-[18px] lg:text-[23px]">
-              We let you hire the best Go developers hassle-free; connect, and let’s start building something awesome!
+            <p
+              class="text-[#8C8C8C] mb-6 text-[16px] md:text-[18px] lg:text-[23px]"
+            >
+              We let you hire the best Go developers hassle-free; connect, and
+              let’s start building something awesome!
             </p>
             <div
               class="hidden lg:flex flex-col items-start xl:flex-row xl:items-center gap-3 mt-10"
             >
               <img src="./img//avatar-group.webp" alt="Clients" class="h-10" />
-              <span class="text-[23px] text-gray-400"
+              <span
+                class="text-[16px] md:text-[18px] lg:text-[23px] text-[#8C8C8C]"
                 >Endorsed by the trust of clients worldwide</span
               >
             </div>
@@ -1305,288 +1335,239 @@
       </div>
     </section>
 
-   <section class="bg-black pt-0 pb-20  md:py-20 lg:pt-44 xl:pt-40 relative">
-
-      
-      <div class="container max-w-[1440px] mx-auto px-4 text-center relative z-20">
+    <!-- Section 3: Benefits Cards -->
+    <section class="bg-black pt-0 pb-20 md:py-20 relative">
+      <div
+        class="container max-w-[1440px] mx-auto px-4 text-center relative z-20"
+      >
         <h2
-          class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
+          class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold text-white mb-14 leading-[42px] md:leading-[60px]"
         >
-        Benefits of Hiring Golang Developers 
-
+          Benefits of Hiring Golang Developers
         </h2>
 
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
           <!-- Card 1 -->
           <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card1.svg')] bg-cover bg-center bg-no-repeat"
           >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
+           
             <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-                Quality
-              </h4>
+              <h4 class="text-white text-[23px] font-semibold mb-6">Quality</h4>
               <p
                 class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-              Golang developers help you with scalable, clean, and flexible coding approaches. Using built-in testing and powerful concurrency capabilities, we ensure building high-performing apps with the fewest bugs. 
-
+                Golang developers help you with scalable, clean, and flexible
+                coding approaches. Using built-in testing and powerful
+                concurrency capabilities, we ensure building high-performing
+                apps with the fewest bugs.
               </p>
             </div>
-            <div class="w-full pb-12 flex justify-center items-center">
-              <img
-                src="./img/Kickoff-img.webp"
-                alt="decorative"
-                class="w-[400px] h-auto rounded-b-[20px]"
-              />
-            </div>
-          </div>
-          <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
-          >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-               Speed
-              </h4>
-              <p
-                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
-              >
-              Our experts deliver your projects faster and ensure the simplicity and flexibility of Golang applications. Turn your apps into highly responsible ones and minimize development cycles with the concurrency model. 
-
-              </p>
-            </div>
-            <div class="w-full pb-12 flex justify-center items-center">
-              <img
-                src="./img/uptime-img.webp"
-                alt="decorative"
-                class="w-[400px] h-auto rounded-b-[20px]"
-              />
-            </div>
-          </div>
-          <div
-            class=" h-[600px]  "
-          >
-          <div class="h-[354px] relative border border-image-ppc-react">
-             <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-             Guarantee
-
-              </h4>
-              <p
-                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
-              >
-               By hiring our pre-vetted Golang developers, you can ensure lasting stability and reliability. We also help you future-proof your apps using maintainable and well-documented code with high performance. 
-
-              </p>
-            </div>
-          </div>
-           <div class="h-[234px] mt-3 border border-image-ppc-golang flex justify-start items-center">
-              <div class="pl-8">
-                <p class="text-white text-[20px] font-semibold ">
-                   Get a Free Consultation
-                </p>
-                 <a
-            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden "
-          >
-       Enquire Now
-
-            
-          </a>
-              </div>
-
-           </div>
            
           </div>
+          <div
+            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card2.svg')] bg-cover bg-center bg-no-repeat "
+          >
+            
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">Speed</h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+                Our experts deliver your projects faster and ensure the
+                simplicity and flexibility of Golang applications. Turn your
+                apps into highly responsible ones and minimize development
+                cycles with the concurrency model.
+              </p>
+            </div>
+           
+          </div>
+          <div class="h-[600px]">
+            <div class="h-[354px] ppc-golang-card-border relative bg-[url('./img/card3.svg')] bg-cover bg-center bg-no-repeat rounded-[20px] ">
+             
+              <div class="text-left p-8 flex-grow">
+                <h4 class="text-white text-[23px] font-semibold mb-6">
+                  Guarantee
+                </h4>
+                <p
+                  class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+                >
+                  By hiring our pre-vetted Golang developers, you can ensure
+                  lasting stability and reliability. We also help you
+                  future-proof your apps using maintainable and well-documented
+                  code with high performance.
+                </p>
+              </div>
+            </div>
+            <div
+              class="h-[234px] mt-3 border border-image-ppc-golang flex justify-start items-center bg-[url('./img/cta-card-bg.svg')] bg-cover bg-center bg-no-repeat"
+            >
+              <div class="pl-8">
+                <p class="text-white text-[20px] font-semibold">
+                  Get a Free Consultation
+                </p>
+                <a
+                  class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+                >
+                  Enquire Now
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-      
       </div>
     </section>
 
-
- <section class="bg-black pt-0 pb-20  md:py-20 lg:pt-44 xl:pt-40 relative">
-
-      
-      <div class="container max-w-[1440px] mx-auto px-4 text-center relative z-20">
+    <section class="bg-black pt-0 pb-20 md:py-20 relative">
+      <div
+        class="container max-w-[1440px] mx-auto px-4 text-center relative z-20"
+      >
         <h2
-          class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
+          class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
         >
-          Benefits of Working With Our
-          <br class="hidden lg:block" />
-          React Native Developers
+          Why Do Most Businesses Fail to Hire the Right Golang Developers?
         </h2>
 
-        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
           <!-- Card 1 -->
-          <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
-          >
+          <div class="h-[600px]">
+            <div class="h-[354px] relative ppc-golang-card-border bg-[url('./img/right-golang-dev-card1.svg')] bg-cover bg-center bg-no-repeat rounded-[20px] ">
+              <div class="text-left p-8 flex-grow">
+                <h4 class="text-white text-[23px] font-semibold mb-6">
+                  Poor Retention
+                </h4>
+                <p
+                  class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+                >
+                  The high demand can prompt Golang experts to leave and seek
+                  better opportunities for growth or compensation, making it
+                  challenging for companies to retain them.
+                </p>
+              </div>
+            </div>
             <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-                Kickoff in 7-10 days
-              </h4>
-              <p
-                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
-              >
-                Get your React Native project started and quickly streamlined
-                with a smoother onboarding process and setup.
-              </p>
-            </div>
-            <div class="w-full pb-12 flex justify-center items-center">
-              <img
-                src="./img/Kickoff-img.webp"
-                alt="decorative"
-                class="w-[400px] h-auto rounded-b-[20px]"
-              />
-            </div>
-          </div>
-          <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
-          >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-                99.9% uptime practices
-              </h4>
-              <p
-                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
-              >
-                We adhere to enterprise-specific DevOps and CI/CD processes to
-                make sure your app experiences the least to no downtime.
-              </p>
-            </div>
-            <div class="w-full pb-12 flex justify-center items-center">
-              <img
-                src="./img/uptime-img.webp"
-                alt="decorative"
-                class="w-[400px] h-auto rounded-b-[20px]"
-              />
-            </div>
-          </div>
-          <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col overflow-hidden relative"
-          >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-                24/7 monitoring
-              </h4>
-              <p
-                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
-              >
-                Our team is committed to paying close attention to detail,
-                ensuring that your React Native apps remain stable, secure, and
-                perform optimally.
-              </p>
-            </div>
-            <div class="w-full flex justify-center items-center">
-              <img
-                src="./img/monitoring-img.webp"
-                alt="decorative"
-                class="w-[400px] h-auto rounded-b-[20px]"
-              />
-            </div>
-          </div>
-        </div>
+              class="h-[234px] mt-3 border ppc-golang-card-bg-with-border flex justify-start items-center rounded-[20px]"
+            >
+              <div class="text-left p-8 flex-grow">
+                <h4 class="text-white text-[23px] font-semibold mb-6">
+                 Lack of Domain Experience
 
-        <div class="flex justify-center items-center mt-10">
-           <a
-            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto"
-          >
-         Book Free Consultation
+                </h4>
+                <p
+                  class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+                >
+                 Developers would be experts in Golang, but they may struggle to provide value to your business without relevant industry-specific knowledge. 
 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class=" h-[600px] rounded-[20px] ppc-golang-card-border  flex flex-col relative bg-[url('./img/right-golang-dev-card2.svg')] bg-cover bg-center bg-no-repeat"
+          >
+           
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+               Low Candidate Quality
+
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+               Many candidates are adept only in surface-level Golang; hence, they lack in-depth expertise in the language for scalability, problem-solving, concurrency, etc. 
+
+              </p>
+            </div>
+           
+          </div>
+          <div
+            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col overflow-hidden relative bg-[url('./img/right-golang-dev-card3.svg')] bg-cover bg-center bg-no-repeat"
+          >
+           
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+              Long Hiring Cycles
+
+              </h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+                With slow processes in place and numerous interview rounds, top Golang talent moves farther away to seek the support of fast-growing competitors. 
+
+              </p>
+            </div>
             
-          </a>
+          </div>
         </div>
+
+        
       </div>
     </section>
 
-       <section class="py-10 md:py-20 bg-black">
+    <section class="py-10 md:py-20 bg-black">
       <div
         class="container mx-auto flex flex-col lg:flex-row gap-8 items-start px-4"
       >
         <div class="text-white space-y-8 mb-10 lg:mb-0 w-full lg:w-[40%]">
-          <h1 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold lg:leading-[70px]">
-            Why React Native <br />
-            With Us?
-          </h1>
-          <a
-            href="#"
-            class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14]"
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold lg:leading-[70px]"
           >
-            Ask about your specific stack <span class="ml-2">&rsaquo;</span>
-          </a>
+           How NewAgeSysIT Solves These Problems?
+
+          </h2>
+         
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 w-full lg:w-[60%]">
           <div
-            class="p-6 rounded-tl-xl border  gradient-1-ppc min-h-[200px] flex flex-col justify-between "
+            class="p-6 rounded-tl-xl border gradient-1-ppc min-h-[200px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">01</p>
-              <h3 class="font-manrope text-[24px]  font-[400] text-white mb-2">
-                Time-to-Market
+              <h3 class="font-manrope text-[24px] font-[400] text-white mb-2">
+               Rigorous vetting & screening
               </h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80] font-manrope">
-            Single codebase & proven pipelines (EAS/OTA, Fastlane).
-
-            </p>
+            
           </div>
 
           <div
-            class="p-6 rounded-tl-xl border  gradient-2-ppc min-h-[200px] flex flex-col justify-between "
+            class="p-6 rounded-tl-xl border gradient-2-ppc min-h-[200px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">02</p>
               <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
-                Reliability at Scale
+               Speed & availability
+
               </h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80] font-manrope">
-           Error monitoring (Sentry/Crashlytics), performance budgets, and 99.9% uptime practices.
-
-            </p>
+            
           </div>
 
           <div
-            class="p-6 rounded-tl-xl border  gradient-3-ppc min-h-[200px] flex flex-col justify-between "
+            class="p-6 rounded-tl-xl border gradient-3-ppc min-h-[200px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">03</p>
-              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">Lower TCO</h3>
-            </div>
-            <p class="text-sm text-[#FFFFFF80] font-manrope">
-           shared code & automated testing (Detox/Appium).
+              <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
+                Domain & framework specialization
 
-            </p>
+              </h3>
+            </div>
+           
           </div>
 
           <div
-            class="p-6 rounded-tl-xl border  gradient-4-ppc min-h-[200px] flex flex-col justify-between "
+            class="p-6 rounded-tl-xl border gradient-4-ppc min-h-[200px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">04</p>
               <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
-                Compliance-Ready
+               Guarantee & replacement policy
+
               </h3>
             </div>
-            <p class="text-sm text-[#FFFFFF80] font-manrope">HIPAA/GDPR as necessitated.</p>
+            
           </div>
         </div>
       </div>
@@ -1596,178 +1577,216 @@
       <div class="container mx-auto px-4">
         <div class="py-12">
           <h2
-            class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0  text-white font-semibold"
+            class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0 text-white font-semibold"
           >
-            Our Services
+            Hire a Golang Developer to Build a Futuristic Business
+
           </h2>
-          <p
-            class="text-center text-[18px] md:text-[22px] text-[#FFFFFFB3] md:mt-5 lg:mt-0 leading-relaxed"
-          >
-            Our React Native development services can help your app go live
-            faster across iOS, Android, and the web, while ensuring effortless
-            performance on every platform.
-          </p>
+         
         </div>
 
         <div
           class="pt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-5"
         >
-        
-          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-2.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                  React Native iOS
-                  <br />
-                  App Development
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                  Our team of experts brings life to your iOS applications with
-                  a sleek, user-friendly design that is not only functional but
-                  also high-performing. With our team of specialists at the
-                  helm, we ensure there is no compromise in quality, and you get
-                  a reliable experience across all iOS devices.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-3.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                  Cross-Platform Migration Services
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                  If you feel stressed about going through multiple versions of
-                  your app, we are here to help you out. We take your existing
-                  app and make it function effortlessly across iOS and Android
-                  with the advanced React Native technology, i.e, with one code
-                  to work for all platforms, interesting, isn’t it?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-4.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                  React Native UI/UX Design Services
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                  When it comes to user experience, design speaks for itself.
-                  Our React Native experts help you build an intuitive yet easy
-                  app design for users to make navigation effortless. Regardless
-                  of making a new start or moving for a rebrand, our team makes
-                  sure your app works not just better, but the best.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
             <div>
               <div class="icon mb-[20px]">
                 <img src="./img/pcc-ser-5.svg" alt="" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[23px]">
-                  React Native App Customization Services
+              Golang AI Development 
 
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                  Understanding the unique nature of your business, we customize
-                  your application to align with your specific business needs,
-                  incorporating new features or changing the way things work. By
-                  keeping the business goals and the nature of the app
-                  optimized, we let you achieve your goals.
+                  Develop real-time AI-driven applications using Golang by combining the speed and concurrency model to serve the best for your business. 
+
                 </p>
               </div>
             </div>
           </div>
-          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-6.svg" alt="" />
+                <img src="./img/pcc-ser-5.svg" alt="" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[23px]">
-                  React Native Consulting & Support
+                Full-Stack App Development
+
 
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                  If you’re not sure about where to begin, we are here to guide
-                  you through the process. To pick the ideal tools and keep
-                  things functioning great post-launch. Our team is always ready
-                  to guide and support you to keep your app updated and growing
-                  as you scale your business.
+                 Build scalable and reliable web applications with seamless frontend and backend integration, backed by our best Golang developers. 
+
                 </p>
               </div>
             </div>
           </div>
-          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-7.svg" alt="" />
+                <img src="./img/pcc-ser-5.svg" alt="" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[23px]">
-                  React Native Maintenance & Support
+                 Golang Cloud Computing 
+
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                Develop cloud-native applications using the best cloud platforms and ideal containerization tools, with the support of our Golang experts. 
+
+                </p>
+              </div>
+            </div>
+          </div>
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                 Golang Microservices Development 
+
 
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                  After your app goes live, our responsibility doesn’t end. We
-                  provide continuous support for keeping your app secure,
-                  updating it as required, and ensuring it continues to function
-                  efficiently. We can help you with whatever you require, and
-                  whenever you wish to have it.
+                Get performance-centric microservices that enhance your Golang projects with superior flexibility, faster deployment, and scalability.
+
+                </p>
+              </div>
+            </div>
+          </div>
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+               <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                Mobile App Backend Development
+
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                 Build secure and real-time backends and meet increased traffic demands with the most reliable Golang backend development.
+
+                </p>
+              </div>
+            </div>
+          </div>
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                 <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                Code Review and Optimization
+
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                Implement best coding practices and enhance code readability through a detailed code review, ensuring optimized, production-ready code.
+
+                </p>
+              </div>
+            </div>
+          </div>
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+               Golang Team Augmentation
+
+
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+              Hire dedicated Golang developers to work with the existing team in building applications using our IT staff team augmentation services.
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                 <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+               
+
+Golang Migration & Upgradation
+
+
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+               Ensure your applications stay up-to-date and benefit from the latest Golang advancements with seamless Golang migration and upgrade services.
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                Golang Maintenance & Support
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  We provide ongoing maintenance and support services for your Go applications, ensuring they run smoothly and without any potential issues.
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div class="flex justify-center items-center mt-10 w-full">
-           <a
+          <a
             class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto max-w-[90%] md:max-w-none"
           >
-            <span class="truncate">Hire React Native Developers for your project</span>
+            <span class="truncate"
+              >Hire React Native Developers for your project</span
+            >
           </a>
         </div>
       </div>
     </section>
 
-
-
-  <section class="faq py-10 md:py-[80px] bg-black text-white">
+    <section class="faq py-10 md:py-[80px] bg-black text-white">
       <div class="container">
         <div class="text-[20px] text-center">
           <h2
             class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
           >
-            React Native Capabilities
+          Our Golang Developer Expertise 
+
+
           </h2>
           <p
             class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto leading-normal text-[#FFFFFFB2]"
           >
-            With the right technology, you can effectively build a successful
-            mobile app. At NewAgeSysIT, we are adept at delivering React Native
-            applications with the best expertise, ensuring we choose the right
-            set of languages and frameworks to align with your goals. Using
-            React native, we offer avant-garde solutions to ensure a seamless
-            experience across every platform.
+           While hiring a developer, you also hire specialists with skills and expertise in scaling your projects with best-in-class tools, a modern approach, and advanced technologies.
+
           </p>
         </div>
         <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
@@ -1780,7 +1799,7 @@
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Frontend & Core </span>
+                      <span class="font-medium">Concurrency</span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -1810,14 +1829,14 @@
                               class="flex items-center justify-center border rounded-xl px-1 md:px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/TypeScript.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                TypeScript
+                                Goroutines 
                               </p>
                             </div>
                           </div>
@@ -1830,14 +1849,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Navigation.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Navigation
+                                Channels 
                               </p>
                             </div>
                           </div>
@@ -1850,14 +1869,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-React-Redux.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Redux Toolkit / Zustand
+                                Context 
                               </p>
                             </div>
                           </div>
@@ -1870,14 +1889,34 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/React Query.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                React Query
+                               Sync 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                               Errgroup 
                               </p>
                             </div>
                           </div>
@@ -1890,7 +1929,7 @@
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Auth & Payments </span>
+                      <span class="font-medium">Microservices </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -1920,14 +1959,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic -OAuth 2.0.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                OAuth2
+                                gRPC 
                               </p>
                             </div>
                           </div>
@@ -1940,14 +1979,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/SSO.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                SSO
+                                Kafka 
                               </p>
                             </div>
                           </div>
@@ -1960,14 +1999,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Stripe.svg"
+                                src="https://raw.githubusercontent.com/nats-io/nats-site/master/static/img/nats-icon-color.png"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Stripe
+                                NATS 
                               </p>
                             </div>
                           </div>
@@ -1981,14 +2020,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/apple-173_svgrepo.com.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Apple Pay
+                               RabbitMQ 
                               </p>
                             </div>
                           </div>
@@ -2001,14 +2040,114 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic - gpay.svg"
+                                src="https://avatars.githubusercontent.com/u/23534644?s=200&v=4"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Google Pay
+                              Istio 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://docs.konghq.com/assets/images/icons/kong-gradient.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Kong  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://doc.traefik.io/traefik/assets/img/traefik.logo.png"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Traefik  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              OpenTelemetry  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Prometheus  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Grafana 
                               </p>
                             </div>
                           </div>
@@ -2021,7 +2160,8 @@
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">CI/CD & Testing </span>
+                      <span class="font-medium">REST APIs
+ </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2051,14 +2191,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Fastlane.svg"
+                                src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Fastlane
+                                Gin 
                               </p>
                             </div>
                           </div>
@@ -2071,14 +2211,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/EAS.svg"
+                                src="https://echo.labstack.com/img/logo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                EAS
+                                Echo 
                               </p>
                             </div>
                           </div>
@@ -2091,14 +2231,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/OTA.svg"
+                                src="https://gofiber.io/assets/images/logo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                OTA
+                                Fiber 
                               </p>
                             </div>
                           </div>
@@ -2111,14 +2251,15 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-jest.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Jest
+                               Chi 
+
                               </p>
                             </div>
                           </div>
@@ -2131,14 +2272,15 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Detox.svg"
+                                src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Detox
+                               Swagger  
+
                               </p>
                             </div>
                           </div>
@@ -2151,18 +2293,156 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Appium.svg"
+                                src="https://jwt.io/img/pic_logo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Appium
+                               JWT  
+
                               </p>
                             </div>
                           </div>
                         </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://oauth.net/images/oauth-2-sm.png"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                OAuth 2.0
+ 
+
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                    
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Frameworks </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Gin 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://echo.labstack.com/img/logo.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Echo 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://gofiber.io/assets/images/logo.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Fiber 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                 Gorilla/Mux
+
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                    
                       </div>
                     </div>
                   </div>
@@ -2177,7 +2457,7 @@
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Native Modules </span>
+                      <span class="font-medium">Integrations</span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2207,34 +2487,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Camera.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2 "
-                              >
-                                Camera
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Sensors.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Sensors
+                                PostgreSQL 
                               </p>
                             </div>
                           </div>
@@ -2247,14 +2507,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/BLE.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                BLE
+                                MySQL 
                               </p>
                             </div>
                           </div>
@@ -2267,14 +2527,34 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Maps.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                MongoDB 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Maps / Geo
+                              Redis 
                               </p>
                             </div>
                           </div>
@@ -2287,14 +2567,114 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Push Notifications.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Push Notifications
+                              Kafka 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Stripe  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://www.twilio.com/content/dam/twilio-com/global/en/blog/legacy/2017/twilio-logo-red.png"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Twilio  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://onesignal.com/assets/common/logo_onesignal_color.png"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              OneSignal  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              Google Maps 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                              AWS S3 
                               </p>
                             </div>
                           </div>
@@ -2307,7 +2687,7 @@
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">App Experience </span>
+                      <span class="font-medium">DevOps</span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2337,14 +2717,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Offline-first.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Offline-first
+                               Docker 
                               </p>
                             </div>
                           </div>
@@ -2357,14 +2737,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Sync.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Sync
+                                Kubernetes 
                               </p>
                             </div>
                           </div>
@@ -2377,108 +2757,18 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Realtime.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2 "
-                              >
-                                Realtime
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Feature Flags.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Feature Flags
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Analyticss.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1" 
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Analytics
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/B Testing.svg"
+                                src="https://helm.sh/img/helm.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                A/B Testing
+                                Helm 
                               </p>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
-                    <button
-                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                      onclick="toggleAccordionPPC(this)"
-                    >
-                      <span class="font-medium">Cloud & Monitoring </span>
-                      <span
-                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
-                      >
-                        <span class="plus-icon">
-                          <img
-                            src="./img/down-arrow-accrodion.svg"
-                            alt="plus"
-                            class="w-[20px] h-[20px]"
-                          />
-                        </span>
-                        <span class="minus-icon">
-                          <img
-                            src="./img/down-arrow-accrodion.svg"
-                            alt="plus"
-                            class="w-[20px] h-[20px]"
-                          />
-                        </span>
-                      </span>
-                    </button>
-                    <div class="accordion-content-ppc">
-                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
                         <div
                           class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
                         >
@@ -2487,14 +2777,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/firebase-1-1.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Firebase
+                              Terraform 
                               </p>
                             </div>
                           </div>
@@ -2507,14 +2797,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-aws.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                AWS
+                                GitHub Actions 
                               </p>
                             </div>
                           </div>
@@ -2527,58 +2817,534 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-google-cloud.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                GCP
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Sentry.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Sentry
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Crashlytics.svg"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Crashlytics
+                           Jenkins 
                               </p>
                             </div>
                           </div>
                         </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                           Prometheus  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                           Grafana 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Cloud </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                AWS 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                GCP 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Azure 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                CloudFront 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Lambda 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                RDS  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                 Cloud Run
+ 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Testing </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                pprof  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                 Runtime/Trace  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Sync 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Pool 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://avatars.githubusercontent.com/u/6599399?s=200&v=4"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Jsoniter  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                 Redis Cache
+  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                      onclick="toggleAccordionPPC(this)"
+                    >
+                      <span class="font-medium">Performance Tuning
+ </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/down-arrow-accrodion.svg"
+                            alt="plus"
+                            class="w-[20px] h-[20px]"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content-ppc">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                pprof  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                 Runtime/Trace  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Sync 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Pool 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://avatars.githubusercontent.com/u/6599399?s=200&v=4"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Jsoniter  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                 Redis Cache
+  
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                       
                       </div>
                     </div>
                   </div>
@@ -2590,8 +3356,7 @@
       </div>
     </section>
 
-
-  <section class="timeline-section py-12">
+    <section class="timeline-section py-12">
       <div class="text-[20px] text-center">
         <h2
           class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto text-white"
@@ -2605,11 +3370,11 @@
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>01</h2>
-                <h3>Planning & Requirements Analysis</h3>
+                <h3>You Define Needs
+</h3>
                 <p>
-                  We initially define the app's goals, target audience,
-                  features, and technology stack. We then build wireframes and
-                  UI mockups to establish a clear vision.
+                 Let us know what you need from us. Submit a request that includes the tech stack, project scope, and any additional requirements.
+
                 </p>
               </div>
             </li>
@@ -2617,11 +3382,11 @@
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>02</h2>
-                <h3>Project Setup</h3>
+                <h3>We Vet & Preselect
+</h3>
                 <p>
-                  Our team then sets up the React Native environment, assesses
-                  the project, initiates and configures Git, and uses
-                  Android/iOS emulators to carry out testing.
+                 We understand your needs and immediately match the right developers to help you with your project requirements. 
+
                 </p>
               </div>
             </li>
@@ -2629,11 +3394,11 @@
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>03</h2>
-                <h3>UI/UX Development</h3>
+                <h3>Interview & Match
+</h3>
                 <p>
-                  We then build screens using React Native components, execute
-                  navigation, and implement responsive styling to match the app
-                  design.
+                 Our talent team identifies the ideal developers from our network and conducts interviews to match your project needs. 
+
                 </p>
               </div>
             </li>
@@ -2641,43 +3406,22 @@
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>04</h2>
-                <h3>App Functionality & Integration</h3>
+                <h3>Onboard & Scale
+</h3>
                 <p>
-                  By adding core logic, we manage state and integrate with APIs,
-                  databases, and third-party services to ensure a dynamic data
-                  flow mechanism.
+                 You get the right developer to kick off your project and scale your processes with the vetted experts, making your tasks easier.  
+
                 </p>
               </div>
             </li>
 
-            <li class="timeline__item">
-              <div class="timeline__content">
-                <h2>05</h2>
-                <h3>Testing & Debugging</h3>
-                <p>
-                  Our team implements unit and integration testing on various
-                  devices to ensure a bug-free experience and maintain stability
-                  and performance.
-                </p>
-              </div>
-            </li>
-            <li class="timeline__item">
-              <div class="timeline__content">
-                <h2>06</h2>
-                <h3>Deployment & Maintenance</h3>
-                <p>
-                  We then generate release builds, initiate Play Store/App Store
-                  publishing, monitor performance, fix bugs, and release updates
-                  on a continuous basis.
-                </p>
-              </div>
-            </li>
+          
           </ol>
         </div>
       </div>
     </section>
 
-   <section class="py-8 md:py-32 bg-black">
+    <section class="py-8 md:py-32 bg-black">
       <div class="container">
         <div
           class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
@@ -2706,7 +3450,7 @@
                       Healthcare
                     </h3>
                   </div>
-                 
+
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
@@ -2788,7 +3532,7 @@
                       Healthcare
                     </h3>
                   </div>
-                 
+
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
@@ -2854,7 +3598,6 @@
                       IoT
                     </h3>
                   </div>
-
                 </div>
               </div>
 
@@ -3024,21 +3767,20 @@
                       Transportation
                     </h3>
                   </div>
-
-                 
-                 
-                
-             
                 </div>
               </div>
             </div>
 
-            <div class="text-center  lg:text-left text-white p-2 md:p-10">
-              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
+            <div class="text-center lg:text-left text-white p-2 md:p-10">
+              <h2
+                class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6"
+              >
                 We Serve These Industries
               </h2>
 
-              <p class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8">
+              <p
+                class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8"
+              >
                 Our journey is something more than inspiring. We’ve come a long
                 way with experience in serving across multiple industries.
                 Here’s a glance at them.
@@ -3047,8 +3789,6 @@
                 class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
               >
                 <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
                   >
@@ -3220,16 +3960,6 @@
         </div>
       </div>
     </section>
-
-   
-
-   
-
- 
-
-  
-
-  
 
     <section class="client_experiences">
       <div class="container">
@@ -3520,7 +4250,7 @@
       </div>
     </section>
 
-    <section class="bg-black py-8 md:py-20 px-4">
+   <section class="bg-black py-8 lg:py-20 px-4">
       <div class="container mx-auto text-center">
         <!-----desktop section--->
         <div class="hidden lg:grid grid-cols-10 gap-6 mb-16">
@@ -3545,7 +4275,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3556,13 +4286,13 @@
               </a>
             </div>
 
-            <div class="relative group cursor-pointer mt-3">
+            <div class="relative group cursor-pointer mt-3 rounded-xl">
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
               >
                 <img
-                  src="./img/client-img-2.webp"
+                 src="./img/larry-image.svg"
                   alt="Bob Salesno"
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
@@ -3576,7 +4306,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform rounded-[24px] duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3590,7 +4320,7 @@
 
           <div class="grid grid-cols-3 gap-6 col-span-6 pt-20">
             <div
-              class="relative group cursor-pointer h-[220px] xl:h-[350px] w-auto"
+              class="relative group cursor-pointer h-[220px] xl:h-[320px] w-auto"
             >
               <a
                 class="popup-youtube"
@@ -3612,7 +4342,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3626,7 +4356,7 @@
             </div>
 
             <div
-              class="relative group cursor-pointer h-[220px] xl:h-[350px] mt-14"
+              class="relative group cursor-pointer h-[220px] xl:h-[320px] mt-14"
             >
               <a
                 class="popup-youtube"
@@ -3647,7 +4377,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3661,7 +4391,7 @@
             </div>
 
             <div
-              class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[350px]"
+              class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[320px]"
             >
               <a
                 class="popup-youtube"
@@ -3682,7 +4412,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3715,7 +4445,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3746,7 +4476,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
@@ -3783,7 +4513,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3800,21 +4530,21 @@
                 href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
               >
                 <img
-                  src="./img/client-img-2.webp"
+                  src="./img/larry-image.svg"
                   alt="Larry Seibel"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                  class="w-full h-full object-cover rounded-xl transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
                   class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
                 >
                   <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer rounded-[24px] "
                   >
                     <img
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform  duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3845,7 +4575,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3878,7 +4608,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3911,7 +4641,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3942,7 +4672,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">
@@ -3973,7 +4703,7 @@
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
                     />
                   </div>
                   <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
@@ -3986,7 +4716,7 @@
           </div>
         </div>
 
-        <div class="text-center lg:-mt-20">
+        <div class="text-center lg:-mt-10">
           <h3
             class="text-[30px] md:text-[40px] font-[400] text-white mb-4 w-full md:max-w-2xl mx-auto"
           >
@@ -4024,176 +4754,269 @@
           </button>
         </div>
       </div>
-    </section>
+   </section>
 
- 
-
- <section class="bg-black py-10 xl:py-20">
-      <div class="container max-w-[1440px] mx-auto px-4 text-center">
+   <section class="bg-black pt-0 pb-20 md:py-20 relative">
+      <div
+        class="container max-w-[1440px] mx-auto px-4 text-center relative z-20"
+      >
         <h2
-          class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]"
+          class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold text-white mb-14 leading-[42px] md:leading-[60px]"
         >
-          How Does it Work for Your Business?
+        Our Guarantee 
         </h2>
+          <p
+            class="text-[18px] md:text-[22px] min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
+          >
+           NewAgeSysIT takes pride in its commitment to 100% client satisfaction. If the deliverables don’t meet the desired expectations, we are prepared to replace, refine, or relaunch them without additional cost. We ensure you’re confident about the result and make your project risk-free.
 
-        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          </p>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3 mt-16">
           <!-- Card 1 -->
           <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/gurantee-card-1.svg')] bg-cover bg-center bg-no-repeat"
           >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow pb-0">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-                Startups
-              </h4>
-
-              <ul
-                class="list-disc space-y-2 text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed pl-5 border-b pb-4"
+           
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">30-Day Risk-Free Trial 
+</h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-                <li>
-                  Budget constraints may make it difficult to get started.
-                </li>
-              
-                <li>You would need to launch quickly as time runs out.</li>
-                <li>Scaling can be hard due to limited resources.</li>
-              </ul>
-              <p class="text-white text-[23px] font-semibold mt-2">
-                We can help you!
+               You can experience the quality we serve before making a commitment. Start with a 7-day risk-free trial with no upfront cost involved. 
+
               </p>
             </div>
-            <div class="w-full lg:pb-12  flex justify-center items-center">
-              <img
-                src="./img/Startups-img.webp"
-                alt="decorative"
-                class="w-[300px] h-auto rounded-b-[20px] object-contain mix-hard-light"
-              />
-            </div>
+           
           </div>
-
           <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
+            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/gurantee-card-2.svg')] bg-cover bg-center bg-no-repeat "
           >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow pb-0">
-              <h4 class="text-white text-[23px] font-semibold mb-6">SMBs</h4>
-
-              <ul
-                class="list-disc space-y-2 text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed pl-5 border-b pb-4"
-              >
-                <li>Outgrowing existing systems can keep you in a dilemma.</li>
-                <li>
-                  Optimizing quick needs with long-term growth sounds
-                  challenging.
-                </li>
-                <li>
-                  Finding a cost-effective solution to grow with you is
-                  necessary.
-                </li>
-              </ul>
-              <p class="text-white text-[23px] font-semibold mt-2">
-                We can make it easier!
-              </p>
-            </div>
-            <div class="w-full lg:pb-12 flex justify-center items-center">
-              <img
-                src="./img/SMBs-img.webp"
-                alt="decorative"
-                class="w-[300px] h-auto rounded-b-[20px] object-contain mix-hard-light"
-              />
-            </div>
-          </div>
-
-          <div
-            class="border h-[600px] rounded-[20px] border-image-ppc-react flex flex-col relative"
-          >
-            <div
-              class="absolute inset-y-0 right-0 w-full bg-[url('./img/react-pcc-gradient.png')] bg-cover bg-center bg-no-repeat"
-            ></div>
-            <div class="text-left p-8 flex-grow pb-0">
-              <h4 class="text-white text-[23px] font-semibold mb-6">
-                Enterprises
-              </h4>
-
-              <ul
-                class="list-disc space-y-2 text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed pl-5 border-b pb-4"
-              >
-                <li>Optimizing and enhancing large-scale processes.</li>
-                <li>
-                  Handling complex systems and operations can be challenging.
-                </li>
-                <li>
-                  You need a globally scalable solution for your business.
-                </li>
-              </ul>
-              <p class="text-white text-[23px] font-semibold mt-2">
-                We can keep it smooth!
-              </p>
-            </div>
-            <div class="w-full lg:pb-12 flex justify-center items-center ">
-              <img
-                src="./img/Enterprises-img.webp"
-                alt="decorative"
-                class="w-[300px] h-auto rounded-b-[20px] object-contain  mix-hard-light"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center items-center mt-10 w-full">
-           <a
-            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4  rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto"
-          >
-         Book Free Consultation
-
             
-          </a>
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">Performance & Accountability</h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+               With defined SLAs, performance metrics, and free replacement policies, we deliver outcomes to ensure reliability and accountability. 
+
+              </p>
+            </div>
+           
+          </div>
+            <div
+            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/gurantee-card-3.svg')] bg-cover bg-center bg-no-repeat"
+          >
+           
+            <div class="text-left p-8 flex-grow">
+              <h4 class="text-white text-[23px] font-semibold mb-6">Post-Launch Support
+</h4>
+              <p
+                class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
+              >
+              We offer post-launch support for a range of periods, as communicated, to fix errors, ensure a smooth rollout, and optimize performance.
+
+
+              </p>
+            </div>
+           
+          </div>
         </div>
       </div>
     </section>
 
-<section class="relative  overflow-hidden py-16 md:py-24 text-center 
-bg-[url('./img/ppc-cta-bg-mobile.webp')] bg-center bg-cover  md:bg-[url('./img/4tab.webp')] md:bg-left md:bg-cover 
-xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  bg-[#070916]
-">
-  <!-- Background Gradient or Glow -->
- 
+    <section class="bg-black text-white py-20 relative overflow-hidden">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold mb-3">
+     Flexible Engagement Models & Pricing 
 
-  <div class="container relative z-10 mx-auto px-4 py-20
-  
-  ">
-    <!-- Heading -->
-    <h2 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight max-w-3xl mx-auto">
-      Ready to hire a React Native developer <br class="hidden md:block" />
-      from our team?
     </h2>
+    <p class="text-gray-400 mb-16 text-[18px] md:text-[20px] max-w-3xl mx-auto">
+      Select the ideal pricing model to meet your custom development needs.
 
-    <!-- Subheading -->
-    <p class="text-gray-400 mt-6 text-[16px] md:text-[18px] max-w-2xl mx-auto leading-relaxed">
-      Scale your business’s success with our dedicated React Native developers.
-      We provide the right set of skills, adaptable solutions, and a commitment
-      to your goals with an expert for your application development needs.
     </p>
 
-    <!-- Button -->
-    <div class="mt-8">
-      <a
-        href="#"
-        class="inline-block bg-[#FF6B2C] text-white font-medium py-3 px-6 rounded-full text-[16px] hover:bg-[#ff804d] transition-colors"
-      >
-        Hire a React Native Developer
-      </a>
+    <div class="relative flex flex-col lg:flex-row justify-center items-center gap-0">
+      <!-- Hourly Plan -->
+      <div class="ppc-golang-card-gradient1 rounded-[58px] p-10 lg:-mr-8  flex flex-col justify-between  z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] pt-10">
+        <div >
+          <h3 class="text-left lg:text-center   pt-8 lg:pt-14 text-[28px] md:text-[32px]  xl:text-[50px] font-semibold mb-4">Hourly Plan</h3>
+          <hr class="border-gray-600 mb-6">
+          <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5">
+            <li>Billing per usage
+</li>
+            <li>Dedicated developer for your time zone
+</li>
+            <li>Interview before you hire
+</li>
+            <li>100% QA & DevOps
+</li>
+          </ul>
+        </div>
+        <button class="mt-8 bg-white text-black font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-gray-200 transition max-w-[280px] xl:max-w-none flex items-center">
+          <span class="truncate inline-block max-w-[180px] xl:max-w-none">Get Started on Hourly Basis</span>
+           <span class="inline-flex items-center ml-1">
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+        </button>
+      </div>
+
+      <!-- Monthly Plan (center, overlapped and highlighted) -->
+      <div class="ppc-golang-card-gradient2 rounded-[58px] p-10  flex flex-col justify-between  z-20 shadow-[0_0_30px_rgba(255,255,255,0.1)] h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0 ">
+        <div>
+          <h3 class="text-left lg:text-center  pt-8 lg:pt-14 text-[28px] md:text-[32px] xl:text-[50px] font-semibold mb-4">Monthly Plan</h3>
+          <hr class="border-gray-600 mb-6">
+          <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5">
+            <li>Dedicated team and billed per month
+</li>
+            <li>Direct access to the project resources
+</li>
+            <li>Interview before you hire</li>
+            <li>Flexible contracts for growing needs
+</li>
+          </ul>
+        </div>
+        <button class="mt-8 bg-[#FF5C1B] text-white font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-[#e64e0e] transition max-w-[280px] xl:max-w-none flex items-center">
+          <span class="truncate inline-block max-w-[180px] xl:max-w-none">Get Started on Monthly Basis</span>
+          <span class="inline-flex items-center ml-1">
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#FFFFFF"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+        </button>
+      </div>
+
+      <!-- Fixed Cost Plan -->
+      <div class="ppc-golang-card-gradient3 rounded-[58px] p-10 lg:-ml-8 flex flex-col justify-between  z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0">
+        <div>
+          <h3 class="text-left lg:text-center   pt-8 lg:pt-14 text-[28px] md:text-[32px]  xl:text-[50px] font-semibold mb-4">Fixed Cost Plan 
+</h3>
+          <hr class="border-gray-600 mb-6">
+          <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] pl-5 list-disc">
+            <li>Dedicated project manager support
+</li>
+            <li>100% QA & DevOps-integrated implementation
+</li>
+            <li>Signed NDA and full IP ownership
+</li>
+            <li>Fixed deliverables and timelines
+</li>
+          </ul>
+        </div>
+        <button class="mt-8 bg-white text-black font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-gray-200 transition max-w-[280px] xl:max-w-none flex items-center">
+          <span class="truncate inline-block max-w-[180px] xl:max-w-none">Get a Free Estimate</span>
+           <span class="inline-flex items-center ml-1">
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+        </button>
+      </div>
     </div>
   </div>
-
-
-</section>
+    </section>
 
 
 
 
+    <section
+      class="relative overflow-hidden py-16 md:py-24 text-center bg-[url('./img/bg_blank.webp')] bg-cover md:bg-[url('./img/ppc-blank-bg.webp')] md:bg-left md:bg-cover bg-no-repeat min-h-[700px]"
+    >
+      <div
+        class="absolute bottom-[30px] md:top-[20px] lg:top-[40px] right-[20px] md:left-[50px] w-[100px] md:w-[180px]"
+      >
+        <img src="./img/pcc-face-1.svg" alt="shape" class=" " />
+      </div>
+      <div
+        class="absolute bottom-[80%] md:bottom-[10%] lg:bottom-[30%] left-[60px]"
+      >
+        <img src="./img/face-2.svg" alt="shape" class=" " />
+      </div>
+      <div
+        class="absolute bottom-[90px] right-[50px] w-[100px] md:w-[180px] hidden md:block"
+      >
+        <img src="./img/face-3.svg" alt="shape" class=" " />
+      </div>
+      <div class="absolute bottom-0 left-[80px]">
+        <img
+          src="./img/pcc-semicircle-1.svg"
+          alt="shape"
+          class="w-[100px] md:w-[150px] hidden md:block"
+        />
+      </div>
+      <div class="absolute top-0 right-[50px]">
+        <img
+          src="./img/pcc-semi-circle.svg"
+          alt="shape"
+          class="w-[100px] md:w-[150px] hidden md:block"
+        />
+      </div>
+
+      <div class="container relative z-10 mx-auto px-4 py-20">
+        <!-- Heading -->
+        <h2
+          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight  mx-auto"
+        >
+          Ready to hire a Golang developer?
+        </h2>
+
+        <!-- Subheading -->
+        <p
+          class="text-gray-400 mt-6 text-[16px] md:text-[18px] mx-auto leading-relaxed max-w-4xl"
+        >
+         Enhance your business’s success with our highly skilled Golang developers. We offer the right set of skills, adaptable solutions, and a commitment to your goals with an expert for your software development needs.
+
+        </p>
+
+        <!-- Button -->
+        <div class="mt-8">
+          <a
+            href="#"
+            class="inline-block bg-[#FF6B2C] text-white font-medium py-3 px-6 rounded-full text-[16px] hover:bg-[#ff804d] transition-colors"
+          >
+           Send your requirements
+          </a>
+        </div>
+      </div>
+    </section>
 
     <section class="faq py-10 md:py-[80px]">
       <div class="container">
@@ -4217,7 +5040,8 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-normal"
-                        >Can you integrate React Native with my existing app?
+                        >Why choose a Golang Developer?
+
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -4239,17 +5063,12 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       </span>
                     </button>
                     <div class="accordion-content">
-                      <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                      <div
+                        class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                      >
                         <p>
-                          Yes. React Native is an excellent choice for working
-                          with existing native applications. With React Native,
-                          you can incorporate new features or screens while
-                          maintaining the current native code intact. If you
-                          wish to add cross-platform functionalities to specific
-                          areas of the application or improve certain features,
-                          React Native can enable seamless integration with the
-                          existing setup. Without rewriting the app, you can
-                          enjoy the advantages of React Native.
+                         By choosing a Golang developer for your project, you are selecting an experienced professional in a language renowned for its reliability, scalability, and efficiency. Since the language is developed by Google, Golang is well-suited for quick compilation, and Golang developers are adept at managing concurrent processes to build scalable applications, high-performance systems, and microservices. Hiring a Golang developer can help you invest in industry-standard services that maintain an edge in the market. 
+
                         </p>
                       </div>
                     </div>
@@ -4262,7 +5081,8 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-medium"
-                        >How can you optimize React Native apps for performance?
+                        >Is it okay if I want to be involved in the development process from scratch?
+
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -4284,16 +5104,12 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       </span>
                     </button>
                     <div class="accordion-content">
-                     <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                      <div
+                        class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                      >
                         <p>
-                          We have an efficient team of React Native developers
-                          who employ several strategies to ensure your app
-                          performs well. This involves effective memory
-                          management, lazy loading, and optimization of images
-                          and assets to minimize load times. We also manage to
-                          keep re-renders under control, ensuring the app
-                          remains responsive. We also monitor JavaScript thread
-                          performance to ensure seamless operations.
+                          Obviously yes. NewAgeSysIT offers services to you based on agile principles. With an agile development approach, our client will be fully involved in the development process, from inception to deployment. 
+
                         </p>
                       </div>
                     </div>
@@ -4306,7 +5122,7 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-medium"
-                        >What is the estimated cost of a React Native project?
+                        >How can I interact with the developer or get regular updates?
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -4328,18 +5144,12 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       </span>
                     </button>
                     <div class="accordion-content">
-                      <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                      <div
+                        class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                      >
                         <p>
-                          Estimating the cost of a React Native development
-                          project depends on the features, complexity, and
-                          project timelines. Considering a simple app with
-                          standard functionality, you may need to invest between
-                          $10,000 and $30,000. For advanced features, such as
-                          custom designs or third-party integrations, the cost
-                          can range from $30,000 to over $60,000. Other complex
-                          apps, such as e-commerce apps, can cost up to $100,000
-                          or more. To obtain a detailed estimate for your React
-                          Native project, please contact us.
+                         From ideation to final deployment, our team helps you track project progress on a daily basis through sprints. We enable you to interact with the developer and assist you with a regular scrum process that involves planning, improvement, deployment, and rapid response to changes. 
+
                         </p>
                       </div>
                     </div>
@@ -4352,8 +5162,8 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-medium"
-                        >How do you ensure security in cross-platform app
-                        development using React Native?
+                        >How do you ensure the confidentiality and safety of our intellectual property?
+
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -4375,20 +5185,102 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
                       </span>
                     </button>
                     <div class="accordion-content">
-                     <div class="p-4 text-white/50  text-[16px] md:text-[18px] font-[200]">
+                      <div
+                        class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                      >
                         <p>
-                          We have React Native experts who adhere to the highest
-                          standards for data encryption, implement robust
-                          authentication methods, and ensure that sensitive
-                          information remains secure. We also follow an updated
-                          approach towards the latest security patches and track
-                          for potential vulnerabilities. To ensure that users’
-                          data remains safe, we maintain the app's compliance
-                          with privacy standards.
+                         You can obtain 100% ownership of your project, regardless of the circumstances. This includes everything from the source code to the NDA, copyright, and intellectual property rights, among others. 
+
                         </p>
                       </div>
                     </div>
                   </div>
+                  <div
+                    class="bg-black min-h-[80px] border-b border-[#c4b2b22c] mb-4"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-medium"
+                        >Where can I hire Golang developers?
+
+
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                        class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                      >
+                        <p>
+                         At NewAgeSysIT, you can find vetted Golang developers and find the right experts who can help you with your projects. With certification and skilled expertise, our developers can join your team and help you scale your project.
+
+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-black min-h-[80px] border-b border-[#c4b2b22c] mb-4"
+                  >
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-medium"
+                        >How long will it take to hire a Golang developer?
+
+
+                      </span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <span class="plus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="Plus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                        <span class="minus-icon">
+                          <img
+                            src="./img/arrow-down.svg"
+                            alt="minus Icon"
+                            class="w-6 h-6"
+                          />
+                        </span>
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div
+                        class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                      >
+                        <p>
+                       Our streamlined hiring technique enables you to easily access top Golang developers. After you submit a hiring request, we share a curated, pre-vetted database of developers with you to find the right fit. You can choose the one that best fits your goals by conducting interviews and making an informed decision.
+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -4667,5 +5559,3 @@ xl:bg-[url('./img/your-data-cta.webp')]  xl:bg-center xl:bg-cover bg-no-repeat  
     // Get all elements with
   </body>
 </html>
-
-
