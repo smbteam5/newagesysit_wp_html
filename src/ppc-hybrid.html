@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PPC-Flutter</title>
+    <title>PPC-Hybrid</title>
 
     <!-- Owl Carousel CSS -->
     <link
@@ -1906,58 +1906,60 @@
       <section
         class="relative bg-contain bg-top bg-no-repeat flex items-center pb-0 h-full overflow-hidden"
       >
-        <div
-          class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 left-[20%] top-[10%] z-[99]"
-        >
-          <div
-            class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-          >
-            <img
-              src="./img/ppc-hero-ic-2.svg"
-              alt="decorative"
-              class="w-14 h-14"
-            />
-            <p>
-              <span class="font-semibold text-[28px]">99.9%</span> uptime
-              practices
-            </p>
-          </div>
+        <!-- fixed -->
+        <div class="container absolute top-[200px]  gap-[15px] z-[99] justify-center mx-auto left-[50%] hidden lg:flex -translate-x-1/2">
+            <div
+            class="hidden lg:block  p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 z-[99] flex-1"
+            >
+            <div
+                class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
+            >
+                <img
+                src="./img/ppc-hero-ic-2.svg"
+                alt="decorative"
+                class="w-14 h-14"
+                />
+                <p>
+                <span class="font-semibold text-[28px]">99.9%</span> uptime
+                practices
+                </p>
+            </div>
+            </div>
+            <div
+            class=" flex-1 hidden lg:block p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 "
+            >
+            <div
+                class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
+            >
+                <img
+                src="./img/ppc-hero-ic-1.svg"
+                alt="decorative"
+                class="w-14 h-14"
+                />
+                <p>
+                Kickoff in
+                <span class="font-semibold text-[28px]">7-10 days</span>
+                </p>
+            </div>
+            </div>
+            <div
+            class="flex-1 hidden lg:block p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 "
+            >
+            <div
+                class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
+            >
+                <img
+                src="./img/ppc-hero-ic-4.svg"
+                alt="decorative"
+                class="w-14 h-14"
+                />
+                <p>
+                <span class="font-semibold text-[28px]">24/7</span> monitoring
+                option
+                </p>
+            </div>
+            </div>
         </div>
-        <div
-          class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 left-[4%] top-[22%] z-[99]"
-        >
-          <div
-            class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-          >
-            <img
-              src="./img/ppc-hero-ic-1.svg"
-              alt="decorative"
-              class="w-14 h-14"
-            />
-            <p>
-              Kickoff in
-              <span class="font-semibold text-[28px]">7-10 days</span>
-            </p>
-          </div>
-        </div>
-        <div
-          class="hidden lg:block absolute p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50 right-[5%] top-[15%] z-[99]"
-        >
-          <div
-            class="px-8 py-2 text-[#F5FAFE] text-[23px] flex items-center justify-center gap-5 rounded-full bg-black/30 bg-gradient-to-r from-[#000000] to-[#5b6eff39] backdrop-blur-[60px]"
-          >
-            <img
-              src="./img/ppc-hero-ic-4.svg"
-              alt="decorative"
-              class="w-14 h-14"
-            />
-            <p>
-              <span class="font-semibold text-[28px]">24/7</span> monitoring
-              option
-            </p>
-          </div>
-        </div>
-
         <!-- Background Layers -->
         <div>
           <div
@@ -1965,9 +1967,9 @@
           >
         
         </div>
-<div class="lg:hidden block absolute inset-0 z-40 bg-contain bg-top h-auto w-[130%] top-[-40px] left-1/2 -translate-x-1/2">
-  <img src="./img/bg-transparent.svg" alt="">
-</div>
+        <div class="lg:hidden block absolute inset-0 z-40 bg-contain bg-top h-auto w-[130%] top-[-40px] left-1/2 -translate-x-1/2">
+        <img src="./img/bg-transparent.svg" alt="">
+        </div>
           <div
             class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)]"
           ></div>
@@ -1994,43 +1996,18 @@
             <div
               class="relative text-center flex justify-center flex-col items-center md:mb-[25px] pb-[50px] md:pb-0 "
             >
-              <div class="relative">
-                <div class="absolute w-[600px] h-[600px] left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
-                  <svg width="100%" height="100%" viewBox="0 0 1600 2084" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.8" filter="url(#filter0_f_8366_1251)">
-<circle cx="809" cy="1042" r="262" fill="#3A55FF"/>
-</g>
-<defs>
-<filter id="filter0_f_8366_1251" x="-233" y="0" width="2084" height="2084" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="390" result="effect1_foregroundBlur_8366_1251"/>
-</filter>
-</defs>
-</svg>
-
-                </div>
-                <img
-                  src="./img/banner-logo.png"
-                  alt=""
-                  class="md:w-[250px] md:h-[250px] w-[100px] h-[100px] object-contain"
-                />
-              </div>
-              <!-- Heading -->
               <h1
                 class="text-[30px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
               >
-                Flutter App Development for <br class="hidden lg:block" />
-                Exceptional Innovation & High Performance
+                Hybrid App Development Services<br class="hidden lg:block" />
+                Build Once, Launch Everywhere
               </h1>
 
               <!-- Subheading -->
               <p
                 class="text-[18px] md:text-[23px] mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2 mx-auto"
               >
-                Build stunning applications with our Flutter app development
-                services, ensuring stunning performance, extraordinary design,
-                and high-end functionality.
+                High-performance iOS & Android apps using cross-platform (React Native, Flutter) and hybrid (Ionic/Capacitor, PWA) stacks—designed to scale with your business.
               </p>
 
               <!-- CTA Button -->
@@ -2123,8 +2100,7 @@
                   class="w-12 h-12"
                 />
                 <p>
-                  <span class="font-semibold text-[20px]">95%</span> Client
-                  Satisfaction
+                  <span class="font-semibold text-[20px]">24/7</span> monitoring option
                 </p>
               </div>
             </div>
@@ -2139,8 +2115,7 @@
               <!-- Left Text -->
               <div class="lg:w-[40%] text-center lg:text-left">
                 <p class="text-white text-[16px] md:text-[18px] leading-snug">
-                  Recognized for delivering the best solutions for businesses of
-                  all sizes and across industries
+                  Recognized for delivering the best solutions for businesses of all sizes and across industries
                 </p>
               </div>
 
@@ -2159,7 +2134,7 @@
 
                   <div class="grid grid-cols-3 text-center">
                     <div class="border-r border-[#FFFFFF52] px-[25px]">
-                      <p class="text-4xl font-bold text-white">30+</p>
+                      <p class="text-4xl font-bold text-white">10+</p>
                       <p class="text-sm text-gray-300 mt-1">Years</p>
                     </div>
                     <div
@@ -2169,8 +2144,8 @@
                       <p class="text-sm text-gray-300 mt-1">Apps</p>
                     </div>
                     <div>
-                      <p class="text-4xl font-bold text-white">25+</p>
-                      <p class="text-sm text-gray-300 mt-1">Industries</p>
+                      <p class="text-4xl font-bold text-white">9.2</p>
+                      <p class="text-sm text-gray-300 mt-1">Avg. NPS</p>
                     </div>
                   </div>
                 </div>
@@ -2198,11 +2173,10 @@
                   <p class="flex gap-2 items-center">
                     <span
                       class="font-semibold text-[28px] block lg:w-[100px] md:text-[32px]"
-                      >1000+</span
+                      >4.7★</span
                     >
                     <span class="text-[22px]">
-                      digital solutions built with <br />
-                      100% client satisfaction
+                      avg app store rating
                     </span>
                   </p>
                 </div>
@@ -2216,11 +2190,11 @@
                   <p class="flex gap-2 items-center">
                     <span
                       class="font-semibold text-[28px] block lg:w-[100px] md:text-[32px]"
-                      >30%</span
+                      >-35%</span
                     >
                     <span class="text-[22px]">
-                      faster time-to-market with Agile &  <br/>
-CI/CD pipelines
+                      time-to-feature after consolidation <br/>
+to one codebase
                     </span>
                   </p>
                 </div>
@@ -2234,11 +2208,10 @@ CI/CD pipelines
                   <p class="flex gap-2 items-center">
                     <span
                       class="font-semibold text-[28px] block lg:w-[100px] md:text-[32px]"
-                      >200+</span
+                      >99%</span
                     >
                     <span class="text-[22px]">
-                      in-house Flutter & full-stack experts <br/>
-across time zones
+                      crash-free sessions (first 90 days)
                     </span>
                   </p>
                 </div>
@@ -2317,178 +2290,473 @@ across time zones
           </div>
         </div>
       </section>
-      <section class="flex items-center justify-center py-[80px] relative">
-        <div
-          class="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2"
-        >
-          <svg
-            viewBox="0 0 1600 2084"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-full h-full"
-          >
-            <g opacity="0.8" filter="url(#blur)">
-              <circle cx="809" cy="1042" r="262" fill="#3A55FF" />
-            </g>
-            <defs>
-              <filter
-                id="blur"
-                x="-233"
-                y="0"
-                width="2084"
-                height="2084"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                />
-                <feGaussianBlur
-                  stdDeviation="390"
-                  result="effect1_foregroundBlur"
-                />
-              </filter>
-            </defs>
-          </svg>
+      <section class="bg-black py-[40px] pb-20 relative">
+      <div class="container max-w-[1440px] mx-auto px-4 text-center relative z-20 pt-[50px] md:pt-0">
+        <div class="text-white space-y-8 mb-10 lg:mb-[20px] w-full md:text-center">
+          <h2 class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold lg:leading-[60px]">
+            Built to Scale Without Surprises
+          </h2>
+          <p class="xl:text-[22px] text-[18px] text-[#fff] opacity-[.5]">            
+Senior hybrid teams that ship polished apps—and keep them healthy as you grow.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 pt-[40px]">
+          <!-- Card 1 -->
+          <div class="border h-[700px] rounded-[20px] border-image-ppc-react flex flex-col relative">
+            <div class="absolute inset-y-0 right-0 w-full bg-[url('./img/bcard1.svg')] bg-cover bg-center bg-no-repeat z-0"></div>
+            <div class="text-left p-8 flex-grow z-10">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Startups
+              </h4>
+              <p class="text-[18px] opacity-[.7] text-white">Resilient architecture, observability, and incident readiness.</p>
+            </div>
+            <!-- <div class="w-full pb-12 flex justify-center items-center">
+              <img
+                src="./img/Kickoff-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div> -->
+          </div>
+          <div class="border h-[700px] rounded-[20px] border-image-ppc-react flex flex-col relative">
+            <div class="absolute inset-y-0 right-0 w-full bg-[url('./img/bcard2.svg')] bg-cover bg-center bg-no-repeat z-0"></div>
+            <div class="text-left p-8 flex-grow z-10">
+              <h4 class="text-white text-[23px] font-semibold mb-6">Operational maturity</h4>
+              <p  class="text-[18px] opacity-[.7] text-white">Staged rollouts, OTA updates, 24/7 monitoring options, SLO/SLA governance.</p>
+            </div>
+            <!-- <div class="w-full pb-12 flex justify-center items-center">
+              <img
+                src="./img/uptime-img.webp"
+                alt="decorative"
+                class="w-[400px] h-auto rounded-b-[20px]"
+              />
+            </div> -->
+          </div>
+          <div class="border h-[700px] rounded-[20px] border-image-ppc-react flex flex-col overflow-hidden relative">
+            <div class="absolute inset-y-0 right-0 w-full bg-[url('./img/bcard3.svg')] bg-cover bg-center bg-no-repeat z-0"></div>
+            <div class="text-left p-8 flex-grow z-10">
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Flexible engagement
+              </h4>
+              <p  class="text-[18px] opacity-[.7] text-white">Lead end-to-end or embed with your team and tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="p-5 lg:py-20 bg-black">
+      <div class="container">
+        <div class="p-0 md:p-16 md:rounded-3xl container mx-auto min-h-[500px] md:min-h-[200px] flex flex-col justify-end md:justify-center items-center text-center md:text-left md:items-start relative md:border md:border-[#666666] overflow-hidden rounded-[15px]">
+        <div class="absolute left-0 w-full h-full bottom-0">
+          <img src="./img/talk-archetect.webp" alt="" class="w-full h-full object-cover md:object-center object-[60%_center]">
+        </div>
+        <div class="relative p-5 md:p-0 text-center mx-auto">
+          <h2 class="text-3xl md:text-[40px] w-full leading-[40px] md:leading-[50px] font-semibold bg-gradient-to-b from-white to-[#BABABA] bg-clip-text text-transparent">
+            Ready to Scale Your Flutter App <br>
+            Development Journey?
+          </h2>
+          <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14] mt-[30px]">
+            Enquire Now <span class="ml-2">›</span>
+          </a>
+        </div>
+      </div>
+      </div>
+    </section>
+<!-- choose path -->
+ <section class="bg-black py-10 xl:py-20">
+      <div class="container max-w-[1440px] mx-auto px-4 text-center">
+        <h2 class="text-[30px] md:text-[50px] font-semibold text-white mb-12 leading-[42px] md:leading-[60px]">
+          Choose Your Path
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Card 1 -->
+          <div class="gradient-border-ppc">
+            <div class="inner1 text-left relative h-[420px] md:h-[350px] lg:h-[400px] xl:h-[350px] overflow-hidden p-5 min-400px:p-10 
+            ">
+            <div class="icon mb-[10px]">
+                <svg width="33" height="53" viewBox="0 0 33 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30.8257 1.57354C29.7775 0.524128 28.5347 0 27.0994 0H5.89991C4.46415 0 3.22213 0.524563 2.17315 1.57354C1.12417 2.62194 0.599609 3.86439 0.599609 5.29972V47.7C0.599609 49.1352 1.12417 50.3775 2.17315 51.4262C3.22213 52.4753 4.46415 53 5.89991 53H27.0994C28.5346 53 29.7775 52.4749 30.8256 51.4262C31.8747 50.3775 32.3994 49.1352 32.3994 47.7V5.29972C32.3994 3.86439 31.8754 2.62252 30.8257 1.57354ZM13.1872 5.29972H19.8128C20.2545 5.29972 20.4748 5.5206 20.4748 5.96235C20.4748 6.40396 20.2544 6.62513 19.8128 6.62513H13.1872C12.7456 6.62513 12.5248 6.40396 12.5248 5.96235C12.5246 5.5206 12.7455 5.29972 13.1872 5.29972ZM18.8398 50.0396C18.1907 50.6877 17.411 51.0123 16.4998 51.0123C15.589 51.0123 14.8094 50.6877 14.1605 50.0396C13.5117 49.3903 13.1872 48.6102 13.1872 47.7C13.1872 46.7888 13.5121 46.009 14.1605 45.3603C14.8089 44.7121 15.5892 44.3866 16.4998 44.3866C17.4111 44.3866 18.1908 44.7121 18.8398 45.3603C19.4885 46.009 19.8127 46.7888 19.8127 47.7C19.8127 48.6112 19.4881 49.3904 18.8398 50.0396ZM28.4251 41.0753C28.4251 41.4337 28.2941 41.7453 28.0315 42.0069C27.7685 42.269 27.4588 42.3995 27.1004 42.3995H5.89991C5.54112 42.3995 5.23061 42.2686 4.9684 42.0069C4.7062 41.7453 4.57509 41.4337 4.57509 41.0753V11.9254C4.57509 11.5666 4.70605 11.2558 4.9684 10.9939C5.23076 10.7321 5.54112 10.6003 5.89991 10.6003H27.0994C27.4588 10.6003 27.7688 10.7316 28.0315 10.9939C28.2941 11.256 28.4245 11.5666 28.4245 11.9254V41.0751H28.4251V41.0753Z" fill="white"/>
+</svg>
+
+            </div>
+              <h3 class="text-white text-[24px] md:text-[30px] font-semibold mb-3">
+                New Hybrid App
+              </h3>
+              <p class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full xl:w-[80%]">
+                Build for iOS & Android from one codebase; faster releases, lower overhead.
+              </p>
+              <div>
+                <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14] mt-[30px]">
+            Plan my MVP <span class="ml-2">›</span>
+          </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="gradient-border-ppc">
+            <div class="inner2 text-left relative h-[420px] md:h-[350px] lg:h-[400px] xl:h-[350px] overflow-hidden flex flex-col justify-start p-5 min-400px:p-10 ">
+                <div class="icon mb-[10px]">
+                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M33.6248 16.9535C23.5007 16.9535 15.2497 25.0465 15.2497 34.9767C15.2497 44.907 23.5007 53 33.6248 53C43.749 53 52 44.907 52 34.9767C52 25.0465 43.749 16.9535 33.6248 16.9535ZM30.9219 39.5581C31.6095 40.2326 31.6095 41.3488 30.9219 42.0233C30.5662 42.3721 30.1158 42.5349 29.6653 42.5349C29.2148 42.5349 28.7643 42.3721 28.4086 42.0233L22.4812 36.2093C21.7936 35.5349 21.7936 34.4186 22.4812 33.7442L28.4086 27.9302C29.0962 27.2558 30.2343 27.2558 30.9219 27.9302C31.6095 28.6047 31.6095 29.7209 30.9219 30.3953L26.251 34.9767L30.9219 39.5581ZM44.7448 36.2093L38.8173 42.0233C38.4616 42.3721 38.0112 42.5349 37.5607 42.5349C37.1102 42.5349 36.6597 42.3721 36.304 42.0233C35.6165 41.3488 35.6165 40.2326 36.304 39.5581L40.9749 34.9767L36.304 30.3953C35.6165 29.7209 35.6165 28.6047 36.304 27.9302C36.9916 27.2558 38.1297 27.2558 38.8173 27.9302L44.7448 33.7442C45.4324 34.4186 45.4324 35.5349 44.7448 36.2093ZM18.6402 19.2326C15.9847 21.6977 13.9219 24.7907 12.7838 28.2558C5.76569 27.6512 1.73501 26.3023 1 25.4651V15.3488C5.57601 18.3953 13.4714 19.1395 18.6402 19.2326ZM13.3766 43.2791C7.18829 42.5814 1 40.8837 1 37.3023V29.3953C3.89261 30.6279 8.11297 31.2791 11.9303 31.6512C11.7643 32.7442 11.6695 33.8372 11.6695 34.9767C11.6695 37.907 12.2859 40.7209 13.3766 43.2791ZM20.5844 3C13.3292 3 1.02371 4.34884 1.02371 9.39535C1.02371 14.4419 13.3292 15.7907 20.5844 15.7907C27.8396 15.7907 40.1451 14.4419 40.1451 9.39535C40.1451 4.34884 27.8396 3 20.5844 3Z" fill="white"/>
+</svg>
+
+
+            </div>
+              <h3 class="text-white text-[24px] md:text-[30px] font-semibold mb-3 w-full lg:w-[80%]">
+                Consolidate to One Codebase
+              </h3>
+              <p class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full xl:w-[80%]">
+                Move from separate native codebases (or web) to hybrid/cross-platform without downtime.
+              </p>
+              <div>
+                <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14] mt-[30px]">
+            Plan my MVP <span class="ml-2">›</span>
+          </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="gradient-border-ppc">
+            <div class="inner3 text-left relative h-[420px] md:h-[350px] lg:h-[400px] xl:h-[350px] overflow-hidden p-5 min-400px:p-10 ">
+                <div class="icon mb-[10px]">
+                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8778_1796)">
+<path d="M0 31.2617V32.8145C0 35.3831 2.08957 37.4727 4.6582 37.4727H13.0148L11.0329 41.4364C10.5152 42.4682 11.2721 43.6836 12.4219 43.6836H27.9492V31.2617H0Z" fill="white"/>
+<path d="M4.6582 1H42.1309C44.1472 1 45.7891 2.64185 45.7891 4.6582V14.7344H35.7129C30.8799 14.7344 26.9492 18.6651 26.9492 23.498V27.1562H1V4.6582C1 2.64185 2.64185 1 4.6582 1Z" stroke="white" stroke-width="2"/>
+<path d="M48.3418 18.8398H35.7129C33.1443 18.8398 31.0547 20.9294 31.0547 23.498V25.0508C36.2094 25.0508 48.6091 25.0508 53 25.0508V23.498C53 20.9294 50.9104 18.8398 48.3418 18.8398Z" fill="white"/>
+<path d="M31.0547 28.1562V43.6836C36.2094 43.6836 48.6091 43.6836 53 43.6836V28.1562C48.5914 28.1562 36.2037 28.1562 31.0547 28.1562Z" fill="white"/>
+<path d="M31.0547 46.7891V48.3418C31.0547 50.9104 33.1443 53 35.7129 53H48.3418C50.9104 53 53 50.9104 53 48.3418V46.7891C48.5914 46.7891 36.2037 46.7891 31.0547 46.7891Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_8778_1796">
+<rect width="53" height="53" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+                </div>
+              <h3 class="text-white text-[24px] md:text-[30px] font-semibold mb-3 relative z-20">
+                PWA + Mobile Wrapper
+              </h3>
+              <p class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full lg:w-[80%] relative z-20">
+               Turn your web app into installable mobile with push, offline-first, and native plugins.
+              </p>
+              <div>
+                <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14] mt-[30px]">
+            Plan my MVP <span class="ml-2">›</span>
+          </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="gradient-border-ppc">
+            <div class="inner4 text-left relative h-[420px] md:h-[350px] lg:h-[400px] xl:h-[350px] overflow-hidden flex flex-col justify-start p-5 min-400px:p-10 ">
+                <div class="icon mb-[10px]">
+                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8778_1847)">
+<path d="M19.8757 0C13.7873 0 8.83398 4.95329 8.83398 11.0417C8.83398 17.13 13.7873 22.0833 19.8757 22.0833C25.964 22.0833 30.9173 17.13 30.9173 11.0417C30.9173 4.95329 25.964 0 19.8757 0Z" fill="white"/>
+<path d="M36.6192 52.9558C35.7271 52.7504 35.1728 51.8627 35.3759 50.9705L38.6884 36.6164C38.896 35.7264 39.786 35.1633 40.6737 35.3753C41.5659 35.5806 42.1202 36.4684 41.917 37.3606L38.6045 51.7147C38.3947 52.629 37.4783 53.1656 36.6192 52.9558Z" fill="white"/>
+<path d="M45.8232 50.7916C45.3705 50.7916 44.92 50.6061 44.591 50.2439C43.9792 49.5615 44.0345 48.517 44.7146 47.9031L48.8685 44.1666L44.7146 40.4301C44.0345 39.8184 43.9792 38.7716 44.591 38.0892C45.2049 37.4091 46.2516 37.3561 46.9318 37.9656L52.4526 42.9343C52.8015 43.2501 53.0003 43.6962 53.0003 44.1666C53.0003 44.6369 52.8015 45.083 52.4526 45.3988L46.9318 50.3676C46.6138 50.6524 46.2185 50.7916 45.8232 50.7916Z" fill="white"/>
+<path d="M31.4681 50.7918C31.0728 50.7918 30.6775 50.6527 30.3595 50.3678L24.8387 45.399C24.4898 45.0832 24.291 44.6371 24.291 44.1668C24.291 43.6964 24.4898 43.2503 24.8387 42.9345L30.3595 37.9658C31.0397 37.3563 32.0864 37.4115 32.7003 38.0894C33.3121 38.7718 33.2568 39.8164 32.5767 40.4303L28.4228 44.1668L32.5767 47.9033C33.2568 48.515 33.3121 49.5617 32.7003 50.2441C32.3713 50.6063 31.9208 50.7918 31.4681 50.7918Z" fill="white"/>
+<path d="M20.4271 44.1667C20.4271 42.453 21.158 40.8078 22.43 39.6595L27.9575 34.6841C29.0793 33.6771 30.5192 33.1272 32.0186 33.1272C33.2619 33.1272 34.4632 33.5203 35.4725 34.2159C36.2233 32.7474 37.5306 31.6609 39.0919 31.1861C37.2082 28.3638 34.0017 26.5 30.3646 26.5H10.4896C4.70596 26.5 0 31.206 0 36.9896V45.8229C0 46.7372 0.742 47.4792 1.65625 47.4792H21.4385C20.7981 46.4987 20.4271 45.3548 20.4271 44.1667Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_8778_1847">
+<rect width="53" height="53" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+                </div>
+              <h3 class="text-white text-[24px] md:text-[30px] font-semibold mb-3 w-full lg:w-[80%]">
+                Augment / Rescue
+              </h3>
+              <p class="text-[#8C8C8C] text-[18px] md:text-[20px] mb-6 leading-[32px] w-full xl:w-[80%]">
+                Embed senior engineers in days; stabilize crashes, lift performance, ship reliably.
+              </p>
+              <div>
+                <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14] mt-[30px]">
+            Plan my MVP <span class="ml-2">›</span>
+          </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services -->
+    <section class="bg-black py-20">
+      <div class="container mx-auto px-4">
+        <div class="pb-12">
+          <h2 class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0 text-white font-semibold">
+            Our Services
+          </h2>
+          <p class="text-center text-[18px] md:text-[22px] text-[#FFFFFFB3] leading-relaxed lg:w-[70%] w-full mx-auto mt-[20px]">
+            From concept to deployment, our Hybrid App Development Services help you go live faster across platforms—without sacrificing UX, performance, or security.
+          </p>
         </div>
 
-        <div class="container w-full flex gap-12 lg:flex-nowrap flex-wrap">
-          <!-- Left Section -->
-          <div class="lg:w-4/12 w-full text-center md:text-left">
-            <h1
-              class="lg:text-[40px] text-[34px] text-white font-[600] leading-tight"
-            >
-              Why Flutter is The Top <br />
-              Choice for Your <br />
-              Mobile App <br />
-              Development?
-            </h1>
-            <button
-              class="bg-[#FF5B14] text-white px-[25px] py-[10px] rounded-full font-[500] transition flex gap-[10px] text-[18px] mt-[30px] items-center ml-auto mr-auto md:ml-0 md:mr-0"
-            >
-              Book Free Consultation
-              <span>
-                <svg
-                  width="7"
-                  height="11"
-                  viewBox="0 0 7 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.09375 10.0048L5.39603 5.70261L1.09375 1.40039"
-                    stroke="white"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+        <div class="pt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-5">
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  End-to-End Hybrid App Development
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With product strategy, UX/UI design, engineering, QA, and release management under one roof, we deliver hybrid apps that move from idea to launch quickly—without compromising quality.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  React Native & Flutter Builds
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With frameworks such as React Native and Flutter, we ship cross-platform apps from a single codebase, combining native-like performance with faster time-to-market and lower maintenance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Ionic/Capacitor & PWA
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With web technologies (Angular/React/Vue) plus Ionic/Capacitor, we turn robust web apps into installable mobile experiences—adding push notifications, offline support, and native plugins as needed.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Legacy → Hybrid Migration
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With structured audits and phased migration plans, we unify multiple codebases into a modern hybrid stack—reducing maintenance overhead and accelerating future feature delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Performance & Stability Rescue
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With deep profiling, bundle optimization, and rendering best practices, we improve FPS, cut load times, and reduce crash rates—stabilizing your app and lifting user satisfaction.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Secure Auth & Payments
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                 With OAuth2/SSO, biometrics, and PCI-friendly gateways like Stripe, Apple Pay, and Google Pay, we implement secure login and checkout flows that protect users and boost conversion.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  QA Automation & Device Matrices
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With Jest, Detox/Appium, and real-device testing across representative matrices, we automate quality gates in CI/CD—catching regressions early and keeping releases predictable.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[400px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/serv-ic.svg" alt="">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                 Launch & Ongoing Care
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  With app store readiness, ASO, monitoring (Sentry/Crashlytics), and SLA-backed support, we manage smooth launches and keep your hybrid app healthy as it scales.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- last -->
+          <div class="relative overflow-hidden p-6 rounded-[15px] min-h-[400px] flex flex-col justify-center border border-[#9E9E9E]">
+            <div class="absolute left-0 w-full h-full bottom-0">
+              <img src="./img/hire-fl-bg.png" alt="">
+            </div>
+            <div class="relative">
+              <h3 class="inline-block text-white font-semibold text-[23px]">
+                Get a tailored scope
+              </h3>
+              <div class="flex justify-start items-center mt-[15px] w-full">
+                <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14]">
+                  Enquire Now <span class="ml-2">›</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- spped to value -->
+     <section class="bg-black py-[50px] lg:pt-[100px] lg:pb-[20px]">
+      <div>
+        <div class="container">
+          <div class="text-center">
+            <h2 class="sechd text-white font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[38px] leading-[56px] xl:text-[52px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]">
+              Speed to Value, Without Cutting Corners
+            </h2>
+            <p class="text-center text-[18px] md:text-[22px] text-[#FFFFFFB3] leading-relaxed w-full mx-auto mt-[20px] opacity-[.7]">
+              Kickoff in days, not months. Ship faster with a single codebase, automated pipelines, and measurable outcomes.
+            </p>
+          </div>
+        </div>
+        <!-- Top Divider -->
+        <div class="mt-10 border-t border-[#A3ACB5]"></div>
+        <div class="container">
+          <!-- Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 mt-0 divide-y md:divide-y-0 md:divide-x divide-[#A3ACB5]">
+            <!-- Card 1 -->
+            <div class="p-8 md:p-10">
+              <!-- Small gradient icon (matches look) -->
+              <div class="icon">
+                <svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6836_7177)">
+                    <circle opacity="0.2" cx="5.5" cy="46.2871" r="25.5" fill="#4361EE"></circle>
+                    <circle opacity="0.3" cx="5.5" cy="46.2871" r="17.5" fill="#4361EE"></circle>
+                    <circle cx="5.5" cy="46.2871" r="8.5" fill="#4361EE"></circle>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6836_7177">
+                      <rect width="51" height="51" fill="white" transform="translate(0 0.787109)"></rect>
+                    </clipPath>
+                  </defs>
                 </svg>
-              </span>
-            </button>
-          </div>
-
-          <!-- Right Section -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 text-sm lg:w-8/12 w-full">
-            <!-- Box 1 -->
-            <div
-              class="p-5 space-y-3 md:border-r md:border-b md:border-[#A3ACB5]"
-            >
-              <div class="flex gap-[20px] flex-col items-start">
-                <img src="./img/cpc.svg" alt="" />
-                <h3 class="font-semibold text-[22px] text-white mb-[10px]">
-                  Cross-Platform Compatibility
-                </h3>
               </div>
-              <p class="text-gray-300 text-[18px] opacity-[.5] leading-[28px]">
-                Flutter helps you develop apps for iOS, Android, desktop, and
-                web-based platforms with the help of a unified codebase,
-                ensuring time and cost savings.
+
+              <h3 class="mt-5 text-lg md:text-xl font-semibold text-white leading-snug">
+                Self<br class="hidden sm:block">
+                Motivation
+              </h3>
+              <p class="mt-3 text-white opacity-[.5] leading-7">
+                We promote initiative, ownership, and continuous
+                self-improvement in everything we do, inspiring us to move
+                forward.
               </p>
             </div>
 
-            <!-- Box 2 -->
-            <div class="p-5 space-y-3 md:border-b md:border-[#A3ACB5]">
-              <div class="flex gap-[20px] flex-col items-start">
-                <img src="./img/uod.svg" alt="" />
-                <h3 class="font-semibold text-[22px] text-white mb-[10px]">
-                  User-Oriented Design
-                </h3>
+            <!-- Card 2 -->
+            <div class="p-8 md:p-10">
+              <div class="icon">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6836_7191)">
+                    <rect y="34.7871" width="17" height="17" fill="#4361EE"></rect>
+                    <rect opacity="0.3" x="-9" y="25.7871" width="35" height="35" fill="#4361EE"></rect>
+                    <rect opacity="0.2" x="-17" y="17.7871" width="51" height="51" fill="#4361EE"></rect>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6836_7191">
+                      <rect width="51" height="51" fill="white" transform="translate(0.333984 0.787109)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
               </div>
-              <p class="text-gray-300 text-[18px] opacity-[.5] leading-[28px]">
-                With its flexible and user-centric design and custom widgets,
-                Flutter enables you to build user-friendly and visually
-                appealing interfaces for your mobile applications.
+
+              <h3 class="mt-5 text-lg md:text-xl font-semibold text-white leading-snug">
+                Accountability &amp;<br class="hidden sm:block">
+                Integrity
+              </h3>
+              <p class="mt-3 text-white opacity-[.5] leading-7">
+                Our team upholds honesty, transparency, and responsibility in
+                all our projects, client collaborations, and partnerships.
               </p>
             </div>
 
-            <!-- Box 3 -->
-            <div
-              class="p-5 space-y-3 md:border-r md:border-b md:border-[#A3ACB5]"
-            >
-              <div class="flex gap-[20px] flex-col items-start">
-                <img src="./img/ltm.svg" alt="" />
-                <h3 class="font-semibold text-[22px] text-white mb-[10px]">
-                  Least Time-to-Market
-                </h3>
+            <!-- Card 3 -->
+            <div class="p-8 md:p-10">
+              <div class="icon">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6836_7204)">
+                    <rect x="-11.957" y="31.8496" width="17" height="17" transform="rotate(-45 -11.957 31.8496)" fill="#4361EE"></rect>
+                    <rect opacity="0.3" x="-24.6875" y="31.8496" width="35" height="35" transform="rotate(-45 -24.6875 31.8496)" fill="#4361EE"></rect>
+                    <rect opacity="0.2" x="-36" y="31.8496" width="51" height="51" transform="rotate(-45 -36 31.8496)" fill="#4361EE"></rect>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6836_7204">
+                      <rect width="51" height="51" fill="white" transform="translate(0.666016 0.787109)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
               </div>
-              <p class="text-gray-300 text-[18px] opacity-[.5] leading-[28px]">
-                Ideal for MVPs, Flutter utilizes pre-built UI elements called
-                widgets, helping you create product prototypes more quickly with
-                a minimal time-to-market.
-              </p>
-            </div>
 
-            <!-- Box 4 -->
-            <div class="p-5 space-y-3 md:border-b md:border-[#A3ACB5]">
-              <div class="flex gap-[20px] flex-col items-start">
-                <img src="./img/cpc.svg" alt="" />
-                <h3 class="font-semibold text-[22px] text-white mb-[10px]">
-                  Quick App Development
-                </h3>
-              </div>
-              <p class="text-gray-300 text-[18px] opacity-[.5] leading-[28px]">
-                Flutter features a hot reload capability and a shared codebase
-                that facilitates real-time code variations, accelerating
-                development, enabling iterations, and updates.
-              </p>
-            </div>
-
-            <!-- Box 5 -->
-            <div class="p-5 space-y-3 md:border-r md:border-[#A3ACB5]">
-              <div class="flex gap-[20px] flex-col items-start">
-                <img src="./img/uod.svg" alt="" />
-                <h3 class="font-semibold text-[22px] text-white mb-[10px]">
-                  Near-Native Performance
-                </h3>
-              </div>
-              <p class="text-gray-300 text-[18px] opacity-[.5] leading-[28px]">
-                Flutter applications provide near-native performance since they
-                are directly compiled to native machine code, assuring highly
-                responsive user engagement.
-              </p>
-            </div>
-
-            <!-- Box 6 -->
-            <div class="p-5 space-y-3 border-[#A3ACB5]">
-              <div class="flex gap-[20px] flex-col items-start">
-                <img src="./img/ltm.svg" alt="" />
-                <h3 class="font-semibold text-[22px] text-white mb-[10px]">
-                  Cost Effectiveness
-                </h3>
-              </div>
-              <p class="text-gray-300 text-[18px] opacity-[.5] leading-[28px]">
-                With the help of a single codebase to target multiple platforms,
-                Flutter helps businesses achieve cost efficiency in both app
-                development and maintenance.
+              <h3 class="mt-5 text-lg md:text-xl font-semibold text-white leading-snug">
+                Professional, Effective<br class="hidden sm:block">
+                Communication
+              </h3>
+              <p class="mt-3 text-white opacity-[.5] leading-7">
+                We ensure maintaining a transparent and result-oriented
+                communication at every phase of our journey together.
               </p>
             </div>
           </div>
         </div>
-      </section>
+        <div class="p-0 md:p-16 md:rounded-3xl container mx-auto min-h-[500px] md:min-h-[200px] flex flex-col justify-end md:justify-center items-center text-center md:text-left md:items-start relative md:border md:border-[#666666] overflow-hidden rounded-[15px]">
+        <div class="absolute left-0 w-full h-full bottom-0">
+          <img src="./img/how-fast.webp" alt="" class="w-full h-full object-cover md:object-center object-[60%_center]">
+        </div>
+        <div class="relative p-5 md:p-0">
+          <h2 class="text-3xl md:text-[40px] max-w-3xl leading-[40px] md:leading-[50px] font-semibold bg-gradient-to-b from-white to-[#BABABA] bg-clip-text text-transparent">
+            See how fast we can start
+          </h2>
+          <a href="#" class="inline-block px-8 py-3 text-white font-normal rounded-full text-lg transition duration-300 bg-[#FF5B14] mt-[30px]">
+            Enquire Now <span class="ml-2">›</span>
+          </a>
+        </div>
+      </div>
+      </div>
+    </section>
       <!-- Section 1: Hero Consultation -->
       <section
         class="bg-black flex justify-center items-center pb-8 lg:py-18 px-5 relative bg-no-repeat"
