@@ -1961,7 +1961,7 @@
         <!-- Background Layers -->
         <div class="absolute inset-0 z-0 pointer-events-none">
           <div
-            class="absolute inset-0 z-40 bg-contain bg-top bg-no-repeat bg-[url('./img/bg-transparent.svg')]"
+            class="absolute inset-0 z-40 bg-contain bg-top bg-no-repeat bg-[url('./img/bg-transparent.svg')]  lg:bg-[url('./img/pcc-react-native-banner-round.svg')]"
           ></div>
 
           <div
@@ -1980,7 +1980,7 @@
           class="container flex flex-col items-center justify-center pt-[40%] md:pt-[20%] lg:pt-[40%] xl:pt-[20%] z-40"
         >
           <div class="relative flex flex-col items-center justify-center md:pb-[50px]">
-            <div class="absolute z-0 bottom-[10px] md:bottom-[0] left-0 w-full translate-y-1/2">
+            <div class="absolute z-0 bottom-[0px] md:bottom-[0px] left-0 w-full ">
               <img
                 src="./img/glow-new.png"
                 alt="Glow"
@@ -1988,13 +1988,30 @@
               />
             </div>
             <div
-              class="relative text-center flex justify-center flex-col items-center md:mb-[25px]"
+              class="relative text-center flex justify-center flex-col items-center md:mb-[25px] pb-[50px] md:pb-0 "
             >
-              <img
-                src="./img/banner-logo.png"
-                alt=""
-                class="md:w-[250px] md:h-[250px] w-[100px] h-[100px] object-contain"
-              />
+              <div class="relative">
+                <div class="absolute w-[600px] h-[600px] left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
+                  <svg width="100%" height="100%" viewBox="0 0 1600 2084" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8" filter="url(#filter0_f_8366_1251)">
+<circle cx="809" cy="1042" r="262" fill="#3A55FF"/>
+</g>
+<defs>
+<filter id="filter0_f_8366_1251" x="-233" y="0" width="2084" height="2084" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="390" result="effect1_foregroundBlur_8366_1251"/>
+</filter>
+</defs>
+</svg>
+
+                </div>
+                <img
+                  src="./img/banner-logo.png"
+                  alt=""
+                  class="md:w-[250px] md:h-[250px] w-[100px] h-[100px] object-contain"
+                />
+              </div>
               <!-- Heading -->
               <h1
                 class="text-[30px] md:text-[50px] lg:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
@@ -2051,7 +2068,7 @@
 
           <!-- Floating Highlights - Mobile -->
           <div
-            class="flex flex-col justify-center items-center mt-5 lg:hidden space-y-3"
+            class="flex flex-col justify-center items-center lg:hidden space-y-3"
           >
             <div
               class="w-full p-[1px] rounded-full bg-gradient-to-r from-[#5A6EFE] to-black/50"
@@ -3082,8 +3099,9 @@
             Why Flutter App Development With Us?
           </h2>
         </div>
-        <div
-          class="why-flutter-app owl-carousel owl-theme why_flutter_app md:block !hidden"
+        <div class=" md:block hidden">
+<div
+          class="why-flutter-app owl-carousel owl-theme why_flutter_app"
         >
           <div
             class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
@@ -3199,7 +3217,79 @@
               </p>
             </div>
           </div>
+          
+          <!-- 1 -->
+           <div
+            class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
+          >
+            <div class="icon mb-[35px] w-[50px] h-[50px]">
+              <img
+                src="./img/fad6.svg"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="head relative">
+              <h3 class="font-[600] text-[24px]">Less Time-to-Market </h3>
+              <span
+                class="w-[100px] h-px my-[20px] bg-[#fff] block opacity-[.7]"
+              ></span>
+            </div>
+            <div>
+              <p class="text-[18px] opacity-[.7]">
+App deployment in less time due to its low complexity.
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+           <div
+            class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
+          >
+            <div class="icon mb-[35px] w-[50px] h-[50px]">
+              <img
+                src="./img/fad7.svg"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="head relative">
+              <h3 class="font-[600] text-[24px]">UI/UX Customization</h3>
+              <span
+                class="w-[100px] h-px my-[20px] bg-[#fff] block opacity-[.7]"
+              ></span>
+            </div>
+            <div>
+              <p class="text-[18px] opacity-[.7]">
+                Customize everything you watch on the screen
+              </p>
+            </div>
+          </div>
+          <!-- 3 -->
+           <div
+            class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
+          >
+            <div class="icon mb-[35px] w-[50px] h-[50px]">
+              <img
+                src="./img/fad8.svg"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="head relative">
+              <h3 class="font-[600] text-[24px]">Smooth Rendering </h3>
+              <span
+                class="w-[100px] h-px my-[20px] bg-[#fff] block opacity-[.7]"
+              ></span>
+            </div>
+            <div>
+              <p class="text-[18px] opacity-[.7]">
+                Your app works with minimal downtime and ease.
+              </p>
+            </div>
+          </div>
         </div>
+        </div>
+        
         <div class="why-flutter-app md:hidden flex gap-[15px] flex-col">
           <div
             class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
@@ -3315,6 +3405,75 @@
               </p>
             </div>
           </div>
+          <!-- 1 -->
+           <div
+            class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
+          >
+            <div class="icon mb-[35px] w-[50px] h-[50px]">
+              <img
+                src="./img/fad6.svg"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="head relative">
+              <h3 class="font-[600] text-[24px]">Less Time-to-Market </h3>
+              <span
+                class="w-[100px] h-px my-[20px] bg-[#fff] block opacity-[.7]"
+              ></span>
+            </div>
+            <div>
+              <p class="text-[18px] opacity-[.7]">
+App deployment in less time due to its low complexity.
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+           <div
+            class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
+          >
+            <div class="icon mb-[35px] w-[50px] h-[50px]">
+              <img
+                src="./img/fad7.svg"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="head relative">
+              <h3 class="font-[600] text-[24px]">UI/UX Customization</h3>
+              <span
+                class="w-[100px] h-px my-[20px] bg-[#fff] block opacity-[.7]"
+              ></span>
+            </div>
+            <div>
+              <p class="text-[18px] opacity-[.7]">
+                Customize everything you watch on the screen
+              </p>
+            </div>
+          </div>
+          <!-- 3 -->
+           <div
+            class="bg-[linear-gradient(0deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05)),linear-gradient(121.18deg,#0B0C18_19.18%,#2D2F68_106.05%)] p-[25px] text-[#fff] rounded-[12px] overflow-hidden min-h-[380px]"
+          >
+            <div class="icon mb-[35px] w-[50px] h-[50px]">
+              <img
+                src="./img/fad8.svg"
+                alt=""
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="head relative">
+              <h3 class="font-[600] text-[24px]">Smooth Rendering </h3>
+              <span
+                class="w-[100px] h-px my-[20px] bg-[#fff] block opacity-[.7]"
+              ></span>
+            </div>
+            <div>
+              <p class="text-[18px] opacity-[.7]">
+                Your app works with minimal downtime and ease.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -3378,14 +3537,14 @@
                               class="flex items-center justify-center border rounded-xl px-1 md:px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-reactjs.svg"
+                                src="./img/dart-sdk.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                React Native
+                               Dart SDK
                               </p>
                             </div>
                           </div>
@@ -3418,314 +3577,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-swift.svg"
+                                src="./img/tic-Flutter.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Swift (iOS)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Kotlin.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Kotlin (Android)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-reactjs.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                React
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/nextjs.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Next.js
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-vue-js-.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Vue
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Angular.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Angular
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Node.js.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Node.js (Express/NestJS)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Golang.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Go (Gin/Fiber)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Python.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Python (FastAPI/Django)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-java.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Java (Spring Boot)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-NET_Core.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                .NET (ASP.NET Core)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/websocket.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                WebSockets
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-grpc.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                gRPC
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-mqtt.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                MQTT
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/kafka.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Kafka
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Rabbitmq.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                RabbitMQ
+                                Flutter SDK
                               </p>
                             </div>
                           </div>
@@ -3770,14 +3629,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-AWS.svg"
+                                src="./img/provider.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                AWS
+                                Provider
                               </p>
                             </div>
                           </div>
@@ -3790,14 +3649,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-google-cloud.svg"
+                                src="./img/riverpod.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Google Cloud
+                                Riverpod
                               </p>
                             </div>
                           </div>
@@ -3810,19 +3669,18 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-azure.svg"
+                                src="./img/bloc-cubit.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Microsoft Azure
+                                Bloc/Cubit
                               </p>
                             </div>
                           </div>
                         </div>
-
                         <div
                           class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
                         >
@@ -3831,254 +3689,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-docker.svg"
+                                src="./img/getx.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Docker
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Kubernetes.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Kubernetes (EKS/GKE/AKS)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Helm.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Helm
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Terraform.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Terraform
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Ansible.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Ansible
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-GitHub.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                GitHub Actions
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Gitlab.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                GitLab CI
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Jenkins.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Jenkins
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Prometheus.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Prometheus
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Grafana.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Grafana
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-OpenTelemetry.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                OpenTelemetry
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/EFK.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                ELK/EFK
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Sentry.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Sentry
+                                GetX
                               </p>
                             </div>
                           </div>
@@ -4121,14 +3739,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Stripe.svg"
+                                src="./img/postman.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Stripe
+                                Postman
                               </p>
                             </div>
                           </div>
@@ -4141,14 +3759,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Braintree.svg"
+                                src="./img/selenium.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Braintree
+                                Selenium
                               </p>
                             </div>
                           </div>
@@ -4161,14 +3779,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Paypal.svg"
+                                src="./img/tic-Flutter.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                PayPal
+                                Flutter Test
                               </p>
                             </div>
                           </div>
@@ -4181,194 +3799,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/firebase-1-1.svg"
+                                src="./img/mockito.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Firebase (FCM)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-OneSignal.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                OneSignal
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-apns.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                APNS/FCM Native
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic- google maps.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Google Maps
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Mapbox.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Mapbox
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Strapi.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Strapi
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Contentful.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Contentful
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Sanity.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Sanity
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-wordpress.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-black rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                WordPress (Headless)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Shopify.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Shopify (Hydrogen/Storefront API)
+                                Mockito
                               </p>
                             </div>
                           </div>
@@ -4411,14 +3849,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/openai.svg"
+                                src="./img/tic-firebase.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                OpenAI
+                                 Firebase Analytics
                               </p>
                             </div>
                           </div>
@@ -4431,7 +3869,7 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Gemini.svg"
+                                src="./img/crash.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -4451,495 +3889,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic_AWS Bedrock.svg"
+                                src="./img/sentry.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                AWS Bedrock
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tci-Azure AI.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Azure OpenAI
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Llama 3.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Llama 3
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-mistral.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Mistral
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Mixtral.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Mixtral
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_vLLM.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                vLLM
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic - LangChain.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                LangChain
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/LlamaIndex.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                LlamaIndex
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Haystack.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Haystack
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic - Pinecone.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Pinecone
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic - Weaviate.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Weaviate
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic - PostgreSQL.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                pgvector (Postgres)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/FAISS.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                FAISS
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-open ai.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                OpenAI Embeddings
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Cohere.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Cohere
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_Vertex AutoML.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Vertex AutoML
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/LangGraph.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                LangGraph
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tci-Guardrails AI.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Guardrails AI
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-azure.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Azure AI Content Safety
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tci-MLflow.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                MLflow
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Weights & Biases.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Weights & Biases
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-bento.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                BentoML
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/kserve.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                KServe
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_seldon.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Seldon
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Hugging Face Hub.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Hugging Face Hub
+                                Sendry
                               </p>
                             </div>
                           </div>
@@ -4988,14 +3945,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-postgresql.svg"
+                                src="./img/android-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                PostgreSQL
+                                Android Studio
                               </p>
                             </div>
                           </div>
@@ -5008,14 +3965,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-mysql.svg"
+                                src="./img/v-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                MySQL
+                                 Visual Studio Code
                               </p>
                             </div>
                           </div>
@@ -5028,14 +3985,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-MariaDB.svg"
+                                src="./img/b-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                MariaDB
+                                Bitbucket
                               </p>
                             </div>
                           </div>
@@ -5048,14 +4005,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Microsoft SQL Server.svg"
+                                src="./img/tic-GitHub.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                SQL Server
+                                Git
                               </p>
                             </div>
                           </div>
@@ -5068,194 +4025,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Mongodb.svg"
+                                src="./img/gitlab.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                MongoDB
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Redis.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Redis
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/AWS DynamoDB.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                DynamoDB
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Cassandra.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Cassandra
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Elasticsearch.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Elasticsearch
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-OpenSearch.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                OpenSearch
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-ClickHouse.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                ClickHouse
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_Amazon S3.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Amazon S3
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-google-cloud.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Google Cloud Storage
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Azure Blob.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Azure Blob
+                                Gitlab
                               </p>
                             </div>
                           </div>
@@ -5298,14 +4075,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic -OAuth 2.0.svg"
+                                src="./img/tic-Mongodb.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                OAuth 2.0
+                                MongoDB
                               </p>
                             </div>
                           </div>
@@ -5318,14 +4095,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-OpenID Connect.svg"
+                                src="./img/tic-postgresql.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                OpenID Connect
+                                 PostgreSQL
                               </p>
                             </div>
                           </div>
@@ -5338,14 +4115,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-SAML.svg"
+                                src="./img/tic-firebase.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                SAML
+                                Firebase Firestore/ Realtime DB
                               </p>
                             </div>
                           </div>
@@ -5358,214 +4135,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Auth0.svg"
+                                src="./img/s-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Auth0
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Keycloak.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Keycloak
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Azure Cognitive Services.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                AWS Cognito
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-azure.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Azure AD
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-JWT.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                JWT
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/mTLS.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                mTLS
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/WAF.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                WAF
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic -VPC.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                VPC
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/CIS  Hardening.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                CIS Hardening
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/Vault.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Vault
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/AWS  SSM.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                AWS SSM
+                                SQLite/Hive
                               </p>
                             </div>
                           </div>
@@ -5608,14 +4185,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-jest.svg"
+                                src="./img/c-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Jest
+                                Cirrus
                               </p>
                             </div>
                           </div>
@@ -5628,14 +4205,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Vitest.svg"
+                                src="./img/c-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Vitest
+                                 Codemagic
                               </p>
                             </div>
                           </div>
@@ -5648,14 +4225,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Playwright.svg"
+                                src="./img/t-icon.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Playwright
+                                Travis
                               </p>
                             </div>
                           </div>
@@ -5668,135 +4245,14 @@
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/tic-Cypress.svg"
+                                src="./img/tic-GitHub.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Cypress
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Postman.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Postman
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-ESLint.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                ESLint
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic-Prettier.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Prettier
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_SonarQube.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                SonarQube
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_Semantic Versioning.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Semantic Versioning
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="./img/tic_LaunchDarkly.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                LaunchDarkly
+                                GitHub Actions
                               </p>
                             </div>
                           </div>
@@ -7184,7 +5640,7 @@
             Are you looking to hire a Flutter <br />
             developer from our team?
           </h2>
-          <p class="lg:text-[22px] text-[18px] text-white">
+          <p class="lg:text-[22px] text-[18px] text-white lg:w-[60%]">
             Let our expert Flutter developers help you scale your business
             success. We can help you hire a Flutter developer for your next
             project, offering the best set of skills, an adaptable approach, and
