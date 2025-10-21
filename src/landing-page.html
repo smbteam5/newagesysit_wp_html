@@ -43,7 +43,7 @@
         --ring-color: rgba(255, 255, 255, 1);
         --blue-color: #5871f0;
       }
-      @keyframes fadeInUpWord {
+      /* @keyframes fadeInUpWord {
         0% {
           opacity: 0;
           transform: translateY(20px);
@@ -63,24 +63,24 @@
           opacity: 1;
           transform: translateY(0);
         }
-      }
+      } */
 
-      .word {
+      /* .word {
         display: inline-block;
         position: relative;
         opacity: 0;
         animation: fadeInUpWord 0.5s ease forwards;
-        /* color: #fff !important; */
-      }
+        color: #fff !important;
+      } */
 
       /* Optional: Smooth fade-in for <p> and <button> */
-      .fade-target {
+      /* .fade-target {
         opacity: 0;
         transition: opacity 0.6s ease, transform 0.6s ease;
         transform: translateY(20px);
         animation: 1s cubic-bezier(0.65, 0, 0.35, 1) both fadeInUp;
-      }
-      .fade-target.para {
+      } */
+      /* .fade-target.para {
         animation-delay: 2s;
       }
       .fade-target.bnr-btn {
@@ -89,7 +89,7 @@
       .fade-in {
         opacity: 1 !important;
         transform: translateY(0) !important;
-      }
+      } */
 
       h2.animatedText span {
         display: block;
@@ -9207,28 +9207,7 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const heading = document.getElementById("animated-heading");
-        const paragraph = document.getElementById("animated-paragraph");
-        const button = document.getElementById("animated-button");
 
-        // Assuming your heading animation (all words) takes a total of ~2000ms.
-        // You need to know the duration of your LAST word's animation plus its delay.
-        const TOTAL_HEADING_ANIMATION_TIME = 2000; // Adjust this value based on your CSS
-
-        // Start the subsequent animations after the heading is complete
-        setTimeout(() => {
-          // 1. Fade in paragraph
-          paragraph.classList.add("fade-in");
-
-          // 2. Wait for paragraph animation (~600ms), then fade in button
-          setTimeout(() => {
-            button.classList.add("fade-in");
-          }, 600); // This 600ms should match the paragraph's CSS animation duration
-        }, TOTAL_HEADING_ANIMATION_TIME);
-      });
-    </script>
     <script>
       // window.addEventListener("scroll", () => {
       //   const banner = document.getElementById("hero-banner");
