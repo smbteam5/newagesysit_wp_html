@@ -1097,6 +1097,10 @@ video {
   top: -40px;
 }
 
+.top-\[-50\%\] {
+  top: -50%;
+}
+
 .top-\[-60\%\] {
   top: -60%;
 }
@@ -1716,6 +1720,10 @@ video {
 
 .mt-\[-55px\] {
   margin-top: -55px;
+}
+
+.mt-\[0px\] {
+  margin-top: 0px;
 }
 
 .mt-\[100px\] {
@@ -3034,6 +3042,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-x-\[-100\%\] {
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3941,6 +3954,11 @@ video {
 .border-\[\#626970\] {
   --tw-border-opacity: 1;
   border-color: rgb(98 105 112 / var(--tw-border-opacity));
+}
+
+.border-\[\#666666\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(102 102 102 / var(--tw-border-opacity));
 }
 
 .border-\[\#70A0FF\] {
@@ -5052,12 +5070,28 @@ video {
   background-image: linear-gradient(133.93deg, rgba(255,255,255,0.34) -12.26%, rgba(41,12,46,0) 98.71%);
 }
 
+.bg-\[linear-gradient\(133\.93deg\2c rgba\(255\2c 255\2c 255\2c 0\.34\)_-12\.26\%\2c rgba\(41\2c 12\2c 46\2c 0\)_98\.71\%\)\] {
+  background-image: linear-gradient(133.93deg,rgba(255,255,255,0.34) -12.26%,rgba(41,12,46,0) 98.71%);
+}
+
 .bg-\[linear-gradient\(136\.57deg\2c _rgba\(116\2c 60\2c 168\2c 0\.38\)_1\.71\%\2c _rgba\(19\2c 34\2c 20\2c 0\)_101\.9\%\)\] {
   background-image: linear-gradient(136.57deg, rgba(116,60,168,0.38) 1.71%, rgba(19,34,20,0) 101.9%);
 }
 
+.bg-\[linear-gradient\(136\.57deg\2c rgba\(116\2c 60\2c 168\2c 0\.38\)_1\.71\%\2c rgba\(19\2c 34\2c 20\2c 0\)_101\.9\%\)\] {
+  background-image: linear-gradient(136.57deg,rgba(116,60,168,0.38) 1.71%,rgba(19,34,20,0) 101.9%);
+}
+
 .bg-\[linear-gradient\(138\.28deg\2c _rgba\(23\2c 45\2c 152\2c 0\.57\)_5\.99\%\2c _rgba\(14\2c 46\2c 49\2c 0\)_101\.94\%\)\] {
   background-image: linear-gradient(138.28deg, rgba(23,45,152,0.57) 5.99%, rgba(14,46,49,0) 101.94%);
+}
+
+.bg-\[linear-gradient\(138\.28deg\2c rgba\(23\2c 45\2c 152\2c 0\.57\)_5\.99\%\2c rgba\(14\2c 46\2c 49\2c 0\)_101\.94\%\)\] {
+  background-image: linear-gradient(138.28deg,rgba(23,45,152,0.57) 5.99%,rgba(14,46,49,0) 101.94%);
+}
+
+.bg-\[linear-gradient\(145\.32deg\2c \#040613_36\.74\%\2c \#17171C_95\.6\%\)\] {
+  background-image: linear-gradient(145.32deg,#040613 36.74%,#17171C 95.6%);
 }
 
 .bg-\[linear-gradient\(180deg\2c \#141B3B_50\.68\%\2c \#D5DBFF_104\.11\%\)\] {
@@ -5542,6 +5576,12 @@ video {
 
 .from-\[\#fff\] {
   --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#ffffff57\] {
+  --tw-gradient-from: #ffffff57 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -14526,6 +14566,10 @@ footer ul li {
     margin-bottom: 45px;
   }
 
+  .md\:mb-\[75px\] {
+    margin-bottom: 75px;
+  }
+
   .md\:ml-0 {
     margin-left: 0px;
   }
@@ -15438,9 +15482,9 @@ footer ul li {
     padding-bottom: 2rem;
   }
 
-  .md\:py-\[10px\] {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .md\:py-\[15px\] {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .md\:py-\[30px\] {
@@ -16572,10 +16616,20 @@ footer ul li {
     gap: 2rem;
   }
 
+  .lg\:gap-\[20px\] {
+    gap: 20px;
+  }
+
   .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
 
   .lg\:overflow-visible {
@@ -16643,6 +16697,14 @@ footer ul li {
 
   .lg\:bg-contain {
     background-size: contain;
+  }
+
+  .lg\:bg-\[position\:center_60px\] {
+    background-position: center 60px;
+  }
+
+  .lg\:bg-\[position\:center_65px\] {
+    background-position: center 65px;
   }
 
   .lg\:\!p-\[0px\] {
