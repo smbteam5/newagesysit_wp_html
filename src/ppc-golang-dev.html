@@ -37,12 +37,8 @@
       /* Owl Carousel Custom Styles */
       .owl-carousel .owl-nav {
         /* position: absolute; */
-        top: 50%;
-        width: 100%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: center;
-        padding: 0 20px;
+        
+        padding-right:30px !important;
         pointer-events: none;
       }
 
@@ -110,36 +106,25 @@
       }
       .mobile-slider .owl-nav {
         margin-top: 40px;
+        padding-right: 0px !important;
       }
 
       /* Custom styles for the gradients - Tailwind's utility classes are good, but a bit of custom CSS for the specific dark gradients can be cleaner for a faithful reproduction. */
       .gradient-1-ppc {
-        background: linear-gradient(
-          138.28deg,
-          rgba(23, 45, 152, 0.57) 5.99%,
-          rgba(14, 46, 49, 0) 101.94%
-        );
+       background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 46, 49, 0) 101.94%);
+
       }
       .gradient-2-ppc {
-        background: linear-gradient(
-          133.93deg,
-          rgba(255, 255, 255, 0.34) -12.26%,
-          rgba(41, 12, 46, 0) 98.71%
-        );
+      background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
+
       }
       .gradient-3-ppc {
-        background: linear-gradient(
-          136.57deg,
-          rgba(116, 60, 168, 0.38) 1.71%,
-          rgba(19, 34, 20, 0) 101.9%
-        );
+       background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
+
       }
       .gradient-4-ppc {
-        background: linear-gradient(
-          133.93deg,
-          rgba(255, 255, 255, 0.34) -12.26%,
-          rgba(41, 12, 46, 0) 98.71%
-        );
+       background: linear-gradient(136.57deg, rgba(116, 60, 168, 0.38) 1.71%, rgba(19, 34, 20, 0) 101.9%);
+
       }
       /* Ensure the background of the body matches the image */
       body {
@@ -1083,18 +1068,20 @@
     class="absolute inset-0  z-40  bg-contain bg-top bg-no-repeat pointer-events-none 
      bg-[url('./img/bg-transparent.svg')]"  
     ></div> -->
-    <div class="absolute  z-40 top-[100px] md:top-0 pointer-events-none h-full md:h-[87%]">
-      <img 
-        src="./img/bg-pcc-gola-mob.svg" 
-        alt="" 
-        class="lg:hidden w-full h-[60%] md:h-full object-cover md:object-contain object-top"
-      />
-      <img 
-        src="./img/bg-pcc-gola.svg" 
-        alt="" 
-        class="hidden lg:block w-full h-full object-contain object-top xl:object-cover"
-      />
-    </div>
+  <div class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex  justify-center">
+  <img 
+    src="./img/ppc-golang-3x-mob-bg.png" 
+    alt="" 
+    class="lg:hidden w-full md:scale-110 h-[60%] md:h-full object-cover md:object-contain object-top"
+  />
+  <img 
+    src="./img/ppc-golang-3X-bg.png" 
+    alt="" 
+    class="hidden lg:block w-full h-full object-contain object-center"
+  />
+</div>
+
+
      <div class="absolute z-0 bottom-[-125px] md:bottom-[-120px] lg:bottom-[-130px] xl:bottom-[-65px] 2xl:bottom-[-30px] left-1/2 -translate-x-1/2 w-full  h-[500px] lg:h-[600px] 2xl:h-[60%] 2xl:w-full bg-[url('./img/glow-mobile.svg')] bg-cover bg-center bg-no-repeat"></div>
 
        <div class=" hidden absolute z-10  bottom-0 left-1/2 -translate-x-1/2 w-full  h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)]   xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)]  pointer-events-none"></div>
@@ -1139,18 +1126,18 @@
 
        
       <div
-        class="container flex flex-col items-center justify-center pt-[55%]   md:pt-[30%] lg:pt-[15%]  xl:pt-[20%] z-40"
+        class="container flex flex-col items-center justify-center pt-[55%]   md:pt-[25%] lg:pt-[20%]  xl:pt-[25%] z-40"
       >
         <div class="relative flex flex-col items-center justify-center">
           <h1
-            class="text-[30px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2"
+            class="text-[30px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
           >
            Hire Vetted Golang Developers 
              <br class="hidden lg:block" />
             Effortlessly & Quickly
           </h1>
           <p
-            class="text-[16px] md:text-[23px] xl:mt-5  text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[50%] p-2"
+            class="text-[16px] md:text-[23px] xl:mt-5  text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[70%] p-2"
           >
            Augment your development process with certified Go Developers— pre-vetted, risk-free hiring and flexible contracts. 
           </p>
@@ -1177,7 +1164,7 @@
       
 
         <div
-          class="relative w-full mt-[390px] md:mt-[400px]  lg:mt-[100px] xl:mt-14  z-50"
+          class="relative w-full mt-[390px] md:mt-[560px]  lg:mt-[30px] xl:mt-14  z-50"
         >
           <div
             class="relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5 backdrop-blur-[20px] recognition-section-ppc  md:bg-black/20 "
@@ -1187,8 +1174,7 @@
               <p
                 class="text-white text-base text-[16px] md:text-[18px] leading-snug"
               >
-                Recognized for building the best solutions for startups,
-                businesses, and enterprises
+              Recognized for delivering the best solutions for businesses of all sizes and across industries.
               </p>
             </div>
 
@@ -1262,7 +1248,7 @@
       class="bg-black flex justify-center items-center pb-8 lg:pb-20 px-5 relative bg-no-repeat"
     >
       <div
-        class="bg-[#09090B] container px-4 border border-gray-800 rounded-[58px] lg:min-h-[700px] flex justify-center items-start relative"
+        class="bg-[#09090B] container px-4 border border-gray-600 rounded-[58px] lg:min-h-[700px] flex justify-center items-start relative"
       >
         <div class="grid lg:grid-cols-2 gap-10 items-center py-8 px-3 md:p-12">
           <!-- Left Content -->
@@ -1349,7 +1335,7 @@
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
           <!-- Card 1 -->
           <div
-            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card1.svg')] bg-cover bg-center bg-no-repeat"
+            class="border-[#4E3656CC] border-[1px] h-[650px]  min-1536px:h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card1.svg')] bg-cover bg-center bg-no-repeat overflow-hidden"
           >
            
             <div class="text-left p-8 flex-grow">
@@ -1366,7 +1352,7 @@
            
           </div>
           <div
-            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card2.svg')] bg-cover bg-center bg-no-repeat "
+            class="border-[#4E3656CC] border-[1px]  h-[650px]  min-1536px:h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card2.svg')] bg-cover bg-center bg-no-repeat "
           >
             
             <div class="text-left p-8 flex-grow">
@@ -1382,10 +1368,14 @@
             </div>
            
           </div>
-          <div class="h-[600px]">
-            <div class="h-[354px] ppc-golang-card-border relative bg-[url('./img/card3.svg')] bg-cover bg-center bg-no-repeat rounded-[20px] ">
-             
-              <div class="text-left p-8 flex-grow">
+          <div class="h-[650px]  min-1536px:h-[600px] ">
+            <div class="h-[404px] min-1536px:h-[354px] border-[#4E3656CC] border-[1px]  relative  rounded-[20px] ">
+             <div class="absolute top-0 left-0 w-full h-full rounded-[20px] z-0">
+              <img src="./img/card3.svg" alt="overlay" class="w-full h-full object-cover object-center rounded-[20px]"/>
+             </div>
+
+            
+              <div class="text-left p-8 flex-grow relative z-10">
                 <h4 class="text-white text-[23px] font-semibold mb-6">
                   Guarantee
                 </h4>
@@ -1400,7 +1390,7 @@
               </div>
             </div>
             <div
-              class="h-[234px] mt-3 border border-image-ppc-golang flex justify-start items-center bg-[url('./img/cta-card-bg.svg')] bg-cover bg-center bg-no-repeat"
+              class="h-[234px] mt-3 border-white border-[1px] flex justify-start items-center bg-[url('./img/cta-card-bg.svg')] rounded-[20px] bg-cover bg-center bg-no-repeat"
             >
               <div class="pl-8">
                 <p class="text-white text-[20px] font-semibold">
@@ -1410,10 +1400,27 @@
                   class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
                 >
                   Enquire Now
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                 </a>
               </div>
             </div>
           </div>
+
+       
         </div>
       </div>
     </section>
@@ -1430,8 +1437,8 @@
 
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
           <!-- Card 1 -->
-          <div class="h-[600px]">
-            <div class="h-[354px] relative ppc-golang-card-border bg-[url('./img/right-golang-dev-card1.svg')] bg-cover bg-center bg-no-repeat rounded-[20px] ">
+          <div class="md:h-[650px] lg:h-[600px]">
+            <div class="h-[400px] md:h-[368px] lg:h-[354px] relative ppc-golang-card-border bg-[url('./img/right-golang-dev-card1.svg')] bg-cover bg-center bg-no-repeat rounded-[20px] ">
               <div class="text-left p-8 flex-grow">
                 <h4 class="text-white text-[23px] font-semibold mb-6">
                   Poor Retention
@@ -1446,7 +1453,7 @@
               </div>
             </div>
             <div
-              class="h-[234px] mt-3 border ppc-golang-card-bg-with-border flex justify-start items-center rounded-[20px]"
+              class=" md:h-[270px] lg:h-[234px] mt-3 border ppc-golang-card-bg-with-border flex justify-start items-center rounded-[20px]"
             >
               <div class="text-left p-8 flex-grow">
                 <h4 class="text-white text-[23px] font-semibold mb-6">
@@ -1463,7 +1470,7 @@
             </div>
           </div>
           <div
-            class=" h-[600px] rounded-[20px] ppc-golang-card-border  flex flex-col relative bg-[url('./img/right-golang-dev-card2.svg')] bg-cover bg-center bg-no-repeat"
+            class=" h-[600px] md:h-[650px] lg:h-[600px] rounded-[20px] ppc-golang-card-border  flex flex-col relative bg-[url('./img/right-golang-dev-card2.svg')] bg-cover bg-center bg-no-repeat"
           >
            
             <div class="text-left p-8 flex-grow">
@@ -1481,7 +1488,7 @@
            
           </div>
           <div
-            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col overflow-hidden relative bg-[url('./img/right-golang-dev-card3.svg')] bg-cover bg-center bg-no-repeat"
+            class="ppc-golang-card-border h-[600px] md:h-[650px] lg:h-[600px] rounded-[20px]  flex flex-col overflow-hidden relative bg-[url('./img/right-golang-dev-card3.svg')] bg-cover bg-center bg-no-repeat"
           >
            
             <div class="text-left p-8 flex-grow">
@@ -1520,7 +1527,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 w-full lg:w-[60%]">
           <div
-            class="p-6 rounded-tl-xl border gradient-1-ppc min-h-[200px] flex flex-col justify-between"
+            class="p-6 rounded-tl-xl border gradient-1-ppc min-h-[250px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">01</p>
@@ -1532,7 +1539,7 @@
           </div>
 
           <div
-            class="p-6 rounded-tl-xl border gradient-2-ppc min-h-[200px] flex flex-col justify-between"
+            class="p-6 rounded-tl-xl border gradient-2-ppc min-h-[250px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">02</p>
@@ -1545,7 +1552,7 @@
           </div>
 
           <div
-            class="p-6 rounded-tl-xl border gradient-3-ppc min-h-[200px] flex flex-col justify-between"
+            class="p-6 rounded-tl-xl border gradient-3-ppc min-h-[250px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">03</p>
@@ -1558,7 +1565,7 @@
           </div>
 
           <div
-            class="p-6 rounded-tl-xl border gradient-4-ppc min-h-[200px] flex flex-col justify-between"
+            class="p-6 rounded-tl-xl border gradient-4-ppc min-h-[250px] flex flex-col justify-between"
           >
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">04</p>
@@ -1573,16 +1580,14 @@
       </div>
     </section>
 
-    <section class="bg-black py-20">
+    <section class="bg-black py-10 lg:py-20  ">
       <div class="container mx-auto px-4">
-        <div class="py-12">
+        <div class="pb-12">
           <h2
             class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0 text-white font-semibold"
           >
             Hire a Golang Developer to Build a Futuristic Business
-
-          </h2>
-         
+          </h2>     
         </div>
 
         <div
@@ -1595,7 +1600,7 @@
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[23px]">
-              Golang AI Development 
+                Golang AI Development 
 
                   <!-- underline (replaces ::before) -->
                 </h2>
@@ -1619,7 +1624,7 @@
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                 Build scalable and reliable web applications with seamless frontend and backend integration, backed by our best Golang developers. 
+                 Build scalable and reliable <a class="underline hover:font-semibold" href="https://newagesysit.com/web-application-development-services/"> web applications</a> with seamless frontend and backend integration, backed by our best Golang developers. 
 
                 </p>
               </div>
@@ -1636,7 +1641,7 @@
 
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                Develop cloud-native applications using the best cloud platforms and ideal containerization tools, with the support of our Golang experts. 
+                Develop <a class="underline hover:font-semibold" href="https://newagesysit.com/cloud-application-development-services"> cloud-native applications</a> using the best cloud platforms and ideal containerization tools, with the support of our Golang experts.
 
                 </p>
               </div>
@@ -1754,7 +1759,7 @@ Golang Migration & Upgradation
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                  We provide ongoing maintenance and support services for your Go applications, ensuring they run smoothly and without any potential issues.
+                  We provide ongoing <a class="underline hover:font-semibold" href="https://newagesysit.com/maintenance-and-support-services"> maintenance and support </a>services for your Go applications, ensuring they run smoothly and without any potential issues.
                 </p>
               </div>
             </div>
@@ -1765,14 +1770,14 @@ Golang Migration & Upgradation
             class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden mx-auto max-w-[90%] md:max-w-none"
           >
             <span class="truncate"
-              >Hire React Native Developers for your project</span
+              >Hire Golang Developers for your project</span
             >
           </a>
         </div>
       </div>
     </section>
 
-    <section class="faq py-10 md:py-[80px] bg-black text-white">
+    <section class=" py-10  lg:py-20 bg-black text-white">
       <div class="container">
         <div class="text-[20px] text-center">
           <h2
@@ -1799,9 +1804,9 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Concurrency</span>
+                      <span class=" font-[300]">Concurrency</span>
                       <span
-                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
                       >
                         <span class="plus-icon">
                           <img
@@ -1819,7 +1824,7 @@ Golang Migration & Upgradation
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content-ppc">
+                    <div class="accordion-content-ppc show">
                       <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
                         <div
                           class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
@@ -1829,7 +1834,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-1 md:px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/tic-Golang.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -1849,7 +1854,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/cletter-blue.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -1869,7 +1874,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                               src="./img/cletter.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -1889,7 +1894,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/sLetter.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
                               />
@@ -1909,9 +1914,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                               src="./img/errfroup.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[30px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -1929,7 +1934,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Microservices </span>
+                      <span class="font-[300]">Microservices </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -1959,7 +1964,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg"
+                                src="./img/tic-grpc.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
@@ -1979,9 +1984,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                                src="./img/kafka.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -1999,7 +2004,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://raw.githubusercontent.com/nats-io/nats-site/master/static/img/nats-icon-color.png"
+                                src="./img/tic_NATS.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2020,7 +2025,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg"
+                                src="./img/tic-Rabbitmq.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2040,7 +2045,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://avatars.githubusercontent.com/u/23534644?s=200&v=4"
+                                src="./img/tic_Istio.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2060,7 +2065,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://docs.konghq.com/assets/images/icons/kong-gradient.svg"
+                                src="./img/tic_Kong.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2080,7 +2085,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://doc.traefik.io/traefik/assets/img/traefik.logo.png"
+                                src="./img/tic_Traefik.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2100,7 +2105,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://opentelemetry.io/img/logos/opentelemetry-horizontal-color.svg"
+                                src="./img/tic-OpenTelemetry.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2120,7 +2125,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                                src="./img/Prometheus.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2140,7 +2145,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
+                                src="./img/Grafana.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2160,8 +2165,8 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">REST APIs
- </span>
+                      <span class="font-[300]">REST APIs
+                      </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2191,9 +2196,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png"
+                               src="./img/Gin.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -2211,7 +2216,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://echo.labstack.com/img/logo.svg"
+                                src="./img/Echo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
@@ -2231,7 +2236,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://gofiber.io/assets/images/logo.svg"
+                                 src="./img/Fiber.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
@@ -2251,9 +2256,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/Chi.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -2272,7 +2277,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg"
+                               src="./img/tic-Swagger.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2293,7 +2298,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://jwt.io/img/pic_logo.svg"
+                               src="./img/tic-JWT.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2314,7 +2319,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://oauth.net/images/oauth-2-sm.png"
+                                 src="./img/tic -OAuth 2.0.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2338,7 +2343,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Frameworks </span>
+                      <span class="font-[300]">Frameworks </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2368,9 +2373,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png"
+                                src="./img/Gin.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -2388,7 +2393,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://echo.labstack.com/img/logo.svg"
+                                src="./img/Echo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
@@ -2408,7 +2413,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://gofiber.io/assets/images/logo.svg"
+                                src="./img/Fiber.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
                               />
@@ -2428,9 +2433,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/tic_mux.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -2457,7 +2462,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Integrations</span>
+                      <span class="font-[300]">Integrations</span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2487,7 +2492,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                               src="./img/tic-postgresql.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2507,7 +2512,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                src="./img/tic-mysql.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2527,7 +2532,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                src="./img/tic-Mongodb.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2547,7 +2552,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                src="./img/tic-redis.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2567,7 +2572,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                                src="./img/kafka.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
@@ -2587,7 +2592,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+                                src="./img/tic-Stripe.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
@@ -2607,7 +2612,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://www.twilio.com/content/dam/twilio-com/global/en/blog/legacy/2017/twilio-logo-red.png"
+                                src="./img/tic-Twilio.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
@@ -2627,7 +2632,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://onesignal.com/assets/common/logo_onesignal_color.png"
+                                src="./img/tic-OneSignal.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
@@ -2647,7 +2652,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                                src="./img/tic- google maps.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
@@ -2667,7 +2672,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                src="./img/aws-black.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1"
                               />
@@ -2687,7 +2692,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">DevOps</span>
+                      <span class="font-[300]">DevOps</span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2717,7 +2722,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                src="./img/tic-docker.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2737,7 +2742,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                                src="./img/tic-Kubernetes.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2757,7 +2762,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://helm.sh/img/helm.svg"
+                                src="./img/tic-Helm.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2777,7 +2782,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                                src="./img/tic-Terraform.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2797,7 +2802,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                src="./img/tic-GitHub.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
@@ -2817,7 +2822,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+                                src="./img/tic-Jenkins.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2837,7 +2842,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                                src="./img/Prometheus.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2857,7 +2862,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
+                                src="./img/Grafana.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -2877,7 +2882,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Cloud </span>
+                      <span class="font-[300]">Cloud </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2907,9 +2912,8 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                src="./img/aws-black.svg"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -2927,7 +2931,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                 src="./img/tic-google-cloud.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
@@ -2947,7 +2951,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                                src="./img/tic-azure.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2967,7 +2971,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                src="./img/tic_AWS CloudFront.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
                               />
@@ -2987,7 +2991,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                src="./img/tic_Lambda.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -3007,7 +3011,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                src="./img/RDS.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -3027,7 +3031,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                               src="./img/TIC_Cloud Run.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -3048,7 +3052,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Testing </span>
+                      <span class="font-[300]">Testing </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -3078,14 +3082,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/Testify.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2 "
                               >
-                                pprof  
+                                Testify   
                               </p>
                             </div>
                           </div>
@@ -3098,14 +3102,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/Ginkgo.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Runtime/Trace  
+                                 Ginkgo 
                               </p>
                             </div>
                           </div>
@@ -3118,54 +3122,35 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Sync 
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Pool 
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="https://avatars.githubusercontent.com/u/6599399?s=200&v=4"
+                                 src="./img/GoMock.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Jsoniter  
+                               GoMock 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic_Testcontainers.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                Testcontainers   
                               </p>
                             </div>
                           </div>
@@ -3178,15 +3163,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                src="./img/tic_K6.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Redis Cache
-  
+                                 K6
                               </p>
                             </div>
                           </div>
@@ -3200,7 +3184,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-medium">Performance Tuning
+                      <span class="font-[300]">Performance Tuning
  </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -3231,9 +3215,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/pprof.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -3271,18 +3255,19 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/Sync.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Sync 
+                                Sync.Pool 
                               </p>
                             </div>
                           </div>
                         </div>
+                      
                         <div
                           class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
                         >
@@ -3291,27 +3276,7 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 p-1 bg-white rounded-full"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                                Pool 
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                                src="https://avatars.githubusercontent.com/u/6599399?s=200&v=4"
+                                src="./img/"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
@@ -3331,9 +3296,9 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                src="./img/tic-redis.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
@@ -3356,12 +3321,12 @@ Golang Migration & Upgradation
       </div>
     </section>
 
-    <section class="timeline-section py-12">
+    <section class="timeline-section py-12 lg:py-20">
       <div class="text-[20px] text-center">
         <h2
           class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto text-white"
         >
-          How Does it Work?
+         How it Works 
         </h2>
       </div>
       <div class="timeline">
@@ -3421,7 +3386,10 @@ Golang Migration & Upgradation
       </div>
     </section>
 
-    <section class="py-8 md:py-32 bg-black">
+
+    <div class="relative">
+        <div class="absolute top-0 w-full success_stories_overlay h-full -z-10"></div>
+   <section class="py-8 lg:pb-20 xl:py-32 ">
       <div class="container">
         <div
           class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
@@ -3781,16 +3749,15 @@ Golang Migration & Upgradation
               <p
                 class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8"
               >
-                Our journey is something more than inspiring. We’ve come a long
-                way with experience in serving across multiple industries.
-                Here’s a glance at them.
+              Our journey is something more than inspiring. We’ve come a long way with experience in serving across multiple industries. Here’s a glance into them to 
+
               </p>
               <div
                 class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
               >
                 <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3799,12 +3766,12 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       Healthcare
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3813,12 +3780,12 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       Fintech
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3827,12 +3794,12 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       SaaS
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3841,12 +3808,16 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
-                      Real-Time Systems
-                    </h3>
+                    <div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                      >
+                        Real-Time Systems
+                      </h3>
+                    </div>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3855,12 +3826,12 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       IoT
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3869,12 +3840,12 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       Blockchain
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3883,12 +3854,14 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                    >
                       On-Demand
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3897,12 +3870,12 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       Education
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
                       <img
@@ -3911,21 +3884,25 @@ Golang Migration & Upgradation
                         class="w-[70px] h-[70px] mr-5"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       Wellness
                     </h3>
                   </div>
                   <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[200px] flex flex-wrap justify-start items-center"
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4">
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
                       <img
                         src="./img/ppc-health-transportation.svg"
                         alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
+                        class="w-[70px] h-[70px]"
                       />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] pb-4">
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
                       Transportation
                     </h3>
                   </div>
@@ -3961,16 +3938,17 @@ Golang Migration & Upgradation
       </div>
     </section>
 
-    <section class="client_experiences">
-      <div class="container">
-        <div class="text-[20px] text-center max-w-6xl mx-auto mb-10 px-4">
+    <section class="client_experiences bg-transparent relative z-10">
+    
+      <div class="container ">
+        <div class=" text-center max-w-8xl mx-auto mb-10 px-4">
           <h2
             class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2"
-          >
+           >
             Our Success Stories
           </h2>
           <p
-            class="text-[18px] md:text-[22px] min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
+            class="text-[18px] font-[400] font-manrope  min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
           >
             Delve into the client success stories we have built with our
             expertise in delivering top-quality deliverables for their
@@ -4249,13 +4227,14 @@ Golang Migration & Upgradation
         </div>
       </div>
     </section>
+    </div>
 
-   <section class="bg-black py-8 lg:py-20 px-4">
+     <section class="bg-black py-8 md:py-20 px-4 ">
       <div class="container mx-auto text-center">
         <!-----desktop section--->
         <div class="hidden lg:grid grid-cols-10 gap-6 mb-16">
-          <div class="flex flex-col col-span-2">
-            <div class="relative group cursor-pointer">
+          <div class="flex flex-col col-span-2 gap-6">
+            <div class="relative group cursor-pointer h-[220px] xl:h-[320px]">
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=_AG--jyDX3c"
@@ -4266,7 +4245,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4275,29 +4254,29 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO,WhipFlip</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO,WhipFlip</p>
                 </div>
               </a>
             </div>
 
-            <div class="relative group cursor-pointer mt-3 rounded-xl">
+            <div class="relative group cursor-pointer mt-3 h-[220px] xl:h-[320px]">
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
               >
                 <img
-                 src="./img/larry-image.svg"
-                  alt="Bob Salesno"
+                  src="./img/larry-image.svg"
+                  alt="Larry Seibel"
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4306,13 +4285,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform rounded-[24px] duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Larry Seibel
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO,Car-Upp</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO,Car-Upp</p>
                 </div>
               </a>
             </div>
@@ -4333,7 +4312,7 @@ Golang Migration & Upgradation
                 />
 
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4342,13 +4321,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Rob Salerno
                   </p>
-                  <p class="text-xs text-gray-300 truncate">
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, CliquePrize App
                   </p>
                 </div>
@@ -4368,7 +4347,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4377,13 +4356,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Chris O'Rorke
                   </p>
-                  <p class="text-xs text-gray-300 truncate">
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, Guaranteed Tip Sheet
                   </p>
                 </div>
@@ -4403,7 +4382,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4412,20 +4391,20 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Iman Khawaja
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, ISRA App</p>
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="flex flex-col col-span-2">
-            <div class="relative group cursor-pointer row-span-2">
+          <div class="flex flex-col col-span-2 gap-6">
+            <div class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[320px]">
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
@@ -4436,7 +4415,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4445,18 +4424,18 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     David Chabukashvili
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, Lcard App</p>
                 </div>
               </a>
             </div>
 
-            <div class="relative group cursor-pointer row-span-2 mt-3">
+            <div class="relative group cursor-pointer row-span-2 mt-3 h-[220px] xl:h-[320px]">
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=slRQbxC1UoI"
@@ -4467,7 +4446,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4476,11 +4455,11 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
-                  <p class="text-xs text-gray-300 truncate">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">Rob Evans</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, Donut Man app
                   </p>
                 </div>
@@ -4504,7 +4483,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4513,13 +4492,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, WhipFlip</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, WhipFlip</p>
                 </div>
               </a>
             </div>
@@ -4532,25 +4511,25 @@ Golang Migration & Upgradation
                 <img
                   src="./img/larry-image.svg"
                   alt="Larry Seibel"
-                  class="w-full h-full object-cover rounded-xl transition-opacity duration-300 group-hover:opacity-80"
+                  class="w-full h-full object-cover rounded-[24px] transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
-                    class="absolute inset-0 flex items-center justify-center cursor-pointer rounded-[24px] "
+                    class="absolute inset-0 flex items-center justify-center cursor-pointer"
                   >
                     <img
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform  duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Larry Seibel
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, Car-Upp</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, Car-Upp</p>
                 </div>
               </a>
             </div>
@@ -4566,7 +4545,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4575,13 +4554,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Rob Salerno
                   </p>
-                  <p class="text-xs text-gray-300 truncate">
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, CliquePrize App
                   </p>
                 </div>
@@ -4599,7 +4578,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4608,13 +4587,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Chris O'Rorke
                   </p>
-                  <p class="text-xs text-gray-300 truncate">
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, Guaranteed Tip Sheet
                   </p>
                 </div>
@@ -4632,7 +4611,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4641,13 +4620,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     Iman Khawaja
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, ISRA App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, ISRA App</p>
                 </div>
               </a>
             </div>
@@ -4663,7 +4642,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4672,13 +4651,13 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
                     David Chabukashvili
                   </p>
-                  <p class="text-xs text-gray-300 truncate">CEO, Lcard App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, Lcard App</p>
                 </div>
               </a>
             </div>
@@ -4694,7 +4673,7 @@ Golang Migration & Upgradation
                   class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -4703,11 +4682,11 @@ Golang Migration & Upgradation
                       src="./img/video-play.svg"
                       alt="Play Button"
                       loading="lazy"
-                      class="hover:scale-110 transition-transform duration-300 w-[40px] h-[40px]"
+                      class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-sm font-semibold truncate mb-0.5">Rob Evans</p>
-                  <p class="text-xs text-gray-300 truncate">
+                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">Rob Evans</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, Donut Man app
                   </p>
                 </div>
@@ -4716,52 +4695,32 @@ Golang Migration & Upgradation
           </div>
         </div>
 
-        <div class="text-center lg:-mt-10">
+        <div class="text-center lg:-mt-[10rem]">
           <h3
-            class="text-[30px] md:text-[40px] font-[400] text-white mb-4 w-full md:max-w-2xl mx-auto"
+            class="text-[28px] md:text-[40px] font-semibold text-white mb-4 max-w-2xl mx-auto"
           >
-            Here’s What Our Clients Say About
-            <br class="sm:hidden" />
-            The Results They’ve Made With Us
+            Here’s What Our Clients Say<br class="hidden lg:block" />
+             About The Results They’ve<br class="hidden lg:block" />
+              Made With Us
           </h3>
-          <p class="text-gray-400 mb-8 text-[18px] md:text-[20px] w-full md:max-w-2xl mx-auto">
-            We have not only made the customer journeys smoother, but also
-            helped businesses and entrepreneurs achieve remarkable results with
-            our services. Hear from our clients as they talk about how we have
-            helped them achieve their goals!
+          <p class="text-gray-400 mb-8 text-[18px] max-w-2xl mx-auto">
+            We have not only made the customer journeys smoother, but also helped businesses and entrepreneurs achieve remarkable results with our services. Hear from our clients as they talk about how we have helped them achieve their goals!
           </p>
           <button
-            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[18px] inline-flex items-center gap-2"
+            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[18px]"
           >
             Read Success Stories
-            <span class="inline-flex items-center">
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
           </button>
         </div>
       </div>
-   </section>
+    </section>
 
    <section class="bg-black pt-0 pb-20 md:py-20 relative">
       <div
         class="container max-w-[1440px] mx-auto px-4 text-center relative z-20"
       >
         <h2
-          class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold text-white mb-14 leading-[42px] md:leading-[60px]"
+          class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold text-white mb-5 leading-[42px] md:leading-[60px]"
         >
         Our Guarantee 
         </h2>
@@ -4841,7 +4800,7 @@ Golang Migration & Upgradation
       <div class="ppc-golang-card-gradient1 rounded-[58px] p-10 lg:-mr-8  flex flex-col justify-between  z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] pt-10">
         <div >
           <h3 class="text-left lg:text-center   pt-8 lg:pt-14 text-[28px] md:text-[32px]  xl:text-[50px] font-semibold mb-4">Hourly Plan</h3>
-          <hr class="border-gray-600 mb-6">
+          <hr class="border-white border-[1px] mb-6">
           <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5">
             <li>Billing per usage
 </li>
@@ -4879,7 +4838,7 @@ Golang Migration & Upgradation
       <div class="ppc-golang-card-gradient2 rounded-[58px] p-10  flex flex-col justify-between  z-20 shadow-[0_0_30px_rgba(255,255,255,0.1)] h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0 ">
         <div>
           <h3 class="text-left lg:text-center  pt-8 lg:pt-14 text-[28px] md:text-[32px] xl:text-[50px] font-semibold mb-4">Monthly Plan</h3>
-          <hr class="border-gray-600 mb-6">
+          <hr class="border-white border-[1px] mb-6">
           <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5">
             <li>Dedicated team and billed per month
 </li>
@@ -4917,7 +4876,7 @@ Golang Migration & Upgradation
         <div>
           <h3 class="text-left lg:text-center   pt-8 lg:pt-14 text-[28px] md:text-[32px]  xl:text-[50px] font-semibold mb-4">Fixed Cost Plan 
 </h3>
-          <hr class="border-gray-600 mb-6">
+         <hr class="border-white border-[1px] mb-6 ">
           <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] pl-5 list-disc">
             <li>Dedicated project manager support
 </li>
@@ -4993,9 +4952,10 @@ Golang Migration & Upgradation
       <div class="container relative z-10 mx-auto px-4 py-20">
         <!-- Heading -->
         <h2
-          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight  mx-auto"
+          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight  mx-auto pt-8"
         >
-          Ready to hire a Golang developer?
+         Ready to hire a Golang developer from our team?
+
         </h2>
 
         <!-- Subheading -->
@@ -5003,6 +4963,7 @@ Golang Migration & Upgradation
           class="text-gray-400 mt-6 text-[16px] md:text-[18px] mx-auto leading-relaxed max-w-4xl"
         >
          Enhance your business’s success with our highly skilled Golang developers. We offer the right set of skills, adaptable solutions, and a commitment to your goals with an expert for your software development needs.
+
 
         </p>
 
@@ -5024,7 +4985,7 @@ Golang Migration & Upgradation
           <h2
             class="text-[28px] md:text-[36px] lg:text-[50px] text-white font-bold text-center lg:leading-[55px] mb-2"
           >
-            Frequently Asked Questions
+            FAQ
           </h2>
         </div>
         <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
@@ -5044,7 +5005,7 @@ Golang Migration & Upgradation
 
                       </span>
                       <span
-                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
                       >
                         <span class="plus-icon">
                           <img
@@ -5062,7 +5023,7 @@ Golang Migration & Upgradation
                         </span>
                       </span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content show">
                       <div
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >

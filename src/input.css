@@ -4521,25 +4521,27 @@ footer ul li {
   position: relative;
   background: linear-gradient(121.18deg, #0b0c18 19.18%, #2d2f68 106.05%);
   border-radius: 20px;
-  overflow: hidden;
+  border: 1px solid rgba(90, 109, 252, 0.8);
 }
 
-.ppc-service-card::before {
+/* .ppc-service-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  padding: 1px;
+  inset: -1px;
+  padding: 2px;
   background: linear-gradient(
     121.15deg,
     rgba(90, 110, 252, 0.8) 31.16%,
     rgba(90, 110, 254, 0.5) 90.89%
   );
-  border-radius: inherit;
+  border-radius: 20px;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
   -webkit-mask-composite: xor;
-}
+  pointer-events: none;
+  z-index: -1;
+} */
 
 .book-a-call-section-ppc {
   background: linear-gradient(286.61deg, #2c43ac 26.07%, #00000d 130.6%);
@@ -4574,9 +4576,9 @@ footer ul li {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #5aa2ff;
-  box-shadow: 0 0 0 6px rgba(90, 162, 255, 0.22);
-  border: 3px solid #0b0d12;
+ background: #2279FF;
+  box-shadow: 0 0 0 6px rgba(7, 70, 153, 0.648);
+  border: 3px solid #2279FF;
   z-index: 2;
 }
 @media (max-width: 768px) {
@@ -4630,9 +4632,9 @@ footer ul li {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #5aa2ff;
-  box-shadow: 0 0 0 6px rgba(90, 162, 255, 0.22);
-  border: 3px solid #0b0d12;
+  background: #2279FF;
+  box-shadow: 0 0 0 6px rgba(7, 70, 153, 0.648);
+  border: 3px solid #2279FF;
   z-index: 2;
   transition: all 4s;
 }
@@ -4647,8 +4649,9 @@ footer ul li {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 2px;
-  background: #253047;
+  height: 1px;
+  background: linear-gradient(#2279FF00,#2279FF);
+  
   z-index: 1;
   width: var(--stub);
   left: calc(50% - var(--stub));
@@ -4706,6 +4709,7 @@ footer ul li {
 .timeline__content {
   background: transparent;
   border-radius: 16px;
+  padding-top: 50px;
 }
 .timeline__content h2 {
   font-size: 64px;
@@ -4893,85 +4897,73 @@ footer ul li {
   pointer-events: none;
 }
 
-.ppc-golang-card-border {
+/* .ppc-golang-card-border {
   position: relative;
   border-radius: 20px;
-}
+ 
+  border: 1px solid rgba(78, 54, 86, 0.8) 11.03%;
+ 
+} */
 
-.ppc-golang-card-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 1px;
-  background: linear-gradient(
-    141.26deg,
-    rgba(78, 54, 86, 0.8) 11.03%,
-    rgba(68, 49, 73, 0.5) 90.53%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
+
 
 .ppc-golang-card-gradient1 {
   position: relative;
   background: linear-gradient(284.5deg, #09090b 28.3%, #5c5c71 147.13%);
+  border-radius: 58px;
+  border: white 1px solid;
 }
 
-.ppc-golang-card-gradient1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 58px;
-  padding: 1px;
-  background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
+
 
 .ppc-golang-card-gradient2 {
   position: relative;
   background: linear-gradient(121.18deg, #0b0c18 19.18%, #2d2f68 106.05%);
+  border-radius: 58px;
+  border: white 1px solid;
 }
 
-.ppc-golang-card-gradient2::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 58px;
-  padding: 1px;
-  background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
 
 .ppc-golang-card-gradient3 {
   position: relative;
   background: linear-gradient(284.5deg, #09090b 28.3%, #5c5c71 147.13%);
+  border-radius: 58px;
+  border: white 1px solid;
 }
 
-.ppc-golang-card-gradient3::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 58px;
-  padding: 1px;
-  background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
 .inter_font {
   font-family: "Inter", sans-serif;
+}
+
+/* .success_stories_overlay{
+  position: relative;
+} */
+
+.success_stories_overlay{
+ 
+ 
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.9) 100%),
+    radial-gradient(circle at center, rgba(65, 87, 255, 0.8) 5%, rgba(65, 87, 255, 0.6) 15%, #000000 45%);
+  backdrop-filter: blur(634.5999755859375px);
+  pointer-events: none; 
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+.z-index-2 {
+  z-index: 2;
+}
+.z-index-3 {
+  z-index: 3;
+}
+.z-index-4 {
+  z-index: 4;
+}
+.z-index-5 {
+  z-index: 5;
+}
+.z-index-6 {
+  z-index: 6;
 }
