@@ -37,8 +37,8 @@
       /* Owl Carousel Custom Styles */
       .owl-carousel .owl-nav {
         /* position: absolute; */
-        
-        padding-right:30px !important;
+
+        padding-right: 30px !important;
         pointer-events: none;
       }
 
@@ -111,20 +111,32 @@
 
       /* Custom styles for the gradients - Tailwind's utility classes are good, but a bit of custom CSS for the specific dark gradients can be cleaner for a faithful reproduction. */
       .gradient-1-ppc {
-       background: linear-gradient(138.28deg, rgba(23, 45, 152, 0.57) 5.99%, rgba(14, 46, 49, 0) 101.94%);
-
+        background: linear-gradient(
+          138.28deg,
+          rgba(23, 45, 152, 0.57) 5.99%,
+          rgba(14, 46, 49, 0) 101.94%
+        );
       }
       .gradient-2-ppc {
-      background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
-
+        background: linear-gradient(
+          133.93deg,
+          rgba(255, 255, 255, 0.34) -12.26%,
+          rgba(41, 12, 46, 0) 98.71%
+        );
       }
       .gradient-3-ppc {
-       background: linear-gradient(133.93deg, rgba(255, 255, 255, 0.34) -12.26%, rgba(41, 12, 46, 0) 98.71%);
-
+        background: linear-gradient(
+          133.93deg,
+          rgba(255, 255, 255, 0.34) -12.26%,
+          rgba(41, 12, 46, 0) 98.71%
+        );
       }
       .gradient-4-ppc {
-       background: linear-gradient(136.57deg, rgba(116, 60, 168, 0.38) 1.71%, rgba(19, 34, 20, 0) 101.9%);
-
+        background: linear-gradient(
+          136.57deg,
+          rgba(116, 60, 168, 0.38) 1.71%,
+          rgba(19, 34, 20, 0) 101.9%
+        );
       }
       /* Ensure the background of the body matches the image */
       body {
@@ -1061,37 +1073,50 @@
       <!-- mobile-menu end-->
     </header>
 
-   <section
-      class=" bg-contain  bg-no-repeat flex items-center pb-24 h-full relative overflow-hidden "
+    <section
+      class="bg-contain bg-no-repeat flex items-center pb-24 h-full relative overflow-hidden"
     >
-    <!-- <div
-    class="absolute inset-0  z-40  bg-contain bg-top bg-no-repeat pointer-events-none 
-     bg-[url('./img/bg-transparent.svg')]"  
-    ></div> -->
-  <div class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex  justify-center">
-  <img 
-    src="./img/ppc-golang-3x-mob-bg.png" 
-    alt="" 
-    class="lg:hidden w-full md:scale-110 h-[60%] md:h-full object-cover md:object-contain object-top"
-  />
-  <img 
-    src="./img/ppc-golang-3X-bg.png" 
-    alt="" 
-    class="hidden lg:block w-full h-full object-contain object-center"
-  />
-</div>
+     
+      <div
+        class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex justify-center"
+      >
+        <img
+          src="./img/ppc-golang-3x-mob-bg.png"
+          alt=""
+          class="lg:hidden w-full md:scale-110 h-[60%] md:h-full object-cover md:object-contain object-top"
+        />
+        <img
+          src="./img/ppc-golang-3X-bg.png"
+          alt=""
+          class="hidden lg:block w-full h-full object-contain object-center"
+        />
+      </div>
 
+   
 
-     <div class="absolute z-0 bottom-[-125px] md:bottom-[-120px] lg:bottom-[-130px] xl:bottom-[-65px] 2xl:bottom-[-30px] left-1/2 -translate-x-1/2 w-full  h-[500px] lg:h-[600px] 2xl:h-[60%] 2xl:w-full bg-[url('./img/glow-mobile.svg')] bg-cover bg-center bg-no-repeat"></div>
+      <div
+        class="absolute z-0 bottom-[90px] min-768px:bottom-[165px] min-1024px:bottom-[220px] min-1240px:bottom-[275px] min-1440px:bottom-[310px] min-1536px:bottom-[330px] min-1920px:bottom-[410px] left-0 w-full translate-y-1/2"
+      >
+        <img
+          src="./img/glow-new.png"
+          alt="Glow"
+          class="w-full h-full opacity-100 mx-auto"
+        />
+      </div>
 
-       <div class=" hidden absolute z-10  bottom-0 left-1/2 -translate-x-1/2 w-full  h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)]   xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)]  pointer-events-none"></div>
+      <div
+        class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)] pointer-events-none"
+      ></div>
 
-       <div class="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"></div>
+      <div
+        class="hidden absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"
+      ></div>
 
-       <div class="absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"></div>
+      <div
+        class="hidden absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
+      ></div>
 
-
-         <!-- <img src="./img/man1.svg"
+      <!-- <img src="./img/man1.svg"
         alt="particles"
         class="absolute top-1/3 left-[80px]  w-[200px] pointer-events-none z-50"
       />
@@ -1124,26 +1149,26 @@
         class="absolute bottom-[160px] right-[220px]  w-[130px] pointer-events-none z-50"
       /> -->
 
-       
       <div
-        class="container flex flex-col items-center justify-center pt-[55%]   md:pt-[25%] lg:pt-[20%]  xl:pt-[25%] z-40"
+        class="container flex flex-col items-center justify-center pt-[55%] md:pt-[25%] lg:pt-[20%] xl:pt-[25%] z-40"
       >
         <div class="relative flex flex-col items-center justify-center">
           <h1
             class="text-[30px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
           >
-           Hire Vetted Golang Developers 
-             <br class="hidden lg:block" />
+            Hire Vetted Golang Developers
+            <br class="hidden lg:block" />
             Effortlessly & Quickly
           </h1>
           <p
-            class="text-[16px] md:text-[23px] xl:mt-5  text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[70%] p-2"
+            class="text-[16px] md:text-[23px] xl:mt-5 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[70%] p-2"
           >
-           Augment your development process with certified Go Developers— pre-vetted, risk-free hiring and flexible contracts. 
+            Augment your development process with certified Go Developers—
+            pre-vetted, risk-free hiring and flexible contracts.
           </p>
           <a
             class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
-          >Hire Golang Developers Now
+            >Hire Golang Developers Now
 
             <img
               src="./img/arrow-right-white.svg"
@@ -1157,24 +1182,21 @@
               class="absolute bottom-0"
             />
           </a>
-
-         
         </div>
 
-      
-
         <div
-          class="relative w-full mt-[390px] md:mt-[560px]  lg:mt-[30px] xl:mt-14  z-50"
+          class="relative w-full mt-[390px] md:mt-[560px] lg:mt-[30px] xl:mt-14 z-50"
         >
           <div
-            class="relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5 backdrop-blur-[20px] recognition-section-ppc  md:bg-black/20 "
+            class="relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5 backdrop-blur-[20px] recognition-section-ppc md:bg-black/20"
           >
             <!-- Left text -->
             <div class="lg:w-[40%] text-center lg:text-left">
               <p
                 class="text-white text-base text-[16px] md:text-[18px] leading-snug"
               >
-              Recognized for delivering the best solutions for businesses of all sizes and across industries.
+                Recognized for delivering the best solutions for businesses of
+                all sizes and across industries.
               </p>
             </div>
 
@@ -1335,9 +1357,8 @@
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
           <!-- Card 1 -->
           <div
-            class="border-[#4E3656CC] border-[1px] h-[650px]  min-1536px:h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card1.svg')] bg-cover bg-center bg-no-repeat overflow-hidden"
+            class="border-[#4E3656CC] border-[1px] h-[650px] min-1536px:h-[600px] rounded-[20px] flex flex-col relative bg-[url('./img/card1.svg')] bg-cover bg-center bg-no-repeat overflow-hidden"
           >
-           
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">Quality</h4>
               <p
@@ -1349,12 +1370,10 @@
                 apps with the fewest bugs.
               </p>
             </div>
-           
           </div>
           <div
-            class="border-[#4E3656CC] border-[1px]  h-[650px]  min-1536px:h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/card2.svg')] bg-cover bg-center bg-no-repeat "
+            class="border-[#4E3656CC] border-[1px] h-[650px] min-1536px:h-[600px] rounded-[20px] flex flex-col relative bg-[url('./img/card2.svg')] bg-cover bg-center bg-no-repeat"
           >
-            
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">Speed</h4>
               <p
@@ -1366,15 +1385,21 @@
                 cycles with the concurrency model.
               </p>
             </div>
-           
           </div>
-          <div class="h-[650px]  min-1536px:h-[600px] ">
-            <div class="h-[404px] min-1536px:h-[354px] border-[#4E3656CC] border-[1px]  relative  rounded-[20px] ">
-             <div class="absolute top-0 left-0 w-full h-full rounded-[20px] z-0">
-              <img src="./img/card3.svg" alt="overlay" class="w-full h-full object-cover object-center rounded-[20px]"/>
-             </div>
+          <div class="h-[650px] min-1536px:h-[600px]">
+            <div
+              class="h-[404px] min-1536px:h-[354px] border-[#4E3656CC] border-[1px] relative rounded-[20px]"
+            >
+              <div
+                class="absolute top-0 left-0 w-full h-full rounded-[20px] z-0"
+              >
+                <img
+                  src="./img/card3.svg"
+                  alt="overlay"
+                  class="w-full h-full object-cover object-center rounded-[20px]"
+                />
+              </div>
 
-            
               <div class="text-left p-8 flex-grow relative z-10">
                 <h4 class="text-white text-[23px] font-semibold mb-6">
                   Guarantee
@@ -1400,27 +1425,25 @@
                   class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal py-3 px-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
                 >
                   Enquire Now
-                    <svg
-                      width="7"
-                      height="12"
-                      viewBox="0 0 7 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
-                        stroke="white"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+                  <svg
+                    width="7"
+                    height="12"
+                    viewBox="0 0 7 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                      stroke="white"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
           </div>
-
-       
         </div>
       </div>
     </section>
@@ -1438,7 +1461,9 @@
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
           <!-- Card 1 -->
           <div class="md:h-[650px] lg:h-[600px]">
-            <div class="h-[400px] md:h-[368px] lg:h-[354px] relative ppc-golang-card-border bg-[url('./img/right-golang-dev-card1.svg')] bg-cover bg-center bg-no-repeat rounded-[20px] ">
+            <div
+              class="border-[#4E3656CC] border-[1px] h-[400px] md:h-[368px] lg:h-[354px] relative  bg-[url('./img/right-golang-dev-card1.svg')] bg-cover bg-center bg-no-repeat rounded-[20px]"
+            >
               <div class="text-left p-8 flex-grow">
                 <h4 class="text-white text-[23px] font-semibold mb-6">
                   Poor Retention
@@ -1453,61 +1478,55 @@
               </div>
             </div>
             <div
-              class=" md:h-[270px] lg:h-[234px] mt-3 border ppc-golang-card-bg-with-border flex justify-start items-center rounded-[20px]"
+              class="md:h-[270px] lg:h-[234px] mt-3 border-[#4E3656CC] border-[1px] flex justify-start items-center rounded-[20px]"
             >
               <div class="text-left p-8 flex-grow">
                 <h4 class="text-white text-[23px] font-semibold mb-6">
-                 Lack of Domain Experience
-
+                  Lack of Domain Experience
                 </h4>
                 <p
                   class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
                 >
-                 Developers would be experts in Golang, but they may struggle to provide value to your business without relevant industry-specific knowledge. 
-
+                  Developers would be experts in Golang, but they may struggle
+                  to provide value to your business without relevant
+                  industry-specific knowledge.
                 </p>
               </div>
             </div>
           </div>
           <div
-            class=" h-[600px] md:h-[650px] lg:h-[600px] rounded-[20px] ppc-golang-card-border  flex flex-col relative bg-[url('./img/right-golang-dev-card2.svg')] bg-cover bg-center bg-no-repeat"
+            class="h-[600px] md:h-[650px] lg:h-[600px] rounded-[20px] border-[#4E3656CC] border-[1px] flex flex-col relative bg-[url('./img/right-golang-dev-card2.svg')] bg-cover bg-center bg-no-repeat"
           >
-           
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">
-               Low Candidate Quality
-
+                Low Candidate Quality
               </h4>
               <p
                 class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-               Many candidates are adept only in surface-level Golang; hence, they lack in-depth expertise in the language for scalability, problem-solving, concurrency, etc. 
-
+                Many candidates are adept only in surface-level Golang; hence,
+                they lack in-depth expertise in the language for scalability,
+                problem-solving, concurrency, etc.
               </p>
             </div>
-           
           </div>
           <div
-            class="ppc-golang-card-border h-[600px] md:h-[650px] lg:h-[600px] rounded-[20px]  flex flex-col overflow-hidden relative bg-[url('./img/right-golang-dev-card3.svg')] bg-cover bg-center bg-no-repeat"
+            class="border-[#4E3656CC] border-[1px] h-[600px] md:h-[650px] lg:h-[600px] rounded-[20px] flex flex-col overflow-hidden relative bg-[url('./img/right-golang-dev-card3.svg')] bg-cover bg-center bg-no-repeat"
           >
-           
             <div class="text-left p-8 flex-grow">
               <h4 class="text-white text-[23px] font-semibold mb-6">
-              Long Hiring Cycles
-
+                Long Hiring Cycles
               </h4>
               <p
                 class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-                With slow processes in place and numerous interview rounds, top Golang talent moves farther away to seek the support of fast-growing competitors. 
-
+                With slow processes in place and numerous interview rounds, top
+                Golang talent moves farther away to seek the support of
+                fast-growing competitors.
               </p>
             </div>
-            
           </div>
         </div>
-
-        
       </div>
     </section>
 
@@ -1519,10 +1538,8 @@
           <h2
             class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold lg:leading-[70px]"
           >
-           How NewAgeSysIT Solves These Problems?
-
+            How NewAgeSysIT Solves These Problems?
           </h2>
-         
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 w-full lg:w-[60%]">
@@ -1532,10 +1549,9 @@
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">01</p>
               <h3 class="font-manrope text-[24px] font-[400] text-white mb-2">
-               Rigorous vetting & screening
+                Rigorous vetting & screening
               </h3>
             </div>
-            
           </div>
 
           <div
@@ -1544,11 +1560,9 @@
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">02</p>
               <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
-               Speed & availability
-
+                Speed & availability
               </h3>
             </div>
-            
           </div>
 
           <div
@@ -1558,10 +1572,8 @@
               <p class="text-[64px] font-semibold text-white/50 mb-4">03</p>
               <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
                 Domain & framework specialization
-
               </h3>
             </div>
-           
           </div>
 
           <div
@@ -1570,180 +1582,42 @@
             <div>
               <p class="text-[64px] font-semibold text-white/50 mb-4">04</p>
               <h3 class="text-[24px] font-[400] font-manrope text-white mb-2">
-               Guarantee & replacement policy
-
+                Guarantee & replacement policy
               </h3>
             </div>
-            
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-black py-10 lg:py-20  ">
+    <section class="bg-black py-10 lg:py-20">
       <div class="container mx-auto px-4">
         <div class="pb-12">
           <h2
             class="text-center text-[30px] leading-[48px] mt-[30px] md:mb-[40px] md:text-[40px] lg:text-[50px] lg:leading-[48px] lg:mt-0 lg:mb-0 text-white font-semibold"
           >
             Hire a Golang Developer to Build a Futuristic Business
-          </h2>     
+          </h2>
         </div>
 
         <div
           class="pt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-5"
         >
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
             <div>
               <div class="icon mb-[20px]">
                 <img src="./img/pcc-ser-5.svg" alt="" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[23px]">
-                Golang AI Development 
+                  Golang AI Development
 
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                  Develop real-time AI-driven applications using Golang by combining the speed and concurrency model to serve the best for your business. 
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                Full-Stack App Development
-
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                 Build scalable and reliable <a class="underline hover:font-semibold" href="https://newagesysit.com/web-application-development-services/"> web applications</a> with seamless frontend and backend integration, backed by our best Golang developers. 
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                 Golang Cloud Computing 
-
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                Develop <a class="underline hover:font-semibold" href="https://newagesysit.com/cloud-application-development-services"> cloud-native applications</a> using the best cloud platforms and ideal containerization tools, with the support of our Golang experts.
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                 Golang Microservices Development 
-
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                Get performance-centric microservices that enhance your Golang projects with superior flexibility, faster deployment, and scalability.
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-               <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                Mobile App Backend Development
-
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                 Build secure and real-time backends and meet increased traffic demands with the most reliable Golang backend development.
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-                 <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-                Code Review and Optimization
-
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-                Implement best coding practices and enhance code readability through a detailed code review, ensuring optimized, production-ready code.
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-                <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-               Golang Team Augmentation
-
-
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-              Hire dedicated Golang developers to work with the existing team in building applications using our IT staff team augmentation services.
-
-
-                </p>
-              </div>
-            </div>
-          </div>
-           <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
-            <div>
-              <div class="icon mb-[20px]">
-                 <img src="./img/pcc-ser-5.svg" alt="" />
-              </div>
-              <div class="bottom-content">
-                <h2 class="inline-block text-white font-semibold text-[23px]">
-               
-
-Golang Migration & Upgradation
-
-
-
-                  <!-- underline (replaces ::before) -->
-                </h2>
-                <p class="font-normal text-[17px] text-white/50 pt-5">
-               Ensure your applications stay up-to-date and benefit from the latest Golang advancements with seamless Golang migration and upgrade services.
-
-
+                  Develop real-time AI-driven applications using Golang by
+                  combining the speed and concurrency model to serve the best
+                  for your business.
                 </p>
               </div>
             </div>
@@ -1755,11 +1629,160 @@ Golang Migration & Upgradation
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[23px]">
-                Golang Maintenance & Support
+                  Full-Stack App Development
+
                   <!-- underline (replaces ::before) -->
                 </h2>
                 <p class="font-normal text-[17px] text-white/50 pt-5">
-                  We provide ongoing <a class="underline hover:font-semibold" href="https://newagesysit.com/maintenance-and-support-services"> maintenance and support </a>services for your Go applications, ensuring they run smoothly and without any potential issues.
+                  Build scalable and reliable
+                  <a
+                    class="underline hover:font-semibold"
+                    href="https://newagesysit.com/web-application-development-services/"
+                  >
+                    web applications</a
+                  >
+                  with seamless frontend and backend integration, backed by our
+                  best Golang developers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Golang Cloud Computing
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Develop
+                  <a
+                    class="underline hover:font-semibold"
+                    href="https://newagesysit.com/cloud-application-development-services"
+                  >
+                    cloud-native applications</a
+                  >
+                  using the best cloud platforms and ideal containerization
+                  tools, with the support of our Golang experts.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Golang Microservices Development
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Get performance-centric microservices that enhance your Golang
+                  projects with superior flexibility, faster deployment, and
+                  scalability.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Mobile App Backend Development
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Build secure and real-time backends and meet increased traffic
+                  demands with the most reliable Golang backend development.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Code Review and Optimization
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Implement best coding practices and enhance code readability
+                  through a detailed code review, ensuring optimized,
+                  production-ready code.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Golang Team Augmentation
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Hire dedicated Golang developers to work with the existing
+                  team in building applications using our IT staff team
+                  augmentation services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Golang Migration & Upgradation
+
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  Ensure your applications stay up-to-date and benefit from the
+                  latest Golang advancements with seamless Golang migration and
+                  upgrade services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ppc-service-card p-6 rounded-[15px] min-h-[300px]">
+            <div>
+              <div class="icon mb-[20px]">
+                <img src="./img/pcc-ser-5.svg" alt="" />
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-semibold text-[23px]">
+                  Golang Maintenance & Support
+                  <!-- underline (replaces ::before) -->
+                </h2>
+                <p class="font-normal text-[17px] text-white/50 pt-5">
+                  We provide ongoing
+                  <a
+                    class="underline hover:font-semibold"
+                    href="https://newagesysit.com/maintenance-and-support-services"
+                  >
+                    maintenance and support </a
+                  >services for your Go applications, ensuring they run smoothly
+                  and without any potential issues.
                 </p>
               </div>
             </div>
@@ -1777,21 +1800,20 @@ Golang Migration & Upgradation
       </div>
     </section>
 
-    <section class=" py-10  lg:py-20 bg-black text-white">
+    <section class="py-10 lg:py-20 bg-black text-white">
       <div class="container">
         <div class="text-[20px] text-center">
           <h2
             class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
           >
-          Our Golang Developer Expertise 
-
-
+            Our Golang Developer Expertise
           </h2>
           <p
             class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto leading-normal text-[#FFFFFFB2]"
           >
-           While hiring a developer, you also hire specialists with skills and expertise in scaling your projects with best-in-class tools, a modern approach, and advanced technologies.
-
+            While hiring a developer, you also hire specialists with skills and
+            expertise in scaling your projects with best-in-class tools, a
+            modern approach, and advanced technologies.
           </p>
         </div>
         <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
@@ -1804,7 +1826,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class=" font-[300]">Concurrency</span>
+                      <span class="font-[300]">Concurrency</span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
                       >
@@ -1841,7 +1863,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Goroutines 
+                                Goroutines
                               </p>
                             </div>
                           </div>
@@ -1861,7 +1883,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Channels 
+                                Channels
                               </p>
                             </div>
                           </div>
@@ -1874,14 +1896,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                               src="./img/cletter.svg"
+                                src="./img/cletter.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Context 
+                                Context
                               </p>
                             </div>
                           </div>
@@ -1901,7 +1923,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               Sync 
+                                Sync
                               </p>
                             </div>
                           </div>
@@ -1914,14 +1936,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                               src="./img/errfroup.svg"
+                                src="./img/errfroup.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               Errgroup 
+                                Errgroup
                               </p>
                             </div>
                           </div>
@@ -1971,7 +1993,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                gRPC 
+                                gRPC
                               </p>
                             </div>
                           </div>
@@ -1991,7 +2013,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Kafka 
+                                Kafka
                               </p>
                             </div>
                           </div>
@@ -2011,7 +2033,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                NATS 
+                                NATS
                               </p>
                             </div>
                           </div>
@@ -2032,7 +2054,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               RabbitMQ 
+                                RabbitMQ
                               </p>
                             </div>
                           </div>
@@ -2052,7 +2074,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Istio 
+                                Istio
                               </p>
                             </div>
                           </div>
@@ -2072,7 +2094,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Kong  
+                                Kong
                               </p>
                             </div>
                           </div>
@@ -2092,7 +2114,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Traefik  
+                                Traefik
                               </p>
                             </div>
                           </div>
@@ -2112,7 +2134,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              OpenTelemetry  
+                                OpenTelemetry
                               </p>
                             </div>
                           </div>
@@ -2132,7 +2154,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Prometheus  
+                                Prometheus
                               </p>
                             </div>
                           </div>
@@ -2152,7 +2174,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Grafana 
+                                Grafana
                               </p>
                             </div>
                           </div>
@@ -2165,8 +2187,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-[300]">REST APIs
-                      </span>
+                      <span class="font-[300]">REST APIs </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -2196,14 +2217,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                               src="./img/Gin.svg"
+                                src="./img/g.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Gin 
+                                Gin
                               </p>
                             </div>
                           </div>
@@ -2216,14 +2237,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Echo.svg"
+                                src="./img/e.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Echo 
+                                Echo
                               </p>
                             </div>
                           </div>
@@ -2236,14 +2257,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                 src="./img/Fiber.svg"
+                                src="./img/f.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Fiber 
+                                Fiber
                               </p>
                             </div>
                           </div>
@@ -2256,15 +2277,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Chi.svg"
+                                src="./img/c.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               Chi 
-
+                                Chi
                               </p>
                             </div>
                           </div>
@@ -2277,36 +2297,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                               src="./img/tic-Swagger.svg"
-                                alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
-                              />
-                              <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
-                              >
-                               Swagger  
-
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
-                        >
-                          <div class="flex flex-wrap">
-                            <div
-                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
-                            >
-                              <img
-                               src="./img/tic-JWT.svg"
+                                src="./img/tic-Swagger.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               JWT  
-
+                                Swagger
                               </p>
                             </div>
                           </div>
@@ -2319,7 +2317,27 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                 src="./img/tic -OAuth 2.0.svg"
+                                src="./img/tic-JWT.svg"
+                                alt="tech"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                              >
+                                JWT
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/tic -OAuth 2.0.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
@@ -2327,14 +2345,10 @@ Golang Migration & Upgradation
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
                                 OAuth 2.0
- 
-
                               </p>
                             </div>
                           </div>
                         </div>
-                      
-                    
                       </div>
                     </div>
                   </div>
@@ -2373,14 +2387,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Gin.svg"
+                                src="./img/g.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Gin 
+                                Gin
                               </p>
                             </div>
                           </div>
@@ -2393,14 +2407,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Echo.svg"
+                                src="./img/e.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Echo 
+                                Echo
                               </p>
                             </div>
                           </div>
@@ -2413,14 +2427,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Fiber.svg"
+                                src="./img/f.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Fiber 
+                                Fiber
                               </p>
                             </div>
                           </div>
@@ -2440,14 +2454,11 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Gorilla/Mux
-
+                                Gorilla/Mux
                               </p>
                             </div>
                           </div>
                         </div>
-                      
-                    
                       </div>
                     </div>
                   </div>
@@ -2492,14 +2503,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                               src="./img/tic-postgresql.svg"
+                                src="./img/tic-postgresql.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                PostgreSQL 
+                                PostgreSQL
                               </p>
                             </div>
                           </div>
@@ -2519,7 +2530,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                MySQL 
+                                MySQL
                               </p>
                             </div>
                           </div>
@@ -2539,7 +2550,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                MongoDB 
+                                MongoDB
                               </p>
                             </div>
                           </div>
@@ -2559,7 +2570,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Redis 
+                                Redis
                               </p>
                             </div>
                           </div>
@@ -2579,7 +2590,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Kafka 
+                                Kafka
                               </p>
                             </div>
                           </div>
@@ -2599,7 +2610,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Stripe  
+                                Stripe
                               </p>
                             </div>
                           </div>
@@ -2619,7 +2630,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Twilio  
+                                Twilio
                               </p>
                             </div>
                           </div>
@@ -2639,7 +2650,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              OneSignal  
+                                OneSignal
                               </p>
                             </div>
                           </div>
@@ -2659,7 +2670,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Google Maps 
+                                Google Maps
                               </p>
                             </div>
                           </div>
@@ -2679,7 +2690,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              AWS S3 
+                                AWS S3
                               </p>
                             </div>
                           </div>
@@ -2729,7 +2740,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               Docker 
+                                Docker
                               </p>
                             </div>
                           </div>
@@ -2749,7 +2760,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Kubernetes 
+                                Kubernetes
                               </p>
                             </div>
                           </div>
@@ -2769,7 +2780,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Helm 
+                                Helm
                               </p>
                             </div>
                           </div>
@@ -2789,7 +2800,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                              Terraform 
+                                Terraform
                               </p>
                             </div>
                           </div>
@@ -2809,7 +2820,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                GitHub Actions 
+                                GitHub Actions
                               </p>
                             </div>
                           </div>
@@ -2829,7 +2840,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                           Jenkins 
+                                Jenkins
                               </p>
                             </div>
                           </div>
@@ -2849,7 +2860,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                           Prometheus  
+                                Prometheus
                               </p>
                             </div>
                           </div>
@@ -2869,7 +2880,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                           Grafana 
+                                Grafana
                               </p>
                             </div>
                           </div>
@@ -2918,7 +2929,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                AWS 
+                                AWS
                               </p>
                             </div>
                           </div>
@@ -2931,14 +2942,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                 src="./img/tic-google-cloud.svg"
+                                src="./img/tic-google-cloud.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                GCP 
+                                GCP
                               </p>
                             </div>
                           </div>
@@ -2958,7 +2969,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Azure 
+                                Azure
                               </p>
                             </div>
                           </div>
@@ -2978,7 +2989,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                CloudFront 
+                                CloudFront
                               </p>
                             </div>
                           </div>
@@ -2998,7 +3009,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Lambda 
+                                Lambda
                               </p>
                             </div>
                           </div>
@@ -3011,14 +3022,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/RDS.svg"
+                                src="./img/r.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                RDS  
+                                RDS
                               </p>
                             </div>
                           </div>
@@ -3031,15 +3042,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                               src="./img/TIC_Cloud Run.svg"
+                                src="./img/TIC_Cloud Run.svg"
                                 alt="tech"
                                 class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Cloud Run
- 
+                                Cloud Run
                               </p>
                             </div>
                           </div>
@@ -3082,14 +3092,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Testify.svg"
+                                src="./img/t.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
-                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2 "
+                                class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Testify   
+                                Testify
                               </p>
                             </div>
                           </div>
@@ -3102,14 +3112,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/Ginkgo.svg"
+                                src="./img/g.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Ginkgo 
+                                Ginkgo
                               </p>
                             </div>
                           </div>
@@ -3122,19 +3132,19 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                 src="./img/GoMock.svg"
+                                src="./img/g.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                               GoMock 
+                                GoMock
                               </p>
                             </div>
                           </div>
                         </div>
-                        
+
                         <div
                           class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
                         >
@@ -3150,7 +3160,7 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Testcontainers   
+                                Testcontainers
                               </p>
                             </div>
                           </div>
@@ -3170,12 +3180,11 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 K6
+                                K6
                               </p>
                             </div>
                           </div>
                         </div>
-                       
                       </div>
                     </div>
                   </div>
@@ -3184,8 +3193,7 @@ Golang Migration & Upgradation
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
                       onclick="toggleAccordionPPC(this)"
                     >
-                      <span class="font-[300]">Performance Tuning
- </span>
+                      <span class="font-[300]">Performance Tuning </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
                       >
@@ -3215,14 +3223,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/pprof.svg"
+                                src="./img/p.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                pprof  
+                                pprof
                               </p>
                             </div>
                           </div>
@@ -3235,14 +3243,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                src="./img/r.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-full p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Runtime/Trace  
+                                Runtime/Trace
                               </p>
                             </div>
                           </div>
@@ -3262,12 +3270,12 @@ Golang Migration & Upgradation
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Sync.Pool 
+                                Sync.Pool
                               </p>
                             </div>
                           </div>
                         </div>
-                      
+
                         <div
                           class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
                         >
@@ -3276,14 +3284,14 @@ Golang Migration & Upgradation
                               class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
                             >
                               <img
-                                src="./img/"
+                                src="./img/j.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 bg-white rounded-xl p-1"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                Jsoniter  
+                                Jsoniter
                               </p>
                             </div>
                           </div>
@@ -3298,18 +3306,16 @@ Golang Migration & Upgradation
                               <img
                                 src="./img/tic-redis.svg"
                                 alt="tech"
-                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2 "
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
                               />
                               <p
                                 class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                               >
-                                 Redis Cache
-  
+                                Redis Cache
                               </p>
                             </div>
                           </div>
                         </div>
-                       
                       </div>
                     </div>
                   </div>
@@ -3326,7 +3332,7 @@ Golang Migration & Upgradation
         <h2
           class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto text-white"
         >
-         How it Works 
+          How it Works
         </h2>
       </div>
       <div class="timeline">
@@ -3335,11 +3341,11 @@ Golang Migration & Upgradation
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>01</h2>
-                <h3>You Define Needs
-</h3>
+                <h3>You Define Needs</h3>
                 <p>
-                 Let us know what you need from us. Submit a request that includes the tech stack, project scope, and any additional requirements.
-
+                  Let us know what you need from us. Submit a request that
+                  includes the tech stack, project scope, and any additional
+                  requirements.
                 </p>
               </div>
             </li>
@@ -3347,11 +3353,10 @@ Golang Migration & Upgradation
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>02</h2>
-                <h3>We Vet & Preselect
-</h3>
+                <h3>We Vet & Preselect</h3>
                 <p>
-                 We understand your needs and immediately match the right developers to help you with your project requirements. 
-
+                  We understand your needs and immediately match the right
+                  developers to help you with your project requirements.
                 </p>
               </div>
             </li>
@@ -3359,11 +3364,10 @@ Golang Migration & Upgradation
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>03</h2>
-                <h3>Interview & Match
-</h3>
+                <h3>Interview & Match</h3>
                 <p>
-                 Our talent team identifies the ideal developers from our network and conducts interviews to match your project needs. 
-
+                  Our talent team identifies the ideal developers from our
+                  network and conducts interviews to match your project needs.
                 </p>
               </div>
             </li>
@@ -3371,865 +3375,880 @@ Golang Migration & Upgradation
             <li class="timeline__item">
               <div class="timeline__content">
                 <h2>04</h2>
-                <h3>Onboard & Scale
-</h3>
+                <h3>Onboard & Scale</h3>
                 <p>
-                 You get the right developer to kick off your project and scale your processes with the vetted experts, making your tasks easier.  
-
+                  You get the right developer to kick off your project and scale
+                  your processes with the vetted experts, making your tasks
+                  easier.
                 </p>
               </div>
             </li>
-
-          
           </ol>
         </div>
       </div>
     </section>
 
-
     <div class="relative">
-        <div class="absolute top-0 w-full success_stories_overlay h-full -z-10"></div>
-   <section class="py-8 lg:pb-20 xl:py-32 ">
-      <div class="container">
-        <div
-          class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
-        >
+      <div
+        class="absolute top-0 w-full success_stories_overlay h-full -z-10"
+      ></div>
+      <section class="py-8 lg:pb-20 xl:py-32">
+        <div class="container">
           <div
-            class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:px-5 min-h-[600px]"
+            class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
           >
-            <div class="hidden lg:grid md:grid-cols-2 gap-6">
-              <!-- First Column - Moving Up -->
-              <div class="h-[400px] lg:h-[600px] overflow-hidden">
-                <div class="animate-marquee-pcc space-y-6">
-                  <!-- First set of tiles -->
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-react-health.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+            <div
+              class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:px-5 min-h-[600px]"
+            >
+              <div class="hidden lg:grid md:grid-cols-2 gap-6">
+                <!-- First Column - Moving Up -->
+                <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                  <div class="animate-marquee-pcc space-y-6">
+                    <!-- First set of tiles -->
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                     >
-                      Healthcare
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-finance.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Fintech
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-saas.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      SaaS
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-rts.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Real-Time Systems
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-iot.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      IoT
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-react-health.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Healthcare
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-finance.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Fintech
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-saas.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      SaaS
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-rts.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Real-Time Systems
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-iot.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      IoT
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Second Column - Moving Down -->
-              <div class="h-[400px] lg:h-[600px] overflow-hidden">
-                <div class="animate-marquee-pcc-reverse space-y-6">
-                  <!-- First set of tiles -->
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-blockchain.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Blockchain
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-on-demand.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      On-Demand
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-education.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Education
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-wellness.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Wellness
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-transportation.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Transportation
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-blockchain.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Blockchain
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-on-demand.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      On-Demand
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-education.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Education
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-wellness.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Wellness
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-transportation.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
-                    >
-                      Transportation
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center lg:text-left text-white p-2 md:p-10">
-              <h2
-                class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6"
-              >
-                We Serve These Industries
-              </h2>
-
-              <p
-                class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8"
-              >
-              Our journey is something more than inspiring. We’ve come a long way with experience in serving across multiple industries. Here’s a glance into them to 
-
-              </p>
-              <div
-                class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
-              >
-                <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-health.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      Healthcare
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/pcc-ic-finance.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      Fintech
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-saas.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      SaaS
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-rts.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <div>
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-react-health.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
                       <h3
-                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Healthcare
+                      </h3>
+                    </div>
+
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/pcc-ic-finance.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Fintech
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-saas.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        SaaS
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-rts.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
                       >
                         Real-Time Systems
                       </h3>
                     </div>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-iot.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      IoT
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-blockchain.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      Blockchain
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-on-demand.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
-                    >
-                      On-Demand
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-education.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      Education
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img
-                        src="./img/ppc-health-wellness.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px] mr-5"
-                      />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      Wellness
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
+
                     <div
-                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                     >
-                      <img
-                        src="./img/ppc-health-transportation.svg"
-                        alt="icon"
-                        class="w-[70px] h-[70px]"
-                      />
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-iot.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        IoT
+                      </h3>
                     </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                     >
-                      Transportation
-                    </h3>
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-react-health.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Healthcare
+                      </h3>
+                    </div>
+
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/pcc-ic-finance.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Fintech
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-saas.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        SaaS
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-rts.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Real-Time Systems
+                      </h3>
+                    </div>
+
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-iot.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        IoT
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second Column - Moving Down -->
+                <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                  <div class="animate-marquee-pcc-reverse space-y-6">
+                    <!-- First set of tiles -->
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-blockchain.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Blockchain
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-on-demand.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        On-Demand
+                      </h3>
+                    </div>
+
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-education.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Education
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-wellness.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Wellness
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-transportation.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Transportation
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-blockchain.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Blockchain
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-on-demand.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        On-Demand
+                      </h3>
+                    </div>
+
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-education.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Education
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-wellness.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Wellness
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-transportation.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                      >
+                        Transportation
+                      </h3>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="flex justify-center items-center mt-3 lg:justify-start"
-              >
-                <a href="#" class="text-white">
-                  <div class="with-transparency">
-                    <span>Schedule Your Free Consultation</span>
+
+              <div class="text-center lg:text-left text-white p-2 md:p-10">
+                <h2
+                  class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6"
+                >
+                  We Serve These Industries
+                </h2>
+
+                <p
+                  class="text-[#FFFFFFB2] text-[18px] md:text-[20px] lg:text-[24px] mb-8"
+                >
+                  Our journey is something more than inspiring. We’ve come a
+                  long way with experience in serving across multiple
+                  industries. Here’s a glance into them to
+                </p>
+                <div
+                  class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
+                >
+                  <div
+                    class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6"
+                  >
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/pcc-ic-health.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        Healthcare
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/pcc-ic-finance.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        Fintech
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-saas.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        SaaS
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-rts.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <div>
+                        <h3
+                          class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                        >
+                          Real-Time Systems
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-iot.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        IoT
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-blockchain.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        Blockchain
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-on-demand.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                      >
+                        On-Demand
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-education.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        Education
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                    >
+                      <div class="flex items-start justify-start mb-4">
+                        <img
+                          src="./img/ppc-health-wellness.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px] mr-5"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4"
+                      >
+                        Wellness
+                      </h3>
+                    </div>
+                    <div
+                      class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                    >
+                      <div
+                        class="flex items-start justify-start mb-4 flex-shrink-0"
+                      >
+                        <img
+                          src="./img/ppc-health-transportation.svg"
+                          alt="icon"
+                          class="w-[70px] h-[70px]"
+                        />
+                      </div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                      >
+                        Transportation
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-center items-center mt-3 lg:justify-start"
+                >
+                  <a href="#" class="text-white">
+                    <div class="with-transparency">
+                      <span>Schedule Your Free Consultation</span>
+                      <svg
+                        width="7"
+                        height="12"
+                        viewBox="0 0 7 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                          stroke="white"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="client_experiences bg-transparent relative z-10">
+        <div class="container">
+          <div class="text-center max-w-8xl mx-auto mb-10 px-4">
+            <h2
+              class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2"
+            >
+              Our Success Stories
+            </h2>
+            <p
+              class="text-[18px] font-[400] font-manrope min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
+            >
+              Delve into the client success stories we have built with our
+              expertise in delivering top-quality deliverables for their
+              businesses.
+            </p>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme client_says">
+          <div class="item">
+            <div class="item-top">
+              <div class="it-left">
+                <h2>Lcard</h2>
+                <p>
+                  A stunning digital business card app with a personalized and
+                  interactive profile where a user can create and share
+                  unlimited digital cards for different customers.
+                </p>
+              </div>
+              <div class="it-right">
+                <div class="itr-item">
+                  <h2>100k</h2>
+                  <p>Active Users</p>
+                </div>
+                <div class="itr-item">
+                  <h2>300k+</h2>
+                  <p>Total Appointments</p>
+                </div>
+              </div>
+            </div>
+            <div class="item-middle">
+              <img src="./img/Lcard.webp" alt="" />
+            </div>
+            <div class="item-last">
+              <div class="il-left">
+                <div class="il-left-top">
+                  <div class="ilt-left">
+                    <img src="./img/David-Chabukashvili-1-1-1.webp" alt="" />
+                  </div>
+                  <div class="ilt-right">
+                    <h3>David-Chabukashvili</h3>
+                    <p>Founder - L-Card App</p>
+                  </div>
+                </div>
+                <div class="ill-dec">
+                  <p>
+                    They delivered everything on time and it was of great
+                    quality. They go above and beyond to meet your requirements
+                    and deliver the product you are looking for…
+                  </p>
+                </div>
+              </div>
+              <div class="il-right">
+                <a href="#" class="btn-knowmore">
+                  View Case Study
+                  <span>
                     <svg
                       width="7"
-                      height="12"
-                      viewBox="0 0 7 12"
+                      height="11"
+                      viewBox="0 0 7 11"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
-                        stroke="white"
+                        d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                        stroke="#212121"
                         stroke-width="1.8"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                      />
+                      ></path>
                     </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <div class="it-left">
+                <h2>ISRA</h2>
+                <p>
+                  An On-demand service-providing application that effortlessly
+                  connects customers with hairstylist professionals and make-up
+                  artists on schedule.
+                </p>
+              </div>
+              <div class="it-right">
+                <div class="itr-item">
+                  <h2>10k</h2>
+                  <p>Active Users</p>
+                </div>
+                <div class="itr-item">
+                  <h2>15k+</h2>
+                  <p>Total Appointments</p>
+                </div>
+              </div>
+            </div>
+            <div class="item-middle">
+              <img src="./img/Isra.webp" alt="" />
+            </div>
+            <div class="item-last">
+              <div class="il-left">
+                <div class="il-left-top">
+                  <div class="ilt-left">
+                    <img src="./img/iman.webp" alt="" />
                   </div>
+                  <div class="ilt-right">
+                    <h3>Iman Khwaja</h3>
+                    <p>Owner - ISRA</p>
+                  </div>
+                </div>
+                <div class="ill-dec">
+                  <p>
+                    From every single moment, from the beginning till the end,
+                    they were there for me. <br />They were very systematic and
+                    methodical in every single step and…
+                  </p>
+                </div>
+              </div>
+              <div class="il-right">
+                <a href="#" class="btn-knowmore">
+                  View Case Study
+                  <span>
+                    <svg
+                      width="7"
+                      height="11"
+                      viewBox="0 0 7 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                        stroke="#212121"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <div class="it-left">
+                <h2>WhipFlip</h2>
+                <p>
+                  An on-demand app connects you with a network of experts, from
+                  car buying and selling professionals to dedicated concierges
+                  who ensure smooth appointment scheduling.
+                </p>
+              </div>
+              <div class="it-right">
+                <div class="itr-item">
+                  <h2>10k</h2>
+                  <p>Active Users</p>
+                </div>
+                <div class="itr-item">
+                  <h2>15k+</h2>
+                  <p>Total Appointments</p>
+                </div>
+              </div>
+            </div>
+            <div class="item-middle">
+              <img src="./img/WhipFlip.webp" alt="" />
+            </div>
+            <div class="item-last">
+              <div class="il-left">
+                <div class="il-left-top">
+                  <div class="ilt-left">
+                    <img src="./img/whipflip-ceo.jpg" alt="" />
+                  </div>
+                  <div class="ilt-right">
+                    <h3>Roger C Clappe</h3>
+                    <p>CEO - WhipFlip</p>
+                  </div>
+                </div>
+                <div class="ill-dec">
+                  <p>
+                    From every single moment, from the beginning till the end,
+                    they were there for me. They were very systematic and
+                    methodical in every single step and …..
+                  </p>
+                </div>
+              </div>
+              <div class="il-right">
+                <a href="#" class="btn-knowmore">
+                  View Case Study
+                  <span>
+                    <svg
+                      width="7"
+                      height="11"
+                      viewBox="0 0 7 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                        stroke="#212121"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-top">
+              <div class="it-left">
+                <h2>Car-up</h2>
+                <p>
+                  Car-Up offers the most convenient and transparent auto repair
+                  service, disrupting the industry with unparalleled customer
+                  service.
+                </p>
+              </div>
+              <div class="it-right">
+                <div class="itr-item">
+                  <h2>10k</h2>
+                  <p>Active Users</p>
+                </div>
+                <div class="itr-item">
+                  <h2>15k+</h2>
+                  <p>Total Appointments</p>
+                </div>
+              </div>
+            </div>
+            <div class="item-middle">
+              <img src="./img/Car-up.webp" alt="" />
+            </div>
+            <div class="item-last">
+              <div class="il-left">
+                <div class="il-left-top">
+                  <div class="ilt-left">
+                    <img src="./img/LARRY-SEIBEL-CARUP.webp" alt="" />
+                  </div>
+                  <div class="ilt-right">
+                    <h3>Larry Seibel</h3>
+                    <p>Founder- Car-Up App</p>
+                  </div>
+                </div>
+                <div class="ill-dec">
+                  <p>
+                    From every single moment, from the beginning till the end,
+                    they were there for me. They were very systematic and
+                    methodical in every single step and …
+                  </p>
+                </div>
+              </div>
+              <div class="il-right">
+                <a href="#" class="btn-knowmore">
+                  View Case Study
+                  <span>
+                    <svg
+                      width="7"
+                      height="11"
+                      viewBox="0 0 7 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                        stroke="#212121"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="client_experiences bg-transparent relative z-10">
-    
-      <div class="container ">
-        <div class=" text-center max-w-8xl mx-auto mb-10 px-4">
-          <h2
-            class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-semibold text-center min-992px:leading-[60px] mb-2"
-           >
-            Our Success Stories
-          </h2>
-          <p
-            class="text-[18px] font-[400] font-manrope  min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
-          >
-            Delve into the client success stories we have built with our
-            expertise in delivering top-quality deliverables for their
-            businesses.
-          </p>
-        </div>
-      </div>
-      <div class="owl-carousel owl-theme client_says">
-        <div class="item">
-          <div class="item-top">
-            <div class="it-left">
-              <h2>Lcard</h2>
-              <p>
-                A stunning digital business card app with a personalized and
-                interactive profile where a user can create and share unlimited
-                digital cards for different customers.
-              </p>
-            </div>
-            <div class="it-right">
-              <div class="itr-item">
-                <h2>100k</h2>
-                <p>Active Users</p>
-              </div>
-              <div class="itr-item">
-                <h2>300k+</h2>
-                <p>Total Appointments</p>
-              </div>
-            </div>
-          </div>
-          <div class="item-middle">
-            <img src="./img/Lcard.webp" alt="" />
-          </div>
-          <div class="item-last">
-            <div class="il-left">
-              <div class="il-left-top">
-                <div class="ilt-left">
-                  <img src="./img/David-Chabukashvili-1-1-1.webp" alt="" />
-                </div>
-                <div class="ilt-right">
-                  <h3>David-Chabukashvili</h3>
-                  <p>Founder - L-Card App</p>
-                </div>
-              </div>
-              <div class="ill-dec">
-                <p>
-                  They delivered everything on time and it was of great quality.
-                  They go above and beyond to meet your requirements and deliver
-                  the product you are looking for…
-                </p>
-              </div>
-            </div>
-            <div class="il-right">
-              <a href="#" class="btn-knowmore">
-                View Case Study
-                <span>
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-top">
-            <div class="it-left">
-              <h2>ISRA</h2>
-              <p>
-                An On-demand service-providing application that effortlessly
-                connects customers with hairstylist professionals and make-up
-                artists on schedule.
-              </p>
-            </div>
-            <div class="it-right">
-              <div class="itr-item">
-                <h2>10k</h2>
-                <p>Active Users</p>
-              </div>
-              <div class="itr-item">
-                <h2>15k+</h2>
-                <p>Total Appointments</p>
-              </div>
-            </div>
-          </div>
-          <div class="item-middle">
-            <img src="./img/Isra.webp" alt="" />
-          </div>
-          <div class="item-last">
-            <div class="il-left">
-              <div class="il-left-top">
-                <div class="ilt-left">
-                  <img src="./img/iman.webp" alt="" />
-                </div>
-                <div class="ilt-right">
-                  <h3>Iman Khwaja</h3>
-                  <p>Owner - ISRA</p>
-                </div>
-              </div>
-              <div class="ill-dec">
-                <p>
-                  From every single moment, from the beginning till the end,
-                  they were there for me. <br />They were very systematic and
-                  methodical in every single step and…
-                </p>
-              </div>
-            </div>
-            <div class="il-right">
-              <a href="#" class="btn-knowmore">
-                View Case Study
-                <span>
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-top">
-            <div class="it-left">
-              <h2>WhipFlip</h2>
-              <p>
-                An on-demand app connects you with a network of experts, from
-                car buying and selling professionals to dedicated concierges who
-                ensure smooth appointment scheduling.
-              </p>
-            </div>
-            <div class="it-right">
-              <div class="itr-item">
-                <h2>10k</h2>
-                <p>Active Users</p>
-              </div>
-              <div class="itr-item">
-                <h2>15k+</h2>
-                <p>Total Appointments</p>
-              </div>
-            </div>
-          </div>
-          <div class="item-middle">
-            <img src="./img/WhipFlip.webp" alt="" />
-          </div>
-          <div class="item-last">
-            <div class="il-left">
-              <div class="il-left-top">
-                <div class="ilt-left">
-                  <img src="./img/whipflip-ceo.jpg" alt="" />
-                </div>
-                <div class="ilt-right">
-                  <h3>Roger C Clappe</h3>
-                  <p>CEO - WhipFlip</p>
-                </div>
-              </div>
-              <div class="ill-dec">
-                <p>
-                  From every single moment, from the beginning till the end,
-                  they were there for me. They were very systematic and
-                  methodical in every single step and …..
-                </p>
-              </div>
-            </div>
-            <div class="il-right">
-              <a href="#" class="btn-knowmore">
-                View Case Study
-                <span>
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-top">
-            <div class="it-left">
-              <h2>Car-up</h2>
-              <p>
-                Car-Up offers the most convenient and transparent auto repair
-                service, disrupting the industry with unparalleled customer
-                service.
-              </p>
-            </div>
-            <div class="it-right">
-              <div class="itr-item">
-                <h2>10k</h2>
-                <p>Active Users</p>
-              </div>
-              <div class="itr-item">
-                <h2>15k+</h2>
-                <p>Total Appointments</p>
-              </div>
-            </div>
-          </div>
-          <div class="item-middle">
-            <img src="./img/Car-up.webp" alt="" />
-          </div>
-          <div class="item-last">
-            <div class="il-left">
-              <div class="il-left-top">
-                <div class="ilt-left">
-                  <img src="./img/LARRY-SEIBEL-CARUP.webp" alt="" />
-                </div>
-                <div class="ilt-right">
-                  <h3>Larry Seibel</h3>
-                  <p>Founder- Car-Up App</p>
-                </div>
-              </div>
-              <div class="ill-dec">
-                <p>
-                  From every single moment, from the beginning till the end,
-                  they were there for me. They were very systematic and
-                  methodical in every single step and …
-                </p>
-              </div>
-            </div>
-            <div class="il-right">
-              <a href="#" class="btn-knowmore">
-                View Case Study
-                <span>
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
     </div>
 
-     <section class="bg-black py-8 md:py-20 px-4 ">
+    <section class="bg-black py-8 md:py-20 px-4">
       <div class="container mx-auto text-center">
         <!-----desktop section--->
         <div class="hidden lg:grid grid-cols-10 gap-6 mb-16">
@@ -4257,15 +4276,21 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO,WhipFlip</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO,WhipFlip
+                  </p>
                 </div>
               </a>
             </div>
 
-            <div class="relative group cursor-pointer mt-3 h-[220px] xl:h-[320px]">
+            <div
+              class="relative group cursor-pointer mt-3 h-[220px] xl:h-[320px]"
+            >
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
@@ -4288,10 +4313,14 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Larry Seibel
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO,Car-Upp</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO,Car-Upp
+                  </p>
                 </div>
               </a>
             </div>
@@ -4324,7 +4353,9 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Rob Salerno
                   </p>
                   <p class="text-[16px] text-white opacity-[0.5] truncate">
@@ -4359,7 +4390,9 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Chris O'Rorke
                   </p>
                   <p class="text-[16px] text-white opacity-[0.5] truncate">
@@ -4394,17 +4427,23 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Iman Khawaja
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, ISRA App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO, ISRA App
+                  </p>
                 </div>
               </a>
             </div>
           </div>
 
           <div class="flex flex-col col-span-2 gap-6">
-            <div class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[320px]">
+            <div
+              class="relative group cursor-pointer row-span-2 h-[220px] xl:h-[320px]"
+            >
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
@@ -4427,15 +4466,21 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     David Chabukashvili
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, Lcard App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO, Lcard App
+                  </p>
                 </div>
               </a>
             </div>
 
-            <div class="relative group cursor-pointer row-span-2 mt-3 h-[220px] xl:h-[320px]">
+            <div
+              class="relative group cursor-pointer row-span-2 mt-3 h-[220px] xl:h-[320px]"
+            >
               <a
                 class="popup-youtube"
                 href="https://www.youtube.com/watch?v=slRQbxC1UoI"
@@ -4458,7 +4503,11 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">Rob Evans</p>
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
+                    Rob Evans
+                  </p>
                   <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, Donut Man app
                   </p>
@@ -4495,10 +4544,14 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, WhipFlip</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO, WhipFlip
+                  </p>
                 </div>
               </a>
             </div>
@@ -4526,10 +4579,14 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Larry Seibel
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, Car-Upp</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO, Car-Upp
+                  </p>
                 </div>
               </a>
             </div>
@@ -4557,7 +4614,9 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Rob Salerno
                   </p>
                   <p class="text-[16px] text-white opacity-[0.5] truncate">
@@ -4590,7 +4649,9 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Chris O'Rorke
                   </p>
                   <p class="text-[16px] text-white opacity-[0.5] truncate">
@@ -4623,10 +4684,14 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     Iman Khawaja
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, ISRA App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO, ISRA App
+                  </p>
                 </div>
               </a>
             </div>
@@ -4654,10 +4719,14 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
                     David Chabukashvili
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">CEO, Lcard App</p>
+                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                    CEO, Lcard App
+                  </p>
                 </div>
               </a>
             </div>
@@ -4685,7 +4754,11 @@ Golang Migration & Upgradation
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-semibold truncate mb-0.5 uppercase">Rob Evans</p>
+                  <p
+                    class="text-[18px] font-semibold truncate mb-0.5 uppercase"
+                  >
+                    Rob Evans
+                  </p>
                   <p class="text-[16px] text-white opacity-[0.5] truncate">
                     CEO, Donut Man app
                   </p>
@@ -4697,14 +4770,17 @@ Golang Migration & Upgradation
 
         <div class="text-center lg:-mt-[10rem]">
           <h3
-            class="text-[28px] md:text-[40px] font-semibold text-white mb-4 max-w-2xl mx-auto"
+            class="text-[20px] md:text-[28px] font-[400] text-white mb-4 max-w-2xl mx-auto"
           >
-            Here’s What Our Clients Say<br class="hidden lg:block" />
-             About The Results They’ve<br class="hidden lg:block" />
-              Made With Us
+            Here’s What Our Clients Say
+            About The Results They’ve
+            Made With Us
           </h3>
-          <p class="text-gray-400 mb-8 text-[18px] max-w-2xl mx-auto">
-            We have not only made the customer journeys smoother, but also helped businesses and entrepreneurs achieve remarkable results with our services. Hear from our clients as they talk about how we have helped them achieve their goals!
+          <p class="text-gray-400 mb-8 text-[17px] max-w-2xl mx-auto">
+            We have not only made the customer journeys smoother, but also
+            helped businesses and entrepreneurs achieve remarkable results with
+            our services. Hear from our clients as they talk about how we have
+            helped them achieve their goals!
           </p>
           <button
             class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[18px]"
@@ -4715,206 +4791,234 @@ Golang Migration & Upgradation
       </div>
     </section>
 
-   <section class="bg-black pt-0 pb-20 md:py-20 relative">
+    <section class="bg-black pt-0 pb-20 md:py-20 relative">
       <div
         class="container max-w-[1440px] mx-auto px-4 text-center relative z-20"
       >
         <h2
           class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold text-white mb-5 leading-[42px] md:leading-[60px]"
         >
-        Our Guarantee 
+          Our Guarantee
         </h2>
-          <p
-            class="text-[18px] md:text-[22px] min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
-          >
-           NewAgeSysIT takes pride in its commitment to 100% client satisfaction. If the deliverables don’t meet the desired expectations, we are prepared to replace, refine, or relaunch them without additional cost. We ensure you’re confident about the result and make your project risk-free.
-
-          </p>
+        <p
+          class="text-[18px] md:text-[22px] min-992px:max-w-[70%] mx-auto leading-normal text-[#8C8C8C]"
+        >
+          NewAgeSysIT takes pride in its commitment to 100% client satisfaction.
+          If the deliverables don’t meet the desired expectations, we are
+          prepared to replace, refine, or relaunch them without additional cost.
+          We ensure you’re confident about the result and make your project
+          risk-free.
+        </p>
         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3 mt-16">
           <!-- Card 1 -->
           <div
-            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/gurantee-card-1.svg')] bg-cover bg-center bg-no-repeat"
+            class="border-[#4E3656CC] border-[1px] h-[600px] rounded-[20px] flex flex-col relative bg-[url('./img/gurantee-card-1.svg')] bg-cover bg-center bg-no-repeat"
           >
-           
             <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">30-Day Risk-Free Trial 
-</h4>
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                30-Day Risk-Free Trial
+              </h4>
               <p
                 class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-               You can experience the quality we serve before making a commitment. Start with a 7-day risk-free trial with no upfront cost involved. 
-
+                You can experience the quality we serve before making a
+                commitment. Start with a 7-day risk-free trial with no upfront
+                cost involved.
               </p>
             </div>
-           
           </div>
           <div
-            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/gurantee-card-2.svg')] bg-cover bg-center bg-no-repeat "
+            class="border-[#4E3656CC] border-[1px] h-[600px] rounded-[20px] flex flex-col relative bg-[url('./img/gurantee-card-2.svg')] bg-cover bg-center bg-no-repeat"
           >
-            
             <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">Performance & Accountability</h4>
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Performance & Accountability
+              </h4>
               <p
                 class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-               With defined SLAs, performance metrics, and free replacement policies, we deliver outcomes to ensure reliability and accountability. 
-
+                With defined SLAs, performance metrics, and free replacement
+                policies, we deliver outcomes to ensure reliability and
+                accountability.
               </p>
             </div>
-           
           </div>
-            <div
-            class="ppc-golang-card-border h-[600px] rounded-[20px]  flex flex-col relative bg-[url('./img/gurantee-card-3.svg')] bg-cover bg-center bg-no-repeat"
+          <div
+            class="border-[#4E3656CC] border-[1px] h-[600px] rounded-[20px] flex flex-col relative bg-[url('./img/gurantee-card-3.svg')] bg-cover bg-center bg-no-repeat"
           >
-           
             <div class="text-left p-8 flex-grow">
-              <h4 class="text-white text-[23px] font-semibold mb-6">Post-Launch Support
-</h4>
+              <h4 class="text-white text-[23px] font-semibold mb-6">
+                Post-Launch Support
+              </h4>
               <p
                 class="text-[#FFFFFF80] text-[17px] font-extralight leading-relaxed"
               >
-              We offer post-launch support for a range of periods, as communicated, to fix errors, ensure a smooth rollout, and optimize performance.
-
-
+                We offer post-launch support for a range of periods, as
+                communicated, to fix errors, ensure a smooth rollout, and
+                optimize performance.
               </p>
             </div>
-           
           </div>
         </div>
       </div>
     </section>
 
     <section class="bg-black text-white py-20 relative overflow-hidden">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold mb-3">
-     Flexible Engagement Models & Pricing 
+      <div class="container mx-auto px-4 text-center">
+        <h2
+          class="text-[28px] md:text-[36px] lg:text-[40px] xl:text-[50px] font-semibold mb-3"
+        >
+          Flexible Engagement Models & Pricing
+        </h2>
+        <p
+          class="text-gray-400 mb-16 text-[18px] md:text-[20px] max-w-3xl mx-auto"
+        >
+          Select the ideal pricing model to meet your custom development needs.
+        </p>
 
-    </h2>
-    <p class="text-gray-400 mb-16 text-[18px] md:text-[20px] max-w-3xl mx-auto">
-      Select the ideal pricing model to meet your custom development needs.
+        <div
+          class="relative flex flex-col lg:flex-row justify-center items-center gap-0"
+        >
+          <!-- Hourly Plan -->
+          <div
+            class="ppc-golang-card-gradient1 rounded-[58px] p-10 lg:-mr-8 flex flex-col justify-between z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] pt-10"
+          >
+            <div>
+              <h3
+                class="text-left lg:text-center pt-8 lg:pt-14 text-[28px] md:text-[32px] xl:text-[50px] font-semibold mb-4"
+              >
+                Hourly Plan
+              </h3>
+              <hr class="border-white border-[1px] mb-6" />
+              <ul
+                class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5"
+              >
+                <li>Billing per usage</li>
+                <li>Dedicated developer for your time zone</li>
+                <li>Interview before you hire</li>
+                <li>100% QA & DevOps</li>
+              </ul>
+            </div>
+            <button
+              class="mt-8 bg-white text-black font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-gray-200 transition max-w-[280px] xl:max-w-none flex items-center"
+            >
+              <span class="truncate inline-block max-w-[180px] xl:max-w-none"
+                >Get Started on Hourly Basis</span
+              >
+              <span class="inline-flex items-center ml-1">
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                    stroke="#212121"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
 
-    </p>
+          <!-- Monthly Plan (center, overlapped and highlighted) -->
+          <div
+            class="ppc-golang-card-gradient2 rounded-[58px] p-10 flex flex-col justify-between z-20 shadow-[0_0_30px_rgba(255,255,255,0.1)] h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0"
+          >
+            <div>
+              <h3
+                class="text-left lg:text-center pt-8 lg:pt-14 text-[28px] md:text-[32px] xl:text-[50px] font-semibold mb-4"
+              >
+                Monthly Plan
+              </h3>
+              <hr class="border-white border-[1px] mb-6" />
+              <ul
+                class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5"
+              >
+                <li>Dedicated team and billed per month</li>
+                <li>Direct access to the project resources</li>
+                <li>Interview before you hire</li>
+                <li>Flexible contracts for growing needs</li>
+              </ul>
+            </div>
+            <button
+              class="mt-8 bg-[#FF5C1B] text-white font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-[#e64e0e] transition max-w-[280px] xl:max-w-none flex items-center"
+            >
+              <span class="truncate inline-block max-w-[180px] xl:max-w-none"
+                >Get Started on Monthly Basis</span
+              >
+              <span class="inline-flex items-center ml-1">
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                    stroke="#FFFFFF"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
 
-    <div class="relative flex flex-col lg:flex-row justify-center items-center gap-0">
-      <!-- Hourly Plan -->
-      <div class="ppc-golang-card-gradient1 rounded-[58px] p-10 lg:-mr-8  flex flex-col justify-between  z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] pt-10">
-        <div >
-          <h3 class="text-left lg:text-center   pt-8 lg:pt-14 text-[28px] md:text-[32px]  xl:text-[50px] font-semibold mb-4">Hourly Plan</h3>
-          <hr class="border-white border-[1px] mb-6">
-          <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5">
-            <li>Billing per usage
-</li>
-            <li>Dedicated developer for your time zone
-</li>
-            <li>Interview before you hire
-</li>
-            <li>100% QA & DevOps
-</li>
-          </ul>
+          <!-- Fixed Cost Plan -->
+          <div
+            class="ppc-golang-card-gradient3 rounded-[58px] p-10 lg:-ml-8 flex flex-col justify-between z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0"
+          >
+            <div>
+              <h3
+                class="text-left lg:text-center pt-8 lg:pt-14 text-[28px] md:text-[32px] xl:text-[50px] font-semibold mb-4"
+              >
+                Fixed Cost Plan
+              </h3>
+              <hr class="border-white border-[1px] mb-6" />
+              <ul
+                class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] pl-5 list-disc"
+              >
+                <li>Dedicated project manager support</li>
+                <li>100% QA & DevOps-integrated implementation</li>
+                <li>Signed NDA and full IP ownership</li>
+                <li>Fixed deliverables and timelines</li>
+              </ul>
+            </div>
+            <button
+              class="mt-8 bg-white text-black font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-gray-200 transition max-w-[280px] xl:max-w-none flex items-center"
+            >
+              <span class="truncate inline-block max-w-[180px] xl:max-w-none"
+                >Get a Free Estimate</span
+              >
+              <span class="inline-flex items-center ml-1">
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                    stroke="#212121"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
-        <button class="mt-8 bg-white text-black font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-gray-200 transition max-w-[280px] xl:max-w-none flex items-center">
-          <span class="truncate inline-block max-w-[180px] xl:max-w-none">Get Started on Hourly Basis</span>
-           <span class="inline-flex items-center ml-1">
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-        </button>
       </div>
-
-      <!-- Monthly Plan (center, overlapped and highlighted) -->
-      <div class="ppc-golang-card-gradient2 rounded-[58px] p-10  flex flex-col justify-between  z-20 shadow-[0_0_30px_rgba(255,255,255,0.1)] h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0 ">
-        <div>
-          <h3 class="text-left lg:text-center  pt-8 lg:pt-14 text-[28px] md:text-[32px] xl:text-[50px] font-semibold mb-4">Monthly Plan</h3>
-          <hr class="border-white border-[1px] mb-6">
-          <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] list-disc pl-5">
-            <li>Dedicated team and billed per month
-</li>
-            <li>Direct access to the project resources
-</li>
-            <li>Interview before you hire</li>
-            <li>Flexible contracts for growing needs
-</li>
-          </ul>
-        </div>
-        <button class="mt-8 bg-[#FF5C1B] text-white font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-[#e64e0e] transition max-w-[280px] xl:max-w-none flex items-center">
-          <span class="truncate inline-block max-w-[180px] xl:max-w-none">Get Started on Monthly Basis</span>
-          <span class="inline-flex items-center ml-1">
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#FFFFFF"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-        </button>
-      </div>
-
-      <!-- Fixed Cost Plan -->
-      <div class="ppc-golang-card-gradient3 rounded-[58px] p-10 lg:-ml-8 flex flex-col justify-between  z-10 shadow-xl h-auto lg:h-[600px] w-full lg:w-[33%] xl:w-[500px] mt-5 lg:mt-0">
-        <div>
-          <h3 class="text-left lg:text-center   pt-8 lg:pt-14 text-[28px] md:text-[32px]  xl:text-[50px] font-semibold mb-4">Fixed Cost Plan 
-</h3>
-         <hr class="border-white border-[1px] mb-6 ">
-          <ul class="space-y-3 text-gray-300 text-left text-[16px] md:text-[18px] pl-5 list-disc">
-            <li>Dedicated project manager support
-</li>
-            <li>100% QA & DevOps-integrated implementation
-</li>
-            <li>Signed NDA and full IP ownership
-</li>
-            <li>Fixed deliverables and timelines
-</li>
-          </ul>
-        </div>
-        <button class="mt-8 bg-white text-black font-medium rounded-full py-3 px-6 w-fit self-center hover:bg-gray-200 transition max-w-[280px] xl:max-w-none flex items-center">
-          <span class="truncate inline-block max-w-[180px] xl:max-w-none">Get a Free Estimate</span>
-           <span class="inline-flex items-center ml-1">
-                  <svg
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                      stroke="#212121"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-        </button>
-      </div>
-    </div>
-  </div>
     </section>
-
-
-
 
     <section
       class="relative overflow-hidden py-16 md:py-24 text-center bg-[url('./img/bg_blank.webp')] bg-cover md:bg-[url('./img/ppc-blank-bg.webp')] md:bg-left md:bg-cover bg-no-repeat min-h-[700px]"
@@ -4952,19 +5056,19 @@ Golang Migration & Upgradation
       <div class="container relative z-10 mx-auto px-4 py-20">
         <!-- Heading -->
         <h2
-          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight  mx-auto pt-8"
+          class="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-white leading-tight mx-auto pt-8"
         >
-         Ready to hire a Golang developer from our team?
-
+          Ready to hire a Golang developer from our team?
         </h2>
 
         <!-- Subheading -->
         <p
           class="text-gray-400 mt-6 text-[16px] md:text-[18px] mx-auto leading-relaxed max-w-4xl"
         >
-         Enhance your business’s success with our highly skilled Golang developers. We offer the right set of skills, adaptable solutions, and a commitment to your goals with an expert for your software development needs.
-
-
+          Enhance your business’s success with our highly skilled Golang
+          developers. We offer the right set of skills, adaptable solutions, and
+          a commitment to your goals with an expert for your software
+          development needs.
         </p>
 
         <!-- Button -->
@@ -4973,7 +5077,7 @@ Golang Migration & Upgradation
             href="#"
             class="inline-block bg-[#FF6B2C] text-white font-medium py-3 px-6 rounded-full text-[16px] hover:bg-[#ff804d] transition-colors"
           >
-           Send your requirements
+            Send your requirements
           </a>
         </div>
       </div>
@@ -5002,7 +5106,6 @@ Golang Migration & Upgradation
                     >
                       <span class="font-normal"
                         >Why choose a Golang Developer?
-
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
@@ -5028,8 +5131,17 @@ Golang Migration & Upgradation
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >
                         <p>
-                         By choosing a Golang developer for your project, you are selecting an experienced professional in a language renowned for its reliability, scalability, and efficiency. Since the language is developed by Google, Golang is well-suited for quick compilation, and Golang developers are adept at managing concurrent processes to build scalable applications, high-performance systems, and microservices. Hiring a Golang developer can help you invest in industry-standard services that maintain an edge in the market. 
-
+                          By choosing a Golang developer for your project, you
+                          are selecting an experienced professional in a
+                          language renowned for its reliability, scalability,
+                          and efficiency. Since the language is developed by
+                          Google, Golang is well-suited for quick compilation,
+                          and Golang developers are adept at managing concurrent
+                          processes to build scalable applications,
+                          high-performance systems, and microservices. Hiring a
+                          Golang developer can help you invest in
+                          industry-standard services that maintain an edge in
+                          the market.
                         </p>
                       </div>
                     </div>
@@ -5042,8 +5154,8 @@ Golang Migration & Upgradation
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-medium"
-                        >Is it okay if I want to be involved in the development process from scratch?
-
+                        >Is it okay if I want to be involved in the development
+                        process from scratch?
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -5069,8 +5181,10 @@ Golang Migration & Upgradation
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >
                         <p>
-                          Obviously yes. NewAgeSysIT offers services to you based on agile principles. With an agile development approach, our client will be fully involved in the development process, from inception to deployment. 
-
+                          Obviously yes. NewAgeSysIT offers services to you
+                          based on agile principles. With an agile development
+                          approach, our client will be fully involved in the
+                          development process, from inception to deployment.
                         </p>
                       </div>
                     </div>
@@ -5083,7 +5197,8 @@ Golang Migration & Upgradation
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-medium"
-                        >How can I interact with the developer or get regular updates?
+                        >How can I interact with the developer or get regular
+                        updates?
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -5109,8 +5224,12 @@ Golang Migration & Upgradation
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >
                         <p>
-                         From ideation to final deployment, our team helps you track project progress on a daily basis through sprints. We enable you to interact with the developer and assist you with a regular scrum process that involves planning, improvement, deployment, and rapid response to changes. 
-
+                          From ideation to final deployment, our team helps you
+                          track project progress on a daily basis through
+                          sprints. We enable you to interact with the developer
+                          and assist you with a regular scrum process that
+                          involves planning, improvement, deployment, and rapid
+                          response to changes.
                         </p>
                       </div>
                     </div>
@@ -5123,8 +5242,8 @@ Golang Migration & Upgradation
                       onclick="toggleAccordion(this)"
                     >
                       <span class="font-medium"
-                        >How do you ensure the confidentiality and safety of our intellectual property?
-
+                        >How do you ensure the confidentiality and safety of our
+                        intellectual property?
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -5150,8 +5269,10 @@ Golang Migration & Upgradation
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >
                         <p>
-                         You can obtain 100% ownership of your project, regardless of the circumstances. This includes everything from the source code to the NDA, copyright, and intellectual property rights, among others. 
-
+                          You can obtain 100% ownership of your project,
+                          regardless of the circumstances. This includes
+                          everything from the source code to the NDA, copyright,
+                          and intellectual property rights, among others.
                         </p>
                       </div>
                     </div>
@@ -5165,8 +5286,6 @@ Golang Migration & Upgradation
                     >
                       <span class="font-medium"
                         >Where can I hire Golang developers?
-
-
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -5192,9 +5311,11 @@ Golang Migration & Upgradation
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >
                         <p>
-                         At NewAgeSysIT, you can find vetted Golang developers and find the right experts who can help you with your projects. With certification and skilled expertise, our developers can join your team and help you scale your project.
-
-
+                          At NewAgeSysIT, you can find vetted Golang developers
+                          and find the right experts who can help you with your
+                          projects. With certification and skilled expertise,
+                          our developers can join your team and help you scale
+                          your project.
                         </p>
                       </div>
                     </div>
@@ -5208,8 +5329,6 @@ Golang Migration & Upgradation
                     >
                       <span class="font-medium"
                         >How long will it take to hire a Golang developer?
-
-
                       </span>
                       <span
                         class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -5235,13 +5354,16 @@ Golang Migration & Upgradation
                         class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                       >
                         <p>
-                       Our streamlined hiring technique enables you to easily access top Golang developers. After you submit a hiring request, we share a curated, pre-vetted database of developers with you to find the right fit. You can choose the one that best fits your goals by conducting interviews and making an informed decision.
-
+                          Our streamlined hiring technique enables you to easily
+                          access top Golang developers. After you submit a
+                          hiring request, we share a curated, pre-vetted
+                          database of developers with you to find the right fit.
+                          You can choose the one that best fits your goals by
+                          conducting interviews and making an informed decision.
                         </p>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
