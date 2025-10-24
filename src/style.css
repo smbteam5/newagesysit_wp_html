@@ -652,6 +652,11 @@ video {
   inset: 0px;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -2105,6 +2110,10 @@ video {
   height: 440px;
 }
 
+.h-\[450px\] {
+  height: 450px;
+}
+
 .h-\[45px\] {
   height: 45px;
 }
@@ -2163,6 +2172,10 @@ video {
 
 .h-\[60x\] {
   height: 60x;
+}
+
+.h-\[650px\] {
+  height: 650px;
 }
 
 .h-\[65px\] {
@@ -4044,6 +4057,10 @@ video {
   border-color: rgb(158 158 158 / var(--tw-border-opacity));
 }
 
+.border-\[\#9e9e9e8d\] {
+  border-color: #9e9e9e8d;
+}
+
 .border-\[\#9e9e9e\] {
   --tw-border-opacity: 1;
   border-color: rgb(158 158 158 / var(--tw-border-opacity));
@@ -5546,6 +5563,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#1A1A2E\] {
+  --tw-gradient-from: #1A1A2E var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(26 26 46 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-\[\#272626\] {
   --tw-gradient-from: #272626 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(39 38 38 / 0) var(--tw-gradient-to-position);
@@ -5749,6 +5772,10 @@ video {
 
 .to-\[\#0b0f4b\] {
   --tw-gradient-to: #0b0f4b var(--tw-gradient-to-position);
+}
+
+.to-\[\#16213E\] {
+  --tw-gradient-to: #16213E var(--tw-gradient-to-position);
 }
 
 .to-\[\#17349C\] {
@@ -6603,6 +6630,10 @@ video {
   padding-right: 0.75rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pr-5 {
   padding-right: 1.25rem;
 }
@@ -6959,6 +6990,10 @@ video {
 
 .font-\[200\] {
   font-weight: 200;
+}
+
+.font-\[300\] {
+  font-weight: 300;
 }
 
 .font-\[400\] {
@@ -7362,6 +7397,11 @@ video {
 .text-\[\#FCFDFD\] {
   --tw-text-opacity: 1;
   color: rgb(252 253 253 / var(--tw-text-opacity));
+}
+
+.text-\[\#FF5B14\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 91 20 / var(--tw-text-opacity));
 }
 
 .text-\[\#FF5D00\] {
@@ -13139,25 +13179,27 @@ footer ul li {
   position: relative;
   background: linear-gradient(121.18deg, #0b0c18 19.18%, #2d2f68 106.05%);
   border-radius: 20px;
-  overflow: hidden;
+  border: 1px solid rgba(90, 109, 252, 0.8);
 }
 
-.ppc-service-card::before {
+/* .ppc-service-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  padding: 1px;
+  inset: -1px;
+  padding: 2px;
   background: linear-gradient(
     121.15deg,
     rgba(90, 110, 252, 0.8) 31.16%,
     rgba(90, 110, 254, 0.5) 90.89%
   );
-  border-radius: inherit;
+  border-radius: 20px;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
   -webkit-mask-composite: xor;
-}
+  pointer-events: none;
+  z-index: -1;
+} */
 
 .book-a-call-section-ppc {
   background: linear-gradient(286.61deg, #2c43ac 26.07%, #00000d 130.6%);
@@ -13256,9 +13298,11 @@ footer ul li {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #2279ff;
   box-shadow: 0 0 0 6px #2279ffad;
   /* border: 3px solid #0b0d12; */
+  background: #2279ff;
+  box-shadow: 0 0 0 6px rgba(7, 70, 153, 0.648);
+  border: 3px solid #2279ff;
   z-index: 2;
   transition: all 4s;
 }
@@ -13345,6 +13389,7 @@ footer ul li {
 .timeline__content {
   background: transparent;
   border-radius: 16px;
+  padding-top: 50px;
 }
 
 .timeline__content h2 {
@@ -13549,84 +13594,33 @@ footer ul li {
   pointer-events: none;
 }
 
-.ppc-golang-card-border {
+/* .ppc-golang-card-border {
   position: relative;
   border-radius: 20px;
-}
-
-.ppc-golang-card-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 1px;
-  background: linear-gradient(
-    141.26deg,
-    rgba(78, 54, 86, 0.8) 11.03%,
-    rgba(68, 49, 73, 0.5) 90.53%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
+ 
+  border: 1px solid rgba(78, 54, 86, 0.8) 11.03%;
+ 
+} */
 
 .ppc-golang-card-gradient1 {
   position: relative;
   background: linear-gradient(284.5deg, #09090b 28.3%, #5c5c71 147.13%);
-}
-
-.ppc-golang-card-gradient1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   border-radius: 58px;
-  padding: 1px;
-  background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  border: white 1px solid;
 }
 
 .ppc-golang-card-gradient2 {
   position: relative;
   background: linear-gradient(121.18deg, #0b0c18 19.18%, #2d2f68 106.05%);
-}
-
-.ppc-golang-card-gradient2::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   border-radius: 58px;
-  padding: 1px;
-  background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  border: white 1px solid;
 }
 
 .ppc-golang-card-gradient3 {
   position: relative;
   background: linear-gradient(284.5deg, #09090b 28.3%, #5c5c71 147.13%);
-}
-
-.ppc-golang-card-gradient3::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   border-radius: 58px;
-  padding: 1px;
-  background: linear-gradient(283.69deg, #9e9e9e 33.15%, #666666 99.11%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  border: white 1px solid;
 }
 
 .inter_font {
@@ -14695,6 +14689,10 @@ footer ul li {
     margin-bottom: 3rem;
   }
 
+  .md\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
   .md\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -14815,6 +14813,10 @@ footer ul li {
     margin-top: 400px;
   }
 
+  .md\:mt-\[560px\] {
+    margin-top: 560px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -14859,6 +14861,10 @@ footer ul li {
     height: 256px;
   }
 
+  .md\:h-\[270px\] {
+    height: 270px;
+  }
+
   .md\:h-\[280px\] {
     height: 280px;
   }
@@ -14867,12 +14873,20 @@ footer ul li {
     height: 350px;
   }
 
+  .md\:h-\[368px\] {
+    height: 368px;
+  }
+
   .md\:h-\[380px\] {
     height: 380px;
   }
 
   .md\:h-\[400px\] {
     height: 400px;
+  }
+
+  .md\:h-\[404px\] {
+    height: 404px;
   }
 
   .md\:h-\[40px\] {
@@ -14897,6 +14911,10 @@ footer ul li {
 
   .md\:h-\[500px\] {
     height: 500px;
+  }
+
+  .md\:h-\[650px\] {
+    height: 650px;
   }
 
   .md\:h-\[87\%\] {
@@ -15214,6 +15232,12 @@ footer ul li {
 
   .md\:basis-full {
     flex-basis: 100%;
+  }
+
+  .md\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:scale-125 {
@@ -15701,6 +15725,10 @@ footer ul li {
     padding-bottom: 0px;
   }
 
+  .md\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
   .md\:pb-2 {
     padding-bottom: 0.5rem;
   }
@@ -15755,6 +15783,10 @@ footer ul li {
 
   .md\:pb-\[80px\] {
     padding-bottom: 80px;
+  }
+
+  .md\:pl-10 {
+    padding-left: 2.5rem;
   }
 
   .md\:pl-\[35px\] {
@@ -15825,6 +15857,10 @@ footer ul li {
     padding-top: 200px;
   }
 
+  .md\:pt-\[25\%\] {
+    padding-top: 25%;
+  }
+
   .md\:pt-\[250px\] {
     padding-top: 250px;
   }
@@ -15888,6 +15924,10 @@ footer ul li {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-\[16px\] {
+    font-size: 16px;
   }
 
   .md\:text-\[18px\] {
@@ -16403,8 +16443,16 @@ footer ul li {
     height: 116px;
   }
 
+  .lg\:h-\[234px\] {
+    height: 234px;
+  }
+
   .lg\:h-\[350px\] {
     height: 350px;
+  }
+
+  .lg\:h-\[354px\] {
+    height: 354px;
   }
 
   .lg\:h-\[35px\] {
@@ -16811,6 +16859,10 @@ footer ul li {
 
   .lg\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:gap-20 {
@@ -17302,6 +17354,10 @@ footer ul li {
     padding-top: 16%;
   }
 
+  .lg\:pt-\[20\%\] {
+    padding-top: 20%;
+  }
+
   .lg\:pt-\[30px\] {
     padding-top: 30px;
   }
@@ -17631,6 +17687,10 @@ footer ul li {
     margin-top: 2rem;
   }
 
+  .xl\:mt-\[170px\] {
+    margin-top: 170px;
+  }
+
   .xl\:block {
     display: block;
   }
@@ -17685,6 +17745,10 @@ footer ul li {
 
   .xl\:w-1\/2 {
     width: 50%;
+  }
+
+  .xl\:w-3\/5 {
+    width: 60%;
   }
 
   .xl\:w-\[250px\] {
@@ -17970,6 +18034,10 @@ footer ul li {
     padding-top: 20%;
   }
 
+  .xl\:pt-\[25\%\] {
+    padding-top: 25%;
+  }
+
   .xl\:pt-\[40px\] {
     padding-top: 40px;
   }
@@ -18102,6 +18170,10 @@ footer ul li {
 
   .\32xl\:text-\[18px\] {
     font-size: 18px;
+  }
+
+  .\32xl\:text-\[50px\] {
+    font-size: 50px;
   }
 }
 
@@ -18372,6 +18444,10 @@ footer ul li {
 
   .min-768px\:bottom-\[-88px\] {
     bottom: -88px;
+  }
+
+  .min-768px\:bottom-\[165px\] {
+    bottom: 165px;
   }
 
   .min-768px\:bottom-\[65px\] {
@@ -18674,6 +18750,10 @@ footer ul li {
     bottom: -90px;
   }
 
+  .min-1024px\:bottom-\[220px\] {
+    bottom: 220px;
+  }
+
   .min-1024px\:bottom-\[62px\] {
     bottom: 62px;
   }
@@ -18931,6 +19011,10 @@ footer ul li {
     bottom: -440px;
   }
 
+  .min-1240px\:bottom-\[275px\] {
+    bottom: 275px;
+  }
+
   .min-1240px\:-mt-20 {
     margin-top: -5rem;
   }
@@ -18957,6 +19041,10 @@ footer ul li {
 
   .min-1440px\:bottom-\[-445px\] {
     bottom: -445px;
+  }
+
+  .min-1440px\:bottom-\[310px\] {
+    bottom: 310px;
   }
 
   .min-1440px\:left-\[-60px\] {
@@ -19021,6 +19109,20 @@ footer ul li {
   }
 }
 
+@media (min-width: 1536px) {
+  .min-1536px\:bottom-\[330px\] {
+    bottom: 330px;
+  }
+
+  .min-1536px\:h-\[354px\] {
+    height: 354px;
+  }
+
+  .min-1536px\:h-\[600px\] {
+    height: 600px;
+  }
+}
+
 @media (min-width: 1680px) {
   .min-1680px\:top-\[38\%\] {
     top: 38%;
@@ -19030,6 +19132,10 @@ footer ul li {
 @media (min-width: 1920px) {
   .min-1920px\:bottom-\[-485px\] {
     bottom: -485px;
+  }
+
+  .min-1920px\:bottom-\[410px\] {
+    bottom: 410px;
   }
 
   .min-1920px\:h-\[70\%\] {
