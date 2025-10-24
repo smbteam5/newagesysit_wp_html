@@ -3985,6 +3985,10 @@ footer ul li {
     transition: max-height 1s ease;
   }
 }
+.client_says {
+  width: 100%;
+  display: block;
+}
 
 .client_says .item {
   opacity: 0.3;
@@ -4216,7 +4220,7 @@ footer ul li {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 3px;
+  padding: 1.5px;
   border-image-source: linear-gradient(
     91.27deg,
     #70e7cc 0.72%,
@@ -4576,7 +4580,7 @@ footer ul li {
   border-radius: 50%;
   background: #5aa2ff;
   box-shadow: 0 0 0 6px rgba(90, 162, 255, 0.22);
-  border: 3px solid #0b0d12;
+  /* border: 3px solid #0b0d12; */
   z-index: 2;
 }
 @media (max-width: 768px) {
@@ -4627,12 +4631,12 @@ footer ul li {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: #5aa2ff;
-  box-shadow: 0 0 0 6px rgba(90, 162, 255, 0.22);
-  border: 3px solid #0b0d12;
+  background: #2279ff;
+  box-shadow: 0 0 0 6px #2279ffad;
+  /* border: 3px solid #0b0d12; */
   z-index: 2;
   transition: all 4s;
 }
@@ -4648,10 +4652,14 @@ footer ul li {
   top: 50%;
   transform: translateY(-50%);
   height: 2px;
-  background: #253047;
   z-index: 1;
   width: var(--stub);
   left: calc(50% - var(--stub));
+
+  /* Use your SVG as a background image */
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='83' height='2' viewBox='0 0 83 2' fill='none'><line x1='82.3714' y1='0.606445' x2='0.000343679' y2='0.499657' stroke='url(%23paint0_linear_9069_1863)'/><defs><linearGradient id='paint0_linear_9069_1863' x1='0.00164011' y1='-0.500342' x2='82.3727' y2='-0.393554' gradientUnits='userSpaceOnUse'><stop stop-color='%232279FF' stop-opacity='0'/><stop offset='1' stop-color='%232279FF'/></linearGradient></defs></svg>")
+    no-repeat center center;
+  background-size: 100% 100%;
 }
 .timeline__item::after {
   content: "";
@@ -4664,13 +4672,15 @@ footer ul li {
   border-radius: 50%;
   background: #463349;
   box-shadow: 0 0 0 6px rgba(90, 162, 255, 0.22);
-  border: 3px solid #0b0d12;
+  /* border: 3px solid #0b0d12; */
   z-index: 2;
 }
 .timeline__item:nth-child(even)::before {
   left: 50%;
   width: var(--stub);
+  transform: rotate(180deg);
 }
+
 @media (max-width: 768px) {
   .timeline__item:nth-child(even)::before {
     /* left: 18px; */
@@ -4710,6 +4720,7 @@ footer ul li {
 .timeline__content h2 {
   font-size: 64px;
   color: #fff;
+  font-family: "Inter", sans-serif;
 }
 .timeline__content h3 {
   margin: 0 0 8px;
@@ -4864,7 +4875,7 @@ footer ul li {
   mask-composite: exclude;
   pointer-events: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1360px) {
   .why_flutter_app.owl-carousel .owl-stage-outer {
     overflow: unset !important;
   }
@@ -4974,4 +4985,47 @@ footer ul li {
 }
 .inter_font {
   font-family: "Inter", sans-serif;
+}
+.timeline__item.in-view:nth-child(odd)
+  .timeline__content.timeline__content__first::before {
+  top: 50%;
+}
+.timeline::after {
+  display: none !important;
+}
+@media (max-width: 1024px) {
+  .client_item_wrap {
+    overflow: hidden;
+    border-radius: 7px;
+    height: 250px;
+    position: relative;
+  }
+  .client_item_wrap::before {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.37) 44.81%,
+      #000000 91.15%
+    );
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    left: 0;
+  }
+  .client_item_wrap a {
+    height: 100%;
+  }
+}
+/* @media (max-width: 768px) {
+  .client_item_wrap {
+    height: 380px;
+  }
+  .client_item_wrap a {
+    height: 100%;
+  }
+} */
+.video_play {
+  z-index: 9;
 }
