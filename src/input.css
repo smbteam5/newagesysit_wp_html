@@ -4967,3 +4967,35 @@ footer ul li {
 .z-index-6 {
   z-index: 6;
 }
+
+
+.cbtn-golang{
+  border-bottom: 2px solid transparent;
+  border-image-source: linear-gradient(90deg, #CCCCCC 0%, rgba(153, 153, 153, 0) 100%);
+  border-image-slice: 1;
+}
+
+.cbtn-golang-border{
+  position: relative;
+}
+
+.cbtn-golang-border::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, #CCCCCC 0%, rgba(153, 153, 153, 0) 100%);
+}
+
+.cbtn-golang-border::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, #CCCCCC 0%, rgba(153, 153, 153, 0) 100%);
+}
+
