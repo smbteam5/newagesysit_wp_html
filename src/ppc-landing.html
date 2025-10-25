@@ -105,142 +105,229 @@
       }
     </style>
   </head>
-
-  <body class="bg-black" x-data="{ open: false }">
-    <!-- <button
-      @click="open = true"
-      class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-    >
-      Open Modal
-    </button> -->
-
-    <!-- Modal Background -->
+  <!-- Overlay + Modal -->
+  <div
+    id="contactModal"
+    class="fixed inset-0 z-[999] hidden"
+    aria-labelledby="dialog-title"
+    aria-modal="true"
+    role="dialog"
+  >
+    <!-- Backdrop -->
     <div
-      x-show="open"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      x-transition
-    >
-      <!-- Modal Card -->
+      class="absolute inset-0 bg-slate-950/70 backdrop-blur-sm"
+      onclick="toggleModal(false)"
+    ></div>
+
+    <!-- Dialog -->
+    <div class="relative mx-auto w-[min(1100px,92vw)] my-[15px]">
       <div
-        @click.away="open = false"
-        class="bg-white rounded-lg shadow-lg max-w-[70%] w-full p-6"
-        x-transition.scale
+        class="overflow-hidden rounded-3xl shadow-2xl max-992px:h-[calc(100vh-25px)] max-992px:overflow-y-auto"
       >
-      <section>
-         <!-- Modal container -->
-  <div class="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-modal bg-white/5 ring-1 ring-white/10">
-    <!-- Close button -->
-    <button aria-label="Close"
-            class="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
+        <div class="relative grid grid-cols-1 lg:grid-cols-2">
+          <!-- Close button -->
+          <button
+            type="button"
+            aria-label="Close"
+            class="absolute right-4 top-4 z-50 inline-flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+            onclick="toggleModal(false)"
+          >
+            <svg viewBox="0 0 24 24" class="h-[30px] w-[30px] text-[#0F0F0F73]">
+              <path
+                fill="currentColor"
+                d="M6.4 4.9 4.9 6.4 10.5 12l-5.6 5.6 1.5 1.5L12 13.5l5.6 5.6 1.5-1.5L13.5 12l5.6-5.6-1.5-1.5L12 10.5z"
+              />
+            </svg>
+          </button>
 
-    <div class="grid md:grid-cols-2">
-      <!-- Left panel -->
-      <section class="relative p-10 md:p-12 text-white">
-        <!-- Gradient background with subtle concentric rings -->
-        <div class="absolute inset-0 -z-10"
-             style="background:
-               radial-gradient(600px 300px at 50% 90%, rgba(82,102,255,.15), transparent 60%),
-               radial-gradient(400px 200px at 20% 20%, rgba(82,102,255,.18), transparent 60%),
-               linear-gradient(to bottom, #0B1020, #141A3A)"></div>
-
-        <div class="max-w-md">
-          <h1 class="text-4xl/tight md:text-5xl font-semibold tracking-tight">Let us know how<br/>we can help!</h1>
-          <p class="mt-6 text-white/80">Tell us about your project and we’ll get back to you with details on how we can develop it.</p>
-          <p class="mt-3 text-white/60">Or just give us a call now.</p>
-
-          <div class="mt-8">
-            <a href="#"
-               class="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 text-base font-medium text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40">
-              Request Consultation
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Bottom badges -->
-        <div class="mt-16 border-t border-white/10 pt-6">
-          <p class="text-sm text-white/60">Recognized for building the best solutions for startups, businesses, and enterprises</p>
-          <ul class="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4 opacity-90">
-            <li class="text-white/80 text-sm">Deloitte <span class="opacity-60">Technology Fast 500™</span></li>
-            <li class="text-white/80 text-sm">Inc. <span class="opacity-60">5000</span></li>
-            <li class="text-white/80 text-sm">USPAACC</li>
-            <li class="text-white/80 text-sm">NJE</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Right panel / Form -->
-      <section class="relative bg-white p-8 md:p-10">
-        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900">Tell us what you need, and we’ll be
-          right back with a cost & time estimate</h2>
-        <p class="mt-3 text-slate-600">Guaranteed response from our experts within an hour.</p>
-
-        <form class="mt-8 space-y-4">
-          <div>
-            <label for="name" class="sr-only">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name"
-                   class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-200"
-                   placeholder="Name" />
-          </div>
-
-          <div>
-            <label for="email" class="sr-only">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email"
-                   class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-200"
-                   placeholder="Email" />
-          </div>
-
-          <div>
-            <label for="phone" class="sr-only">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel"
-                   class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-200"
-                   placeholder="Phone" />
-          </div>
-
-          <div>
-            <label for="idea" class="sr-only">Project Idea</label>
-            <textarea id="idea" name="idea" rows="5"
-                      class="w-full resize-y rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-200"
-                      placeholder="Project Idea"></textarea>
-          </div>
-
-          <fieldset class="pt-2">
-            <legend class="text-sm font-medium text-slate-700">Contact me via:</legend>
-            <div class="mt-3 flex flex-wrap gap-6 text-sm">
-              <label class="inline-flex items-center gap-2">
-                <input type="checkbox" class="size-4 rounded border-slate-300 text-slate-900 focus:ring-slate-300">
-                <span class="text-slate-700">Phone</span>
-              </label>
-              <label class="inline-flex items-center gap-2">
-                <input type="checkbox" class="size-4 rounded border-slate-300 text-slate-900 focus:ring-slate-300">
-                <span class="text-slate-700">Email</span>
-              </label>
-              <label class="inline-flex items-center gap-2">
-                <input type="checkbox" class="size-4 rounded border-slate-300 text-slate-900 focus:ring-slate-300">
-                <span class="text-slate-700">SMS</span>
-              </label>
+          <!-- Left panel -->
+          <div
+            class="relative hidden lg:flex flex-col text-center justify-center p-10 bg-[#090c1e] overflow-hidden"
+          >
+            <div
+              class="absolute transform -translate-x-1/2 w-[170%] left-[50%] bottom-0"
+            >
+              <img src="./img/contact-form-banner.webp" alt="" />
             </div>
-          </fieldset>
+            <div class="relative z-[9] text-white">
+              <h2 class="text-[35px] font-semibold leading-tight">
+                Let us know how<br />we can help!
+              </h2>
+              <p class="mt-6 text-[#F5FAFE] text-[18px]">
+                Tell us about your project and we’ll get back to you with
+                details on how we can develop it.
+              </p>
+              <p class="mt-4 text-[#F5FAFE] text-[18px]">
+                Or just give us a call now.
+              </p>
 
-          <div class="pt-2">
-            <button type="submit"
-                    class="w-full md:w-auto rounded-full bg-accent px-8 py-3 text-white font-semibold shadow-sm hover:opacity-95 focus:outline-none focus:ring-4 focus:ring-orange-300">
-              Submit
-            </button>
+              <button
+                class="mt-8 inline-flex items-center justify-center rounded-full border border-[#F5FAFE] bg-white/5 px-6 py-3 text-base font-semibold hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 text-[18px]"
+              >
+                Request Consultation
+              </button>
+            </div>
           </div>
-        </form>
-      </section>
-    </div>
-  </div> 
-      </section>
+
+          <!-- Right panel (form) -->
+          <div class="bg-[#F5FAFE] p-6 sm:p-8 lg:p-10">
+            <h3
+              id="dialog-title"
+              class="text-[23px] font-semibold text-[#1B1D1E]"
+            >
+              Tell us what you need, and we’ll be right back with a cost &amp;
+              time estimate
+            </h3>
+            <p class="mt-2 text-[18px] text-[#65686C]">
+              Guaranteed response from our experts within an hour.
+            </p>
+
+            <form class="mt-8 space-y-4">
+              <div>
+                <label for="name" class="sr-only">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Name"
+                  class="w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 text-[#65686C] placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[46px]"
+                />
+              </div>
+              <div>
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="Email"
+                  class="text-[#65686C] w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[46px]"
+                />
+              </div>
+              <div>
+                <label for="phone" class="sr-only">Phone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="Phone"
+                  class="text-[#65686C] w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[46px]"
+                />
+              </div>
+              <div>
+                <label for="idea" class="sr-only">Project Idea</label>
+                <textarea
+                  id="idea"
+                  name="idea"
+                  rows="5"
+                  placeholder="Project Idea"
+                  class="w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 text-[#65686C] placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[90px]"
+                ></textarea>
+              </div>
+              <div
+                class="flex justify-between max-992px:flex-col max-992px:gap-2"
+              >
+                <fieldset class="mt-2">
+                  <legend class="text-[14px] text-[#1B1D1E]">
+                    Contact me via:
+                  </legend>
+                  <div class="mt-3 flex flex-wrap gap-4">
+                    <label
+                      class="inline-flex items-center gap-2 text-sm text-[#1B1D1E]"
+                    >
+                      <input
+                        type="checkbox"
+                        class="h-4 w-4 rounded border-[#C3C9D0] bg-white/5 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      Phone
+                    </label>
+                    <label
+                      class="inline-flex items-center gap-2 text-sm text-[#1B1D1E]"
+                    >
+                      <input
+                        type="checkbox"
+                        class="h-4 w-4 rounded border-[#C3C9D0] bg-white/5 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      Email
+                    </label>
+                    <label
+                      class="inline-flex items-center gap-2 text-sm text-[#1B1D1E]"
+                    >
+                      <input
+                        type="checkbox"
+                        class="h-4 w-4 rounded border-[#C3C9D0] bg-white/5 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      SMS
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="pt-2">
+                  <button
+                    type="submit"
+                    class="w-full rounded-[45px] bg-[#FF5B14] py-3 text-center text-base font-semibold text-white shadow-lg shadow-orange-500/20 hover:bg-[#FF5B14] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF5B14] focus-visible:ring-offset-slate-900 h-[65px] text-[18px] px-[60px]"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="relative mx-auto overflow-hidden bg-[#293660] bg-[linear-gradient(90deg,rgba(41,54,96,1)_41%,rgba(87,42,107,1)_100%)]"
+        >
+          <div
+            class="grid lg:grid-cols-2 grid-cols-1 items-center px-[30px] py-[15px] max-992px:px-[25px] max-992px:gap-[20px]"
+          >
+            <!-- Left copy -->
+            <div>
+              <p class="text-[18px] text-white">
+                Recognized for building the best solutions for startups,
+                businesses, and enterprises
+              </p>
+            </div>
+
+            <!-- Logos (right-aligned) -->
+            <div class="ml-auto flex flex-wrap items-center gap-6 sm:gap-8">
+              <div>
+                <div
+                  class="group flex w-full max-992px:gap-[40px] min-992px:gap-x-[80px] overflow-hidden select-none xl:max-w-[829px]"
+                >
+                  <ul
+                    class="animate-scroll flex min-w-full shrink-0 items-center justify-between min-992px:gap-x-[80px] group-hover:[animation-play-state:paused] max-992px:gap-[40px]"
+                  >
+                    <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                    <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                    <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                    <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                    <li>
+                      <img src="./img/Fastest1.svg" alt="Fastest Growing" />
+                    </li>
+                  </ul>
+                  <ul
+                    aria-hidden="true"
+                    class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-[80px] group-hover:[animation-play-state:paused]"
+                  >
+                    <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                    <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                    <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                    <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                    <li>
+                      <img src="./img/Fastest1.svg" alt="Fastest Growing" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+  <body class="bg-black">
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
       style="background-color: rgba(0, 10, 31) !important"
@@ -2079,8 +2166,8 @@
               earn, and scale.
             </p>
             <span
-              class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
-              @click="open = true"
+              class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-8 md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden cursor-pointer"
+              onclick="toggleModal(true)"
             >
               Get a Free Quote in 1 Hour
 
@@ -7677,6 +7764,20 @@
           preloader: false,
           fixedContentPos: false,
         });
+      });
+    </script>
+    <script>
+      function toggleModal(open) {
+        const el = document.getElementById("contactModal");
+        if (!el) return;
+        el.classList.toggle("hidden", !open);
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+      // Optional: open via hash (#contact)
+      if (location.hash === "#contact") toggleModal(true);
+      // ESC to close
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") toggleModal(false);
       });
     </script>
   </body>
