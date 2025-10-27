@@ -806,6 +806,10 @@ video {
   bottom: -40px;
 }
 
+.bottom-\[-50px\] {
+  bottom: -50px;
+}
+
 .bottom-\[-55px\] {
   bottom: -55px;
 }
@@ -2773,6 +2777,10 @@ video {
 
 .w-\[min\(1100px\2c 92vw\)\] {
   width: min(1100px,92vw);
+}
+
+.w-\[min\(1300px\2c 92vw\)\] {
+  width: min(1300px,92vw);
 }
 
 .w-auto {
@@ -13779,6 +13787,23 @@ footer ul li {
   animation: scroll 40s linear infinite;
 }
 
+.left__panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(164.48deg, #212748 -2.69%, #0b0d1a42 40.37%);
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .count-para {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -17319,6 +17344,11 @@ footer ul li {
   .lg\:py-\[100px\] {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+
+  .lg\:py-\[35px\] {
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .lg\:py-\[50px\] {
