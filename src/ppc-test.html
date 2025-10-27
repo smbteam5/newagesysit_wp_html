@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitemap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* optional: nicer focus ring for keyboard users */
+      .focus-ring:focus-visible {
+        outline: 2px solid rgb(99 102 241);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-200 bg-[#0B1020]">
+    <!-- subtle top gradient -->
+    <div
+      class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#0B1020] to-[#141A3A]"
+    ></div>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="text-sm text-slate-400 mb-4">
+        <ol class="flex items-center gap-2">
+          <li><a href="#" class="hover:text-white focus-ring">Home</a></li>
+          <li class="opacity-50">›</li>
+          <li class="text-white/80">Site Map</li>
+        </ol>
+      </nav>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-8">
+        Sitemap
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-[220px_minmax(0,1fr)] gap-10">
+        <!-- Left Index -->
+        <aside class="md:pt-2">
+          <p class="uppercase text-xs tracking-widest text-slate-400 mb-3">
+            Index
+          </p>
+          <nav class="space-y-2 text-sm">
+            <button
+              data-tab="services"
+              class="block w-full text-left text-white hover:text-white focus:outline-none"
+            >
+              Services
+            </button>
+            <button
+              data-tab="industries"
+              class="block w-full text-left text-slate-300 hover:text-white focus:outline-none"
+            >
+              Industries
+            </button>
+            <button
+              data-tab="technologies"
+              class="block w-full text-left text-slate-300 hover:text-white focus:outline-none"
+            >
+              Technologies
+            </button>
+            <button
+              data-tab="hire"
+              class="block w-full text-left text-slate-300 hover:text-white focus:outline-none"
+            >
+              Hire
+            </button>
+            <button
+              data-tab="portfolio"
+              class="block w-full text-left text-slate-300 hover:text-white focus:outline-none"
+            >
+              Portfolio
+            </button>
+            <button
+              data-tab="blog"
+              class="block w-full text-left text-slate-300 hover:text-white focus:outline-none"
+            >
+              Blog
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Right Content -->
+        <section class="space-y-12">
+          <!-- SERVICES TAB -->
+          <div
+            id="panel-services"
+            role="tabpanel"
+            aria-labelledby="tab-services"
+            class="tab-panel"
+          >
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              <!-- Software Development -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M8 4h8a2 2 0 0 1 2 2v12l-6-3-6 3V6a2 2 0 0 1 2-2z"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                  Software Development
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Custom Software Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Software Product Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">SaaS Development</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Web Application Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Mobile App Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Maintenance and Support</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- DevOps -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path d="M3 12h6l2-3 4 6 2-3h4" stroke-width="1.5" />
+                  </svg>
+                  DevOps
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >DevOps Development Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >DevOps CI/CD Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">DevOps Consulting</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >DevOps Implementation Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">DevSecOps Services</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Startup Services -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path d="M5 19l4-12 4 6 6-2-4 8H5z" stroke-width="1.5" />
+                  </svg>
+                  Startup Services
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Minimal Viable Product (MVP)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">Product Development</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Start-up Advisory / Consulting</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Cloud Services -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11-2A4 4 0 0 0 7 18z"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                  Cloud Services
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Cloud Managed Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">Cloud Consulting</a>
+                  </li>
+                  <li><a class="hover:text-white" href="#">AWS</a></li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Cloud Application Development</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Emerging Tech -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 2v20M2 12h20" stroke-width="1.5" />
+                  </svg>
+                  Emerging Technologies
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li><a class="hover:text-white" href="#">AI/ML</a></li>
+                  <li><a class="hover:text-white" href="#">AR/VR</a></li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Data Science and Analytics</a
+                    >
+                  </li>
+                  <li><a class="hover:text-white" href="#">Blockchain</a></li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Robotic Process Automation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Consulting -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <circle cx="12" cy="12" r="9" stroke-width="1.5" />
+                    <path d="M9 12h6M12 9v6" stroke-width="1.5" />
+                  </svg>
+                  Consulting Services
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Digital Transformation</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">IT Consulting</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Implementation Consulting</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >IT Security and Cybersecurity</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#">QA Consulting</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Ideation & Design -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 3v18M5 7h14M5 17h14" stroke-width="1.5" />
+                  </svg>
+                  Ideation and Design
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#">UI/UX Consulting</a>
+                  </li>
+                  <li><a class="hover:text-white" href="#">UX/UI Design</a></li>
+                  <li><a class="hover:text-white" href="#">MVP Design</a></li>
+                </ul>
+              </div>
+
+              <!-- Workforce Management -->
+              <div>
+                <h3
+                  class="flex items-center gap-2 text-slate-200 font-semibold mb-3"
+                >
+                  <svg
+                    class="w-4 h-4 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path d="M16 11a4 4 0 1 0-8 0" stroke-width="1.5" />
+                    <path d="M4 21a8 8 0 0 1 16 0" stroke-width="1.5" />
+                  </svg>
+                  Workforce Management
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a class="hover:text-white" href="#">Staff Augmentation</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white" href="#"
+                      >Dedicated Development Team</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- INDUSTRIES TAB -->
+          <div
+            id="panel-industries"
+            role="tabpanel"
+            aria-labelledby="tab-industries"
+            class="tab-panel hidden"
+          >
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">
+                  Healthcare & Wellness
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >HIPAA-Compliant Apps</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >Telehealth Platforms</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">Fitness & Rehab</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Education</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white">eLearning & LMS</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">Assessment Tools</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">
+                  On-Demand & Logistics
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white">Ride & Delivery</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">Route Optimization</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Restaurants</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white">Ordering & Kiosk</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Kitchen Ops</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Startups</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li><a href="#" class="hover:text-white">MVPs</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Product-Market Fit</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Public Safety</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white">Incident Reporting</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Field Apps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TECHNOLOGIES TAB -->
+          <div
+            id="panel-technologies"
+            role="tabpanel"
+            aria-labelledby="tab-technologies"
+            class="tab-panel hidden"
+          >
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Mobile</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li><a href="#" class="hover:text-white">iOS (Swift)</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Android (Kotlin)</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">Flutter</a></li>
+                  <li><a href="#" class="hover:text-white">React Native</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Web & Backend</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >Node.js (Express/Nest)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">Go (Gin/Fiber)</a>
+                  </li>
+                  <li><a href="#" class="hover:text-white">TypeScript</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >Python (Django/FastAPI)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">
+                  Cloud & DevOps
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white">AWS, GCP, Azure</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">Docker & Kubernetes</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >CI/CD (GitHub, GitLab)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Data & AI</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li><a href="#" class="hover:text-white">ML Pipelines</a></li>
+                  <li><a href="#" class="hover:text-white">RAG/Chatbots</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">Analytics & BI</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">Security</h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li><a href="#" class="hover:text-white">IAM / SSO</a></li>
+                  <li>
+                    <a href="#" class="hover:text-white">OWASP / DevSecOps</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >Compliance (HIPAA/GDPR)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-slate-200 font-semibold mb-3">
+                  Databases & Messaging
+                </h3>
+                <ul class="space-y-2 text-slate-400">
+                  <li>
+                    <a href="#" class="hover:text-white">PostgreSQL / MySQL</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white">MongoDB / Redis</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-white"
+                      >Kafka / Redis Streams</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const tabMap = {
+        services: "panel-services",
+        industries: "panel-industries",
+        technologies: "panel-technologies",
+      };
+
+      // click handler
+      document.querySelectorAll("[data-tab]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const selected = btn.dataset.tab;
+
+          // show matching panel
+          Object.entries(tabMap).forEach(([key, panelId]) => {
+            document
+              .getElementById(panelId)
+              .classList.toggle("hidden", key !== selected);
+          });
+
+          // update active text color
+          document.querySelectorAll("[data-tab]").forEach((b) => {
+            b.classList.remove("text-white");
+            b.classList.add("text-slate-300");
+          });
+          btn.classList.add("text-white");
+          btn.classList.remove("text-slate-300");
+        });
+      });
+    </script>
+  </body>
+</html>

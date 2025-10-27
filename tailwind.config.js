@@ -63,6 +63,7 @@ module.exports = {
         "max-640px": { max: "640px" },
         "max-500px": { max: "500px" },
         "max-470px": { max: "470px" },
+        "max-400px": { max: "400px" },
       },
       animation: {
         ripple: "ripple 2s linear infinite",
