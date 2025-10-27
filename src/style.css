@@ -2423,6 +2423,10 @@ video {
   min-height: 900px;
 }
 
+.min-h-\[90px\] {
+  min-height: 90px;
+}
+
 .min-h-\[92px\] {
   min-height: 92px;
 }
@@ -13351,15 +13355,40 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
-  .timeline::before {
-    content: "";
+  .timeline__item.in-view:nth-child(even) .timeline__content::before {
     position: absolute;
-    inset: 0;
-    width: 2px;
-    margin-left: -1px;
-    left: 50%;
-    background: linear-gradient(#253047, #253047);
-    pointer-events: none;
+    content: "";
+    width: 1px;
+    left: 18px;
+    background-color: #2279ff;
+    height: 100%;
+    transition: all 3s;
+    filter: grayscale(0);
+    top: 0;
+  }
+
+  .timeline__item.in-view:nth-child(odd) .timeline__content::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    left: 18px;
+    background-color: #2279ff;
+    height: 100%;
+    transition: all 3s;
+    filter: grayscale(0);
+    top: 0;
+  }
+
+  .timeline__item:nth-child(even)::before {
+    transform: rotate(180deg) !important;
+    width: 47px;
+    left: 25px;
+  }
+
+  .timeline__item:nth-child(odd)::before {
+    transform: rotate(180deg) !important;
+    width: 47px;
+    left: 25px;
   }
 }
 
@@ -13453,10 +13482,22 @@ footer ul li {
     top: 50%;
     transform: translateY(-50%);
     height: 2px;
-    background: #253047;
     z-index: 1;
     width: 50px;
     left: 18px;
+  }
+
+  .timeline__item.in-view:nth-child(odd) .timeline__content::before,
+  .timeline__item.in-view:nth-child(even) .timeline__content::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    left: 0;
+    background-color: #2279ff;
+    height: 100%;
+    transition: all 3s;
+    filter: grayscale(0);
+    top: 0;
   }
 }
 
@@ -13470,10 +13511,10 @@ footer ul li {
     grid-column: 1;
   }
 
-  .timeline__item:nth-child(even) .timeline__content::before,
+  /* .timeline__item:nth-child(even) .timeline__content::before,
   .timeline__item:nth-child(odd) .timeline__content::before {
     display: none;
-  }
+  } */
 }
 
 .timeline__item:nth-child(odd) .timeline__content {
@@ -13511,9 +13552,9 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
-  .timeline::before {
+  /* .timeline::before {
     left: 32px;
-  }
+  } */
 
   .timeline__item {
     grid-template-columns: 1fr;
@@ -18916,6 +18957,10 @@ footer ul li {
 
   .min-992px\:text-\[23px\] {
     font-size: 23px;
+  }
+
+  .min-992px\:text-\[32px\] {
+    font-size: 32px;
   }
 
   .min-992px\:text-\[40px\] {

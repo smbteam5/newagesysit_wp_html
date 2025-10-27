@@ -4597,15 +4597,37 @@ footer ul li {
   color: #e5e7eb;
 }
 @media (max-width: 768px) {
-  .timeline::before {
-    content: "";
+  .timeline__item.in-view:nth-child(even) .timeline__content::before {
     position: absolute;
-    inset: 0;
-    width: 2px;
-    margin-left: -1px;
-    left: 50%;
-    background: linear-gradient(#253047, #253047);
-    pointer-events: none;
+    content: "";
+    width: 1px;
+    left: 18px;
+    background-color: #2279ff;
+    height: 100%;
+    transition: all 3s;
+    filter: grayscale(0);
+    top: 0;
+  }
+  .timeline__item.in-view:nth-child(odd) .timeline__content::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    left: 18px;
+    background-color: #2279ff;
+    height: 100%;
+    transition: all 3s;
+    filter: grayscale(0);
+    top: 0;
+  }
+  .timeline__item:nth-child(even)::before {
+    transform: rotate(180deg) !important;
+    width: 47px;
+    left: 25px;
+  }
+  .timeline__item:nth-child(odd)::before {
+    transform: rotate(180deg) !important;
+    width: 47px;
+    left: 25px;
   }
 }
 .timeline__list {
@@ -4694,10 +4716,21 @@ footer ul li {
     top: 50%;
     transform: translateY(-50%);
     height: 2px;
-    background: #253047;
     z-index: 1;
     width: 50px;
     left: 18px;
+  }
+  .timeline__item.in-view:nth-child(odd) .timeline__content::before,
+  .timeline__item.in-view:nth-child(even) .timeline__content::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    left: 0;
+    background-color: #2279ff;
+    height: 100%;
+    transition: all 3s;
+    filter: grayscale(0);
+    top: 0;
   }
 }
 .timeline__item:nth-child(even) .timeline__content {
@@ -4708,10 +4741,10 @@ footer ul li {
   .timeline__item:nth-child(even) .timeline__content {
     grid-column: 1;
   }
-  .timeline__item:nth-child(even) .timeline__content::before,
+  /* .timeline__item:nth-child(even) .timeline__content::before,
   .timeline__item:nth-child(odd) .timeline__content::before {
     display: none;
-  }
+  } */
 }
 .timeline__item:nth-child(odd) .timeline__content {
   grid-column: 1;
@@ -4743,9 +4776,9 @@ footer ul li {
   max-width: 48ch;
 }
 @media (max-width: 768px) {
-  .timeline::before {
+  /* .timeline::before {
     left: 32px;
-  }
+  } */
   .timeline__item {
     grid-template-columns: 1fr;
     min-height: auto;
