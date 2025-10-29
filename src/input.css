@@ -4668,6 +4668,9 @@ footer ul li {
   transition: all 4s;
 }
 @media (max-width: 768px) {
+  .timeline__item::after {
+    left: 18px;
+  }
   .timeline__item.in-view::after {
     left: 18px;
   }
@@ -4789,14 +4792,14 @@ footer ul li {
     width: 28px;
   }
   .timeline__item::after {
-    left: 32px;
+    left: 18px !important;
   }
   .timeline__item .timeline__content {
     grid-column: 1;
     padding: 0 0 0 72px;
   }
   .timeline__item .timeline__content::before {
-    left: 72px;
+    top: 50px;
   }
 }
 
@@ -5070,14 +5073,14 @@ footer ul li {
 }
 /* 13" MacBook (1280px–1536px) */
 @media (min-width: 1280px) and (max-width: 1536px) {
-  .macbook-pos-count-banner{
+  .macbook-pos-count-banner {
     top: 160px !important;
   }
 }
 
 /* 14" MacBook (1440px–1600px) */
 @media (min-width: 1440px) and (max-width: 1600px) {
-  .macbook-pos-count-banner{
+  .macbook-pos-count-banner {
     top: 160px !important;
   }
 }
