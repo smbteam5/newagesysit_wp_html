@@ -1,0 +1,22 @@
+name: Simple HTML Deploy
+
+on:
+  push:
+    branches: [ "main" ]   # change if your branch differs
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull latest on server (username/password)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            set -e
+            cd "${{ secrets.WEB_DIR }}"
+            git checkout main || true
+            git pull --ff-only
