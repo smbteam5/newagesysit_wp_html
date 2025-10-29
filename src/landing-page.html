@@ -358,6 +358,13 @@
         z-index: 9;
       }
     </style>
+    <style>
+      /* Ensure mix-blend utility exists if Tailwind wasn't generated */
+      .mix-blend-hard-light {
+        mix-blend-mode: hard-light;
+        -webkit-mix-blend-mode: hard-light;
+      }
+    </style>
   </head>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
@@ -6390,6 +6397,269 @@
       </div>
     </section>
 
+    <!-- Globe section (category-only desktop) -->
+    <section class="map-view py-[60px] bg-[#fff]">
+      <div class="pb-[40px] text-center container">
+        <h2
+          class="sechd text-black font-[600] mt-0 md:mt-[30px] md:mb-[20px] mb-2 leading-[40px] xl:text-[50px] xl:leading-[56px]"
+        >
+          Creating Digital Solutions Beyond Boundaries
+        </h2>
+        <p class="text-black md:w-[70%] mx-auto">
+          At NewAgeSysIT, we bring digital solutions to build the best out of
+          your business through innovation and advancement.
+        </p>
+      </div>
+
+      <div
+        class="card mx-auto relative hidden lg:block"
+        style="
+          border: none;
+          box-shadow: none;
+          background: transparent;
+          padding: 0;
+        "
+      >
+        <div class="controls" style="margin-top: 0.6rem">
+          <div>
+            <input type="radio" name="toggle" id="us" checked />
+            <input type="radio" name="toggle" id="global" />
+            <div class="toggle-wrapper">
+              <label for="us" class="toggle-label us-label"
+                >U.S. locations</label
+              >
+              <label for="global" class="toggle-label global-label"
+                >Global Map</label
+              >
+            </div>
+          </div>
+
+          <!-- Category select only -->
+          <select id="categoryList" class="small"></select>
+        </div>
+
+        <!-- SEO-friendly location links (hidden but crawlable) -->
+        <div class="hidden" aria-hidden="true">
+          <h3>Our Service Locations</h3>
+          <ul>
+            <li>
+              <a
+                href="https://newagesysit.com/custom-software-development-new-jersey/"
+                target="_blank"
+                rel="noopener"
+                >Custom Software Development in New Jersey</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-jacksonville/"
+                target="_blank"
+                rel="noopener"
+                >App Development in Jacksonville</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-philadelphia/"
+                target="_blank"
+                rel="noopener"
+                >App Development in Philadelphia</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-tampa/"
+                target="_blank"
+                rel="noopener"
+                >App Development in Tampa</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-miami/"
+                target="_blank"
+                rel="noopener"
+                >App Development in Miami</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-atlanta/"
+                target="_blank"
+                rel="noopener"
+                >App Development in Atlanta</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-charlotte/"
+                target="_blank"
+                rel="noopener"
+                >App Development in Charlotte</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-newyork/"
+                target="_blank"
+                rel="noopener"
+                >App Development in New York</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/mobile-app-development-company-virginia/"
+                target="_blank"
+                rel="noopener"
+                >Mobile App Development in Virginia</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/mobile-app-development-company-georgia/"
+                target="_blank"
+                rel="noopener"
+                >Mobile App Development in Georgia</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/app-development-service-pennsylvania/"
+                target="_blank"
+                rel="noopener"
+                >Mobile App Development in Pennsylvania</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/staff-augmentation-california/"
+                target="_blank"
+                rel="noopener"
+                >Staff Augmentation in California</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/staff-augmentation-texas/"
+                target="_blank"
+                rel="noopener"
+                >Staff Augmentation in Texas</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/staff-augmentation-ny/"
+                target="_blank"
+                rel="noopener"
+                >Staff Augmentation in New York</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://newagesysit.com/staff-augmentation-sa/"
+                target="_blank"
+                rel="noopener"
+                >Staff Augmentation in South Africa</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="container"
+          style="
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+          "
+        >
+          <div
+            id="globeWrap"
+            style="
+              width: 100%;
+              height: 0;
+              padding-bottom: 100%;
+              position: relative;
+              border-radius: 50%;
+              overflow: hidden;
+              background: transparent;
+              box-shadow: 0 10px 40px rgb(125 125 125 / 10%);
+              margin-top: 40px;
+            "
+          ></div>
+
+          <!-- Click Tooltip -->
+          <div
+            id="markerTooltip"
+            style="
+              display: none;
+              position: absolute;
+              background: rgba(0, 0, 0, 0.9);
+              color: white;
+              padding: 12px 20px;
+              border-radius: 20px;
+              font-size: 14px;
+              z-index: 100;
+              pointer-events: auto;
+              white-space: nowrap;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+              max-width: 320px;
+            "
+          >
+            <div
+              id="tooltipContent"
+              style="display: flex; flex-direction: column; gap: 8px"
+            >
+              <!-- Dynamic content will be inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="block lg:hidden">
+        <div class="controls" style="margin-top: 0.6rem">
+          <div>
+            <input
+              type="radio"
+              name="toggle_mob"
+              id="us_mob"
+              checked
+              class="mobile-only"
+            />
+            <input
+              type="radio"
+              name="toggle_mob"
+              id="global_mob"
+              class="mobile-only"
+            />
+            <div class="toggle-wrapper">
+              <label for="us_mob" class="toggle-label us-label_mob"
+                >U.S. locations</label
+              >
+              <label for="global_mob" class="toggle-label global-label_mob"
+                >Global Map</label
+              >
+            </div>
+          </div>
+          <div style="margin-top: 0.75rem">
+            <select id="categorySelect-mob" class="small w-full"></select>
+          </div>
+          <!-- NOTE: no locationSelect-mob - we dynamically render cards in servicesGrid -->
+        </div>
+
+        <div class="container">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-[50px]"
+            id="servicesGrid"
+          >
+            <!-- dynamically-rendered mobile cards will go here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
       class="trusted-providers horizontal-scrolling flex flex-col gap-5 py-[50px] lg:py-[100px] bg-[#0D0D0D]"
     >
@@ -9449,6 +9719,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
     <script>
+      // window.addEventListener("scroll", () => {
+      //   const banner = document.getElementById("hero-banner");
+      //   const scrollTop = window.scrollY;
+      //   const fadeStart = 0;
+      //   const fadeEnd = 300;
+      //   let opacity = 1 - (scrollTop - fadeStart) / (fadeEnd - fadeStart);
+      //   opacity = Math.max(0, Math.min(1, opacity));
+      //   banner.style.opacity = opacity;
+      // });
+    </script>
+
+    <script>
       gsap.registerPlugin(ScrollTrigger);
       const rings = gsap.utils.toArray("#rings .ring");
       rings.forEach((ring) => {
@@ -9884,6 +10166,78 @@
       });
     </script>
     <script>
+      // const bg = document.getElementById("heroBg");
+      // const bgPrev = document.getElementById("heroBgPrev");
+
+      // function swapBackground(url) {
+      //   const currentUrl = bg.style.backgroundImage;
+      //   console.log(currentUrl);
+
+      //   if (currentUrl) {
+      //     bgPrev.style.backgroundImage = currentUrl;
+      //     bgPrev.style.opacity = 1;
+      //     void bgPrev.offsetWidth;
+      //   }
+      //   bg.style.backgroundImage = `url("${url}")`;
+      //   requestAnimationFrame(() => {
+      //     bgPrev.style.opacity = 0;
+      //   });
+      // }
+
+      // const swiper = new Swiper("#industriesSwiper", {
+      //   slidesPerView: 1,
+      //   spaceBetween: 0,
+      //   centeredSlides: false,
+      //   loop: false,
+      //   dots: false,
+      //   grabCursor: true,
+      //   breakpoints: {
+      //     640: { slidesPerView: 1, spaceBetween: 0 },
+      //     960: { slidesPerView: 3, spaceBetween: 0 },
+      //     1280: { slidesPerView: 4, spaceBetween: 0 },
+      //   },
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      //   pagination: { el: ".swiper-pagination", enabled: false },
+      //   on: {
+      //     init(sw) {
+      //       const first = sw.slides[sw.activeIndex];
+      //       swapBackground(first.dataset.bg);
+      //     },
+      //     slideChange(sw) {
+      //       const active = sw.slides[sw.activeIndex];
+      //       swapBackground(active.dataset.bg);
+      //     },
+      //   },
+      // });
+
+      // function attachPreviewHandlers(slideEl) {
+      //   console.log(slideEl, "slideElslideEl");
+
+      //   const show = () => swapBackground(slideEl.dataset.bg);
+      //   const reset = () => {
+      //     const active = swiper.slides[swiper.activeIndex];
+      //     swapBackground(active.dataset.bg);
+      //   };
+
+      //   slideEl.addEventListener("mouseenter", show);
+      //   slideEl.addEventListener("focus", show);
+      //   slideEl.addEventListener("mouseleave", reset);
+      //   slideEl.addEventListener("blur", reset);
+      //   slideEl.addEventListener("click", () => {
+      //     swiper.slideTo([...swiper.slides].indexOf(slideEl));
+      //   });
+      // }
+
+      // swiper.slides.forEach(attachPreviewHandlers);
+
+      // swiper.on("resize", () => {
+      //   swiper.slides.forEach(attachPreviewHandlers);
+      // });
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
         /* ---------------- Testimonials slider ---------------- */
         const testimonialsSwiper = new Swiper(".ctt_testimonials", {
@@ -10003,10 +10357,1315 @@
         });
       });
     </script>
+    <script>
+      // (function () {
+      //   const html = document.documentElement;
+      //   const rings = document.querySelectorAll("#rings .ring");
+      //   const hero = document.getElementById("hero");
+
+      //   function onScroll() {
+      //     // Example: log scroll position or update transforms
+      //     const scrollY = window.scrollY;
+      //     // Do something with scrollY and elements
+      //     // e.g., hero.style.transform = `translateY(${scrollY * 0.2}px)`;
+      //   }
+
+      //   window.addEventListener("scroll", onScroll); // Optional: if you want it to run on scroll too
+
+      //   // 1) On load: play ring intro with stagger
+      //   window.addEventListener("load", () => {
+      //     rings.forEach((el, i) => {
+      //       el.style.setProperty("--delay", i * 120 + "ms"); // stagger
+      //     });
+      //     html.classList.add("rings-loaded");
+      //     onScroll(); // now this will work
+      //   });
+      // })();
+    </script>
 
     <!-- three.js + OrbitControls (kept non-module for compatibility with your existing script style) -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script>
+      (async function () {
+        // -------------------- user data (from your message) --------------------
+        const CATEGORIES = [
+          { id: "custom", name: "Custom Software Development" },
+          { id: "app", name: "App Development" },
+          { id: "mobile", name: "Mobile App Development" },
+          { id: "staff", name: "Staff Augmentation" },
+        ];
+
+        const LOCATIONS = [
+          {
+            name: "Custom Software Development in New Jersey",
+            lat: 40.7128,
+            lon: -74.006,
+            size: 0.083,
+            categoryId: "custom",
+            id: "nj",
+            url: "https://newagesysit.com/custom-software-development-new-jersey/",
+          },
+          {
+            name: "App Development in Jacksonville",
+            lat: 30.3322,
+            lon: -81.6557,
+            size: 0.085,
+            categoryId: "app",
+            id: "jax",
+            url: "https://newagesysit.com/app-development-jacksonville/",
+          },
+          {
+            name: "App Development in Philadelphia",
+            lat: 39.9526,
+            lon: -75.1652,
+            size: 0.085,
+            categoryId: "app",
+            id: "phl",
+            url: "https://newagesysit.com/app-development-philadelphia/",
+          },
+          {
+            name: "App Development in Tampa",
+            lat: 27.9506,
+            lon: -82.4572,
+            size: 0.085,
+            categoryId: "app",
+            id: "tpa",
+            url: "https://newagesysit.com/app-development-tampa/",
+          },
+          {
+            name: "App Development in Miami",
+            lat: 25.7617,
+            lon: -80.1918,
+            size: 0.085,
+            categoryId: "app",
+            id: "mia",
+            url: "https://newagesysit.com/app-development-miami/",
+          },
+          {
+            name: "App Development in Atlanta",
+            lat: 33.749,
+            lon: -84.388,
+            size: 0.085,
+            categoryId: "app",
+            id: "atl",
+            url: "https://newagesysit.com/app-development-atlanta/",
+          },
+          {
+            name: "App Development in Charlotte",
+            lat: 35.2271,
+            lon: -80.8431,
+            size: 0.085,
+            categoryId: "app",
+            id: "clt",
+            url: "https://newagesysit.com/app-development-charlotte/",
+          },
+          {
+            name: "App Development in New York",
+            lat: 40.7128,
+            lon: -74.006,
+            size: 0.085,
+            categoryId: "app",
+            id: "nyc",
+            url: "https://newagesysit.com/app-development-newyork/",
+          },
+          {
+            name: "Mobile App Development in Virginia",
+            lat: 37.5407,
+            lon: -77.436,
+            size: 0.082,
+            categoryId: "mobile",
+            id: "va",
+            url: "https://newagesysit.com/mobile-app-development-company-virginia/",
+          },
+          {
+            name: "Mobile App Development in Georgia",
+            lat: 33.749,
+            lon: -84.388,
+            size: 0.082,
+            categoryId: "mobile",
+            id: "ga",
+            url: "https://newagesysit.com/mobile-app-development-company-georgia/",
+          },
+          {
+            name: "Mobile App Development in Pennsylvania",
+            lat: 40.2732,
+            lon: -76.8867,
+            size: 0.082,
+            categoryId: "mobile",
+            id: "pa",
+            url: "https://newagesysit.com/app-development-service-pennsylvania/",
+          },
+          {
+            name: "Staff Augmentation in California",
+            lat: 34.0522,
+            lon: -118.2437,
+            size: 0.082,
+            categoryId: "staff",
+            id: "ca",
+            url: "https://newagesysit.com/staff-augmentation-california/",
+          },
+          {
+            name: "Staff Augmentation in Texas",
+            lat: 30.2672,
+            lon: -97.7431,
+            size: 0.082,
+            categoryId: "staff",
+            id: "tx-staff",
+            url: "https://newagesysit.com/staff-augmentation-texas/",
+          },
+          {
+            name: "Staff Augmentation in New York",
+            lat: 40.7128,
+            lon: -74.006,
+            size: 0.082,
+            categoryId: "staff",
+            id: "ny-staff",
+            url: "https://newagesysit.com/staff-augmentation-ny/",
+          },
+          {
+            name: "Staff Augmentation in South Africa",
+            lat: -26.2041,
+            lon: 28.0473,
+            size: 0.083,
+            categoryId: "staff",
+            id: "za-staff",
+            url: "https://newagesysit.com/staff-augmentation-sa/",
+          },
+        ];
+
+        // -------------------- Mobile Services Grid --------------------
+        // Enrich locations with region and category info
+        const ENRICHED_LOCATIONS = LOCATIONS.map((l, idx) => {
+          const cat = CATEGORIES.find((c) => c.id === l.categoryId);
+          const region =
+            l.lat >= 24 && l.lat <= 49 && l.lon >= -125 && l.lon <= -66
+              ? "us"
+              : "global";
+          return {
+            ...l,
+            _idx: idx,
+            groupName: cat ? cat.name : "Other",
+            region,
+          };
+        });
+
+        // Helper: create URL-friendly slug
+        function slugify(s) {
+          return s
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^\w\-]/g, "");
+        }
+
+        // Render mobile services grid
+        function renderMobileServicesGrid(list) {
+          const grid = document.getElementById("servicesGrid");
+          if (!grid) return;
+
+          grid.innerHTML = "";
+          list.forEach((loc) => {
+            const card = document.createElement("div");
+            card.className =
+              "service-card card flex items-center gap-2 justify-between bg-[#040303] py-[15px] px-[20px] rounded-[45px] text-white cursor-pointer transition-all hover:bg-[#1a1919]";
+            card.innerHTML = `
+              <span class="text-sm md:text-base">${loc.name}</span>
+              <a href="${loc.url}" target="_blank" class="text-[#00D4FF] hover:underline">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            `;
+            grid.appendChild(card);
+          });
+        }
+
+        // Compute active locations based on category and scope (us/global)
+        function computeActiveLocations(categoryId, scope) {
+          let filtered = ENRICHED_LOCATIONS;
+          // US: only US locations. Global: all locations (US + global)
+          if (scope === "us") {
+            filtered = filtered.filter((loc) => loc.region === "us");
+          } // if global, do not filter by region (show all)
+          // Filter by category
+          if (categoryId !== "all") {
+            filtered = filtered.filter((loc) => loc.categoryId === categoryId);
+          }
+          return filtered;
+        }
+
+        // Mobile event handlers
+        const mobileCategorySelect =
+          document.getElementById("categorySelect-mob");
+        const mobileUsToggle = document.getElementById("us_mob");
+        const mobileGlobalToggle = document.getElementById("global_mob");
+
+        // Populate mobile category select
+        function populateMobileCategorySelect() {
+          if (!mobileCategorySelect) return;
+          mobileCategorySelect.innerHTML = "";
+          const optionAll = document.createElement("option");
+          optionAll.value = "all";
+          optionAll.textContent = "All Categories";
+          mobileCategorySelect.appendChild(optionAll);
+          CATEGORIES.forEach((cat) => {
+            const opt = document.createElement("option");
+            opt.value = cat.id;
+            opt.textContent = cat.name;
+            mobileCategorySelect.appendChild(opt);
+          });
+        }
+
+        let currentMobileScope = "us"; // default to US
+
+        function updateMobileGrid() {
+          const categoryId = mobileCategorySelect
+            ? mobileCategorySelect.value
+            : "all";
+          const activeLocations = computeActiveLocations(
+            categoryId,
+            currentMobileScope
+          );
+          renderMobileServicesGrid(activeLocations);
+        }
+
+        // Mobile category select handler
+        if (mobileCategorySelect) {
+          mobileCategorySelect.addEventListener("change", function () {
+            updateMobileGrid();
+          });
+        }
+
+        // Mobile toggle handlers
+        if (mobileUsToggle) {
+          mobileUsToggle.addEventListener("change", function () {
+            if (this.checked) {
+              currentMobileScope = "us";
+              updateMobileGrid();
+            }
+          });
+        }
+
+        if (mobileGlobalToggle) {
+          mobileGlobalToggle.addEventListener("change", function () {
+            if (this.checked) {
+              currentMobileScope = "global";
+              updateMobileGrid();
+            }
+          });
+        }
+
+        // Initialize mobile grid and category select on page load
+        if (window.innerWidth < 768) {
+          populateMobileCategorySelect();
+          updateMobileGrid();
+        }
+
+        // -------------------- basic three setup --------------------
+        const containerEl = document.getElementById("container");
+        const globeWrap = document.getElementById("globeWrap");
+        const ttTitle = document.getElementById("tt-title");
+        const ttDesc = document.getElementById("tt-desc");
+
+        // Get width and use it for both dimensions to make it square
+        let W = containerEl.clientWidth;
+        let H = W; // Make it square for circular globe
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 2000); // aspect ratio 1:1 for square
+        // Position camera for better 3D globe view
+        camera.position.set(20, 15, 140);
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({
+          antialias: true,
+          alpha: true,
+        });
+        renderer.setPixelRatio(window.devicePixelRatio || 1);
+        renderer.setSize(W, H);
+        renderer.setClearColor(0xffffff, 0); // Transparent background
+
+        // Position canvas absolutely within the circular container
+        renderer.domElement.style.position = "absolute";
+        renderer.domElement.style.top = "0";
+        renderer.domElement.style.left = "0";
+        renderer.domElement.style.width = "100%";
+        renderer.domElement.style.height = "100%";
+
+        globeWrap.appendChild(renderer.domElement);
+
+        scene.add(new THREE.AmbientLight(0xffffff, 1.0));
+        const dir = new THREE.DirectionalLight(0xffffff, 0.3);
+        dir.position.set(5, 3, 5);
+        scene.add(dir);
+
+        // orbit ring (dashed) — modern BufferGeometry approach
+        (function addOrbitDots() {
+          const segments = 256,
+            radius = 120;
+          const pts = [];
+          for (let i = 0; i < segments; i++) {
+            const a = (i / segments) * Math.PI * 2;
+            pts.push(
+              new THREE.Vector3(Math.cos(a) * radius, 0, Math.sin(a) * radius)
+            );
+          }
+          const geom = new THREE.BufferGeometry().setFromPoints(pts);
+          const mat = new THREE.LineDashedMaterial({
+            color: 0xe9f1fb,
+            dashSize: 3,
+            gapSize: 6,
+            linewidth: 1,
+          });
+          const line = new THREE.LineLoop(geom, mat);
+          line.computeLineDistances();
+          line.rotation.x = Math.PI / 2;
+          line.position.set(6, -8, -10);
+          line.material.transparent = true;
+          line.material.opacity = 0.75;
+          scene.add(line);
+        })();
+
+        // ---------- UI elements ----------
+        // Fixed sampling values (no UI controls)
+        const FIXED_STEP = 3;
+        const FIXED_BRIGHTNESS_THRESHOLD = 0.3; // 30%
+        // Fixed close camera distance
+        const CAMERA_DISTANCE_CLOSE = 130; // closer zoom for focus and default view
+        const categoryListEl = document.getElementById("categoryList");
+
+        // no-op: removed sliders for step/threshold
+
+        // Dataset toggle state: 'us' or 'global'
+        let datasetMode = "us";
+
+        // populate categories UI - using select element
+        let selectedCategory = "all"; // Track selected category
+
+        function isUS(lat, lon) {
+          // Rough bounding box for continental U.S.
+          return lat >= 24 && lat <= 50 && lon >= -125 && lon <= -66;
+        }
+
+        function markerInDataset(mo) {
+          if (datasetMode === "global") return true;
+          return isUS(mo.meta.lat, mo.meta.lon);
+        }
+
+        function updateMarkerVisibilityAndAnimate(categoryId) {
+          markerObjects.forEach((mo) => {
+            const categoryMatch =
+              categoryId === "all" || mo.categoryId === categoryId;
+            const datasetMatch = markerInDataset(mo);
+            mo.centerSprite.visible = mo.haloSprite.visible =
+              categoryMatch && datasetMatch;
+          });
+
+          if (categoryId !== "all") {
+            animateToCategory(categoryId);
+          } else {
+            // 'All' category: center on dataset-visible markers (e.g., U.S. when datasetMode==='us')
+            const visibleMarkers = markerObjects.filter((mo) =>
+              markerInDataset(mo)
+            );
+            if (visibleMarkers.length === 0) {
+              // fallback to default direction
+              const direction = new THREE.Vector3(0, 0, 1);
+              const newCameraPos = direction
+                .clone()
+                .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+              animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+              return;
+            }
+
+            if (visibleMarkers.length === 1) {
+              const pos = visibleMarkers[0].centerSprite.position.clone();
+              const dir = pos.clone().normalize();
+              const newCameraPos = dir
+                .clone()
+                .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+              animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+              return;
+            }
+
+            // Compute center of all visible markers
+            let cx = 0,
+              cy = 0,
+              cz = 0;
+            visibleMarkers.forEach((mo) => {
+              cx += mo.centerSprite.position.x;
+              cy += mo.centerSprite.position.y;
+              cz += mo.centerSprite.position.z;
+            });
+            cx /= visibleMarkers.length;
+            cy /= visibleMarkers.length;
+            cz /= visibleMarkers.length;
+            const centerPos = new THREE.Vector3(cx, cy, cz);
+
+            // If markers are very spread out, aim at the one closest to the globe center
+            let maxDist = 0;
+            for (let i = 0; i < visibleMarkers.length; i++) {
+              for (let j = i + 1; j < visibleMarkers.length; j++) {
+                const a = visibleMarkers[i].centerSprite.position;
+                const b = visibleMarkers[j].centerSprite.position;
+                maxDist = Math.max(maxDist, a.distanceTo(b));
+              }
+            }
+            const FAR_THRESHOLD = 60;
+            if (maxDist > FAR_THRESHOLD) {
+              let minLen = Infinity,
+                best = null;
+              visibleMarkers.forEach((mo) => {
+                const len = mo.centerSprite.position.length();
+                if (len < minLen) {
+                  minLen = len;
+                  best = mo;
+                }
+              });
+              if (best) {
+                const dir = best.centerSprite.position.clone().normalize();
+                const newCameraPos = dir
+                  .clone()
+                  .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+                animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+                return;
+              }
+            }
+
+            // Otherwise, aim at the centroid direction
+            const direction = centerPos.clone().normalize();
+            const newCameraPos = direction
+              .clone()
+              .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+            animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+          }
+        }
+
+        function animateToCategory(categoryId) {
+          const categoryMarkers = markerObjects.filter(
+            (mo) => mo.categoryId === categoryId && markerInDataset(mo)
+          );
+          if (categoryMarkers.length === 0) return;
+
+          // If only one marker, focus closer
+          if (categoryMarkers.length === 1) {
+            const pos = categoryMarkers[0].centerSprite.position.clone();
+            const dir = pos.clone().normalize();
+            const newCameraPos = dir
+              .clone()
+              .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+            animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+            return;
+          }
+
+          // center of markers
+          let centerX = 0,
+            centerY = 0,
+            centerZ = 0;
+          categoryMarkers.forEach((mo) => {
+            centerX += mo.centerSprite.position.x;
+            centerY += mo.centerSprite.position.y;
+            centerZ += mo.centerSprite.position.z;
+          });
+          centerX /= categoryMarkers.length;
+          centerY /= categoryMarkers.length;
+          centerZ /= categoryMarkers.length;
+          const centerPos = new THREE.Vector3(centerX, centerY, centerZ);
+
+          // far-apart check
+          let maxDist = 0;
+          for (let i = 0; i < categoryMarkers.length; i++) {
+            for (let j = i + 1; j < categoryMarkers.length; j++) {
+              const a = categoryMarkers[i].centerSprite.position;
+              const b = categoryMarkers[j].centerSprite.position;
+              maxDist = Math.max(maxDist, a.distanceTo(b));
+            }
+          }
+          const FAR_THRESHOLD = 60;
+
+          if (maxDist > FAR_THRESHOLD) {
+            // focus closest-to-center marker, closer distance
+            let minDist = Infinity,
+              bestMarker = null;
+            categoryMarkers.forEach((mo) => {
+              const d = mo.centerSprite.position.length();
+              if (d < minDist) {
+                minDist = d;
+                bestMarker = mo;
+              }
+            });
+            if (bestMarker) {
+              const pos = bestMarker.centerSprite.position.clone();
+              const dir = pos.clone().normalize();
+              const newCameraPos = dir
+                .clone()
+                .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+              animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+              return;
+            }
+          }
+
+          // otherwise focus center, closer distance
+          const direction = centerPos.clone().normalize();
+          const newCameraPos = direction
+            .clone()
+            .multiplyScalar(CAMERA_DISTANCE_CLOSE);
+          animateCamera(newCameraPos, new THREE.Vector3(0, 0, 0));
+        }
+
+        // Populate select element with categories
+        const allOption = document.createElement("option");
+        allOption.value = "all";
+        allOption.textContent = "All Categories";
+        allOption.selected = true;
+        categoryListEl.appendChild(allOption);
+
+        CATEGORIES.forEach((c) => {
+          const opt = document.createElement("option");
+          opt.value = c.id;
+          opt.textContent = c.name;
+          categoryListEl.appendChild(opt);
+        });
+
+        // Listen for category selection changes
+        categoryListEl.addEventListener("change", (e) => {
+          selectedCategory = e.target.value;
+          updateMarkerVisibilityAndAnimate(selectedCategory);
+        });
+
+        // Toggle listeners for DESKTOP
+        const usToggleDesktop = document.getElementById("us");
+        const globalToggleDesktop = document.getElementById("global");
+        if (usToggleDesktop) {
+          usToggleDesktop.addEventListener("change", () => {
+            if (usToggleDesktop.checked) {
+              datasetMode = "us";
+              updateMarkerVisibilityAndAnimate(selectedCategory);
+            }
+          });
+        }
+        if (globalToggleDesktop) {
+          globalToggleDesktop.addEventListener("change", () => {
+            if (globalToggleDesktop.checked) {
+              datasetMode = "global";
+              updateMarkerVisibilityAndAnimate(selectedCategory);
+            }
+          });
+        }
+
+        // Toggle listeners for MOBILE
+        const usToggleMobile = document.getElementById("us_mob");
+        const globalToggleMobile = document.getElementById("global_mob");
+        if (usToggleMobile) {
+          usToggleMobile.addEventListener("change", () => {
+            if (usToggleMobile.checked) {
+              datasetMode = "us";
+              updateMarkerVisibilityAndAnimate(selectedCategory);
+            }
+          });
+        }
+        if (globalToggleMobile) {
+          globalToggleMobile.addEventListener("change", () => {
+            if (globalToggleMobile.checked) {
+              datasetMode = "global";
+              updateMarkerVisibilityAndAnimate(selectedCategory);
+            }
+          });
+        }
+
+        // ---------- internals for land dots & caching ----------
+        const earthImgSrc =
+          "https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg";
+
+        // variables we will set
+        let landPoints = null; // THREE.Points for hard-edge dots
+        let landSoftPoints = null; // smoothed larger low-opacity layer
+        let pointsMaterial = null;
+        let softPointsMaterial = null;
+        let landPositions = null; // Float32Array flat x,y,z (in globe radius units)
+        const RADIUS = 60;
+
+        // ---------- add white globe base sphere for ocean/background ----------
+        const globeBaseGeo = new THREE.SphereGeometry(RADIUS, 64, 64);
+        const globeBaseMat = new THREE.MeshBasicMaterial({
+          color: 0xffffff,
+          transparent: false,
+        });
+        const globeBaseMesh = new THREE.Mesh(globeBaseGeo, globeBaseMat);
+        scene.add(globeBaseMesh);
+
+        // cache key helper
+        function cacheKey(step, thresh, w, h) {
+          return `globe_land_${step}_${thresh}_${w}x${h}_${earthImgSrc}`;
+        }
+
+        async function buildOrLoadLandDots(step, thresh) {
+          // Always use fixed constants
+          const effectiveStep = FIXED_STEP;
+          const effectiveThresh = FIXED_BRIGHTNESS_THRESHOLD;
+
+          const key = cacheKey(
+            effectiveStep,
+            effectiveThresh,
+            Math.min(2048, W),
+            Math.min(2048, H)
+          );
+          // look in localStorage
+          try {
+            const cached = localStorage.getItem(key);
+            if (cached) {
+              const parsed = JSON.parse(cached);
+              console.log(
+                "Loaded land points from cache:",
+                parsed.length / 3,
+                "points"
+              );
+              createPointsFromArray(parsed, effectiveStep);
+              return;
+            }
+          } catch (e) {
+            console.warn("cache read error", e);
+          }
+
+          // Not cached -> sample image
+          const earthImage = await loadImage(earthImgSrc);
+          const off = document.createElement("canvas");
+          off.width = earthImage.width;
+          off.height = earthImage.height;
+          const ctx = off.getContext("2d");
+          ctx.drawImage(earthImage, 0, 0);
+          const imgData = ctx.getImageData(0, 0, off.width, off.height).data;
+
+          const positions = [];
+
+          const STEP = effectiveStep;
+          const BRIGHTNESS_THRESHOLD = effectiveThresh;
+          const BLUE_DELTA = 12;
+
+          const w = off.width,
+            h = off.height;
+
+          // sample grid
+          for (let y = 0; y < h; y += STEP) {
+            for (let x = 0; x < w; x += STEP) {
+              const idx = (y * w + x) * 4;
+              const r = imgData[idx],
+                g = imgData[idx + 1],
+                b = imgData[idx + 2];
+              const brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+              const isLessBlue = b + BLUE_DELTA < Math.max(r, g);
+              if (brightness > BRIGHTNESS_THRESHOLD && isLessBlue) {
+                const lon = (x / (w - 1)) * 360 - 180;
+                const lat = 90 - (y / (h - 1)) * 180;
+                const phi = (90 - lat) * (Math.PI / 180);
+                const theta = (lon + 180) * (Math.PI / 180);
+                const vx = -(RADIUS * Math.sin(phi) * Math.cos(theta));
+                const vz = RADIUS * Math.sin(phi) * Math.sin(theta);
+                const vy = RADIUS * Math.cos(phi);
+                positions.push(vx, vy, vz);
+              }
+            }
+          }
+
+          // store to cache (try, but don't block on failure)
+          try {
+            localStorage.setItem(key, JSON.stringify(positions));
+            console.log(
+              "Cached land points",
+              positions.length / 3,
+              "points to localStorage"
+            );
+          } catch (e) {
+            console.warn("cache write failed", e);
+          }
+
+          createPointsFromArray(positions, effectiveStep);
+        }
+
+        function createPointsFromArray(positionsArr, stepUsed) {
+          // remove previous
+          if (landPoints) {
+            scene.remove(landPoints);
+            landPoints.geometry.dispose();
+            landPoints = null;
+          }
+          if (landSoftPoints) {
+            scene.remove(landSoftPoints);
+            landSoftPoints.geometry.dispose();
+            landSoftPoints = null;
+          }
+
+          const positions = Float32Array.from(positionsArr);
+          landPositions = positions; // keep reference for snapping markers
+
+          const colors = new Float32Array(positions.length); // simple blueish gradient by y
+          for (let i = 0; i < positions.length; i += 3) {
+            const y = positions[i + 1];
+            const t = 0.55 + y / (RADIUS * 2);
+            colors[i] = 0.06 + 0.2 * t;
+            colors[i + 1] = 0.46 + 0.25 * t;
+            colors[i + 2] = 0.88 + 0.08 * t;
+          }
+
+          const geom = new THREE.BufferGeometry();
+          geom.setAttribute(
+            "position",
+            new THREE.BufferAttribute(positions, 3)
+          );
+          geom.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+
+          // crisp dots material via custom shader that hides back-facing hemisphere
+          const dotVertexShader = `
+            varying vec3 vWorldPos;
+            varying vec3 vColor;
+            uniform float uSize;
+            void main() {
+              vColor = color;
+              vec4 worldPos = modelMatrix * vec4(position, 1.0);
+              vWorldPos = worldPos.xyz;
+              vec4 mvPosition = viewMatrix * worldPos;
+              gl_Position = projectionMatrix * mvPosition;
+              gl_PointSize = uSize; // size in pixels; adjusted in JS with distance
+            }
+          `;
+          const dotFragmentShader = `
+            varying vec3 vWorldPos;
+            varying vec3 vColor;
+            uniform float uOpacity;
+            // cameraPosition is provided by Three.js
+            void main() {
+              // circular point sprite
+              vec2 uv = gl_PointCoord - vec2(0.5);
+              float r = length(uv);
+              // soft edge for nicer look
+              float alphaMask = smoothstep(0.5, 0.48, r);
+              if (alphaMask <= 0.0) discard;
+
+              // hemisphere culling: only render points facing the camera
+              vec3 viewDir = normalize(cameraPosition - vWorldPos);
+              vec3 normal = normalize(vWorldPos); // sphere centered at origin
+              float facing = dot(normal, viewDir);
+              if (facing <= 0.0) discard;
+
+              // keep dots black (light shadow style)
+              vec3 col = vec3(0.0);
+              gl_FragColor = vec4(col, alphaMask * uOpacity);
+            }
+          `;
+
+          const uniforms = {
+            uSize: { value: 3.5 * (window.devicePixelRatio || 1) },
+            uOpacity: { value: 0.4 },
+          };
+
+          pointsMaterial = new THREE.ShaderMaterial({
+            uniforms,
+            vertexShader: dotVertexShader,
+            fragmentShader: dotFragmentShader,
+            transparent: true,
+            depthWrite: false,
+            depthTest: false,
+            vertexColors: true,
+          });
+          landPoints = new THREE.Points(geom, pointsMaterial);
+          scene.add(landPoints);
+
+          // soft blurred layer removed - only crisp dots now
+
+          console.log(
+            "createPointsFromArray -> created",
+            positions.length / 3,
+            "land points (step",
+            stepUsed + ")"
+          );
+          // after building dots we can snap markers
+          snapAllMarkersToLand();
+        }
+
+        // ---------- markers using LOCATIONS, grouped by category ----------
+        const markerGroup = new THREE.Group();
+        scene.add(markerGroup);
+        const markerObjects = []; // { id, mesh, meta, categoryId }
+
+        const ringGeo = new THREE.RingGeometry(1.9, 2.6, 24);
+        ringGeo.rotateX(Math.PI / 2);
+        const smallSphereGeo = new THREE.SphereGeometry(1.1, 10, 10);
+
+        // color palette per category (simple hash)
+        const categoryColor = {};
+        const palette = [0x0b99ff, 0xff7a59, 0x62c370, 0xc47dff];
+        CATEGORIES.forEach(
+          (c, i) => (categoryColor[c.id] = palette[i % palette.length])
+        );
+
+        function latLonToVector3(lat, lon, radius = RADIUS) {
+          const phi = ((90 - lat) * Math.PI) / 180;
+          const theta = ((lon + 180) * Math.PI) / 180;
+          const x = -(radius * Math.sin(phi) * Math.cos(theta));
+          const z = radius * Math.sin(phi) * Math.sin(theta);
+          const y = radius * Math.cos(phi);
+          return new THREE.Vector3(x, y, z);
+        }
+
+        // --- create marker visual: center sprite + halo sprite (using SVG textures) ---
+        LOCATIONS.forEach((loc, idx) => {
+          // base spherical position
+          const pos = latLonToVector3(loc.lat, loc.lon, RADIUS * 1.01);
+
+          // SVG sprite for center (solid blue)
+          const centerSVG = encodeURIComponent(
+            `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+      <circle cx="32" cy="32" r="10" fill="#1565c0" stroke="#fff" stroke-width="2" />
+    </svg>`
+          );
+          const haloSVG = encodeURIComponent(
+            `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+      <defs>
+        <radialGradient id="g" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#2b9af6" stop-opacity="1"/>
+          <stop offset="50%" stop-color="#2b9af6" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#2b9af6" stop-opacity="0.0"/>
+        </radialGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="transparent"/>
+      <circle cx="64" cy="64" r="16" fill="url(#g)"/>
+    </svg>`
+          );
+
+          const centerTex = new THREE.TextureLoader().load(
+            "data:image/svg+xml;utf8," + centerSVG
+          );
+          const haloTex = new THREE.TextureLoader().load(
+            "data:image/svg+xml;utf8," + haloSVG
+          );
+
+          const centerMat = new THREE.SpriteMaterial({
+            map: centerTex,
+            depthWrite: false,
+            depthTest: true,
+            transparent: true,
+          });
+          const haloMat = new THREE.SpriteMaterial({
+            map: haloTex,
+            depthWrite: false,
+            depthTest: true,
+            transparent: true,
+          });
+
+          const centerSprite = new THREE.Sprite(centerMat);
+          const haloSprite = new THREE.Sprite(haloMat);
+
+          // hide halo permanently
+          haloSprite.visible = false;
+
+          // scale sprites (will be adjusted in animation loop for zoom)
+          centerSprite.scale.set(3.6, 3.6, 1);
+          haloSprite.scale.set(6, 6, 1);
+
+          centerSprite.position.copy(pos).multiplyScalar(1.02);
+          haloSprite.position.copy(pos).multiplyScalar(1.01);
+
+          // store meta and index so raycaster can find marker by object
+          centerSprite.userData = { type: "marker", idx };
+          haloSprite.userData = { type: "marker", idx };
+
+          markerGroup.add(centerSprite);
+          markerObjects.push({
+            id: loc.id,
+            centerSprite,
+            haloSprite,
+            meta: loc,
+            categoryId: loc.categoryId,
+          });
+        });
+
+        function updateMarkerVisibility() {
+          // This function is now replaced by updateMarkerVisibilityAndAnimate
+          // but keeping it for compatibility with other parts of the code
+          markerObjects.forEach((mo) => {
+            mo.centerSprite.visible = mo.haloSprite.visible =
+              selectedCategory === "all" || mo.categoryId === selectedCategory;
+          });
+        }
+
+        // snap each marker to nearest land point (brute force search)
+        function snapAllMarkersToLand() {
+          if (!landPositions) return;
+          const posArr = landPositions; // Float32Array or array
+          markerObjects.forEach((mo) => {
+            const target = latLonToVector3(mo.meta.lat, mo.meta.lon, RADIUS);
+            // find nearest point in posArr
+            let bestIdx = -1;
+            let bestDist = Infinity;
+            for (let i = 0; i < posArr.length; i += 3) {
+              const dx = posArr[i] - target.x;
+              const dy = posArr[i + 1] - target.y;
+              const dz = posArr[i + 2] - target.z;
+              const d2 = dx * dx + dy * dy + dz * dz;
+              if (d2 < bestDist) {
+                bestDist = d2;
+                bestIdx = i;
+              }
+            }
+            if (bestIdx >= 0) {
+              const nx = posArr[bestIdx],
+                ny = posArr[bestIdx + 1],
+                nz = posArr[bestIdx + 2];
+              const newPos = new THREE.Vector3(nx, ny, nz)
+                .normalize()
+                .multiplyScalar(RADIUS * 1.005);
+              mo.haloSprite.position.copy(newPos);
+              mo.centerSprite.position.copy(newPos).multiplyScalar(1.02);
+            }
+          });
+        }
+
+        // ---------- interactivity ----------
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enablePan = false;
+        // Enable zoom with distance limits for Google Earth-like zoom
+        controls.enableZoom = true;
+        controls.minDistance = 80; // Closest zoom (zoomed in)
+        controls.maxDistance = 200; // Farthest zoom (zoomed out)
+        controls.rotateSpeed = 0.6;
+        controls.zoomSpeed = 1.2; // Zoom speed (higher = faster zoom)
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.09;
+        controls.autoRotate = false;
+
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+
+        function onPointerMove(e) {
+          const rect = renderer.domElement.getBoundingClientRect();
+          mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+          mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+
+          // Change cursor when hovering over marker
+          raycaster.setFromCamera(mouse, camera);
+          const visibleMarkers = markerGroup.children.filter(
+            (child) => child.visible
+          );
+          const intersects = raycaster.intersectObjects(visibleMarkers, true);
+
+          if (
+            intersects.length &&
+            intersects[0].object.userData.type === "marker"
+          ) {
+            renderer.domElement.style.cursor = "pointer";
+          } else {
+            renderer.domElement.style.cursor = "grab";
+          }
+        }
+        window.addEventListener("pointermove", onPointerMove);
+
+        // Prevent page scroll when mouse wheel is used over the globe
+        containerEl.addEventListener(
+          "wheel",
+          (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          },
+          { passive: false }
+        );
+
+        // Also prevent scroll on the canvas directly
+        renderer.domElement.addEventListener(
+          "wheel",
+          (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          },
+          { passive: false }
+        );
+
+        // Tooltip elements
+        const markerTooltip = document.getElementById("markerTooltip");
+        const tooltipContent = document.getElementById("tooltipContent");
+        let activeTooltipMarkers = [];
+
+        // Click on marker to show tooltip
+        renderer.domElement.addEventListener("click", (ev) => {
+          // Prevent event from immediately triggering document click listener
+          ev.stopPropagation();
+
+          raycaster.setFromCamera(mouse, camera);
+          // Only check visible markers
+          const visibleMarkers = markerGroup.children.filter(
+            (child) => child.visible
+          );
+          const intersects = raycaster.intersectObjects(visibleMarkers, true);
+
+          if (intersects.length) {
+            // Get all markers within a close distance (grouped/overlapping markers)
+            const clickedMarker = intersects[0].object;
+            if (
+              clickedMarker.userData &&
+              clickedMarker.userData.type === "marker"
+            ) {
+              const clickedPos = clickedMarker.position;
+
+              // Find all markers close to the clicked position (within 2 units)
+              const threshold = 2;
+              const nearbyMarkers = markerObjects.filter((mo) => {
+                if (!mo.centerSprite.visible) return false;
+                const dist = mo.centerSprite.position.distanceTo(clickedPos);
+                return dist < threshold;
+              });
+
+              if (nearbyMarkers.length > 0) {
+                showMarkerTooltip(nearbyMarkers, clickedPos);
+                activeTooltipMarkers = nearbyMarkers;
+                return;
+              }
+            }
+          }
+          // Click outside marker - hide tooltip
+          hideMarkerTooltip();
+        });
+
+        // Double-click to focus a marker
+        window.addEventListener("dblclick", (ev) => {
+          raycaster.setFromCamera(mouse, camera);
+          const intersects = raycaster.intersectObjects(
+            markerGroup.children,
+            true
+          );
+          if (intersects.length) {
+            const o = intersects[0].object;
+            if (o.userData && o.userData.type === "marker") {
+              const idx = o.userData.idx;
+              focusOnMarker(idx);
+            }
+          }
+        });
+
+        function showMarkerTooltip(markers, position) {
+          // Clear previous content
+          tooltipContent.innerHTML = "";
+
+          // Create entry for each marker
+          markers.forEach((marker, index) => {
+            const entry = document.createElement("div");
+            entry.style.cssText = "padding: 6px 0;";
+            if (index > 0) {
+              entry.style.borderTop = "1px solid rgba(255,255,255,0.2)";
+            }
+
+            // Make the entire entry a clickable link
+            const link = document.createElement("a");
+            link.href = marker.meta.url || "#";
+            link.target = "_blank";
+            link.rel = "noopener";
+            link.style.cssText =
+              "display: flex; align-items: center; justify-content: space-between; gap: 12px; color: inherit; text-decoration: none; transition: color 0.2s;";
+
+            // Add hover effect
+            link.addEventListener("mouseenter", () => {
+              link.style.color = "#4fc3ff";
+            });
+            link.addEventListener("mouseleave", () => {
+              link.style.color = "inherit";
+            });
+
+            const nameSpan = document.createElement("span");
+            nameSpan.textContent = marker.meta.name;
+            nameSpan.style.cssText =
+              "flex: 1; white-space: normal; line-height: 1.4;";
+
+            const arrow = document.createElement("span");
+            arrow.textContent = "→";
+            arrow.style.cssText =
+              "color: #4fc3ff; font-size: 18px; font-weight: bold; flex-shrink: 0;";
+
+            link.appendChild(nameSpan);
+            link.appendChild(arrow);
+            entry.appendChild(link);
+            tooltipContent.appendChild(entry);
+          });
+
+          // Add header if multiple markers
+          if (markers.length > 1) {
+            const header = document.createElement("div");
+            header.textContent = `${markers.length} locations`;
+            header.style.cssText =
+              "font-weight: bold; font-size: 12px; color: #4fc3ff; margin-bottom: 4px; text-transform: uppercase;";
+            tooltipContent.insertBefore(header, tooltipContent.firstChild);
+          }
+
+          const screen = toScreenPosition(position, camera);
+          const containerRect = containerEl.getBoundingClientRect();
+
+          // Position relative to container
+          let left = screen.x + 20;
+          let top = screen.y;
+
+          markerTooltip.style.display = "block";
+
+          // Get tooltip dimensions after rendering content
+          setTimeout(() => {
+            const tooltipWidth = markerTooltip.offsetWidth;
+            const tooltipHeight = markerTooltip.offsetHeight;
+            const containerWidth = containerRect.width;
+            const containerHeight = containerRect.height;
+
+            // Flip to left if overflowing right
+            if (left + tooltipWidth > containerWidth - 10) {
+              left = screen.x - tooltipWidth - 20;
+            }
+
+            // Clamp vertical
+            if (top - tooltipHeight / 2 < 10) {
+              top = tooltipHeight / 2 + 10;
+            }
+            if (top + tooltipHeight / 2 > containerHeight - 10) {
+              top = containerHeight - tooltipHeight / 2 - 10;
+            }
+
+            markerTooltip.style.left = left + "px";
+            markerTooltip.style.top = top + "px";
+            markerTooltip.style.transform = "translateY(-50%)";
+          }, 0);
+        }
+
+        function hideMarkerTooltip() {
+          markerTooltip.style.display = "none";
+          activeTooltipMarkers = [];
+        }
+
+        // Hide tooltip when clicking outside container
+        document.addEventListener("click", (ev) => {
+          if (!containerEl.contains(ev.target)) {
+            hideMarkerTooltip();
+          }
+        });
+
+        function toScreenPosition(pos, camera) {
+          const vector = pos.clone();
+          vector.project(camera);
+          return {
+            x: ((vector.x + 1) / 2) * renderer.domElement.clientWidth,
+            y: ((-vector.y + 1) / 2) * renderer.domElement.clientHeight,
+          };
+        }
+
+        function focusOnMarker(idx) {
+          const m = markerObjects[idx];
+          if (!m) return;
+          const target = m.centerSprite.position.clone();
+          const dir = target.clone().normalize();
+          const newCamPos = dir.clone().multiplyScalar(CAMERA_DISTANCE_CLOSE);
+          animateCamera(newCamPos, new THREE.Vector3(0, 0, 0));
+        }
+
+        // Hover functionality removed
+
+        // camera tween
+        function animateCamera(destPos, destTarget) {
+          const startPos = camera.position.clone();
+          const startTarget = controls.target.clone();
+          const duration = 700;
+          let t0 = performance.now();
+          (function tick() {
+            const now = performance.now();
+            let t = Math.min(1, (now - t0) / duration);
+            t = easeInOutCubic(t);
+            camera.position.lerpVectors(startPos, destPos, t);
+            controls.target.lerpVectors(startTarget, destTarget, t);
+            if (t < 1) requestAnimationFrame(tick);
+          })();
+        }
+        function easeInOutCubic(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        // ---------- initial build (with defaults and mobile LOD awareness) ----------
+        function startBuild(step, thresh) {
+          // use fixed values regardless of inputs
+          console.log("startBuild", {
+            step: FIXED_STEP,
+            thresh: FIXED_BRIGHTNESS_THRESHOLD,
+          });
+          buildOrLoadLandDots(FIXED_STEP, FIXED_BRIGHTNESS_THRESHOLD);
+        }
+
+        // ---------- animation: update dot size by distance ----------
+        function updatePointSizes() {
+          if (!pointsMaterial) return;
+          const base = 3.5 * (window.devicePixelRatio || 1);
+          const dist =
+            camera.position.distanceTo(
+              controls.target || new THREE.Vector3(0, 0, 0)
+            ) || CAMERA_DISTANCE_CLOSE;
+          // clamp scaling factor so sizes are reasonable
+          const scale = THREE.MathUtils.clamp(
+            CAMERA_DISTANCE_CLOSE / dist,
+            0.45,
+            3.5
+          );
+          if (pointsMaterial.uniforms && pointsMaterial.uniforms.uSize) {
+            pointsMaterial.uniforms.uSize.value = base * scale;
+          }
+        }
+
+        // ---------- render loop ----------
+        function animate() {
+          requestAnimationFrame(animate);
+          controls.update();
+          updatePointSizes();
+          // animate markers
+          const t = performance.now() * 0.001;
+          const camDist = camera.position.distanceTo(
+            controls.target || new THREE.Vector3(0, 0, 0)
+          );
+          markerObjects.forEach((mo) => {
+            const s = THREE.MathUtils.clamp(
+              CAMERA_DISTANCE_CLOSE / camDist,
+              0.6,
+              2.8
+            );
+            // center sprite size
+            mo.centerSprite.scale.set(3.6 * s, 3.6 * s, 1);
+            // halo removed; no scaling needed
+          });
+          renderer.render(scene, camera);
+        }
+
+        // ---------- resize ----------
+        window.addEventListener("resize", onWindowResize);
+        function onWindowResize() {
+          W = containerEl.clientWidth;
+          H = W; // Keep it square
+          camera.aspect = 1; // Always 1:1 aspect ratio
+          camera.updateProjectionMatrix();
+          renderer.setSize(W, H);
+          // if you want, you could rebuild at different resolution depending on size — omitted to keep responsive
+        }
+
+        // ---------- helpers ----------
+        function loadImage(src) {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = src;
+          });
+        }
+
+        // no slider UI to initialize
+
+        // ---------- start everything ----------
+        startBuild(FIXED_STEP, FIXED_BRIGHTNESS_THRESHOLD);
+        // Apply default dataset (U.S.) and All category visibility on load
+        updateMarkerVisibilityAndAnimate("all");
+        animate();
+
+        // expose one method for debugging in console
+        window._globeRebuild = startBuild;
+      })();
+    </script>
 
     <!-- Calendly Modal -->
     <div
@@ -10214,69 +11873,43 @@
       });
     </script>
     <script>
-      // Lightweight section-level lazy loader
-      (function () {
-        function applyNativeLazy() {
-          // Add native loading=lazy where supported
-          document.querySelectorAll("img").forEach((img) => {
-            if (!img.hasAttribute("loading"))
-              img.setAttribute("loading", "lazy");
-          });
-          document.querySelectorAll("iframe").forEach((fr) => {
-            if (!fr.hasAttribute("loading")) fr.setAttribute("loading", "lazy");
-          });
-        }
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const rings = document.getElementById("rings");
+      //   if (!rings) return;
 
-        function loadSectionResources(section) {
-          // swap data-src -> src for imgs and iframes
-          section.querySelectorAll("img[data-src]").forEach((img) => {
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute("data-src");
-            }
-          });
-          section.querySelectorAll("iframe[data-src]").forEach((ifr) => {
-            if (ifr.dataset.src) {
-              ifr.src = ifr.dataset.src;
-              ifr.removeAttribute("data-src");
-            }
-          });
-          // background images
-          section.querySelectorAll("[data-bg]").forEach((el) => {
-            const url = el.dataset.bg;
-            if (url) {
-              el.style.backgroundImage = `url('${url}')`;
-              el.removeAttribute("data-bg");
-            }
-          });
-          section.classList.add("lazy-loaded");
-        }
+      //   // A factor to control the sensitivity/intensity of the tilt.
+      //   const tiltSensitivity = 30;
 
-        document.addEventListener("DOMContentLoaded", function () {
-          applyNativeLazy();
+      //   // Get the window's dimensions for central reference
+      //   const centerX = window.innerWidth / 2;
+      //   const centerY = window.innerHeight / 2;
 
-          const sections = Array.from(document.querySelectorAll("section"));
-          if (!sections.length) return;
+      //   // *** Define the mandatory centering transform ***
+      //   const centeringTransform = "translate(-50%, 0)";
 
-          if ("IntersectionObserver" in window) {
-            const io = new IntersectionObserver(
-              (entries, obs) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    loadSectionResources(entry.target);
-                    obs.unobserve(entry.target);
-                  }
-                });
-              },
-              { rootMargin: "200px 0px" }
-            );
-            sections.forEach((s) => io.observe(s));
-          } else {
-            // Fallback: eager-load everything
-            sections.forEach((s) => loadSectionResources(s));
-          }
-        });
-      })();
+      //   document.addEventListener("mousemove", (event) => {
+      //     const mouseX = event.clientX;
+      //     const mouseY = event.clientY;
+
+      //     const normalizedX = (mouseX - centerX) / centerX;
+      //     const normalizedY = (mouseY - centerY) / centerY;
+
+      //     // Rotation around X-axis (tilt up/down, controlled by Y-mouse position)
+      //     const rotX = normalizedY * -tiltSensitivity;
+      //     // Rotation around Y-axis (tilt left/right, controlled by X-mouse position)
+      //     const rotY = normalizedX * tiltSensitivity;
+
+      //     // 🌟 CRITICAL FIX: Combine centering with the new rotation 🌟
+      //     // Always include the centering transform first!
+      //     rings.style.transform = `${centeringTransform} rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+      //   });
+
+      //   // Optional: Reset the transform when the mouse leaves the window
+      //   document.addEventListener("mouseleave", () => {
+      //     // Reset to just the centering transform
+      //     rings.style.transform = centeringTransform;
+      //   });
+      // });
     </script>
   </body>
 </html>
