@@ -5179,6 +5179,8 @@ footer ul li {
   background: linear-gradient(0deg, #ccccccb9 0%, rgba(153, 153, 153, 0) 100%);
 }
 }
+
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .gradient-border-golang-md {
     position: relative;
@@ -5292,6 +5294,22 @@ footer ul li {
 }
 
 
+.slider-3 .owl-nav button.owl-prev {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+  rotate: 180deg;
+}
+
+.slider-3 .owl-nav button.owl-next {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+}
+.slider-3 .owl-nav button.owl-prev:hover {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+  rotate: 180deg;
+}
+
+.slider-3 .owl-nav button.owl-next:hover {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+}
 
 
 
@@ -5299,17 +5317,33 @@ footer ul li {
 
 
 
+
+@media(min-width:1024px){
 .slider-3 .owl-nav{
   position: absolute;
-  top: -75px;
+  top: -100px;
   display: flex;
   justify-content: start;
  
   padding-left: 200px !important;
 }
+}
 
 
 
+@media(max-width: 1024px){
+ 
+.slider-3 .owl-nav{
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: start;
+
+  padding-left: 10px !important;
+}
+}
+
+@media(min-width:1280px) {
 .slider-border-golang{
   position: relative;
 }
@@ -5322,6 +5356,7 @@ footer ul li {
   width: 3px;
   height: 100%;
   background: linear-gradient(0deg, #ccccccb9 0%, rgba(153, 153, 153, 0) 100%);
+}
 }
 
 
@@ -5351,5 +5386,59 @@ footer ul li {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+}
+
+
+.bg-gradient-custom{
+  background: linear-gradient(270.81deg, #0B0B11 1.16%, #101329 103.18%);
+
+}
+
+.golang-content-section{
+  background: linear-gradient(268.32deg, #283A8F -89.46%, #09090B 52.44%);
+
+}
+
+
+
+  .cbtn-golang-border{
+  position: relative;
+}
+
+.cbtn-golang-border:after{
+ content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 90%;
+  background: linear-gradient(0deg, #ccccccb9 0%, rgba(153, 153, 153, 0) 100%);
+}
+
+.cbtn-border-bottom-right{
+  position: relative;
+}
+.cbtn-border-bottom-right:before{
+ content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff 0%, #000000 100%);
+
+}
+.cbtn-border-bottom-left{
+  position: relative;
+}
+.cbtn-border-bottom-left:before{
+  content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
+
 }
 
