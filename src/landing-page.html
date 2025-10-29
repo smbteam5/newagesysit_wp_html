@@ -10213,5 +10213,70 @@
         }
       });
     </script>
+    <script>
+      // Lightweight section-level lazy loader
+      (function () {
+        function applyNativeLazy() {
+          // Add native loading=lazy where supported
+          document.querySelectorAll("img").forEach((img) => {
+            if (!img.hasAttribute("loading"))
+              img.setAttribute("loading", "lazy");
+          });
+          document.querySelectorAll("iframe").forEach((fr) => {
+            if (!fr.hasAttribute("loading")) fr.setAttribute("loading", "lazy");
+          });
+        }
+
+        function loadSectionResources(section) {
+          // swap data-src -> src for imgs and iframes
+          section.querySelectorAll("img[data-src]").forEach((img) => {
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute("data-src");
+            }
+          });
+          section.querySelectorAll("iframe[data-src]").forEach((ifr) => {
+            if (ifr.dataset.src) {
+              ifr.src = ifr.dataset.src;
+              ifr.removeAttribute("data-src");
+            }
+          });
+          // background images
+          section.querySelectorAll("[data-bg]").forEach((el) => {
+            const url = el.dataset.bg;
+            if (url) {
+              el.style.backgroundImage = `url('${url}')`;
+              el.removeAttribute("data-bg");
+            }
+          });
+          section.classList.add("lazy-loaded");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          applyNativeLazy();
+
+          const sections = Array.from(document.querySelectorAll("section"));
+          if (!sections.length) return;
+
+          if ("IntersectionObserver" in window) {
+            const io = new IntersectionObserver(
+              (entries, obs) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    loadSectionResources(entry.target);
+                    obs.unobserve(entry.target);
+                  }
+                });
+              },
+              { rootMargin: "200px 0px" }
+            );
+            sections.forEach((s) => io.observe(s));
+          } else {
+            // Fallback: eager-load everything
+            sections.forEach((s) => loadSectionResources(s));
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
