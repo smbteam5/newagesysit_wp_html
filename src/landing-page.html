@@ -29,48 +29,14 @@
       rel="stylesheet"
     />
 
-    <!-- Preload hero image for faster LCP -->
-    <link
-      rel="preload"
-      as="image"
-      href="./img/bnr-landing.webp"
-      imagesrcset="./img/bnr-landing.webp 1x"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="preconnect" href="https://code.jquery.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <link href="style.css" rel="stylesheet" />
+    <link href="style2.css" rel="stylesheet" />
     <style>
       :root {
-        /* Baseline your comps were designed for */
         --design-w: 1440;
-
-        /* Safety rails so rings don't explode or disappear */
-        --ring-min: 260px; /* min width of any ring */
-        --ring-max: 1800px; /* max width of any ring */
-
-        /* Colors (keep your existing tokens if set elsewhere) */
+        --ring-min: 260px; 
+        --ring-max: 1800px;
         --ring-color: rgba(255, 255, 255, 1);
         --blue-color: #5871f0;
-      }
-      /* @keyframes fadeInUpWord {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0px);
-        }
       }
 
       @keyframes fadeInUp {
@@ -82,33 +48,7 @@
           opacity: 1;
           transform: translateY(0);
         }
-      } */
-
-      /* .word {
-        display: inline-block;
-        position: relative;
-        opacity: 0;
-        animation: fadeInUpWord 0.5s ease forwards;
-        color: #fff !important;
-      } */
-
-      /* Optional: Smooth fade-in for <p> and <button> */
-      /* .fade-target {
-        opacity: 0;
-        transition: opacity 0.6s ease, transform 0.6s ease;
-        transform: translateY(20px);
-        animation: 1s cubic-bezier(0.65, 0, 0.35, 1) both fadeInUp;
-      } */
-      /* .fade-target.para {
-        animation-delay: 2s;
-      }
-      .fade-target.bnr-btn {
-        animation-delay: 3s;
-      }
-      .fade-in {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-      } */
+      } 
 
       h2.animatedText span {
         display: block;
@@ -261,96 +201,7 @@
           bottom: -38% !important;
         }
       }
-      @keyframes ring-bounce {
-        0% {
-          opacity: 0;
-          transform: translate(-50%, 0)
-            translate3d(
-              0,
-              calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px),
-              0
-            )
-            scale(1);
-        }
-        10% {
-          opacity: var(--opacity, 0.02);
-          transform: translate(-50%, 0)
-            translate3d(0, calc(var(--base, 0) * 1px + var(--amp, 70px)), 0)
-            scale(1);
-        }
-        30%,
-        50% {
-          opacity: var(--opacity, 0.02);
-          transform: translate(-50%, 0)
-            translate3d(0, calc(var(--base, 0) * 1px - var(--amp, 40px)), 0)
-            scale(var(--scale-up, 1.05));
-        }
-        100% {
-          opacity: var(--opacity, 0.02);
-          transform: translate(-50%, 0)
-            translate3d(0, calc(var(--base, 0) * 1px), 0) scale(1);
-        }
-      }
 
-      /*
- ******************************************************
- * 3. REVISED BASE STYLES: Set initial opacity to 0
- ******************************************************
- */
-      .ring {
-        position: absolute;
-        left: 50%;
-        /* Keep your per-ring design size in px via --size on each <span> */
-        --size-px: var(--size, 1300);
-
-        /* Preferred responsive size: scale the design px by viewport width relative to design width */
-        width: clamp(
-          var(--ring-min),
-          calc(var(--size-px) * (100svw / var(--design-w))),
-          var(--ring-max)
-        );
-      }
-
-      .ring {
-        aspect-ratio: 1 / 0.44;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(255, 255, 255, 0) 0%,
-          var(--ring-color) 100%
-        );
-        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-
-        /* Initial (pre-anim) state must match 0% keyframe */
-        opacity: 0;
-        filter: blur(0);
-        transform: translate(-50%, 0)
-          translate3d(
-            0,
-            calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px),
-            0
-          )
-          scale(1);
-      }
-
-      /* Innermost ring color, inherits all sizing */
-      .ring-final {
-        background: var(--blue-color);
-        opacity: 0;
-        filter: blur(0);
-        transform: translate(-50%, 0)
-          translate3d(
-            0,
-            calc(var(--base, 0) * 1px + var(--amp, 70px) + 20px),
-            0
-          )
-          scale(1);
-      }
-
-      /* Trigger animation */
-      .rings-loaded .ring {
-        animation: ring-bounce 1.5s cubic-bezier(0.4, 0.4, 0.4, 0.4) forwards;
-        animation-delay: var(--delay, 0ms);
-      }
       #hero {
         transition: transform 120ms linear, opacity 200ms ease;
         will-change: transform, opacity;
@@ -378,7 +229,6 @@
       }
     </style>
     <style>
-      /* Ensure mix-blend utility exists if Tailwind wasn't generated */
       .mix-blend-hard-light {
         mix-blend-mode: hard-light;
         -webkit-mix-blend-mode: hard-light;
@@ -387,31 +237,6 @@
   </head>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
-    <div
-      class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 hidden p-[15px]"
-      id="videoModal"
-    >
-      <div
-        class="bg-white rounded-lg overflow-hidden w-full max-w-3xl relative"
-      >
-        <div class="relative pb-9/16">
-          <iframe
-            id="youtubePlayer"
-            class="w-full h-[400px]"
-            src=""
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <button
-          class="absolute top-0 right-0 m-2 text-white bg-red-600 rounded-full p-2 w-[30px] h-[30px] flex justify-center items-center"
-          id="closeModal"
-        >
-          &times;
-        </button>
-      </div>
-    </div>
 
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
@@ -425,9 +250,9 @@
             <img
               src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
               class="h-[40px] md:h-[47px]"
-              alt="NewAgeSys logo"
-              data-skip-lazy
+              alt="NewAgeSys IT Logo"
               fetchpriority="high"
+              loading="lazy"
             />
           </a>
           <ul class="hidden lg:flex items-center justify-center lg:ml-6">
@@ -1303,7 +1128,7 @@
         </nav>
         <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
           <button class="py-2 px-3 rounded uppercase">
-            <img class="max-w-6" src="./img/call.png" alt="call" />
+            <img class="max-w-6" src="./img/call.png" alt="call" loading="lazy" />
           </button>
           <button id="mobile-menu-button" class="xl:hidden">
             <svg
@@ -2220,8 +2045,6 @@
         fetchpriority="high"
         loading="eager"
         decoding="async"
-        width="1920"
-        height="900"
         class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
         src="./img/bnr-landing.webp"
       />
@@ -2231,7 +2054,7 @@
         <span
           class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
         >
-          <img src="./img/glow.png" alt="" class="w-auto" />
+          <img src="./img/glow.png" alt="" class="w-auto" loading="lazy" />
         </span>
 
         <div class="w-full text-center pb-[40px] relative z-[9]">
@@ -2396,7 +2219,7 @@
       </div> -->
 
       <img
-        src="./img/banner-new.webp"
+        src="./img/banner.webp"
         alt=""
         class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom"
       />
@@ -2496,21 +2319,21 @@
               <ul
                 class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
               >
-                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li><img src="./img/Deloitte.svg" alt="Deloitte" loading="lazy" /></li>
+                <li><img src="./img/Inc.svg" alt="Inc 5000" loading="lazy" /></li>
+                <li><img src="./img/uspaacc.svg" alt="USPAACC" loading="lazy" /></li>
+                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" loading="lazy" /></li>
+                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" loading="lazy" /></li>
               </ul>
               <ul
                 aria-hidden="true"
                 class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
               >
-                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li><img src="./img/Deloitte.svg" alt="Deloitte" loading="lazy" /></li>
+                <li><img src="./img/Inc.svg" alt="Inc 5000" loading="lazy" /></li>
+                <li><img src="./img/uspaacc.svg" alt="USPAACC" loading="lazy" /></li>
+                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" loading="lazy" /></li>
+                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" loading="lazy" /></li>
               </ul>
             </div>
           </div>
@@ -3478,7 +3301,7 @@
         >
           <div class="min-1380px:max-w-[33%] w-full">
             <h2
-              class="text-[40px] lg:text-[50px] font-[500] leading-[56px] mb-6 max-1360px:text-center"
+              class="text-[50px] font-[500] leading-[56px] mb-6 max-1360px:text-center"
             >
               Ensuring<br class="hidden max-1360px:hidden lg:block" />
               Businesses<br class="hidden lg:block max-1360px:hidden" />
@@ -3590,6 +3413,7 @@
         </div>
       </div>
     </section>
+
     <section
       class="relative overflow-hidden bg-[#0D0D0D] py-[50px] lg:py-[100px] xl:hidden block"
     >
@@ -3860,10 +3684,8 @@
             <span class="inline md:hidden">Schedule a Call</span>
           </button>
 
-          <span
-            class="pointer-events-none absolute w-full h-full left-0 max-768px:hidden"
-          >
-            <img src="./img/prob-glow.svg" alt="" class="h-full w-full" />
+          <span class="pointer-events-none absolute w-full left-0">
+            <img src="./img/prob-glow.svg" alt="" loading="lazy" />
           </span>
         </div>
       </div>
@@ -3889,7 +3711,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp1.svg" alt="" />
+                <img src="./img/svp1.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -3908,7 +3730,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp2.svg" alt="" />
+                <img src="./img/svp2.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -3927,7 +3749,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp3.svg" alt="" />
+                <img src="./img/svp3.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -3945,7 +3767,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp4.svg" alt="" />
+                <img src="./img/svp4.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -3964,7 +3786,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp5.svg" alt="" />
+                <img src="./img/svp5.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -3983,7 +3805,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp6.svg" alt="" />
+                <img src="./img/svp6.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -4000,7 +3822,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp7.svg" alt="" />
+                <img src="./img/svp7.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -4019,7 +3841,7 @@
           <div class="avs-item bg-[#20212B] p-6 rounded-[10px]">
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/svp8.svg" alt="" />
+                <img src="./img/svp8.svg" alt="" loading="lazy" />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-semibold text-[24px]">
@@ -4769,7 +4591,6 @@
       x-data="{ active: 'isra' }"
     >
       <div class="container">
-        <!-- sechd text-left text-[34px] leading-[48px] lg:text-[38px] lg:leading-[50px] lg:mt-0 xl:text-[40px] xl:leading-[50px] text-white font-normal mb-[15px] -->
         <h2
           class="sechd text-left text-[32px] leading-[48px] lg:text-[38px] lg:leading-[50px] lg:mt-0 xl:text-[40px] xl:leading-[50px] text-black mb-[15px] pb-[50px] font-[700]"
         >
@@ -5584,6 +5405,7 @@
         </div>
       </div>
     </section>
+
     <!-- steps web-->
     <section
       id="steps"
@@ -6421,6 +6243,7 @@
         </div>
       </div>
     </section>
+    
 
     <section
       class="trusted-providers horizontal-scrolling flex flex-col gap-5 py-[50px] lg:py-[100px] bg-[#0D0D0D]"
@@ -8319,6 +8142,7 @@
         </div>
       </div>
     </section>
+
     <section class="bg-white py-[50px] lg:pt-[100px] lg:pb-[20px]">
       <div>
         <div class="container">
@@ -8636,11 +8460,10 @@
         </div>
       </div>
     </section>
+
     <section class="faq-stack py-[50px] lg:py-[100px] bg-[#fff]">
       <div class="container mx-auto px-4">
-        <!-- Accordion -->
         <div class="accordion mt-5" id="technologyStackAccordion">
-          <!-- Turn the bootstrap row into a responsive grid -->
           <div class="mt-5 grid grid-cols-1 lg:grid-cols-[40%_60%] gap-6">
             <!-- LEFT COLUMN -->
             <div class="space-y-4">
@@ -9236,13 +9059,11 @@
         </div>
       </div>
     </section>
+
     <footer class="bg-[#0D0D0D] text-gray-300">
       <div class="mx-auto px-6 lg:px-8 py-14">
-        <!-- Top: 3 groups -->
         <div class="mb-[20px]">
           <h3 class="text-white text-xl font-semibold mb-4">Services</h3>
-
-          <!-- Columns -->
           <div
             class="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-2 text-sm leading-7"
           >
@@ -9466,15 +9287,10 @@
         </div>
       </div>
       <div class="text-center">
-        <img
-          src="./img/newage-logo-footer.webp"
-          alt="logo"
-          class="mx-auto"
-          loading="lazy"
-          decoding="async"
-        />
+        <img src="./img/newage-logo-footer.webp" alt="logo" class="mx-auto" />
       </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -9487,104 +9303,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
     <script>
-      // window.addEventListener("scroll", () => {
-      //   const banner = document.getElementById("hero-banner");
-      //   const scrollTop = window.scrollY;
-      //   const fadeStart = 0;
-      //   const fadeEnd = 300;
-      //   let opacity = 1 - (scrollTop - fadeStart) / (fadeEnd - fadeStart);
-      //   opacity = Math.max(0, Math.min(1, opacity));
-      //   banner.style.opacity = opacity;
-      // });
-    </script>
-    <!-- Lightweight lazy-init: sets loading="lazy" on images/iframes (includes .svg images) that are not explicitly marked to skip lazying. -->
-    <script>
-      (function () {
-        try {
-          const applyLazyToImg = (img) => {
-            try {
-              if (
-                img.hasAttribute("loading") ||
-                img.hasAttribute("data-skip-lazy")
-              )
-                return;
-              const src = img.getAttribute("src") || "";
-              if (src.startsWith("data:")) return; // skip inline data URIs
-              img.setAttribute("loading", "lazy");
-              if (!img.hasAttribute("decoding"))
-                img.setAttribute("decoding", "async");
-              if (!img.hasAttribute("fetchpriority"))
-                img.setAttribute("fetchpriority", "low");
-            } catch (e) {
-              /* non-fatal per-image */
-            }
-          };
-
-          const init = function () {
-            try {
-              // Images (including .svg files used via <img>)
-              const imgs = document.querySelectorAll("img");
-              imgs.forEach(applyLazyToImg);
-
-              // If there are <picture> elements, ensure their img child is handled
-              const pics = document.querySelectorAll("picture");
-              pics.forEach((p) => {
-                const img = p.querySelector("img");
-                if (img) applyLazyToImg(img);
-              });
-
-              // Lazy-load known iframe players (modal iframe starts with empty src until opened)
-              const yt = document.getElementById("youtubePlayer");
-              if (yt && !yt.hasAttribute("loading"))
-                yt.setAttribute("loading", "lazy");
-
-              const calendly = document.getElementById("calendlyIframe");
-              if (calendly && !calendly.hasAttribute("loading"))
-                calendly.setAttribute("loading", "lazy");
-            } catch (e) {
-              console.warn("Lazy-init error", e);
-            }
-          };
-
-          if ("requestIdleCallback" in window) {
-            requestIdleCallback(init, { timeout: 200 });
-          } else {
-            if (
-              document.readyState === "complete" ||
-              document.readyState === "interactive"
-            )
-              init();
-            else
-              document.addEventListener("DOMContentLoaded", init, {
-                once: true,
-              });
-          }
-        } catch (e) {
-          console.warn("Lazy-init bootstrap failed", e);
-        }
-      })();
-    </script>
-
-    <script>
       gsap.registerPlugin(ScrollTrigger);
-      const rings = gsap.utils.toArray("#rings .ring");
-      rings.forEach((ring) => {
-        const amp = parseFloat(ring.style.getPropertyValue("--amp")) || 100;
-        gsap.to(ring, {
-          "--offset": amp,
-          ease: "none",
-          scrollTrigger: {
-            trigger: "#hero-banner",
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("rings-loaded");
-      });
       document.querySelectorAll(".animatedText").forEach((section) => {
         const textEl = section.querySelectorAll("span");
         gsap.to(textEl, {
@@ -9594,7 +9313,7 @@
             end: "bottom 20%",
             scrub: 1,
           },
-          backgroundPositionX: "0%", // gradient sweep
+          backgroundPositionX: "0%", 
           stagger: 0.5,
           ease: "none",
         });
@@ -9750,34 +9469,25 @@
 
     <script>
       gsap.registerPlugin(ScrollTrigger);
-
-      // --- GLOBAL FIX FOR JITTER: Normalize Scroll for Synchronization (Best non-premium fix) ---
-      // This is the most effective way to eliminate the root cause of jerking/jittering on many devices.
       ScrollTrigger.normalizeScroll(true);
 
       const container = document.querySelector("#steps");
       const steps = gsap.utils.toArray("#steps .step");
       const progressEl = document.querySelector("#progress");
-
-      // --- AGGRESSIVE CSS HINTS FOR PERFORMANCE ---
-      // Added willChange to the container itself (the pinned element)
+      
       gsap.set(container, { force3D: true, willChange: "transform" });
       gsap.set(steps, {
         willChange: "transform, opacity",
         backfaceVisibility: "hidden",
       });
       gsap.set(progressEl, { transformOrigin: "left center" });
-
-      // --- stable viewport height helper (iOS-safe) ---
       const getStableVH = () => {
-        // Prefer screen.height on iOS (address bar collapses change innerHeight)
         const iOS =
           /iPad|iPhone|iPod/.test(navigator.userAgent) ||
           (navigator.userAgent.includes("Mac") && "ontouchend" in document);
         return iOS ? screen.height : window.innerHeight;
       };
 
-      // --- initial state ---
       steps.forEach((el, i) => {
         gsap.set(el, {
           autoAlpha: i === 0 ? 1 : 0,
@@ -9799,7 +9509,7 @@
         const next = steps[nextIdx];
         gsap.killTweensOf([prev, next]);
 
-        // Animate out previous step
+        
         gsap.to(prev, {
           autoAlpha: 0,
           y: -40,
@@ -9812,7 +9522,6 @@
           },
         });
 
-        // Animate in next step
         gsap.fromTo(
           next,
           { autoAlpha: 0, y: 40 },
@@ -9840,7 +9549,6 @@
       const mm = ScrollTrigger.matchMedia;
 
       mm({
-        // Desktop & tablets in landscape (scrub is OK here)
         "(min-width: 768px)": function () {
           const pinST = ScrollTrigger.create({
             id: "steps-pin-desktop",
@@ -10001,78 +9709,6 @@
       });
     </script>
     <script>
-      // const bg = document.getElementById("heroBg");
-      // const bgPrev = document.getElementById("heroBgPrev");
-
-      // function swapBackground(url) {
-      //   const currentUrl = bg.style.backgroundImage;
-      //   console.log(currentUrl);
-
-      //   if (currentUrl) {
-      //     bgPrev.style.backgroundImage = currentUrl;
-      //     bgPrev.style.opacity = 1;
-      //     void bgPrev.offsetWidth;
-      //   }
-      //   bg.style.backgroundImage = `url("${url}")`;
-      //   requestAnimationFrame(() => {
-      //     bgPrev.style.opacity = 0;
-      //   });
-      // }
-
-      // const swiper = new Swiper("#industriesSwiper", {
-      //   slidesPerView: 1,
-      //   spaceBetween: 0,
-      //   centeredSlides: false,
-      //   loop: false,
-      //   dots: false,
-      //   grabCursor: true,
-      //   breakpoints: {
-      //     640: { slidesPerView: 1, spaceBetween: 0 },
-      //     960: { slidesPerView: 3, spaceBetween: 0 },
-      //     1280: { slidesPerView: 4, spaceBetween: 0 },
-      //   },
-      //   navigation: {
-      //     nextEl: ".swiper-button-next",
-      //     prevEl: ".swiper-button-prev",
-      //   },
-      //   pagination: { el: ".swiper-pagination", enabled: false },
-      //   on: {
-      //     init(sw) {
-      //       const first = sw.slides[sw.activeIndex];
-      //       swapBackground(first.dataset.bg);
-      //     },
-      //     slideChange(sw) {
-      //       const active = sw.slides[sw.activeIndex];
-      //       swapBackground(active.dataset.bg);
-      //     },
-      //   },
-      // });
-
-      // function attachPreviewHandlers(slideEl) {
-      //   console.log(slideEl, "slideElslideEl");
-
-      //   const show = () => swapBackground(slideEl.dataset.bg);
-      //   const reset = () => {
-      //     const active = swiper.slides[swiper.activeIndex];
-      //     swapBackground(active.dataset.bg);
-      //   };
-
-      //   slideEl.addEventListener("mouseenter", show);
-      //   slideEl.addEventListener("focus", show);
-      //   slideEl.addEventListener("mouseleave", reset);
-      //   slideEl.addEventListener("blur", reset);
-      //   slideEl.addEventListener("click", () => {
-      //     swiper.slideTo([...swiper.slides].indexOf(slideEl));
-      //   });
-      // }
-
-      // swiper.slides.forEach(attachPreviewHandlers);
-
-      // swiper.on("resize", () => {
-      //   swiper.slides.forEach(attachPreviewHandlers);
-      // });
-    </script>
-    <script>
       document.addEventListener("DOMContentLoaded", () => {
         /* ---------------- Testimonials slider ---------------- */
         const testimonialsSwiper = new Swiper(".ctt_testimonials", {
@@ -10097,55 +9733,6 @@
         const bg = document.getElementById("heroBg");
         const bgPrev = document.getElementById("heroBgPrev");
 
-        // Image preloader cache
-        const imageCache = new Map();
-        let preloadPromise = null;
-
-        // Preload all background images with priority loading
-        function preloadBackgroundImages() {
-          if (preloadPromise) return preloadPromise;
-
-          const slides = document.querySelectorAll(
-            "#industriesSwiper .swiper-slide[data-bg]"
-          );
-          const imageUrls = Array.from(slides).map((slide) => slide.dataset.bg);
-
-          preloadPromise = Promise.allSettled(
-            imageUrls.map((url, index) => {
-              if (imageCache.has(url)) {
-                return Promise.resolve(imageCache.get(url));
-              }
-
-              return new Promise((resolve, reject) => {
-                const img = new Image();
-
-                // Add loading attributes for better performance
-                img.decoding = "async";
-                img.loading = "eager"; // Load immediately for preloading
-
-                // Set priority for first few images
-                if (index < 3) {
-                  img.fetchpriority = "high";
-                }
-
-                img.onload = () => {
-                  imageCache.set(url, img);
-                  resolve(img);
-                };
-                img.onerror = () => {
-                  console.warn(`Failed to preload image: ${url}`);
-                  reject(new Error(`Failed to load ${url}`));
-                };
-
-                // Start loading
-                img.src = url;
-              });
-            })
-          );
-
-          return preloadPromise;
-        }
-
         function swapBackground(url) {
           if (!bg || !bgPrev || !url) return;
           const currentUrl = bg.style.backgroundImage;
@@ -10162,97 +9749,13 @@
           });
         }
 
-        // Start preloading images immediately
-        preloadBackgroundImages()
-          .then(() => {
-            console.log("Background images preloaded successfully");
-          })
-          .catch((error) => {
-            console.warn("Some background images failed to preload:", error);
-          });
-
         /* ---------------- Industries slider ---------------- */
-        let currentSelectedSlide = null;
-        let isHovering = false;
-
-        // Function to update slide selection
-        function updateSlideSelection(slideElement) {
-          if (!slideElement || slideElement === currentSelectedSlide) return;
-
-          // Remove selection from all slides
-          const allSlides = document.querySelectorAll(
-            "#industriesSwiper .swiper-slide"
-          );
-          allSlides.forEach((slide) => {
-            slide.classList.remove("slide-selected");
-            // Also remove any swiper-slide-active to prevent conflicts
-            slide.classList.remove("swiper-slide-active");
-          });
-
-          // Add selection to current slide
-          slideElement.classList.add("slide-selected");
-          currentSelectedSlide = slideElement;
-
-          // Update background with smooth transition
-          if (slideElement.dataset && slideElement.dataset.bg) {
-            swapBackground(slideElement.dataset.bg);
-          }
-
-          // Debug log (can be removed in production)
-          console.log(
-            "Selected slide:",
-            slideElement.querySelector(".slide-title")?.textContent || "Unknown"
-          );
-        }
-
-        // Function to get first visible slide
-        function getFirstVisibleSlide(swiper) {
-          if (!swiper || !swiper.slides || swiper.slides.length === 0)
-            return null;
-
-          try {
-            const swiperRect = swiper.el.getBoundingClientRect();
-            let firstVisibleSlide = null;
-            let maxVisibility = 0;
-
-            for (let i = 0; i < swiper.slides.length; i++) {
-              const slide = swiper.slides[i];
-              const slideRect = slide.getBoundingClientRect();
-
-              // Calculate visibility percentage
-              const left = Math.max(slideRect.left, swiperRect.left);
-              const right = Math.min(slideRect.right, swiperRect.right);
-              const visibleWidth = Math.max(0, right - left);
-              const visibilityPercentage = visibleWidth / slideRect.width;
-
-              // If this slide is more visible than previous ones, select it
-              if (
-                visibilityPercentage > maxVisibility &&
-                visibilityPercentage > 0.3
-              ) {
-                maxVisibility = visibilityPercentage;
-                firstVisibleSlide = slide;
-              }
-            }
-
-            // If no slide is sufficiently visible, return first slide
-            return firstVisibleSlide || swiper.slides[0];
-          } catch (error) {
-            console.warn("Error getting first visible slide:", error);
-            return swiper.slides[0] || null;
-          }
-        }
-
         const industriesSwiper = new Swiper("#industriesSwiper", {
           slidesPerView: 1,
           spaceBetween: 0,
           centeredSlides: false,
           loop: false,
           grabCursor: true,
-          lazy: {
-            loadPrevNext: true,
-            loadPrevNextAmount: 2,
-          },
           breakpoints: {
             640: { slidesPerView: 2, spaceBetween: 0 },
             960: { slidesPerView: 3, spaceBetween: 0 },
@@ -10267,103 +9770,48 @@
           observeParents: true,
           on: {
             init(sw) {
-              // Set first background immediately for better perceived performance
               const first = sw.slides[sw.activeIndex];
               if (first && first.dataset && first.dataset.bg) {
-                // Check if first image is already cached
-                if (imageCache.has(first.dataset.bg)) {
-                  swapBackground(first.dataset.bg);
-                } else {
-                  // Load first image with high priority
-                  const firstImg = new Image();
-                  firstImg.decoding = "async";
-                  firstImg.fetchpriority = "high";
-                  firstImg.onload = () => {
-                    imageCache.set(first.dataset.bg, firstImg);
-                    swapBackground(first.dataset.bg);
-                  };
-                  firstImg.onerror = () => {
-                    console.warn("Failed to load first background image");
-                  };
-                  firstImg.src = first.dataset.bg;
-                }
+                swapBackground(first.dataset.bg);
               }
-
-              // Select first visible slide by default
-              setTimeout(() => {
-                const firstVisible = getFirstVisibleSlide(sw);
-                if (firstVisible && !isHovering) {
-                  updateSlideSelection(firstVisible);
-                }
-              }, 100);
             },
             slideChange(sw) {
-              // When user swipes/navigates, select the first visible slide
-              if (!isHovering) {
-                setTimeout(() => {
-                  const firstVisible = getFirstVisibleSlide(sw);
-                  if (firstVisible) {
-                    updateSlideSelection(firstVisible);
-                  }
-                }, 50);
-              }
-            },
-            transitionEnd(sw) {
-              // Ensure selection is correct after transition
-              if (!isHovering) {
-                const firstVisible = getFirstVisibleSlide(sw);
-                if (firstVisible) {
-                  updateSlideSelection(firstVisible);
-                }
+              const active = sw.slides[sw.activeIndex];
+              if (active && active.dataset && active.dataset.bg) {
+                swapBackground(active.dataset.bg);
               }
             },
           },
         });
 
-        /* ---------------- Hover/focus previews with selection ---------------- */
+        /* ---------------- Hover/focus previews ---------------- */
         function attachPreviewHandlers(slideEl) {
           if (!slideEl) return;
 
-          const handleMouseEnter = () => {
-            isHovering = true;
-            updateSlideSelection(slideEl);
+          const show = () => {
+            const url = slideEl.dataset ? slideEl.dataset.bg : "";
+            if (url) swapBackground(url);
+          };
+          const reset = () => {
+            const active =
+              industriesSwiper.slides[industriesSwiper.activeIndex];
+            const url = active && active.dataset ? active.dataset.bg : "";
+            if (url) swapBackground(url);
           };
 
-          const handleFocus = () => {
-            isHovering = true;
-            updateSlideSelection(slideEl);
-          };
-
-          const handleBlur = () => {
-            isHovering = false;
-            setTimeout(() => {
-              if (!isHovering) {
-                const firstVisible = getFirstVisibleSlide(industriesSwiper);
-                if (firstVisible) {
-                  updateSlideSelection(firstVisible);
-                }
-              }
-            }, 100);
-          };
-
-          const handleClick = () => {
+          // Avoid double-binding on resize: remove any previous handlers first
+          slideEl.onmouseenter = show;
+          slideEl.onfocus = show;
+          slideEl.onmouseleave = reset;
+          slideEl.onblur = reset;
+          slideEl.onclick = () => {
             // get index without spreading (works with NodeList/HTMLCollection)
             const idx = Array.prototype.indexOf.call(
               industriesSwiper.slides,
               slideEl
             );
-            if (idx >= 0) {
-              isHovering = false;
-              industriesSwiper.slideTo(idx);
-              // Selection will be updated by slideChange event
-            }
+            if (idx >= 0) industriesSwiper.slideTo(idx);
           };
-
-          // Avoid double-binding on resize: remove any previous handlers first
-          slideEl.onmouseenter = handleMouseEnter;
-          slideEl.onfocus = handleFocus;
-          slideEl.onblur = handleBlur;
-          slideEl.onclick = handleClick;
         }
 
         // attach once after init
@@ -10372,146 +9820,14 @@
           attachPreviewHandlers
         );
 
-        // Add swiper container mouse leave handler
-        const swiperContainer = document.getElementById("industriesSwiper");
-        if (swiperContainer) {
-          swiperContainer.addEventListener("mouseleave", () => {
-            isHovering = false;
-            setTimeout(() => {
-              if (!isHovering) {
-                const firstVisible = getFirstVisibleSlide(industriesSwiper);
-                if (firstVisible) {
-                  updateSlideSelection(firstVisible);
-                }
-              }
-            }, 50);
-          });
-        }
-
         industriesSwiper.on("resize", () => {
           Array.prototype.forEach.call(
             industriesSwiper.slides,
             attachPreviewHandlers
           );
-
-          // Re-select first visible slide after resize
-          if (!isHovering) {
-            setTimeout(() => {
-              const firstVisible = getFirstVisibleSlide(industriesSwiper);
-              if (firstVisible) {
-                updateSlideSelection(firstVisible);
-              }
-            }, 100);
-          }
-        });
-
-        // Add window resize handler for responsive updates
-        window.addEventListener("resize", () => {
-          if (!isHovering) {
-            setTimeout(() => {
-              const firstVisible = getFirstVisibleSlide(industriesSwiper);
-              if (firstVisible) {
-                updateSlideSelection(firstVisible);
-              }
-            }, 200);
-          }
         });
       });
     </script>
-    <!-- Calendly Modal -->
-    <div
-      id="calendlyModal"
-      style="
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 99999;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <div
-        style="
-          position: relative;
-          width: 90%;
-          max-width: 1000px;
-          height: 90vh;
-          background: white;
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
-        "
-      >
-        <button
-          id="closeCalendlyModal"
-          style="
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-          "
-        >
-          ×
-        </button>
-
-        <!-- Loading Spinner -->
-        <div
-          id="calendlyLoader"
-          style="
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-          "
-        >
-          <div
-            style="
-              width: 50px;
-              height: 50px;
-              border: 4px solid #f3f3f3;
-              border-top: 4px solid #ff5b14;
-              border-radius: 50%;
-              animation: spin 1s linear infinite;
-            "
-          ></div>
-          <p style="color: #666; font-size: 14px; margin: 0">
-            Loading Calendly...
-          </p>
-        </div>
-
-        <iframe
-          id="calendlyIframe"
-          src=""
-          style="
-            width: 100%;
-            height: 100%;
-            border: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-          "
-        ></iframe>
-      </div>
-    </div>
 
     <script>
       // Calendly Modal functionality
@@ -10621,6 +9937,137 @@
             delay: 0.2, // A slight delay to ensure it feels intentional
           });
         }
+      });
+    </script>
+
+    <!-- Lazy Loading Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Function to load SVG specifically
+          function loadSVG(img, src) {
+            fetch(src)
+              .then(response => response.text())
+              .then(svgContent => {
+                if (svgContent.includes('<svg')) {
+                  img.src = src;
+                }
+              })
+              .catch(() => {
+                // Fallback to direct src setting if fetch fails
+                img.src = src;
+              });
+          }
+
+          // Initialize Intersection Observer for images
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                const src = img.getAttribute('data-src');
+                if (src) {
+                  if (src.toLowerCase().endsWith('.svg')) {
+                    loadSVG(img, src);
+                  } else {
+                    img.src = src;
+                  }
+                  img.removeAttribute('data-src');
+                  img.classList.remove('lazy-load');
+                }
+                observer.unobserve(img);
+              }
+            });
+          }, {
+            rootMargin: '100px 0px', // Increased margin for earlier loading
+            threshold: 0.01
+          });
+
+        // Initialize Intersection Observer for background images
+        const bgObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target;
+              const bg = element.getAttribute('data-bg');
+              if (bg) {
+                  if (bg.toLowerCase().endsWith('.svg')) {
+                    fetch(bg)
+                      .then(response => response.text())
+                      .then(svgContent => {
+                        if (svgContent.includes('<svg')) {
+                          element.style.backgroundImage = `url(${bg})`;
+                        }
+                      })
+                      .catch(() => {
+                        element.style.backgroundImage = `url(${bg})`;
+                      });
+                  } else {
+                    element.style.backgroundImage = `url(${bg})`;
+                  }
+                element.removeAttribute('data-bg');
+                  element.classList.remove('lazy-load');
+              }
+              observer.unobserve(element);
+            }
+          });
+        }, {
+            rootMargin: '100px 0px',
+          threshold: 0.01
+        });
+
+        // Helper function to check if element is in viewport
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Process all images
+        document.querySelectorAll('img').forEach(img => {
+          // Skip images that are already optimized
+          if (img.hasAttribute('loading') || img.hasAttribute('fetchpriority')) {
+            return;
+          }
+
+          // Add lazy loading to images below the fold
+          if (!isInViewport(img)) {
+            const src = img.getAttribute('src');
+            if (src) {
+              img.setAttribute('data-src', src);
+                img.classList.add('lazy-load');
+              img.setAttribute('loading', 'lazy');
+              img.removeAttribute('src');
+              imageObserver.observe(img);
+            }
+          }
+        });
+
+        // Process elements with background images
+        document.querySelectorAll('[style*="background-image"]').forEach(el => {
+          const style = window.getComputedStyle(el);
+          const bgImage = style.backgroundImage;
+          if (bgImage && bgImage !== 'none' && !isInViewport(el)) {
+            el.setAttribute('data-bg', bgImage.slice(4, -1).replace(/["']/g, ""));
+              el.classList.add('lazy-load');
+            el.style.backgroundImage = 'none';
+            bgObserver.observe(el);
+          }
+        });
+
+          // Add CSS for lazy loading animation
+          const style = document.createElement('style');
+          style.textContent = `
+            .lazy-load {
+              opacity: 0;
+              transition: opacity 0.3s ease-in-out;
+            }
+            .lazy-load[src], .lazy-load[style*="background-image"] {
+              opacity: 1;
+            }
+          `;
+          document.head.appendChild(style);
       });
     </script>
   </body>
