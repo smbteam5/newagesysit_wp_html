@@ -387,31 +387,6 @@
   </head>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
-    <div
-      class="fixed inset-0 backdrop-blur-lg flex items-center justify-center z-50 hidden p-[15px]"
-      id="videoModal"
-    >
-      <div
-        class="bg-white rounded-lg overflow-hidden w-full max-w-3xl relative"
-      >
-        <div class="relative pb-9/16">
-          <iframe
-            id="youtubePlayer"
-            class="w-full h-[400px]"
-            src=""
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <button
-          class="absolute top-0 right-0 m-2 text-white bg-red-600 rounded-full p-2 w-[30px] h-[30px] flex justify-center items-center"
-          id="closeModal"
-        >
-          &times;
-        </button>
-      </div>
-    </div>
 
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
@@ -10417,6 +10392,110 @@
           }
         });
       });
+    </script>
+    <!-- Section lazy-loader: load each <section> once when it approaches the viewport -->
+    <script>
+      (function () {
+        try {
+          const supportsIO = 'IntersectionObserver' in window;
+
+          const loadMedia = (container) => {
+            // Images with data-src / data-srcset
+            container.querySelectorAll('img[data-src], img[data-srcset]').forEach((img) => {
+              const src = img.getAttribute('data-src');
+              const srcset = img.getAttribute('data-srcset');
+              if (src) img.src = src;
+              if (srcset) img.srcset = srcset;
+              img.removeAttribute('data-src');
+              img.removeAttribute('data-srcset');
+            });
+
+            // <picture> sources
+            container.querySelectorAll('source[data-src], source[data-srcset]').forEach((s) => {
+              const ds = s.getAttribute('data-src');
+              const dss = s.getAttribute('data-srcset');
+              if (ds) s.src = ds;
+              if (dss) s.srcset = dss;
+              s.removeAttribute('data-src');
+              s.removeAttribute('data-srcset');
+            });
+
+            // iframes
+            container.querySelectorAll('iframe[data-src]').forEach((f) => {
+              const src = f.getAttribute('data-src');
+              if (src) f.src = src;
+              f.removeAttribute('data-src');
+            });
+
+            // background images (data-bg)
+            container.querySelectorAll('[data-bg]').forEach((el) => {
+              const bg = el.getAttribute('data-bg');
+              if (bg) {
+                el.style.backgroundImage = `url("${bg}")`;
+                el.removeAttribute('data-bg');
+              }
+            });
+          };
+
+          const onSectionVisible = (section) => {
+            if (!section || section.dataset.lazyLoaded === 'true') return;
+            section.dataset.lazyLoaded = 'true';
+            section.classList.add('section-visible', 'section-loaded');
+
+            // load media inside section
+            loadMedia(section);
+
+            // dispatch event so other scripts can initialize on demand
+            try {
+              const ev = new CustomEvent('section:visible', { detail: { section } });
+              section.dispatchEvent(ev);
+            } catch (e) {
+              // ignore
+            }
+          };
+
+          const observeSections = () => {
+            const allSections = Array.from(document.querySelectorAll('section'))
+              // Exclude hero/banner and any section explicitly opted out
+              .filter(s => s.id !== 'hero-banner' && !s.hasAttribute('data-skip-lazy'));
+
+            if (!supportsIO) {
+              // Fallback: load all immediately
+              allSections.forEach(onSectionVisible);
+              return;
+            }
+
+            const io = new IntersectionObserver((entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const sec = entry.target;
+                  onSectionVisible(sec);
+                  obs.unobserve(sec);
+                }
+              });
+            }, { rootMargin: '300px 0px', threshold: 0.05 });
+
+            allSections.forEach((sec) => {
+              // If already visible (e.g., very short pages), trigger immediately
+              const rect = sec.getBoundingClientRect();
+              if (rect.top < window.innerHeight + 300 && rect.bottom > -300) {
+                onSectionVisible(sec);
+                return;
+              }
+              io.observe(sec);
+            });
+          };
+
+          // Start after DOM is ready
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            observeSections();
+          } else {
+            document.addEventListener('DOMContentLoaded', observeSections, { once: true });
+          }
+        } catch (err) {
+          console.warn('Section lazy-loader failed', err);
+        }
+      })();
     </script>
     <!-- Calendly Modal -->
     <div
