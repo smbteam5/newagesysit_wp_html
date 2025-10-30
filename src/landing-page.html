@@ -29,6 +29,14 @@
       rel="stylesheet"
     />
 
+    <!-- Preload hero image for faster LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="./img/bnr-landing.webp"
+      imagesrcset="./img/bnr-landing.webp 1x"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -2212,6 +2220,8 @@
         fetchpriority="high"
         loading="eager"
         decoding="async"
+        width="1920"
+        height="900"
         class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
         src="./img/bnr-landing.webp"
       />
@@ -3850,8 +3860,10 @@
             <span class="inline md:hidden">Schedule a Call</span>
           </button>
 
-          <span class="pointer-events-none absolute w-full left-0">
-            <img src="./img/prob-glow.svg" alt="" />
+          <span
+            class="pointer-events-none absolute w-full h-full left-0 max-768px:hidden"
+          >
+            <img src="./img/prob-glow.svg" alt="" class="h-full w-full" />
           </span>
         </div>
       </div>
