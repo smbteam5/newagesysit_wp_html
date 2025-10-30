@@ -29,6 +29,8 @@
       rel="stylesheet"
     />
 
+    <!-- Preload critical assets -->
+    <link rel="preload" href="style2.css" as="style" />
     <link href="style2.css" rel="stylesheet" />
     <style>
       :root {
@@ -2038,11 +2040,21 @@
       id="hero-banner"
       class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
     >
+      <!-- Preload hero banner image -->
+      <link
+        rel="preload"
+        as="image"
+        href="./img/bnr-landing.webp"
+        type="image/webp"
+        fetchpriority="high"
+      />
       <img
-        alt="banner"
+        alt="NewAgeSys IT Hero Banner"
         fetchpriority="high"
         loading="eager"
         decoding="async"
+        width="1920"
+        height="1080"
         class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
         src="./img/bnr-landing.webp"
       />
