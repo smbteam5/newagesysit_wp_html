@@ -2029,40 +2029,6 @@
       id="hero-banner"
       class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
     >
-      <!-- Preload hero banner image -->
-      <link
-        rel="preload"
-        as="image"
-        href="./img/bnr-landing.webp"
-        type="image/webp"
-        fetchpriority="high"
-      />
-      <picture>
-        <source
-          media="(min-width: 1440px)"
-          srcset="./img/bnr-landing-xl.webp"
-          width="1920"
-          height="1080"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset="./img/bnr-landing-md.webp"
-          width="1440"
-          height="810"
-        />
-        <img
-          alt="NewAgeSys IT Hero Banner"
-          fetchpriority="high"
-          loading="eager"
-          decoding="async"
-          width="768"
-          height="432"
-          class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
-          src="./img/bnr-landing-sm.webp"
-        />
-      </picture>
-
-      <!-- Content Container -->
       <div class="container mx-auto w-full max-w-[1456px] px-4">
         <span
           class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
@@ -2070,10 +2036,7 @@
           <img 
             src="./img/glow.webp" 
             alt="" 
-            class="w-auto" 
-            loading="lazy"
-            width="800"
-            height="400"
+            class="w-auto"
           />
         </span>
 
@@ -3326,11 +3289,7 @@
               <div
                 class="absolute left-0 top-0 h-full w-full transition-all duration-500 ease-in-out group-hover:w-[calc(100%+50px)]"
               >
-                <img
-                  src="./img/pattern-eclipse.webp"
-                  alt=""
-                  class="object-cover w-full h-full"
-                />
+                <img alt="" class="object-cover w-full h-full lazy-load" data-src="./img/pattern-eclipse.webp" loading="lazy">
               </div>
               <div
                 class="top-[0px] relative pb-6 transition-all duration-500 ease-in-out group-hover:top-[-20px]"
@@ -3355,11 +3314,7 @@
               <div
                 class="absolute left-0 top-0 h-full w-full transition-all duration-500 ease-in-out group-hover:w-[calc(100%+50px)]"
               >
-                <img
-                  src="./img/pattern-eclipse.webp"
-                  alt=""
-                  class="object-cover w-full h-full"
-                />
+                <img alt="" class="object-cover w-full h-full lazy-load" data-src="./img/pattern-eclipse.webp" loading="lazy">
               </div>
               <div
                 class="top-[0px] relative transition-all duration-500 ease-in-out pb-6 group-hover:top-[-20px]"
@@ -3385,11 +3340,7 @@
               <div
                 class="absolute left-0 top-0 h-full w-full transition-all duration-500 ease-in-out group-hover:w-[calc(100%+50px)]"
               >
-                <img
-                  src="./img/pattern-eclipse.webp"
-                  alt=""
-                  class="object-cover w-full h-full"
-                />
+               <img alt="" class="object-cover w-full h-full lazy-load" data-src="./img/pattern-eclipse.webp" loading="lazy">
               </div>
               <div
                 class="top-[0px] relative transition-all duration-500 ease-in-out pb-6 group-hover:top-[-20px]"
