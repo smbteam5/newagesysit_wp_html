@@ -2048,23 +2048,44 @@
         type="image/webp"
         fetchpriority="high"
       />
-      <img
-        alt="NewAgeSys IT Hero Banner"
-        fetchpriority="high"
-        loading="eager"
-        decoding="async"
-        width="1920"
-        height="1080"
-        class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
-        src="./img/bnr-landing.webp"
-      />
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="./img/bnr-landing-xl.webp"
+          width="1920"
+          height="1080"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./img/bnr-landing-md.webp"
+          width="1440"
+          height="810"
+        />
+        <img
+          alt="NewAgeSys IT Hero Banner"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          width="768"
+          height="432"
+          class="-z-10 object-cover object-center absolute inset-0 w-full h-full"
+          src="./img/bnr-landing-sm.webp"
+        />
+      </picture>
 
       <!-- Content Container -->
       <div class="container mx-auto w-full max-w-[1456px] px-4">
         <span
           class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
         >
-          <img src="./img/glow.png" alt="" class="w-auto" loading="lazy" />
+          <img 
+            src="./img/glow.webp" 
+            alt="" 
+            class="w-auto" 
+            loading="lazy"
+            width="800"
+            height="400"
+          />
         </span>
 
         <div class="w-full text-center pb-[40px] relative z-[9]">
@@ -2817,6 +2838,9 @@
                   src="./img/client-img-2.webp"
                   alt="Bob Salesno"
                   class="w-full h-full object-cover rounded-[17px] transition-opacity duration-300 group-hover:opacity-80"
+                  loading="lazy"
+                  width="300"
+                  height="400"
                 />
                 <div
                   class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000b0_91.15%)]"
