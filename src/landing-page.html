@@ -30,8 +30,8 @@
     />
 
     <!-- Preload critical assets -->
-    <link rel="preload" href="style2.css" as="style" />
-    <link href="style2.css" rel="stylesheet" />
+    <link rel="preload" href="style.css" as="style" />
+    <link href="style.css" rel="stylesheet" />
     <style>
       :root {
         --design-w: 1440;
@@ -39,6 +39,13 @@
         --ring-max: 1800px;
         --ring-color: rgba(255, 255, 255, 1);
         --blue-color: #5871f0;
+
+        --color-primary: #090d21;
+        --color-black: #020205;
+        --color-gray: #989aa4;
+        --color-lightGray: #f5fafe;
+        --color-orange: #ff5b14;
+        --color-bodyBg: #f5fafe;
       }
 
       h2.animatedText span {
@@ -224,6 +231,211 @@
         mix-blend-mode: hard-light;
         -webkit-mix-blend-mode: hard-light;
       }
+      .reveal-text {
+        white-space: pre-wrap;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+      .reveal-text span {
+        display: inline;
+        color: #9ca3af;
+      }
+      .bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-bodyBg {
+  background-color: var(--color-bodyBg);
+}
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.text-gray {
+  color: var(--color-gray);
+}
+.text-lightGray {
+  color: var(--color-lightGray);
+}
+.text-bodyBg {
+  color: var(--color-bodyBg);
+}
+/* 
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 24px;
+  }
+}
+@media (max-width: 639.98px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 16px;
+  }
+}
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1300px;
+  }
+} */
+
+.banner-section {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-black)
+  );
+}
+.banner-section h1 {
+  background: linear-gradient(to bottom, #989aa4, var(--color-bodyBg));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.get-free-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 18px #ffffff41;
+}
+.get-free-btn .btn-shadow {
+  animation: glowing 1.6s linear infinite;
+}
+@keyframes glowing {
+  0% {
+    height: 14px;
+  }
+  50% {
+    height: 19px;
+  }
+  100% {
+    height: 14px;
+  }
+}
+.get-free-btn:hover .btn-shadow {
+  height: 19px;
+  opacity: 0.7;
+}
+
+.banner-brands {
+  background-image: linear-gradient(
+    to right,
+    rgba(9, 11, 27, 0.2),
+    rgba(164, 183, 255, 0.2),
+    rgba(10, 12, 26, 0.2)
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.banner-brands::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(9, 11, 27, 1),
+    rgba(164, 183, 255, 0.5),
+    rgba(10, 12, 26, 1)
+  );
+}
+
+@media (max-width: 767.98px) {
+  .banner-brands {
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+      to top,
+      rgba(9, 11, 27, 0.2),
+      rgba(10, 12, 26, 0) rgba(164, 183, 255, 0)
+    );
+  }
+  .banner-brands::after {
+    height: 0px;
+    background-image: none;
+  }
+}
+
+.animate span {
+  display: inline-block;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: inherit;
+  /* white-space: pre; */
+  color: #6c6c6c;
+}
+
+.card-section .card-wrapper {
+  background-image: linear-gradient(to bottom, #2c2c2c, #71809e, #242526);
+  display: block;
+}
+.card-section .card-hover {
+  border-radius: 16px !important;
+}
+.card-section .card-hover:hover {
+  box-shadow: 0 6px 28px #0b3aa927;
+  transform: translateY(-5px) scale(1.02) !important;
+}
+.card-shadow {
+  animation: cardShadow 1.6s linear infinite;
+}
+@keyframes cardShadow {
+  0% {
+    height: 50px;
+  }
+  50% {
+    height: 30px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .banner-section h1 {
+    font-size: 72px;
+    line-height: 88px;
+    max-width: 1170px;
+  }
+  .banner-description {
+    font-size: 30px;
+    line-height: 44px;
+    max-width: 930px;
+    margin-top: 24px;
+  }
+  .get-free-btn {
+    font-size: 22px;
+  }
+  .get-free-btn span.bg-orange {
+    padding-block: 28px;
+  }
+  .banner-brands p {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .animate-wrapper .animate {
+    font-size: 49px;
+    line-height: 68px;
+    max-width: 928px;
+  }
+  .card-section h2 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
     </style>
   </head>
 
@@ -2025,239 +2237,225 @@
       <!-- mobile-menu end-->
     </header>
 
-    <section
-      id="hero-banner"
-      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
+ <section
+      class="banner-section w-full min-h-screen flex items-center relative pb-25 overflow-hidden"
     >
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <span
-          class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
-        >
-          <img 
-            src="./img/glow.webp" 
-            alt="" 
-            class="w-auto"
-          />
-        </span>
-
-        <div class="w-full text-center pb-[40px] relative z-[9]">
+      <div class="container">
+        <div class="flex flex-col items-center relative z-10">
           <h1
-            class="text-[34px] md:text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
+            class="text-[26px] leading-[34px] sm:text-[32px] sm:leading-[40px] md:text-[42px] md:leading-[52px] lg:text-[54px] lg:leading-[66px] xl:text-[60px] xl:leading-[72px] font-bold text-center max-w-[1090px] animate-hero"
           >
-            <span class="word text-[#989AA4]"
-              >Redefining Your Business Success</span
-            ><br />
-            <span class="word text-[#fff]"
-              >With Apps & Software That Scale</span>
+            Redefining Your Business Success With Apps & Software That Scale
           </h1>
-
-          <!-- Paragraph -->
           <p
-            class="text-white lg:text-[26px] text-[18px] mt-[20px] para"
+            class="max-w-[600px] banner-description lg:max-w-[770px] text-[16px] md:text-[18px] leading-[24px] lg:text-[23px] lg:leading-[32px] text-center font-medium mt-4 text-bodyBg animate-hero"
           >
             Award-Winning Digital Transformation Company with Strategic
-            <br class="hidden lg:block" />
             Innovation Turning Brands into Industry Leaders
           </p>
 
-          <!-- Button -->
-          <div
-            class="text-center flex justify-center mt-5 bnr-btn"
+          <button
+            class="relative group p-[1px] rounded-full text-white font-semibold text-[16px] md:text-[18px] leading-[25px] mt-10 cursor-pointer get-free-btn duration-300 overflow-hidden"
           >
-            <button
-              data-slot="button"
-              class="group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-10 mt-8 lg:mt-10"
+            <span
+              class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141B3B] to-[#D5DBFF]"
+            ></span>
+            <span
+              class="relative flex items-center bg-orange rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5"
             >
-              <span
-                class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
-              >
-                Get a Free Project Estimate
-                <svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  class="transition-transform duration-300 ease-in-out group-hover:rotate-45"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.5 8L6 18.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="square"
-                  ></path>
-                  <path
-                    d="M8 6.68793L17.2692 7.23081L17.812 16.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="square"
-                  ></path>
-                </svg>
-                <span
-                  class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ff5a1463_100%)]"
-                ></span>
-              </span>
-            </button>
-          </div>
+              Get a Free Project Estimate
+              <img
+                src="./images/arrow-up-right.svg"
+                alt="arrow-right"
+                class="!w-6 !h-6"
+              />
+            </span>
+            <img
+              src="./images/btn-shadow.png"
+              class="w-[80%] h-[14px] absolute bottom-[1px] left-[10%] duration-300 btn-shadow"
+              alt="btn-shadow"
+            />
+          </button>
         </div>
       </div>
-
-      <!-- Radial Rings (Animated Glow Layers) -->
-      <!-- <div id="rings" class="absolute-center">
-        <span
-          class="ring"
-          style="
-            --base: 129.737;
-            --opacity: 0.02;
-            --delay: 2750ms;
-            --size: 1400; /* design px — now auto-scales */
-            --amp: 70px;
-            --scale-up: 1.05;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 208.114;
-            --opacity: 0.05;
-            --delay: 2600ms;
-            --size: 1100;
-            --amp: 60px;
-            --scale-up: 1.04;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 286.491;
-            --opacity: 0.05;
-            --delay: 1250ms;
-            --size: 900;
-            --amp: 50px;
-            --scale-up: 1.03;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 364.868;
-            --opacity: 0.1;
-            --delay: 800ms;
-            --size: 700;
-            --amp: 40px;
-            --scale-up: 1.02;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 443.246;
-            --opacity: 0.2;
-            --delay: 150ms;
-            --size: 500;
-            --amp: 30px;
-            --scale-up: 1.01;
-          "
-        ></span>
-        <span
-          class="ring ring-final"
-          style="
-            --base: 521.623;
-            --opacity: 1;
-            --delay: 0ms;
-            --size: 300;
-            --amp: 20px;
-            --scale-up: 1.005;
-          "
-        ></span>
-      </div> -->
-
-      <img
-        src="./img/banner-new.webp"
-        alt="NewAgeSysIT Hero Banner" 
-        width="1920"
-        height="1080"
-        fetchpriority="high"
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom"
-      />
-      <!-- Mobile radial rings (SVG fallback) -->
-      <div
-        class="absolute left-0 bottom-[-20%] min-1680px:top-[38%] md:hidden block w-full"
-      >
+      <figure class="w-full h-full absolute bottom-[-50px] sm:bottom-[-100px]">
         <svg
-          width="100%"
-          height="601"
-          viewBox="0 0 390 601"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          width="1600"
+          height="571"
+          viewBox="0 0 1600 571"
+          fill="none"
+          class="w-full h-full object-cover"
         >
+          <rect
+            width="1600"
+            height="1200"
+            transform="translate(0 92)"
+            fill="url(#paint0_radial_1_55)"
+          />
           <circle
+            id="circle1"
             opacity="0.02"
-            cx="195"
+            cx="800"
             cy="650"
             r="650"
-            fill="url(#paint1_radial)"
+            fill="url(#paint1_radial_1_55)"
           />
           <circle
+            id="circle2"
             opacity="0.05"
-            cx="195"
+            cx="800"
             cy="650"
             r="550"
-            fill="url(#paint2_radial)"
+            fill="url(#paint2_radial_1_55)"
           />
           <circle
+            id="circle3"
             opacity="0.05"
-            cx="195"
+            cx="800"
             cy="650"
             r="450"
-            fill="url(#paint3_radial)"
+            fill="url(#paint3_radial_1_55)"
           />
           <circle
+            id="circle4"
             opacity="0.1"
-            cx="195"
+            cx="800"
             cy="650"
             r="350"
-            fill="url(#paint4_radial)"
+            fill="url(#paint4_radial_1_55)"
           />
           <circle
+            id="circle5"
             opacity="0.2"
-            cx="195"
+            cx="800"
             cy="650"
             r="250"
-            fill="url(#paint5_radial)"
+            fill="url(#paint5_radial_1_55)"
           />
-          <g filter="url(#filter0_d)">
-            <circle cx="195" cy="650" r="150" fill="#5871F0" />
+          <g filter="url(#filter0_d_1_55)">
+            <circle
+              id="circle6"
+              cx="800"
+              cy="650"
+              r="150"
+              fill="#5871F0"
+              class="hidden"
+            />
           </g>
           <defs>
             <filter
-              id="filter0_d"
-              x="-38"
+              id="filter0_d_1_55"
+              x="567"
               y="412"
               width="466"
               height="466"
               filterUnits="userSpaceOnUse"
               color-interpolation-filters="sRGB"
             >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feMorphology
+                radius="13"
+                operator="dilate"
+                in="SourceAlpha"
+                result="effect1_dropShadow_1_55"
+              />
+              <feOffset dy="-5" />
               <feGaussianBlur stdDeviation="35" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.841346 0 0 0 0 0.933894 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_1_55"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_1_55"
+                result="shape"
+              />
             </filter>
             <radialGradient
-              id="paint1_radial"
+              id="paint0_radial_1_55"
               cx="0"
               cy="0"
               r="1"
               gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(195 650) rotate(90) scale(650)"
+              gradientTransform="translate(800 600) rotate(90) scale(600 800)"
+            >
+              <stop stop-color="#002DFF" />
+              <stop offset="1" stop-color="#070916" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(650)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint2_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(550)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint3_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(450)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint4_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(350)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint5_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(250)"
             >
               <stop stop-color="white" stop-opacity="0" />
               <stop offset="1" stop-color="white" />
             </radialGradient>
           </defs>
         </svg>
-      </div>
-
-      <!-- Awards Bar -->
-      <div
+      </figure>
+      <!-- awards -->
+       <div
         class="border-gradient relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
       >
         <div class="container mx-auto w-full max-w-[1456px] px-4">
@@ -2286,11 +2484,11 @@
                 aria-hidden="true"
                 class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
               >
-                <li><img src="./img/Deloitte.svg" alt="Deloitte"/></li>
+                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
                 <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
                 <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                <li><img src="./img/NJBIZ.svg" alt="NJBIZ"/></li>
-                <li><img src="./img/Fastest1.svg" alt="Fastest Growing"/></li>
+                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
               </ul>
             </div>
           </div>
@@ -2299,419 +2497,275 @@
     </section>
 
     <section
-      class="overflow-hidden py-[50px] md:py-30 lg:py-40 xl:py-52.5 bg-[#0D0D0D]"
+      class="bg-[#0D0D0D] w-full py-[120px] md:py-[150px] lg:py-[210px] relative z-[100000]"
     >
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <h2
-          class="animatedText mx-auto max-w-[940px] text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white text-center"
-        >
-          <span>As a Clutch 5-rated & #1 software development</span
-          ><span> company in the U.S., NewAgeSysIT believes in</span>
-          <span>crafting boundless solutions to build, design, and</span>
-          <span>scale AI, mobile, and web-based solutions that</span>
-          <span>drive business growth.</span>
-        </h2>
-      </div>
-      <!-- <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <p
-          class="animatedText mx-auto max-w-[940px] text-justify text-[clamp(28px,2.5vw,40px)] leading-[1.4] text-white lg:text-start"
-        >
-          <span
-            >Transform your business with our IT consulting and cybersecurity
-            services.Transform your business with our IT consulting and
-            cybersecurity services.Transform your business with our IT
-            consulting and cybersecurity services.Transform your business with
-            our IT consulting and cybersecurity services.Transform your business
-            with our IT consulting and cybersecurity services.Transform your
-            business with our IT consulting and cybersecurity services.</span
+      <div class="container">
+        <div class="wrapper animate-wrapper">
+          <div
+            class="animate max-w-[853px] mx-auto text-[23px] leading-[36px] md:text-[32px] md:leading-[48px] lg:text-[40px] lg:leading-[56px] font-normal text-[#6c6c6c] text-left"
           >
-        </p>
-      </div> -->
+As a Clutch 5-rated & #1 software development company in the U.S., our team believes in crafting boundless solutions to build, design, and scale AI, mobile, and web-based solutions that drive business growth.
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <h2
-          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
-          aria-label="Recognized For Excellence"
-        >
-          Recognized For Excellence
-        </h2>
-        <div class="hidden grid-cols-3 gap-8 xl:grid">
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] animation-element">
+    <section class="card-section w-full py-20 bg-[#0D0D0D] mt-[-1px] max-lg:pt-10 max-sm:pt-4 overflow-hidden">
+      <div class="container">
+        <div class="flex justify-center w-full overflow-hidden pb-[150px]">
+          <h2
+            class="text-white font-semibold text-[22px] leading-[28px] sm:text-[28px] sm:leading-[36px] md:text-[36px] md:leading-[46px] lg:text-[50px] lg:leading-[60px] text-center stagerd-fade flex max-sm:ml-[-12px]"
+          >
+            Recognized For Excellence
+          </h2>
+        </div>
+       
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 mt-10 sm:mt-20">
+          <div class="w-full lg:pt-31">
+            <a href="#" class="card-hover block duration-500">
               <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
               >
                 <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px]"
                 >
-                  <img
-                    alt="UpCity"
-                    loading="lazy"
-                    width="200"
-                    height="65"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/upcity.svg"
-                  />
+                  <figure class="max-w-[160px] sm:max-w-[200px]">
+                    <img
+                      src="./images/Upcity-Logo.svg"
+                      alt="Upcity"
+                      class="w-full h-full"
+                    />
+                  </figure>
                   <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
                   >
                     Top-rated mobile app solution providers in New Jersey
                   </p>
                 </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
                 >
                   <img
-                    alt="Entrepreneur"
-                    loading="lazy"
-                    width="224"
-                    height="42"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/entrep.svg"
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
                   />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    App of the year – L-Card <br />
-                    Developed by NewAgeSysIT
-                  </p>
-                </div>
+                </figure>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] h-full animation-element">
+          <div class="w-full lg:mt-[-126px]">
+            <a href="#" class="card-hover block duration-500">
               <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
               >
                 <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
                 >
-                  <img
-                    alt="Clutch"
-                    loading="lazy"
-                    width="130"
-                    height="37"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/clutch.svg"
-                  />
+                  <figure class="max-w-[100px] sm:max-w-[129px]">
+                    <img
+                      src="./img/clutch.svg"
+                      alt="Clutch"
+                      class="w-full h-full"
+                    />
+                  </figure>
                   <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                    class="max-w-[220px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
                   >
                     Top global leaders in mobile app development
                   </p>
                 </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] h-full animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
                 >
                   <img
-                    alt="BusinessofApps"
-                    loading="lazy"
-                    width="254"
-                    height="45"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/business.svg"
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
                   />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    iOS App Development
-                  </p>
-                </div>
+                </figure>
               </div>
-            </div>
-            <div class="min-h-[220px] h-full animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="GoodFirms"
-                    loading="lazy"
-                    width="216"
-                    height="30"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/goodfirms.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] animation-element">
+          <div class="w-full lg:pt-31">
+            <a href="#" class="card-hover block duration-500">
               <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
               >
                 <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
                 >
-                  <img
-                    alt="DesignRush"
-                    loading="lazy"
-                    width="284"
-                    height="64"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/designrush.svg"
-                  />
+                  <figure class="max-w-[240px] sm:max-w-[280px]">
+                    <img
+                      src="./images/designrush-new.svg"
+                      alt="designrush"
+                      class="w-full h-full"
+                    />
+                  </figure>
                   <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                    class="max-w-[230px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
                   >
                     Redefining service excellence
                   </p>
                 </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
                 >
                   <img
-                    alt="Clutch"
-                    loading="lazy"
-                    width="130"
-                    height="37"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/clutch.svg"
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
                   />
+                </figure>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[184px] sm:max-w-[224px]">
+                    <img
+                      src="./images/Entrep.svg"
+                      alt="Entrep"
+                      class="w-full h-full"
+                    />
+                  </figure>
                   <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    App of the year – L-Card
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:mt-[-126px]">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[213px] sm:max-w-[253px]">
+                    <img
+                      src="./images/business-of-apps.svg"
+                      alt="business-of-apps"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
                   >
                     iOS App Development
                   </p>
                 </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
               </div>
-            </div>
+            </a>
           </div>
+          <div class="w-full">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[110px] sm:max-w-[135px]">
+                    <img
+                      src="./images/Clutch.svg"
+                      alt="Clutch"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full max-lg:hidden"></div>
+          <div class="w-full lg:mt-[-128px]">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[176px] sm:max-w-[216px]">
+                    <img
+                      src="./images/Goodfirms-Logo-Vector.svg"
+                      alt="Goodfirms"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full max-lg:hidden"></div>
         </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="UpCity"
-                  loading="lazy"
-                  width="200"
-                  height="65"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/upcity.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  Top-rated mobile app solution providers in New Jersey
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Entrepreneur"
-                  loading="lazy"
-                  width="224"
-                  height="42"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/entrep.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  App of the year – L-Card
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Clutch"
-                  loading="lazy"
-                  width="130"
-                  height="37"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/clutch.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  Top global leaders in mobile app development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="BusinessofApps"
-                  loading="lazy"
-                  width="254"
-                  height="45"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/business.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="GoodFirms"
-                  loading="lazy"
-                  width="216"
-                  height="30"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/goodfirms.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="DesignRush"
-                  loading="lazy"
-                  width="284"
-                  height="64"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/designrush.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  Redefining service excellence
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Clutch"
-                  loading="lazy"
-                  width="130"
-                  height="37"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/clutch.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
       </div>
     </section>
 
@@ -9020,6 +9074,7 @@
     ></script>
     <script src="./js/jquery.magnific-popup.js"></script>
     <script src="./js/optimize.js"></script>
+    <script src="./js/script.js"></script>
     <script>
       gsap.registerPlugin(ScrollTrigger);
       ScrollTrigger.normalizeScroll(true);

@@ -4370,7 +4370,7 @@ footer ul li {
     1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .recognition-section-ppc {
     border-bottom: 1px solid;
     border-image: linear-gradient(
@@ -5278,6 +5278,16 @@ footer ul li {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
+.slider-1 .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-1 .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
 .slider-2 .owl-nav {
   display: flex;
   justify-content: start;
@@ -5313,6 +5323,21 @@ footer ul li {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
+
+
+.slider-2 .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-2 .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
+
+
+
 .slider-3 .owl-nav button.owl-prev {
   background-image: url("./img/Carousel Next-blue.svg") !important;
   rotate: 180deg;
@@ -5329,6 +5354,19 @@ footer ul li {
 .slider-3 .owl-nav button.owl-next:hover {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
+
+
+.slider-3 .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-3 .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
+
 
 @media (min-width: 1024px) {
   .slider-3 .owl-nav {
@@ -5362,7 +5400,7 @@ footer ul li {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 3px;
+    width: 2px;
     height: 100%;
     background: linear-gradient(
       0deg,
@@ -5383,6 +5421,27 @@ footer ul li {
   bottom: 0;
   width: 100%;
   height: 2px;
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    rgba(255, 255, 255, 0.95) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.95) 55%,
+    #000000 100%
+  );
+}
+
+.golang-sect-border-1 {
+  position: relative;
+}
+
+.golang-sect-border-1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
   background: linear-gradient(
     90deg,
     #000000 0%,
@@ -5447,131 +5506,43 @@ footer ul li {
   height: 2px;
   background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
 }
-.horizontal-right-scroll {
-  border-top: 1px solid #2b2b2b;
-  border-bottom: 1px solid #2b2b2b;
+.horizontal-right-scroll{
+      border-top: 1px solid #2b2b2b;
+      border-bottom: 1px solid #2b2b2b;
 }
 
-/* call button  */
 
-/* --- Base button --- */
-.ripple-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem; /* reduced from 0.75rem */
-  padding: 0.55rem 1.25rem; /* reduced from 0.75rem 1.75rem */
-  border-radius: 9999px;
-  border: 1px solid #364ebe;
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.95rem; /* optional slight reduction */
-  background: linear-gradient(
-    90deg,
-    rgba(67, 97, 238, 0.15) 0%,
-    rgba(67, 97, 238, 0.08) 100%
-  );
-  overflow: hidden;
-  cursor: pointer;
-  isolation: isolate;
-  box-shadow: 1px -1px 16px 4px #3557f666;
+
+
+.golang-number-gradient1{
+background: linear-gradient(193.77deg, #364EBE 12.49%, #FFFFFF 82.16%);
+-webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+
+}
+.golang-number-gradient2{
+background: linear-gradient(113.8deg, #4361EE 28.27%, #FFFFFF 64.38%);
+
+-webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.golang-number-gradient3{
+background: linear-gradient(193.77deg, #4361EE 12.49%, #FFFFFF 82.16%);
+
+-webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
-.ripple-btn-content {
-  position: relative;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.icon-circle {
-  position: relative;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ✅ Circle layers */
-.ripple-circle {
-  position: absolute;
-  border-radius: 50%;
-  transform-origin: left center;
-  transform: scale(0);
-  opacity: 0;
-  z-index: 0;
-  box-shadow: 1px -1px 18.2px 6px #3557f666;
-}
-
-/* --- First circle (static white base) --- */
-.ripple-circle.one {
-  width: 42px;
-  height: 42px;
-  background-color: #8d848475;
-  opacity: 0.5;
-  transform: scale(1);
-  animation: none;
-}
-
-/* --- Animated circles --- */
-.ripple-circle.two {
-  width: 90px;
-  height: 90px;
-  top: -24px;
-  left: -26px;
-  background-color: rgba(142, 160, 245, 0.9);
-  animation: rippleExpandLeft 3s ease-in-out infinite;
-  animation-delay: 0s;
-}
-
-.ripple-circle.three {
-  width: 115px;
-  height: 115px;
-  top: -34px;
-  left: -34px;
-  background-color: rgba(67, 97, 238, 0.85);
-  animation: rippleExpandLeft 3s ease-in-out infinite;
-  animation-delay: 0.4s;
-}
-
-.icon-circle img {
-  width: 38px;
-  height: 38px;
-  position: relative;
-  z-index: 3;
-}
-
-/* --- Smooth left expanding animation --- */
-@keyframes rippleExpandLeft {
-  0% {
-    transform: scaleX(0) scaleY(0.5);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.3;
-  }
-  30% {
-    transform: scaleX(0.6) scaleY(0.8);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scaleX(1.1) scaleY(1);
-    opacity: 0.85;
-  }
-  70% {
-    transform: scaleX(1.25) scaleY(1.05);
-    opacity: 0.45;
-  }
-  90% {
-    transform: scaleX(0.8) scaleY(0.7);
-    opacity: 0.2;
-  }
-  100% {
-    transform: scaleX(0) scaleY(0.5);
-    opacity: 0;
-  }
+.banner-text-gradient{
+  background: linear-gradient(105.3deg, #EAEAEA 51.69%, #5466E9 114.42%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
