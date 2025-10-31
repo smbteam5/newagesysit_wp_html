@@ -4624,6 +4624,11 @@ video {
   background-color: rgb(1 14 63 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#020307\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 3 7 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#030D22\] {
   --tw-bg-opacity: 1;
   background-color: rgb(3 13 34 / var(--tw-bg-opacity));
@@ -7516,6 +7521,10 @@ video {
   line-height: 1.4;
 }
 
+.leading-\[10px\] {
+  line-height: 10px;
+}
+
 .leading-\[17px\] {
   line-height: 17px;
 }
@@ -7622,6 +7631,10 @@ video {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.tracking-\[0\%\] {
+  letter-spacing: 0%;
 }
 
 .tracking-\[0\.02em\] {
@@ -14717,9 +14730,144 @@ footer ul li {
   background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
 }
 
-.horizontal-right-scroll{
+.horizontal-right-scroll {
   border-top: 1px solid #2b2b2b;
   border-bottom: 1px solid #2b2b2b;
+}
+
+/* call button  */
+
+/* --- Base button --- */
+
+.ripple-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid #364ebe;
+  color: #fff;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgba(67, 97, 238, 0.15) 0%,
+    rgba(67, 97, 238, 0.08) 100%
+  );
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+  box-shadow: 1px -1px 18.2px 6px #3557f666;
+  /* ✨ soft glow */
+}
+
+.ripple-btn-content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon-circle {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Circle layers */
+
+.ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: left center;
+  transform: scale(0);
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 1px -1px 18.2px 6px #3557f666;
+}
+
+/* --- First circle (static white base) --- */
+
+.ripple-circle.one {
+  width: 42px;
+  height: 42px;
+  background-color: #8d848475;
+  opacity: 0.5;
+  transform: scale(1);
+  animation: none;
+}
+
+/* --- Animated circles --- */
+
+.ripple-circle.two {
+  width: 90px;
+  height: 90px;
+  top: -24px;
+  left: -26px;
+  background-color: rgba(142, 160, 245, 0.9);
+  animation: rippleExpandLeft 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.ripple-circle.three {
+  width: 115px;
+  height: 115px;
+  top: -34px;
+  left: -34px;
+  background-color: rgba(67, 97, 238, 0.85);
+  animation: rippleExpandLeft 3s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.icon-circle img {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 3;
+}
+
+/* --- Smooth left expanding animation --- */
+
+@keyframes rippleExpandLeft {
+  0% {
+    transform: scaleX(0) scaleY(0.5);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.3;
+  }
+
+  30% {
+    transform: scaleX(0.6) scaleY(0.8);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scaleX(1.1) scaleY(1);
+    opacity: 0.85;
+  }
+
+  70% {
+    transform: scaleX(1.25) scaleY(1.05);
+    opacity: 0.45;
+  }
+
+  90% {
+    transform: scaleX(0.8) scaleY(0.7);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scaleX(0) scaleY(0.5);
+    opacity: 0;
+  }
 }
 
 @media (min-width: 1024px) {
