@@ -1,258 +1,588 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Contact Popup</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <style>
+      .reveal-text {
+        white-space: pre-wrap;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+      .reveal-text span {
+        display: inline;
+        color: #9ca3af;
+      }
+    </style>
   </head>
-  <body class="bg-slate-900 text-slate-100 antialiased">
-    <!-- Demo trigger (remove in production) -->
-    <div class="h-screen grid place-items-center">
-      <button
-        class="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition font-semibold"
-        onclick="toggleModal(true)"
-      >
-        Open Contact Popup
-      </button>
-    </div>
-
-    <!-- Overlay + Modal -->
-    <div
-      id="contactModal"
-      class="fixed inset-0 z-50 hidden"
-      aria-labelledby="dialog-title"
-      aria-modal="true"
-      role="dialog"
+  <body>
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
+    <section
+      class="banner-section w-full min-h-screen flex items-center relative pb-25 overflow-hidden"
     >
-      <!-- Backdrop -->
-      <div
-        class="absolute inset-0 bg-slate-950/70 backdrop-blur-sm"
-        onclick="toggleModal(false)"
-      ></div>
-
-      <!-- Dialog -->
-      <div class="relative mx-auto w-[min(1100px,92vw)] my-8">
-        <div class="overflow-hidden rounded-3xl shadow-2xl">
-          <div class="relative grid grid-cols-1 lg:grid-cols-2">
-            <!-- Close button -->
-            <button
-              type="button"
-              aria-label="Close"
-              class="absolute right-4 top-4 z-50 inline-flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
-              onclick="toggleModal(false)"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                class="h-[30px] w-[30px] text-[#0F0F0F73]"
-              >
-                <path
-                  fill="currentColor"
-                  d="M6.4 4.9 4.9 6.4 10.5 12l-5.6 5.6 1.5 1.5L12 13.5l5.6 5.6 1.5-1.5L13.5 12l5.6-5.6-1.5-1.5L12 10.5z"
-                />
-              </svg>
-            </button>
-
-            <!-- Left panel -->
-            <div
-              class="relative hidden lg:flex flex-col text-center justify-center p-10 bg-[#090c1e] overflow-hidden"
-            >
-              <div
-                class="absolute transform -translate-x-1/2 w-[170%] left-[50%] bottom-0"
-              >
-                <img src="./img/contact-form-banner.webp" alt="" />
-              </div>
-              <div class="relative">
-                <h2 class="text-[35px] font-semibold leading-tight">
-                  Let us know how<br />we can help!
-                </h2>
-                <p class="mt-6 text-[#F5FAFE] text-[18px]">
-                  Tell us about your project and we’ll get back to you with
-                  details on how we can develop it.
-                </p>
-                <p class="mt-4 text-[#F5FAFE] text-[18px]">
-                  Or just give us a call now.
-                </p>
-
-                <button
-                  class="mt-8 inline-flex items-center justify-center rounded-full border border-[#F5FAFE] bg-white/5 px-6 py-3 text-base font-semibold hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 text-[18px]"
-                >
-                  Request Consultation
-                </button>
-              </div>
-            </div>
-
-            <!-- Right panel (form) -->
-            <div class="bg-[#F5FAFE] p-6 sm:p-8 lg:p-10">
-              <h3
-                id="dialog-title"
-                class="text-[23px] font-semibold text-[#1B1D1E]"
-              >
-                Tell us what you need, and we’ll be right back with a cost &amp;
-                time estimate
-              </h3>
-              <p class="mt-2 text-[18px] text-[#65686C]">
-                Guaranteed response from our experts within an hour.
-              </p>
-
-              <form class="mt-8 space-y-4">
-                <div>
-                  <label for="name" class="sr-only">Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    autocomplete="name"
-                    placeholder="Name"
-                    class="w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 text-[#65686C] placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[46px]"
-                  />
-                </div>
-                <div>
-                  <label for="email" class="sr-only">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="Email"
-                    class="text-[#65686C] w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[46px]"
-                  />
-                </div>
-                <div>
-                  <label for="phone" class="sr-only">Phone</label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    autocomplete="tel"
-                    placeholder="Phone"
-                    class="text-[#65686C] w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[46px]"
-                  />
-                </div>
-                <div>
-                  <label for="idea" class="sr-only">Project Idea</label>
-                  <textarea
-                    id="idea"
-                    name="idea"
-                    rows="5"
-                    placeholder="Project Idea"
-                    class="w-full rounded-lg border border-[#C3C9D0] bg-[#EFF3FF] px-4 py-3 text-[#65686C] placeholder:text-[#65686C] focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-[16px] h-[90px]"
-                  ></textarea>
-                </div>
-                <div class="flex justify-between">
-                  <fieldset class="mt-2">
-                    <legend class="text-[14px] text-[#1B1D1E]">
-                      Contact me via:
-                    </legend>
-                    <div class="mt-3 flex flex-wrap gap-4">
-                      <label
-                        class="inline-flex items-center gap-2 text-sm text-[#1B1D1E]"
-                      >
-                        <input
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-[#C3C9D0] bg-white/5 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        Phone
-                      </label>
-                      <label
-                        class="inline-flex items-center gap-2 text-sm text-[#1B1D1E]"
-                      >
-                        <input
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-[#C3C9D0] bg-white/5 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        Email
-                      </label>
-                      <label
-                        class="inline-flex items-center gap-2 text-sm text-[#1B1D1E]"
-                      >
-                        <input
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-[#C3C9D0] bg-white/5 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        SMS
-                      </label>
-                    </div>
-                  </fieldset>
-
-                  <div class="pt-2">
-                    <button
-                      type="submit"
-                      class="w-full rounded-[45px] bg-[#FF5B14] py-3 text-center text-base font-semibold text-white shadow-lg shadow-orange-500/20 hover:bg-[#FF5B14] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF5B14] focus-visible:ring-offset-slate-900 h-[65px] text-[18px] px-[60px]"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div
-            class="relative mx-auto overflow-hidden bg-[#293660] bg-[linear-gradient(90deg,rgba(41,54,96,1)_41%,rgba(87,42,107,1)_100%)]"
+      <div class="container">
+        <div class="flex flex-col items-center relative z-10">
+          <h1
+            class="text-[26px] leading-[34px] sm:text-[32px] sm:leading-[40px] md:text-[42px] md:leading-[52px] lg:text-[54px] lg:leading-[66px] xl:text-[60px] xl:leading-[72px] font-bold text-center max-w-[1090px] animate-hero"
           >
-            <div
-              class="grid lg:grid-cols-2 grid-cols-1 items-center px-[30px] py-[15px]"
-            >
-              <!-- Left copy -->
-              <div>
-                <p class="text-[18px] text-white">
-                  Recognized for building the best solutions for startups,
-                  businesses, and enterprises
-                </p>
-              </div>
+            Redefining Your Business Success With Apps & Software That Scale
+          </h1>
+          <p
+            class="max-w-[600px] banner-description lg:max-w-[770px] text-[16px] md:text-[18px] leading-[24px] lg:text-[23px] lg:leading-[32px] text-center font-medium mt-4 text-bodyBg animate-hero"
+          >
+            Award-Winning Digital Transformation Company with Strategic
+            Innovation Turning Brands into Industry Leaders
+          </p>
 
-              <!-- Logos (right-aligned) -->
-              <div class="ml-auto flex flex-wrap items-center gap-6 sm:gap-8">
-                <div>
-                  <div
-                    class="group flex w-full gap-x-[80px] overflow-hidden select-none xl:max-w-[829px]"
-                  >
-                    <ul
-                      class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-[80px] group-hover:[animation-play-state:paused]"
-                    >
-                      <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                      <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                      <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                      <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                      <li>
-                        <img src="./img/Fastest1.svg" alt="Fastest Growing" />
-                      </li>
-                    </ul>
-                    <ul
-                      aria-hidden="true"
-                      class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-[80px] group-hover:[animation-play-state:paused]"
-                    >
-                      <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                      <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                      <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                      <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                      <li>
-                        <img src="./img/Fastest1.svg" alt="Fastest Growing" />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <button
+            class="relative group p-[1px] rounded-full text-white font-semibold text-[16px] md:text-[18px] leading-[25px] mt-10 cursor-pointer get-free-btn duration-300 overflow-hidden"
+          >
+            <span
+              class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141B3B] to-[#D5DBFF]"
+            ></span>
+            <span
+              class="relative flex items-center bg-orange rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5"
+            >
+              Get a Free Project Estimate
+              <img
+                src="./assets/icons/arrow-up-right.svg"
+                alt="arrow-right"
+                class="!w-6 !h-6"
+              />
+            </span>
+            <img
+              src="./assets/images/btn-shadow.png"
+              class="w-[80%] h-[14px] absolute bottom-[1px] left-[10%] duration-300 btn-shadow"
+              alt="btn-shadow"
+            />
+          </button>
+        </div>
+      </div>
+      <figure class="w-full h-full absolute bottom-[-50px] sm:bottom-[-100px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1600"
+          height="571"
+          viewBox="0 0 1600 571"
+          fill="none"
+          class="w-full h-full object-cover"
+        >
+          <rect
+            width="1600"
+            height="1200"
+            transform="translate(0 92)"
+            fill="url(#paint0_radial_1_55)"
+          />
+          <circle
+            id="circle1"
+            opacity="0.02"
+            cx="800"
+            cy="650"
+            r="650"
+            fill="url(#paint1_radial_1_55)"
+          />
+          <circle
+            id="circle2"
+            opacity="0.05"
+            cx="800"
+            cy="650"
+            r="550"
+            fill="url(#paint2_radial_1_55)"
+          />
+          <circle
+            id="circle3"
+            opacity="0.05"
+            cx="800"
+            cy="650"
+            r="450"
+            fill="url(#paint3_radial_1_55)"
+          />
+          <circle
+            id="circle4"
+            opacity="0.1"
+            cx="800"
+            cy="650"
+            r="350"
+            fill="url(#paint4_radial_1_55)"
+          />
+          <circle
+            id="circle5"
+            opacity="0.2"
+            cx="800"
+            cy="650"
+            r="250"
+            fill="url(#paint5_radial_1_55)"
+          />
+          <g filter="url(#filter0_d_1_55)">
+            <circle
+              id="circle6"
+              cx="800"
+              cy="650"
+              r="150"
+              fill="#5871F0"
+              class="hidden"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_1_55"
+              x="567"
+              y="412"
+              width="466"
+              height="466"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feMorphology
+                radius="13"
+                operator="dilate"
+                in="SourceAlpha"
+                result="effect1_dropShadow_1_55"
+              />
+              <feOffset dy="-5" />
+              <feGaussianBlur stdDeviation="35" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.841346 0 0 0 0 0.933894 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_1_55"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_1_55"
+                result="shape"
+              />
+            </filter>
+            <radialGradient
+              id="paint0_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 600) rotate(90) scale(600 800)"
+            >
+              <stop stop-color="#002DFF" />
+              <stop offset="1" stop-color="#070916" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(650)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint2_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(550)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint3_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(450)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint4_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(350)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+            <radialGradient
+              id="paint5_radial_1_55"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(800 650) rotate(90) scale(250)"
+            >
+              <stop stop-color="white" stop-opacity="0" />
+              <stop offset="1" stop-color="white" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </figure>
+      <div class="banner-brands w-full absolute left-0 bottom-0 z-10 md-animate-hero">
+        <div class="container md:flex justify-between relative py-6 gap-6">
+          <p
+            class="text-[14px] leading-[22px] md:text-[16px] lg:text-[18px] md:leading-[25px] font-light md:font-normal text-white max-w-[360px] lg:max-w-[400px] xl:max-w-[497px] max-md:text-center max-md:mx-auto"
+          >
+            Recognized for building the best solutions for startups, businesses,
+            and enterprises
+          </p>
+          <div
+            class="flex items-center justify-between w-full md:w-[55%] xl:w-[50%] gap-6 max-md:mt-5"
+          >
+            <figure class="w-full max-w-[98px]">
+              <img
+                src="./assets/images/Deloitte_tech.svg"
+                alt="Deloitte"
+                class="w-full h-full"
+              />
+            </figure>
+            <figure class="w-full max-w-[54px]">
+              <img
+                src="./assets/images/Inc5000.svg"
+                alt="Inc5000"
+                class="w-full h-full"
+              />
+            </figure>
+            <figure class="w-full max-w-[150px]">
+              <img
+                src="./assets/images/uspaacc.svg"
+                alt="uspaacc"
+                class="w-full h-full"
+              />
+            </figure>
+            <figure class="w-full max-w-[78px]">
+              <img
+                src="./assets/images/NJBIZ.svg"
+                alt="NJBIZ"
+                class="w-full h-full"
+              />
+            </figure>
+            <figure class="w-full max-w-[90px]">
+              <img
+                src="./assets/images/50Fastest.svg"
+                alt="50Fastest"
+                class="w-full h-full object-contain"
+              />
+            </figure>
+          </div>
+
+          <figure class="w-[40%] h-10 absolute bottom-[-8px] left-[30%]">
+            <img
+              src="./assets/images/brand-shadow.png"
+              alt="brand-shadow"
+              class="w-full h-full"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[#0D0D0D] w-full py-[120px] md:py-[150px] lg:py-[210px] relative z-[100000]"
+    >
+      <div class="container">
+        <div class="wrapper animate-wrapper">
+          <div
+            class="animate max-w-[853px] mx-auto text-[23px] leading-[36px] md:text-[32px] md:leading-[48px] lg:text-[40px] lg:leading-[56px] font-normal text-[#6c6c6c] text-left"
+          >
+As a Clutch 5-rated & #1 software development company in the U.S., our team believes in crafting boundless solutions to build, design, and scale AI, mobile, and web-based solutions that drive business growth.
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="card-section w-full py-20 bg-[#0D0D0D] mt-[-1px] max-lg:pt-10 max-sm:pt-4 overflow-hidden">
+      <div class="container">
+        <div class="flex justify-center w-full overflow-hidden">
+          <h2
+            class="text-white font-semibold text-[22px] leading-[28px] sm:text-[28px] sm:leading-[36px] md:text-[36px] md:leading-[46px] lg:text-[50px] lg:leading-[60px] text-center stagerd-fade flex max-sm:ml-[-12px]"
+          >
+            Recognized For Excellence
+          </h2>
+        </div>
+       
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 mt-10 sm:mt-20">
+          <div class="w-full lg:pt-31">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px]"
+                >
+                  <figure class="max-w-[160px] sm:max-w-[200px]">
+                    <img
+                      src="./assets/images/Upcity-Logo.svg"
+                      alt="Upcity"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    Top-rated mobile app solution providers in New Jersey
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[100px] sm:max-w-[129px]">
+                    <img
+                      src="./assets/images/Clutch.svg"
+                      alt="Clutch"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[220px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    Top global leaders in mobile app development
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:pt-31">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[240px] sm:max-w-[280px]">
+                    <img
+                      src="./assets/images/designrush-new.svg"
+                      alt="designrush"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[230px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    Redefining service excellence
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[184px] sm:max-w-[224px]">
+                    <img
+                      src="./assets/images/Entrep.svg"
+                      alt="Entrep"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    App of the year – L-Card
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full lg:mt-[-126px]">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[213px] sm:max-w-[253px]">
+                    <img
+                      src="./assets/images/business-of-apps.svg"
+                      alt="business-of-apps"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[110px] sm:max-w-[135px]">
+                    <img
+                      src="./assets/images/Clutch.svg"
+                      alt="Clutch"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full max-lg:hidden"></div>
+          <div class="w-full lg:mt-[-128px]">
+            <a href="#" class="card-hover block duration-500">
+              <div
+                class="card-wrapper rounded-[16px] p-[1px] relative overflow-hidden max-lg:max-w-[600px] max-lg:mx-auto"
+              >
+                <div
+                  class="card-body bg-[#101010] py-10 px-6 xl:px-10 flex flex-col justify-center items-center gap-4 rounded-[16px] min-h-[220px]"
+                >
+                  <figure class="max-w-[176px] sm:max-w-[216px]">
+                    <img
+                      src="./assets/images/Goodfirms-Logo-Vector.svg"
+                      alt="Goodfirms"
+                      class="w-full h-full"
+                    />
+                  </figure>
+                  <p
+                    class="max-w-[315px] text-center font-medium text-[17px] leading-[29px] text-white/50 relative z-10"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+
+                <figure
+                  class="w-[80%] h-[50px] absolute bottom-[1px] left-[10%] card-shadow"
+                >
+                  <img
+                    src="./assets/images/card-shadow.png"
+                    alt="card-shadow"
+                    class="w-full h-full"
+                  />
+                </figure>
+              </div>
+            </a>
+          </div>
+          <div class="w-full max-lg:hidden"></div>
+        </div>
+
+
+      </div>
+    </section>
+    </div>
     </div>
 
-    <script>
-      function toggleModal(open) {
-        const el = document.getElementById("contactModal");
-        if (!el) return;
-        el.classList.toggle("hidden", !open);
-        document.body.style.overflow = open ? "hidden" : "";
-      }
-      // Optional: open via hash (#contact)
-      if (location.hash === "#contact") toggleModal(true);
-      // ESC to close
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") toggleModal(false);
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
