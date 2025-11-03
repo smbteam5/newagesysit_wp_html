@@ -5116,11 +5116,16 @@ footer ul li {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 .animate-scroll {
   animation: scroll 40s linear infinite;
+}
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
 }
 .left__panel::before {
   content: "";
@@ -5545,4 +5550,9 @@ background: linear-gradient(193.77deg, #4361EE 12.49%, #FFFFFF 82.16%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+}
+#if_overflow::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
 }
