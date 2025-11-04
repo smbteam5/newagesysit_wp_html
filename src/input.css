@@ -5453,20 +5453,18 @@ footer ul li {
 }
 
 /* call button  */
-
-/* --- Base button --- */
 .ripple-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem; /* reduced from 0.75rem */
-  padding: 0.55rem 1.25rem; /* reduced from 0.75rem 1.75rem */
+  gap: 0.6rem;
+  padding: 0.55rem 1.25rem;
   border-radius: 9999px;
   border: 1px solid #364ebe;
   color: #fff;
   font-weight: 500;
-  font-size: 0.95rem; /* optional slight reduction */
+  font-size: 0.95rem;
   background: linear-gradient(
     90deg,
     rgba(67, 97, 238, 0.15) 0%,
@@ -5474,13 +5472,22 @@ footer ul li {
   );
   overflow: hidden;
   cursor: pointer;
-  isolation: isolate;
+  /* ❌ remove isolation — causes stacking issue */
+  /* isolation: isolate; */
   box-shadow: 1px -1px 16px 4px #3557f666;
+}
+
+/* ✅ ripple background layer */
+.ripple-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* stays at very back */
+  overflow: visible;
 }
 
 .ripple-btn-content {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* always on top */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -5494,9 +5501,10 @@ footer ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2; /* icon above ripples */
 }
 
-/* ✅ Circle layers */
+/* ✅ put the ripple circles inside .ripple-layer */
 .ripple-circle {
   position: absolute;
   border-radius: 50%;
@@ -5545,7 +5553,6 @@ footer ul li {
   z-index: 3;
 }
 
-/* --- Smooth left expanding animation --- */
 @keyframes rippleExpandLeft {
   0% {
     transform: scaleX(0) scaleY(0.5);
