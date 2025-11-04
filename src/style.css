@@ -3242,10 +3242,6 @@ video {
   max-width: 425px;
 }
 
-.max-w-\[500px\] {
-  max-width: 500px;
-}
-
 .max-w-\[54px\] {
   max-width: 54px;
 }
@@ -16511,6 +16507,12 @@ footer ul li {
     gap: 2rem;
   }
 
+  .sm\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  }
+
   .sm\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -16521,12 +16523,6 @@ footer ul li {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
-  .sm\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
   .sm\:rounded-\[24px\] {
@@ -16566,6 +16562,11 @@ footer ul li {
     padding-right: 1.75rem;
   }
 
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -16586,11 +16587,6 @@ footer ul li {
     padding-bottom: 1.5rem;
   }
 
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .sm\:pl-5 {
     padding-left: 1.25rem;
   }
@@ -16609,6 +16605,10 @@ footer ul li {
 
   .sm\:text-\[15px\] {
     font-size: 15px;
+  }
+
+  .sm\:text-\[16px\] {
+    font-size: 16px;
   }
 
   .sm\:text-\[17px\] {
@@ -16662,10 +16662,6 @@ footer ul li {
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-\[16px\] {
-    font-size: 16px;
   }
 
   .sm\:leading-\[36px\] {
@@ -17375,6 +17371,10 @@ footer ul li {
     max-width: 450px;
   }
 
+  .md\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
   .md\:max-w-\[650px\] {
     max-width: 650px;
   }
@@ -17409,10 +17409,6 @@ footer ul li {
 
   .md\:max-w-none {
     max-width: none;
-  }
-
-  .md\:max-w-\[500px\] {
-    max-width: 500px;
   }
 
   .md\:flex-1 {
@@ -17901,6 +17897,11 @@ footer ul li {
     padding-bottom: 0.75rem;
   }
 
+  .md\:py-3\.5 {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+  }
+
   .md\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -17959,11 +17960,6 @@ footer ul li {
   .md\:py-\[80px\] {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-
-  .md\:py-3\.5 {
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
   }
 
   .md\:\!pt-0 {
@@ -18187,6 +18183,10 @@ footer ul li {
     font-size: 16px;
   }
 
+  .md\:text-\[17px\] {
+    font-size: 17px;
+  }
+
   .md\:text-\[18px\] {
     font-size: 18px;
   }
@@ -18301,10 +18301,6 @@ footer ul li {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[17px\] {
-    font-size: 17px;
   }
 
   .md\:font-normal {
