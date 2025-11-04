@@ -2243,6 +2243,10 @@ video {
   height: 420px;
 }
 
+.h-\[42px\] {
+  height: 42px;
+}
+
 .h-\[440px\] {
   height: 440px;
 }
@@ -2398,10 +2402,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[42px\] {
-  height: 42px;
 }
 
 .max-h-0 {
@@ -2716,6 +2716,10 @@ video {
   width: 100px;
 }
 
+.w-\[110px\] {
+  width: 110px;
+}
+
 .w-\[120\%\] {
   width: 120%;
 }
@@ -2995,10 +2999,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[110px\] {
-  width: 110px;
 }
 
 .min-w-0 {
@@ -15107,47 +15107,20 @@ footer ul li {
     border-bottom: 1px solid #2b2b2b;
   }
 
-  .golang-number-gradient1,
-.golang-number-gradient2,
-.golang-number-gradient3,
-.banner-text-gradient {
-    display: inline-block;
-    /* Ensures gradient applies properly */
+  .banner-text-gradient {
+    color: #EAEAEA;
+    /* Fallback color - will show if gradient fails */
+    background: linear-gradient(105.3deg, #EAEAEA 51.69%, #5466E9 114.42%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    background-clip: text;
   }
 
-  /* Specific Gradients */
+  /* Only set transparent when browser supports background-clip */
 
-  .golang-number-gradient1 {
-    background-image: linear-gradient(193.77deg, #364ebe 12.49%, #ffffff 82.16%);
-  }
-
-  .golang-number-gradient2 {
-    background-image: linear-gradient(113.8deg, #4361ee 28.27%, #ffffff 64.38%);
-  }
-
-  .golang-number-gradient3 {
-    background-image: linear-gradient(193.77deg, #4361ee 12.49%, #ffffff 82.16%);
-  }
-
-  .banner-text-gradient {
-    background-image: linear-gradient(105.3deg, #eaeaea 51.69%, #5466e9 114.42%);
-  }
-
-  /* Optional: fallback for small screens */
-
-  @media (max-width: 1024px) {
-    .golang-number-gradient1,
-  .golang-number-gradient2,
-  .golang-number-gradient3,
-  .banner-text-gradient {
-      color: #5466e9;
-      /* fallback solid color */
-      background: none;
-      -webkit-text-fill-color: initial;
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .banner-text-gradient {
+      color: transparent;
     }
   }
 
@@ -19600,6 +19573,10 @@ footer ul li {
     padding-right: 2rem;
   }
 
+  .lg\:pr-\[30px\] {
+    padding-right: 30px;
+  }
+
   .lg\:pr-\[40px\] {
     padding-right: 40px;
   }
@@ -19698,10 +19675,6 @@ footer ul li {
 
   .lg\:pt-\[80px\] {
     padding-top: 80px;
-  }
-
-  .lg\:pr-\[30px\] {
-    padding-right: 30px;
   }
 
   .lg\:text-left {
