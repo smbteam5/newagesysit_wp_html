@@ -5,51 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case Studies Section</title>
     <link href="style.css" rel="stylesheet" />
-
-    <style>
-      /* Hide the default cursor when inside section */
-      #cardSection {
-        cursor: none;
-      }
-
-      /* Cursor Badge Base */
-      #cursor {
-        position: fixed;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        width: 120px;
-        height: 120px;
-        border-radius: 9999px;
-        background: #ff5d00;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        font-weight: 600;
-        text-align: center;
-        font-size: 14px;
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.7);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        z-index: 9999;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      #cursor svg {
-        margin-top: 4px;
-        width: 24px;
-        height: 24px;
-        transform: rotate(-45deg);
-      }
-
-      /* Visible on hover */
-      #cursor.show {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-      }
-    </style>
   </head>
   <body class="m-0 p-0 bg-[#0b0b14] text-white font-inter">
     <!-- 🌌 Banner Section -->
@@ -247,34 +202,11 @@
       class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500 hover:-translate-y-2 cursor-none"
-        id="caseSection"
+        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
-        <!-- Custom Cursor Badge -->
-        <div
-          id="cursorBadge"
-          class="pointer-events-none fixed z-50 opacity-0 transition-opacity duration-200 flex flex-col items-center justify-center text-center text-white bg-[#FF5D00] rounded-full w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] font-semibold text-[13px] sm:text-[15px]"
-          style="transform: translate(-50%, -50%)"
-        >
-          VIEW<br />CASE STUDY
-          <svg
-            fill="#ffffff"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-            stroke-width="0"
-            transform="rotate(-45)"
-            class="w-6 h-6 mt-1"
-          >
-            <path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            />
-          </svg>
-        </div>
-
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] relative overflow-hidden"
+          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="../src/img/L-card-portfolio.webp"
@@ -305,36 +237,20 @@
               >
                 Digital Business Card App With Smart Technology
               </h4>
-            </div>
 
-            <!-- Stats -->
-            <div class="flex items-center gap-6 sm:gap-8 md:gap-10">
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
+              <p
+                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                L-Card transformed professional networking with a smart digital
+                business card app earning recognition at GMASA 2024.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
                 >
-                  10k
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Active Users
-                </p>
-              </div>
-
-              <div class="w-px h-8 sm:h-9 md:h-10 bg-[#333]"></div>
-
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
-                >
-                  15k+
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Total Appointments
-                </p>
+                  VIEW CASE STUDY
+                </button>
               </div>
             </div>
           </div>
@@ -345,104 +261,66 @@
     <!-- project town connect  -->
 
     <section
-      class="w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10"
+      class="w-full flex justify-center bg-neutral-950 py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 lg:px-10"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500 hover:-translate-y-2"
+        class="group flex flex-col md:flex-row justify-between items-stretch w-full max-w-[1440px] rounded-[24px] mx-auto overflow-hidden bg-[#121314] transition-all duration-500"
       >
-        <!-- Circular Hover Badge (Left Side) -->
-        <div
-          class="absolute top-4 sm:top-6 md:top-10 left-4 sm:left-6 md:left-10 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 ease-linear shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-10"
-        >
-          VIEW<br />CASE STUDY
-          <svg
-            fill="#ffffff"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-            stroke-width="0"
-            transform="rotate(-45)"
-            class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-          >
-            <path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            />
-          </svg>
-        </div>
-
         <!-- Left Content -->
         <div
-          class="w-full md:w-[52%] bg-[#111111] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative order-2 md:order-1"
+          class="w-full md:w-[50%] bg-[#111111] flex flex-col justify-center p-6 sm:p-8 md:p-12 text-white relative order-2 md:order-1"
         >
-          <div
-            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
-          >
-            <div class="mb-6 sm:mb-8 md:mb-10">
-              <h3
-                class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+          <div class="space-y-5 sm:space-y-6 md:space-y-8">
+            <h3
+              class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[22px] font-bold tracking-wide relative inline-block"
+            >
+              Town Connect Network
+              <!-- Animated Underline -->
+              <span
+                class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-6 block transition-all duration-300 ease-linear group-hover:w-full"
+              ></span>
+            </h3>
+
+            <h4
+              class="text-[22px] sm:text-[26px] md:text-[30px] text-[#F5FAFE] font-normal leading-snug"
+            >
+              Auto Repair Booking and Maintenance Tracking Application
+            </h4>
+
+            <p
+              class="text-[16px] sm:text-[17px] md:text-[18px] text-[#A3ACB5] font-normal leading-relaxed opacity-80"
+            >
+              TownConnect Network revolutionized transportation through a custom
+              app simplifying shipment tracking, job management, and real-time
+              driver coordination.
+            </p>
+
+            <!-- View Case Study Button -->
+            <div class="pt-2">
+              <button
+                class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-white font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_3px_10px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
               >
-                Town Connect Network
-                <!-- Animated Underline -->
-                <span
-                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
-                ></span>
-              </h3>
-
-              <h4
-                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
-              >
-                Shipment Tracking Application
-              </h4>
-            </div>
-
-            <!-- Stats Section -->
-            <div class="flex items-center gap-6 sm:gap-8 md:gap-10">
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
-                >
-                  10k
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Active Users
-                </p>
-              </div>
-
-              <div class="w-px h-8 sm:h-9 md:h-10 bg-[#333]"></div>
-
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
-                >
-                  40%
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Total Appointments
-                </p>
-              </div>
+                VIEW CASE STUDY
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Right Image -->
         <div
-          class="w-full md:w-[48%] h-[300px] sm:h-[400px] md:h-[500px] relative overflow-hidden order-1 md:order-2"
+          class="w-full md:w-[50%] h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden order-1 md:order-2"
         >
           <img
             src="../src/img/Town-connect-portfolio.webp"
             alt="Town Connect"
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
           />
         </div>
       </div>
     </section>
 
     <section
-      class="relative w-full bg-gradient-to-b from-[#040617] to-[#070B1F] text-white py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-10 lg:px-20 overflow-hidden"
+      class="relative w-full bg-gradient-to-b from-[#090D21] to-[#020307] text-white py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-10 lg:px-20 overflow-hidden"
     >
       <div class="container mx-auto">
         <div
@@ -544,7 +422,7 @@
             </div>
 
             <button
-              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[40px] pb-[20px] pl-[40px] gap-[16px] w-[294px]"
+              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[40px] pb-[20px] pl-[40px] gap-[16px] w-full sm:w-[294px] mx-auto"
             >
               <svg
                 width="21"
@@ -573,17 +451,19 @@
         <div class="relative max-w-full mx-auto rounded-[32px] border-glow">
           <!-- Inner Content -->
           <div
-            class="relative flex flex-col md:flex-row justify-between items-center bg-black rounded-[24px] py-12 px-10 md:px-16 z-10"
+            class="relative flex flex-col md:flex-row justify-between items-start md:items-center bg-black rounded-[24px] py-8 sm:py-10 md:py-12 px-6 sm:px-8 md:px-12 lg:px-16 z-10 gap-6 md:gap-8"
           >
             <!-- Left Content -->
-            <div class="text-white space-y-4 text-center md:text-left">
+            <div
+              class="text-white space-y-3 sm:space-y-4 text-left md:text-left w-full md:w-auto"
+            >
               <h2
-                class="text-[36px] md:text-[32px] font-semibold text-[#FFFFFF]"
+                class="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-semibold text-[#FFFFFF] leading-tight"
               >
                 Build Gen-AI-ready Solutions
               </h2>
               <p
-                class="text-[#FFFFFF] font-manrope font-medium text-[17px] md:text-lg max-w-[500px] mx-auto md:mx-0 opacity-80"
+                class="text-[#FFFFFF] font-manrope font-medium text-[15px] sm:text-[16px] md:text-[17px] lg:text-lg max-w-full md:max-w-[500px] opacity-80"
               >
                 Driven by 10+ years of AI expertise, powered by a team that
                 chases innovation.
@@ -592,9 +472,12 @@
 
             <!-- Right Button -->
             <button
-              class="group mt-6 md:mt-0 flex items-center justify-center text-[#FFFFFF] rounded-[41px] text-[18px] font-semibold border-[1.5px] border-[#FFFFFF] px-10 py-4 md:text-lg hover:opacity-80 transition-all duration-300"
+              class="group w-auto md:w-auto flex items-center justify-start md:justify-center text-[#FFFFFF] rounded-[41px] text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-semibold border-[1.5px] border-[#FFFFFF] px-6 sm:px-7 md:px-8 lg:px-10 py-3 md:py-3.5 lg:py-4 hover:opacity-80 transition-all duration-300 whitespace-nowrap"
             >
-              Learn More About Our Services
+              <span class="lg:hidden">Our Services</span>
+              <span class="hidden lg:inline"
+                >Learn More About Our Services</span
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -663,125 +546,64 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Bungee
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Affiliate Platform for Sales & Hiring
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Bungee accelerated sales and hiring with an affiliate
+                    platform delivering seamless referrals and streamlined
+                    recruitment processes.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Bungee-portfolio.webp"
-                  alt="Bungee"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Bungee Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- JobzMachine card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:top-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     JobzMachine
                     <span
@@ -790,49 +612,32 @@
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Recruitment Operations Management CRM
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    JobzMachine transformed recruitment with an intuitive CRM
+                    and ATS automating reporting, tracking, and management
+                    workflows.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Jobzmachine-portfolio.webp"
-                  alt="Jobzmachine"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="JobzMachine Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -846,180 +651,101 @@
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
     >
       <div class="container mx-auto">
-        <div class="relative max-w-full mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     CFT
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Transport ERP & Mobility App for Process Automation
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Central Florida Transport boosted logistics efficiency with
+                    a custom ERP and mobile app for better automation and
+                    visibility.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/CFT-portfolio.webp"
-                  alt="CFT"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="CFT Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- Casino Trifecta card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Eco Auto School
-
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Driving School App to Streamline Operations
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Eco Auto School modernized driving education with a tailored
+                    app simplifying student onboarding, scheduling, and
+                    instructor coordination.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Eco-auto-school-portfolio.webp"
-                  alt="Eco Auto School"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="JobzMachine Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -1028,184 +754,106 @@
       </div>
     </section>
     <!-- Projects Section  Local Li / Moly-->
+
     <section
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
     >
-      <div class="container">
-        <div class="relative max-w-full mx-auto">
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Local Li
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Community-Focused Social App
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Local IL connected global Jewish and Israeli communities
+                    with an app supporting businesses, culture, and shared
+                    traditions.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Local-Li-portfolio.webp"
-                  alt="Local Li"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Local Li Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- Moly card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Moly
-
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     On-Demand Liquor Delivery App
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Moly revolutionized liquor retail with a secure, on-demand
+                    delivery platform simplifying operations and enhancing
+                    customer convenience.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Moly-portfolio.webp"
-                  alt="Moly"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Moly Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -1213,40 +861,21 @@
         </div>
       </div>
     </section>
+
     <!-- Prayer app project  -->
     <section
-      class="w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10"
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500 hover:-translate-y-2"
+        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
-        <!-- Circular Hover Badge -->
-        <div
-          class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-6 md:right-10 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 ease-linear shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-10"
-        >
-          VIEW<br />CASE STUDY
-          <svg
-            fill="#ffffff"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-            stroke-width="0"
-            transform="rotate(-45)"
-            class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-          >
-            <path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            />
-          </svg>
-        </div>
-
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] relative overflow-hidden"
+          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="../src/img/Prayer-App-portfolio.webp"
-            alt="Prayer App"
+            alt="Prayer Circle"
             class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
           />
         </div>
@@ -1255,11 +884,9 @@
         <div
           class="w-full md:w-1/2 bg-[#111111] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
-          <!-- Move Content Up -->
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
           >
-            <!-- Title + Animated Line -->
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
                 class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
@@ -1275,36 +902,21 @@
               >
                 Church Management Platform
               </h4>
-            </div>
 
-            <!-- Stats Section -->
-            <div class="flex items-center gap-6 sm:gap-8 md:gap-10">
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
+              <p
+                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                A New Jersey church embraced digital transformation with a
+                platform uniting faith, engagement, and community management
+                tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
                 >
-                  10k
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Active Users
-                </p>
-              </div>
-
-              <div class="w-px h-8 sm:h-9 md:h-10 bg-[#333]"></div>
-
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
-                >
-                  15k+
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Total Appointments
-                </p>
+                  VIEW CASE STUDY
+                </button>
               </div>
             </div>
           </div>
@@ -1363,129 +975,67 @@
     <section
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
     >
-      <div class="container">
-        <div class="relative max-w-full mx-auto">
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Car-Up
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Auto Repair Booking and Maintenance Tracking Application
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Car-Up redefined auto repair with a seamless app and website
+                    enabling easy booking and live tracking.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Car-Up-portfolio.webp"
-                  alt="Car Up"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Car-Up Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- Podiatry card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Podiatry
                     <span
@@ -1494,49 +1044,32 @@
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Automated SEO Reporting Software
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Podiatry CC elevated marketing performance through custom
+                    SEO software offering data-driven insights and streamlined
+                    campaign reporting.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Podiatry-portfolio.webp"
-                  alt="Podiatry"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Podiatry Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -1549,129 +1082,68 @@
     <section
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
     >
-      <div class="container">
-        <div class="relative max-w-full mx-auto">
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     SecurePosit
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     User-Friendly Fintech Mobile App
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    A fintech innovator simplified digital payments through a
+                    secure, intuitive mobile app improving transaction speed and
+                    usability.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Secure-Posit-portfolio.webp"
-                  alt="Secure Posit"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="SecurePosit Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- Casino Trifecta card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Casino Trifecta
                     <span
@@ -1680,49 +1152,31 @@
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Complete Multiplayer Card Game App
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Casino Trifecta brought a creative multiplayer card game to
+                    life with a high-performance, engaging digital platform.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Casino-Trifecta-portfolio.webp"
-                  alt="Casino Trifecta"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Casino Trifecta Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -1732,51 +1186,33 @@
     </section>
 
     <!-- Polarity app project  -->
-    <section class="w-full flex justify-center bg-neutral-950 py-8">
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500 hover:-translate-y-2"
+        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
-        <!-- Circular Hover Badge -->
-        <div
-          class="absolute top-10 right-10 bg-[#FF5D00] w-[120px] h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 ease-linear shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-10"
-        >
-          VIEW<br />CASE STUDY
-          <svg
-            fill="#ffffff"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-            stroke-width="0"
-            transform="rotate(-45)"
-            class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-          >
-            <path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            />
-          </svg>
-        </div>
-
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[400px] md:h-[500px] relative overflow-hidden"
+          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="../src/img/Polarity-Partnerships-portfolio.webp"
-            alt="Polarity Partnerships"
+            alt="Podiatry App"
             class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
           />
         </div>
 
         <!-- Right Content -->
         <div
-          class="w-full md:w-1/2 bg-[#111111] flex flex-col p-[40px] mt-[32px] text-white relative"
+          class="w-full md:w-1/2 bg-[#111111] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
-          <!-- Move Content Up -->
-          <div class="relative -translate-y-6 md:-translate-y-10">
-            <!-- Title + Animated Line -->
-            <div class="mb-10">
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 Polarity Partnerships
                 <span
@@ -1785,36 +1221,25 @@
               </h3>
 
               <h4
-                class="text-[28px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-6"
+                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
               >
                 SaaS-based Community Intelligence platform
               </h4>
-            </div>
 
-            <!-- Stats Section -->
-            <div class="flex items-center gap-10">
-              <div class="flex flex-col">
-                <h4 class="text-[28px] text-[#F5FAFE] font-bold leading-none">
-                  10k
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
+              <p
+                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Polarity Partnerships advanced organizational growth via a
+                SaaS-based Community Intelligence system integrating knowledge
+                sharing and analytics.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
                 >
-                  Active Users
-                </p>
-              </div>
-
-              <div class="w-px h-10 bg-[#333]"></div>
-
-              <div class="flex flex-col">
-                <h4 class="text-[28px] text-[#F5FAFE] font-bold leading-none">
-                  15k+
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Total Appointments
-                </p>
+                  VIEW CASE STUDY
+                </button>
               </div>
             </div>
           </div>
@@ -1825,129 +1250,68 @@
     <section
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
     >
-      <div class="container">
-        <div class="relative max-w-full mx-auto">
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Realficient
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Custom SaaS-based Real Estate Tech Platform
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Realficient optimized real estate operations with a SaaS
+                    platform automating workflows, transactions, and property
+                    management processes.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Realficient-portfolio.webp"
-                  alt="Realficient"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Realficient Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- Casino Trifecta card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     Junkshot
                     <span
@@ -1956,49 +1320,32 @@
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Junk Removal and Scheduling Software
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Junk Shot digitized junk removal operations with an
+                    all-in-one app automating bookings, tracking, and payment
+                    processing.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Junkshot-portfolio.webp"
-                  alt="Junkshot"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="Junkshot Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -2011,129 +1358,68 @@
     <section
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
     >
-      <div class="container">
-        <div class="relative max-w-full mx-auto">
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
-            <!-- Card -->
+            <!-- Bungee Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <!-- Circular Hover Badge -->
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
               <!-- Card Content -->
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     GoGo Wash
-                    <!-- Animated underline -->
                     <span
                       class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                     ></span>
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Car Wash App with Secure Payments
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    GoGo Wash modernized car maintenance through an Uber-style
+                    app simplifying instant bookings, payments, and customer
+                    notifications.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <!-- Image with subtle zoom -->
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/Gogowash-portfolio.webp"
-                  alt="Gogowash"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="GoGo Wash Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <!-- Casino Trifecta card -->
+            <!-- JobzMachine Card -->
             <div
-              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[550px] sm:min-h-[650px] md:min-h-[734px]"
+              class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div
-                class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-5 md:right-6 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-              >
-                VIEW<br />CASE STUDY
-                <svg
-                  fill="#ffffff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="0"
-                  transform="rotate(-45)"
-                  class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-                >
-                  <path
-                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-                  />
-                </svg>
-              </div>
-
-              <div
-                class="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between"
-              >
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[18px] sm:text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
                   >
                     ISRA
                     <span
@@ -2142,49 +1428,32 @@
                   </h3>
 
                   <p
-                    class="text-semibold text-[20px] sm:text-[24px] md:text-[28px] mt-4 sm:mt-5 md:mt-6 text-[#F5FAFE]"
+                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     On-Demand Beauty Service App
                   </p>
+
+                  <p
+                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    ISRA empowered beauty professionals and clients via a
+                    user-friendly app simplifying stylist discovery, booking,
+                    and scheduling.
+                  </p>
                 </div>
 
-                <div
-                  class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-5 md:mt-6"
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
                 >
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      10k
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Active Users
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[#F5FAFE] text-[20px] sm:text-[24px] md:text-[28px] font-bold"
-                    >
-                      15k +
-                    </p>
-                    <p
-                      class="text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                    >
-                      Total Appointments
-                    </p>
-                  </div>
-                </div>
+                  VIEW CASESTUDY
+                </button>
               </div>
 
-              <div
-                class="w-full h-[280px] sm:h-[320px] md:h-[397px] overflow-hidden"
-              >
+              <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="../src/img/ISRA-portfolio.webp"
-                  alt="ISRA"
-                  class="w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+                  alt="ISRA Portfolio"
+                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
                 />
               </div>
             </div>
@@ -2192,37 +1461,16 @@
         </div>
       </div>
     </section>
-
     <!-- Auntie app project  -->
     <section
-      class="w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10"
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500 hover:-translate-y-2"
+        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
-        <!-- Circular Hover Badge -->
-        <div
-          class="absolute top-4 sm:top-6 md:top-10 right-4 sm:right-6 md:right-10 bg-[#FF5D00] w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full flex flex-col items-center justify-center text-center text-white text-[12px] sm:text-[14px] md:text-[12px] sm:text-[14px] md:text-[16px] font-medium leading-snug opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 ease-linear shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-10"
-        >
-          VIEW<br />CASE STUDY
-          <svg
-            fill="#ffffff"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-            stroke-width="0"
-            transform="rotate(-45)"
-            class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-1"
-          >
-            <path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            />
-          </svg>
-        </div>
-
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] relative overflow-hidden"
+          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="../src/img/Auntie-app-portfolio.webp"
@@ -2235,11 +1483,9 @@
         <div
           class="w-full md:w-1/2 bg-[#111111] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
-          <!-- Move Content Up -->
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
           >
-            <!-- Title + Animated Line -->
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
                 class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
@@ -2255,36 +1501,21 @@
               >
                 Childcare App For Babysitters & Parents
               </h4>
-            </div>
 
-            <!-- Stats Section -->
-            <div class="flex items-center gap-6 sm:gap-8 md:gap-10">
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
+              <p
+                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Auntie App enhanced childcare connections through a secure
+                platform offering intelligent matching, verification, and
+                communication tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
                 >
-                  10k
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Active Users
-                </p>
-              </div>
-
-              <div class="w-px h-8 sm:h-9 md:h-10 bg-[#333]"></div>
-
-              <div class="flex flex-col">
-                <h4
-                  class="text-[22px] sm:text-[24px] md:text-[28px] text-[#F5FAFE] font-bold leading-none"
-                >
-                  15k+
-                </h4>
-                <p
-                  class="text-[12px] sm:text-[13px] md:text-[12px] sm:text-[13px] md:text-[14px] text-[#FFFFFFC2] font-normal mt-1 sm:mt-2"
-                >
-                  Total Appointments
-                </p>
+                  VIEW CASE STUDY
+                </button>
               </div>
             </div>
           </div>
