@@ -814,10 +814,6 @@ video {
   bottom: -29px;
 }
 
-.bottom-\[-300px\] {
-  bottom: -300px;
-}
-
 .bottom-\[-30px\] {
   bottom: -30px;
 }
@@ -826,12 +822,12 @@ video {
   bottom: -390px;
 }
 
-.bottom-\[-400px\] {
-  bottom: -400px;
-}
-
 .bottom-\[-40px\] {
   bottom: -40px;
+}
+
+.bottom-\[-500px\] {
+  bottom: -500px;
 }
 
 .bottom-\[-50px\] {
@@ -844,6 +840,10 @@ video {
 
 .bottom-\[-5px\] {
   bottom: -5px;
+}
+
+.bottom-\[-600px\] {
+  bottom: -600px;
 }
 
 .bottom-\[-60px\] {
@@ -4584,6 +4584,10 @@ video {
   border-color: rgb(255 255 255 / 0.3);
 }
 
+.border-white\/40 {
+  border-color: rgb(255 255 255 / 0.4);
+}
+
 .border-white\/90 {
   border-color: rgb(255 255 255 / 0.9);
 }
@@ -6629,6 +6633,11 @@ video {
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-2 {
@@ -14852,7 +14861,7 @@ footer ul li {
   bottom: 0;
   width: 2px;
   height: 90%;
-  background: linear-gradient(0deg, #ccccccb9 0%, rgba(153, 153, 153, 0) 100%);
+  background: linear-gradient(0deg, #cccccc9a 0%, rgba(153, 153, 153, 0) 100%);
 }
 
 .cbtn-border-bottom-right {
@@ -14866,7 +14875,7 @@ footer ul li {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #ffffff 0%, #000000 100%);
+  background: linear-gradient(90deg, #ffffffc4 0%, #000000 100%);
 }
 
 .cbtn-border-bottom-left {
@@ -14880,7 +14889,7 @@ footer ul li {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
+  background: linear-gradient(90deg, #000000 0%, #ffffffb3 100%);
 }
 
 .horizontal-right-scroll{
@@ -14934,8 +14943,29 @@ footer ul li {
     linear-gradient(177.61deg, rgba(0, 0, 0, 0) 44.49%, #000000 103.21%);
 }
 
-.related-blogs-carousel.owl-stage-outer{
+.related-blogs-carousel .owl-stage-outer{
   overflow: unset !important;
+}
+
+.flexible-border-golang{
+  position: relative;
+}
+
+.flexible-border-golang::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    rgba(255, 255, 255, 0.619) 45%,
+    rgba(255, 255, 255, 0.64) 50%,
+    rgba(255, 255, 255, 0.611) 55%,
+    #000000 100%
+  );
 }
 
 @media (min-width: 1024px) {
@@ -16269,10 +16299,6 @@ footer ul li {
     display: none;
   }
 
-  .md\:h-1\/2 {
-    height: 50%;
-  }
-
   .md\:h-24 {
     height: 6rem;
   }
@@ -16355,6 +16381,10 @@ footer ul li {
 
   .md\:h-\[650px\] {
     height: 650px;
+  }
+
+  .md\:h-\[80\%\] {
+    height: 80%;
   }
 
   .md\:h-\[87\%\] {
@@ -16872,6 +16902,10 @@ footer ul li {
     border-right-width: 1px;
   }
 
+  .md\:border-none {
+    border-style: none;
+  }
+
   .md\:border-\[\#666666\] {
     --tw-border-opacity: 1;
     border-color: rgb(102 102 102 / var(--tw-border-opacity));
@@ -16908,6 +16942,10 @@ footer ul li {
 
   .md\:bg-\[url\(\'\.\/img\/level-cta-bg-golang\.png\'\)\] {
     background-image: url('./img/level-cta-bg-golang.png');
+  }
+
+  .md\:bg-\[url\(\'\.\/img\/level-cta-bg-golang\.webp\'\)\] {
+    background-image: url('./img/level-cta-bg-golang.webp');
   }
 
   .md\:bg-\[url\(\'\.\/img\/pcc-circle-bg\.webp\'\)\] {
