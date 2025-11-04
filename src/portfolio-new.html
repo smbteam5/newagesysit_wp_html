@@ -3,8 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Case Studies Section</title>
+    <meta
+      name="description"
+      content="Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries."
+    />
+    <title>Case Studies - Innovative Apps in Action</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style" />
+    <link
+      rel="preload"
+      href="./img/WhipFlip-portfolio.webp"
+      as="image"
+      fetchpriority="high"
+    />
+
     <link href="style.css" rel="stylesheet" />
+
+    <!-- Inline critical CSS for above-fold content -->
+    <style>
+      /* Critical CSS for faster FCP */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0b0b14;
+        color: white;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+      }
+      .word span {
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+    </style>
   </head>
   <body class="m-0 p-0 bg-[#0b0b14] text-white font-inter">
     <!-- 🌌 Banner Section -->
@@ -135,13 +165,18 @@
 
     <!-- Outer wrapper ensures true full width -->
     <section
-      class="relative w-full min-h-[500px] md:min-h-[542px] overflow-hidden bg-black"
+      class="relative w-full min-h-[500px] md:min-h-[542px] overflow-hidden bg-black rounded-[24px] md:rounded-[16px]"
     >
       <!-- Background image -->
       <img
         src="./img/WhipFlip-portfolio.webp"
+        data-mobile="./img/whipflip-mobile-portfolio.webp"
+        data-desktop="./img/WhipFlip-portfolio.webp"
         alt="Whipflip Case Study"
-        class="w-full h-full mx-auto object-cover object-center sm:object-top"
+        class="responsive-portfolio-img w-full h-full mx-auto object-cover object-center sm:object-top"
+        fetchpriority="high"
+        width="1920"
+        height="542"
       />
 
       <!-- Gradient overlay -->
@@ -156,12 +191,12 @@
         <!-- Left text -->
         <div class="w-full sm:max-w-sm">
           <h2
-            class="text-[22px] sm:text-[28px] font-semibold mb-2 text-[#F5FAFE]"
+            class="text-[18px] sm:text-[28px] font-semibold mb-2 text-[#F5FAFE]"
           >
             Whip Flip
           </h2>
           <p
-            class="text-[18px] sm:text-[24px] leading-relaxed font-normal text-[#F5FAFE]"
+            class="text-[16px] md:text-[24px] leading-relaxed font-normal text-[#F5FAFE]"
           >
             Automating transporting company process by mobility and web
             solutions
@@ -169,7 +204,7 @@
         </div>
 
         <!-- Right stats -->
-        <div
+        <!-- <div
           class="flex items-center gap-6 sm:gap-10 text-left sm:text-right w-full sm:w-auto"
         >
           <div class="flex flex-col gap-4 sm:gap-10">
@@ -192,7 +227,7 @@
               Total Appointments
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -210,8 +245,13 @@
         >
           <img
             src="./img/L-card-portfolio.webp"
+            data-mobile="./img/l-card-mobile-portfolio.webp"
+            data-desktop="./img/L-card-portfolio.webp"
             alt="L Card"
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            width="720"
+            height="550"
           />
         </div>
 
@@ -224,7 +264,7 @@
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 L-Card
                 <span
@@ -233,13 +273,13 @@
               </h3>
 
               <h4
-                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
               >
                 Digital Business Card App With Smart Technology
               </h4>
 
               <p
-                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
               >
                 L-Card transformed professional networking with a smart digital
                 business card app earning recognition at GMASA 2024.
@@ -268,40 +308,42 @@
       >
         <!-- Left Content -->
         <div
-          class="w-full md:w-[50%] bg-[#111111] flex flex-col justify-center p-6 sm:p-8 md:p-12 text-white relative order-2 md:order-1"
+          class="w-full md:w-1/2 bg-[#111111] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
-          <div class="space-y-5 sm:space-y-6 md:space-y-8">
-            <h3
-              class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[22px] font-bold tracking-wide relative inline-block"
-            >
-              Town Connect Network
-              <!-- Animated Underline -->
-              <span
-                class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-6 block transition-all duration-300 ease-linear group-hover:w-full"
-              ></span>
-            </h3>
-
-            <h4
-              class="text-[22px] sm:text-[26px] md:text-[30px] text-[#F5FAFE] font-normal leading-snug"
-            >
-              Auto Repair Booking and Maintenance Tracking Application
-            </h4>
-
-            <p
-              class="text-[16px] sm:text-[17px] md:text-[18px] text-[#A3ACB5] font-normal leading-relaxed opacity-80"
-            >
-              TownConnect Network revolutionized transportation through a custom
-              app simplifying shipment tracking, job management, and real-time
-              driver coordination.
-            </p>
-
-            <!-- View Case Study Button -->
-            <div class="pt-2">
-              <button
-                class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-white font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_3px_10px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
-                VIEW CASE STUDY
-              </button>
+                Town Connect Network
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Shipment Tracking Application
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                TownConnect Network revolutionized transportation through a
+                custom app simplifying shipment tracking, job management, and
+                real-time driver coordination.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded-md shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -312,8 +354,13 @@
         >
           <img
             src="./img/Town-connect-portfolio.webp"
+            data-mobile="./img/town-connect-mobile-portfolio.webp"
+            data-desktop="./img/Town-connect-portfolio.webp"
             alt="Town Connect"
-            class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+            loading="lazy"
+            width="720"
+            height="550"
           />
         </div>
       </div>
@@ -329,7 +376,7 @@
           <!-- Left Content (8/12) -->
           <div class="lg:w-8/12 space-y-4 sm:space-y-5 relative">
             <h2
-              class="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px] text-[#FFFFFF] font-semibold leading-tight"
+              class="text-[35px] sm:text-[36px] md:text-[44px] lg:text-[50px] text-[#FFFFFF] font-semibold leading-tight"
             >
               We deliver on time, in days and weeks
               <br />
@@ -398,7 +445,7 @@
             class="lg:w-4/12 flex flex-col justify-start space-y-4 sm:space-y-5 md:space-y-6 lg:mt-[10px] gap-3 sm:gap-4"
           >
             <blockquote
-              class="text-[#F5FAFE] font-normal text-[18px] md:text-lg leading-relaxed opacity-80"
+              class="text-[#F5FAFE] font-normal text-[16px] md:text-[16px] leading-relaxed opacity-80"
             >
               “From every single moment, from the beginning till the end, they
               were there for me. They were very systematic and methodical in
@@ -410,6 +457,9 @@
                 src="./img/iman-khawaja-portfolio.png"
                 alt="Iman Khawaja"
                 class="w-[50px] h-[50px] rounded-md object-cover"
+                loading="lazy"
+                width="50"
+                height="50"
               />
               <div class="w-[230px]">
                 <p class="text-[#F5FAFE] font-medium text-[23px]">
@@ -422,7 +472,7 @@
             </div>
 
             <button
-              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[40px] pb-[20px] pl-[40px] gap-[16px] w-full sm:w-[294px] mx-auto"
+              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[40px] pb-[20px] pl-[40px] gap-[16px] w-full sm:w-[294px]"
             >
               <svg
                 width="21"
@@ -458,12 +508,12 @@
               class="text-white space-y-3 sm:space-y-4 text-left md:text-left w-full md:w-auto"
             >
               <h2
-                class="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-semibold text-[#FFFFFF] leading-tight"
+                class="text-[28px] md:text-[36px] font-semibold text-[#FFFFFF] leading-tight"
               >
                 Build Gen-AI-ready Solutions
               </h2>
               <p
-                class="text-[#FFFFFF] font-manrope font-medium text-[15px] sm:text-[16px] md:text-[17px] lg:text-lg max-w-full md:max-w-[500px] opacity-80"
+                class="text-[#FFFFFF] font-manrope font-medium text-[17px] max-w-full md:max-w-[500px] opacity-80"
               >
                 Driven by 10+ years of AI expertise, powered by a team that
                 chases innovation.
@@ -553,10 +603,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
                   >
                     Bungee
                     <span
@@ -565,13 +615,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Affiliate Platform for Sales & Hiring
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Bungee accelerated sales and hiring with an affiliate
                     platform delivering seamless referrals and streamlined
@@ -590,8 +640,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Bungee-portfolio.webp"
+                  data-mobile="./img/bungee-mobile-portfolio.webp"
+                  data-desktop="./img/Bungee-portfolio.webp"
                   alt="Bungee Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -600,10 +655,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     JobzMachine
                     <span
@@ -612,13 +667,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Recruitment Operations Management CRM
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     JobzMachine transformed recruitment with an intuitive CRM
                     and ATS automating reporting, tracking, and management
@@ -636,8 +691,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Jobzmachine-portfolio.webp"
+                  data-mobile="./img/jobzmachine-mobile-portfolio.webp"
+                  data-desktop="./img/Jobzmachine-portfolio.webp"
                   alt="JobzMachine Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -661,10 +721,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     CFT
                     <span
@@ -673,13 +733,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Transport ERP & Mobility App for Process Automation
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Central Florida Transport boosted logistics efficiency with
                     a custom ERP and mobile app for better automation and
@@ -698,8 +758,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/CFT-portfolio.webp"
+                  data-mobile="./img/cft-mobile-portfolio.webp"
+                  data-desktop="./img/CFT-portfolio.webp"
                   alt="CFT Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -708,10 +773,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     Eco Auto School
                     <span
@@ -720,13 +785,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Driving School App to Streamline Operations
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Eco Auto School modernized driving education with a tailored
                     app simplifying student onboarding, scheduling, and
@@ -744,8 +809,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Eco-auto-school-portfolio.webp"
-                  alt="JobzMachine Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  data-mobile="./img/eco-auto-mobile-portfolio.webp"
+                  data-desktop="./img/Eco-auto-school-portfolio.webp"
+                  alt="Eco Auto School Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -769,10 +839,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     Local Li
                     <span
@@ -781,13 +851,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Community-Focused Social App
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Local IL connected global Jewish and Israeli communities
                     with an app supporting businesses, culture, and shared
@@ -806,8 +876,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Local-Li-portfolio.webp"
+                  data-mobile="./img/local-il-mobile-portfolio.webp"
+                  data-desktop="./img/Local-Li-portfolio.webp"
                   alt="Local Li Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -816,10 +891,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     Moly
                     <span
@@ -828,13 +903,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     On-Demand Liquor Delivery App
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Moly revolutionized liquor retail with a secure, on-demand
                     delivery platform simplifying operations and enhancing
@@ -852,8 +927,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Moly-portfolio.webp"
+                  data-mobile="./img/moly-mobile-portfolio.webp"
+                  data-desktop="./img/Moly-portfolio.webp"
                   alt="Moly Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -875,8 +955,13 @@
         >
           <img
             src="./img/Prayer-App-portfolio.webp"
+            data-mobile="./img/prayer-app-mobile-portfolio.webp"
+            data-desktop="./img/Prayer-App-portfolio.webp"
             alt="Prayer Circle"
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            width="720"
+            height="550"
           />
         </div>
 
@@ -889,7 +974,7 @@
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 Prayer Circle
                 <span
@@ -898,13 +983,13 @@
               </h3>
 
               <h4
-                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
               >
                 Church Management Platform
               </h4>
 
               <p
-                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
               >
                 A New Jersey church embraced digital transformation with a
                 platform uniting faith, engagement, and community management
@@ -937,12 +1022,12 @@
             class="flex flex-col items-center justify-center text-center py-20 px-6 md:px-12 rounded-[32px]"
           >
             <h2
-              class="text-[36px] md:text-[36px] font-medium text[#FFFFFF] leading-snug"
+              class="text-[28px] md:text-[36px] font-medium text[#FFFFFF] leading-snug"
             >
               See how others achieved growth — Discover more case studies
             </h2>
             <p
-              class="text-white/80 font-medium text-[17px] md:text-[18px] mt-4 mb-10 font-manrope"
+              class="text-white/80 font-medium text-[18px] md:text-[17px] mt-4 mb-10 font-manrope"
             >
               Uncover the strategies behind more client wins.
             </p>
@@ -986,10 +1071,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     Car-Up
                     <span
@@ -998,13 +1083,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Auto Repair Booking and Maintenance Tracking Application
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Car-Up redefined auto repair with a seamless app and website
                     enabling easy booking and live tracking.
@@ -1022,8 +1107,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Car-Up-portfolio.webp"
+                  data-mobile="./img/carup-mobile-portfolio.webp"
+                  data-desktop="./img/Car-Up-portfolio.webp"
                   alt="Car-Up Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1032,10 +1122,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     Podiatry
                     <span
@@ -1044,13 +1134,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Automated SEO Reporting Software
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Podiatry CC elevated marketing performance through custom
                     SEO software offering data-driven insights and streamlined
@@ -1068,8 +1158,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Podiatry-portfolio.webp"
+                  data-mobile="./img/podiatry-mobile-portfolio.webp"
+                  data-desktop="./img/Podiatry-portfolio.webp"
                   alt="Podiatry Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1093,10 +1188,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     SecurePosit
                     <span
@@ -1105,13 +1200,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     User-Friendly Fintech Mobile App
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     A fintech innovator simplified digital payments through a
                     secure, intuitive mobile app improving transaction speed and
@@ -1130,8 +1225,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Secure-Posit-portfolio.webp"
+                  data-mobile="./img/secure-posit-mobile-portfolio.webp"
+                  data-desktop="./img/Secure-Posit-portfolio.webp"
                   alt="SecurePosit Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1140,10 +1240,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
                   >
                     Casino Trifecta
                     <span
@@ -1152,13 +1252,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Complete Multiplayer Card Game App
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Casino Trifecta brought a creative multiplayer card game to
                     life with a high-performance, engaging digital platform.
@@ -1175,8 +1275,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Casino-Trifecta-portfolio.webp"
+                  data-mobile="./img/casino-mobile-portfolio.webp"
+                  data-desktop="./img/Casino-Trifecta-portfolio.webp"
                   alt="Casino Trifecta Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1198,8 +1303,13 @@
         >
           <img
             src="./img/Polarity-Partnerships-portfolio.webp"
-            alt="Podiatry App"
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            data-mobile="./img/polarity-mobile-portfolio.webp"
+            data-desktop="./img/Polarity-Partnerships-portfolio.webp"
+            alt="Polarity App"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            width="720"
+            height="550"
           />
         </div>
 
@@ -1212,7 +1322,7 @@
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 Polarity Partnerships
                 <span
@@ -1221,13 +1331,13 @@
               </h3>
 
               <h4
-                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
               >
                 SaaS-based Community Intelligence platform
               </h4>
 
               <p
-                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
               >
                 Polarity Partnerships advanced organizational growth via a
                 SaaS-based Community Intelligence system integrating knowledge
@@ -1261,10 +1371,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
                   >
                     Realficient
                     <span
@@ -1273,13 +1383,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Custom SaaS-based Real Estate Tech Platform
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Realficient optimized real estate operations with a SaaS
                     platform automating workflows, transactions, and property
@@ -1298,8 +1408,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Realficient-portfolio.webp"
+                  data-mobile="./img/realficient-mobile-portfolio.webp"
+                  data-desktop="./img/Realficient-portfolio.webp"
                   alt="Realficient Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1308,10 +1423,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
                   >
                     Junkshot
                     <span
@@ -1320,13 +1435,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Junk Removal and Scheduling Software
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     Junk Shot digitized junk removal operations with an
                     all-in-one app automating bookings, tracking, and payment
@@ -1344,8 +1459,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Junkshot-portfolio.webp"
+                  data-mobile="./img/junkshot-mobile-portfolio.webp"
+                  data-desktop="./img/Junkshot-portfolio.webp"
                   alt="Junkshot Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1369,10 +1489,10 @@
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
               <!-- Card Content -->
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
                   >
                     GoGo Wash
                     <span
@@ -1381,13 +1501,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     Car Wash App with Secure Payments
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     GoGo Wash modernized car maintenance through an Uber-style
                     app simplifying instant bookings, payments, and customer
@@ -1406,8 +1526,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/Gogowash-portfolio.webp"
+                  data-mobile="./img/gogowash-mobile-portfolio.webp"
+                  data-desktop="./img/Gogowash-portfolio.webp"
                   alt="GoGo Wash Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1416,10 +1541,10 @@
             <div
               class="group relative bg-[#1A1A1F] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
             >
-              <div class="p-6 flex-1 flex flex-col justify-between">
+              <div class="p-[32px] flex-1 flex flex-col justify-between">
                 <div>
                   <h3
-                    class="text-[#FFFFFF] font-bold text-[20px] md:text-[23px] relative inline-block"
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
                   >
                     ISRA
                     <span
@@ -1428,13 +1553,13 @@
                   </h3>
 
                   <p
-                    class="text-[24px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-semibold"
                   >
                     On-Demand Beauty Service App
                   </p>
 
                   <p
-                    class="text-[14px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
                   >
                     ISRA empowered beauty professionals and clients via a
                     user-friendly app simplifying stylist discovery, booking,
@@ -1452,8 +1577,13 @@
               <div class="w-full h-[397px] overflow-hidden">
                 <img
                   src="./img/ISRA-portfolio.webp"
+                  data-mobile="./img/isra-mobile-portfolio.webp"
+                  data-desktop="./img/ISRA-portfolio.webp"
                   alt="ISRA Portfolio"
-                  class="w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
                 />
               </div>
             </div>
@@ -1474,8 +1604,13 @@
         >
           <img
             src="./img/Auntie-app-portfolio.webp"
+            data-mobile="./img/auntiee-mobile-portfolio.webp"
+            data-desktop="./img/Auntie-app-portfolio.webp"
             alt="Auntie App"
-            class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            width="720"
+            height="550"
           />
         </div>
 
@@ -1488,7 +1623,7 @@
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[18px] sm:text-[20px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 Auntie App
                 <span
@@ -1497,13 +1632,13 @@
               </h3>
 
               <h4
-                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
               >
                 Childcare App For Babysitters & Parents
               </h4>
 
               <p
-                class="text-[16px] sm:text-[18px] md:text-[20px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
               >
                 Auntie App enhanced childcare connections through a secure
                 platform offering intelligent matching, verification, and
@@ -1673,6 +1808,9 @@
                 src="./img/shield-svgrepo-com 1.svg"
                 alt="lock"
                 class="inline-block mr-2"
+                loading="lazy"
+                width="20"
+                height="20"
               />
 
               <p class="text-xs text-center text-gray-500">
@@ -1706,6 +1844,33 @@
         section.addEventListener("mouseleave", () => {
           cursor.style.opacity = "0";
         });
+      });
+
+      // Responsive Portfolio Images Switcher
+      function switchResponsiveImages() {
+        const images = document.querySelectorAll(".responsive-portfolio-img");
+        const isMobile = window.innerWidth <= 767;
+
+        images.forEach((img) => {
+          const mobileImg = img.getAttribute("data-mobile");
+          const desktopImg = img.getAttribute("data-desktop");
+
+          if (isMobile && mobileImg) {
+            img.src = mobileImg;
+          } else if (desktopImg) {
+            img.src = desktopImg;
+          }
+        });
+      }
+
+      // Run on page load
+      switchResponsiveImages();
+
+      // Run on window resize (with debounce for performance)
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(switchResponsiveImages, 100);
       });
     </script>
   </body>
