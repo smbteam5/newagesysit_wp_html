@@ -5332,8 +5332,6 @@ footer ul li {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
-
-
 .slider-2 .owl-nav button.owl-prev.disabled {
   background-image: url("./img/Carousel Prev-gray.svg") !important;
   rotate: 0deg;
@@ -5367,7 +5365,6 @@ footer ul li {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
-
 .slider-3 .owl-nav button.owl-prev.disabled {
   background-image: url("./img/Carousel Prev-gray.svg") !important;
   rotate: 0deg;
@@ -5378,6 +5375,7 @@ footer ul li {
   rotate: 180deg;
 }
 
+@media (min-width: 1024px) {
 
 
 @media (min-width: 1280px) {
@@ -5530,45 +5528,228 @@ footer ul li {
   height: 2px;
   background: linear-gradient(90deg, #000000 0%, #ffffffb3 100%);
 }
-.horizontal-right-scroll{
-      border-top: 1px solid #2b2b2b;
-      border-bottom: 1px solid #2b2b2b;
+.horizontal-right-scroll {
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
 }
 
-
-
-
-.golang-number-gradient1{
-background: linear-gradient(193.77deg, #364EBE 12.49%, #FFFFFF 82.16%);
--webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-
-}
-.golang-number-gradient2{
-background: linear-gradient(113.8deg, #4361EE 28.27%, #FFFFFF 64.38%);
-
--webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-}
-.golang-number-gradient3{
-background: linear-gradient(193.77deg, #4361EE 12.49%, #FFFFFF 82.16%);
-
--webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-}
-
-.banner-text-gradient{
-  background: linear-gradient(105.3deg, #EAEAEA 51.69%, #5466E9 114.42%);
+.golang-number-gradient1 {
+  background: linear-gradient(193.77deg, #364ebe 12.49%, #ffffff 82.16%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+}
+.golang-number-gradient2 {
+  background: linear-gradient(113.8deg, #4361ee 28.27%, #ffffff 64.38%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.golang-number-gradient3 {
+  background: linear-gradient(193.77deg, #4361ee 12.49%, #ffffff 82.16%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.banner-text-gradient {
+  background: linear-gradient(105.3deg, #eaeaea 51.69%, #5466e9 114.42%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* call button  */
+
+/* --- Base button --- */
+.ripple-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #364ebe;
+  color: #fff;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    rgba(67, 97, 238, 0.15) 0%,
+    rgba(67, 97, 238, 0.08) 100%
+  );
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+  box-shadow: 1px -1px 18.2px 6px #3557f666; /* ✨ soft glow */
+}
+
+@media (min-width: 640px) {
+  .ripple-btn {
+    gap: 0.75rem;
+    padding: 0.75rem 1.75rem;
+  }
+}
+
+.ripple-btn-content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+
+@media (min-width: 640px) {
+  .ripple-btn-content {
+    gap: 0.5rem;
+  }
+}
+
+.icon-circle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .icon-circle {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ✅ Circle layers */
+.ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: left center;
+  transform: scale(0);
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 1px -1px 18.2px 6px #3557f666;
+}
+
+/* --- First circle (static white base) --- */
+.ripple-circle.one {
+  width: 32px;
+  height: 32px;
+  background-color: #8d848475;
+  opacity: 0.5;
+  transform: scale(1);
+  animation: none;
+}
+
+@media (min-width: 640px) {
+  .ripple-circle.one {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --- Animated circles --- */
+.ripple-circle.two {
+  width: 70px;
+  height: 70px;
+  top: -19px;
+  left: -20px;
+  background-color: rgba(142, 160, 245, 0.9);
+  animation: rippleExpandLeft 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+@media (min-width: 640px) {
+  .ripple-circle.two {
+    width: 90px;
+    height: 90px;
+    top: -24px;
+    left: -26px;
+  }
+}
+
+.ripple-circle.three {
+  width: 90px;
+  height: 90px;
+  top: -27px;
+  left: -27px;
+  background-color: rgba(67, 97, 238, 0.85);
+  animation: rippleExpandLeft 3s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+@media (min-width: 640px) {
+  .ripple-circle.three {
+    width: 115px;
+    height: 115px;
+    top: -34px;
+    left: -34px;
+  }
+}
+
+.icon-circle img {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 640px) {
+  .icon-circle img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* --- Text styling for mobile --- */
+.ripple-btn-content span {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .ripple-btn-content span {
+    font-size: 18px;
+  }
+}
+
+/* --- Smooth left expanding animation --- */
+@keyframes rippleExpandLeft {
+  0% {
+    transform: scaleX(0) scaleY(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  30% {
+    transform: scaleX(0.6) scaleY(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleX(1.1) scaleY(1);
+    opacity: 0.85;
+  }
+  70% {
+    transform: scaleX(1.25) scaleY(1.05);
+    opacity: 0.45;
+  }
+  90% {
+    transform: scaleX(0.8) scaleY(0.7);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scaleX(0) scaleY(0.5);
+    opacity: 0;
+  }
 }
 #if_overflow::-webkit-scrollbar-track
 {
