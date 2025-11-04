@@ -122,9 +122,9 @@
     <!-- Dialog -->
     <div class="relative mx-auto w-[min(1300px,92vw)] my-[15px]">
       <div
-        class="overflow-hidden rounded-3xl shadow-2xl max-400px:h-[calc(100vh-85px)] max-360px:h-[calc(100vh-85px)] max-992px:overflow-y-auto if_overflow"
+        class="overflow-hidden rounded-3xl shadow-2xl max-992px:h-[calc(100vh-25px)] max-992px:overflow-y-auto"
       >
-        <div class="relative flex flex-wrap">
+        <div class="relative grid grid-cols-1 lg:grid-cols-2">
           <!-- Close button -->
           <button
             type="button"
@@ -142,19 +142,19 @@
 
           <!-- Left panel -->
           <div
-            class="relative hidden lg:flex flex-col text-center justify-center p-10 bg-[#090c1e] overflow-hidden left__panel lg:w-5/12"
+            class="relative hidden lg:flex flex-col text-center justify-center p-10 bg-[#090c1e] overflow-hidden left__panel"
           >
             <div
-              class="absolute transform -translate-x-1/2 w-[100%] left-[50%] bottom-0"
+              class="absolute transform -translate-x-1/2 w-[170%] left-[50%] bottom-[-50px]"
             >
-              <img src="./img/bg-pop.png" alt="" class="w-full object-cover"/>
+              <img src="./img/contact-form-banner.webp" alt="" />
             </div>
             <div class="relative z-[9] text-white">
               <h2 class="text-[35px] font-semibold leading-tight">
                 Let us know how<br />we can help!
               </h2>
               <p class="mt-6 text-[#fff] text-[18px] opacity-[.7]">
-                Tell us about your project and we’ll get back to you <br/> with
+                Tell us about your project and we’ll get back to you with
                 details on how we can develop it.
               </p>
               <p class="mt-4 text-[#fff] opacity-[.7] text-[18px]">
@@ -170,7 +170,7 @@
           </div>
 
           <!-- Right panel (form) -->
-          <div class="bg-[#F5FAFE] p-6 sm:p-8 lg:px-[60px] lg:py-[35px] max-992px:pt-[50px] lg:w-7/12">
+          <div class="bg-[#F5FAFE] p-6 sm:p-8 lg:px-[60px] lg:py-[35px]">
             <h3
               id="dialog-title"
               class="text-[23px] font-semibold text-[#1B1D1E]"
@@ -309,7 +309,7 @@
                   </ul>
                   <ul
                     aria-hidden="true"
-                    class="animate-scroll flex min-w-full shrink-0 items-center justify-between min-992px:gap-x-[80px] group-hover:[animation-play-state:paused] max-992px:gap-[40px]"
+                    class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-[80px] group-hover:[animation-play-state:paused]"
                   >
                     <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
                     <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
@@ -7771,9 +7771,11 @@
         const el = document.getElementById("contactModal");
         if (!el) return;
         el.classList.toggle("hidden", !open);
-        document.documentElement.style.overflow = open ? "hidden" : "";
+        document.body.style.overflow = open ? "hidden" : "";
       }
+      // Optional: open via hash (#contact)
       if (location.hash === "#contact") toggleModal(true);
+      // ESC to close
       window.addEventListener("keydown", (e) => {
         if (e.key === "Escape") toggleModal(false);
       });
