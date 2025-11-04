@@ -4370,7 +4370,7 @@ footer ul li {
     1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .recognition-section-ppc {
     border-bottom: 1px solid;
     border-image: linear-gradient(
@@ -5116,12 +5116,17 @@ footer ul li {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 .animate-scroll {
   animation: scroll 40s linear infinite;
 }
+/* @media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+} */
 .left__panel::before {
   content: "";
   position: absolute;
@@ -5233,7 +5238,7 @@ footer ul li {
 }
 
 .border-new-golang {
-  border-width: 1px 0px 1px 0px;
+  border-width: 0px 0px 1px 0px;
   border-style: solid;
   border-image-source: linear-gradient(
     283.69deg,
@@ -5278,6 +5283,16 @@ footer ul li {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
+.slider-1 .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-1 .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
 .slider-2 .owl-nav {
   display: flex;
   justify-content: start;
@@ -5313,6 +5328,21 @@ footer ul li {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
+
+
+.slider-2 .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-2 .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
+
+
+
 .slider-3 .owl-nav button.owl-prev {
   background-image: url("./img/Carousel Next-blue.svg") !important;
   rotate: 180deg;
@@ -5329,6 +5359,19 @@ footer ul li {
 .slider-3 .owl-nav button.owl-next:hover {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
+
+
+.slider-3 .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-3 .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
+
 
 @media (min-width: 1024px) {
   .slider-3 .owl-nav {
@@ -5362,7 +5405,7 @@ footer ul li {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 3px;
+    width: 2px;
     height: 100%;
     background: linear-gradient(
       0deg,
@@ -5383,6 +5426,27 @@ footer ul li {
   bottom: 0;
   width: 100%;
   height: 2px;
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    rgba(255, 255, 255, 0.95) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.95) 55%,
+    #000000 100%
+  );
+}
+
+.golang-sect-border-1 {
+  position: relative;
+}
+
+.golang-sect-border-1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
   background: linear-gradient(
     90deg,
     #000000 0%,
@@ -5450,4 +5514,61 @@ footer ul li {
 .horizontal-right-scroll{
       border-top: 1px solid #2b2b2b;
       border-bottom: 1px solid #2b2b2b;
+}
+
+
+
+
+.golang-number-gradient1{
+background: linear-gradient(193.77deg, #364EBE 12.49%, #FFFFFF 82.16%);
+-webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+
+}
+.golang-number-gradient2{
+background: linear-gradient(113.8deg, #4361EE 28.27%, #FFFFFF 64.38%);
+
+-webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.golang-number-gradient3{
+background: linear-gradient(193.77deg, #4361EE 12.49%, #FFFFFF 82.16%);
+
+-webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.banner-text-gradient{
+  background: linear-gradient(105.3deg, #EAEAEA 51.69%, #5466E9 114.42%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+#if_overflow::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+
+
+.v1-gradient{
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.81%, #000000 91.15%);
+
+}
+
+.v2-gradient{
+ background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, #000000 100%);
+}
+
+.v3-gradient{
+  background: linear-gradient(177.61deg, rgba(0, 0, 0, 0) 44.49%, #000000 103.21%);
+
 }

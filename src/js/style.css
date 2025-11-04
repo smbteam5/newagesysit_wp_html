@@ -1,0 +1,210 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --color-primary: #090d21;
+  --color-black: #020205;
+  --color-gray: #989aa4;
+  --color-lightGray: #f5fafe;
+  --color-orange: #ff5b14;
+  --color-bodyBg: #f5fafe;
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-bodyBg {
+  background-color: var(--color-bodyBg);
+}
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.text-gray {
+  color: var(--color-gray);
+}
+.text-lightGray {
+  color: var(--color-lightGray);
+}
+.text-bodyBg {
+  color: var(--color-bodyBg);
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 24px;
+  }
+}
+@media (max-width: 639.98px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 16px;
+  }
+}
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+.banner-section {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-black)
+  );
+}
+.banner-section h1 {
+  background: linear-gradient(to bottom, #989aa4, var(--color-bodyBg));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.get-free-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 18px #ffffff41;
+}
+.get-free-btn .btn-shadow {
+  animation: glowing 1.6s linear infinite;
+}
+@keyframes glowing {
+  0% {
+    height: 14px;
+  }
+  50% {
+    height: 19px;
+  }
+  100% {
+    height: 14px;
+  }
+}
+.get-free-btn:hover .btn-shadow {
+  height: 19px;
+  opacity: 0.7;
+}
+
+.banner-brands {
+  background-image: linear-gradient(
+    to right,
+    rgba(9, 11, 27, 0.2),
+    rgba(164, 183, 255, 0.2),
+    rgba(10, 12, 26, 0.2)
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.banner-brands::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(9, 11, 27, 1),
+    rgba(164, 183, 255, 0.5),
+    rgba(10, 12, 26, 1)
+  );
+}
+
+@media (max-width: 767.98px) {
+  .banner-brands {
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+      to top,
+      rgba(9, 11, 27, 0.2),
+      rgba(10, 12, 26, 0) rgba(164, 183, 255, 0)
+    );
+  }
+  .banner-brands::after {
+    height: 0px;
+    background-image: none;
+  }
+}
+
+.animate span {
+  display: inline-block;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: inherit;
+  /* white-space: pre; */
+  color: #6c6c6c;
+}
+
+.card-section .card-wrapper {
+  background-image: linear-gradient(to bottom, #2c2c2c, #71809e, #242526);
+  display: block;
+}
+.card-section .card-hover {
+  border-radius: 16px !important;
+}
+.card-section .card-hover:hover {
+  box-shadow: 0 6px 28px #0b3aa927;
+  transform: translateY(-5px) scale(1.02) !important;
+}
+.card-shadow {
+  animation: cardShadow 1.6s linear infinite;
+}
+@keyframes cardShadow {
+  0% {
+    height: 50px;
+  }
+  50% {
+    height: 30px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .banner-section h1 {
+    font-size: 72px;
+    line-height: 88px;
+    max-width: 1170px;
+  }
+  .banner-description {
+    font-size: 30px;
+    line-height: 44px;
+    max-width: 930px;
+    margin-top: 24px;
+  }
+  .get-free-btn {
+    font-size: 22px;
+  }
+  .get-free-btn span.bg-orange {
+    padding-block: 28px;
+  }
+  .banner-brands p {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .animate-wrapper .animate {
+    font-size: 49px;
+    line-height: 68px;
+    max-width: 928px;
+  }
+  .card-section h2 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
