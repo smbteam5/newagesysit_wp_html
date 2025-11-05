@@ -3,27 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Case Studies Section</title>
+    <meta
+      name="description"
+      content="Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries."
+    />
+    <meta name="theme-color" content="#0b0b14" />
+    <title>Case Studies - Innovative Apps in Action</title>
+
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style" />
+    <link
+      rel="preload"
+      href="./img/WhipFlip-portfolio.webp"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="preload" href="./img/L-card-portfolio.webp" as="image" />
+
     <link href="style.css" rel="stylesheet" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Case Studies - Innovative Apps in Action",
+        "description": "Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "NewAge Systems"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "CreativeWork",
+              "name": "Whip Flip",
+              "description": "Automating transporting company process by mobility and web solutions"
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- Inline critical CSS for above-fold content -->
+    <style>
+      /* Critical CSS for faster FCP */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0b0b14;
+        color: white;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+      }
+      .word span {
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+      /* Prevent layout shift */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* Loading skeleton for hero image */
+      .hero-skeleton {
+        background: linear-gradient(
+          90deg,
+          #1a1a24 25%,
+          #2a2a34 50%,
+          #1a1a24 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+      /* Above-fold layout styles */
+      .bg-gradient-to-b {
+        background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+      }
+      .from-\[\#090D21\] {
+        --tw-gradient-from: #090d21;
+        --tw-gradient-stops: var(--tw-gradient-from),
+          var(--tw-gradient-to, rgba(9, 13, 33, 0));
+      }
+      .to-\[\#020205\] {
+        --tw-gradient-to: #020205;
+      }
+    </style>
   </head>
   <body class="m-0 p-0 bg-[#0b0b14] text-white font-inter">
     <!-- 🌌 Banner Section -->
     <section
-      class="w-full flex flex-col items-center justify-center text-center px-6 py-24 md:py-32 bg-gradient-to-b from-[#0b0b14] to-[#101020]"
+      class="w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#090D21] to-[#020205]"
     >
       <p
-        class="uppercase tracking-widest text-[28px] mb-4 font-normal text-#F5FAFE"
+        class="uppercase tracking-widest text-[23px] md:text-[28px] mb-4 font-normal text-[#F5FAFE]"
       >
         Case Studies
       </p>
 
-      <h1 class="text-[60px] font-bold leading-tight mb-4 text-center">
-        Innovative Apps in Action
-        <!-- <span class="text-[#a586ff]">Action</span> -->
+      <style>
+        .word span {
+          display: inline-block;
+          transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1); /* slower & smoother */
+        }
+
+        .word:hover span {
+          background: linear-gradient(to bottom, #cb71ff, #4361ee);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      </style>
+
+      <h1
+        class="text-[60px] md:text-[60px] font-bold leading-tight mb-4 text-center text-white flex flex-wrap justify-center gap-3"
+      >
+        <span class="word">
+          <span>I</span><span>n</span><span>n</span><span>o</span><span>v</span
+          ><span>a</span><span>t</span><span>i</span><span>v</span
+          ><span>e</span>
+        </span>
+        <span class="word">
+          <span>A</span><span>p</span><span>p</span><span>s</span>
+        </span>
+        <span class="word"> <span>i</span><span>n</span> </span>
+        <span class="word">
+          <span>A</span><span>c</span><span>t</span><span>i</span><span>o</span
+          ><span>n</span>
+        </span>
       </h1>
 
       <p
-        class="text-[#FFFFFF80] text-[20px] max-w-2xl mx-auto mb-12 leading-relaxed font-normal"
+        class="text-[#FFFFFF80] text-[23px] md:text-[20px] max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-normal px-4 sm:px-0"
       >
         Discover the strategies and solutions behind our projects and the impact
         they create for real users.
@@ -31,116 +154,2874 @@
 
       <!-- Category Pills -->
       <div
-        class="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto"
+        class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 max-w-6xl mx-auto px-4 sm:px-6"
       >
         <button
-          class="px-5 py-2 rounded-full bg-white text-black font-medium shadow-sm"
+          class="px-3 sm:px-5 py-2 rounded-full bg-white text-black font-medium shadow-sm text-[14px] sm:text-base"
         >
           All
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Automobile
         </button>
 
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Entertainment
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Fashion
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Healthcare
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           HR
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Lead Generation
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Marketing
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           On Demand Services
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Real Estate
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Recruitment
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Social Networking
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Utility
         </button>
         <button
-          class="px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition"
+          class="px-3 sm:px-5 py-2 rounded-full border border-[#45484B] text-gray-300 hover:border-white hover:text-white transition text-[14px] sm:text-base"
         >
           Wellness
         </button>
       </div>
     </section>
 
+    <!-- Outer wrapper ensures true full width -->
     <section
-      class="relative w-full h-[542px] bg-cover bg-center rounded-2xl overflow-hidden"
-      style="background-image: url('./images/Casestudy.png')"
+      class="relative w-full min-h-[500px] md:min-h-[542px] overflow-hidden bg-black rounded-[24px] md:rounded-[16px] hero-skeleton"
     >
-      <!-- dark overlay -->
+      <!-- Background image -->
+      <img
+        src="./img/WhipFlip-portfolio.webp"
+        data-mobile="./img/whipflip-mobile-portfolio.webp"
+        data-desktop="./img/WhipFlip-portfolio.webp"
+        alt="Whipflip Case Study - Automating transporting company process"
+        class="responsive-portfolio-img w-full h-full mx-auto object-cover object-center sm:object-top"
+        fetchpriority="high"
+        width="1920"
+        height="542"
+        decoding="async"
+        onload="this.parentElement.classList.remove('hero-skeleton')"
+      />
+
+      <!-- Gradient overlay -->
       <div
-        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"
+        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
       ></div>
 
-      <!-- content -->
+      <!-- Content container (positioned precisely like Figma) -->
       <div
-        class="absolute bottom-6 left-10 right-10 flex items-end justify-between text-white"
+        class="absolute inset-x-4 sm:left-[60px] sm:right-[60px] bottom-6 md:bottom-8 lg:bottom-[60px] flex flex-col sm:flex-row items-start sm:items-end justify-between text-white gap-4 sm:gap-6"
       >
         <!-- Left text -->
-        <div class="max-w-sm">
-          <h2 class="text-xl font-semibold mb-2">Whip Flip</h2>
-          <p class="text-sm leading-relaxed">
+        <div class="w-full sm:w-1/2">
+          <h2
+            class="text-[18px] sm:text-[28px] font-semibold mb-2 text-[#F5FAFE]"
+          >
+            Whip Flip
+          </h2>
+          <p
+            class="text-[16px] md:text-[24px] opacity-90 leading-relaxed font-normal text-[#F5FAFE]"
+          >
             Automating transporting company process by mobility and web
             solutions
           </p>
         </div>
 
         <!-- Right stats -->
-        <div class="flex items-center gap-10 text-right">
-          <div>
-            <p class="text-2xl font-semibold leading-none">10k+</p>
-            <p class="text-xs opacity-80">Active Users</p>
+        <!-- <div
+          class="flex items-center gap-6 sm:gap-10 text-left sm:text-right w-full sm:w-auto"
+        >
+          <div class="flex flex-col gap-4 sm:gap-10">
+            <p
+              class="text-[32px] sm:text-[40px] font-medium leading-none text-[#FFFFFF]"
+            >
+              10k+
+            </p>
+            <p class="text-[14px] sm:text-[17px] opacity-80 font-medium">
+              Active Users
+            </p>
           </div>
-          <div>
-            <p class="text-2xl font-semibold leading-none">15k+</p>
-            <p class="text-xs opacity-80">Total Appointments</p>
+          <div class="flex flex-col gap-4 sm:gap-10">
+            <p
+              class="text-[32px] sm:text-[40px] font-medium leading-none text-[#FFFFFF]"
+            >
+              15k+
+            </p>
+            <p class="text-[14px] sm:text-[17px] opacity-80 font-medium">
+              Total Appointments
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- project L-card  -->
+
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/L-card-portfolio.webp"
+            data-mobile="./img/l-card-mobile-portfolio.webp"
+            data-desktop="./img/L-card-portfolio.webp"
+            alt="L Card"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                L-card
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Digital Business Card App With Smart Technology
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                L-Card transformed professional networking with a smart digital
+                business card app earning recognition at GMASA 2024.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- project town connect  -->
+
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Content (moved before image) -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Town Connect Network
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Shipment Tracking Application
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                TownConnect Network revolutionized transportation through a
+                custom app simplifying shipment tracking, job management, and
+                real-time driver coordination.
+              </p>
+
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image (moved after content) -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/Town-connect-new-portfolio.webp"
+            data-mobile="./img/Town-connect-new-mobile-portfolio.webp"
+            data-desktop="./img/Town-connect-new-portfolio.webp"
+            alt="Town Connect Network"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative w-full bg-gradient-to-b from-[#090D21] to-[#020307] text-white py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-10 lg:px-20 overflow-hidden"
+    >
+      <div class="container mx-auto">
+        <div
+          class="max-w-full mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-12 md:gap-16 lg:gap-[80px]"
+        >
+          <!-- Left Content (8/12) -->
+          <div class="lg:w-8/12 space-y-4 sm:space-y-5 relative">
+            <h2
+              class="text-[35px] sm:text-[36px] md:text-[44px] lg:text-[50px] text-[#FFFFFF] font-semibold leading-tight"
+            >
+              We deliver on time, in days and weeks
+              <br />
+              <span
+                class="font-normal text-[#FFFFFF] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px]"
+                >—not months.</span
+              >
+            </h2>
+
+            <div class="relative mt-6 sm:mt-8 md:mt-10 pl-4 sm:pl-5 md:pl-6">
+              <!-- Connector Line -->
+              <div
+                class="absolute left-[20px] sm:left-[24px] md:left-[29px] top-[12px] sm:top-[13px] md:top-[15px] w-[1px] h-[110px] sm:h-[120px] md:h-[135px] bg-[#242840]"
+              ></div>
+
+              <!-- Step 1 -->
+              <div class="flex items-center gap-6 sm:gap-8 md:gap-[40px]">
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-[8px] h-[8px] sm:w-[9px] sm:h-[9px] md:w-[10px] md:h-[10px] rounded-full bg-[#3C3F5C]"
+                  ></div>
+                </div>
+                <p
+                  class="text-[#A3ACB5] text-[16px] sm:text-[20px] md:text-[24px] font-normal"
+                >
+                  01 Onboard in &lt;1 day
+                </p>
+              </div>
+
+              <!-- Step 2 -->
+              <div
+                class="flex items-center gap-6 sm:gap-8 md:gap-[40px] mt-6 sm:mt-7 md:mt-[32px]"
+              >
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-[8px] h-[8px] sm:w-[9px] sm:h-[9px] md:w-[10px] md:h-[10px] rounded-full bg-[#3C3F5C]"
+                  ></div>
+                </div>
+                <p
+                  class="text-[#A3ACB5] text-[16px] sm:text-[20px] md:text-[24px] font-normal"
+                >
+                  02 Understand Scope &amp; Strategy
+                </p>
+              </div>
+
+              <!-- Step 3 -->
+              <div
+                class="flex items-center gap-6 sm:gap-8 md:gap-[40px] mt-6 sm:mt-7 md:mt-[32px]"
+              >
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-[8px] h-[8px] sm:w-[9px] sm:h-[9px] md:w-[10px] md:h-[10px] rounded-full bg-[#3C3F5C]"
+                  ></div>
+                </div>
+                <p
+                  class="text-[#A3ACB5] text-[16px] sm:text-[20px] md:text-[24px] font-normal"
+                >
+                  03 First designs in 4–5 days
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content (4/12) -->
+          <div
+            class="lg:w-4/12 flex flex-col justify-start space-y-4 sm:space-y-5 md:space-y-6 lg:mt-[10px] gap-3 sm:gap-4"
+          >
+            <blockquote
+              class="text-[#F5FAFE] font-normal text-[16px] md:text-[16px] leading-relaxed opacity-80"
+            >
+              “From every single moment, from the beginning till the end, they
+              were there for me. They were very systematic and methodical in
+              every single step and …”
+            </blockquote>
+
+            <div class="flex items-center gap-4">
+              <img
+                src="./img/iman-khawaja-portfolio.png"
+                alt="Iman Khawaja"
+                class="w-[50px] h-[50px] rounded-md object-cover"
+                loading="lazy"
+                decoding="async"
+                width="50"
+                height="50"
+              />
+              <div class="w-[230px]">
+                <p class="text-[#F5FAFE] font-medium text-[23px]">
+                  IMAN KHAWAJA
+                </p>
+                <p class="text-[#F5FAFE] font-normal text-[18px] opacity-70">
+                  Owner – ISRA
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[0px] sm:pr-0 pb-[20px] pl-[0px] sm:pl-0 gap-[16px] w-full sm:w-[294px]"
+            >
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.85227 6.34334C6.45637 6.73924 6.39761 7.36136 6.71466 7.82281C7.23715 8.58337 8.18294 9.82069 9.68112 11.3189C11.1793 12.8171 12.4167 13.7629 13.1773 14.2854C13.6387 14.6024 14.2608 14.5436 14.6567 14.1478L15.8756 12.9289C16.4073 12.3972 17.2694 12.3972 17.8012 12.9289L20.3639 15.4916C21.212 16.3397 21.212 17.7143 20.3643 18.562L18.7897 20.1366C18.7897 20.1366 14.8475 24.0788 5.88432 15.1157C-3.07882 6.1526 0.863386 2.21041 0.863386 2.21041L2.43798 0.635828C3.28575 -0.211943 4.66024 -0.211943 5.50802 0.635828L8.07111 3.19891C8.60284 3.73064 8.60284 4.59278 8.07111 5.12451L6.85227 6.34334Z"
+                  fill="white"
+                />
+              </svg>
+
+              Schedule a Free Call
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <!-- Outer Glow Wrapper -->
+      <div class="container">
+        <div class="relative max-w-full mx-auto rounded-[32px] border-glow">
+          <!-- Inner Content -->
+          <div
+            class="relative flex flex-col md:flex-row justify-between items-start md:items-center bg-black rounded-[24px] py-8 sm:py-10 md:py-12 px-6 sm:px-8 md:px-12 lg:px-16 z-10 gap-6 md:gap-8"
+          >
+            <!-- Left Content -->
+            <div
+              class="text-white space-y-3 sm:space-y-4 text-left md:text-left w-full md:w-auto"
+            >
+              <h2
+                class="text-[28px] md:text-[36px] font-semibold text-[#FFFFFF] leading-tight"
+              >
+                Build Gen-AI-ready Solutions
+              </h2>
+              <p
+                class="text-[#FFFFFF] font-manrope font-medium text-[17px] max-w-full md:max-w-[500px] opacity-80"
+              >
+                Driven by 10+ years of AI expertise, powered by a team that
+                chases innovation.
+              </p>
+            </div>
+
+            <!-- Right Button -->
+            <button
+              class="group w-auto md:w-auto flex items-center justify-start md:justify-center text-[#FFFFFF] rounded-[41px] text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-semibold border-[1.5px] border-[#FFFFFF] px-6 sm:px-7 md:px-8 lg:px-10 py-3 md:py-3.5 lg:py-4 hover:opacity-80 transition-all duration-300 whitespace-nowrap"
+            >
+              <span class="lg:hidden">Our Services</span>
+              <span class="hidden lg:inline"
+                >Learn More About Our Services</span
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-5 h-5 ml-[10px] transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        /* Realistic soft glow border */
+        .border-glow {
+          position: relative;
+          border-radius: 32px;
+          background: linear-gradient(
+            123.33deg,
+            #bb55ff 24.38%,
+            #1d49ba 83.24%
+          );
+          padding: 7px;
+          overflow: hidden;
+        }
+
+        .border-glow::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 32px;
+          padding: 7px;
+          background: linear-gradient(
+            123.33deg,
+            #bb55ff 24.38%,
+            #1d49ba 83.24%
+          );
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          mask-composite: exclude;
+          -webkit-mask-composite: xor;
+          filter: blur(25px);
+          opacity: 0.9;
+          pointer-events: none;
+        }
+
+        .border-glow > div {
+          position: relative;
+          z-index: 1;
+        }
+      </style>
+    </section>
+
+    <!-- Projects Section  Bungee / JobsMachine-->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- Bungee Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Bungee
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Affiliate Platform for Sales & Hiring
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Bungee accelerated sales and hiring with an affiliate
+                    platform delivering seamless referrals and streamlined
+                    recruitment processes.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded-md hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Bungee-portfolio.webp"
+                  data-mobile="./img/bungee-mobile-portfolio.webp"
+                  data-desktop="./img/Bungee-portfolio.webp"
+                  alt="Bungee Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- JobzMachine Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    JobzMachine
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Recruitment Operations Management CRM
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    JobzMachine transformed recruitment with an intuitive CRM
+                    and ATS automating reporting, tracking, and management
+                    workflows.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Jobzmachine-portfolio.webp"
+                  data-mobile="./img/jobzmachine-mobile-portfolio.webp"
+                  data-desktop="./img/Jobzmachine-portfolio.webp"
+                  alt="JobzMachine Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section  CFT / Eco Auto-->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- CFT Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    CFT
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Transport ERP & Mobility App for Process Automation
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Central Florida Transport boosted logistics efficiency with
+                    a custom ERP and mobile app for better automation and
+                    visibility.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/CFT-portfolio.webp"
+                  data-mobile="./img/cft-mobile-portfolio.webp"
+                  data-desktop="./img/CFT-portfolio.webp"
+                  alt="CFT Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Eco Auto School Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    Eco Auto School
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Driving School App to Streamline Operations
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Eco Auto School modernized driving education with a tailored
+                    app simplifying student onboarding, scheduling, and
+                    instructor coordination.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Eco-auto-school-portfolio.webp"
+                  data-mobile="./img/eco-auto-mobile-portfolio.webp"
+                  data-desktop="./img/Eco-auto-school-portfolio.webp"
+                  alt="Eco Auto School Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section  Local IL / Moly-->
+
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- Bungee Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    Local IL
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Community-Focused Social App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Local IL connected global Jewish and Israeli communities
+                    with an app supporting businesses, culture, and shared
+                    traditions.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Local-Li-portfolio.webp"
+                  data-mobile="./img/local-il-mobile-portfolio.webp"
+                  data-desktop="./img/Local-Li-portfolio.webp"
+                  alt="Local Li Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Moly Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    Moly
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    On-Demand Liquor Delivery App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Moly revolutionized liquor retail with a secure, on-demand
+                    delivery platform simplifying operations and enhancing
+                    customer convenience.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Moly-portfolio.webp"
+                  data-mobile="./img/moly-mobile-portfolio.webp"
+                  data-desktop="./img/Moly-portfolio.webp"
+                  alt="Moly Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prayer app project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/Prayer-App-portfolio.webp"
+            data-mobile="./img/prayer-app-mobile-portfolio.webp"
+            data-desktop="./img/Prayer-App-portfolio.webp"
+            alt="Prayer Circle"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative gap-[80px]"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Prayer Circle
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Church Management Platform
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                A New Jersey church embraced digital transformation with a
+                platform uniting faith, engagement, and community management
+                tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative w-full bg-neutral-950 py-8 md:px-10 lg:px-20 flex items-center justify-center"
+    >
+      <!-- Outer Glow Wrapper -->
+      <div class="container">
+        <div
+          class="relative max-w-full mx-auto rounded-[32px] overflow-hidden bg-gradient-to-b from-[#FF9B43] to-[#000000]"
+        >
+          <!-- Inner Content -->
+          <div
+            class="flex flex-col items-center justify-center text-center py-20 px-6 md:px-12 rounded-[32px]"
+          >
+            <h2
+              class="text-[28px] md:text-[36px] font-medium text[#FFFFFF] leading-snug"
+            >
+              See how others achieved growth — Discover more case studies
+            </h2>
+            <p
+              class="text-white/80 font-medium text-[18px] md:text-[17px] mt-4 mb-10 font-manrope"
+            >
+              Uncover the strategies behind more client wins.
+            </p>
+
+            <button
+              class="flex items-center justify-center border border-white rounded-[41px] px-8 py-4 text-[#FFFFFF] text-[16px] font-normal hover:bg-white/10 transition-all duration-300"
+            >
+              Load More Case Studies
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-5 h-5 ml-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section  Carup / podiatry-->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- carup Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    Car-Up
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Auto Repair Booking and Maintenance Tracking Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Car-Up redefined auto repair with a seamless app and website
+                    enabling easy booking and live tracking.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Car-Up-portfolio.webp"
+                  data-mobile="./img/carup-mobile-portfolio.webp"
+                  data-desktop="./img/Car-Up-portfolio.webp"
+                  alt="Car-Up Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Podiatry Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    Podiatry
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Automated SEO Reporting Software
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Podiatry CC elevated marketing performance through custom
+                    SEO software offering data-driven insights and streamlined
+                    campaign reporting.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Podiatry-portfolio.webp"
+                  data-mobile="./img/podiatry-mobile-portfolio.webp"
+                  data-desktop="./img/Podiatry-portfolio.webp"
+                  alt="Podiatry Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects secure posit/ casinio trifecta-->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- SecurePosit Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    SecurePosit
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    User-Friendly Fintech Mobile App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    A fintech innovator simplified digital payments through a
+                    secure, intuitive mobile app improving transaction speed and
+                    usability.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Secure-Posit-portfolio.webp"
+                  data-mobile="./img/secure-posit-mobile-portfolio.webp"
+                  data-desktop="./img/Secure-Posit-portfolio.webp"
+                  alt="SecurePosit Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Casino Trifecta Card -->
+            <div
+              class="group relative bg-[#161819] gap-[18px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[23px] relative inline-block"
+                  >
+                    Casino Trifecta
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Complete Multiplayer Card Game App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Casino Trifecta brought a creative multiplayer card game to
+                    life with a high-performance, engaging digital platform.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Casino-Trifecta-portfolio.webp"
+                  data-mobile="./img/casino-mobile-portfolio.webp"
+                  data-desktop="./img/Casino-Trifecta-portfolio.webp"
+                  alt="Casino Trifecta Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Polarity app project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/polarity-portfolio.webp"
+            data-mobile="./img/l-card-mobile-portfolio.webp"
+            data-desktop="./img/polarity-portfolio.webp"
+            alt="L Card"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Polarity Partnerships
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                SaaS-based Community Intelligence platform
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Polarity Partnerships advanced organizational growth via a
+                SaaS-based Community Intelligence system integrating knowledge
+                sharing and analytics.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects realficient / junkshot -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- realficient Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Realficient
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Custom SaaS-based Real Estate Tech Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Realficient optimized real estate operations with a SaaS
+                    platform automating workflows, transactions, and property
+                    management processes.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Realficient-portfolio.webp"
+                  data-mobile="./img/realficient-mobile-portfolio.webp"
+                  data-desktop="./img/Realficient-portfolio.webp"
+                  alt="Realficient Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Junkshot Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Junkshot
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Junk Removal and Scheduling Software
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Junk Shot digitized junk removal operations with an
+                    all-in-one app automating bookings, tracking, and payment
+                    processing.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Junkshot-portfolio.webp"
+                  data-mobile="./img/junkshot-mobile-portfolio.webp"
+                  data-desktop="./img/Junkshot-portfolio.webp"
+                  alt="Junkshot Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects gogo wash / ISRA -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- gogo wash Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    GoGo Wash
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Car Wash App with Secure Payments
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    GoGo Wash modernized car maintenance through an Uber-style
+                    app simplifying instant bookings, payments, and customer
+                    notifications.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/Gogowash-portfolio.webp"
+                  data-mobile="./img/gogowash-mobile-portfolio.webp"
+                  data-desktop="./img/Gogowash-portfolio.webp"
+                  alt="GoGo Wash Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- ISRA Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    ISRA
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    On-Demand Beauty Service App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    ISRA empowered beauty professionals and clients via a
+                    user-friendly app simplifying stylist discovery, booking,
+                    and scheduling.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/ISRA-portfolio.webp"
+                  data-mobile="./img/isra-mobile-portfolio.webp"
+                  data-desktop="./img/ISRA-portfolio.webp"
+                  alt="ISRA Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auntie app project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/Auntie-app-portfolio.webp"
+            data-mobile="./img/auntiee-mobile-portfolio.webp"
+            data-desktop="./img/Auntie-app-portfolio.webp"
+            alt="Auntie App"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Auntie App
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Childcare App For Babysitters & Parents
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Auntie App enhanced childcare connections through a secure
+                platform offering intelligent matching, verification, and
+                communication tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects xplore dating  / Foogly  -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- xplore dating Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Xplore Dating
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Dating Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Xplore Dating App connected people through a secure platform
+                    with intelligent matching, privacy controls, and smart
+                    communication tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/xplore-dating-portfolio.webp"
+                  data-mobile="./img/xplore-dating-mobile-portfolio.webp"
+                  data-desktop="./img/xplore-dating-portfolio.webp"
+                  alt="Xplore Dating Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Foogly Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Foogly
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Agricultural E-commerce Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Foogly transformed farm commerce through a secure platform
+                    with intelligent produce matching, sustainable practices,
+                    and simplified purchasing tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/foogly-portfolio.webp"
+                  data-mobile="./img/foogly-mobile-portfolio.webp"
+                  data-desktop="./img/foogly-portfolio.webp"
+                  alt="Foogly Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects CashDocs / Zen For Teens -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- CashDocs Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    CashDocs
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Digital Health Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    CashDocs revolutionized healthcare with a secure digital
+                    platform featuring intelligent doctor-patient matching,
+                    HIPAA compliance, and telemedicine tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/cashdocs-portfolio.webp"
+                  data-mobile="./img/cashdocs-mobile-portfolio.webp"
+                  data-desktop="./img/cashdocs-portfolio.webp"
+                  alt="CashDocs Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Zen For Teens Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Zen For Teens
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    A Meditation Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Zen for Teens promoted mindfulness through a secure platform
+                    offering personalized meditation, progress tracking, and
+                    engaging wellness tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/zenforteens-portfolio.webp"
+                  data-mobile="./img/zenforteens-mobile-portfolio.webp"
+                  data-desktop="./img/zenforteens-portfolio.webp"
+                  alt="Zen For Teens Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guaranteed Tip Sheet project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/guaranteed-tip-sheet-portfolio.webp"
+            data-mobile="./img/guaranteed-tip-sheet-mobile-portfolio.webp"
+            data-desktop="./img/guaranteed-tip-sheet-portfolio.webp"
+            alt="Guaranteed Tip Sheet"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Guaranteed Tip Sheet
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Horse-Racing Prediction & Betting App
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Horse Racing Prediction App enhanced betting via a secure
+                platform offering intelligent race predictions, analytics, and
+                streamlined wagering tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Quran Easy  / Heyy :)  -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- Quran Easy Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Quran Easy
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    E-Learning Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Quran Easy simplified Quranic learning through a secure
+                    e-learning platform with intelligent lessons, video content,
+                    and progress tracking.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/quran-easy-portfolio.webp"
+                  data-mobile="./img/quran-easy-mobile-portfolio.webp"
+                  data-desktop="./img/quran-easy-portfolio.webp"
+                  alt="Quran Easy Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Heyy :) Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Heyy :)
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Mental Health Support Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Heyy App supported mental health with a secure, anonymous
+                    platform featuring intelligent listener matching and
+                    real-time chat.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/heyy-portfolio.webp"
+                  data-mobile="./img/heyy-mobile-portfolio.webp"
+                  data-desktop="./img/heyy-portfolio.webp"
+                  alt="Heyy Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects CliquePrize® / Nomo -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- CliquePrize® Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    CliquePrize®
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Lead Generation Gamification Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    CliquePrize empowered businesses through a secure gamified
+                    platform offering intelligent lead generation, engagement,
+                    and prize management tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/cliqueprize-portfolio.webp"
+                  data-mobile="./img/cliqueprize-mobile-portfolio.webp"
+                  data-desktop="./img/cliqueprize-portfolio.webp"
+                  alt="CliquePrize Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Nomo Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Nomo
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Cloud-based CRM and Sales Management Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Nomo optimized solar sales via a secure cloud platform
+                    featuring intelligent lead matching, analytics, and
+                    commission automation.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/nomo-portfolio.webp"
+                  data-mobile="./img/nomo-mobile-portfolio.webp"
+                  data-desktop="./img/nomo-portfolio.webp"
+                  alt="Nomo Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety24Our project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/safety24-portfolio.webp"
+            data-mobile="./img/safety24-mobile-portfolio.webp"
+            data-desktop="./img/safety24-portfolio.webp"
+            alt="Safety24Our"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Safety24Our
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Real-Time Safety Alert App With Active Support
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Safety24Our enhanced community safety through a secure mobile
+                app offering alerts, live location, and quick emergency
+                assistance.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProjectsOpus Health and Wellness  / Honu App  -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!--Opus Health and Wellness Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Opus Health and Wellness
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Holistic Healthcare E-commerce Website
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Opus advanced wellness commerce with a secure platform
+                    offering intelligent product matching and HIPAA-compliant
+                    transaction tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/opus-portfolio.webp"
+                  data-mobile="./img/opus-mobile-portfolio.webp"
+                  data-desktop="./img/opus-portfolio.webp"
+                  alt="Opus Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Honu App Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Honu App
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Swimming Lesson Booking App with Real-Time Tracking
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Honu simplified swim lessons through a secure platform with
+                    intelligent instructor matching, scheduling, and transparent
+                    payment tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/honu-portfolio.webp"
+                  data-mobile="./img/honu-mobile-portfolio.webp"
+                  data-desktop="./img/honu-portfolio.webp"
+                  alt="Honu Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Rehab / ShowcaseTalks -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- Rehab Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Rehab
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Fitness App With Real-Time Support
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Rehab by Qui elevated fitness through a secure mobile
+                    platform offering intelligent workouts, live trainers, and
+                    interactive challenges.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/rehab-portfolio.webp"
+                  data-mobile="./img/rehab-mobile-portfolio.webp"
+                  data-desktop="./img/rehab-portfolio.webp"
+                  alt="Rehab Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- ShowcaseTalks Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    ShowcaseTalks
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Business and Product Advertising App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    ShowcaseTalks empowered creators through a secure platform
+                    offering intelligent talent discovery, visual showcasing,
+                    and appointment scheduling tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/showcase-talks-portfolio.webp"
+                  data-mobile="./img/showcase-talks-mobile-portfolio.webp"
+                  data-desktop="./img/showcase-talks-portfolio.webp"
+                  alt="ShowcaseTalks Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project People & Stories  -->
+
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/people-stories-portfolio.webp"
+            data-mobile="./img/people-stories-mobile-portfolio.webp"
+            data-desktop="./img/people-stories-portfolio.webp"
+            alt="People & Stories"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                People & Stories
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Literature Access Platform For Non-Profits
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                People & Stories / Gente y Cuentos expanded literary access
+                through a secure platform offering stories, audio, and event
+                coordination.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project USA Health Advisors  -->
+
+    <section
+      class="w-full flex justify-center bg-neutral-950 py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 lg:px-10"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between items-stretch w-full max-w-[1440px] rounded-[24px] mx-auto overflow-hidden bg-[#121314] transition-all duration-500"
+      >
+        <!-- Left Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                USA Health Advisors
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                A Custom App for Insurance Agents
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                USA Health Advisors modernized insurance operations through a
+                secure app offering data collection, notifications, and digital
+                signature tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div
+          class="w-full lg:w-[50%] h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden order-1 md:order-2"
+        >
+          <img
+            src="./img/usa-health-advisors-portfolio.webp"
+            data-mobile="./img/usa-health-advisors-mobile-portfolio.webp"
+            data-desktop="./img/usa-health-advisors-portfolio.webp"
+            alt="USA Health Advisors"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <section
+      class="relative py-16 px-4 overflow-hidden"
+      style="
+        background: conic-gradient(
+          from 233.5deg at 100% 0%,
+          rgba(114, 121, 255, 1) 0deg,
+          rgba(67, 97, 238, 1) 169.4deg,
+          rgba(114, 121, 255, 1) 360deg
+        );
+      "
+    >
+      <!-- background image overlay -->
+      <div
+        class="absolute inset-0"
+        style="
+          background-image: url('./img/Graphics.webp');
+          background-size: cover;
+          background-position: center;
+          mix-blend-mode: overlay;
+          opacity: 0.6;
+        "
+      ></div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <!-- LEFT TEXT -->
+        <div class="text-[#F5FAFE] z-20">
+          <h2
+            class="text-[35px] sm:text-[40px] font-semibold md:font-bold mb-4 leading-tight"
+          >
+            Let’s Build Your Next Big Thing — Together!
+          </h2>
+          <p
+            class="text-[18px] md:text-[23px] text-indigo-200 mb-8 font-normal"
+          >
+            We grow strong with 100% in-house team, industry expertise, and
+            proven results. From concept to launch, we deliver innovation with
+            precision and reliability.
+          </p>
+
+          <!-- CTA BUTTON -->
+          <a
+            href="#"
+            class="bg-[#FF5B14] inline-block w-full sm:w-auto text-center px-8 py-4 text-[#F5FAFE] font-semibold text-[18px] rounded-full transition-transform transform hover:scale-105"
+          >
+            Talk to Our Experts Today
+          </a>
+        </div>
+
+        <!-- FORM -->
+        <div
+          class="bg-white lg:m-10 p-8 rounded-2xl shadow-2xl lg:max-w-[550px] z-20"
+        >
+          <form class="space-y-5 text-gray-700">
+            <style>
+              /* unify placeholder + select text color */
+              input::placeholder,
+              textarea::placeholder,
+              select,
+              select option[disabled] {
+                color: #9ca3af; /* Tailwind's gray-400 */
+                opacity: 1; /* ensures consistent look */
+              }
+            </style>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Name*"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              required
+              aria-label="Name"
+              autocomplete="name"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email*"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              required
+              aria-label="Email"
+              autocomplete="email"
+            />
+            <input
+              type="text"
+              name="company"
+              placeholder="Company"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              aria-label="Company"
+              autocomplete="organization"
+            />
+            <input
+              type="text"
+              name="role"
+              placeholder="Role"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              aria-label="Role"
+              autocomplete="organization-title"
+            />
+
+            <!-- Project Type -->
+            <div class="relative">
+              <select
+                name="project-type"
+                class="w-full p-3 pr-10 border border-gray-300 rounded-lg bg-gray-50 text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
+                aria-label="Project Type"
+              >
+                <option value="" disabled selected>Project Type</option>
+                <option value="web-development">Web Development</option>
+                <option value="mobile-app">Mobile App Development</option>
+                <option value="ui-ux">UI/UX Design</option>
+                <option value="branding">Branding</option>
+              </select>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+
+            <!-- Budget -->
+            <div class="relative">
+              <select
+                name="budget"
+                class="w-full p-3 pr-10 border border-gray-300 rounded-lg bg-gray-50 text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
+                aria-label="Budget"
+              >
+                <option value="" disabled selected>Budget</option>
+                <option value="1k-5k">$1,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k-25k">$10,000 – $25,000</option>
+              </select>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-3 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-[8px] transition duration-300"
+              aria-label="Submit contact form"
+            >
+              Submit
+            </button>
+            <div class="flex justify-start items-center mt-4">
+              <img
+                src="./img/shield-svgrepo-com 1.svg"
+                alt="Security shield icon"
+                class="inline-block mr-2"
+                loading="lazy"
+                width="20"
+                height="20"
+              />
+
+              <p class="text-xs text-center text-gray-500">
+                Your idea is 100% protected by our non disclosure agreement
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optimized JavaScript - Critical scripts inline, non-critical deferred -->
+    <script>
+      // Critical: Responsive Portfolio Images Switcher - runs immediately
+      function switchResponsiveImages() {
+        const images = document.querySelectorAll(".responsive-portfolio-img");
+        const isMobile = window.innerWidth <= 767;
+
+        images.forEach((img) => {
+          const mobileImg = img.getAttribute("data-mobile");
+          const desktopImg = img.getAttribute("data-desktop");
+
+          if (isMobile && mobileImg) {
+            img.src = mobileImg;
+          } else if (desktopImg) {
+            img.src = desktopImg;
+          }
+        });
+      }
+
+      // Run immediately for faster image switching
+      switchResponsiveImages();
+
+      // Run on window resize (with debounce for performance)
+      let resizeTimer;
+      window.addEventListener(
+        "resize",
+        () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(switchResponsiveImages, 100);
+        },
+        { passive: true }
+      );
+
+      // Defer non-critical interactions
+      window.addEventListener("load", () => {
+        // Non-critical: Custom cursor functionality
+        const cursor = document.getElementById("cursorBadge");
+        const section = document.getElementById("caseSection");
+
+        if (cursor && section) {
+          section.addEventListener(
+            "mousemove",
+            (e) => {
+              cursor.style.left = `${e.clientX}px`;
+              cursor.style.top = `${e.clientY}px`;
+            },
+            { passive: true }
+          );
+
+          section.addEventListener(
+            "mouseenter",
+            () => {
+              cursor.style.opacity = "1";
+            },
+            { passive: true }
+          );
+
+          section.addEventListener(
+            "mouseleave",
+            () => {
+              cursor.style.opacity = "0";
+            },
+            { passive: true }
+          );
+        }
+      });
+    </script>
   </body>
 </html>

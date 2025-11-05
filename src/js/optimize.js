@@ -243,124 +243,334 @@ createContinuousSwiper(".swiper-down", true); // scroll downward
     });
 
     // slider testimonials
-    document.addEventListener("DOMContentLoaded", () => {
-        /* ---------------- Testimonials slider ---------------- */
-        const testimonialsSwiper = new Swiper(".ctt_testimonials", {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          loop: false,
-          autoHeight: true,
-          grabCursor: true,
-          keyboard: { enabled: true },
-          mousewheel: { forceToAxis: true },
-          pagination: { el: ".testimonial-pagination", clickable: true },
-          navigation: {
-            nextEl: ".swiper-button-next__tl",
-            prevEl: ".swiper-button-prev__tl",
-          },
-          // keep layout reactive
-          observer: true,
-          observeParents: true,
-        });
+document.addEventListener("DOMContentLoaded", () => {
+  /* ---------------- Testimonials slider ---------------- */
+  const testimonialsSwiper = new Swiper(".ctt_testimonials", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: false,
+    autoHeight: true,
+    grabCursor: true,
+    keyboard: { enabled: true },
+    mousewheel: { forceToAxis: true },
+    pagination: { el: ".testimonial-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next__tl",
+      prevEl: ".swiper-button-prev__tl",
+    },
+    // keep layout reactive
+    observer: true,
+    observeParents: true,
+  });
 
-        /* ---------------- Background swap helpers ---------------- */
-        const bg = document.getElementById("heroBg");
-        const bgPrev = document.getElementById("heroBgPrev");
+  /* ---------------- Background swap helpers ---------------- */
+  const bg = document.getElementById("heroBg");
+  const bgPrev = document.getElementById("heroBgPrev");
+  
+  // Image preloader cache
+  const imageCache = new Map();
+  let preloadPromise = null;
 
-        function swapBackground(url) {
-          if (!bg || !bgPrev || !url) return;
-          const currentUrl = bg.style.backgroundImage;
-
-          if (currentUrl) {
-            bgPrev.style.backgroundImage = currentUrl;
-            bgPrev.style.opacity = 1;
-            // force reflow so CSS transition runs
-            void bgPrev.offsetWidth;
+  // Preload all background images with priority loading
+  function preloadBackgroundImages() {
+    if (preloadPromise) return preloadPromise;
+    
+    const slides = document.querySelectorAll('#industriesSwiper .swiper-slide[data-bg]');
+    const imageUrls = Array.from(slides).map(slide => slide.dataset.bg);
+    
+    preloadPromise = Promise.allSettled(
+      imageUrls.map((url, index) => {
+        if (imageCache.has(url)) {
+          return Promise.resolve(imageCache.get(url));
+        }
+        
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          
+          // Add loading attributes for better performance
+          img.decoding = 'async';
+          img.loading = 'eager'; // Load immediately for preloading
+          
+          // Set priority for first few images
+          if (index < 3) {
+            img.fetchpriority = 'high';
           }
-          bg.style.backgroundImage = `url("${url}")`;
-          requestAnimationFrame(() => {
-            bgPrev.style.opacity = 0;
-          });
+          
+          img.onload = () => {
+            imageCache.set(url, img);
+            resolve(img);
+          };
+          img.onerror = () => {
+            console.warn(`Failed to preload image: ${url}`);
+            reject(new Error(`Failed to load ${url}`));
+          };
+          
+          // Start loading
+          img.src = url;
+        });
+      })
+    );
+    
+    return preloadPromise;
+  }
+
+  function swapBackground(url) {
+    if (!bg || !bgPrev || !url) return;
+    const currentUrl = bg.style.backgroundImage;
+
+    if (currentUrl) {
+      bgPrev.style.backgroundImage = currentUrl;
+      bgPrev.style.opacity = 1;
+      // force reflow so CSS transition runs
+      void bgPrev.offsetWidth;
+    }
+    bg.style.backgroundImage = `url("${url}")`;
+    requestAnimationFrame(() => {
+      bgPrev.style.opacity = 0;
+    });
+  }
+
+  // Start preloading images immediately  
+  preloadBackgroundImages().then(() => {
+    console.log('Background images preloaded successfully');
+  }).catch(error => {
+    console.warn('Some background images failed to preload:', error);
+  });
+
+  /* ---------------- Industries slider ---------------- */
+  let currentSelectedSlide = null;
+  let isHovering = false;
+
+  // Function to update slide selection
+  function updateSlideSelection(slideElement) {
+    if (!slideElement || slideElement === currentSelectedSlide) return;
+
+    // Remove selection from all slides
+    const allSlides = document.querySelectorAll('#industriesSwiper .swiper-slide');
+    allSlides.forEach(slide => {
+      slide.classList.remove('slide-selected');
+      // Also remove any swiper-slide-active to prevent conflicts
+      slide.classList.remove('swiper-slide-active');
+    });
+
+    // Add selection to current slide
+    slideElement.classList.add('slide-selected');
+    currentSelectedSlide = slideElement;
+
+    // Update background with smooth transition
+    if (slideElement.dataset && slideElement.dataset.bg) {
+      swapBackground(slideElement.dataset.bg);
+    }
+    
+    // Debug log (can be removed in production)
+    console.log('Selected slide:', slideElement.querySelector('.slide-title')?.textContent || 'Unknown');
+  }
+
+  // Function to get first visible slide
+  function getFirstVisibleSlide(swiper) {
+    if (!swiper || !swiper.slides || swiper.slides.length === 0) return null;
+    
+    try {
+      const swiperRect = swiper.el.getBoundingClientRect();
+      let firstVisibleSlide = null;
+      let maxVisibility = 0;
+      
+      for (let i = 0; i < swiper.slides.length; i++) {
+        const slide = swiper.slides[i];
+        const slideRect = slide.getBoundingClientRect();
+        
+        // Calculate visibility percentage
+        const left = Math.max(slideRect.left, swiperRect.left);
+        const right = Math.min(slideRect.right, swiperRect.right);
+        const visibleWidth = Math.max(0, right - left);
+        const visibilityPercentage = visibleWidth / slideRect.width;
+        
+        // If this slide is more visible than previous ones, select it
+        if (visibilityPercentage > maxVisibility && visibilityPercentage > 0.3) {
+          maxVisibility = visibilityPercentage;
+          firstVisibleSlide = slide;
+        }
+      }
+      
+      // If no slide is sufficiently visible, return first slide
+      return firstVisibleSlide || swiper.slides[0];
+    } catch (error) {
+      console.warn('Error getting first visible slide:', error);
+      return swiper.slides[0] || null;
+    }
+  }
+
+  const industriesSwiper = new Swiper("#industriesSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: false,
+    grabCursor: true,
+    lazy: {
+      loadPrevNext: true,
+      loadPrevNextAmount: 2,
+    },
+    breakpoints: {
+      640: { slidesPerView: 2, spaceBetween: 0 },
+      960: { slidesPerView: 3, spaceBetween: 0 },
+      1280: { slidesPerView: 4, spaceBetween: 0 },
+    },
+    navigation: {
+      nextEl: ".swiper-navs .swiper-button-next",
+      prevEl: ".swiper-navs .swiper-button-prev",
+    },
+    pagination: { el: ".swiper-pagination", enabled: false },
+    observer: true,
+    observeParents: true,
+    on: {
+      init(sw) {
+        // Set first background immediately for better perceived performance
+        const first = sw.slides[sw.activeIndex];
+        if (first && first.dataset && first.dataset.bg) {
+          // Check if first image is already cached
+          if (imageCache.has(first.dataset.bg)) {
+            swapBackground(first.dataset.bg);
+          } else {
+            // Load first image with high priority
+            const firstImg = new Image();
+            firstImg.decoding = 'async';
+            firstImg.fetchpriority = 'high';
+            firstImg.onload = () => {
+              imageCache.set(first.dataset.bg, firstImg);
+              swapBackground(first.dataset.bg);
+            };
+            firstImg.onerror = () => {
+              console.warn('Failed to load first background image');
+            };
+            firstImg.src = first.dataset.bg;
+          }
         }
 
-        /* ---------------- Industries slider ---------------- */
-        const industriesSwiper = new Swiper("#industriesSwiper", {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          centeredSlides: false,
-          loop: false,
-          grabCursor: true,
-          breakpoints: {
-            640: { slidesPerView: 2, spaceBetween: 0 },
-            960: { slidesPerView: 3, spaceBetween: 0 },
-            1280: { slidesPerView: 4, spaceBetween: 0 },
-          },
-          navigation: {
-            nextEl: ".swiper-navs .swiper-button-next",
-            prevEl: ".swiper-navs .swiper-button-prev",
-          },
-          pagination: { el: ".swiper-pagination", enabled: false },
-          observer: true,
-          observeParents: true,
-          on: {
-            init(sw) {
-              const first = sw.slides[sw.activeIndex];
-              if (first && first.dataset && first.dataset.bg) {
-                swapBackground(first.dataset.bg);
-              }
-            },
-            slideChange(sw) {
-              const active = sw.slides[sw.activeIndex];
-              if (active && active.dataset && active.dataset.bg) {
-                swapBackground(active.dataset.bg);
-              }
-            },
-          },
-        });
-
-        /* ---------------- Hover/focus previews ---------------- */
-        function attachPreviewHandlers(slideEl) {
-          if (!slideEl) return;
-
-          const show = () => {
-            const url = slideEl.dataset ? slideEl.dataset.bg : "";
-            if (url) swapBackground(url);
-          };
-          const reset = () => {
-            const active =
-              industriesSwiper.slides[industriesSwiper.activeIndex];
-            const url = active && active.dataset ? active.dataset.bg : "";
-            if (url) swapBackground(url);
-          };
-
-          // Avoid double-binding on resize: remove any previous handlers first
-          slideEl.onmouseenter = show;
-          slideEl.onfocus = show;
-          slideEl.onmouseleave = reset;
-          slideEl.onblur = reset;
-          slideEl.onclick = () => {
-            // get index without spreading (works with NodeList/HTMLCollection)
-            const idx = Array.prototype.indexOf.call(
-              industriesSwiper.slides,
-              slideEl
-            );
-            if (idx >= 0) industriesSwiper.slideTo(idx);
-          };
+        // Select first visible slide by default
+        setTimeout(() => {
+          const firstVisible = getFirstVisibleSlide(sw);
+          if (firstVisible && !isHovering) {
+            updateSlideSelection(firstVisible);
+          }
+        }, 100);
+      },
+      slideChange(sw) {
+        // When user swipes/navigates, select the first visible slide
+        if (!isHovering) {
+          setTimeout(() => {
+            const firstVisible = getFirstVisibleSlide(sw);
+            if (firstVisible) {
+              updateSlideSelection(firstVisible);
+            }
+          }, 50);
         }
+      },
+      transitionEnd(sw) {
+        // Ensure selection is correct after transition
+        if (!isHovering) {
+          const firstVisible = getFirstVisibleSlide(sw);
+          if (firstVisible) {
+            updateSlideSelection(firstVisible);
+          }
+        }
+      },
+    },
+  });
 
-        // attach once after init
-        Array.prototype.forEach.call(
-          industriesSwiper.slides,
-          attachPreviewHandlers
-        );
+  /* ---------------- Hover/focus previews with selection ---------------- */
+  function attachPreviewHandlers(slideEl) {
+    if (!slideEl) return;
 
-        industriesSwiper.on("resize", () => {
-          Array.prototype.forEach.call(
-            industriesSwiper.slides,
-            attachPreviewHandlers
-          );
-        });
-      });
+    const handleMouseEnter = () => {
+      isHovering = true;
+      updateSlideSelection(slideEl);
+    };
+
+    const handleFocus = () => {
+      isHovering = true;
+      updateSlideSelection(slideEl);
+    };
+
+    const handleBlur = () => {
+      isHovering = false;
+      setTimeout(() => {
+        if (!isHovering) {
+          const firstVisible = getFirstVisibleSlide(industriesSwiper);
+          if (firstVisible) {
+            updateSlideSelection(firstVisible);
+          }
+        }
+      }, 100);
+    };
+
+    const handleClick = () => {
+      // get index without spreading (works with NodeList/HTMLCollection)
+      const idx = Array.prototype.indexOf.call(
+        industriesSwiper.slides,
+        slideEl
+      );
+      if (idx >= 0) {
+        isHovering = false;
+        industriesSwiper.slideTo(idx);
+        // Selection will be updated by slideChange event
+      }
+    };
+
+    // Avoid double-binding on resize: remove any previous handlers first
+    slideEl.onmouseenter = handleMouseEnter;
+    slideEl.onfocus = handleFocus;
+    slideEl.onblur = handleBlur;
+    slideEl.onclick = handleClick;
+  }
+
+  // attach once after init
+  Array.prototype.forEach.call(industriesSwiper.slides, attachPreviewHandlers);
+
+  // Add swiper container mouse leave handler
+  const swiperContainer = document.getElementById('industriesSwiper');
+  if (swiperContainer) {
+    swiperContainer.addEventListener('mouseleave', () => {
+      isHovering = false;
+      setTimeout(() => {
+        if (!isHovering) {
+          const firstVisible = getFirstVisibleSlide(industriesSwiper);
+          if (firstVisible) {
+            updateSlideSelection(firstVisible);
+          }
+        }
+      }, 50);
+    });
+  }
+
+  industriesSwiper.on("resize", () => {
+    Array.prototype.forEach.call(
+      industriesSwiper.slides,
+      attachPreviewHandlers
+    );
+    
+    // Re-select first visible slide after resize
+    if (!isHovering) {
+      setTimeout(() => {
+        const firstVisible = getFirstVisibleSlide(industriesSwiper);
+        if (firstVisible) {
+          updateSlideSelection(firstVisible);
+        }
+      }, 100);
+    }
+  });
+
+  // Add window resize handler for responsive updates
+  window.addEventListener('resize', () => {
+    if (!isHovering) {
+      setTimeout(() => {
+        const firstVisible = getFirstVisibleSlide(industriesSwiper);
+        if (firstVisible) {
+          updateSlideSelection(firstVisible);
+        }
+      }, 200);
+    }
+  });
+});
 
  document.addEventListener("DOMContentLoaded", () => {
         gsap.registerPlugin(ScrollTrigger);
