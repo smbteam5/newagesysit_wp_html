@@ -2390,7 +2390,7 @@
         <img
           src="./img/cta-android-web.webp"
           alt="bg"
-          class="h-full object-cover"
+          class="h-full w-full object-cover"
         />
       </div>
 
@@ -3737,120 +3737,49 @@
       </section>
     </div>
 
+    
+
     <section
-      class="relative min-h-screen bg-[#040303] text-white px-6 py-20 flex items-center justify-center overflow-hidden"
+      class="relative min-h-screen flex items-center justify-center md:px-6 py-16 bg-[#040303]"
     >
-      <!-- Background Image -->
       <div
-        class="absolute inset-0 bg-[url('./img/android-bg.svg')] bg-cover bg-center opacity-60 pointer-events-none"
-      ></div>
-
-      <!-- Grid Container -->
-      <div
-        class="relative grid grid-cols-1 md:grid-cols-2 gap-[50px] lg:gap-20 container mx-auto h-full"
+        class="grid grid-cols-1 lg:grid-cols-2  w-full container gap-12 relative"
       >
-        <!-- Left Column -->
-        <div class="flex flex-col justify-between h-full">
-          <!-- Kotlin -->
-          <div>
-            <div class="flex items-start justify-start space-x-3 mb-4">
-              <img src="./img/android-icon.svg" alt="Android" class="w-8 h-8" />
-              <img src="./img/kotlin-icon.svg" alt="Kotlin" class="w-8 h-8" />
-            </div>
-            <h3 class="text-[20px] font-medium mb-3">Android + Kotlin</h3>
-            <p class="text-gray-300 leading-relaxed text-[15px]">
-              We use Kotlin to build fast, modern, and reliable Android apps
-              that have concise code, enhanced safety, and seamless integration
-              with Android Jetpack libraries.
-            </p>
-          </div>
-
-          <!-- React Native -->
-          <div>
-            <div class="flex items-center space-x-3 mb-4">
-              <img src="./img/android-icon.svg" alt="Android" class="w-8 h-8" />
-              <img
-                src="./img/react-icon.svg"
-                alt="React Native"
-                class="w-8 h-8"
-              />
-            </div>
-            <h3 class="text-[20px] font-medium mb-3">Android + React Native</h3>
-            <p class="text-gray-300 leading-relaxed text-[15px]">
-              Our team specializes in React Native for creating cross-platform
-              apps that combine Android’s native performance with JavaScript
-              frameworks, reducing time-to-market while maintaining quality.
-            </p>
-          </div>
-        </div>
-
-        <!-- Right Column -->
-        <div class="flex flex-col justify-between space-y-20 h-full">
-          <!-- Flutter -->
-          <div class="flex flex-col justify-end w-full items-end">
-            <div class="flex items-center space-x-3 mb-4">
-              <img src="./img/android-icon.svg" alt="Android" class="w-8 h-8" />
-              <img src="./img/flutter-icon.svg" alt="Flutter" class="w-8 h-8" />
-            </div>
-            <h3 class="text-[20px] font-medium mb-3">Android + Flutter</h3>
-            <p class="text-gray-300 leading-relaxed text-[15px]">
-              Flutter, as a technology, can help extend your Android to other
-              platforms with a single codebase. It delivers native-like
-              performance and beautiful material design for interfaces.
-            </p>
-          </div>
-
-          <!-- Golang -->
-          <div class="flex flex-col justify-end items-end">
-            <div class="flex items-center space-x-3 mb-4">
-              <img src="./img/android-icon.svg" alt="Android" class="w-8 h-8" />
-              <img src="./img/golang-icon.svg" alt="Golang" class="w-8 h-8" />
-            </div>
-            <h3 class="text-[20px] font-medium mb-3">Android + Golang</h3>
-            <p class="text-gray-300 leading-relaxed text-[15px]">
-              Golang for Android applications can help build scalable backends
-              that deliver high performance. Plus, you get faster data
-              processing, better concurrency, and efficient cloud communication.
-            </p>
-          </div>
-        </div>
-
-        <!-- Center Card -->
-        <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center px-10 py-14 rounded-lg shadow-lg w-[90%] md:w-[70%] lg:w-[40%] bg-android-card"
+  <div class="relative lg:absolute w-full h-full flex justify-center items-center pointer-events-none">
+     <div
+          class="bg-android-card text-center px-8 py-12  shadow-xl  flex flex-col items-center justify-center h-[400px] w-[400px] z-20 relative"
         >
           <h2
-            class="text-[24px] md:text-[28px] font-semibold mb-5 leading-snug"
+            class="text-2xl md:text-3xl font-[400] leading-snug mb-4 text-white relative z-10"
           >
-            Tech Integrations<br />
-            for Android, We Can<br />
-            Help You With!
+            Tech Integrations <br />
+            for Android, We Can Help You With!
           </h2>
-          <p class="text-gray-200 text-[15px] leading-relaxed">
+          <p class="text-gray-200 text-sm max-w-md mx-auto leading-relaxed relative z-10">
             To build a versatile application, our Android specialists often
             utilize the permutation and combination of different technologies to
             develop a solution, based on your current and future requirements.
           </p>
+
+<img src="./img/left-decor.svg" alt="Android Integration" class="absolute left-[-170px] hidden md:block" />
+<img src="./img/bg-android-decor.svg" alt="Android Integration" class="absolute right-[-140px]  rotate-90 z-0 hidden md:block" />
+<img src="./img/bg-android-decor.svg" alt="Android Integration" class="absolute top-[-170px] z-0 hidden lg:block" />
+<img src="./img/bg-android-decor.svg" alt="Android Integration" class="absolute bottom-[-170px] rotate-180 z-0 hidden lg:block" />
+
+
         </div>
       </div>
-    </section>
-
-    <section
-      class="relative min-h-screen flex items-center justify-center px-6 py-16"
-    >
-      <div
-        class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-3 w-full max-w-6xl gap-8"
-      >
+       
         <!-- Top Left Card -->
         <div
-          class="flex flex-col items-start justify-start bg-transparent lg:col-start-1 lg:row-start-1"
+          class="flex flex-col items-start justify-start bg-transparent border-b border-[#1d36b4a2]  pb-12"
         >
           <div class="flex items-center gap-3 mb-3">
-            <img src="./img/android.svg" alt="Android" class="w-8 h-8" />
-            <img src="./img/kotlin.svg" alt="Kotlin" class="w-8 h-8" />
+            <img src="./img/android-thumb.svg" alt="Android" class="w-12 h-12" />
+            <img src="./img/kotliin-thumb.svg" alt="Kotlin" class="w-12 h-12" />
           </div>
-          <h3 class="text-xl font-medium mb-2">Android + Kotlin</h3>
-          <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
+          <h3 class="text-xl font-medium mb-2 text-gray-300">Android + Kotlin</h3>
+          <p class="text-[18px] text-gray-300 leading-relaxed max-w-sm  font-[300] w-full lg:w-[50%] xl:w-[70%]">
             We use Kotlin to build fast, modern, and reliable Android apps that
             have concise code, enhanced safety, and seamless integration with
             Android Jetpack libraries.
@@ -3859,14 +3788,14 @@
 
         <!-- Top Right Card -->
         <div
-          class="flex flex-col items-start justify-start bg-transparent lg:col-start-3 lg:row-start-1"
+          class="flex flex-col lg:items-end justify-start bg-transparent border-b border-[#1d36b4a2] pb-12"
         >
           <div class="flex items-center gap-3 mb-3">
-            <img src="./img/android.svg" alt="Android" class="w-8 h-8" />
-            <img src="./img/flutter.svg" alt="Flutter" class="w-8 h-8" />
+            <img src="./img/android-thumb.svg" alt="Android" class="w-12 h-12" />
+            <img src="./img/fkutter-thumb.svg" alt="Flutter" class="w-12 h-12" />
           </div>
-          <h3 class="text-xl font-medium mb-2">Android + Flutter</h3>
-          <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
+          <h3 class="text-xl font-medium mb-2 text-gray-300">Android + Flutter</h3>
+          <p class="text-[18px] text-gray-300 leading-relaxed max-w-sm lg:text-right font-[300] w-full lg:w-[50%] xl:w-[70%]">
             Flutter, as a technology, can help extend your Android to other
             platforms with a single codebase + it delivers native-like
             performance and beautiful material design for interfaces.
@@ -3874,32 +3803,19 @@
         </div>
 
         <!-- Center Card -->
-        <div
-          class="bg-gradient-to-b from-[#1E2EBE] to-[#0B0C18] text-center px-8 py-12 rounded-2xl shadow-xl lg:col-start-2 lg:row-start-2 flex flex-col items-center justify-center"
-        >
-          <h2
-            class="text-2xl md:text-3xl font-semibold leading-snug mb-4 text-white"
-          >
-            Tech Integrations <br />
-            for Android, We Can Help You With!
-          </h2>
-          <p class="text-gray-200 text-sm max-w-md mx-auto leading-relaxed">
-            To build a versatile application, our Android specialists often
-            utilize the permutation and combination of different technologies to
-            develop a solution, based on your current and future requirements.
-          </p>
-        </div>
+      
 
         <!-- Bottom Left Card -->
         <div
-          class="flex flex-col items-start justify-start bg-transparent lg:col-start-1 lg:row-start-3"
+          class="flex flex-col items-start justify-start bg-transparent border-b border-[#1d36b4a2] lg:border-none pb-12 "
         >
           <div class="flex items-center gap-3 mb-3">
-            <img src="./img/android.svg" alt="Android" class="w-8 h-8" />
-            <img src="./img/react.svg" alt="React" class="w-8 h-8" />
+            <img src="./img/android-thumb.svg" alt="Android" class="w-12 h-12" />
+            <img src="./img/react--thumb.svg" alt="React" class="w-12 h-12" />
           </div>
-          <h3 class="text-xl font-medium mb-2">Android + React Native</h3>
-          <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
+          <h3 class="text-xl font-medium mb-2 text-gray-300">Android + React Native</h3>
+          <p class="text-[18px] text-gray-300 leading-relaxed max-w-sm font-[300]
+          w-full lg:w-[50%] xl:w-[70%]">
             Our team specializes in React Native for creating cross-platform
             apps that combine Android’s native performance with JavaScript
             frameworks, reducing time-to-market while maintaining quality.
@@ -3908,14 +3824,15 @@
 
         <!-- Bottom Right Card -->
         <div
-          class="flex flex-col items-start justify-start bg-transparent lg:col-start-3 lg:row-start-3"
+          class="flex flex-col items-start lg:items-end justify-start bg-transparent border-b border-[#1d36b4a2] pb-12 lg:border-none"
         >
           <div class="flex items-center gap-3 mb-3">
-            <img src="./img/android.svg" alt="Android" class="w-8 h-8" />
-            <img src="./img/go.svg" alt="Go" class="w-8 h-8" />
+            <img src="./img/android-thumb.svg" alt="Android" class="w-12 h-12" />
+            <img src="./img/go-thumb.svg" alt="Go" class="w-12 h-12" />
           </div>
-          <h3 class="text-xl font-medium mb-2">Android + Golang</h3>
-          <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
+          <h3 class="text-xl font-medium mb-2 text-gray-300">Android + Golang</h3>
+          <p class="text-[18px] text-gray-300 leading-relaxed max-w-sm lg:text-right font-[300]
+          w-full lg:w-[50%] xl:w-[70%]">
             Golang for Android applications can help build scalable backends
             that deliver high performance. Plus, you get faster data processing,
             better concurrency, and efficient cloud communication.
@@ -6269,7 +6186,8 @@
     </script>
     <script>
       const imageSources = [
-        "./img/cta-android-web.webp",
+        "./img/android-unique-acc.webp",
+        
         "./img/dedicated-team-golang.webp",
         "./img/project-based.webp",
         "./img/fixed-price-models.webp",
