@@ -422,6 +422,40 @@
     margin-top: 10px !important;
 }
     </style>
+    <style>
+      @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    /* move by full track width + gap so the seam is invisible */
+    to { transform: translateX(calc(-100% - var(--marquee-gap))); }
+  }
+
+  .marquee {
+    overflow: hidden;
+    user-select: none;
+  }
+  .marquee__track {
+    display: flex;
+    align-items: center;
+    gap: var(--marquee-gap);
+    flex-wrap: nowrap;        /* prevent wrap on small screens */
+    animation: marquee-scroll 40s linear infinite;
+    will-change: transform;
+  }
+  .marquee:hover .marquee__track { animation-play-state: paused; }
+
+  /* keep items from shrinking and keep images tidy */
+  .marquee li { flex: none; }
+  .marquee img {
+    display: block;
+    height: 28px;             /* tweak as needed */
+    width: auto;
+  }
+
+  /* accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; }
+  }
+    </style>
   </head>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
@@ -2238,7 +2272,7 @@
       <!-- Content Container -->
       <div class="container mx-auto w-full max-w-[1456px] px-4">
         <span
-          class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
+          class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center max-1024px:bottom-[-5px]"
         >
           <img src="./img/glow.png" alt="" class="w-auto" />
         </span>
@@ -2247,7 +2281,7 @@
           <!-- H1 with word-by-word animation -->
           <h1
             id="animated-heading"
-            class="text-[34px] md:text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
+            class="text-[34px] md:text-[42px] lg:text-[50px] font-bold lg:leading-[54px] min-768px:leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block max-768px:leading-[50px]"
           >
             <span class="word text-[#989AA4]" style="animation-delay: 0ms"
               >Redefining</span
@@ -2326,7 +2360,7 @@
       <img
         src="./img/banner.webp"
         alt=""
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom"
+        class="w-full h-full object-cover absolute max-768px:object-[center_-65px] object-bottom"
       />
       <!-- Mobile radial rings (SVG fallback) -->
       <div
@@ -2415,13 +2449,24 @@
             <p
               class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
             >
-              Recognized for building the best solutions for startups,
+              Recognized for building the best solutions for startups, <br class="hidden lg:block"/>
               businesses, and enterprises
             </p>
             <div
-              class="group flex w-full gap-x-[85px] overflow-hidden select-none xl:max-w-[829px]"
+              class="group flex w-full gap-x-4 lg:gap-x-[85px] overflow-hidden select-none xl:max-w-[829px]"
             >
               <ul
+                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
+              >
+                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                
+              </ul>
+              <ul
+                aria-hidden="true"
                 class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
               >
                 <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
@@ -3410,7 +3455,7 @@
         >
           <div class="min-1380px:max-w-[33%] w-full">
             <h2
-              class="text-[50px] font-[500] leading-[56px] mb-6 max-1360px:text-center"
+              class="lg:text-[50px] font-[500] lg:leading-[56px] mb-6 max-1360px:text-center max-768px:!text-left text-[40px] leading-[50px]"
             >
               Ensuring<br class="hidden max-1360px:hidden lg:block" />
               Businesses<br class="hidden lg:block max-1360px:hidden" />
@@ -3418,7 +3463,7 @@
               and Succeed
             </h2>
             <p
-              class="text-gray-300 leading-relaxed lg:text-[20px] text-[18px] max-1360px:text-center"
+              class="text-gray-300 leading-relaxed lg:text-[20px] text-[18px] max-1360px:text-center max-768px:!text-left"
             >
               NewAgeSysIT is dedicated to alleviating your most challenging
               hurdles, multiplying results, and putting your business and
@@ -3746,10 +3791,10 @@
     >
       <div class="container p-0 md:p-5">
         <div
-          class="relative flex flex-col md:flex-row items-center justify-between bg-[linear-gradient(89.96deg,#4361EE_31.02%,#293481_51.12%,#0D1330_99.96%)] text-white rounded-lg shadow-lg p-4 md:p-6 overflow-hidden"
+          class="relative flex flex-col md:flex-row lg:items-center justify-between bg-[#647CEE] lg:bg-[linear-gradient(89.96deg,#4361EE_31.02%,#445bff_51.12%,#0D1330_99.96%)] text-white rounded-lg shadow-lg p-4 md:p-6 overflow-hidden"
         >
           <!-- Left text -->
-          <div class="text-center md:text-left mb-4 md:mb-0 relative z-[9]">
+          <div class="text-left mb-4 md:mb-0 relative z-[9]">
             <h2 class="text-[22px] md:text-[26px] font-semibold">
               Got Problems?
               <span class="text-[#dbeafe] font-normal"
@@ -3781,7 +3826,7 @@
             <span class="inline md:hidden">Schedule a Call</span>
           </button>
 
-          <span class="pointer-events-none absolute w-full left-0 hidden md:block">
+          <span class="pointer-events-none absolute w-full left-0 hidden lg:block bottom-0">
             <img src="./img/prob-glow.svg" alt="" loading="lazy" />
           </span>
         </div>

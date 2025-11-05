@@ -168,16 +168,20 @@
 
         <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
           <button class="ripple-btn">
+            <!-- ✅ background ripple layer -->
+            <div class="ripple-layer">
+              <div class="ripple-circle one"></div>
+              <div class="ripple-circle two"></div>
+              <div class="ripple-circle three"></div>
+            </div>
+
+            <!-- ✅ main visible content -->
             <div class="ripple-btn-content">
               <div class="icon-circle">
-                <!-- Static base + ripple layers -->
-                <div class="ripple-circle one"></div>
-                <div class="ripple-circle two"></div>
-                <div class="ripple-circle three"></div>
                 <img src="../src/img/contact (1).gif" alt="Call" />
               </div>
               <span
-                class="font-inter font-semibold leading-[10px] tracking-[0%] text-center align-middle"
+                class="font-inter font-bold leading-[10px] text-center align-middle text-[18px] text-[#F5FAFE]"
               >
                 Call Us
               </span>
