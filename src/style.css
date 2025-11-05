@@ -2556,6 +2556,10 @@ video {
   min-height: 54px;
 }
 
+.min-h-\[550px\] {
+  min-height: 550px;
+}
+
 .min-h-\[600px\] {
   min-height: 600px;
 }
@@ -12924,7 +12928,11 @@ html {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(360deg, #00000000 0%, rgba(102, 102, 102, 0) 86.75%);
+  background: linear-gradient(
+    360deg,
+    #00000000 0%,
+    rgba(102, 102, 102, 0) 86.75%
+  );
 }
 
 .hero-business .swiper-slide:hover,
@@ -15060,10 +15068,10 @@ footer ul li {
     width: 2px;
     height: 100%;
     background: linear-gradient(
-        0deg,
-        #ccccccb9 0%,
-        rgba(153, 153, 153, 0) 100%
-      );
+      0deg,
+      #ccccccb9 0%,
+      rgba(153, 153, 153, 0) 100%
+    );
   }
 }
 
@@ -15079,13 +15087,13 @@ footer ul li {
   width: 100%;
   height: 2px;
   background: linear-gradient(
-      90deg,
-      #000000 0%,
-      rgba(255, 255, 255, 0.95) 45%,
-      rgba(255, 255, 255, 1) 50%,
-      rgba(255, 255, 255, 0.95) 55%,
-      #000000 100%
-    );
+    90deg,
+    #000000 0%,
+    rgba(255, 255, 255, 0.95) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.95) 55%,
+    #000000 100%
+  );
 }
 
 .golang-sect-border-1 {
@@ -15100,13 +15108,13 @@ footer ul li {
   width: 100%;
   height: 1px;
   background: linear-gradient(
-      90deg,
-      #000000 0%,
-      rgba(255, 255, 255, 0.95) 45%,
-      rgba(255, 255, 255, 1) 50%,
-      rgba(255, 255, 255, 0.95) 55%,
-      #000000 100%
-    );
+    90deg,
+    #000000 0%,
+    rgba(255, 255, 255, 0.95) 45%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.95) 55%,
+    #000000 100%
+  );
 }
 
 .golang-gradient-text {
@@ -15136,11 +15144,7 @@ footer ul li {
   bottom: 0;
   width: 2px;
   height: 90%;
-  background: linear-gradient(
-      0deg,
-      #cccccc9a 0%,
-      rgba(153, 153, 153, 0) 100%
-    );
+  background: linear-gradient(0deg, #cccccc9a 0%, rgba(153, 153, 153, 0) 100%);
 }
 
 .cbtn-border-bottom-right {
@@ -15192,10 +15196,10 @@ footer ul li {
   color: #fff;
   font-weight: 500;
   background: linear-gradient(
-      90deg,
-      rgba(67, 97, 238, 0.15) 0%,
-      rgba(67, 97, 238, 0.08) 100%
-    );
+    90deg,
+    rgba(67, 97, 238, 0.15) 0%,
+    rgba(67, 97, 238, 0.08) 100%
+  );
   overflow: hidden;
   cursor: pointer;
   isolation: isolate;
@@ -15382,40 +15386,36 @@ footer ul li {
 }
 
 .v1-gradient {
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 44.81%,
-      #000000 91.15%
-    );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.81%, #000000 91.15%);
 }
 
 .v2-gradient {
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.4) 50%,
-      #000000 100%
-    );
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    #000000 100%
+  );
 }
 
 .v3-gradient {
   background-image: linear-gradient(
-        4.77deg,
-        rgba(0, 0, 0, 0) 66.43%,
-        #000000 99.16%
-      ),
-      linear-gradient(177.61deg, rgba(0, 0, 0, 0) 44.49%, #000000 103.21%);
+      4.77deg,
+      rgba(0, 0, 0, 0) 66.43%,
+      #000000 99.16%
+    ),
+    linear-gradient(177.61deg, rgba(0, 0, 0, 0) 44.49%, #000000 103.21%);
 }
 
 .related-blogs-carousel .owl-stage-outer {
   overflow: unset !important;
 }
 
-.flexible-border-golang{
+.flexible-border-golang {
   position: relative;
 }
 
-.flexible-border-golang::after{
+.flexible-border-golang::after {
   content: "";
   position: absolute;
   left: 0;
@@ -15432,7 +15432,7 @@ footer ul li {
   );
 }
 
-.slider-2a .owl-stage-outer{
+.slider-2a .owl-stage-outer {
   overflow: unset !important;
 }
 
@@ -15470,20 +15470,37 @@ footer ul li {
   rotate: 180deg;
 }
 
-.tech-sect-bg-android{
+.tech-sect-bg-android {
   background-image: url("./img/tech-bg-android.webp");
   background-size: cover;
   background-position: center;
   z-index: 1;
 }
 
-.bg-android-card{
-  background: radial-gradient(69.04% 112.93% at 50% 50%, #0E2281 0%, #3045B1 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+.bg-android-card {
+  background: radial-gradient(
+      69.04% 112.93% at 50% 50%,
+      #0e2281 0%,
+      #3045b1 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }
 
-.card-border-android{
+.card-border-android {
   border: 1px solid;
-  border-image-source: linear-gradient(90deg, rgba(29, 55, 180, 0.7) 37.02%, rgba(4, 3, 3, 0.7) 100%);
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(29, 55, 180, 0.7) 37.02%,
+    rgba(4, 3, 3, 0.7) 100%
+  );
+}
+
+.portfolio-townconnect {
+  height: inherit;
+}
+
+.portfolio-polarity {
+  height: inherit;
 }
 
 @media (min-width: 1024px) {
