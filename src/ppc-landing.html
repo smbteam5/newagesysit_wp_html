@@ -124,7 +124,7 @@
       <div
         class="overflow-hidden rounded-3xl shadow-2xl max-992px:h-[calc(100vh-25px)] max-992px:overflow-y-auto"
       >
-        <div class="relative grid grid-cols-1 lg:grid-cols-2">
+        <div class="relative flex flex-wrap">
           <!-- Close button -->
           <button
             type="button"
@@ -145,16 +145,16 @@
             class="relative hidden lg:flex flex-col text-center justify-center p-10 bg-[#090c1e] overflow-hidden left__panel lg:w-6/12"
           >
             <div
-              class="absolute transform -translate-x-1/2 w-[170%] left-[50%] bottom-[-50px]"
+              class="absolute transform -translate-x-1/2 w-[100%] left-[50%] bottom-0"
             >
-              <img src="./img/contact-form-banner.webp" alt="" />
+              <img src="./img/bg-pop.png" alt="" class="w-full object-cover"/>
             </div>
             <div class="relative z-[9] text-white">
               <h2 class="text-[35px] font-semibold leading-tight">
                 Let us know how<br />we can help!
               </h2>
               <p class="mt-6 text-[#fff] text-[18px] opacity-[.7]">
-                Tell us about your project and we’ll get back to you with
+                Tell us about your project and we’ll get back to you <br/> with
                 details on how we can develop it.
               </p>
               <p class="mt-4 text-[#fff] opacity-[.7] text-[18px]">
@@ -280,10 +280,10 @@
           class="relative mx-auto overflow-hidden bg-[#293660] bg-[linear-gradient(90deg,rgba(41,54,96,1)_41%,rgba(87,42,107,1)_100%)]"
         >
           <div
-            class="flex items-center px-[30px] py-[15px] max-992px:px-[25px] max-992px:gap-[20px]"
+            class="flex flex-wrap items-center px-[30px] py-[15px] max-992px:px-[25px] max-992px:gap-[20px]"
           >
             <!-- Left copy -->
-            <div class="lg:w-6/12">
+            <div class="lg:w-6/12 w-full">
               <p class="text-[16px] text-white lg:pr-[30px]">
                 Recognized for building the best solutions for startups,
                 businesses, and enterprises
@@ -291,7 +291,7 @@
             </div>
 
             <!-- Logos (right-aligned) -->
-            <div class="ml-auto flex flex-wrap items-center gap-6 sm:gap-8 lg:w-6/12">
+            <div class="ml-auto flex flex-wrap items-center gap-6 sm:gap-8 lg:w-6/12 w-full">
               <div>
                 <div
                   class="group flex w-full max-992px:gap-[40px] min-992px:gap-x-[80px] overflow-hidden select-none xl:max-w-[829px]"
@@ -309,7 +309,7 @@
                   </ul>
                   <ul
                     aria-hidden="true"
-                    class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-[80px] group-hover:[animation-play-state:paused]"
+                    class="animate-scroll flex min-w-full shrink-0 items-center justify-between min-992px:gap-x-[80px] group-hover:[animation-play-state:paused] max-992px:gap-[40px]"
                   >
                     <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
                     <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
@@ -7771,11 +7771,9 @@
         const el = document.getElementById("contactModal");
         if (!el) return;
         el.classList.toggle("hidden", !open);
-        document.body.style.overflow = open ? "hidden" : "";
+        document.documentElement.style.overflow = open ? "hidden" : "";
       }
-      // Optional: open via hash (#contact)
       if (location.hash === "#contact") toggleModal(true);
-      // ESC to close
       window.addEventListener("keydown", (e) => {
         if (e.key === "Escape") toggleModal(false);
       });
