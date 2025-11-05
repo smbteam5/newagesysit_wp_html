@@ -27,8 +27,8 @@
       rel="stylesheet"
     />
 
-    <link rel="preload" href="./css/testimonial.css" as="style" />
-    <link href="./css/testimonial.css" rel="stylesheet" />
+    <link rel="preload" href="style.css" as="style" />
+    <link href="style.css" rel="stylesheet" />
     <style>
       .mix-blend-hard-light {
         mix-blend-mode: hard-light;
@@ -1839,232 +1839,44 @@
       id="hero-banner"
       class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
     >
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <span
-          class="absolute bottom-[-20px] w-full left-0 z-[9] flex justify-center"
-        >
-          <img 
-            src="./img/glow.webp" 
-            alt="" 
-            class="w-auto"
-          />
-        </span>
+      <div class="container mx-auto w-full max-w-[1456px] px-4">      
 
         <div class="w-full text-center pb-[40px] relative z-[9]">
           <h1
-            class="text-[34px] md:text-[42px] lg:text-[50px] font-bold lg:leading-[54px] leading-[60px] bg-gradient-to-b from-[#989AA4] from-[35.07%] to-[#F5FAFE] to-[75.35%] bg-clip-text text-transparent inline-block"
+            class=" text-[34px] md:text-[42px] lg:text-[60px] font-bold lg:leading-[54px] leading-normal inline-block"
           >
-            <span class="word text-[#989AA4]"
-              >Redefining Your Business Success</span
-            ><br />
-            <span class="word text-[#fff]"
-              >With Apps & Software That Scale</span>
+            <span class="bg-[linear-gradient(180deg,#989AA4_35.07%,#F5FAFE_75.35%)] bg-clip-text text-transparent">Proven Results</span>
           </h1>
-
-          <!-- Paragraph -->
           <p
-            class="text-white lg:text-[26px] text-[18px] mt-[20px] para"
+            class="lg:text-[40px] text-[30px] bg-[linear-gradient(180deg,#989AA4_35.07%,#F5FAFE_75.35%)] bg-clip-text text-transparent"
           >
-            Award-Winning Digital Transformation Company with Strategic
-            <br class="hidden lg:block" />
-            Innovation Turning Brands into Industry Leaders
+            through our Client words
           </p>
 
           <!-- Button -->
           <div
-            class="text-center flex justify-center mt-5 bnr-btn"
+            class="text-center flex justify-center mt-[30px] bnr-btn"
           >
-            <button
-              data-slot="button"
-              class="group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-10 mt-8 lg:mt-10"
-            >
-              <span
-                class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
-              >
-                Get a Free Project Estimate
-                <svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  class="transition-transform duration-300 ease-in-out group-hover:rotate-45"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.5 8L6 18.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="square"
-                  ></path>
-                  <path
-                    d="M8 6.68793L17.2692 7.23081L17.812 16.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="square"
-                  ></path>
-                </svg>
-                <span
-                  class="pointer-events-none absolute -bottom-5 left-1/2 inline-block h-[30px] w-full -translate-x-1/2 bg-[radial-gradient(50%_50%_at_50%_50%,_#FFFFFF_0%,_#ff5a1463_100%)]"
-                ></span>
-              </span>
-            </button>
+            <button class="relative group p-[1px] rounded-full text-white font-semibold text-[16px] md:text-[18px] leading-[25px] mt-10 cursor-pointer get-free-btn duration-300 overflow-hidden">
+            <span class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141b3b00] to-[#D5DBFF]"></span>
+            <span class="relative flex items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left">
+              Lets Explore Partnership Opportunity
+              <img src="./images/arrow-up-right.svg" alt="arrow-right" class="!w-6 !h-6">
+            </span>
+          </button>
           </div>
         </div>
       </div>
 
-      <!-- Radial Rings (Animated Glow Layers) -->
-      <!-- <div id="rings" class="absolute-center">
-        <span
-          class="ring"
-          style="
-            --base: 129.737;
-            --opacity: 0.02;
-            --delay: 2750ms;
-            --size: 1400; /* design px — now auto-scales */
-            --amp: 70px;
-            --scale-up: 1.05;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 208.114;
-            --opacity: 0.05;
-            --delay: 2600ms;
-            --size: 1100;
-            --amp: 60px;
-            --scale-up: 1.04;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 286.491;
-            --opacity: 0.05;
-            --delay: 1250ms;
-            --size: 900;
-            --amp: 50px;
-            --scale-up: 1.03;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 364.868;
-            --opacity: 0.1;
-            --delay: 800ms;
-            --size: 700;
-            --amp: 40px;
-            --scale-up: 1.02;
-          "
-        ></span>
-        <span
-          class="ring"
-          style="
-            --base: 443.246;
-            --opacity: 0.2;
-            --delay: 150ms;
-            --size: 500;
-            --amp: 30px;
-            --scale-up: 1.01;
-          "
-        ></span>
-        <span
-          class="ring ring-final"
-          style="
-            --base: 521.623;
-            --opacity: 1;
-            --delay: 0ms;
-            --size: 300;
-            --amp: 20px;
-            --scale-up: 1.005;
-          "
-        ></span>
-      </div> -->
-
       <img
-        src="./img/banner-new.webp"
+        src="./img/banner.webp"
         alt="NewAgeSysIT Hero Banner" 
         width="1920"
         height="1080"
         fetchpriority="high"
         class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom"
       />
-      <!-- Mobile radial rings (SVG fallback) -->
-      <div
-        class="absolute left-0 bottom-[-20%] min-1680px:top-[38%] md:hidden block w-full"
-      >
-        <svg
-          width="100%"
-          height="601"
-          viewBox="0 0 390 601"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            opacity="0.02"
-            cx="195"
-            cy="650"
-            r="650"
-            fill="url(#paint1_radial)"
-          />
-          <circle
-            opacity="0.05"
-            cx="195"
-            cy="650"
-            r="550"
-            fill="url(#paint2_radial)"
-          />
-          <circle
-            opacity="0.05"
-            cx="195"
-            cy="650"
-            r="450"
-            fill="url(#paint3_radial)"
-          />
-          <circle
-            opacity="0.1"
-            cx="195"
-            cy="650"
-            r="350"
-            fill="url(#paint4_radial)"
-          />
-          <circle
-            opacity="0.2"
-            cx="195"
-            cy="650"
-            r="250"
-            fill="url(#paint5_radial)"
-          />
-          <g filter="url(#filter0_d)">
-            <circle cx="195" cy="650" r="150" fill="#5871F0" />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d"
-              x="-38"
-              y="412"
-              width="466"
-              height="466"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feGaussianBlur stdDeviation="35" />
-            </filter>
-            <radialGradient
-              id="paint1_radial"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(195 650) rotate(90) scale(650)"
-            >
-              <stop stop-color="white" stop-opacity="0" />
-              <stop offset="1" stop-color="white" />
-            </radialGradient>
-          </defs>
-        </svg>
-      </div>
+     
 
       <!-- Awards Bar -->
       <div
@@ -2081,7 +1893,7 @@
               businesses, and enterprises
             </p>
             <div
-              class="group flex w-full gap-x-[85px] overflow-hidden select-none xl:max-w-[829px]"
+              class="group flex w-full gap-x-4 lg:gap-x-[85px] overflow-hidden select-none xl:max-w-[829px]"
             >
               <ul
                 class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
@@ -2107,393 +1919,6 @@
         </div>
       </div>
     </section>
-
-    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
-      <div class="container mx-auto w-full max-w-[1456px] px-4">
-        <h2
-          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
-          aria-label="Recognized For Excellence"
-        >
-          Recognized For Excellence
-        </h2>
-        <div class="hidden grid-cols-3 gap-8 xl:grid">
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="UpCity"
-                    loading="lazy"
-                    width="200"
-                    height="65"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/upcity.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    Top-rated mobile app solution providers in New Jersey
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="Entrepreneur"
-                    loading="lazy"
-                    width="224"
-                    height="42"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/entrep.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    App of the year – L-Card <br />
-                    Developed by NewAgeSysIT
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] h-full animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="Clutch"
-                    loading="lazy"
-                    width="130"
-                    height="37"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/clutch.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    Top global leaders in mobile app development
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] h-full animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="BusinessofApps"
-                    loading="lazy"
-                    width="254"
-                    height="45"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/business.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] h-full animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="GoodFirms"
-                    loading="lazy"
-                    width="216"
-                    height="30"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/goodfirms.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col justify-center gap-8">
-            <div class="min-h-[220px] animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="DesignRush"
-                    loading="lazy"
-                    width="284"
-                    height="64"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/designrush.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    Redefining service excellence
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="min-h-[220px] animation-element">
-              <div
-                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-              >
-                <div
-                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-                >
-                  <img
-                    alt="Clutch"
-                    loading="lazy"
-                    width="130"
-                    height="37"
-                    decoding="async"
-                    data-nimg="1"
-                    class="object-contain mb-4"
-                    style="color: transparent"
-                    src="./img/clutch.svg"
-                  />
-                  <p
-                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                  >
-                    iOS App Development
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="UpCity"
-                  loading="lazy"
-                  width="200"
-                  height="65"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/upcity.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  Top-rated mobile app solution providers in New Jersey
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Entrepreneur"
-                  loading="lazy"
-                  width="224"
-                  height="42"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/entrep.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  App of the year – L-Card
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Clutch"
-                  loading="lazy"
-                  width="130"
-                  height="37"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/clutch.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  Top global leaders in mobile app development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="BusinessofApps"
-                  loading="lazy"
-                  width="254"
-                  height="45"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/business.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="GoodFirms"
-                  loading="lazy"
-                  width="216"
-                  height="30"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/goodfirms.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="DesignRush"
-                  loading="lazy"
-                  width="284"
-                  height="64"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/designrush.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  Redefining service excellence
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="min-h-[220px]">
-            <div
-              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
-            >
-              <div
-                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
-              >
-                <img
-                  alt="Clutch"
-                  loading="lazy"
-                  width="130"
-                  height="37"
-                  decoding="async"
-                  data-nimg="1"
-                  class="object-contain mb-4"
-                  style="color: transparent"
-                  src="./img/clutch.svg"
-                />
-                <p
-                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
-                >
-                  iOS App Development
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     
 <section class="relative py-14 md:py-20">
   <div class="mx-auto container">
@@ -3300,6 +2725,393 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <h2
+          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
+          aria-label="Recognized For Excellence"
+        >
+          Recognized For Excellence
+        </h2>
+        <div class="hidden grid-cols-3 gap-8 xl:grid">
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="UpCity"
+                    loading="lazy"
+                    width="200"
+                    height="65"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/upcity.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    Top-rated mobile app solution providers in New Jersey
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Entrepreneur"
+                    loading="lazy"
+                    width="224"
+                    height="42"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/entrep.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    App of the year – L-Card <br />
+                    Developed by NewAgeSysIT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/clutch.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    Top global leaders in mobile app development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="BusinessofApps"
+                    loading="lazy"
+                    width="254"
+                    height="45"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/business.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="GoodFirms"
+                    loading="lazy"
+                    width="216"
+                    height="30"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/goodfirms.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="DesignRush"
+                    loading="lazy"
+                    width="284"
+                    height="64"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/designrush.webp"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    Redefining service excellence
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/clutch.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="UpCity"
+                  loading="lazy"
+                  width="200"
+                  height="65"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/upcity.svg"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  Top-rated mobile app solution providers in New Jersey
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Entrepreneur"
+                  loading="lazy"
+                  width="224"
+                  height="42"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/entrep.svg"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  App of the year – L-Card
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/clutch.svg"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  Top global leaders in mobile app development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="BusinessofApps"
+                  loading="lazy"
+                  width="254"
+                  height="45"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/business.svg"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="GoodFirms"
+                  loading="lazy"
+                  width="216"
+                  height="30"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/goodfirms.svg"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="DesignRush"
+                  loading="lazy"
+                  width="284"
+                  height="64"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/designrush.webp"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  Redefining service excellence
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/clutch.svg"
+                />
+                <p
+                  class="text-[17px] font-[500] text-white/50 xl:max-w-[256px]"
+                >
+                  iOS App Development
+                </p>
               </div>
             </div>
           </div>
