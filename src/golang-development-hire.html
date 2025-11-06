@@ -79,6 +79,31 @@
       }
     </style>
   </head>
+  <style>
+    .owl-prev-btn,
+    .owl-next-btn {
+      background-color: transparent;
+      color: #8ea0f5;
+      font-size: 18px;
+      border: 1px solid #8ea0f5;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .owl-prev-btn:hover,
+    .owl-next-btn:hover {
+      background-color: #8ea0f5;
+      color: #1b1d1e;
+    }
+
+    .owl-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+  </style>
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
     <header
@@ -1121,16 +1146,14 @@
           class="relative text-white pt-10 pb-2 overflow-hidden px-5 golang-sect-border-1 hidden lg:block"
         >
           <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
-          <!-- Blur is removed by default and will be toggled when the slider moves -->
+
           <div
-            class="w-full xl:w-[55%] xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
+            class="w-full xl:w-[55%] slider-border-golang xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
           >
             <!-- The blur glass overlay -->
 
             <!-- Text content above blur -->
-            <div
-              class="relative slider-border-golang md:pt-20 w-full md:w-[60%] lg:w-[90%] space-y-5"
-            >
+            <div class="relative md:pt-20 w-full md:w-[60%] lg:w-[90%] space-y-5">
               <!-- Item 1 - Why -->
               <div class="cursor-pointer" onclick="switchSlider('why')">
                 <h2
@@ -1209,7 +1232,7 @@
           <div class="w-full xl:w-[55%] relative xl:ml-auto z-10 pb-2 pt-20">
             <!-- WHY SLIDER -->
             <div id="why-slider" class="slider-container active">
-              <div class="slider-3 owl-carousel owl-theme overflow-visible">
+              <div class="slider-4 owl-carousel owl-theme overflow-visible">
                 <!-- CARD 1 -->
                 <div
                   class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
@@ -1268,7 +1291,7 @@
 
             <!-- HOW SLIDER -->
             <div id="how-slider" class="slider-container hidden">
-              <div class="slider-3 owl-carousel owl-theme overflow-visible">
+              <div class="slider-4 owl-carousel owl-theme overflow-visible">
                 <!-- CARD 1 -->
                 <div
                   class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
@@ -1319,7 +1342,7 @@
 
             <!-- WHAT SLIDER -->
             <div id="what-slider" class="slider-container hidden">
-              <div class="slider-3 owl-carousel owl-theme overflow-visible">
+              <div class="slider-4 owl-carousel owl-theme overflow-visible">
                 <!-- CARD 1 -->
                 <div
                   class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
@@ -1659,11 +1682,11 @@
 
             // Reinitialize the owl carousel for the active slider
             setTimeout(function () {
-              var carouselClass = ".slider-3";
+              var carouselClass = ".slider-4";
               if (slider === "how") {
-                carouselClass = ".slider-3-how";
+                carouselClass = ".slider-4-how";
               } else if (slider === "what") {
-                carouselClass = ".slider-3-what";
+                carouselClass = ".slider-4-what";
               }
 
               var activeSlider = $(carouselClass);
@@ -2063,8 +2086,19 @@
       </div>
     </section>
 
-    <section class="bg-[#09090B] py-16 px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-white">
+    <section class="relative bg-[#09090B] py-16 px-6 text-center overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0 -z-10">
+        <img
+          src="./img/shade.svg"
+          alt="Background Shade"
+          class="w-full h-full object-cover object-center opacity-100"
+        />
+      </div>
+
+      <h2
+        class="text-[28px] md:text-[36px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
+      >
         Why Hire Golang Developers from Us?
       </h2>
       <p class="text-gray-400 max-w-3xl mx-auto mb-16 text-base leading-relaxed">
@@ -2167,13 +2201,22 @@
         <!-- Center Image -->
         <div class="flex flex-col items-center justify-center relative">
           <div
-            class="w-48 h-48 bg-gradient-to-b from-[#182042] to-[#0d0f1a] rounded-xl shadow-xl flex items-center justify-center"
+            class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-b from-[#182042] to-[#0d0f1a] rounded-xl shadow-xl flex items-center justify-center overflow-hidden relative"
           >
-            <img
-              src="./img/center.webp"
-              alt="Center Icon"
-              style="width: 602.94px; height: 500.41px; opacity: 1; transform: rotate(0deg)"
-            />
+            <img src="./img/shade.svg" alt="Center Icon" class="w-full h-full object-contain" />
+            <!-- Fade overlay on all sides -->
+            <div
+              class="absolute inset-0 pointer-events-none"
+              style="
+                background: radial-gradient(
+                  circle at center,
+                  transparent 40%,
+                  rgba(9, 9, 11, 0.3) 60%,
+                  rgba(9, 9, 11, 0.8) 85%,
+                  rgba(9, 9, 11, 1) 100%
+                );
+              "
+            ></div>
           </div>
         </div>
 
@@ -3724,15 +3767,8 @@
           "
         >
           <h2
-            class="text-2xl md:text-3xl font-normal tracking-wide text-gray-100"
-            style="
-              padding: 27px 404px;
-              opacity: 1;
-              border-width: 1px;
-              border-radius: 0.5rem;
-              gap: 5px;
-              border-color: #65686c;
-            "
+            class="text-xl md:text-2xl lg:text-3xl font-normal tracking-wide text-gray-100 py-6 px-4 md:py-7 md:px-8 lg:px-16"
+            style="opacity: 1; border-width: 1px; border-radius: 0.5rem; border-color: #65686c"
           >
             NewAgeSys Vs. the Rest
           </h2>
@@ -3780,7 +3816,7 @@
 
           <!-- NewAgeSysIT -->
           <div
-            class="border rounded-2xl p-8 shadow-[0_0_30px_rgba(56,87,255,0.3)] scale-105 min-h-[400px]"
+            class="border rounded-2xl p-8 shadow-[0_0_30px_rgba(56,87,255,0.3)] min-h-[400px]"
             style="
               background: linear-gradient(180deg, #00040b 0%, #283a8f 100%);
               border-color: #65686c;
@@ -3857,35 +3893,46 @@
         </div>
       </div>
       <div class="mt-20 text-center">
-        <h3
-          class="text-2xl md:text-3xl font-semibold text-gray-100"
-          style="
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 2rem;
-            line-height: 1.2;
-            letter-spacing: 0%;
-            text-align: center;
-            vertical-align: middle;
-          "
+        <h2
+          class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] tege-center min-992px:leading-[60px] mb-2 mx-auto text-white"
         >
           Meet Our Experts
-        </h3>
+        </h2>
 
-        <!-- Image Section - Full Width -->
-        <!-- Desktop Image -->
-        <img
-          src="./img/t.webp"
-          alt="Our Experts Team"
-          class="hidden md:block w-full h-auto object-cover"
-        />
-        <!-- Mobile Image -->
-        <img
-          src="./img/experts-mobile.webp"
-          alt="Our Experts Team"
-          class="block md:hidden w-full h-auto object-cover"
-        />
+        <!-- Image Section - Full Width with Button -->
+        <div class="relative inline-block w-full">
+          <!-- Desktop Image -->
+          <img
+            src="./img/t.webp"
+            alt="Our Experts Team"
+            class="hidden md:block w-full h-auto object-cover"
+          />
+          <!-- Mobile Image -->
+          <img
+            src="./img/t2.webp"
+            alt="Our Experts Team"
+            class="block md:hidden w-full h-auto object-cover"
+          />
+
+          <!-- Button positioned at bottom of image -->
+          <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <a
+              href="#"
+              class="inline-block bg-white text-gray-900 font-semibold text-base md:text-lg py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all"
+              style="
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                letter-spacing: 0%;
+                vertical-align: middle;
+              "
+            >
+              Hire a Top Golang Developer
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -5203,7 +5250,7 @@
 
     <script>
       $(document).ready(function () {
-        const owl = $(".slider-3");
+        const owl = $(".slider-4");
         const leftOverlay = document.getElementById("leftOverlay3");
 
         owl.owlCarousel({
@@ -5221,47 +5268,11 @@
           },
         });
 
-        const nextbutton = document.querySelector(".slider-1 .owl-nav .owl-next");
-        const prevbutton = document.querySelector(".slider-1 .owl-nav .owl-prev");
+        const nextbutton = document.querySelector(".slider-4 .owl-nav .owl-next");
+        const prevbutton = document.querySelector(".slider-4 .owl-nav .owl-prev");
       });
     </script>
-    <script>
-      $(document).ready(function () {
-        // Initialize HOW slider
-        const owlHow = $(".slider-3-how");
-        owlHow.owlCarousel({
-          margin: 30,
-          loop: false,
-          dots: false,
-          nav: true,
-          stagePadding: 180,
-          responsive: {
-            0: { items: 1, stagePadding: 20 },
-            768: { items: 2, stagePadding: 50 },
-            1024: { items: 3, stagePadding: 100 },
-            1440: { items: 1, stagePadding: 200 },
-            1600: { items: 1, stagePadding: 300 },
-          },
-        });
 
-        // Initialize WHAT slider
-        const owlWhat = $(".slider-3-what");
-        owlWhat.owlCarousel({
-          margin: 30,
-          loop: false,
-          dots: false,
-          nav: true,
-          stagePadding: 180,
-          responsive: {
-            0: { items: 1, stagePadding: 20 },
-            768: { items: 2, stagePadding: 50 },
-            1024: { items: 3, stagePadding: 100 },
-            1440: { items: 1, stagePadding: 200 },
-            1600: { items: 1, stagePadding: 300 },
-          },
-        });
-      });
-    </script>
     <script>
       $(document).ready(function () {
         const owl = $(".mobile-slider");
