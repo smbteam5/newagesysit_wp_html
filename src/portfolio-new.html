@@ -7,7 +7,58 @@
       name="description"
       content="Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries."
     />
+    <meta name="theme-color" content="#0b0b14" />
     <title>Case Studies - Innovative Apps in Action</title>
+
+    <!-- Canonical and SEO essentials -->
+    <!-- TODO: Replace the href below with the final production URL -->
+    <link rel="canonical" href="https://www.newagesysit.com/portfolio/" />
+    <link
+      rel="alternate"
+      href="https://www.newagesysit.com/portfolio/"
+      hreflang="en"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Case Studies - Innovative Apps in Action"
+    />
+    <meta
+      property="og:description"
+      content="Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries."
+    />
+    <meta property="og:url" content="https://www.newagesysit.com/portfolio/" />
+    <meta
+      property="og:image"
+      content="https://www.newagesysit.com/img/WhipFlip-portfolio.webp"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Case Studies - Innovative Apps in Action"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.newagesysit.com/img/WhipFlip-portfolio.webp"
+    />
+
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Preload critical resources -->
     <link rel="preload" href="style.css" as="style" />
@@ -17,8 +68,33 @@
       as="image"
       fetchpriority="high"
     />
+    <link rel="preload" href="./img/L-card-portfolio.webp" as="image" />
 
     <link href="style.css" rel="stylesheet" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Case Studies - Innovative Apps in Action",
+        "description": "Explore our innovative case studies showcasing successful mobile apps, web platforms, and digital solutions across various industries.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "NewAge Systems"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "CreativeWork",
+              "name": "Whip Flip",
+              "description": "Automating transporting company process by mobility and web solutions"
+            }
+          ]
+        }
+      }
+    </script>
 
     <!-- Inline critical CSS for above-fold content -->
     <style>
@@ -34,6 +110,42 @@
         display: inline-block;
         transition: all 0.3s ease;
       }
+      /* Prevent layout shift */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* Loading skeleton for hero image */
+      .hero-skeleton {
+        background: linear-gradient(
+          90deg,
+          #1a1a24 25%,
+          #2a2a34 50%,
+          #1a1a24 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+      /* Above-fold layout styles */
+      .bg-gradient-to-b {
+        background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+      }
+      .from-\[\#090D21\] {
+        --tw-gradient-from: #090d21;
+        --tw-gradient-stops: var(--tw-gradient-from),
+          var(--tw-gradient-to, rgba(9, 13, 33, 0));
+      }
+      .to-\[\#020205\] {
+        --tw-gradient-to: #020205;
+      }
     </style>
   </head>
   <body class="m-0 p-0 bg-[#0b0b14] text-white font-inter">
@@ -42,7 +154,7 @@
       class="w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#090D21] to-[#020205]"
     >
       <p
-        class="uppercase tracking-widest text-[20px] sm:text-[24px] md:text-[28px] mb-4 font-normal text-[#F5FAFE]"
+        class="uppercase tracking-widest text-[23px] md:text-[28px] mb-4 font-normal text-[#F5FAFE]"
       >
         Case Studies
       </p>
@@ -50,18 +162,19 @@
       <style>
         .word span {
           display: inline-block;
-          transition: all 0.3s ease;
+          transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1); /* slower & smoother */
         }
 
         .word:hover span {
           background: linear-gradient(to bottom, #cb71ff, #4361ee);
+          background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
       </style>
 
       <h1
-        class="text-[32px] sm:text-[45px] md:text-[60px] font-bold leading-tight mb-4 text-center text-white flex flex-wrap justify-center gap-3"
+        class="text-[60px] md:text-[60px] font-bold leading-tight mb-4 text-center text-white flex flex-wrap justify-center gap-3"
       >
         <span class="word">
           <span>I</span><span>n</span><span>n</span><span>o</span><span>v</span
@@ -79,7 +192,7 @@
       </h1>
 
       <p
-        class="text-[#FFFFFF80] text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-normal px-4 sm:px-0"
+        class="text-[#FFFFFF80] text-[23px] md:text-[20px] max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-normal px-4 sm:px-0"
       >
         Discover the strategies and solutions behind our projects and the impact
         they create for real users.
@@ -165,18 +278,20 @@
 
     <!-- Outer wrapper ensures true full width -->
     <section
-      class="relative w-full min-h-[500px] md:min-h-[542px] overflow-hidden bg-black rounded-[24px] md:rounded-[16px]"
+      class="relative w-full min-h-[500px] md:min-h-[542px] overflow-hidden bg-black rounded-[24px] md:rounded-[16px] hero-skeleton"
     >
       <!-- Background image -->
       <img
         src="./img/WhipFlip-portfolio.webp"
         data-mobile="./img/whipflip-mobile-portfolio.webp"
         data-desktop="./img/WhipFlip-portfolio.webp"
-        alt="Whipflip Case Study"
+        alt="Whipflip Case Study - Automating transporting company process"
         class="responsive-portfolio-img w-full h-full mx-auto object-cover object-center sm:object-top"
         fetchpriority="high"
         width="1920"
         height="542"
+        decoding="async"
+        onload="this.parentElement.classList.remove('hero-skeleton')"
       />
 
       <!-- Gradient overlay -->
@@ -237,11 +352,11 @@
       class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="./img/L-card-portfolio.webp"
@@ -250,6 +365,7 @@
             alt="L Card"
             class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
             loading="lazy"
+            decoding="async"
             width="720"
             height="550"
           />
@@ -257,16 +373,16 @@
 
         <!-- Right Content -->
         <div
-          class="w-full md:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
-                L-Card
+                L-card
                 <span
                   class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
                 ></span>
@@ -301,21 +417,21 @@
     <!-- project town connect  -->
 
     <section
-      class="w-full flex justify-center bg-neutral-950 py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 lg:px-10"
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between items-stretch w-full max-w-[1440px] rounded-[24px] mx-auto overflow-hidden bg-[#121314] transition-all duration-500"
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
-        <!-- Left Content -->
+        <!-- Left Content (moved before image) -->
         <div
-          class="w-full md:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 Town Connect Network
                 <span
@@ -324,7 +440,7 @@
               </h3>
 
               <h4
-                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
               >
                 Shipment Tracking Application
               </h4>
@@ -336,7 +452,7 @@
                 custom app simplifying shipment tracking, job management, and
                 real-time driver coordination.
               </p>
-              <!-- View Case Study Button -->
+
               <div class="mt-6">
                 <button
                   class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
@@ -348,17 +464,18 @@
           </div>
         </div>
 
-        <!-- Right Image -->
+        <!-- Right Image (moved after content) -->
         <div
-          class="w-full md:w-[50%] h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden order-1 md:order-2"
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
-            src="./img/Town-connect-portfolio.webp"
-            data-mobile="./img/town-connect-mobile-portfolio.webp"
-            data-desktop="./img/Town-connect-portfolio.webp"
-            alt="Town Connect"
-            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+            src="./img/Town-connect-new-portfolio.webp"
+            data-mobile="./img/Town-connect-new-mobile-portfolio.webp"
+            data-desktop="./img/Town-connect-new-portfolio.webp"
+            alt="Town Connect Network"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
             loading="lazy"
+            decoding="async"
             width="720"
             height="550"
           />
@@ -458,6 +575,7 @@
                 alt="Iman Khawaja"
                 class="w-[50px] h-[50px] rounded-md object-cover"
                 loading="lazy"
+                decoding="async"
                 width="50"
                 height="50"
               />
@@ -472,7 +590,7 @@
             </div>
 
             <button
-              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[40px] pb-[20px] pl-[40px] gap-[16px] w-full sm:w-[294px]"
+              class="flex items-center justify-center bg-[#FF8A00] transition-all duration-300 text-[#FFFFFF] font-semibold text-[18px] rounded-full pt-[20px] pr-[0px] sm:pr-0 pb-[20px] pl-[0px] sm:pl-0 gap-[16px] w-full sm:w-[294px]"
             >
               <svg
                 width="21"
@@ -572,10 +690,11 @@
             #bb55ff 24.38%,
             #1d49ba 83.24%
           );
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask: linear-gradient(#fff 0 0) content-box,
             linear-gradient(#fff 0 0);
-          -webkit-mask-composite: xor;
           mask-composite: exclude;
+          -webkit-mask-composite: xor;
           filter: blur(25px);
           opacity: 0.9;
           pointer-events: none;
@@ -596,7 +715,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- Bungee Card -->
             <div
@@ -718,7 +837,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- CFT Card -->
             <div
@@ -840,7 +959,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- Bungee Card -->
             <div
@@ -959,11 +1078,11 @@
       class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="./img/Prayer-App-portfolio.webp"
@@ -972,6 +1091,7 @@
             alt="Prayer Circle"
             class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
             loading="lazy"
+            decoding="async"
             width="720"
             height="550"
           />
@@ -979,7 +1099,7 @@
 
         <!-- Right Content -->
         <div
-          class="w-full md:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative gap-[80px]"
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative gap-[80px]"
         >
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
@@ -1076,7 +1196,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- carup Card -->
             <div
@@ -1197,7 +1317,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- SecurePosit Card -->
             <div
@@ -1315,19 +1435,20 @@
       class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
-            src="./img/Polarity-Partnerships-portfolio.webp"
+            src="./img/polarity-portfolio.webp"
             data-mobile="./img/polarity-mobile-portfolio.webp"
-            data-desktop="./img/Polarity-Partnerships-portfolio.webp"
-            alt="Polarity App"
+            data-desktop="./img/polarity-portfolio.webp"
+            alt="Prayer Circle"
             class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
             loading="lazy"
+            decoding="async"
             width="720"
             height="550"
           />
@@ -1335,14 +1456,14 @@
 
         <!-- Right Content -->
         <div
-          class="w-full md:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative gap-[80px]"
         >
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
           >
             <div class="mb-6 sm:mb-8 md:mb-10">
               <h3
-                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
               >
                 Polarity Partnerships
                 <span
@@ -1376,6 +1497,7 @@
         </div>
       </div>
     </section>
+
     <!-- Projects realficient / junkshot -->
     <section
       class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
@@ -1384,7 +1506,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- realficient Card -->
             <div
@@ -1506,7 +1628,7 @@
         <div class="relative max-w-[1440px] mx-auto">
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
           >
             <!-- gogo wash Card -->
             <div
@@ -1619,16 +1741,17 @@
         </div>
       </div>
     </section>
+
     <!-- Auntie app project  -->
     <section
       class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
     >
       <div
-        class="group flex flex-col md:flex-row justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
       >
         <!-- Left Image -->
         <div
-          class="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
         >
           <img
             src="./img/Auntie-app-portfolio.webp"
@@ -1637,6 +1760,7 @@
             alt="Auntie App"
             class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
             loading="lazy"
+            decoding="async"
             width="720"
             height="550"
           />
@@ -1644,7 +1768,7 @@
 
         <!-- Right Content -->
         <div
-          class="w-full md:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
         >
           <div
             class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
@@ -1682,6 +1806,1012 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects xplore dating  / Foogly  -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- xplore dating Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Xplore Dating
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Dating Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Xplore Dating App connected people through a secure platform
+                    with intelligent matching, privacy controls, and smart
+                    communication tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/xplore-dating-portfolio.webp"
+                  data-mobile="./img/xplore-dating-mobile-portfolio.webp"
+                  data-desktop="./img/xplore-dating-portfolio.webp"
+                  alt="Xplore Dating Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Foogly Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Foogly
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Agricultural E-commerce Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Foogly transformed farm commerce through a secure platform
+                    with intelligent produce matching, sustainable practices,
+                    and simplified purchasing tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/foogly-portfolio.webp"
+                  data-mobile="./img/foogly-mobile-portfolio.webp"
+                  data-desktop="./img/foogly-portfolio.webp"
+                  alt="Foogly Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects CashDocs / Zen For Teens -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- CashDocs Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    CashDocs
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Digital Health Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    CashDocs revolutionized healthcare with a secure digital
+                    platform featuring intelligent doctor-patient matching,
+                    HIPAA compliance, and telemedicine tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/cashdocs-portfolio.webp"
+                  data-mobile="./img/cashdocs-mobile-portfolio.webp"
+                  data-desktop="./img/cashdocs-portfolio.webp"
+                  alt="CashDocs Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Zen For Teens Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Zen For Teens
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    A Meditation Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Zen for Teens promoted mindfulness through a secure platform
+                    offering personalized meditation, progress tracking, and
+                    engaging wellness tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/zenforteens-portfolio.webp"
+                  data-mobile="./img/zenforteens-mobile-portfolio.webp"
+                  data-desktop="./img/zenforteens-portfolio.webp"
+                  alt="Zen For Teens Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guaranteed Tip Sheet project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/guaranteed-tip-sheet-portfolio.webp"
+            data-mobile="./img/guaranteed-tip-sheet-mobile-portfolio.webp"
+            data-desktop="./img/guaranteed-tip-sheet-portfolio.webp"
+            alt="Guaranteed Tip Sheet"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Guaranteed Tip Sheet
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Horse-Racing Prediction & Betting App
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Horse Racing Prediction App enhanced betting via a secure
+                platform offering intelligent race predictions, analytics, and
+                streamlined wagering tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Quran Easy  / Heyy :)  -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- Quran Easy Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Quran Easy
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    E-Learning Application
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Quran Easy simplified Quranic learning through a secure
+                    e-learning platform with intelligent lessons, video content,
+                    and progress tracking.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/quran-easy-portfolio.webp"
+                  data-mobile="./img/quran-easy-mobile-portfolio.webp"
+                  data-desktop="./img/quran-easy-portfolio.webp"
+                  alt="Quran Easy Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Heyy :) Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Heyy :)
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Mental Health Support Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Heyy App supported mental health with a secure, anonymous
+                    platform featuring intelligent listener matching and
+                    real-time chat.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/hey-portfolio.webp"
+                  data-mobile="./img/hey-mobile-portfolio.webp"
+                  data-desktop="./img/hey-portfolio.webp"
+                  alt="Heyy Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects CliquePrize® / Nomo -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- CliquePrize® Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    CliquePrize®
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Lead Generation Gamification Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    CliquePrize empowered businesses through a secure gamified
+                    platform offering intelligent lead generation, engagement,
+                    and prize management tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/cliqueprize-portfolio.webp"
+                  data-mobile="./img/cliqueprize-mobile-portfolio.webp"
+                  data-desktop="./img/cliqueprize-portfolio.webp"
+                  alt="CliquePrize Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Nomo Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Nomo
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Cloud-based CRM and Sales Management Platform
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Nomo optimized solar sales via a secure cloud platform
+                    featuring intelligent lead matching, analytics, and
+                    commission automation.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/nomo-portfolio.webp"
+                  data-mobile="./img/nomo-mobile-portfolio.webp"
+                  data-desktop="./img/nomo-portfolio.webp"
+                  alt="Nomo Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety24Our project  -->
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/safety24-portfolio.webp"
+            data-mobile="./img/safety24-mobile-portfolio.webp"
+            data-desktop="./img/safety24-portfolio.webp"
+            alt="Safety24Our"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                Safety24Our
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Real-Time Safety Alert App With Active Support
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                Safety24Our enhanced community safety through a secure mobile
+                app offering alerts, live location, and quick emergency
+                assistance.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProjectsOpus Health and Wellness  / Honu App  -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!--Opus Health and Wellness Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Opus Health and Wellness
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Holistic Healthcare E-commerce Website
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Opus advanced wellness commerce with a secure platform
+                    offering intelligent product matching and HIPAA-compliant
+                    transaction tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/opus-portfolio.webp"
+                  data-mobile="./img/opus-mobile-portfolio.webp"
+                  data-desktop="./img/opus-portfolio.webp"
+                  alt="Opus Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- Honu App Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Honu App
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Swimming Lesson Booking App with Real-Time Tracking
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Honu simplified swim lessons through a secure platform with
+                    intelligent instructor matching, scheduling, and transparent
+                    payment tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/honu-portfolio.webp"
+                  data-mobile="./img/honu-mobile-portfolio.webp"
+                  data-desktop="./img/honu-portfolio.webp"
+                  alt="Honu Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Rehab / ShowcaseTalks -->
+    <section
+      class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20"
+    >
+      <div class="container mx-auto">
+        <div class="relative max-w-[1440px] mx-auto">
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center"
+          >
+            <!-- Rehab Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <!-- Card Content -->
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    Rehab
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Fitness App With Real-Time Support
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    Rehab by Qui elevated fitness through a secure mobile
+                    platform offering intelligent workouts, live trainers, and
+                    interactive challenges.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <!-- Image -->
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/rehab-portfolio.webp"
+                  data-mobile="./img/rehab-mobile-portfolio.webp"
+                  data-desktop="./img/rehab-portfolio.webp"
+                  alt="Rehab Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+
+            <!-- ShowcaseTalks Card -->
+            <div
+              class="group relative bg-[#161819] gap-[32px] rounded-[16px] overflow-hidden flex flex-col transition-all duration-500 w-full min-h-[734px]"
+            >
+              <div
+                class="p-[32px] flex-1 flex flex-col justify-between gap-[16px]"
+              >
+                <div>
+                  <h3
+                    class="text-[#FFFFFF] font-bold text-[18px] md:text-[23px] relative inline-block"
+                  >
+                    ShowcaseTalks
+                    <span
+                      class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                    ></span>
+                  </h3>
+
+                  <p
+                    class="text-[16px] md:text-[28px] mt-5 text-[#F5FAFE] font-normal"
+                  >
+                    Business and Product Advertising App
+                  </p>
+
+                  <p
+                    class="text-[16px] md:text-[23px] text-[#A3ACB5] mt-4 leading-relaxed font-normal"
+                  >
+                    ShowcaseTalks empowered creators through a secure platform
+                    offering intelligent talent discovery, visual showcasing,
+                    and appointment scheduling tools.
+                  </p>
+                </div>
+
+                <button
+                  class="mt-6 px-6 py-3 bg-[#4361EE] text-white text-[15px] font-medium rounded hover:bg-[#5b73ff] transition-all duration-300 w-fit"
+                >
+                  VIEW CASESTUDY
+                </button>
+              </div>
+
+              <div class="w-full h-[397px] overflow-hidden">
+                <img
+                  src="./img/showcase-talks-portfolio.webp"
+                  data-mobile="./img/showcase-talks-mobile-portfolio.webp"
+                  data-desktop="./img/showcase-talks-portfolio.webp"
+                  alt="ShowcaseTalks Portfolio"
+                  class="responsive-portfolio-img w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="397"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project People & Stories  -->
+
+    <section
+      class="relative w-full flex justify-center bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between w-full max-w-[1440px] rounded-[16px] sm:rounded-[24px] mx-auto overflow-hidden bg-[#121314] relative transition-all duration-500"
+      >
+        <!-- Left Image -->
+        <div
+          class="w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden"
+        >
+          <img
+            src="./img/people-stories-portfolio.webp"
+            data-mobile="./img/people-stories-mobile-portfolio.webp"
+            data-desktop="./img/people-stories-portfolio.webp"
+            alt="People & Stories"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[100ms] ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[18px] md:text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                People & Stories
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[18px] md:text-[28px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                Literature Access Platform For Non-Profits
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                People & Stories / Gente y Cuentos expanded literary access
+                through a secure platform offering stories, audio, and event
+                coordination.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project USA Health Advisors  -->
+
+    <section
+      class="w-full flex justify-center bg-neutral-950 py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-8 lg:px-10"
+    >
+      <div
+        class="group flex flex-col md:flex-row flex-wrap justify-between items-stretch w-full max-w-[1440px] rounded-[24px] mx-auto overflow-hidden bg-[#121314] transition-all duration-500"
+      >
+        <!-- Left Content -->
+        <div
+          class="w-full lg:w-1/2 bg-[#121314] flex flex-col p-6 sm:p-8 md:p-[40px] mt-6 sm:mt-8 md:mt-[32px] text-white relative"
+        >
+          <div
+            class="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10"
+          >
+            <div class="mb-6 sm:mb-8 md:mb-10">
+              <h3
+                class="text-[#FFFFFF] text-[23px] font-bold mb-2 tracking-wide relative inline-block"
+              >
+                USA Health Advisors
+                <span
+                  class="absolute left-0 -bottom-2 h-[2px] bg-[#4361EE] w-5 block transition-all duration-300 ease-linear group-hover:w-full"
+                ></span>
+              </h3>
+
+              <h4
+                class="text-[22px] sm:text-[26px] md:text-[32px] text-[#F5FAFE] font-normal leading-snug mt-4 sm:mt-5 md:mt-6"
+              >
+                A Custom App for Insurance Agents
+              </h4>
+
+              <p
+                class="text-[18px] md:text-[23px] text-[#A3ACB5] font-normal leading-relaxed mt-4 sm:mt-5 md:mt-6 opacity-90"
+              >
+                USA Health Advisors modernized insurance operations through a
+                secure app offering data collection, notifications, and digital
+                signature tools.
+              </p>
+              <!-- View Case Study Button -->
+              <div class="mt-6">
+                <button
+                  class="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 bg-[#4361EE] hover:bg-[#5B73FF] text-[#FDFDFD] font-medium text-[14px] sm:text-[15px] md:text-[16px] rounded shadow-[0_2px_8px_rgba(67,97,238,0.4)] transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none"
+                >
+                  VIEW CASE STUDY
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div
+          class="w-full lg:w-[50%] h-[300px] sm:h-[400px] md:h-[550px] relative overflow-hidden order-1 md:order-2"
+        >
+          <img
+            src="./img/usa-health-advisors-portfolio.webp"
+            data-mobile="./img/usa-health-advisors-mobile-portfolio.webp"
+            data-desktop="./img/usa-health-advisors-portfolio.webp"
+            alt="USA Health Advisors"
+            class="responsive-portfolio-img absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 ease-linear group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="550"
+          />
         </div>
       </div>
     </section>
@@ -1755,35 +2885,51 @@
 
             <input
               type="text"
+              name="name"
               placeholder="Name*"
               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              required
+              aria-label="Name"
+              autocomplete="name"
             />
             <input
               type="email"
+              name="email"
               placeholder="Email*"
               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              required
+              aria-label="Email"
+              autocomplete="email"
             />
             <input
               type="text"
+              name="company"
               placeholder="Company"
               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              aria-label="Company"
+              autocomplete="organization"
             />
             <input
               type="text"
+              name="role"
               placeholder="Role"
               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 placeholder:text-gray-400"
+              aria-label="Role"
+              autocomplete="organization-title"
             />
 
             <!-- Project Type -->
             <div class="relative">
               <select
+                name="project-type"
                 class="w-full p-3 pr-10 border border-gray-300 rounded-lg bg-gray-50 text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
+                aria-label="Project Type"
               >
                 <option value="" disabled selected>Project Type</option>
-                <option>Web Development</option>
-                <option>Mobile App Development</option>
-                <option>UI/UX Design</option>
-                <option>Branding</option>
+                <option value="web-development">Web Development</option>
+                <option value="mobile-app">Mobile App Development</option>
+                <option value="ui-ux">UI/UX Design</option>
+                <option value="branding">Branding</option>
               </select>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1792,6 +2938,7 @@
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 stroke-width="2"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -1804,12 +2951,14 @@
             <!-- Budget -->
             <div class="relative">
               <select
+                name="budget"
                 class="w-full p-3 pr-10 border border-gray-300 rounded-lg bg-gray-50 text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 appearance-none"
+                aria-label="Budget"
               >
                 <option value="" disabled selected>Budget</option>
-                <option>$1,000 – $5,000</option>
-                <option>$5,000 – $10,000</option>
-                <option>$10,000 – $25,000</option>
+                <option value="1k-5k">$1,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k-25k">$10,000 – $25,000</option>
               </select>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1818,6 +2967,7 @@
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 stroke-width="2"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -1830,13 +2980,14 @@
             <button
               type="submit"
               class="w-full py-3 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-[8px] transition duration-300"
+              aria-label="Submit contact form"
             >
               Submit
             </button>
             <div class="flex justify-start items-center mt-4">
               <img
                 src="./img/shield-svgrepo-com 1.svg"
-                alt="lock"
+                alt="Security shield icon"
                 class="inline-block mr-2"
                 loading="lazy"
                 width="20"
@@ -1852,31 +3003,9 @@
       </div>
     </section>
 
+    <!-- Optimized JavaScript - Critical scripts inline, non-critical deferred -->
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const cursor = document.getElementById("cursorBadge");
-        const section = document.getElementById("caseSection");
-
-        if (!cursor || !section) return;
-
-        // Track mouse position and update cursor position immediately (pixel-perfect)
-        section.addEventListener("mousemove", (e) => {
-          cursor.style.left = `${e.clientX}px`;
-          cursor.style.top = `${e.clientY}px`;
-        });
-
-        // Show cursor when hovering section
-        section.addEventListener("mouseenter", () => {
-          cursor.style.opacity = "1";
-        });
-
-        // Hide cursor when leaving section
-        section.addEventListener("mouseleave", () => {
-          cursor.style.opacity = "0";
-        });
-      });
-
-      // Responsive Portfolio Images Switcher
+      // Critical: Responsive Portfolio Images Switcher - runs immediately
       function switchResponsiveImages() {
         const images = document.querySelectorAll(".responsive-portfolio-img");
         const isMobile = window.innerWidth <= 767;
@@ -1893,14 +3022,52 @@
         });
       }
 
-      // Run on page load
+      // Run immediately for faster image switching
       switchResponsiveImages();
 
       // Run on window resize (with debounce for performance)
       let resizeTimer;
-      window.addEventListener("resize", () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(switchResponsiveImages, 100);
+      window.addEventListener(
+        "resize",
+        () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(switchResponsiveImages, 100);
+        },
+        { passive: true }
+      );
+
+      // Defer non-critical interactions
+      window.addEventListener("load", () => {
+        // Non-critical: Custom cursor functionality
+        const cursor = document.getElementById("cursorBadge");
+        const section = document.getElementById("caseSection");
+
+        if (cursor && section) {
+          section.addEventListener(
+            "mousemove",
+            (e) => {
+              cursor.style.left = `${e.clientX}px`;
+              cursor.style.top = `${e.clientY}px`;
+            },
+            { passive: true }
+          );
+
+          section.addEventListener(
+            "mouseenter",
+            () => {
+              cursor.style.opacity = "1";
+            },
+            { passive: true }
+          );
+
+          section.addEventListener(
+            "mouseleave",
+            () => {
+              cursor.style.opacity = "0";
+            },
+            { passive: true }
+          );
+        }
       });
     </script>
   </body>
