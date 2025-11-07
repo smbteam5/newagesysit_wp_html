@@ -127,28 +127,28 @@
     }
     /* Remove left border from first column cards at all screen sizes */
     /* Mobile: first card (single column) */
-    @media (max-width: 567px) {
+    /* @media (max-width: 567px) {
       .gradient-border-golang-mob:first-child:after,
       .grid > div:first-child.gradient-border-golang-mob:after {
         display: none !important;
       }
-    }
+    } */
 
     /* Tablet: first 2 cards (2 columns) - remove from odd cards (1st, 3rd, 5th, etc) */
-    @media (min-width: 640px) and (max-width: 1023px) {
+    /* @media (min-width: 640px) and (max-width: 1023px) {
       .gradient-border-golang-md:nth-child(odd)::after,
       .grid > div:nth-child(odd).gradient-border-golang-md::after {
         display: none !important;
       }
-    }
+    } */
 
     /* Desktop: first 3 cards (3 columns) - remove from every 3n+1 card (1st, 4th, 7th) */
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
       .gradient-border-golang:nth-child(3n + 1):after,
       .grid > div:nth-child(3n + 1).gradient-border-golang:after {
         display: none !important;
       }
-    }
+    } */
   </style>
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
@@ -980,7 +980,7 @@
             Get vetted, experienced Golang programmers to build fast and scalable applications.
           </p>
           <a
-            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-4 pl-5 pr-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-4 pl-5 pr-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden z-10"
           >
             Book Your Free Consultation
             <img
@@ -1856,10 +1856,10 @@
           Hire Golang Developer to Build a Futuristic Business
         </h2>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 text-left">
+        <div class="grid min-769px:grid-cols-2 min-1024px:grid-cols-3 gap-6 mt-5 text-left">
           <!-- Card 1 -->
           <div
-            class="min-h-[300px] p-8 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md"
+            class="min-h-[300px] p-8  "
           >
             <img src="./img/f1.svg" alt="Golang AI" class="w-10 h-10 mb-4" />
             <h3 class="text-[24px] font-[400] mb-2">Golang AI Development</h3>
@@ -1895,7 +1895,7 @@
 
           <!-- Card 4 -->
           <div
-            class="min-h-[300px] p-8 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md"
+            class="min-h-[300px] p-8  gradient-border-golang-mob gradient-border-golang-md"
           >
             <img src="./img/f4.svg" alt="Microservices" class="w-10 h-10 mb-4" />
             <h3 class="text-[24px] font-[400] mb-2">Golang Microservices Development</h3>
@@ -1931,7 +1931,7 @@
 
           <!-- Card 7 -->
           <div
-            class="min-h-[300px] p-8 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md"
+            class="min-h-[300px] p-8  gradient-border-golang-mob gradient-border-golang-md"
           >
             <img src="./img/f7.svg" alt="Team Augmentation" class="w-10 h-10 mb-4" />
             <h3 class="text-[24px] font-[400] mb-2">Golang Team Augmentation</h3>

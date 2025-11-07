@@ -14839,7 +14839,7 @@ footer ul li {
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 768px) {
   .gradient-border-golang-mob {
     position: relative;
   }
@@ -15411,18 +15411,19 @@ footer ul li {
   overflow: unset !important;
 }
 
-.flexible-border-golang {
-  position: relative;
-}
+@media(min-width: 768px) {
+  .flexible-border-golang {
+    position: relative;
+  }
 
-.flexible-border-golang::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
+  .flexible-border-golang::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
     90deg,
     #000000 0%,
     rgba(255, 255, 255, 0.619) 45%,
@@ -15430,9 +15431,8 @@ footer ul li {
     rgba(255, 255, 255, 0.611) 55%,
     #000000 100%
   );
-}
+  }
 
-@media (min-width: 768px) {
   .flexible-border-react {
     position: relative;
   }
@@ -21304,6 +21304,12 @@ footer ul li {
   }
 }
 
+@media (min-width: 769px) {
+  .min-769px\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 992px) {
   .min-992px\:bottom-\[-10px\] {
     bottom: -10px;
@@ -21649,6 +21655,10 @@ footer ul li {
 
   .min-1024px\:max-w-\[calc\(100\%-200px\)\] {
     max-width: calc(100% - 200px);
+  }
+
+  .min-1024px\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .min-1024px\:flex-row {
