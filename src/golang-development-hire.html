@@ -104,28 +104,27 @@
       margin-top: 20px;
     }
 
-    /* Hide section below 1500px, show above 1500px */
-    .section-1500 {
-      display: none;
-    }
-
-    @media (min-width: 1400px) {
-      .section-1500 {
-        display: block;
-      }
-    }
-
-    /* Show section only below 1500px, hide above 1500px */
-    .section-below-1500 {
+    /* Show section only below 800px, hide above 800px */
+    .section-below-800 {
       display: block;
     }
 
-    @media (min-width: 1400px) {
-      .section-below-1500 {
+    @media (min-width: 800px) {
+      .section-below-800 {
         display: none;
       }
     }
 
+    /* Show section only above 800px, hide below 800px */
+    .section-above-800 {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      .section-above-800 {
+        display: block;
+      }
+    }
     /* Remove left border from first column cards at all screen sizes */
     /* Mobile: first card (single column) */
     @media (max-width: 567px) {
@@ -1988,7 +1987,7 @@
       </div>
 
       <!-- Content -->
-      <div class="container mx-auto px-6 relative z-10 text-center max-w-3xl">
+      <div class="container mx-auto px-6 relative z-10 text-center max-w-3xl pt-0">
         <h2
           class="text-3xl md:text-4xl font-semibold mb-6"
           style="
@@ -2112,10 +2111,27 @@
       </div>
     </section>
 
-    <div
-      class="mt-5 section-1500"
-      style="background-image: url('./img/wp.webp'); object-fit: contain; padding-top: 20px"
+    <section
+      class="section-above-800 relative text-center overflow-hidden pb-5"
+      style="padding: 60px"
     >
+      <!-- Background Image Fixed -->
+      <div class="absolute inset-0 -z-10">
+        <img
+          src="./img/gl.webp"
+          alt="Background"
+          class="w-full h-full object-cover object-center fixed"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
+        />
+      </div>
       <h2
         class="text-[28px] md:text-[26px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
       >
@@ -2128,81 +2144,18 @@
         are committed to delivering innovative yet consistent results to your business while
         ensuring security.
       </p>
-    </div>
-
-    <section class="relative text-center overflow-hidden bg-center py-16 px-6 section-below-1500">
-      <div class="flex flex-col items-center gap-8 relative p-8 md:p-16 max-w-4xl mx-auto">
-        <div class="mt-5">
-          >
-          <h2
-            class="text-[28px] md:text-[26px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
-          >
-            Why Hire Golang Developers from Us?
-          </h2>
-          <p class="text-gray-400 max-w-5xl mx-auto text-base leading-relaxed">
-            As a reliable name in the web and mobile app development industry, NewAgeSysIT has been
-            earmarked for helping businesses hire Golang programmers who craft efficient,
-            quality-centric, and reliable applications. With a client-focused approach, our
-            developers are committed to delivering innovative yet consistent results to your
-            business while ensuring security.
-          </p>
-        </div>
-
-        <div class="max-w-xs pb-10">
-          <img src="./img/br1.webp" alt="Zero Risk" class="mb-4 ml-auto" />
-        </div>
-        <!-- Item 1 -->
-        <div class="w-full max-w-md">
-          <img src="./img/risk1.svg" alt="Zero Risk" class="mb-4 mx-auto w-8 h-8" />
-          <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2 pb-2">Zero Risk</h2>
-          <p class="text-gray-400 text-sm text-center">
-            Flexible contracts with absolutely no termination costs involved.
-          </p>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="w-full max-w-md">
-          <img src="./img/risk2.svg" alt="Pre-Vetted" class="mb-4 mx-auto w-8 h-8" />
-          <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Pre-Vetted Developers</h2>
-          <p class="text-gray-400 text-sm text-center">
-            All our developers are pre-vetted and have senior-level experience.
-          </p>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="w-full max-w-md">
-          <img src="./img/risk3.svg" alt="Hire Fast" class="mb-4 mx-auto w-8 h-8" />
-          <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Hire Fast</h2>
-          <p class="text-gray-400 text-sm text-center">
-            We help you find a perfect match in 2 weeks or sometimes even less.
-          </p>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="w-full max-w-md">
-          <img src="./img/risk4.svg" alt="Cost Effective" class="mb-4 mx-auto w-8 h-8" />
-          <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Cost-Effective</h2>
-          <p class="text-gray-400 text-sm text-center">
-            No expensive recruiting weeks, so you can save up to 40%.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="relative text-center overflow-hidden bg-center bg-no-repeat pb-5 section-1500"
-      style="
-        background-image: url('./img/br3.webp');
-        background-size: 100%;
-        object-fit: contain;
-        padding: 60px;
-      "
-    >
       <!-- 3-column layout -->
       <div class="grid grid-cols-1 md:grid-cols-3 items-start gap-8 relative p-16">
         <!-- Left Side -->
         <div class="flex flex-col gap-10 items-end text-right">
-          <div class="max-w-xs pb-10">
+          <div
+            class="max-w-xs pb-10"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+              border-image-slice: 1;
+            "
+          >
             <img src="./img/risk1.svg" alt="Zero Risk" class="mb-4 ml-auto w-8 h-8" />
             <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Zero Risk</h2>
             <p class="text-gray-400 text-sm text-right">
@@ -2226,7 +2179,7 @@
         <div
           class="flex flex-col items-center justify-center relative min-h-[200px] md:min-h-[300px]"
         >
-          <!-- Empty div to preserve spacing -->
+          <img src="./img/gl2.webp" alt="Why Hire Golang Developers" class="w-full max-w-md" />
         </div>
 
         <!-- Right Side -->
@@ -2255,6 +2208,102 @@
             />
             <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Cost-Effective</h2>
             <p class="text-gray-400 text-sm min-1510px:text-left text-center">
+              No expensive recruiting <br />weeks, so you can save <br />up to 40%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-below-800">
+      <div class="mt-5 section-800 p-5">
+        <h2
+          class="text-[28px] md:text-[26px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
+        >
+          Why Hire Golang Developers from Us?
+        </h2>
+        <p class="text-gray-400 max-w-5xl mx-auto text-base leading-relaxed">
+          As a reliable name in the web and mobile app development industry, NewAgeSysIT has been
+          earmarked for helping businesses hire Golang programmers who craft efficient,
+          quality-centric, and reliable applications. With a client-focused approach, our developers
+          are committed to delivering innovative yet consistent results to your business while
+          ensuring security.
+        </p>
+      </div>
+      <!-- 3-column layout -->
+
+      <div
+        class="flex flex-col items-center justify-center relative min-h-[200px] md:min-h-[300px]"
+        style="padding: 50px 0; overflow: hidden"
+      >
+        <img
+          src="./img/gl.webp"
+          style="position: absolute; z-index: -1; height: 174%; width: 181%"
+        />
+        <img src="./img/gl2.webp" alt="Why Hire Golang Developers" class="w-full max-w-md" />
+      </div>
+      <div <div class="flex flex-col items-start gap-8 relative p-16">
+        <!-- Right Side -->
+        <div class="flex flex-col gap-10 text-left">
+          <div
+            class="max-w-xs pb-10"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
+            "
+          >
+            <img src="./img/risk1.svg" alt="Zero Risk" class="mb-4 w-8 h-8" />
+            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Zero Risk</h2>
+            <p class="text-gray-400 text-sm text-left">
+              Flexible contracts with <br />
+              absolutely no termination <br />
+              costs involved.
+            </p>
+          </div>
+
+          <div
+            class="max-w-xs pb-10"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
+            "
+          >
+            <img src="./img/risk2.svg" alt="Pre-Vetted" class="mb-4 w-8 h-8" />
+            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Pre-Vetted Developers</h2>
+            <p class="text-gray-400 text-sm text-left">
+              All our developers are pre- <br />
+              vetted and have senior-level <br />experience.
+            </p>
+          </div>
+          <div
+            class="max-w-xs pb-10"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
+            "
+          >
+            <img src="./img/risk3.svg" alt="Hire Fast" class="mb-4 w-8 h-8" />
+            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Hire Fast</h2>
+            <p class="text-gray-400 text-sm text-left">
+              We help you find a perfect <br />match in 2 weeks or <br />
+              sometimes even less.
+            </p>
+          </div>
+
+          <div
+            class="max-w-xs pb-10"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
+            "
+          >
+            <img src="./img/risk4.svg" alt="Cost Effective" class="mb-4 w-8 h-8" />
+            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2">Cost-Effective</h2>
+            <p class="text-gray-400 text-sm text-left">
               No expensive recruiting <br />weeks, so you can save <br />up to 40%.
             </p>
           </div>
