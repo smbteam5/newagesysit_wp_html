@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test - Calendly Popover</title>
+
+  <!-- Tailwind CDN for quick demo; remove in production if using compiled tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- (Removed Calendly) styles; using custom calendar UI below -->
+
+  <style>
+    /* Small visual tweak for the demo scrollbar inside the modal */
+    .calendly-scroll::-webkit-scrollbar { width: 8px; }
+    .calendly-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 999px; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-black text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <nav class="flex items-center gap-6">
+          <a class="text-sm hover:underline" href="#">Portfolio</a>
+          <a class="text-sm hover:underline" href="#">Hire</a>
+          <a class="text-sm hover:underline" href="#">Blog</a>
+          <a class="text-sm hover:underline" href="#">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button class="bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-full">GET A QUOTE</button>
+
+          <!-- Book a call button (opens Calendly popover) -->
+          <div class="relative">
+            <!-- <button id="book-call-btn" class="flex items-center gap-2 bg-white text-black rounded-lg px-4 py-2 shadow hover:shadow-md">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3M16 7V3M3 11h18M21 21H3a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z"/></svg>
+              <span class="text-sm font-medium">BOOK A CALL</span>
+            </button> -->
+<form id="form" action="javascript:showCalendly()" autocomplete="off">
+                
+
+                <div>
+                    <input type="submit" value="Submit Form" id="submit">
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h1 class="text-3xl font-bold mb-4">Calendly Popover Demo</h1>
+    <p class="text-gray-600">Click the "BOOK A CALL" button in the navbar to open a Calendly popover (demo).</p>
+  </main>
+
+  <!-- Popover (anchored to the BOOK A CALL button) -->
+  <div id="calendly-popover" class="absolute z-50 hidden" style="top:0;left:0;">
+
+    <!-- Popover card (wider so Calendly shows calendar + time slots side-by-side) -->
+    <div id="calendly-card" class="relative w-[900px] bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 sm:p-6 calendly-scroll" style="max-height:80vh; overflow:auto;">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-lg font-semibold">Select a Date & Time</h3>
+          <button id="calendly-close" class="text-gray-500 hover:text-gray-700">
+            <span class="sr-only">Close</span>
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Custom calendar + time slots (left calendar, right time list) -->
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- Left: Calendar month grid -->
+          <div class="bg-white">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <button id="prev-month" class="p-2 rounded hover:bg-gray-100">◀</button>
+                <div class="text-base font-semibold" id="month-label">July 2019</div>
+                <button id="next-month" class="p-2 rounded hover:bg-gray-100">▶</button>
+              </div>
+              <div class="text-sm text-gray-500" id="weekday-label">Tuesday, July 16</div>
+            </div>
+
+            <div class="grid grid-cols-7 gap-2 text-center text-xs text-gray-500 mb-2">
+              <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
+            </div>
+
+            <div id="days-grid" class="grid grid-cols-7 gap-2">
+              <!-- days injected by JS -->
+            </div>
+          </div>
+
+          <!-- Right: time slots list -->
+          <div class="bg-white p-2 rounded">
+            <div class="mb-2 text-sm text-gray-600">Available times</div>
+            <div id="times-list" class="flex flex-col gap-3">
+              <!-- times injected by JS -->
+            </div>
+
+            <div class="mt-4">
+              <button id="confirm-btn" class="w-full py-2 rounded bg-blue-100 text-blue-700 font-semibold disabled:opacity-50" disabled>Confirm</button>
+            </div>
+
+            <div class="mt-4 text-xs text-gray-500 flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+              <div id="timezone-label">Eastern Time - US & Canada (7:18pm)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- no external widget script - using native JS for calendar UI -->
+
+  <script>
+    // Popover logic: position the popover under the BOOK A CALL button and handle outside clicks
+    const openBtn = document.getElementById('book-call-btn');
+    const popover = document.getElementById('calendly-popover');
+    const popoverCard = document.getElementById('calendly-card');
+    const closeBtn = document.getElementById('calendly-close');
+
+    function openPopover() {
+      // position the popover under the button and align the popover's RIGHT edge
+      // with the button's RIGHT edge, but keep it inside the viewport.
+      const rect = openBtn.getBoundingClientRect();
+  const popWidth = popoverCard.offsetWidth || 900;
+      const gap = 8; // space between button and popover
+
+      // desired left so popover.right === button.right
+      let left = rect.right + window.scrollX - popWidth;
+
+      // keep a small page margin (12px)
+      const pageMargin = 12 + window.scrollX;
+      if (left < pageMargin) left = pageMargin;
+
+      // ensure it doesn't overflow the right edge either
+      const maxLeft = window.scrollX + window.innerWidth - popWidth - 12;
+      if (left > maxLeft) left = maxLeft;
+
+      const top = rect.bottom + window.scrollY + gap;
+
+      popover.style.left = `${left}px`;
+      popover.style.top = `${top}px`;
+
+      popover.classList.remove('hidden');
+
+      // focus close button for accessibility
+      closeBtn.focus();
+    }
+
+    function closePopover() {
+      popover.classList.add('hidden');
+    }
+
+    openBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // toggle
+      if (popover.classList.contains('hidden')) openPopover();
+      else closePopover();
+    });
+
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closePopover();
+    });
+
+    // Close when clicking outside the popover or the button
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (popover.classList.contains('hidden')) return;
+      if (popover.contains(target) || openBtn.contains(target)) return;
+      closePopover();
+    });
+
+    // Reposition on resize and scroll while popover is open
+    window.addEventListener('resize', () => { if (!popover.classList.contains('hidden')) openPopover(); });
+    window.addEventListener('scroll', () => { if (!popover.classList.contains('hidden')) openPopover(); });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePopover();
+      }
+    });
+
+    // ---------- Custom calendar + times logic ----------
+    const daysGrid = document.getElementById('days-grid');
+    const monthLabel = document.getElementById('month-label');
+    const weekdayLabel = document.getElementById('weekday-label');
+    const prevBtn = document.getElementById('prev-month');
+    const nextBtn = document.getElementById('next-month');
+    const timesList = document.getElementById('times-list');
+    const confirmBtn = document.getElementById('confirm-btn');
+    const timezoneLabel = document.getElementById('timezone-label');
+
+    let now = new Date();
+    let viewDate = new Date(now.getFullYear(), now.getMonth(), 1);
+    let selectedDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    let selectedSlot = null;
+
+    // Example static set of time slots (in 30-min increments). Could be fetched per-date.
+    const exampleSlots = ['10:30am','11:00am','11:30am','12:00pm','12:30pm','1:00pm','1:30pm','2:00pm'];
+
+    function formatMonthYear(d) {
+      return d.toLocaleString(undefined, { month: 'long', year: 'numeric' });
+    }
+
+    function formatWeekdayFull(d) {
+      return d.toLocaleString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+    }
+
+    function renderCalendar() {
+      monthLabel.textContent = formatMonthYear(viewDate);
+      weekdayLabel.textContent = formatWeekdayFull(selectedDate);
+
+      // clear grid
+      daysGrid.innerHTML = '';
+
+      const year = viewDate.getFullYear();
+      const month = viewDate.getMonth();
+      const firstDayIndex = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      // add blank slots for previous month days
+      for (let i = 0; i < firstDayIndex; i++) {
+        const el = document.createElement('div');
+        el.className = 'h-10';
+        daysGrid.appendChild(el);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const date = new Date(year, month, d);
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'h-10 w-10 rounded-full flex items-center justify-center text-sm';
+        btn.textContent = String(d);
+
+        // disable past dates
+        const isPast = new Date(date.getFullYear(), date.getMonth(), date.getDate()) < new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        if (isPast) {
+          btn.classList.add('text-gray-300');
+          btn.disabled = true;
+        } else {
+          btn.classList.add('text-gray-700','hover:bg-blue-50');
+        }
+
+        // highlight selected
+        if (selectedDate.getFullYear() === date.getFullYear() && selectedDate.getMonth() === date.getMonth() && selectedDate.getDate() === date.getDate()) {
+          btn.classList.add('bg-blue-600','text-white');
+        }
+
+        btn.addEventListener('click', () => {
+          selectedDate = date;
+          selectedSlot = null;
+          renderCalendar();
+          renderSlots();
+        });
+
+        daysGrid.appendChild(btn);
+      }
+    }
+
+    function renderSlots() {
+      timesList.innerHTML = '';
+      // create a labelled header with selected date
+      const header = document.createElement('div');
+      header.className = 'text-sm font-medium mb-1';
+      header.textContent = formatWeekdayFull(selectedDate);
+      timesList.appendChild(header);
+
+      exampleSlots.forEach((t) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'text-left px-4 py-3 border rounded hover:bg-gray-50';
+        b.textContent = t;
+        b.addEventListener('click', () => {
+          selectedSlot = t;
+          // update selection visuals
+          Array.from(timesList.querySelectorAll('button')).forEach(el => el.classList.remove('bg-gray-800','text-white'));
+          b.classList.add('bg-gray-800','text-white');
+          confirmBtn.disabled = false;
+          confirmBtn.classList.remove('bg-blue-100','text-blue-700');
+          confirmBtn.classList.add('bg-blue-600','text-white');
+        });
+        timesList.appendChild(b);
+      });
+
+      // reset confirm
+      confirmBtn.disabled = true;
+      confirmBtn.classList.remove('bg-blue-600','text-white');
+      confirmBtn.classList.add('bg-blue-100','text-blue-700');
+    }
+
+    prevBtn.addEventListener('click', () => { viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()-1, 1); renderCalendar(); });
+    nextBtn.addEventListener('click', () => { viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 1); renderCalendar(); });
+
+    confirmBtn.addEventListener('click', () => {
+      if (!selectedSlot) return;
+      // for demo we'll alert and close popover
+      alert(`Booked: ${formatWeekdayFull(selectedDate)} at ${selectedSlot}`);
+      closePopover();
+    });
+
+    // timezone label (simple local timezone display)
+    timezoneLabel.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local Time';
+
+    // initial render
+    renderCalendar();
+    renderSlots();
+  </script>
+
+</body>
+</html>
