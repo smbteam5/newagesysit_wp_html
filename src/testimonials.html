@@ -1857,10 +1857,14 @@
           <div
             class="text-center flex justify-center mt-[30px] bnr-btn"
           >
-            <button class="relative group p-[1px] rounded-full text-white font-semibold text-[16px] md:text-[18px] leading-[25px] cursor-pointer get-free-btn duration-300 overflow-hidden">
+            <button class="relative group p-[1px] rounded-full text-white font-[500] lg:font-semibold text-[16px] md:text-[18px] leading-[25px] cursor-pointer get-free-btn duration-300 overflow-hidden">
             <span class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141b3b00] to-[#D5DBFF]"></span>
-            <span class="relative flex items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left">
+            <span class="relative  items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left hidden md:flex">
               Lets Explore Partnership Opportunity
+              <img src="./images/arrow-up-right.svg" alt="arrow-right" class="!w-6 !h-6">
+            </span>
+            <span class="relative  items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left flex md:hidden">
+              Partnership Opportunity
               <img src="./images/arrow-up-right.svg" alt="arrow-right" class="!w-6 !h-6">
             </span>
           </button>
@@ -1874,7 +1878,7 @@
         width="1920"
         height="1080"
         fetchpriority="high"
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom"
+        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom min-1680px:object-[center_90px]"
       />
      
 
@@ -2812,9 +2816,9 @@
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv1.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> <img src="./img/tlv6.webp" alt="" class="w-full h-full"></div>
               <video class="card_vid" muted="muted" autoplay loop>
-                <source src="./video/t1.mp4" type="video/webm">
+                <source src="./video/t6.webm" type="video/webm">
                 Your browser does not support HTML5 video.
               </video>
               <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
@@ -3320,7 +3324,7 @@
     </section>
 
     <section
-      class="bg-[url('./img/bg-cta-cta.webp')] bg-cover bg-center text-white relative bg-cta-form"
+      class="bg-[url('./img/bg-cta-foo.webp')] bg-cover bg-center text-white relative bg-cta-form"
     >
       <div
         class="h-full w-full absolute left-0 top-0 bg-[conic-gradient(from_233.5deg_at_100%_0%,_#7279FF_0deg,_#4361EE_169.4deg,_#7279FF_360deg)] opacity-[.85]"
@@ -3332,9 +3336,9 @@
           >
             <div class="ld_left_wrap text-white">
               <h2
-                class="text-[28px] md:text-[36px] min-992px:text-[50px] font-medium text-white md:mb-[15px] leading-[50px] mb-4"
+                class="text-[28px] md:text-[36px] min-992px:text-[50px] font-medium text-white md:mb-[15px] md:leading-[50px] mb-4 leading-normal"
               >
-                Let’s Build Your Next Big <br />
+                Let’s Build Your Next Big <br class="hidden md:block"/>
                 Thing — Together!
               </h2>
               <p class="text-[#DEE3E9] md:text-[24px] text-[18px]">
@@ -3342,7 +3346,7 @@
                 proven results. From concept to launch, we deliver innovation
                 with precision and reliability.
               </p>
-              <div class="flex mb-10 sm:mb-12 mt-10">
+              <div class="flex mb-10 sm:mb-12 mt-10 max-992px:justify-center">
                 <a
                   class="bg-[#FF5B14] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
                 >

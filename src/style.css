@@ -5946,6 +5946,10 @@ video {
   background-image: url('./img/bg-cta-cta.webp');
 }
 
+.bg-\[url\(\'\.\/img\/bg-cta-foo\.webp\'\)\] {
+  background-image: url('./img/bg-cta-foo.webp');
+}
+
 .bg-\[url\(\'\.\/img\/bg-dd\.jpg\'\)\] {
   background-image: url('./img/bg-dd.jpg');
 }
@@ -15611,20 +15615,6 @@ footer ul li {
   height: 100%;
 }
 
-.video_card_inner::before {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.37) 44.81%,
-    #000000 91.15%
-  );
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  opacity: 0.8;
-}
-
 .video_card_inner .card_vid {
   width: 100%;
   -o-object-fit: cover;
@@ -21978,12 +21968,12 @@ footer ul li {
     width: 100%;
   }
 
-  .max-1024px\:max-w-\[250px\] {
-    max-width: 250px;
-  }
-
   .max-1024px\:max-w-\[150px\] {
     max-width: 150px;
+  }
+
+  .max-1024px\:max-w-\[250px\] {
+    max-width: 250px;
   }
 
   .max-1024px\:flex-col {
@@ -22036,6 +22026,10 @@ footer ul li {
 
   .max-992px\:flex-col {
     flex-direction: column;
+  }
+
+  .max-992px\:justify-center {
+    justify-content: center;
   }
 
   .max-992px\:gap-2 {
