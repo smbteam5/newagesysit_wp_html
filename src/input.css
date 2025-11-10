@@ -5921,3 +5921,14 @@ footer ul li {
   z-index: 9;
   transition: all 0.5s;
 }
+
+.gradient-border-right-android {
+  border-image-source: linear-gradient(90deg, rgba(29, 55, 180, 0.7) 49.52%, rgba(4, 3, 3, 0.7) 100%);
+  border-image-slice: 1;
+}
+
+@media (min-width: 1024px) {
+  .gradient-border-right-android {
+    border-image-source: linear-gradient(90deg, rgba(4, 3, 3, 0.7) 0%, rgba(29, 55, 180, 0.7) 100%);
+  }
+}
