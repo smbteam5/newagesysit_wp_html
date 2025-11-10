@@ -334,7 +334,7 @@
     </div>
   </section>
 
-    <!-- Other category panels (dummy card with heading) -->
+  <!-- Other category panels (dummy card with heading) -->
   <section id="panel-automobile"
     class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20">
     <div class="container mx-auto">
@@ -474,8 +474,7 @@
         </div>
       </div>
   </section>
-  <section id="panel-hr"
-   class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20">
+  <section id="panel-hr" class="relative w-full bg-neutral-950 py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 lg:px-20">
     <div class="container mx-auto">
       <div class="relative max-w-[1440px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center">
@@ -755,9 +754,7 @@
   <!-- All content wrapper (hidden when Automobile is active) -->
   <div id="all-content">
     <!-- Outer wrapper ensures true full width -->
- <section
-  class="relative w-full overflow-hidden rounded-[24px] md:rounded-[16px] bg-black hero-skeleton"
->
+   <section class="relative w-full overflow-hidden rounded-[24px] md:rounded-[16px] bg-black hero-skeleton">
   <!-- Background image -->
   <img
     src="./img/WhipFlip-portfolio.webp"
@@ -772,11 +769,14 @@
     onload="this.parentElement.classList.remove('hero-skeleton')"
   />
 
-  <!-- Figma-like bottom shadow + gradient -->
+  <!-- Subtle inset shadow layer (separate from gradient) -->
   <div
-    class="absolute inset-0 pointer-events-none
-           shadow-[inset_27px_-100px_88.4px_0px_#000000D9]
-           bg-gradient-to-t from-black/30 via-black/10 to-transparent"
+    class="absolute inset-0 pointer-events-none shadow-[inset_27px_-100px_88.4px_0px_#000000D9]"
+  ></div>
+
+  <!-- Gradient overlay (optional for readability) -->
+  <div
+    class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-black/10 to-transparent"
   ></div>
 
   <!-- Content -->
@@ -799,6 +799,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -908,7 +909,7 @@
               class="text-[35px] sm:text-[36px] md:text-[44px] lg:text-[50px] text-[#FFFFFF] font-semibold leading-tight">
               We deliver on time, in days and weeks
               <br />
-              <span class="font-normal text-[#FFFFFF] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px]">—not
+              <span class="font-semibold text-[#FFFFFF] text-[35px] sm:text-[36px] md:text-[44px] lg:text-[50px]">—not
                 months.</span>
             </h2>
 
@@ -999,7 +1000,7 @@
             class="relative flex flex-col md:flex-row justify-between items-start md:items-center bg-black rounded-[24px] py-8 sm:py-10 md:py-12 px-6 sm:px-8 md:px-12 lg:px-16 z-10 gap-6 md:gap-8">
             <!-- Left Content -->
             <div class="text-white space-y-3 sm:space-y-4 text-left md:text-left w-full md:w-auto">
-              <h2 class="text-[28px] md:text-[36px] font-semibold text-[#FFFFFF] leading-tight">
+              <h2 class="text-[28px] md:text-[36px] font-medium text-[#FFFFFF] leading-tight">
                 Build Gen-AI-ready Solutions
               </h2>
               <p class="text-[#FFFFFF] font-manrope font-medium text-[17px] max-w-full md:max-w-[500px] opacity-80">
