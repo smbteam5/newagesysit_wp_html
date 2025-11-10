@@ -755,59 +755,52 @@
   <!-- All content wrapper (hidden when Automobile is active) -->
   <div id="all-content">
     <!-- Outer wrapper ensures true full width -->
-    <section
-      class="relative w-full min-h-[500px] md:min-h-[542px] overflow-hidden bg-black rounded-[24px] md:rounded-[16px] hero-skeleton">
-      <!-- Background image -->
-      <img src="./img/WhipFlip-portfolio.webp" data-mobile="./img/whipflip-mobile-portfolio.webp"
-        data-desktop="./img/WhipFlip-portfolio.webp" alt="Whipflip Case Study - Automating transporting company process"
-        class="responsive-portfolio-img w-full h-full mx-auto object-cover object-center sm:object-top"
-        fetchpriority="high" width="1920" height="542" decoding="async"
-        onload="this.parentElement.classList.remove('hero-skeleton')" />
+ <section
+  class="relative w-full overflow-hidden rounded-[24px] md:rounded-[16px] bg-black hero-skeleton"
+>
+  <!-- Background image -->
+  <img
+    src="./img/WhipFlip-portfolio.webp"
+    data-mobile="./img/whipflip-mobile-portfolio.webp"
+    data-desktop="./img/WhipFlip-portfolio.webp"
+    alt="Whipflip Case Study - Automating transporting company process"
+    class="responsive-portfolio-img w-full h-auto object-cover object-center sm:object-top brightness-[1.15] contrast-[1.05]"
+    fetchpriority="high"
+    width="1920"
+    height="542"
+    decoding="async"
+    onload="this.parentElement.classList.remove('hero-skeleton')"
+  />
 
-      <!-- Gradient overlay -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+  <!-- Figma-like bottom shadow + gradient -->
+  <div
+    class="absolute inset-0 pointer-events-none
+           shadow-[inset_27px_-100px_88.4px_0px_#000000D9]
+           bg-gradient-to-t from-black/30 via-black/10 to-transparent"
+  ></div>
 
-      <!-- Content container (positioned precisely like Figma) -->
-      <div
-        class="absolute inset-x-4 sm:left-[60px] sm:right-[60px] bottom-6 md:bottom-8 lg:bottom-[60px] flex flex-col sm:flex-row items-start sm:items-end justify-between text-white gap-4 sm:gap-6">
-        <!-- Left text -->
-        <div class="w-full sm:w-1/2">
-          <h2 class="text-[18px] sm:text-[28px] font-semibold mb-2 text-[#F5FAFE]">
-            Whip Flip
-          </h2>
-          <p class="text-[16px] md:text-[24px] opacity-90 leading-relaxed font-normal text-[#F5FAFE]">
-            Automating transporting company process by mobility and web
-            solutions
-          </p>
-        </div>
+  <!-- Content -->
+  <div
+    class="absolute inset-x-4 sm:left-[60px] sm:right-[60px]
+           bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-[60px]
+           flex flex-col sm:flex-row items-start sm:items-end justify-between text-white gap-4 sm:gap-6"
+  >
+    <div class="w-full sm:w-1/2">
+      <h2
+        class="text-[18px] sm:text-[28px] font-semibold mb-2 text-[#F5FAFE] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+      >
+        Whip Flip
+      </h2>
+      <p
+        class="text-[16px] md:text-[22px] font-normal text-[#F5FAFE]/95 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]"
+      >
+        Automating transporting company process by mobility and web solutions
+      </p>
+    </div>
+  </div>
+</section>
 
-        <!-- Right stats -->
-        <!-- <div
-          class="flex items-center gap-6 sm:gap-10 text-left sm:text-right w-full sm:w-auto"
-        >
-          <div class="flex flex-col gap-4 sm:gap-10">
-            <p
-              class="text-[32px] sm:text-[40px] font-medium leading-none text-[#FFFFFF]"
-            >
-              10k+
-            </p>
-            <p class="text-[14px] sm:text-[17px] opacity-80 font-medium">
-              Active Users
-            </p>
-          </div>
-          <div class="flex flex-col gap-4 sm:gap-10">
-            <p
-              class="text-[32px] sm:text-[40px] font-medium leading-none text-[#FFFFFF]"
-            >
-              15k+
-            </p>
-            <p class="text-[14px] sm:text-[17px] opacity-80 font-medium">
-              Total Appointments
-            </p>
-          </div>
-        </div> -->
-      </div>
-    </section>
+
 
     <!-- project L-card  -->
 
