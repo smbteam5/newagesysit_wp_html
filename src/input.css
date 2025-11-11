@@ -1894,7 +1894,7 @@ video {
 }
 
 .unique-accordion-content.shows {
-  max-height: 650px;
+  /* max-height: 650px; */
   transition: max-height 1s ease;
 }
 
@@ -3991,7 +3991,7 @@ footer ul li {
 
 @media (max-width: 767px) {
   .accordion-content-ppc.show {
-    max-height: 1500px;
+    max-height: 2500px;
     transition: max-height 1s ease;
   }
 }
@@ -5289,8 +5289,6 @@ footer ul li {
   }
 }
 
-
-
 .slider-4 .owl-nav button.owl-prev {
   background-image: url("./img/Carousel Next-blue.svg") !important;
   rotate: 180deg;
@@ -5916,7 +5914,11 @@ footer ul li {
 }
 
 .gradient-border-right-android {
-  border-image-source: linear-gradient(90deg, rgba(29, 55, 180, 0.7) 49.52%, rgba(4, 3, 3, 0.7) 100%);
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(29, 55, 180, 0.7) 49.52%,
+    rgba(4, 3, 3, 0.7) 100%
+  );
   border-image-slice: 1;
 }
 
@@ -5924,37 +5926,38 @@ footer ul li {
   .gradient-border-right-android {
     border-image-source: linear-gradient(90deg, rgba(4, 3, 3, 0.7) 0%, rgba(29, 55, 180, 0.7) 100%);
   }
-}#mobile-menu.hidden-view{
-    position: absolute;
-    width: 100%;
-    background-color: #000a1fc9;
-    backdrop-filter: blur(8px);
-    left: -100%;
-    transition: all 1s;
 }
-#mobile-menu{
-    position: absolute;
-    width: 100%;
-    background-color: #000a1fc9;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    left: 0;
-    transition: all 1s;
-    height: 100vh;
-    overflow: auto;
+#mobile-menu.hidden-view {
+  position: absolute;
+  width: 100%;
+  background-color: #000a1fc9;
+  backdrop-filter: blur(8px);
+  left: -100%;
+  transition: all 1s;
 }
-@media(max-width:1024px){
-  .dropdown{
+#mobile-menu {
+  position: absolute;
+  width: 100%;
+  background-color: #000a1fc9;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  left: 0;
+  transition: all 1s;
+  height: 100vh;
+  overflow: auto;
+}
+@media (max-width: 1024px) {
+  .dropdown {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
 
-  .dropdown-toggle.active{
+  .dropdown-toggle.active {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-color: #f3f4f6;
   }
-    .dropdown-toggle:not(.active){
+  .dropdown-toggle:not(.active) {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: transparent !important;
