@@ -77,6 +77,10 @@
         margin-top: 40px;
         padding-right: 0px !important;
       }
+      /* Smooth fade for tabbed sliders to prevent FOUC */
+      .slider-container {
+        transition: opacity 0.2s ease;
+      }
     </style>
   </head>
   <style>
@@ -1683,51 +1687,66 @@
         </section>
 
         <script>
-          // Function to switch between sliders
-          function switchSlider(slider) {
-            
-            // Hide all sliders
-            document.querySelectorAll(".slider-container").forEach(function (container) {
-              container.classList.add("hidden");
-              container.classList.remove("active");
-            });
+  function switchSlider(slider) {
+    // Hide all sliders
+    document.querySelectorAll(".slider-container").forEach((container) => {
+      container.style.opacity = "0"; // prepare for fade-out
+      container.style.visibility = "";
+      container.classList.add("hidden");
+      container.classList.remove("active");
+    });
 
-            // Reset all heading colors to gray/white
-            ["why", "how", "what"].forEach(function (item) {
-              document.getElementById(item + "-heading").style.color = "rgba(255, 255, 255, 0.5)";
-              document.getElementById(item + "-line").style.opacity = "0.5";
-            });
+    // Reset all heading colors
+    ["why", "how", "what"].forEach((item) => {
+      const heading = document.getElementById(item + "-heading");
+      const line = document.getElementById(item + "-line");
+      if (heading) heading.style.color = "rgba(255, 255, 255, 0.5)";
+      if (line) line.style.opacity = "0.5";
+    });
 
-            // Show selected slider
-            document.getElementById(slider + "-slider").classList.remove("hidden");
-            document.getElementById(slider + "-slider").classList.add("active");
+    // Show selected slider without flicker
+    const activeContainer = document.getElementById(slider + "-slider");
+    if (!activeContainer) return;
 
-            // Highlight selected heading in blue (line stays gray)
-            document.getElementById(slider + "-heading").style.color = "#8EA0F5";
-            document.getElementById(slider + "-line").style.opacity = "1";
+    // Make it participate in layout but stay invisible while Owl recalculates
+    activeContainer.style.opacity = "0";
+    activeContainer.style.visibility = "hidden";
+    activeContainer.classList.remove("hidden");
+    activeContainer.classList.add("active");
 
-            // Reinitialize the owl carousel for the active slider
-            setTimeout(function () {
-              var carouselClass = ".slider-4";
-              if (slider === "how") {
-                carouselClass = ".slider-4-how";
-              } else if (slider === "what") {
-                carouselClass = ".slider-4-what";
-              }
+    // Force Owl to recalc sizes now that it's visible
+    const $carousel = window.jQuery
+      ? window.jQuery(activeContainer).find(".owl-carousel")
+      : null;
+    if ($carousel && $carousel.length) {
+      try {
+        $carousel.trigger("invalidate.owl.carousel");
+        $carousel.trigger("refresh.owl.carousel");
+      } catch (e) {
+        // no-op if owl not yet initialized
+      }
+    }
 
-              var activeSlider = $(carouselClass);
-              if (activeSlider.length && activeSlider.data("owl.carousel")) {
-                // activeSlider.trigger("refresh.owl.carousel");
-                activeSlider.trigger("to.owl.carousel", [0, 0]); // Go to first slide
-              }
-            }, 150);
-          }
+    // Next frame: reveal smoothly
+    requestAnimationFrame(() => {
+      activeContainer.style.transition = activeContainer.style.transition || "opacity 200ms ease";
+      activeContainer.style.visibility = "visible";
+      activeContainer.style.opacity = "1";
+    });
 
-          // Set initial state
-          document.addEventListener("DOMContentLoaded", function () {
-            switchSlider("why");
-          });
-        </script>
+    // Highlight active tab
+    const activeHeading = document.getElementById(slider + "-heading");
+    const activeLine = document.getElementById(slider + "-line");
+    if (activeHeading) activeHeading.style.color = "#8EA0F5";
+    if (activeLine) activeLine.style.opacity = "1";
+  }
+
+  // Initialize first tab on page load (after everything is loaded)
+  window.addEventListener("load", function () {
+    switchSlider("why");
+  });
+</script>
+
 
         <section class="relative text-white py-10 lg:pt-15 overflow-hidden px-3">
           <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
