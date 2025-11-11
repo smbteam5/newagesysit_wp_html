@@ -77,6 +77,10 @@
         margin-top: 40px;
         padding-right: 0px !important;
       }
+      /* Smooth fade for tabbed sliders to prevent FOUC */
+      .slider-container {
+        transition: opacity 0.2s ease;
+      }
     </style>
   </head>
   <style>
@@ -125,30 +129,29 @@
         display: block;
       }
     }
-    /* Remove left border from first column cards at all screen sizes */
-    /* Mobile: first card (single column) */
-    /* @media (max-width: 567px) {
-      .gradient-border-golang-mob:first-child:after,
-      .grid > div:first-child.gradient-border-golang-mob:after {
-        display: none !important;
-      }
-    } */
-
-    /* Tablet: first 2 cards (2 columns) - remove from odd cards (1st, 3rd, 5th, etc) */
-    /* @media (min-width: 640px) and (max-width: 1023px) {
+    /* Tablet: 2 columns - remove left border from odd cards (1st, 3rd, 5th, etc) */
+    @media (min-width: 769px) and (max-width: 1023px) {
       .gradient-border-golang-md:nth-child(odd)::after,
       .grid > div:nth-child(odd).gradient-border-golang-md::after {
         display: none !important;
       }
-    } */
+    }
 
-    /* Desktop: first 3 cards (3 columns) - remove from every 3n+1 card (1st, 4th, 7th) */
-    /* @media (min-width: 1024px) {
-      .gradient-border-golang:nth-child(3n + 1):after,
-      .grid > div:nth-child(3n + 1).gradient-border-golang:after {
-        display: none !important;
+    /* Desktop: 3 columns - show right borders on 1st and 2nd columns */
+    @media (min-width: 1024px) {
+      .gradient-border-golang::after,
+      .grid > div.gradient-border-golang::after {
+        display: block !important;
       }
-    } */
+    }
+
+    /* Mobile: show bottom borders */
+    @media (max-width: 768px) {
+      .gradient-border-golang-mob::after,
+      .grid > div.gradient-border-golang-mob::after {
+        display: block !important;
+      }
+    }
   </style>
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
@@ -1089,7 +1092,7 @@
               >
                 20+
               </h4> -->
-              <img src="./img/20+.svg" class="w-[90px] mx-auto my-4" />
+              <img src="./img/30new+.svg" class="w-[90px] mx-auto my-4" />
               <p class="text-gray-400 text-[18px] mt-1">Years of Expertise</p>
             </div>
 
@@ -1128,51 +1131,22 @@
             href="#"
             class="border-[1px] border-[#f5fafec8] rounded-full px-6 py-3 text-[18px] font-medium text-[#F5FAFE] hover:bg-white/10 transition"
           >
-            Get Our Golang Development Services
+          Hire Our Golang Developers
           </a>
         </div>
       </div>
     </section>
     <div class="relative overflow-hidden text-white">
-      <div class="absolute inset-0 pointer-events-none -z-10">
-        <img
-          src="./img/why-choose-gradient.webp"
-          alt="Glow Background"
-          class="w-full h-full object-cover object-center scale-110"
-        />
+  
 
-        <!-- Bottom Left Gradient (darker edges) -->
-        <!-- <div
-          class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_bottom_left,rgba(68,88,210,0.32)_0%,rgba(0,0,0,0.72)_70%)] pointer-events-none"
-        ></div> -->
-
-        <!-- Bottom Right Gradient (darker edges) -->
-        <!-- <div
-          class="hidden lg:block absolute bottom-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_bottom_right,rgba(68,88,210,0.28)_0%,rgba(0,0,0,0.72)_70%)] pointer-events-none"
-        ></div> -->
-
-        <!-- Center Gradient (slightly darker, softer) -->
-        <!-- <div
-          class="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(68,88,210,0.18)_0%,rgba(0,0,0,0.65)_80%)] pointer-events-none"
-        ></div> -->
-      </div>
-
-      <div class="relative overflow-hidden text-white">
-        <!-- <div class="absolute inset-0 pointer-events-none -z-10"> -->
-        <!-- Center Gradient (slightly darker, softer) -->
-        <!-- <div
-          class="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(circle_at_center,rgba(68,88,210,0.18)_0%,rgba(0,0,0,0.65)_80%)] pointer-events-none backdrop-blur-md"
-        ></div> -->
-
-        <!-- </div> -->
-
-        <div class="absolute inset-0 pointer-events-none -z-10">
+        <div class="hidden md:block absolute inset-0 pointer-events-none -z-10">
           <img
             src="./img/why-choose-gradient.webp"
             alt="Glow Background"
             class="w-full h-full object-cover object-center scale-110"
           />
         </div>
+
         <h2
           class="text-[35px] md:text-[45px] mb-8 text-white text-center pt-10"
           style="
@@ -1189,12 +1163,12 @@
           Why Businesses Choose NewAgeSysIT <br />to Hire Golang Developers?
         </h2>
         <section
-          class="relative text-white pt-10 pb-20 overflow-hidden px-5 golang-sect-border-1 hidden lg:block"
+          class="relative text-white pt-10 pb-32 overflow-hidden px-5 golang-sect-border-1 hidden lg:block"
         >
           <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
 
           <div
-            class="w-full xl:w-[55%] slider-border-golang xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
+            class="w-full xl:w-[45%] slider-border-golang xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
           >
             <!-- The blur glass overlay -->
 
@@ -1211,7 +1185,7 @@
                 </h2>
                 <div
                   id="why-line"
-                  class="h-[1px] w-[50%] border-t transition-all duration-300"
+                  class="h-[1px] w-[60%] border-t transition-all duration-300"
                   style="
                     border-image-source: linear-gradient(
                       90deg,
@@ -1235,7 +1209,7 @@
                 </h2>
                 <div
                   id="how-line"
-                  class="h-[1px] w-[50%] border-t opacity-50 transition-all duration-300"
+                  class="h-[1px] w-[60%] border-t opacity-50 transition-all duration-300"
                   style="
                     border-image-source: linear-gradient(
                       90deg,
@@ -1259,7 +1233,7 @@
                 </h2>
                 <div
                   id="what-line"
-                  class="h-[1px] w-[50%] border-t opacity-50 transition-all duration-300"
+                  class="h-[1px] w-[60%] border-t opacity-50 transition-all duration-300"
                   style="
                     border-image-source: linear-gradient(
                       90deg,
@@ -1281,7 +1255,7 @@
               <div class="slider-4 owl-carousel owl-theme overflow-visible">
                 <!-- CARD 1 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-2"><strong>Only Vetted Developers</strong></h3>
@@ -1295,7 +1269,7 @@
 
                 <!-- CARD 2 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-2"><strong>Speed</strong></h3>
@@ -1309,7 +1283,7 @@
 
                 <!-- CARD 3 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-2"><strong>Time Saving</strong></h3>
@@ -1322,7 +1296,7 @@
 
                 <!-- CARD 4 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-2"><strong>Retention</strong></h3>
@@ -1340,7 +1314,7 @@
               <div class="slider-4 owl-carousel owl-theme overflow-visible">
                 <!-- CARD 1 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4">
@@ -1355,7 +1329,7 @@
 
                 <!-- CARD 2 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4"><strong>Work With Vetted Talent</strong></h3>
@@ -1371,7 +1345,7 @@
 
                 <!-- CARD 3 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4"><strong>Assured Excellence</strong></h3>
@@ -1391,7 +1365,7 @@
               <div class="slider-4 owl-carousel owl-theme overflow-visible">
                 <!-- CARD 1 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4"><strong>Only Vetted Developers</strong></h3>
@@ -1406,7 +1380,7 @@
 
                 <!-- CARD 2 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4">
@@ -1423,7 +1397,7 @@
 
                 <!-- CARD 3 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4">
@@ -1440,7 +1414,7 @@
 
                 <!-- CARD 4 -->
                 <div
-                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[280px] flex flex-col justify-between border border-[#F5FAFE]"
+                  class="bg-[#1B1D1E] text-[#F5FAFE] rounded-2xl px-8 pt-8 pb-4 text-left shadow-lg min-h-[350px] flex flex-col justify-between border border-[#F5FAFE]"
                 >
                   <div>
                     <h3 class="text-[23px] font-semibold mb-4"><strong>Time Zone Adherent</strong></h3>
@@ -1713,62 +1687,78 @@
         </section>
 
         <script>
-          // Function to switch between sliders
-          function switchSlider(slider) {
-            // Hide all sliders
-            document.querySelectorAll(".slider-container").forEach(function (container) {
-              container.classList.add("hidden");
-              container.classList.remove("active");
-            });
+  function switchSlider(slider) {
+    // Hide all sliders
+    document.querySelectorAll(".slider-container").forEach((container) => {
+      container.style.opacity = "0"; // prepare for fade-out
+      container.style.visibility = "";
+      container.classList.add("hidden");
+      container.classList.remove("active");
+    });
 
-            // Reset all heading colors to gray/white
-            ["why", "how", "what"].forEach(function (item) {
-              document.getElementById(item + "-heading").style.color = "rgba(255, 255, 255, 0.5)";
-              document.getElementById(item + "-line").style.opacity = "0.5";
-            });
+    // Reset all heading colors
+    ["why", "how", "what"].forEach((item) => {
+      const heading = document.getElementById(item + "-heading");
+      const line = document.getElementById(item + "-line");
+      if (heading) heading.style.color = "rgba(255, 255, 255, 0.5)";
+      if (line) line.style.opacity = "0.5";
+    });
 
-            // Show selected slider
-            document.getElementById(slider + "-slider").classList.remove("hidden");
-            document.getElementById(slider + "-slider").classList.add("active");
+    // Show selected slider without flicker
+    const activeContainer = document.getElementById(slider + "-slider");
+    if (!activeContainer) return;
 
-            // Highlight selected heading in blue (line stays gray)
-            document.getElementById(slider + "-heading").style.color = "#8EA0F5";
-            document.getElementById(slider + "-line").style.opacity = "1";
+    // Make it participate in layout but stay invisible while Owl recalculates
+    activeContainer.style.opacity = "0";
+    activeContainer.style.visibility = "hidden";
+    activeContainer.classList.remove("hidden");
+    activeContainer.classList.add("active");
 
-            // Reinitialize the owl carousel for the active slider
-            setTimeout(function () {
-              var carouselClass = ".slider-4";
-              if (slider === "how") {
-                carouselClass = ".slider-4-how";
-              } else if (slider === "what") {
-                carouselClass = ".slider-4-what";
-              }
+    // Force Owl to recalc sizes now that it's visible
+    const $carousel = window.jQuery
+      ? window.jQuery(activeContainer).find(".owl-carousel")
+      : null;
+    if ($carousel && $carousel.length) {
+      try {
+        $carousel.trigger("invalidate.owl.carousel");
+        $carousel.trigger("refresh.owl.carousel");
+      } catch (e) {
+        // no-op if owl not yet initialized
+      }
+    }
 
-              var activeSlider = $(carouselClass);
-              if (activeSlider.length && activeSlider.data("owl.carousel")) {
-                activeSlider.trigger("refresh.owl.carousel");
-                activeSlider.trigger("to.owl.carousel", [0, 0]); // Go to first slide
-              }
-            }, 150);
-          }
+    // Next frame: reveal smoothly
+    requestAnimationFrame(() => {
+      activeContainer.style.transition = activeContainer.style.transition || "opacity 200ms ease";
+      activeContainer.style.visibility = "visible";
+      activeContainer.style.opacity = "1";
+    });
 
-          // Set initial state
-          document.addEventListener("DOMContentLoaded", function () {
-            switchSlider("why");
-          });
-        </script>
+    // Highlight active tab
+    const activeHeading = document.getElementById(slider + "-heading");
+    const activeLine = document.getElementById(slider + "-line");
+    if (activeHeading) activeHeading.style.color = "#8EA0F5";
+    if (activeLine) activeLine.style.opacity = "1";
+  }
 
-        <section class="relative text-white py-10 lg:pt-20 overflow-hidden px-5">
+  // Initialize first tab on page load (after everything is loaded)
+  window.addEventListener("load", function () {
+    switchSlider("why");
+  });
+</script>
+
+
+        <section class="relative text-white py-10 lg:pt-15 overflow-hidden px-3">
           <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
           <!-- Blur is removed by default and will be toggled when the slider moves -->
           <div
             id="leftOverlay"
-            class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
+            class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
           >
             <!-- The blur glass overlay -->
 
             <!-- Text content above blur -->
-            <div class="relative">
+            <div class="relative text-center lg:text-left">
               <h2 class="text-[30px] md:text-[50px] font-[400] leading-[60px] mb-6">Why Golang</h2>
               <p class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[70%]">
                 Golang offers a balanced blend of scalability, performance, and stability. Being a
@@ -1806,7 +1796,7 @@
                   <h3 class="text-xl font-semibold mb-2">Great for Concurrency</h3>
                   <p class="text-gray-700 text-[16px] leading-[26px]">
                     Go has excellent concurrency support that enables the execution of multiple
-                    tasks simultaneously
+                    tasks simultaneously.
                   </p>
                 </div>
               </div>
@@ -1847,7 +1837,7 @@
             class="absolute right-0 bottom-0 bg-[#283A8F] w-[210px] h-[400px] lg:w-[420px] lg:h-[350px]"
           ></div>
         </section>
-      </div>
+     
     </div>
 
     <section class="text-white py-20">
@@ -2013,11 +2003,30 @@
           business success. Start today with a free call to hire<br />
           a dedicated Golang developer for your project.
         </p>
+     
         <a
           href="#"
-          class="inline-block bg-white text-gray-900 font-medium text-base md:text-lg py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all"
+          class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 md:mt-12 transition"
         >
-          Book a Free Consultation Call →
+           Book a Free Consultation Call
+
+          <span>
+            <svg
+              width="7"
+              height="11"
+              viewBox="0 0 7 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                stroke="#212121"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
         </a>
       </div>
     </section>
@@ -2121,8 +2130,8 @@
         />
       </div>
       <h2
-        class="text-[28px] md:text-[26px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
-      >
+          class="text-[28px] md:text-[26px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
+        >
         Why Hire Golang Developers from Us?
       </h2>
       <p class="text-gray-400 max-w-5xl mx-auto text-base leading-relaxed">
@@ -2133,13 +2142,13 @@
         ensuring security.
       </p>
       <!-- 3-column layout -->
-      <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8 relative p-16">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 relative p-4 md:p-8 lg:p-16">
         <!-- Left Side -->
         <div
-          class="flex flex-col gap-10 items-end text-right justify-center min-h-[300px] md:min-h-[500px]"
+          class="flex flex-col gap-10 items-end text-right justify-center min-h-[300px] md:min-h-[500px] w-full"
         >
           <div
-            class="max-w-xs pb-10"
+            class="w-full max-w-xs pb-5"
             style="
               border-bottom: 1px solid;
               border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
@@ -2147,7 +2156,19 @@
             "
           >
             <img src="./img/risk1.svg" alt="Zero Risk" class="mb-4 ml-auto w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] mb-2" style="font-family: 'Inter', sans-serif; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5; letter-spacing: 0%; text-align: right; vertical-align: middle;"><strong>Zero Risk</strong></h2>
+            <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+      "
+    ><strong>Zero Risk</strong></h2>
             <p class="text-gray-400 text-sm text-right">
               Flexible contracts with <br />
               absolutely no termination <br />
@@ -2155,9 +2176,21 @@
             </p>
           </div>
 
-          <div class="max-w-xs pb-10">
+          <div class="w-full max-w-xs pb-5">
             <img src="./img/risk2.svg" alt="Pre-Vetted" class="mb-4 ml-auto w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2"><strong>Pre-Vetted Developers</strong></h2>
+           <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+      "
+    ><strong>Pre-Vetted Developers</strong></h2>
             <p class="text-gray-400 text-sm text-right">
               All our developers are pre- <br />
               vetted and have senior-level <br />experience.
@@ -2167,17 +2200,17 @@
 
         <!-- Center Placeholder (keeps space) -->
         <div
-          class="flex flex-col items-center justify-center relative min-h-[200px] md:min-h-[500px]"
+          class="flex flex-col items-center justify-center relative min-h-[200px] md:min-h-[500px] mx-4 md:mx-8"
         >
-          <img src="./img/gl2.webp" alt="Why Hire Golang Developers" class="w-full max-w-md" />
+          <img src="./img/gl2.webp" alt="Why Hire Golang Developers" class="w-full max-w-[250px] md:max-w-[300px] lg:max-w-3xl mt-auto mb-10" />
         </div>
 
         <!-- Right Side -->
         <div
-          class="flex flex-col gap-10 items-start text-left justify-center min-h-[300px] md:min-h-[500px]"
+          class="flex flex-col gap-10 items-start text-left justify-center min-h-[300px] md:min-h-[500px] w-full"
         >
           <div
-            class="max-w-xs pb-10"
+            class="w-full max-w-xs pb-5"
             style="
               border-bottom: 1px solid;
               border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
@@ -2185,21 +2218,46 @@
             "
           >
             <img src="./img/risk3.svg" alt="Hire Fast" class="mb-4 w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2"><strong>Hire Fast</strong></h2>
+         <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        vertical-align: middle;
+      "
+    ><strong>Hire Fast</strong></h2>
             <p class="text-gray-400 text-sm text-left">
               We help you find a perfect <br />match in 2 weeks or <br />
               sometimes even less.
             </p>
           </div>
 
-          <div class="max-w-xs pb-10">
+          <div
+            class="w-full max-w-xs pb-5"
+         
+          >
             <img
               src="./img/risk4.svg"
               alt="Cost Effective"
-              class="mb-4 mx-auto min-1510px:mx-0 w-8 h-8"
+             class="mb-4 w-8 h-8" 
             />
-            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2"><strong>Cost-Effective</strong></h2>
-            <p class="text-gray-400 text-sm min-1510px:text-left text-center">
+            <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        vertical-align: middle;
+      "
+    ><strong>Cost-Effective</strong></h2>
+            <p class="text-gray-400 text-sm min-1510px:text-left">
               No expensive recruiting <br />weeks, so you can save <br />up to 40%.
             </p>
           </div>
@@ -2234,81 +2292,143 @@
         />
         <img src="./img/gl2.webp" alt="Why Hire Golang Developers" class="w-full max-w-md" />
       </div>
-      <div <div class="flex flex-col items-start gap-8 relative p-16">
-        <!-- Right Side -->
-        <div class="flex flex-col gap-10 text-left">
-          <div
-            class="max-w-xs pb-10"
-            style="
-              border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-              border-image-slice: 1;
-            "
-          >
-            <img src="./img/risk1.svg" alt="Zero Risk" class="mb-4 w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] mb-2" style="font-family: 'Inter', sans-serif; font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5; letter-spacing: 0%; text-align: right; vertical-align: middle;"><strong>Zero Risk</strong></h2>
-            <p class="text-gray-400 text-sm text-left">
-              Flexible contracts with <br />
-              absolutely no termination <br />
-              costs involved.
-            </p>
-          </div>
+   <div class="flex flex-col items-start gap-8 relative p-16">
+  <!-- Right Side -->
+<div class="flex flex-col gap-10 text-left items-start">
+  
+  <!-- Card 1 -->
+  <div
+    class="max-w-xs pb-10 flex flex-col items-start text-left"
+    style="
+      border-bottom: 1px solid;
+      border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      border-image-slice: 1;
+    "
+  >
+    <img src="./img/risk1.svg" alt="Zero Risk" class="mb-4 w-8 h-8" />
+    <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+      "
+    >
+      <strong>Zero Risk</strong>
+    </h2>
+    <p class="text-gray-400 text-sm">
+      Flexible contracts with <br />
+      absolutely no termination <br />
+      costs involved.
+    </p>
+  </div>
 
-          <div
-            class="max-w-xs pb-10"
-            style="
-              border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-              border-image-slice: 1;
-            "
-          >
-            <img src="./img/risk2.svg" alt="Pre-Vetted" class="mb-4 w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2"><strong>Pre-Vetted Developers</strong></h2>
-            <p class="text-gray-400 text-sm text-left">
-              All our developers are pre- <br />
-              vetted and have senior-level <br />experience.
-            </p>
-          </div>
-          <div
-            class="max-w-xs pb-10"
-            style="
-              border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-              border-image-slice: 1;
-            "
-          >
-            <img src="./img/risk3.svg" alt="Hire Fast" class="mb-4 w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2"><strong>Hire Fast</strong></h2>
-            <p class="text-gray-400 text-sm text-left">
-              We help you find a perfect <br />match in 2 weeks or <br />
-              sometimes even less.
-            </p>
-          </div>
+  <!-- Card 2 -->
+  <div
+    class="max-w-xs pb-10 flex flex-col items-start text-left"
+    style="
+      border-bottom: 1px solid;
+      border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      border-image-slice: 1;
+    "
+  >
+    <img src="./img/risk2.svg" alt="Pre-Vetted" class="mb-4 w-8 h-8" />
+    <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+      "
+    >
+      <strong>Pre-Vetted Developers</strong>
+    </h2>
+    <p class="text-gray-400 text-sm">
+      All our developers are pre- <br />
+      vetted and have senior-level <br />experience.
+    </p>
+  </div>
 
-          <div
-            class="max-w-xs pb-10"
-            style="
-              border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-              border-image-slice: 1;
-            "
-          >
-            <img src="./img/risk4.svg" alt="Cost Effective" class="mb-4 w-8 h-8" />
-            <h2 class="text-xl text-[#F0F3FF] font-semibold mb-2"><strong>Cost-Effective</strong></h2>
-            <p class="text-gray-400 text-sm text-left">
-              No expensive recruiting <br />weeks, so you can save <br />up to 40%.
-            </p>
-          </div>
-        </div>
-      </div>
+  <!-- Card 3 -->
+  <div
+    class="max-w-xs pb-10 flex flex-col items-start text-left"
+    style="
+      border-bottom: 1px solid;
+      border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      border-image-slice: 1;
+    "
+  >
+    <img src="./img/risk3.svg" alt="Hire Fast" class="mb-4 w-8 h-8" />
+    <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+      "
+    >
+      <strong>Hire Fast</strong>
+    </h2>
+    <p class="text-gray-400 text-sm">
+      We help you find a perfect <br />match in 2 weeks or <br />
+      sometimes even less.
+    </p>
+  </div>
+
+  <!-- Card 4 -->
+  <div
+    class="max-w-xs pb-10 flex flex-col items-start text-left"
+   
+  >
+    <img src="./img/risk4.svg" alt="Cost Effective" class="mb-4 w-8 h-8" />
+    <h2
+      class="text-[#F0F3FF] mb-2"
+      style="
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+      "
+    >
+      <strong>Cost-Effective</strong>
+    </h2>
+    <p class="text-gray-400 text-sm">
+      No expensive recruiting <br />weeks, so you can save <br />up to 40%.
+    </p>
+  </div>
+
+</div>
+
+
+</div>
+
     </section>
 
     <section class="py-10 lg:py-20 bg-black text-white">
       <div class="container">
         <div class="text-[20px] text-center">
           <h2
-            class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
-          >
+          class="text-[28px] pb-5 md:text-[26px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-[40px]"
+        >
             Technical Expertise of Our Golang Developers
           </h2>
           <p
@@ -3781,7 +3901,7 @@
             "
           >
             <h3
-              class="text-lg font-medium text-gray-300 mb-6"
+              class="text-lg font-medium text-gray-300 mb-6 text-left pb-4 border-b border-gray-600"
               style="
                 font-family: 'Inter', sans-serif;
                 font-weight: 500;
@@ -3790,6 +3910,9 @@
                 line-height: 1.75rem;
                 letter-spacing: 0%;
                 vertical-align: middle;
+                 border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
               "
             >
               Traditional Agency
@@ -3819,7 +3942,7 @@
             "
           >
             <h3
-              class="text-lg font-semibold text-white mb-6"
+              class="text-lg font-semibold text-white mb-6 text-left pb-4 border-b border-gray-600"
               style="
                 font-family: 'Inter', sans-serif;
                 font-weight: 500;
@@ -3828,6 +3951,9 @@
                 line-height: 1.75rem;
                 letter-spacing: 0%;
                 vertical-align: middle;
+                 border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
               "
             >
               NewAgeSysIT
@@ -3851,14 +3977,14 @@
 
           <!-- Freelance Platforms -->
           <div
-            class="border rounded-2xl p-8 shadow-[0_0_25px_rgba(0,0,0,0.3)] min-h-[400px]"
+            class="border rounded-2xl p-8 shadow-[0_0_30px_rgba(56,87,255,0.3)] min-h-[400px]"
             style="
-              background: linear-gradient(269.7deg, #0e0e0e 56.24%, #27398c 169.61%);
+              background: linear-gradient(180deg, #00040b 0%, #283a8f 100%);
               border-color: #65686c;
             "
           >
             <h3
-              class="text-lg font-medium text-gray-300 mb-6"
+              class="text-lg font-semibold text-white mb-6 text-left pb-4 border-b border-gray-600"
               style="
                 font-family: 'Inter', sans-serif;
                 font-weight: 500;
@@ -3867,6 +3993,9 @@
                 line-height: 1.75rem;
                 letter-spacing: 0%;
                 vertical-align: middle;
+                 border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
               "
             >
               Freelance Platforms
@@ -3986,11 +4115,8 @@
                 <h2>03</h2>
                 <h3>Interview & Approve</h3>
                 <p>
-                  As a custom Golang development company, we have the right team to define the
-                  system’s architecture, tech stack, APIs, database design, and even cloud
-                  infrastructure. We also set up pipelines simultaneously for DevOps CI/CD,
-                  automated testing, and environment provisioning, which facilitates quicker and
-                  more stable deployments.
+                 Once you shortlist the candidates, you can interview them and find the one that matches your requirements. Make a final decision to hire Golang developers based on the skills and expertise you need to consider when you hire a Golang developer for your project.
+
                 </p>
               </div>
             </li>
@@ -4010,7 +4136,7 @@
 
             <li class="timeline__item">
               <div class="timeline__content">
-                <h2>04</h2>
+                <h2>05</h2>
                 <h3>You Stay Informed</h3>
                 <p>
                   The development process begins as soon as you have the team in action. We ensure
@@ -5247,20 +5373,21 @@
     <script>
       $(document).ready(function () {
         const owl = $(".slider-4");
-        const leftOverlay = document.getElementById("leftOverlay3");
+        // const leftOverlay = document.getElementById("leftOverlay3");
 
         owl.owlCarousel({
           margin: 30,
           loop: false,
           dots: false,
           nav: true,
-          stagePadding: 180,
+          // stagePadding: 180,
           responsive: {
             0: { items: 1, stagePadding: 20 },
             768: { items: 2, stagePadding: 50 },
-            1024: { items: 3, stagePadding: 100 },
-            1440: { items: 1, stagePadding: 200 },
-            1600: { items: 1, stagePadding: 300 },
+            1024: { items: 3 },
+            1280: { items: 2 ,stagePadding: 50},
+            1440: { items: 2, stagePadding: 50 },
+            1600: { items: 2, stagePadding: 50 },
           },
         });
 
