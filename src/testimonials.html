@@ -29,11 +29,82 @@
 
     <link rel="preload" href="style.css" as="style" />
     <link href="style.css" rel="stylesheet" />
-    <style>
+     <style>
       .mix-blend-hard-light {
         mix-blend-mode: hard-light;
         -webkit-mix-blend-mode: hard-light;
       }
+     /* Container setup */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 25s linear infinite;
+}
+
+.slide {
+  flex: 0 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.slide img {
+  width: auto;
+height: auto;
+object-fit: contain;
+filter: grayscale(100%);
+opacity: 0.9;
+transition: all 0.3s ease;
+}
+
+.slide img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 20%;
+  }
+  .logo-track {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 12%;
+  }
+  .logo-track {
+    animation-duration: 35s;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-track {
+    animation-duration: 40s;
+  }
+}
+
     </style>
   </head>
 
@@ -49,378 +120,167 @@
         <nav class="flex">
           <a href="#">
             <img src="./img/NewAgeSys_IT_W-2.svg"
-     alt="NewAgeSys IT Logo"
-     class="w-auto h-[40px] md:h-[47px]"
-     width="180" height="47"
-     fetchpriority="high" loading="lazy">
+              alt="NewAgeSys IT Logo"
+              class="w-auto h-[40px] md:h-[47px]"
+              width="180" height="47"
+              fetchpriority="high" 
+              loading="lazy">
           </a>
           <ul class="hidden lg:flex items-center justify-center lg:ml-6">
             <li class="relative px-4 group">
               <button class="cursor-default">Services</button>
               <div
-                class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform"
+                class="absolute top-[25px] -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform"
               >
-                <div
-                  class="relative w-full p-4 bg-white shadow-xl top-6 rounded-xl"
-                >
-                  <div
-                    class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm"
-                  ></div>
-                  <div class="relative z-10 justify-between">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 p-8 pb-0">
-                      <div>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          SOFTWARE DEVELOPMENT
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="/custom-software-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Custom Software Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/software-product-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Software Product Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/saas-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Saas Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/web-application-development/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Web Application Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="//newagesysit.com/app-development-service/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Mobile App Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/maintenance-and-support/"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Maintenance and Support
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          CLOUD SERVICES
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Cloud Managed Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Cloud Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              AWS
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Cloud Application Development
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          IDEATION AND DESIGN
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              UI/UX Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              UX/UI Design
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              MVP Design
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          MVP Design
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps Consulting Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps CI/CD Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps Development Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevOps Implementation Services
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              DevSecOps Services
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          EMERGING TECHNOLOGIES
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              AI/ML
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              AR/VR
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Data Science and Analytics
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Blockchain
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Robotic Process Automation
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          STARTUP SERVICES
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Minimal Viable Product (MVP)
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Product Development
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Maintenance & Support
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Start-up Advisory / Consulting
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          Start-up Advisory / Consulting
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Digital Transformation
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              IT Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Implementation Consulting
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              IT Security and Cybersecurity
-                            </a>
-                          </li>
-                        </ul>
-                        <p
-                          class="uppercase text-primary font-medium text-[13px] mb-4"
-                        >
-                          Workforce Management
-                        </p>
-                        <ul
-                          class="mt-2 text-[14px] space-y-1 border-l-2 border-orange-200 ps-3 mb-6"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Staff Augmentation
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              Dedicated Development Team
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                            >
-                              QA & Testing
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <!-- service megamenu -->
+                <section class="mx-auto max-w-7xl p-[20px] bg-white rounded-[16px]">
+   
+    <!-- Services Grid -->  
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Card Template: copy for each column -->
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Software Development -->
+          <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M7 14h10M9 18h6" />
+          </svg>
+          <h3 class="text-lg font-semibold">Software Development</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#">Custom Software Development</a></li>
+          <li><a href="#">Software Product Development</a></li>
+          <li><a href="#">SaaS Development</a></li>
+          <li><a href="#">Web Application Development</a></li>
+          <li><a href="#">Mobile App Development</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: DevOps -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 12a4 4 0 0 1 4-4h2v2H8a2 2 0 1 0 0 4h2v2H8a4 4 0 0 1-4-4Zm16 0a4 4 0 0 0-4-4h-2v2h2a2 2 0 1 1 0 4h-2v2h2a4 4 0 0 0 4-4Z"/>
+          </svg>
+          <h3 class="text-lg font-semibold">DevOps</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#">DevOps Consulting Services</a></li>
+          <li><a href="#">DevOps CI/CD Services</a></li>
+          <li><a href="#">DevOps Development Services</a></li>
+          <li><a href="#">DevOps Implementation Services</a></li>
+          <li><a href="#">DevSecOps Services</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Startup Services -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7M5 19h14"/>
+          </svg>
+          <h3 class="text-lg font-semibold">Startup Services</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#">Minimal Viable Product (MVP)</a></li>
+          <li><a href="#">Product Development</a></li>
+          <li><a href="#">Start-up Advisory / Consulting</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Cloud Services -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.31-1.5A4.5 4.5 0 0 0 7 18Z"/>
+          </svg>
+          <h3 class="text-lg font-semibold">Cloud Services</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#">Cloud Managed Services</a></li>
+          <li><a href="#">Cloud Consulting</a></li>
+          <li><a href="#">AWS</a></li>
+          <li><a href="#">Cloud Application Development</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Emerging Technologies -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v6m0 6v6M3 12h6m6 0h6"/>
+          </svg>
+          <h3 class="text-lg font-semibold">Emerging Technologies</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#">AI/ML</a></li>
+          <li><a href="#">AR/VR</a></li>
+          <li><a href="#">Data Science and Analytics</a></li>
+          <li><a href="#">Blockchain</a></li>
+          <li><a href="#">Robotic Process Automation</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Consulting Services -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 21v-4a4 4 0 0 1 4-4h4M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/>
+          </svg>
+          <h3 class="text-lg font-semibold">Consulting Services</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><Digital href="#">Digital Transformation</a></li>
+          <li><a href="#"> IT Consulting</a></li>
+          <li><a href="#">Implementation Consulting</a></li>
+          <li><a href="#">IT Security and Cybersecurity</a></li>
+          <li><a href="#">QA Consulting</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Ideation and Design -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v6l4 2-4 2v6M6 7l-3 3 3 3M18 7l3 3-3 3"/>
+          </svg>
+          <h3 class="text-lg font-semibold">Ideation and Design</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#">UI/UX Consulting</a></li>
+          <li><a href="#">UX/UI Design</a></li>
+          <li><a href="#"> MVP Design</a></li>
+        </ul>
+      </article>
+
+      <article >
+        <div class="mb-4 flex items-center gap-3">
+          <!-- Icon: Workforce Management -->
+          <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0ZM3 21a7 7 0 0 1 18 0"/>
+          </svg>
+          <h3 class="text-lg font-semibold">Workforce Management</h3>
+        </div>
+        <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
+          <li><a href="#"> Staff Augmentation</a></li>
+          <li><a href="#"> Dedicated Development Team </a></li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="mt-10 rounded-2xl bg-[linear-gradient(90deg,#250713_0%,#470C15_29.81%,#352272_100%)] p-1 shadow-lg">
+      <div class="flex flex-col items-center justify-between gap-6 rounded-2xl bg-white/5 px-6 py-8 sm:flex-row sm:px-10">
+        <p class="text-center text-base text-white sm:text-left">
+          Need something specific? Share your requirements, and we will create a solution that fits your needs.
+        </p>
+        <a href="#" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow ring-1 ring-inset ring-white/20 transition hover:shadow-md">
+          Schedule Free Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+              <!-- end service megamenu --> 
+  
               </div>
             </li>
             <li class="relative px-4 group">
@@ -942,14 +802,14 @@
       </div>
 
       <!-- mobile-menu start-->
-      <div id="mobile-menu" class="hidden w-full min-h-screen lg:hidden">
+      <div id="mobile-menu" class="hidden-view w-full min-h-screen lg:hidden">
         <nav class="p-4 container mx-auto">
           <ul
             class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
           >
             <li class="relative w-full">
               <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle active justify-between"
               >
                 Services
                 <svg
@@ -968,7 +828,7 @@
                   ></path>
                 </svg>
               </button>
-              <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
+              <div class="hidden w-full p-4 lg:mt-2 bg-white rounded-lg dropdown">
                 <div class="relative z-10 pb-5">
                   <div
                     class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh]"
@@ -1323,7 +1183,7 @@
             </li>
             <li class="relative w-full">
               <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle active justify-between"
               >
                 Industries
                 <svg
@@ -1610,7 +1470,7 @@
             </li>
             <li class="relative w-full">
               <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle active justify-between"
               >
                 Technologies
                 <svg
@@ -1810,21 +1670,21 @@
 
             <li class="relative w-full">
               <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle active justify-between"
               >
                 Portfolio
               </button>
             </li>
             <li class="relative w-full">
               <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle active justify-between"
               >
                 Blog
               </button>
             </li>
             <li class="relative w-full">
               <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle active justify-between"
               >
                 Contact
               </button>
@@ -1897,27 +1757,25 @@
               businesses, and enterprises
             </p>
             <div
-              class="group flex w-full gap-x-4 lg:gap-x-[85px] overflow-hidden select-none xl:max-w-[829px]"
+              class="logo-slider"
             >
               <ul
-                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
+                class="logo-track"
               >
-                <li><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                <li><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                <li><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/uspaacc.svg" alt="USPAACC" /></li>
+                <!-- repeat -->
+                 <li class="slide"><img src="https://design.newagesysit.com/img/Deloitte.svg" alt="Deloitte"/></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/NJBIZ.svg" alt="NJBIZ"/></li>
+                <li class="slide"><img src="https://design.newagesysit.com/img/Fastest1.svg" alt="Fastest Growing"/></li>
               </ul>
-              <ul
-                aria-hidden="true"
-                class="animate-scroll flex min-w-full shrink-0 items-center justify-between gap-x-4 group-hover:[animation-play-state:paused]"
-              >
-                <li><img src="./img/Deloitte.svg" alt="Deloitte"/></li>
-                <li><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                <li><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
-                <li><img src="./img/NJBIZ.svg" alt="NJBIZ"/></li>
-                <li><img src="./img/Fastest1.svg" alt="Fastest Growing"/></li>
-              </ul>
+              
             </div>
           </div>
         </div>
@@ -3554,7 +3412,79 @@
     ></script>
     <script src="./js/jquery.magnific-popup.js"></script>
     <script src="./js/optimize.js"></script>
-    
+<script>
+  $(document).ready(function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    // Hamburger menu
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden-view");
+      });
+    }
+
+    // Dropdown mobile
+    if (dropdownToggles.length > 0) {
+      dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation(); // prevent window click from closing immediately
+
+          const dropdown = toggle.nextElementSibling;
+          const otherDropdowns = document.querySelectorAll(".dropdown");
+
+          if (dropdown) {
+            // Close other dropdowns and remove active class from other toggles
+            dropdownToggles.forEach((otherToggle) => {
+              if (otherToggle !== toggle) {
+                const otherDropdown = otherToggle.nextElementSibling;
+                if (otherDropdown) otherDropdown.classList.add("hidden");
+                otherToggle.classList.remove("active");
+
+                const otherSvg = otherToggle.querySelector("svg");
+                if (otherSvg) otherSvg.classList.remove("rotate-180");
+              }
+            });
+
+            // Toggle current dropdown
+            const isOpen = !dropdown.classList.contains("hidden");
+            dropdown.classList.toggle("hidden");
+            toggle.classList.toggle("active", !isOpen); // Add active only when opened
+
+            // Rotate SVG icon
+            const svgElement = toggle.querySelector("svg");
+            if (svgElement) {
+              svgElement.classList.toggle("rotate-180", !isOpen);
+            } else {
+              console.error("SVG element not found within the toggle.");
+            }
+          } else {
+            console.error("Dropdown element not found.");
+          }
+        });
+      });
+    }
+
+    // Close dropdown when clicking outside
+    window.addEventListener("click", (event) => {
+      if (
+        !event.target.matches(".dropdown-toggle") &&
+        !event.target.closest(".dropdown")
+      ) {
+        dropdownToggles.forEach((toggle) => {
+          const dropdown = toggle.nextElementSibling;
+          if (dropdown) dropdown.classList.add("hidden");
+          toggle.classList.remove("active");
+
+          const svgElement = toggle.querySelector("svg");
+          if (svgElement) svgElement.classList.remove("rotate-180");
+        });
+      }
+    });
+  });
+</script>
+
     <script>
 document.addEventListener("DOMContentLoaded", function () {
   // ---- helpers ----
