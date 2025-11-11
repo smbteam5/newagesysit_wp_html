@@ -125,30 +125,29 @@
         display: block;
       }
     }
-    /* Remove left border from first column cards at all screen sizes */
-    /* Mobile: first card (single column) */
-    /* @media (max-width: 567px) {
-      .gradient-border-golang-mob:first-child:after,
-      .grid > div:first-child.gradient-border-golang-mob:after {
-        display: none !important;
-      }
-    } */
-
-    /* Tablet: first 2 cards (2 columns) - remove from odd cards (1st, 3rd, 5th, etc) */
-    /* @media (min-width: 640px) and (max-width: 1023px) {
+    /* Tablet: 2 columns - remove left border from odd cards (1st, 3rd, 5th, etc) */
+    @media (min-width: 769px) and (max-width: 1023px) {
       .gradient-border-golang-md:nth-child(odd)::after,
       .grid > div:nth-child(odd).gradient-border-golang-md::after {
         display: none !important;
       }
-    } */
+    }
 
-    /* Desktop: first 3 cards (3 columns) - remove from every 3n+1 card (1st, 4th, 7th) */
-    /* @media (min-width: 1024px) {
-      .gradient-border-golang:nth-child(3n + 1):after,
-      .grid > div:nth-child(3n + 1).gradient-border-golang:after {
-        display: none !important;
+    /* Desktop: 3 columns - show right borders on 1st and 2nd columns */
+    @media (min-width: 1024px) {
+      .gradient-border-golang::after,
+      .grid > div.gradient-border-golang::after {
+        display: block !important;
       }
-    } */
+    }
+
+    /* Mobile: show bottom borders */
+    @media (max-width: 768px) {
+      .gradient-border-golang-mob::after,
+      .grid > div.gradient-border-golang-mob::after {
+        display: block !important;
+      }
+    }
   </style>
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
@@ -1134,45 +1133,16 @@
       </div>
     </section>
     <div class="relative overflow-hidden text-white">
-      <div class="absolute inset-0 pointer-events-none -z-10">
-        <img
-          src="./img/why-choose-gradient.webp"
-          alt="Glow Background"
-          class="w-full h-full object-cover object-center scale-110"
-        />
+  
 
-        <!-- Bottom Left Gradient (darker edges) -->
-        <!-- <div
-          class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_bottom_left,rgba(68,88,210,0.32)_0%,rgba(0,0,0,0.72)_70%)] pointer-events-none"
-        ></div> -->
-
-        <!-- Bottom Right Gradient (darker edges) -->
-        <!-- <div
-          class="hidden lg:block absolute bottom-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_bottom_right,rgba(68,88,210,0.28)_0%,rgba(0,0,0,0.72)_70%)] pointer-events-none"
-        ></div> -->
-
-        <!-- Center Gradient (slightly darker, softer) -->
-        <!-- <div
-          class="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(68,88,210,0.18)_0%,rgba(0,0,0,0.65)_80%)] pointer-events-none"
-        ></div> -->
-      </div>
-
-      <div class="relative overflow-hidden text-white">
-        <!-- <div class="absolute inset-0 pointer-events-none -z-10"> -->
-        <!-- Center Gradient (slightly darker, softer) -->
-        <!-- <div
-          class="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(circle_at_center,rgba(68,88,210,0.18)_0%,rgba(0,0,0,0.65)_80%)] pointer-events-none backdrop-blur-md"
-        ></div> -->
-
-        <!-- </div> -->
-
-        <div class="absolute inset-0 pointer-events-none -z-10">
+        <div class="hidden md:block absolute inset-0 pointer-events-none -z-10">
           <img
             src="./img/why-choose-gradient.webp"
             alt="Glow Background"
             class="w-full h-full object-cover object-center scale-110"
           />
         </div>
+
         <h2
           class="text-[35px] md:text-[45px] mb-8 text-white text-center pt-10"
           style="
@@ -1194,7 +1164,7 @@
           <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
 
           <div
-            class="w-full xl:w-[55%] slider-border-golang xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
+            class="w-full xl:w-[45%] slider-border-golang xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
           >
             <!-- The blur glass overlay -->
 
@@ -1211,7 +1181,7 @@
                 </h2>
                 <div
                   id="why-line"
-                  class="h-[1px] w-[50%] border-t transition-all duration-300"
+                  class="h-[1px] w-[60%] border-t transition-all duration-300"
                   style="
                     border-image-source: linear-gradient(
                       90deg,
@@ -1758,17 +1728,17 @@
           });
         </script>
 
-        <section class="relative text-white py-10 lg:pt-20 overflow-hidden px-5">
+        <section class="relative text-white py-10 lg:pt-15 overflow-hidden px-3">
           <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
           <!-- Blur is removed by default and will be toggled when the slider moves -->
           <div
             id="leftOverlay"
-            class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
+            class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
           >
             <!-- The blur glass overlay -->
 
             <!-- Text content above blur -->
-            <div class="relative">
+            <div class="relative text-center lg:text-left">
               <h2 class="text-[30px] md:text-[50px] font-[400] leading-[60px] mb-6">Why Golang</h2>
               <p class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[70%]">
                 Golang offers a balanced blend of scalability, performance, and stability. Being a
@@ -1847,7 +1817,7 @@
             class="absolute right-0 bottom-0 bg-[#283A8F] w-[210px] h-[400px] lg:w-[420px] lg:h-[350px]"
           ></div>
         </section>
-      </div>
+     
     </div>
 
     <section class="text-white py-20">
