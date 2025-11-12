@@ -5058,6 +5058,11 @@ video {
   background-color: rgb(29 40 41 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#1E1E1E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 30 30 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#1E7A97\] {
   --tw-bg-opacity: 1;
   background-color: rgb(30 122 151 / var(--tw-bg-opacity));
@@ -5961,10 +5966,6 @@ video {
 
 .bg-\[linear-gradient\(269\.7deg\2c \#0E0E0E_56\.24\%\2c \#27398C_169\.61\%\)\] {
   background-image: linear-gradient(269.7deg,#0E0E0E 56.24%,#27398C 169.61%);
-}
-
-.bg-\[linear-gradient\(270\.81deg\2c \#0B0B11_1\.16\%\2c \#101329_103\.18\%\)\] {
-  background-image: linear-gradient(270.81deg,#0B0B11 1.16%,#101329 103.18%);
 }
 
 .bg-\[linear-gradient\(284\.5deg\2c _\#0000007a_28\.3\%\2c _\#000000_95\.13\%\)\] {
@@ -14560,7 +14561,7 @@ footer ul li {
     width: 1px;
     left: 18px;
     background-color: #2279ff;
-    height: 50%;
+    height: 100%;
     transition: all 3s;
     filter: grayscale(0);
     top: 0;
@@ -14834,14 +14835,6 @@ footer ul li {
     filter: grayscale(0);
     top: 0;
   }
-}
-
-.timeline__item.in-view:nth-child(even) .timeline__content.timeline_content_last::before {
-  height: 50%;
-}
-
-.timeline__item.in-view:nth-child(odd) .timeline__content.timeline_content_last::before {
-  height: 50%;
 }
 
 #hero-banner {
@@ -15709,18 +15702,19 @@ footer ul li {
   overflow: unset !important;
 }
 
-.flexible-border-golang {
-  position: relative;
-}
+@media (min-width: 768px) {
+  .flexible-border-golang {
+    position: relative;
+  }
 
-.flexible-border-golang::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
+  .flexible-border-golang::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
       90deg,
       #000000 0%,
       rgba(255, 255, 255, 0.619) 45%,
@@ -15728,20 +15722,20 @@ footer ul li {
       rgba(255, 255, 255, 0.611) 55%,
       #000000 100%
     );
-}
+  }
 
-.flexible-border-react {
-  position: relative;
-}
+  .flexible-border-react {
+    position: relative;
+  }
 
-.flexible-border-react::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
+  .flexible-border-react::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
       90deg,
       #000000 0%,
       rgba(255, 255, 255, 0.619) 45%,
@@ -15749,6 +15743,7 @@ footer ul li {
       rgba(255, 255, 255, 0.611) 55%,
       #000000 100%
     );
+  }
 }
 
 .slider-2a .owl-stage-outer {
@@ -22802,24 +22797,12 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
-  .max-768px\:bottom-\[-10px\] {
-    bottom: -10px;
-  }
-
   .max-768px\:bottom-\[15px\] {
     bottom: 15px;
   }
 
   .max-768px\:mt-\[20px\] {
     margin-top: 20px;
-  }
-
-  .max-768px\:flex {
-    display: flex;
-  }
-
-  .max-768px\:h-\[calc\(100vh-30px\)\] {
-    height: calc(100vh - 30px);
   }
 
   .max-768px\:w-\[100px\] {
@@ -22859,11 +22842,6 @@ footer ul li {
   .max-768px\:object-\[center_-65px\] {
     -o-object-position: center -65px;
        object-position: center -65px;
-  }
-
-  .max-768px\:object-bottom {
-    -o-object-position: bottom;
-       object-position: bottom;
   }
 
   .max-768px\:p-\[10px\] {
@@ -22908,13 +22886,6 @@ footer ul li {
 
   .max-768px\:leading-\[50px\] {
     line-height: 50px;
-  }
-}
-
-@media (max-width: 767px) {
-  .max-767px\:object-\[center_-155px\] {
-    -o-object-position: center -155px;
-       object-position: center -155px;
   }
 }
 
