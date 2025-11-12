@@ -2,36 +2,45 @@
 <html
   lang="en"
 >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sys IT - Testimonials</title>
-    <!-- Preconnect to font and CDN origins to reduce latency -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sys IT - Testimonials</title>
 
-    <!-- Load Google Fonts non-blocking (preload + onload) with noscript fallback -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <!-- DNS + TCP warmups -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-    <!-- Load third-party vendor CSS non-blocking (preload + onload). noscript fallback keeps behavior when JS disabled -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-    </noscript>
+  <!-- Google Fonts (simple & reliable). display=swap prevents text-render delay -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-    <link rel="preload" href="style.css" as="style" />
-    <link href="style.css" rel="stylesheet" />
-    <!-- Styles for carousel/slider were moved to src/style.css (consolidated) -->
-  </head>
+  <!-- Third-party vendor CSS (non-blocking via preload + onload). Noscript fallbacks below -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+  </noscript>
+
+  <!-- Preload hero images (use media to avoid fetching both); 'fetchpriority' belongs on <img>, not here -->
+  <link rel="preload" as="image" href="./img/banner-testi1.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="./img/bannermob-testi.webp" media="(max-width: 767px)">
+
+  <!-- Your main CSS: early hint + real stylesheet. (Preload is optional but harmless; browsers coalesce the request.) -->
+  <link rel="preload" href="style.css" as="style">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
 
@@ -55,10 +64,10 @@
             <li class="relative px-4 group">
               <button class="cursor-default">Services</button>
               <div
-                class="absolute -left-48 top-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform"
+                class="absolute -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
               >
                 <!-- service megamenu -->
-                <div class="relative w-full p-4 bg-white shadow-xl top-6 rounded-xl">   
+                <div class="relative w-full p-4 bg-white shadow-xl top-6 rounded-xl supermenu__inner">   
                   <!-- Services Grid -->  
                   <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 service_spr_dropdown">
                     <article>
@@ -176,7 +185,7 @@
                     <div class="flex flex-col items-center justify-between gap-6 rounded-2xl bg-white/5 p-4 sm:flex-row">
                       <p class="text-[16px] font-[500] text-white sm:text-left inline-flex items-center">
                         <span>
-                          <img src="img/service-menu/foo.svg" class="inline-block mr-2 h-6 w-6" />
+                          <img src="img/service-menu/foo.svg" class="inline-block mr-2 w-[50px] h-[50px]" />
                         </span>
                         <span>
                           Need something specific? Share your requirements, and we will create a solution that fits your needs.
@@ -194,10 +203,10 @@
             <li class="relative px-4 group">
               <button class="cursor-default">Industries</button>
               <div
-                class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform"
+                class="absolute -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
               >
                 <div
-                  class="relative w-full bg-white shadow-xl top-6 rounded-xl"
+                  class="relative w-full bg-white shadow-xl top-6 rounded-xl supermenu__inner"
                 >
                   <div>
     <div class="grid lg:grid-cols-4 service_spr_dropdown">
@@ -286,7 +295,7 @@
       <!-- Promo Card -->
       <aside class="p-4 bg-[#0039CA1A]">
         <div class="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-b from-sky-900 to-cyan-700 p-6 text-white ">
-          <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.jpg" alt="" width="268px" height="364px" class="w-full h-full"></span>
+          <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.webp" alt="" width="268px" height="364px" class="w-full h-full"></span>
           <div class="relative z-10 flex h-full flex-col items-center justify-center text-center">
             <div class="mb-4 inline-flex items-center gap-2 relative justify-center z-10">
               <img src="./img/NewAgeSys_IT_W-2.svg" alt="" class="relative w-[calc(100%-40px)] pb-[20px]">
@@ -309,10 +318,10 @@
             <li class="relative px-4 group">
               <button class="cursor-default">Technologies</button>
               <div
-                class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform"
+                class="absolute -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
               >
                 <div
-                  class="relative w-full bg-white shadow-xl top-6 rounded-xl"
+                  class="relative w-full bg-white shadow-xl top-6 rounded-xl supermenu__inner"
                 >
                   <div class="relative z-10">
                    <div>
@@ -436,7 +445,7 @@
             <li class="relative px-4 group">
               <button class="cursor-default">Portfolio</button>
               <div
-                class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
+                class="absolute -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
               >
                 <div
                   class="relative w-full bg-white shadow-xl top-6 rounded-xl supermenu__inner"
@@ -541,7 +550,7 @@
             <li class="relative px-4 group">
               <button class="cursor-default">Hire</button>
               <div
-                class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
+                class="absolute -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu"
               >
                 <div
                   class="relative w-full bg-white shadow-xl top-6 rounded-xl supermenu__inner"
@@ -612,7 +621,7 @@
       <!-- Right: Award Banner -->
       <div class="w-full lg:w-80 xl:w-96 p-4 bg-[#0039CA1A]">
         <div class="relative h-full min-h-[360px] flex flex-col items-center text-center overflow-hidden">
-          <img src="./img/hire/hire-win.png" alt="" class="h-full lazy-loaded object-cover rounded-[16px]">
+          <img src="./img/hire/hire-win1.webp" alt="" class="h-full lazy-loaded object-cover rounded-[16px]">
         </div>
       </div>
     </div>
@@ -1298,22 +1307,36 @@
         </div>
       </div>
 
-      <img
-        src="./img/banner-testi1.webp"
-        alt="NewAgeSysIT Hero Banner" 
-        width="1920"
-        height="1080"
-        fetchpriority="high"
-        class="w-full h-full object-cover absolute max-767px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
-      />
-     <img
-        src="./img/bannermob-testi.webp"
-        alt="NewAgeSysIT Hero Banner" 
-        width="100%"
-        height="100%"
-        fetchpriority="high"
-        class="w-full h-full object-cover absolute object-center min-1680px:object-[center_90px] block md:hidden"
-      />
+      <!-- Desktop hero image -->
+  <img
+    src="./img/banner-testi1.webp"
+    srcset="
+      ./img/banner-testi1.webp 1280w,
+      ./img/banner-testi1.webp 1920w,
+      ./img/banner-testi1.webp 2560w
+    "
+    sizes="(min-width: 1280px) 100vw, 1920px"
+    alt="NewAgeSysIT Hero Banner"
+    width="1920"
+    height="1080"
+    fetchpriority="high"
+    decoding="async"
+    class="w-full h-full object-cover absolute max-767px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
+    style="aspect-ratio: 16/9;"
+  />
+
+  <!-- Mobile hero image -->
+  <img
+    src="./img/bannermob-testi.webp"
+    sizes="(max-width: 767px) 100vw, 100vw"
+    alt="NewAgeSysIT Hero Banner"
+    width="1080"
+    height="1080"
+    fetchpriority="high"
+    decoding="async"
+    class="w-full h-full object-cover absolute object-center min-1680px:object-[center_90px] block md:hidden"
+    style="aspect-ratio: 1/1;"
+  />
 
       <!-- Awards Bar -->
       <div
