@@ -1338,7 +1338,7 @@ transition: all 0.3s ease;
 
     <section
       id="hero-banner"
-      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
+      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px] max-768px:h-[calc(100vh-30px)]"
     >
       <div class="container mx-auto w-full max-w-[1456px] px-4">      
 
@@ -1379,13 +1379,20 @@ transition: all 0.3s ease;
         width="1920"
         height="1080"
         fetchpriority="high"
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom min-1680px:object-[center_90px]"
+        class="w-full h-full object-cover absolute max-767px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
       />
-     
+     <img
+        src="./img/bannermob-testi.webp"
+        alt="NewAgeSysIT Hero Banner" 
+        width="100%"
+        height="100%"
+        fetchpriority="high"
+        class="w-full h-full object-cover absolute max-768px:object-bottom object-bottom min-1680px:object-[center_90px] block md:hidden"
+      />
 
       <!-- Awards Bar -->
       <div
-        class="recognition-section-ppc relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
+        class="recognition-section-ppc absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
       >
         <div class="container mx-auto w-full max-w-[1456px] px-4">
           <div
@@ -1421,6 +1428,9 @@ transition: all 0.3s ease;
           </div>
         </div>
       </div>
+      <span class="hidden absolute w-full left-0 z-[9] max-768px:flex justify-center max-768px:bottom-[-10px]">
+          <img src="./img/glow.png" alt="" class="w-auto">
+        </span>
     </section>
     
 <section class="relative py-14 md:py-20">
