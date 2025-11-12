@@ -9046,11 +9046,6 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.grayscale {
-  --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -16089,6 +16084,88 @@ footer ul li {
   }
 }
 
+/* ---- Consolidated styles extracted from src/testimonials.html ---- */
+
+.owl-lazy{
+  opacity:1 !important;
+  height:auto !important;
+  visibility:visible !important;
+}
+
+.logo-slider{
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  display:flex;
+  align-items:center;
+}
+
+.logo-track{
+  display:flex;
+  gap:30px;
+  animation:scroll 25s linear infinite;
+}
+
+.slide{
+  flex:0 0 20%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 10px;
+}
+
+.slide img{
+  width:auto;
+  height:auto;
+  -o-object-fit:contain;
+     object-fit:contain;
+  filter:grayscale(100%);
+  opacity:0.9;
+  transition:all 0.3s ease;
+}
+
+.slide img:hover{
+  filter:grayscale(0%);
+  opacity:1;
+  transform:scale(1.05);
+}
+
+@keyframes scroll{
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+@media (max-width:1024px){
+  .slide{
+    flex:0 0 20%;
+  }
+
+  .logo-track{
+    animation-duration:30s;
+  }
+}
+
+@media (max-width:768px){
+  .slide{
+    flex:0 0 12%;
+  }
+
+  .logo-track{
+    animation-duration:35s;
+  }
+}
+
+@media (max-width:480px){
+  .logo-track{
+    animation-duration:40s;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -22810,12 +22887,24 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
+  .max-768px\:bottom-\[-10px\] {
+    bottom: -10px;
+  }
+
   .max-768px\:bottom-\[15px\] {
     bottom: 15px;
   }
 
   .max-768px\:mt-\[20px\] {
     margin-top: 20px;
+  }
+
+  .max-768px\:flex {
+    display: flex;
+  }
+
+  .max-768px\:h-\[calc\(100vh-30px\)\] {
+    height: calc(100vh - 30px);
   }
 
   .max-768px\:w-\[100px\] {
@@ -22855,6 +22944,11 @@ footer ul li {
   .max-768px\:object-\[center_-65px\] {
     -o-object-position: center -65px;
        object-position: center -65px;
+  }
+
+  .max-768px\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 
   .max-768px\:p-\[10px\] {
@@ -22899,6 +22993,13 @@ footer ul li {
 
   .max-768px\:leading-\[50px\] {
     line-height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .max-767px\:object-\[center_-155px\] {
+    -o-object-position: center -155px;
+       object-position: center -155px;
   }
 }
 

@@ -6,106 +6,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sys IT - Testimonials</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Preconnect to font and CDN origins to reduce latency -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Load Google Fonts non-blocking (preload + onload) with noscript fallback -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Load third-party vendor CSS non-blocking (preload + onload). noscript fallback keeps behavior when JS disabled -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    </noscript>
 
     <link rel="preload" href="style.css" as="style" />
     <link href="style.css" rel="stylesheet" />
-     <style>
-      .mix-blend-hard-light {
-        mix-blend-mode: hard-light;
-        -webkit-mix-blend-mode: hard-light;
-      }
-     /* Container setup */
-.logo-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.logo-track {
-  display: flex;
-  gap: 30px;
-  animation: scroll 25s linear infinite;
-}
-
-.slide {
-  flex: 0 0 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-}
-
-.slide img {
-  width: auto;
-height: auto;
-object-fit: contain;
-filter: grayscale(100%);
-opacity: 0.9;
-transition: all 0.3s ease;
-}
-
-.slide img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 1024px) {
-  .slide {
-    flex: 0 0 20%;
-  }
-  .logo-track {
-    animation-duration: 30s;
-  }
-}
-
-@media (max-width: 768px) {
-  .slide {
-    flex: 0 0 12%;
-  }
-  .logo-track {
-    animation-duration: 35s;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-track {
-    animation-duration: 40s;
-  }
-}
-
-    </style>
+    <!-- Styles for carousel/slider were moved to src/style.css (consolidated) -->
   </head>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
@@ -361,7 +286,7 @@ transition: all 0.3s ease;
       <!-- Promo Card -->
       <aside class="p-4 bg-[#0039CA1A]">
         <div class="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-b from-sky-900 to-cyan-700 p-6 text-white ">
-          <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.jpg" alt="" class="w-full h-full"></span>
+          <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.jpg" alt="" width="268px" height="364px" class="w-full h-full"></span>
           <div class="relative z-10 flex h-full flex-col items-center justify-center text-center">
             <div class="mb-4 inline-flex items-center gap-2 relative justify-center z-10">
               <img src="./img/NewAgeSys_IT_W-2.svg" alt="" class="relative w-[calc(100%-40px)] pb-[20px]">
@@ -1338,7 +1263,7 @@ transition: all 0.3s ease;
 
     <section
       id="hero-banner"
-      class="relative flex lg:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px]"
+      class="relative flex md:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px] max-768px:h-[calc(100vh-30px)]"
     >
       <div class="container mx-auto w-full max-w-[1456px] px-4">      
 
@@ -1374,12 +1299,12 @@ transition: all 0.3s ease;
       </div>
 
       <img
-        src="./img/banner-testi.webp"
+        src="./img/banner-testi1.webp"
         alt="NewAgeSysIT Hero Banner" 
         width="1920"
         height="1080"
         fetchpriority="high"
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
+        class="w-full h-full object-cover absolute max-767px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
       />
      <img
         src="./img/bannermob-testi.webp"
@@ -1387,12 +1312,12 @@ transition: all 0.3s ease;
         width="100%"
         height="100%"
         fetchpriority="high"
-        class="w-full h-full object-cover absolute max-768px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] block md:hidden"
+        class="w-full h-full object-cover absolute object-center min-1680px:object-[center_90px] block md:hidden"
       />
 
       <!-- Awards Bar -->
       <div
-        class="recognition-section-ppc relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
+        class="recognition-section-ppc absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
       >
         <div class="container mx-auto w-full max-w-[1456px] px-4">
           <div
@@ -1410,24 +1335,28 @@ transition: all 0.3s ease;
               <ul
                 class="logo-track"
               >
-                <li class="slide"><img src="https://design.newagesysit.com/img/Deloitte.svg" alt="Deloitte" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/Inc.svg" alt="Inc 5000" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/uspaacc.svg" alt="USPAACC" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/NJBIZ.svg" alt="NJBIZ" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/Fastest1.svg" alt="Fastest Growing" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
                 <!-- repeat -->
-                 <li class="slide"><img src="https://design.newagesysit.com/img/Deloitte.svg" alt="Deloitte"/></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/Inc.svg" alt="Inc 5000" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/uspaacc.svg" alt="USPAACC" /></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/NJBIZ.svg" alt="NJBIZ"/></li>
-                <li class="slide"><img src="https://design.newagesysit.com/img/Fastest1.svg" alt="Fastest Growing"/></li>
+                 <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
               </ul>
               
             </div>
           </div>
         </div>
       </div>
+      <span class="hidden absolute w-full left-0 z-[9] max-768px:flex justify-center max-768px:bottom-[-10px]">
+          <img src="./img/glow.webp" alt="" class="w-auto">
+        </span>
     </section>
     
 <section class="relative py-14 md:py-20">
@@ -1763,9 +1692,19 @@ transition: all 0.3s ease;
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv1.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> 
+                <img
+                    alt="tlv1"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv1.webp"
+                  />
+              </div>
               <video class="card_vid" muted="muted" autoplay loop>
-                <source src="./video/t1.mp4" type="video/mp4">
+                <source src="./video/t1.webm" type="video/webm">
                 Your browser does not support HTML5 video.
               </video>
               <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
@@ -1822,7 +1761,17 @@ transition: all 0.3s ease;
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv2.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> 
+                <img
+                    alt="tlv1"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv2.webp"
+                  />
+              </div>
               <video class="card_vid" muted="muted" autoplay loop>
                 <source src="./video/t2.webm" type="video/webm">
                 Your browser does not support HTML5 video.
@@ -1925,9 +1874,20 @@ transition: all 0.3s ease;
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv3.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv3.webp" alt="" class="w-full h-full"> -->
+              
+              <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv3.webp"
+                  /></div>
               <video class="card_vid" muted="muted" autoplay loop>
-                <source src="./video/t3.mp4" type="video/mp4">
+                <source src="./video/t3.webm" type="video/webm">
                 Your browser does not support HTML5 video.
               </video>
               <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
@@ -2028,7 +1988,18 @@ transition: all 0.3s ease;
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv4.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv4.webp" alt="" class="w-full h-full"> -->
+                 <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv4.webp"
+                  />
+              </div>
               <video class="card_vid" muted="muted" autoplay loop>
                 <source src="./video/t4.webm" type="video/webm">
                 Your browser does not support HTML5 video.
@@ -2219,9 +2190,20 @@ transition: all 0.3s ease;
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv5.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv5.webp" alt="" class="w-full h-full"> -->
+                <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv5.webp"
+                  />
+              </div>
               <video class="card_vid" muted="muted" autoplay loop>
-                <source src="./video/t5.mp4" type="video/mp4">
+                <source src="./video/t5.webm" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
               <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
@@ -2322,7 +2304,18 @@ transition: all 0.3s ease;
       <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
         <div class="video_card">
           <div class="video_card_inner">
-              <div class="video_poster"> <img src="./img/tlv6.webp" alt="" class="w-full h-full"></div>
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv6.webp" alt="" class="w-full h-full"> -->
+                 <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv6.webp"
+                  />
+              </div>
               <video class="card_vid" muted="muted" autoplay loop>
                 <source src="./video/t6.webm" type="video/webm">
                 Your browser does not support HTML5 video.
@@ -2942,10 +2935,13 @@ transition: all 0.3s ease;
           <!-- Blog Card 1 -->
           <div class=" ">
             <div class="rounded-lg overflow-hidden">
+              
               <img
                 src="./img/Blog_Thumb_List.png"
                 alt="How to Build a SaaS Application"
-                class="w-full h-[180px] md:h-[200px] object-fit"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
+                decoding="async"
+                data-nimg="1"
               />
             </div>
             <div class="mt-4">
@@ -2966,7 +2962,7 @@ transition: all 0.3s ease;
               <img
                 src="./img/Blog_Thumb_List1.png"
                 alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
               />
             </div>
             <div class="mt-4">
@@ -2987,7 +2983,7 @@ transition: all 0.3s ease;
               <img
                 src="./img/Blog_Thumb_List1.png"
                 alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
               />
             </div>
             <div class="mt-4">
@@ -3008,7 +3004,7 @@ transition: all 0.3s ease;
               <img
                 src="./img/Blog_Thumb_List1.png"
                 alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
               />
             </div>
             <div class="mt-4">
@@ -3029,7 +3025,7 @@ transition: all 0.3s ease;
               <img
                 src="./img/Blog_Thumb_List1.png"
                 alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
               />
             </div>
             <div class="mt-4">
@@ -3049,17 +3045,17 @@ transition: all 0.3s ease;
       </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <script src="./js/jquery.magnific-popup.js"></script>
-    <script src="./js/optimize.js"></script>
+  <script src="./js/jquery.magnific-popup.js" defer></script>
+  <script src="./js/optimize.js" defer></script>
     <!-- supermenu position -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -3088,11 +3084,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
-
-
-
-
      <!-- end -->
 <script>
   $(document).ready(function () {
@@ -3374,6 +3365,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dots: false,
             nav: true,
             items: 4, margin: 12,
+            lazyLoad: true,
             responsive: {
               0: { items: 1, margin: 12 },
               640: { items: 2, margin: 16 },

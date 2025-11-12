@@ -6030,3 +6030,66 @@ footer ul li {
     transform: translateY(0);
   }
 }
+
+/* ---- Consolidated styles extracted from src/testimonials.html ---- */
+.owl-lazy{
+  opacity:1 !important;
+  height:auto !important;
+  visibility:visible !important;
+}
+
+.logo-slider{
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  display:flex;
+  align-items:center;
+}
+
+.logo-track{
+  display:flex;
+  gap:30px;
+  animation:scroll 25s linear infinite;
+}
+
+.slide{
+  flex:0 0 20%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 10px;
+}
+
+.slide img{
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  filter:grayscale(100%);
+  opacity:0.9;
+  transition:all 0.3s ease;
+}
+
+.slide img:hover{
+  filter:grayscale(0%);
+  opacity:1;
+  transform:scale(1.05);
+}
+
+@keyframes scroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+@media (max-width:1024px){
+  .slide{flex:0 0 20%;}
+  .logo-track{animation-duration:30s;}
+}
+
+@media (max-width:768px){
+  .slide{flex:0 0 12%;}
+  .logo-track{animation-duration:35s;}
+}
+
+@media (max-width:480px){
+  .logo-track{animation-duration:40s;}
+}
