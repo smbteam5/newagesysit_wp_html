@@ -6005,13 +6005,15 @@ footer ul li {
   animation: dropDown 0.4s ease both;
 }
 
-.group .supermenu .supermenu__inner{
+.group .supermenu.cutoff .supermenu__inner{
   transition: all 0.4s ease;
   /* top:-20px !important;
   visibility: hidden;
   opacity: 0; */
 }
-
+.group:hover .supermenu .supermenu__inner{
+  top:40px;
+}
 /* Even if cutoff class is added, same animation */
 .group:hover .supermenu.cutoff .supermenu__inner{
   transition: all 0.4s ease;

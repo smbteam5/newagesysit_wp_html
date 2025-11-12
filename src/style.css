@@ -16046,11 +16046,15 @@ footer ul li {
   animation: dropDown 0.4s ease both;
 }
 
-.group .supermenu .supermenu__inner{
+.group .supermenu.cutoff .supermenu__inner{
   transition: all 0.4s ease;
   /* top:-20px !important;
   visibility: hidden;
   opacity: 0; */
+}
+
+.group:hover .supermenu .supermenu__inner{
+  top:40px;
 }
 
 /* Even if cutoff class is added, same animation */
@@ -22932,11 +22936,6 @@ footer ul li {
   .max-768px\:object-\[center_-65px\] {
     -o-object-position: center -65px;
        object-position: center -65px;
-  }
-
-  .max-768px\:object-bottom {
-    -o-object-position: bottom;
-       object-position: bottom;
   }
 
   .max-768px\:p-\[10px\] {
