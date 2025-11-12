@@ -6332,6 +6332,10 @@ video {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
+.bg-\[linear-gradient\(270\.81deg\2c \#0B0B11_1\.16\%\2c \#101329_103\.18\%\)\] {
+  background-image: linear-gradient(270.81deg,#0B0B11 1.16%,#101329 103.18%);
+}
+
 .from-\[\#000000\] {
   --tw-gradient-from: #000000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
@@ -14561,7 +14565,7 @@ footer ul li {
     width: 1px;
     left: 18px;
     background-color: #2279ff;
-    height: 100%;
+    height: 50%;
     transition: all 3s;
     filter: grayscale(0);
     top: 0;
@@ -14835,6 +14839,14 @@ footer ul li {
     filter: grayscale(0);
     top: 0;
   }
+}
+
+.timeline__item.in-view:nth-child(even) .timeline__content.timeline_content_last::before {
+  height: 50%;
+}
+
+.timeline__item.in-view:nth-child(odd) .timeline__content.timeline_content_last::before {
+  height: 50%;
 }
 
 #hero-banner {

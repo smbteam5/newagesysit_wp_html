@@ -4600,7 +4600,7 @@ footer ul li {
     width: 1px;
     left: 18px;
     background-color: #2279ff;
-    height: 100%;
+    height: 50%;
     transition: all 3s;
     filter: grayscale(0);
     top: 0;
@@ -4836,6 +4836,7 @@ footer ul li {
     filter: grayscale(0);
     top: 0;
   }
+
   .timeline__item.in-view:nth-child(even) .timeline__content::before {
     position: absolute;
     content: "";
@@ -4847,7 +4848,16 @@ footer ul li {
     filter: grayscale(0);
     top: 0;
   }
-}
+ 
+ }
+
+.timeline__item.in-view:nth-child(even) .timeline__content.timeline_content_last::before {
+    height: 50%;
+  }
+.timeline__item.in-view:nth-child(odd) .timeline__content.timeline_content_last::before {
+    height: 50%;
+  }
+
 
 #hero-banner {
   transition: opacity 0.3s ease;
@@ -4978,6 +4988,10 @@ footer ul li {
 .timeline__item.in-view:nth-child(odd) .timeline__content.timeline__content__first::before {
   top: 50%;
 }
+
+
+
+
 .timeline::after {
   display: none !important;
 }
