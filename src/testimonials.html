@@ -2,38 +2,45 @@
 <html
   lang="en"
 >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sys IT - Testimonials</title>
-    <!-- Preconnect to font and CDN origins to reduce latency -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sys IT - Testimonials</title>
 
-    <!-- Load Google Fonts non-blocking (preload + onload) with noscript fallback -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <!-- DNS + TCP warmups -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-    <!-- Load third-party vendor CSS non-blocking (preload + onload). noscript fallback keeps behavior when JS disabled -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" as="image" href="./img/banner-testi1.webp" fetchpriority="high" media="(min-width: 768px)">
-<link rel="preload" as="image" href="./img/bannermob-testi.webp" fetchpriority="high" media="(max-width: 767px)">
-    <noscript>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-    </noscript>
+  <!-- Google Fonts (simple & reliable). display=swap prevents text-render delay -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-    <link rel="preload" href="style.css" as="style" />
-    <link href="style.css" rel="stylesheet" />
-    <!-- Styles for carousel/slider were moved to src/style.css (consolidated) -->
-  </head>
+  <!-- Third-party vendor CSS (non-blocking via preload + onload). Noscript fallbacks below -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+  </noscript>
+
+  <!-- Preload hero images (use media to avoid fetching both); 'fetchpriority' belongs on <img>, not here -->
+  <link rel="preload" as="image" href="./img/banner-testi1.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="./img/bannermob-testi.webp" media="(max-width: 767px)">
+
+  <!-- Your main CSS: early hint + real stylesheet. (Preload is optional but harmless; browsers coalesce the request.) -->
+  <link rel="preload" href="style.css" as="style">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
 
@@ -288,7 +295,7 @@
       <!-- Promo Card -->
       <aside class="p-4 bg-[#0039CA1A]">
         <div class="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-b from-sky-900 to-cyan-700 p-6 text-white ">
-          <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.jpg" alt="" width="268px" height="364px" class="w-full h-full"></span>
+          <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.webp" alt="" width="268px" height="364px" class="w-full h-full"></span>
           <div class="relative z-10 flex h-full flex-col items-center justify-center text-center">
             <div class="mb-4 inline-flex items-center gap-2 relative justify-center z-10">
               <img src="./img/NewAgeSys_IT_W-2.svg" alt="" class="relative w-[calc(100%-40px)] pb-[20px]">
@@ -614,7 +621,7 @@
       <!-- Right: Award Banner -->
       <div class="w-full lg:w-80 xl:w-96 p-4 bg-[#0039CA1A]">
         <div class="relative h-full min-h-[360px] flex flex-col items-center text-center overflow-hidden">
-          <img src="./img/hire/hire-win.png" alt="" class="h-full lazy-loaded object-cover rounded-[16px]">
+          <img src="./img/hire/hire-win1.webp" alt="" class="h-full lazy-loaded object-cover rounded-[16px]">
         </div>
       </div>
     </div>
@@ -1321,12 +1328,7 @@
   <!-- Mobile hero image -->
   <img
     src="./img/bannermob-testi.webp"
-    srcset="
-      ./img/bannermob-testi.webp 480w,
-      ./img/bannermob-testi.webp 768w,
-      ./img/bannermob-testi.webp 1080w
-    "
-    sizes="(max-width: 767px) 100vw"
+    sizes="(max-width: 767px) 100vw, 100vw"
     alt="NewAgeSysIT Hero Banner"
     width="1080"
     height="1080"
