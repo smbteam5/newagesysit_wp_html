@@ -2062,6 +2062,10 @@ video {
   height: 1.25rem;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -2717,6 +2721,10 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .w-6 {
@@ -4954,6 +4962,16 @@ video {
   background-color: rgb(9 12 30 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#0A0A0A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0A0C1A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 12 26 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#0A1B3F\] {
   --tw-bg-opacity: 1;
   background-color: rgb(10 27 63 / var(--tw-bg-opacity));
@@ -5847,6 +5865,10 @@ video {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
@@ -5933,6 +5955,10 @@ video {
 
 .bg-\[linear-gradient\(180deg\2c rgba\(0\2c 0\2c 0\2c 0\)_44\.81\%\2c \#000000b0_91\.15\%\)\] {
   background-image: linear-gradient(180deg,rgba(0,0,0,0) 44.81%,#000000b0 91.15%);
+}
+
+.bg-\[linear-gradient\(180deg\2c rgba\(18\2c 19\2c 20\2c 0\.2\)_0\%\2c \#FFFFFF_50\%\2c \#BABABA_100\%\)\] {
+  background-image: linear-gradient(180deg,rgba(18,19,20,0.2) 0%,#FFFFFF 50%,#BABABA 100%);
 }
 
 .bg-\[linear-gradient\(193\.77deg\2c \#364EBE_12\.49\%\2c \#FFFFFF_82\.16\%\)\] {
@@ -6325,6 +6351,10 @@ video {
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-\[linear-gradient\(163\.64deg\2c \#2B2D3A_35\.38\%\2c \#787CA0_141\.95\%\)\] {
+  background-image: linear-gradient(163.64deg,#2B2D3A 35.38%,#787CA0 141.95%);
 }
 
 .from-\[\#000000\] {
@@ -16202,6 +16232,104 @@ footer ul li {
   }
 }
 
+.border-line-left{
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  background: #fff;
+  left: 0;
+  opacity: .4;
+}
+
+.border-line-right-gradient{
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(153, 153, 153, 0) 100%);
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  opacity: .4;
+}
+
+.border-line-left-gradient{
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  left: 0;
+  opacity: .4;
+}
+
+.border-line-right{
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  background: #fff;
+  right: 0;
+  opacity: .4;
+}
+
+.dot-anim{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  bottom:-5px;
+}
+
+.dot-anim::after{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  transform: translate(-50%);
+  top:50%;
+  left: 50%;
+}
+
+.card-ds .dot-wave{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%);
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transition: all .5s;
+}
+
+.card-ds:hover .dot-wave{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%);
+  background-color: #4361EE;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transition: all .5s;
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -20684,6 +20812,10 @@ footer ul li {
 
   .lg\:pr-8 {
     padding-right: 2rem;
+  }
+
+  .lg\:pr-\[25px\] {
+    padding-right: 25px;
   }
 
   .lg\:pr-\[30px\] {
