@@ -2178,6 +2178,10 @@ video {
   height: 234px;
 }
 
+.h-\[240px\] {
+  height: 240px;
+}
+
 .h-\[280px\] {
   height: 280px;
 }
@@ -2717,6 +2721,10 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .w-6 {
@@ -3293,6 +3301,10 @@ video {
   max-width: 730px;
 }
 
+.max-w-\[75\%\] {
+  max-width: 75%;
+}
+
 .max-w-\[750px\] {
   max-width: 750px;
 }
@@ -3666,6 +3678,10 @@ video {
 
 .auto-rows-auto {
   grid-auto-rows: auto;
+}
+
+.auto-rows-fr {
+  grid-auto-rows: minmax(0, 1fr);
 }
 
 .grid-cols-1 {
@@ -4915,6 +4931,11 @@ video {
   background-color: rgb(4 3 3 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#050816\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 8 22 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#067706E5\] {
   background-color: #067706E5;
 }
@@ -4952,6 +4973,11 @@ video {
 .bg-\[\#090c1e\] {
   --tw-bg-opacity: 1;
   background-color: rgb(9 12 30 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0A0A0A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#0A1B3F\] {
@@ -5002,6 +5028,11 @@ video {
 .bg-\[\#101010\] {
   --tw-bg-opacity: 1;
   background-color: rgb(16 16 16 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#11171a\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 23 26 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#114269\] {
@@ -5847,6 +5878,10 @@ video {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
@@ -5905,6 +5940,10 @@ video {
 
 .bg-\[linear-gradient\(145\.32deg\2c \#040613_36\.74\%\2c \#17171C_95\.6\%\)\] {
   background-image: linear-gradient(145.32deg,#040613 36.74%,#17171C 95.6%);
+}
+
+.bg-\[linear-gradient\(163\.64deg\2c \#2B2D3A_35\.38\%\2c \#787CA0_141\.95\%\)\] {
+  background-image: linear-gradient(163.64deg,#2B2D3A 35.38%,#787CA0 141.95%);
 }
 
 .bg-\[linear-gradient\(180deg\2c \#00040B_0\%\2c \#283A8F_100\%\)\] {
@@ -6149,6 +6188,14 @@ video {
 
 .bg-\[url\(\'\.\/img\/ct-scsht-bg\.png\'\)\] {
   background-image: url('./img/ct-scsht-bg.png');
+}
+
+.bg-\[url\(\'\.\/img\/cta-bgmob-optimized1\.webp\'\)\] {
+  background-image: url('./img/cta-bgmob-optimized1.webp');
+}
+
+.bg-\[url\(\'\.\/img\/cta-blue\.webp\'\)\] {
+  background-image: url('./img/cta-blue.webp');
 }
 
 .bg-\[url\(\'\.\/img\/cta-card-bg\.svg\'\)\] {
@@ -7411,6 +7458,10 @@ video {
 
 .\!pr-\[30px\] {
   padding-right: 30px !important;
+}
+
+.\!pt-0 {
+  padding-top: 0px !important;
 }
 
 .\!pt-\[100px\] {
@@ -11168,6 +11219,13 @@ video {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.slider-3.ios-slider-3.owl-carousel .owl-item > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto !important;
 }
 
 #slider3 .owl-stage-outer {
@@ -16010,11 +16068,13 @@ footer ul li {
           backdrop-filter: blur(8px);
   left: -100%;
   transition: all 1s;
+  top:0 !important;
 }
 
 #mobile-menu {
+  top: 0;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 50px);
   background-color: #000a1fc9;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -16028,7 +16088,7 @@ footer ul li {
   color: #000;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 640px) {
   #mobile-menu{
     width: 400px;
   }
@@ -16200,6 +16260,102 @@ footer ul li {
   .logo-track {
     animation-duration: 40s;
   }
+}
+
+.border-line-left{
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  background: #fff;
+  left: 0;
+  opacity: .4;
+}
+
+.border-line-right-gradient{
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(153, 153, 153, 0) 100%);
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  opacity: .4;
+}
+
+.border-line-left-gradient{
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  left: 0;
+  opacity: .4;
+}
+
+.border-line-right{
+  width: calc(50% - 15px);
+  display: block;
+  position: absolute;
+  z-index: 9;
+  height: 1px;
+  bottom: 0;
+  background: #fff;
+  right: 0;
+  opacity: .4;
+}
+
+.dot-anim{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.dot-anim::after{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  transform: translate(-50%);
+  top:50%;
+  left: 50%;
+}
+
+.card-ds .dot-wave{
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: translate(-50%);
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  top: unset;
+  transition: all .5s;
+}
+
+.card-ds:hover .dot-wave{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%);
+  background-color: #4361EE;
+  border-radius: 50%;
+  z-index: -1;
+  left: 50%;
+  transition: all .5s;
 }
 
 @media (min-width: 1024px) {
@@ -18593,6 +18749,14 @@ footer ul li {
     background-image: url('./img/amp-up.webp');
   }
 
+  .md\:bg-\[url\(\'\.\/img\/cta-bg-optimized\.webp\'\)\] {
+    background-image: url('./img/cta-bg-optimized.webp');
+  }
+
+  .md\:bg-\[url\(\'\.\/img\/cta-blue\.webp\'\)\] {
+    background-image: url('./img/cta-blue.webp');
+  }
+
   .md\:bg-\[url\(\'\.\/img\/gts-banner\.jpg\'\)\] {
     background-image: url('./img/gts-banner.jpg');
   }
@@ -19307,6 +19471,10 @@ footer ul li {
 
   .md\:leading-\[55px\] {
     line-height: 55px;
+  }
+
+  .md\:leading-\[56px\] {
+    line-height: 56px;
   }
 
   .md\:leading-\[60px\] {
@@ -20686,6 +20854,10 @@ footer ul li {
     padding-right: 2rem;
   }
 
+  .lg\:pr-\[25px\] {
+    padding-right: 25px;
+  }
+
   .lg\:pr-\[30px\] {
     padding-right: 30px;
   }
@@ -21072,6 +21244,10 @@ footer ul li {
 
   .xl\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .xl\:row-span-2 {
+    grid-row: span 2 / span 2;
   }
 
   .xl\:mx-0 {
@@ -22968,6 +23144,10 @@ footer ul li {
 
   .max-768px\:gap-0 {
     gap: 0px;
+  }
+
+  .max-768px\:rounded-\[24px\] {
+    border-radius: 24px;
   }
 
   .max-768px\:border-b {
