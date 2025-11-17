@@ -2258,6 +2258,10 @@ video {
   height: 40vh;
 }
 
+.h-\[410px\] {
+  height: 410px;
+}
+
 .h-\[415px\] {
   height: 415px;
 }
@@ -4046,10 +4050,6 @@ video {
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
-.divide-dashed > :not([hidden]) ~ :not([hidden]) {
-  border-style: dashed;
-}
-
 .divide-\[\#A3ACB5\] > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(163 172 181 / var(--tw-divide-opacity));
@@ -4063,11 +4063,6 @@ video {
 .divide-neutral-200 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-divide-opacity));
-}
-
-.divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: rgb(226 232 240 / var(--tw-divide-opacity));
 }
 
 .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
@@ -4671,6 +4666,11 @@ video {
 
 .border-\[\#c4b2b22c\] {
   border-color: #c4b2b22c;
+}
+
+.border-\[\#e2e8f0\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
 .border-\[\#e4e3e3\] {
@@ -7140,6 +7140,10 @@ video {
 
 .p-px {
   padding: 1px;
+}
+
+.p-\[50px\] {
+  padding: 50px;
 }
 
 .\!px-12 {
@@ -16141,12 +16145,12 @@ footer ul li {
   color: #111827;
 }
 
-.supermenu.cutoff {
+/* .supermenu.cutoff {
   left: 50% !important;
   transform: translateX(-50%) !important;
   top: 50px !important;
   position: fixed !important;
-}
+} */
 
 .supermenu {
   will-change: transform, opacity;
@@ -16154,15 +16158,15 @@ footer ul li {
 
 /* Always slide from top to bottom */
 
-.group:hover .supermenu {
+/* .group:hover .supermenu {
   animation: dropDown 0.4s ease both;
-}
+} */
 
 /* Even if cutoff class is added, same animation */
 
-.group:hover .supermenu.cutoff {
+/* .group:hover .supermenu.cutoff {
   animation: dropDown 0.4s ease both;
-}
+} */
 
 .group .supermenu.cutoff .supermenu__inner {
   transition: all 0.4s ease;
@@ -16171,32 +16175,32 @@ footer ul li {
   opacity: 0; */
 }
 
-.group:hover .supermenu .supermenu__inner {
+/* .group:hover .supermenu .supermenu__inner {
   top: 40px;
-}
+} */
 
 /* Even if cutoff class is added, same animation */
 
-.group:hover .supermenu.cutoff .supermenu__inner {
+/* .group:hover .supermenu.cutoff .supermenu__inner {
   transition: all 0.4s ease;
   /* top:20px !important;
   visibility: visible;
   opacity: 1; */
-}
+
+/* }  */
 
 /* Keyframes for top-to-bottom motion */
 
-@keyframes dropDown {
+/* @keyframes dropDown {
   from {
     opacity: 0;
     transform: translateY(-12px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 /* ---- Consolidated styles extracted from src/testimonials.html ---- */
 
@@ -16373,6 +16377,16 @@ footer ul li {
   border-radius: 50%;
   z-index: -1;
   left: 50%;
+  transition: all .5s;
+}
+
+.for_super_hover .supermenu{
+  top:120px;
+  transition: all .5s;
+}
+
+.for_super_hover:hover .supermenu{
+  top:70px;
   transition: all .5s;
 }
 
@@ -23385,4 +23399,4 @@ footer ul li {
 
 .\[\&\>svg\]\:w-4>svg {
   width: 1rem;
-}
+} 

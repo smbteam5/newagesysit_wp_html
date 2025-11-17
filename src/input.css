@@ -6005,25 +6005,25 @@ footer ul li {
   font-weight: 600;
   color: #111827;
 }
-.supermenu.cutoff {
+/* .supermenu.cutoff {
   left: 50% !important;
   transform: translateX(-50%) !important;
   top: 50px !important;
   position: fixed !important;
-}
+} */
 .supermenu {
   will-change: transform, opacity;
 }
 
 /* Always slide from top to bottom */
-.group:hover .supermenu {
+/* .group:hover .supermenu {
   animation: dropDown 0.4s ease both;
-}
+} */
 
 /* Even if cutoff class is added, same animation */
-.group:hover .supermenu.cutoff {
+/* .group:hover .supermenu.cutoff {
   animation: dropDown 0.4s ease both;
-}
+} */
 
 .group .supermenu.cutoff .supermenu__inner {
   transition: all 0.4s ease;
@@ -6031,18 +6031,18 @@ footer ul li {
   visibility: hidden;
   opacity: 0; */
 }
-.group:hover .supermenu .supermenu__inner {
+/* .group:hover .supermenu .supermenu__inner {
   top: 40px;
-}
+} */
 /* Even if cutoff class is added, same animation */
-.group:hover .supermenu.cutoff .supermenu__inner {
+/* .group:hover .supermenu.cutoff .supermenu__inner {
   transition: all 0.4s ease;
   /* top:20px !important;
   visibility: visible;
   opacity: 1; */
-}
+/* }  */
 /* Keyframes for top-to-bottom motion */
-@keyframes dropDown {
+/* @keyframes dropDown {
   from {
     opacity: 0;
     transform: translateY(-12px);
@@ -6051,7 +6051,7 @@ footer ul li {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 /* ---- Consolidated styles extracted from src/testimonials.html ---- */
 .owl-lazy {
@@ -6217,3 +6217,11 @@ footer ul li {
     left: 50%;
     transition: all .5s;
 }
+.for_super_hover .supermenu{
+  top:120px;
+  transition: all .5s;
+} 
+.for_super_hover:hover .supermenu{
+  top:70px;
+  transition: all .5s;
+} 
