@@ -693,7 +693,7 @@
 
       <!-- mobile-menu start-->
       <div id="mobile-menu" class="hidden-view w-full min-h-screen min-1240px:hidden">
-        <nav class="p-4 container mx-auto">
+        <nav class="p-4 container mx-auto pb-[100px]">
           <ul
             class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
           >
@@ -1297,7 +1297,7 @@
             <button class="relative group p-[1px] rounded-full text-white font-[500] lg:font-semibold text-[16px] md:text-[18px] leading-[25px] cursor-pointer get-free-btn duration-300 overflow-hidden">
             <span class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141b3b00] to-[#D5DBFF]"></span>
             <span class="relative  items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left hidden md:flex">
-              Lets Explore Partnership Opportunity
+              Let's Explore Partnership Opportunity
               <img src="./images/arrow-up-right.svg" alt="arrow-right" class="!w-6 !h-6">
             </span>
             <span class="relative  items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left flex md:hidden">
@@ -3120,6 +3120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mobileMenuButton && mobileMenu) {
       mobileMenuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden-view");
+         document.documentElement.classList.toggle("overflow-hidden");
       });
     }
 
@@ -3181,6 +3182,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (!event.target.closest("#mobile-menu") && !event.target.closest("#mobile-menu-button")) {
     mobileMenu.classList.add("hidden-view");
+    document.documentElement.classList.remove("overflow-hidden");
 }
     });
   });
