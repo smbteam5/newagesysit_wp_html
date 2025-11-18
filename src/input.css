@@ -5972,15 +5972,20 @@ footer ul li {
   height: 100vh;
   overflow: auto;
 }
-#mobile-menu button.active{
-      color: #000;
+#mobile-menu nav li button{
+  color: #fff;
 }
+#mobile-menu nav li button.active{
+      color: #000;
+      background-color: #fff !important;
+}
+
 @media(min-width: 640px) {
   #mobile-menu{
     width: 400px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .dropdown {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -6225,3 +6230,31 @@ footer ul li {
   top:70px;
   transition: all .5s;
 } 
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  #hero-banner{
+    height: 600px;
+  }
+}
+.supermenu__inner ul li a:hover{
+  color: #0284c7 !important;
+}
+.supermenu__inner.supermenu__inner_tech a{
+  transition: all .5s;
+}
+.supermenu__inner.supermenu__inner_tech a:hover{
+  transition: all .5s;
+  transform: scale(1.05);
+}
+.supermenu__inner.supermenu__inner_portfolio a{
+  transition: all .5s;
+  position: relative;
+  left:0px;
+}
+.supermenu__inner.supermenu__inner_portfolio a:hover{
+  transition: all .5s;
+  position: relative;
+  left:15px;
+}
+.supermenu__inner.supermenu__inner_services{
+  padding: 50px;
+}

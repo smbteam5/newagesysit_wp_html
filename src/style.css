@@ -1190,6 +1190,10 @@ video {
   top: -40px;
 }
 
+.top-\[-45px\] {
+  top: -45px;
+}
+
 .top-\[-50\%\] {
   top: -50%;
 }
@@ -1994,6 +1998,10 @@ video {
   height: 350px !important;
 }
 
+.\!h-\[400px\] {
+  height: 400px !important;
+}
+
 .\!h-\[600px\] {
   height: 600px !important;
 }
@@ -2224,6 +2232,10 @@ video {
 
 .h-\[360px\] {
   height: 360px;
+}
+
+.h-\[365px\] {
+  height: 365px;
 }
 
 .h-\[397px\] {
@@ -3275,6 +3287,10 @@ video {
 
 .max-w-\[480px\] {
   max-width: 480px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .max-w-\[54px\] {
@@ -4907,6 +4923,11 @@ video {
   background-color: rgb(0 50 150 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#003599\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 53 153 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#0039CA1A\] {
   background-color: #0039CA1A;
 }
@@ -5911,6 +5932,10 @@ video {
   background-image: linear-gradient(104.21deg, #130A4B 25.31%, #170B5F 86.66%);
 }
 
+.bg-\[linear-gradient\(105\.3deg\2c \#EAEAEA_51\.69\%\2c \#5466E9_114\.42\%\)\] {
+  background-image: linear-gradient(105.3deg,#EAEAEA 51.69%,#5466E9 114.42%);
+}
+
 .bg-\[linear-gradient\(111\.27deg\2c \#D9DFFC_22\.8\%\2c \#364EBE_94\.24\%\)\] {
   background-image: linear-gradient(111.27deg,#D9DFFC 22.8%,#364EBE 94.24%);
 }
@@ -6165,6 +6190,10 @@ video {
 
 .bg-\[url\(\'\.\/img\/bgpattern\.png\'\)\] {
   background-image: url('./img/bgpattern.png');
+}
+
+.bg-\[url\(\'\.\/img\/bookbg-mobile\.webp\'\)\] {
+  background-image: url('./img/bookbg-mobile.webp');
 }
 
 .bg-\[url\(\'\.\/img\/brd-right\.svg\'\)\] {
@@ -6571,6 +6600,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#fe611d\] {
+  --tw-gradient-from: #fe611d var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(254 97 29 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-\[\#ffffff57\] {
   --tw-gradient-from: #ffffff57 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -6859,6 +6894,10 @@ video {
   --tw-gradient-to: #f5bfa0 var(--tw-gradient-to-position);
 }
 
+.to-\[\#fe611d\] {
+  --tw-gradient-to: #fe611d var(--tw-gradient-to-position);
+}
+
 .to-black {
   --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
@@ -7109,6 +7148,10 @@ video {
 
 .p-\[10px\] {
   padding: 10px;
+}
+
+.p-\[12px\] {
+  padding: 12px;
 }
 
 .p-\[15px\] {
@@ -7583,6 +7626,10 @@ video {
   padding-bottom: 2.25rem;
 }
 
+.pb-\[100px\] {
+  padding-bottom: 100px;
+}
+
 .pb-\[10px\] {
   padding-bottom: 10px;
 }
@@ -7669,10 +7716,6 @@ video {
 
 .pl-\[20px\] {
   padding-left: 20px;
-}
-
-.pr-0 {
-  padding-right: 0px;
 }
 
 .pr-1 {
@@ -16119,8 +16162,13 @@ footer ul li {
   overflow: auto;
 }
 
-#mobile-menu button.active{
+#mobile-menu nav li button{
+  color: #fff;
+}
+
+#mobile-menu nav li button.active{
   color: #000;
+  background-color: #fff !important;
 }
 
 @media(min-width: 640px) {
@@ -16129,7 +16177,7 @@ footer ul li {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .dropdown {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -16401,6 +16449,41 @@ footer ul li {
 .for_super_hover:hover .supermenu{
   top:70px;
   transition: all .5s;
+}
+
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  #hero-banner{
+    height: 600px;
+  }
+}
+
+.supermenu__inner ul li a:hover{
+  color: #0284c7 !important;
+}
+
+.supermenu__inner.supermenu__inner_tech a{
+  transition: all .5s;
+}
+
+.supermenu__inner.supermenu__inner_tech a:hover{
+  transition: all .5s;
+  transform: scale(1.05);
+}
+
+.supermenu__inner.supermenu__inner_portfolio a{
+  transition: all .5s;
+  position: relative;
+  left:0px;
+}
+
+.supermenu__inner.supermenu__inner_portfolio a:hover{
+  transition: all .5s;
+  position: relative;
+  left:15px;
+}
+
+.supermenu__inner.supermenu__inner_services{
+  padding: 50px;
 }
 
 @media (min-width: 1024px) {
@@ -18300,6 +18383,10 @@ footer ul li {
     min-height: 800px;
   }
 
+  .md\:min-h-screen {
+    min-height: 100vh;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -18868,6 +18955,10 @@ footer ul li {
     background-image: url('./img/ruby_rails.jpg');
   }
 
+  .md\:bg-\[url\(\'\.\/img\/saas-cta\.webp\'\)\] {
+    background-image: url('./img/saas-cta.webp');
+  }
+
   .md\:from-black\/40 {
     --tw-gradient-from: rgb(0 0 0 / 0.4) var(--tw-gradient-from-position);
     --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
@@ -19015,6 +19106,11 @@ footer ul li {
     padding-right: 50px;
   }
 
+  .md\:px-\[70px\] {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
   .md\:px-\[80px\] {
     padding-left: 80px;
     padding-right: 80px;
@@ -19108,6 +19204,11 @@ footer ul li {
   .md\:py-\[15px\] {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+
+  .md\:py-\[25px\] {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   .md\:py-\[30px\] {
@@ -19880,10 +19981,6 @@ footer ul li {
     margin-top: 4rem;
   }
 
-  .lg\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
   .lg\:mt-20 {
     margin-top: 5rem;
   }
@@ -20479,8 +20576,8 @@ footer ul li {
     gap: 5rem;
   }
 
-  .lg\:gap-24 {
-    gap: 6rem;
+  .lg\:gap-32 {
+    gap: 8rem;
   }
 
   .lg\:gap-36 {
@@ -20536,6 +20633,10 @@ footer ul li {
 
   .lg\:overflow-x-visible {
     overflow-x: visible;
+  }
+
+  .lg\:rounded-3xl {
+    border-radius: 1.5rem;
   }
 
   .lg\:rounded-\[58px\] {
@@ -20890,6 +20991,10 @@ footer ul li {
     padding-bottom: 60px;
   }
 
+  .lg\:pb-\[60vh\] {
+    padding-bottom: 60vh;
+  }
+
   .lg\:pb-\[80px\] {
     padding-bottom: 80px;
   }
@@ -21032,6 +21137,10 @@ footer ul li {
 
   .lg\:pt-\[20\%\] {
     padding-top: 20%;
+  }
+
+  .lg\:pt-\[200px\] {
+    padding-top: 200px;
   }
 
   .lg\:pt-\[30px\] {
@@ -21213,8 +21322,8 @@ footer ul li {
     line-height: 2rem;
   }
 
-  .lg\:leading-\[28px\] {
-    line-height: 28px;
+  .lg\:leading-\[26px\] {
+    line-height: 26px;
   }
 
   .lg\:leading-\[32px\] {
@@ -23171,6 +23280,10 @@ footer ul li {
     gap: 40px;
   }
 
+  .max-992px\:gap-y-\[30px\] {
+    row-gap: 30px;
+  }
+
   .max-992px\:overflow-hidden {
     overflow: hidden;
   }
@@ -23450,4 +23563,4 @@ footer ul li {
 
 .\[\&\>svg\]\:w-4>svg {
   width: 1rem;
-} 
+}
