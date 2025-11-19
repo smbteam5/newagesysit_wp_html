@@ -77,8 +77,61 @@
         border-image-source: linear-gradient(180deg, #5d5d5d 0%, #6981f1 100%);
         border-image-slice: 1;
       }
+      .gradient-text {
+        background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
     </style>
   </head>
+
+  <style>
+    /* Show section only below 800px, hide above 800px */
+    .section-below-800 {
+      display: block;
+    }
+
+    @media (min-width: 800px) {
+      .section-below-800 {
+        display: none;
+      }
+    }
+
+    /* Show section only above 800px, hide below 800px */
+    .section-above-800 {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      .section-above-800 {
+        display: block;
+      }
+    }
+    /* Tablet: 2 columns - remove left border from odd cards (1st, 3rd, 5th, etc) */
+    @media (min-width: 769px) and (max-width: 1023px) {
+      .gradient-border-golang-md:nth-child(odd)::after,
+      .grid > div:nth-child(odd).gradient-border-golang-md::after {
+        display: none !important;
+      }
+    }
+
+    /* Desktop: 3 columns - show right borders on 1st and 2nd columns */
+    @media (min-width: 1024px) {
+      .gradient-border-golang::after,
+      .grid > div.gradient-border-golang::after {
+        display: block !important;
+      }
+    }
+
+    /* Mobile: show bottom borders */
+    @media (max-width: 768px) {
+      .gradient-border-golang-mob::after,
+      .grid > div.gradient-border-golang-mob::after {
+        display: block !important;
+      }
+    }
+  </style>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-black">
     <section
@@ -1266,10 +1319,7 @@
       <div class="container mx-auto px-4 max-w-[1400px]">
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           <!-- MVP Development Card -->
-          <div
-            class="bg-transparent p-8 border hover:border-white/20 transition-all duration-300 gradient-border"
-            style="border-radius: 16px"
-          >
+          <div class="rounded-2xl p-8 h-full bg-black border-gradient">
             <h3 class="text-2xl font-semibold text-white mb-4">
               Minimal Viable Product (MVP) Development
             </h3>
@@ -1288,13 +1338,7 @@
               class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#3850D1] transition-colors"
             >
               Explore Service
-              <svg
-                width="7"
-                height="11"
-                viewBox="0 0 7 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
                 <path
                   d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
                   stroke="currentColor"
@@ -1307,10 +1351,7 @@
           </div>
 
           <!-- Product Development Card -->
-          <div
-            class="bg-transparent p-8 border hover:border-white/20 transition-all duration-300 gradient-border"
-            style="border-radius: 16px"
-          >
+          <div class="rounded-2xl p-8 h-full bg-black border-gradient">
             <h3 class="text-2xl font-semibold text-white mb-4">Product Development</h3>
 
             <h4 class="text-lg font-medium text-white mb-6">From Vision to Market-Ready Product</h4>
@@ -1325,13 +1366,7 @@
               class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#3850D1] transition-colors"
             >
               Explore Service
-              <svg
-                width="7"
-                height="11"
-                viewBox="0 0 7 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
                 <path
                   d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
                   stroke="currentColor"
@@ -1343,10 +1378,9 @@
             </button>
           </div>
 
-          <!-- Startup Advisory Card (centered in new row) -->
+          <!-- Startup Advisory Card -->
           <div
-            class="bg-transparent p-8 border hover:border-white/20 transition-all duration-300 md:col-span-2 md:max-w-[50%] md:mx-auto gradient-border"
-            style="border-radius: 16px"
+            class="rounded-2xl p-8 h-full bg-black border-gradient md:col-span-2 md:max-w-[50%] md:mx-auto"
           >
             <h3 class="text-2xl font-semibold text-white mb-4">Startup Advisory / Consulting</h3>
 
@@ -1363,13 +1397,7 @@
               class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#3850D1] transition-colors"
             >
               Explore Service
-              <svg
-                width="7"
-                height="11"
-                viewBox="0 0 7 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
                 <path
                   d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
                   stroke="currentColor"
@@ -1383,6 +1411,15 @@
         </div>
       </div>
     </section>
+
+    <style>
+      .border-gradient {
+        border: 1px solid transparent;
+        border-radius: 16px;
+        background: linear-gradient(#000, #000) padding-box,
+          linear-gradient(180deg, #5d5d5d 0%, #4361ee 100%) border-box;
+      }
+    </style>
 
     <!-- =======================
        workforce Services
@@ -2247,6 +2284,189 @@
               >aunch Maintenance <br />
               & Growth Partnership
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-below-800 relative overflow-hidden pb-5 p-6">
+      <div
+        class="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] gap-8 relative p-4 md:p-8 lg:p-16"
+      >
+        <!-- Center Card (Shown first on mobile) -->
+        <div
+          class="order-1 md:order-none flex flex-col items-start relative min-h-[200px] md:min-h-[500px] mx-4 md:mx-8"
+        >
+          <div
+            class="rounded-2xl p-8 md:p-12 max-w-xs text-left text-white shadow-xl"
+            style="background: radial-gradient(69.04% 112.93% at 50% 50%, #0e2281 0%, #3045b1 100%)"
+          >
+            <h2 class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4">
+              Why Choose <br />NewAgeSysIT?
+            </h2>
+            <p class="text-white/90 text-sm md:text-base leading-relaxed">
+              Being one of the top Golang development companies, NewAgeSysIT is dedicated to
+              delivering the finest custom Golang software development services to any business.
+            </p>
+          </div>
+        </div>
+
+        <!-- All points combined into a single flex column for mobile -->
+        <div class="order-2 md:order-none flex flex-col gap-10 w-full text-left md:text-right">
+          <!-- Row of points as flex for mobile, grid for desktop -->
+          <div class="flex flex-col md:flex-col items-start md:items-end gap-10 w-full">
+            <!-- Point 1 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">30+</span> Years of Innovation
+                Legacy
+              </p>
+            </div>
+
+            <!-- Point 2 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Multi</span>-industry Expertise<br />Healthcare,
+                Education, On-Demand, FinTech, and more
+              </p>
+            </div>
+
+            <!-- Point 3 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Full</span>-cycle Product
+                Development
+              </p>
+            </div>
+
+            <!-- Point 4 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Certified</span> Cloud & DevOps
+                Engineers
+              </p>
+            </div>
+
+            <!-- Point 5 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Transparent</span> Communication &
+                Support
+              </p>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="flex items-start w-full max-w-xs pb-5">
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Post-Launch</span> Maintenance &
+                Growth Partnership
+              </p>
+            </div>
           </div>
         </div>
       </div>
