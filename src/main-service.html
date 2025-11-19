@@ -87,6 +87,12 @@
   </head>
 
   <style>
+    .border-gradient {
+      border: 1px solid transparent;
+      border-radius: 16px;
+      background: linear-gradient(#000, #000) padding-box,
+        linear-gradient(180deg, #5d5d5d 0%, #6981f1 100%) border-box;
+    }
     /* Show section only below 800px, hide above 800px */
     .section-below-800 {
       display: block;
@@ -1637,405 +1643,113 @@
       </div>
     </section>
 
-    <style>
-      .border-gradient {
-        border: 1px solid transparent;
-        border-radius: 16px;
-        background: linear-gradient(#000, #000) padding-box,
-          linear-gradient(180deg, #5d5d5d 0%, #6981f1 100%) border-box;
-      }
-    </style>
+    <section class="py-20 bg-black">
+      <div class="container mx-auto max-w-[1400px] px-6 grid md:grid-cols-2 gap-12 items-start">
+        <!-- Left Section (Image + Vertical Timeline aligned to right side) -->
+        <div class="relative">
+          <h2 class="text-white text-4xl md:text-5xl mb-4 leading-tight">Our Process</h2>
 
-    <section class="py-8 lg:pb-20 xl:py-32">
-      <div class="container">
-        <div class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]">
-          <div
-            class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:pl-10 md:pr-5 min-h-[600px]"
+          <p
+            class="gradient-text text-lg font-bold mb-8 bg-gradient-to-r from-white/[1] via-white/[1] to-[#364EBE] bg-clip-text text-transparent"
           >
-            <div class="hidden lg:grid md:grid-cols-2 gap-6">
-              <!-- First Column - Moving Up -->
-              <div class="h-[400px] lg:h-[600px] overflow-hidden">
-                <div class="animate-marquee-pcc space-y-6">
-                  <!-- First set of tiles -->
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Transportation</h3>
-                  </div>
+            Transparent. Agile. Outcome-Driven.
+          </p>
 
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">On-Demand</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Healthcare</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Blockchain</h3>
-                  </div>
+          <!-- Image -->
+          <div class="relative">
+            <img src="img/sp8.webp" alt="process" class="rounded-xl w-full max-w-lg" />
+          </div>
+        </div>
 
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Wellness</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                      Social Networking
-                    </h3>
-                  </div>
+        <!-- Right Timeline Content -->
+        <div class="relative pl-12">
+          <!-- Vertical Line moved LEFT near icons -->
+          <div
+            class="absolute top-3 bottom-3 left-0 flex flex-col items-center justify-between py-1 pointer-events-none"
+          >
+            <!-- Dots positioned first -->
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
 
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Entertainment</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Travel</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">FinTech</h3>
-                  </div>
-                </div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+
+            <!-- Line that starts from first dot center and ends at last dot center -->
+            <div
+              class="absolute w-[2px] left-1/2 transform -translate-x-1/2"
+              style="top: 6px; bottom: 6px; background: #242840"
+            ></div>
+          </div>
+
+          <div class="space-y-12 ml-6">
+            <!-- Discover -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process1.svg" alt="Discover" />
               </div>
 
-              <!-- Second Column - Moving Down -->
-              <div class="h-[400px] lg:h-[600px] overflow-hidden">
-                <div class="animate-marquee-pcc-reverse space-y-6">
-                  <!-- First set of tiles -->
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Real Estate</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Restaurant</h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">E Commerce</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
-                      Uber Like Platform
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Education</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Saas</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Game App</h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Pet Care</h3>
-                  </div>
-                </div>
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Discover</h4>
+                <p class="text-gray-400 max-w-md">
+                  Understanding your goals, audience, and vision through strategy workshops.
+                </p>
               </div>
             </div>
 
-            <div class="text-center lg:text-left text-white p-2 md:p-10">
-              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
-                Industries We <br />
-                Serve
-              </h2>
-
-              <p
-                class="text-[#FFFFFFB2] text-[18px] md:text-[20px] font-normal lg:text-[23px] mb-8"
-              >
-                Our journey is something more than inspiring. We’ve come a long way with experience
-                in serving across multiple industries. Here’s a glance into them to
-              </p>
-              <div class="overflow-hidden flex flex-col justify-center items-center lg:hidden">
-                <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Transportation</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">On-Demand</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Healthcare</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <div>
-                      <h3
-                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
-                      >
-                        Blockchain
-                      </h3>
-                    </div>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Wellness</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
-                      Social Networking
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
-                    >
-                      Entertainment
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Travel</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
-                    </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">FinTech</h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Real Estate
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Restaurant
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      E Commerce
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Uber Like Platform
-                    </h3>
-                  </div>
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Education
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Saas
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Game App
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
-                  >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
-                    </div>
-                    <h3
-                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
-                    >
-                      Pet Care
-                    </h3>
-                  </div>
-                </div>
+            <!-- Design -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process2.svg" alt="Design" />
               </div>
-              <div class="flex justify-center items-center mt-3 lg:justify-start">
-                <a href="#" class="text-white">
-                  <div class="with-transparency">
-                    <span>Schedule Your Free Consultation</span>
-                    <svg
-                      width="7"
-                      height="12"
-                      viewBox="0 0 7 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
-                        stroke="white"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </a>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Design</h4>
+                <p class="text-gray-400 max-w-md">
+                  Crafting pixel-perfect UI/UX and defining architecture blueprints.
+                </p>
+              </div>
+            </div>
+
+            <!-- Develop -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process3.svg" alt="Develop" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Develop</h4>
+                <p class="text-gray-400 max-w-md">
+                  Building, testing, and refining using agile sprints.
+                </p>
+              </div>
+            </div>
+
+            <!-- Deploy -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process4.svg" alt="Deploy" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Deploy</h4>
+                <p class="text-gray-400 max-w-md">
+                  Continuous integration, cloud setup, and secure go-live.
+                </p>
+              </div>
+            </div>
+
+            <!-- Scale -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process5.svg" alt="Scale" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Scale</h4>
+                <p class="text-gray-400 max-w-md">
+                  Ongoing optimization, monitoring, and evolution for sustained growth.
+                </p>
               </div>
             </div>
           </div>
@@ -2483,8 +2197,406 @@
        Call to Action
     ======================== -->
 
+    <section class="py-8 lg:pb-20 xl:py-32">
+      <div class="container">
+        <div class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]">
+          <div
+            class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:pl-10 md:pr-5 min-h-[600px]"
+          >
+            <div class="hidden lg:grid md:grid-cols-2 gap-6">
+              <!-- First Column - Moving Up -->
+              <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                <div class="animate-marquee-pcc space-y-6">
+                  <!-- First set of tiles -->
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Transportation</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">On-Demand</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Healthcare</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Blockchain</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Wellness</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
+                      Social Networking
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Entertainment</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Travel</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">FinTech</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Column - Moving Down -->
+              <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                <div class="animate-marquee-pcc-reverse space-y-6">
+                  <!-- First set of tiles -->
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Real Estate</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Restaurant</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">E Commerce</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
+                      Uber Like Platform
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Education</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Saas</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Game App</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Pet Care</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center lg:text-left text-white p-2 md:p-10">
+              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
+                Industries We
+
+                <br />Serve
+              </h2>
+
+              <p
+                class="text-[#FFFFFFB2] text-[18px] md:text-[20px] font-normal lg:text-[23px] mb-8"
+              >
+                Our journey is something more than inspiring. We’ve come a long way with experience
+                in serving across multiple industries. Here’s a glance into them to
+              </p>
+              <div class="overflow-hidden flex flex-col justify-center items-center lg:hidden">
+                <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Transportation</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">On-Demand</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Healthcare</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                      >
+                        Blockchain
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Wellness</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      Social Networking
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                    >
+                      Entertainment
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Travel</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">FinTech</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Real Estate
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Restaurant
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      E Commerce
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Uber Like Platform
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Education
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Saas
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Game App
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Pet Care
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center items-center mt-3 lg:justify-start">
+                <a href="#" class="text-white">
+                  <div class="with-transparency">
+                    <span>Schedule Your Free Consultation</span>
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
-      class="py-8 lg:pb-20 xl:py-32 mx-6 md:mx-12 lg:mx-16 xl:mx-20 rounded-2xl"
+      class="pb-10 lg:pb-20 xl:py-32 mx-6 md:mx-12 lg:mx-16 xl:mx-20 rounded-2xl"
       style="background: linear-gradient(89.67deg, #000000 0.29%, #000726 45.33%)"
     >
       <div class="container mx-auto px-4 max-w-[1400px]">
@@ -2547,6 +2659,127 @@
         </div>
       </div>
     </section>
+
+    <section class="bg-[#0F0F0F] py-20 lg:py-28 px-0 mt-10 overflow-x-hidden">
+      <div class="w-full container mx-auto px-4 lg:px-8">
+        <!-- Heading -->
+        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">Related Blogs</h2>
+
+        <!-- Blog Carousel Container -->
+        <div class="related-blogs-carousel owl-carousel owl-theme">
+          <!-- Blog Card 1 -->
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List.png"
+                alt="How to Build a SaaS Application"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4 cursor-pointer">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                How to Build a SaaS Application?– Cover Nuances, Step-by-Step Process, Cost, and
+                More
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+
+          <!-- Add more blog cards here as needed -->
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .shadow-glow {
+        box-shadow: 0 0 10px #4361ee, 0 0 20px rgba(67, 97, 238, 0.7);
+      }
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
