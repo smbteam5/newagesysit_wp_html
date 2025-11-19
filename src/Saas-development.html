@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -22,46 +22,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.12.1.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-    />
-    <link href="style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
     <style>
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 5px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.87);
-        border-radius: 10px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background-color: rgba(255, 255, 255, 0.647);
-      }
-      .card {
-        background-color: #0f0f10;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 1.5rem;
-        color: white;
-        width: 300px;
-      }
-
-      /* Add smooth transition */
+     
       .owl-carousel .owl-stage {
         transition: all 0.5s ease !important;
       }
@@ -81,19 +48,14 @@
         padding-right: 0px !important;
       }
 
-      .slider-3 .owl-nav {
+      .slider-3-saas .owl-nav {
         padding-left: 10px !important;
       }
 
-      @media (max-width: 1024px) {
-        .slider-3 .owl-nav {
-          margin-top: 120px;
-        }
-      }
     </style>
   </head>
-
-  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
+ <body class="bg-black font-inter overflow-hidden ">
+  
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
       style="background-color: rgba(0, 10, 31) !important"
@@ -1020,7 +982,8 @@
       </div>
       <!-- mobile-menu end-->
     </header>
-
+<div id="smooth-wrapper">
+    <div id="smooth-content">
     <section
       class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden"
     >
@@ -1053,22 +1016,12 @@
         />
       </div>
 
-      <div
-        class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)] pointer-events-none"
-      ></div>
+   
 
-      <div
-        class="hidden absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"
-      ></div>
-
-      <div
-        class="hidden absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
-      ></div>
-
-      <div
-        class="container flex flex-col items-center justify-center pt-[45%] md:pt-[20%] z-40 pb-[110px] relative"
+      <div 
+        class="container flex flex-col items-center justify-center pt-[45%] md:pt-[20%] z-40 pb-[110px] relative  "
       >
-        <div class="relative flex flex-col items-center justify-center">
+        <div id="heroSection" class="relative flex flex-col items-center justify-center transform scale-75 opacity-0">
           <h1
             class="text-[30px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
           >
@@ -1107,6 +1060,7 @@
           />
         </div>
       </div>
+    
       <div
         class="relative w-full xl:mt-[170px] z-50 recognition-section-ppc backdrop-blur-[10px]"
       >
@@ -1188,7 +1142,7 @@
     </section>
 
     <!-- Delivering Results That Matter Section -->
-    <section class="bg-black text-white py-12">
+    <section class="bg-black text-white py-12 reveal-text">
       <div
         class="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10"
       >
@@ -1254,17 +1208,17 @@
     </section>
 
     <!-- Our Comprehensive React Native Development Services Section -->
-    <section class="text-white lg:pt-20 text-center px-4">
+    <section class="text-white lg:pt-20 text-center px-4 ">
       <div class="container mx-auto max-w-4xl">
         <h2
-          class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-6 leading-[40px] xl:leading-[60px] w-[90%] mx-auto"
+          class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-6 leading-[40px] xl:leading-[60px] w-[90%] mx-auto reveal-text"
         >
         Our Comprehensive SaaS Development Services
 
         </h2>
 
         <p
-          class="text-gray-300 text-[17px] leading-[28px] mb-10 lg:w-[90%] mx-auto"
+          class="text-gray-300 text-[17px] leading-[28px] mb-10 lg:w-[90%] mx-auto reveal-text"
         >
           Our team of custom SaaS application development experts perceives the client's demands and provides tailored SaaS software development solutions. We can assist you with building a new SaaS product from scratch, migrating an existing app to the SaaS model, or enhancing an existing product. We focus on developing quality-centric SaaS products with a high-end user interface. 
 
@@ -1284,8 +1238,8 @@
     <!-- React Native Services Cards Section -->
     <section class="bg-black py-10 lg:py-20">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+        <div data-speed="clamp(1.1)"  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 ">
+          <div  class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
             <div>
                <div class="icon mb-[20px]">
                 <img src="./img/saas-consulting.svg" alt="" class="w-[50px]" />
@@ -1302,7 +1256,7 @@
               </div>
             </div>
           </div>
-          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+          <div  class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
             <div>
                <div class="icon mb-[20px]">
                 <img src="./img/design.svg" alt="" class="w-[50px]" />
@@ -1317,7 +1271,7 @@
               </div>
             </div>
           </div>
-          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+          <div  class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
             <div>
                <div class="icon mb-[20px]">
                 <img src="./img/mvp.svg" alt="" class="w-[50px]" />
@@ -1333,7 +1287,7 @@
               </div>
             </div>
           </div>
-          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+          <div  class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
             <div>
                <div class="icon mb-[20px]">
                 <img src="./img/ic-mobile-app-react.svg" alt="" class="w-[50px]" />
@@ -1350,7 +1304,7 @@
               </div>
             </div>
           </div>
-          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+          <div  class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
             <div>
                <div class="icon mb-[20px]">
                 <img src="./img/saas-product-dev.svg" alt="" class="w-[50px]" />
@@ -1464,10 +1418,7 @@
       </div>
     </section>
 
-   
-    
 
-   
       <!-- What to Watch Out For While Building a React Native Codebase Section -->
       <section class="text-white py-12 lg:py-20 relative overflow-hidden">
 
@@ -1483,12 +1434,12 @@
 
         <div class="container mx-auto md:px-4 text-center ">
           <h2
-            class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-8 lg:leading-[60px] max-w-6xl mx-auto "
+            class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-8 lg:leading-[60px] max-w-6xl mx-auto reveal-text"
           >
            Types of Apps Our SaaS Software Experts Develop 
 
           </h2>
-          <p  class="text-gray-300 text-[17px] leading-[28px] mb-10 lg:w-[90%] mx-auto" >
+          <p  class="text-gray-300 text-[17px] leading-[28px] mb-10 lg:w-[90%] mx-auto reveal-text" >
            At NewAgeSysIT, we develop a wide range of SaaS solutions, custom-tailored to meet the diverse business needs of various industries. We have expertise in managing CRM platforms, HR management tools, ERP systems, e-commerce platforms, and project management apps, utilizing the latest technologies. 
 
           </p>
@@ -1496,7 +1447,7 @@
           <!-- Cards Grid -->
           <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-5 text-left">
             <!-- Card 1 -->
-            <div class="min-h-[300px] p-2  md:p-8">
+            <div class="min-h-[300px] p-2  md:p-8 animate-from-left">
               <img
                 src="./img/icr-1.svg"
                 alt="Cloud Icon"
@@ -1531,7 +1482,7 @@
             </div>
 
             <div
-              class="min-h-[300px] p-2 md:p-8 gradient-border-golang gradient-border-golang-mob"
+              class="min-h-[300px] p-2 md:p-8 gradient-border-golang gradient-border-golang-mob animate-from-right"
             >
               <img
                 src="./img/icr-3.svg"
@@ -1546,7 +1497,7 @@
             </div>
 
             <div
-              class="min-h-[300px] p-2 md:p-8 gradient-border-golang-md gradient-border-golang-mob"
+              class="min-h-[300px] p-2 md:p-8 gradient-border-golang-md gradient-border-golang-mob animate-from-left"
             >
               <img src="./img/icr-4.svg" alt="Debugging" class="w-10 my-4" />
               <h3 class="text-[28px] font-[400] mb-2">Communication Platforms 
@@ -1574,7 +1525,7 @@
             </div>
 
             <div
-              class="min-h-[300px] p-2 md:p-8 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md"
+              class="min-h-[300px] p-2 md:p-8 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md animate-from-right"
             >
               <img
                 src="./img/icr-6.svg"
@@ -1592,20 +1543,20 @@
           </div>
         </div>
       </section>
-    </div>
+   
 
     <!-- Why Choose NewAgeSysIT For React Native Development Section -->
     <section class="mt-5 bg-black py-10 lg:py-16">
       <div class="container pb-10">
         <div class="flex flex-col justify-center items-center">
           <h2
-            class="text-[34px] md:text-[50px] text-white font-[400] text-center mb-3"
+            class="text-[34px] md:text-[50px] text-white font-[400] text-center mb-3 reveal-text"
           >
            Why Choose NewAgeSysIT for SaaS Development?
 
           </h2>
           <p
-            class="text-[#A3ACB5] text-[18px] font-[400] leading-7 mt-2 text-center max-w-5xl"
+            class="text-[#A3ACB5] text-[18px] font-[400] leading-7 mt-2 text-center max-w-5xl reveal-text"
           >
            As a leading SaaS development company, NewAgeSysIT is always ready to turn your business idea into a tailored digital solution that reflects your brand ethos and stays competitive. Our SaaS services demonstrate unmatched excellence due to several aspects that keep your business running smoothly and efficiently. 
 
@@ -1613,7 +1564,7 @@
         </div>
        
 
-        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 reveal-text">
           <div class="accordion w-full lg:px-[6px]">
             <div
               class="min-h-[30px] group/1 acc-wrap py-4 p-5 rounded-t-[16px] md:rounded-[16px] bg-[#121314] flexible-border-react"
@@ -1774,7 +1725,7 @@
             />
             <img
               id="accordionImageNext"
-              src=""
+              src="./img/saas-accordion-1.webp"
               alt=""
               class="h-[500px] w-[500px] xl:h-[600px] xl:lg:w-[600px] rounded-[24px] transition-opacity duration-300 opacity-0 inset-0 object-contain"
             />
@@ -1798,12 +1749,12 @@
       <div class="container pb-10 ">
         <div class="flex flex-col justify-center items-center lg:space-y-6">
           <h2
-            class="text-[34px] md:text-[50px] text-white font-[400] text-center mb-3 lg:text-left"
+            class="text-[34px] md:text-[50px] text-white font-[400] text-center mb-3 lg:text-left reveal-text"
           >
             Flexible Engagement Models
           </h2>
           <p
-            class="text-[#A3ACB5] text-[18px] font-[400] leading-7 mt-2 text-center"
+            class="text-[#A3ACB5] text-[18px] font-[400] leading-7 mt-2 text-center reveal-text"
           >
           With different hiring models, we enable you to hire SaaS developers tailored to your business needs and project requirements. Here is a breakdown of the engagement models from which you can choose the one most suitable
 
@@ -1820,11 +1771,11 @@
         </div>
 
         <!-- Engagement Models Cards -->
-        <div
+        <div 
           class=" mx-auto md:px-4 mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  "
         >
           <!-- Card 1: Dedicated Team -->
-          <div
+          <div data-speed="clamp(1.5)"
             class="border border-[#65686C] bg-[linear-gradient(90.42deg,#0E0E0E_43.53%,#263788_190.15%)] rounded-2xl p-8 flex flex-col justify-between lg:min-h-[650px] z-20"
           >
             <div>
@@ -1850,7 +1801,7 @@
           </div>
 
           <!-- Card 2: Staff Augmentation -->
-          <div
+          <div data-speed="clamp(1.8)"
             class="border border-[#65686C] bg-[linear-gradient(180deg,#00040B_0%,#283A8F_100%)] text-black rounded-2xl p-8 flex flex-col justify-between lg:min-h-[650px] z-20"
           >
             <div>
@@ -1873,7 +1824,7 @@
           </div>
 
           <!-- Card 3: Project-Based -->
-          <div
+          <div data-speed="clamp(1.5)"
             class="border border-[#65686C] bg-[linear-gradient(269.7deg,#0E0E0E_56.24%,#27398C_169.61%)]  rounded-2xl p-8 flex flex-col justify-between lg:min-h-[650px] z-20"
           >
             <div>
@@ -1912,14 +1863,21 @@
 
     <!-- React Native Development Process Section -->
     <section class="timeline-section py-12 lg:py-20 relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none -z-10">
+        <img
+          src="./img/why-choose-gradient.webp"
+          alt="Glow Background"
+          class="w-full h-full object-cover object-center "
+        />
+      </div>
       <div class="text-[20px] text-center z-20 max-w-6xl mx-auto ">
         <h2
-          class="text-[30px] px-4 md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 mx-auto text-white"
+          class="text-[30px] px-4 md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 mx-auto text-white reveal-text"
         >
          Our SaaS Development Process
         </h2>
          <p
-            class="text-[#A3ACB5] text-[18px] font-[400] leading-7 mt-2 text-center"
+            class="text-[#A3ACB5] text-[18px] font-[400] leading-7 mt-2 text-center reveal-text"
           >
           NewAgeSysIT adopts a customer-oriented and collaborative approach to SaaS product development. Our team delivers SaaS products that are scalable, robust, and highly secure. With extensive experience, we guide you through every phase, from planning and deployment to maintenance, ensuring your goals align with the SaaS concept and changing market requirements.
 
@@ -1984,18 +1942,18 @@
     >
       <div class="relative container mx-auto z-10 pb-7">
         <h2
-          class="text-3xl md:text-4xl xl:text-[50px] font-medium mb-6 max-w-3xl mx-auto leading-[40px] md:leading-[50px] xl:leading-[60px]"
+          class="text-3xl md:text-4xl xl:text-[50px] font-medium mb-6 max-w-3xl mx-auto leading-[40px] md:leading-[50px] xl:leading-[60px] reveal-text"
         >
           Scale Your Applications with SaaS Development 
 
         </h2>
-        <p class="text-[18px] md:text-[23px] text-[#A3ACB5] max-w-3xl mx-auto leading-7 md:leading-8">
+        <p class="text-[18px] md:text-[23px] text-[#A3ACB5] max-w-3xl mx-auto leading-7 md:leading-8 reveal-text">
          We help you build custom SaaS applications with high performance using the latest technologies and tools. Wish to learn how?
 
         </p>
         <a
           href="#"
-          class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
+          class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition reveal-text"
         >
           Schedule Free Consultation
 
@@ -2023,16 +1981,16 @@
    
 
       <!-- Left Content Overlay -->
-      <section class="relative text-white pt-20 pb-40 overflow-hidden bg-center bg-no-repeat bg-cover"
-      style="background-image: url('./img/driving-inn-react-bg.webp');"
+      <section class="relative text-white pt-20 pb-40 overflow-hidden bg-center bg-no-repeat bg-cover no-animate-text"
+      style="background-image: url('./img/driving-inn-react-bg.webp'); "
       >
         <div
           id="leftOverlay"
           class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
         >
-         <div class="relative px-5">
+         <div class="relative px-5 animate-from-left">
             <h2
-              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] leading-relaxed xl:leading-[60px] mb-6"
+              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] leading-relaxed xl:leading-[60px] mb-6 "
             >
               Driving Innovation Across 
               <br class="hidden md:block" />
@@ -2040,7 +1998,7 @@
 
             </h2>
             <p
-              class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[80%]"
+              class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[80%] "
             >
              NewAgeSysIT has been a renowned SaaS development company, providing the best SaaS app development services that drive success across all industries. Let’s take a sneak peek at the industries that leverage the advantages of our most in-demand SaaS development services, offering businesses a competitive edge in the market.
 
@@ -2051,7 +2009,7 @@
 
         <!-- Industry Cards Slider -->
         <div class="w-full xl:w-[55%] relative xl:ml-auto z-10 lg:pt-20">
-          <div class="slider-1 owl-carousel owl-theme overflow-visible">
+          <div class="slider-1 owl-carousel owl-theme overflow-visible animate-from-right">
             <!-- Card: Healthcare -->
             <div
               class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
@@ -2453,19 +2411,19 @@
         <div class="container">
           <div class="text-[20px] text-center">
             <h2
-              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 max-w-[900px] mx-auto"
+              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 max-w-[900px] mx-auto reveal-text"
             >
              Advanced Technologies and Tools Used By Our SaaS Development Experts
 
             </h2>
             <p
-              class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto font-[400] leading-normal text-[#FFFFFFB2]"
+              class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto font-[400] leading-normal text-[#FFFFFFB2] reveal-text"
             >
              The technologies and tools we use to provide SaaS development services are carefully selected and aligned with evolving trends, ensuring solutions are highly scalable and robust. As a leading SaaS application development company, we focus on delivering innovative solutions that improve your business efficiency and growth.
 
             </p>
           </div>
-          <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+          <div class=" pt-6 md:pt-[50px] w-full mx-auto relative reveal-text ">
             <div class="accordion faq-accordion">
               <div class="flex flex-wrap relative">
                 <div class="basis-full lg:basis-1/2 text-black">
@@ -3510,12 +3468,8 @@
         </div>
       </section>
 
-      
-     
-
-     
       <section
-        class="relative text-white py-10 lg:py-20 overflow-hidden px-5 golang-sect-border-1 bg-gradient-to-b from-[#09090B] to-transparent "
+        class="relative text-white py-10 lg:py-20 overflow-hidden px-5 golang-sect-border-1 bg-gradient-to-b from-[#09090B] to-transparent no-animate-text"
       >
        <div class="absolute inset-0 pointer-events-none -z-10">
         <img
@@ -3527,7 +3481,7 @@
         <div
           class="w-full xl:w-[55%] xl:absolute z-30 left-0 bottom-[2px] h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl slider-border-golang"
         >
-          <div class="relative  lg:pt-20 w-full">
+          <div class="relative  lg:pt-20 w-full animate-from-left">
             <h2
               class="text-[30px] md:text-[40px]   lg:text-[50px]  font-[400] leading-[60px] mb-6"
             >
@@ -3543,8 +3497,8 @@
           class="w-full xl:w-[55%] relative xl:ml-auto z-10 pb-10 xl:pt-20 xl:pl-[250px]"
         >
           <div
-            id="slider3"
-            class="slider-3 owl-carousel owl-theme overflow-visible"
+            id="slider3-saas"
+            class="slider-3-saas owl-carousel owl-theme overflow-visible animate-from-right"
           >
             <!-- Card: Bridgeless Mode -->
             <div
@@ -3612,28 +3566,18 @@
         <!-- Background gradient overlay -->
       </section>
    
-
- 
-   
-
-   
-     
-    
-
-   
-
     <section class="client_experiences bg-transparent relative z-10 py-10 lg:py-20">
       <div class="container">
         <div class="text-center max-w-4xl mx-auto mb-10 px-4">
           <h2
-            class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-12"
+            class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-12 reveal-text"
           >
             Success Stories that Speak for Themselves 
 
           </h2>
         </div>
       </div>
-      <div class="owl-carousel owl-theme client_says">
+      <div class="owl-carousel owl-theme client_says reveal-text">
         <div class="item">
           <div class="item-top">
             <div class="it-left">
@@ -3905,7 +3849,7 @@
       </div>
     </section>
 
- <section class="text-white py-20 relative">
+ <section class="text-white py-20 relative no-animate-text">
         <div class="absolute inset-0 top-0 pointer-events-none -z-10 h-[50%]">
         <img
           src="./img/top-glow-timeline.svg"
@@ -3914,7 +3858,7 @@
         />
       </div>
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-[30px] md:text-[40px] xl:text-[50px] font-[400] mb-16 leading-relaxed max-w-4xl mx-auto">
+        <h2 class="text-[30px] md:text-[40px] xl:text-[50px] font-[400] mb-16 leading-relaxed max-w-4xl mx-auto reveal-text">
           Here’s What Our Clients Say About The Results They’ve Made With Us
         </h2>
       </div>
@@ -4411,7 +4355,7 @@
           class="container grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto px-4"
         >
           <h2
-            class="text-white text-[30px] md:text-[40px] xl:text-[50px]  font-[400] mb-6 text-left p-5"
+            class="text-white text-[30px] md:text-[40px] xl:text-[50px]  font-[400] mb-6 text-left p-5 reveal-text"
           >
             Business Leaders <br />
             Often Ask
@@ -4911,6 +4855,130 @@
       </div>
     </section>
 
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+
+<script>
+ // Initialize GSAP ScrollSmoother after DOM is ready
+ document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  
+  // Only enable ScrollSmoother on desktop for better mobile performance
+  const isDesktop = window.innerWidth >= 1024;
+  
+  // Create smooth scrolling with parallax effects (desktop only)
+  if (isDesktop) {
+    const smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.5,
+      effects: true,
+      smoothTouch: 0.1,
+      normalizeScroll: true,
+      ignoreMobileResize: true,
+    });
+  }
+
+  // Text Reveal Animation - Only for elements with .reveal-text class
+  gsap.utils.toArray(".reveal-text").forEach((element) => {
+    // Skip elements that are inside carousels, dropdowns, or have 'no-animate-text' class
+    if (element.closest('.owl-carousel') || element.closest('.dropdown') || element.closest('#mobile-menu') || element.closest('.no-animate-text')) {
+      return;
+    }
+
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 50, // Start 50px below
+      },
+      {
+        opacity: 1,
+        y: 0, // End at normal position
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%", // Animation starts when element is 90% from top of viewport
+          end: "top 60%",
+          toggleActions: "play none none none", // Only play once
+        },
+      }
+    );
+  });
+
+  // Animate from LEFT - Add class "animate-from-left" to any element
+  gsap.utils.toArray(".animate-from-left").forEach((element) => {
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        x: -100, // Start 100px to the left
+      },
+      {
+        opacity: 1,
+        x: 0, // End at normal position
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 85%",
+          end: "top 55%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  });
+
+  // Animate from RIGHT - Add class "animate-from-right" to any element
+  gsap.utils.toArray(".animate-from-right").forEach((element) => {
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        x: 100, // Start 100px to the right
+      },
+      {
+        opacity: 1,
+        x: 0, // End at normal position
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 85%",
+          end: "top 55%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  });
+
+
+    // Hero section animation on page load
+  gsap.to("#heroSection", {
+    scale: 1,            // scale to normal size
+    opacity: 1,          // fade in
+    duration: 1.2,       // duration
+    ease: "power3.out",  // smooth easing
+    delay: 0.3,          // small delay after page load
+  });
+  // Refresh ScrollTrigger after carousels are initialized
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 500);
+ });
+
+
+</script>
+
     <script>
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
@@ -4927,6 +4995,7 @@
         }
       }
     </script>
+
     <script>
       $(document).ready(function () {
         $(".client_says").owlCarousel({
@@ -4975,10 +5044,8 @@
             },
           },
         });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
+        
+        // Video popup initialization
         $(".video-popup").magnificPopup({
           type: "iframe",
           mainClass: "mfp-fade",
@@ -4989,19 +5056,6 @@
       });
     </script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       function toggleAccordionPPC(button) {
         const content = button.nextElementSibling;
@@ -5036,9 +5090,10 @@
     </script>
 
     <script>
+      // Consolidated carousel initialization for better performance
       $(document).ready(function () {
-        // Initialize carousel
-        const owl = $(".slider-1").owlCarousel({
+        // Slider-1 carousel
+        const owl1 = $(".slider-1").owlCarousel({
           loop: false,
           margin: 20,
           nav: true,
@@ -5061,18 +5116,17 @@
               margin: 20,
             },
             1440: {
-              items: 1, // Show 3 items at larger screens
+              items: 1,
               stagePadding: 200,
               margin: 20,
             },
             1600: {
-              items: 1, // Show 3 items at larger screens
+              items: 1,
               stagePadding: 300,
               margin: 25,
             },
           },
           onInitialized: function () {
-            // Get the tallest item height
             var maxHeight = Math.max.apply(
               null,
               $(".slider-1 .owl-item")
@@ -5081,11 +5135,9 @@
                 })
                 .get()
             );
-            // Set all items to that height
             $(".slider-1 .owl-item").height(maxHeight);
           },
           onResized: function () {
-            // Recalculate heights on resize
             $(".slider-1 .owl-item").css("height", "auto");
             var maxHeight = Math.max.apply(
               null,
@@ -5099,52 +5151,25 @@
           },
         });
 
-        // Get leftOverlay element
         const leftOverlay = document.getElementById("leftOverlay");
-
-        // Add blur effect on slide change
-        owl.on("translate.owl.carousel", function () {
-          if (leftOverlay) {
-            leftOverlay.classList.add("backdrop-blur-3xl");
-          }
+        owl1.on("translate.owl.carousel", function () {
+          if (leftOverlay) leftOverlay.classList.add("backdrop-blur-3xl");
         });
 
-        // Remove blur when back to first slide
-        owl.on("changed.owl.carousel", function (event) {
+        owl1.on("changed.owl.carousel", function (event) {
           if (!leftOverlay) return;
-
           const carousel = event.relatedTarget;
           const current = carousel.current();
           const firstIndex = carousel.minimum();
-
           if (current === firstIndex) {
-            setTimeout(() => {
-              leftOverlay.classList.remove("backdrop-blur-3xl");
-            }, 300); // wait for animation to finish
+            setTimeout(() => leftOverlay.classList.remove("backdrop-blur-3xl"), 300);
           } else {
             leftOverlay.classList.add("backdrop-blur-3xl");
           }
         });
 
-        // Custom navigation setup if needed
-        const nextButton = $(".slider-1 .owl-nav .owl-next");
-        const prevButton = $(".slider-1 .owl-nav .owl-prev");
-
-        if (nextButton.length && prevButton.length) {
-          nextButton.on("click", function () {
-            owl.trigger("next.owl.carousel");
-          });
-
-          prevButton.on("click", function () {
-            owl.trigger("prev.owl.carousel");
-          });
-        }
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        // Initialize carousel
-        const owl = $(".slider-2a").owlCarousel({
+        // Slider-2a carousel
+        const owl2 = $(".slider-2a").owlCarousel({
           loop: false,
           margin: 20,
           nav: true,
@@ -5205,76 +5230,34 @@
           },
         });
 
-        // Get leftOverlay element
-        const leftOverlay = document.getElementById("leftOverlay1");
-
-        // Add blur effect on slide change
-        owl.on("translate.owl.carousel", function () {
-          if (leftOverlay) {
-            leftOverlay.classList.add("backdrop-blur-3xl");
-          }
+        const leftOverlay1 = document.getElementById("leftOverlay1");
+        owl2.on("translate.owl.carousel", function () {
+          if (leftOverlay1) leftOverlay1.classList.add("backdrop-blur-3xl");
         });
 
-        // Remove blur when back to first slide
-        owl.on("changed.owl.carousel", function (event) {
-          if (!leftOverlay) return;
-
+        owl2.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay1) return;
           const carousel = event.relatedTarget;
           const current = carousel.current();
           const firstIndex = carousel.minimum();
-
           if (current === firstIndex) {
-            setTimeout(() => {
-              leftOverlay.classList.remove("backdrop-blur-3xl");
-            }, 300); // wait for animation to finish
+            setTimeout(() => leftOverlay1.classList.remove("backdrop-blur-3xl"), 300);
           } else {
-            leftOverlay.classList.add("backdrop-blur-3xl");
+            leftOverlay1.classList.add("backdrop-blur-3xl");
           }
         });
 
-        // Custom navigation setup if needed
-        const nextButton = $(".slider-1 .owl-nav .owl-next");
-        const prevButton = $(".slider-1 .owl-nav .owl-prev");
-
-        if (nextButton.length && prevButton.length) {
-          nextButton.on("click", function () {
-            owl.trigger("next.owl.carousel");
-          });
-
-          prevButton.on("click", function () {
-            owl.trigger("prev.owl.carousel");
-          });
-        }
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        const owl = $(".slider-3");
-        const leftOverlay = document.getElementById("leftOverlay3");
-
-        owl.owlCarousel({
+        // Slider-3-saas carousel
+        $(".slider-3-saas").owlCarousel({
           autoWidth: true,
           margin: 30,
           loop: false,
           dots: false,
           nav: true,
-          // stagePadding: 180,
-          // responsive: {
-          // 0: { items: 1, stagePadding: 20 },
-          // 768: { items: 2, stagePadding: 50 },
-          // 1024: { items: 3, stagePadding: 100 },
-          // 1440: { items: 1, stagePadding: 0 },
-          // 1600: { items: 1, stagePadding: 0 },
-          // },
         });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        const owl = $(".mobile-slider");
 
-        owl.owlCarousel({
+        // Mobile slider carousel
+        $(".mobile-slider").owlCarousel({
           items: 2,
           margin: 30,
           loop: false,
@@ -5287,12 +5270,31 @@
           },
         });
 
-        const nextbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-next"
-        );
-        const prevbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-prev"
-        );
+        // Related blogs carousel
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: false,
+            responsive: {
+              0: { items: 1 },
+              768: { items: 2 },
+              1024: { items: 3 },
+            },
+          });
+        }
+
+        // Popup initialization
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
       });
     </script>
 
@@ -5300,16 +5302,21 @@
       const toggleBtn = document.getElementById("toggleBtn");
       const collapsed = document.getElementById("collapsedState");
       const expanded = document.getElementById("expandedState");
+      const viewLessBtn = document.getElementById("viewLessBtn");
 
-      toggleBtn.addEventListener("click", () => {
-        collapsed.classList.add("hidden");
-        expanded.classList.remove("hidden");
-      });
+      if (toggleBtn && collapsed && expanded) {
+        toggleBtn.addEventListener("click", () => {
+          collapsed.classList.add("hidden");
+          expanded.classList.remove("hidden");
+        });
+      }
 
-      document.getElementById("viewLessBtn").addEventListener("click", () => {
-        expanded.classList.add("hidden");
-        collapsed.classList.remove("hidden");
-      });
+      if (viewLessBtn && expanded && collapsed) {
+        viewLessBtn.addEventListener("click", () => {
+          expanded.classList.add("hidden");
+          collapsed.classList.remove("hidden");
+        });
+      }
     </script>
 
     <script>
@@ -5397,6 +5404,7 @@
         checkFallback();
       })();
     </script>
+
     <script>
       const imageSources = [
         "./img/wc-saas-1.webp",
@@ -5447,64 +5455,35 @@
         }
       }
     </script>
+
     <script>
-      const buttons = document.querySelectorAll(".");
+      // Tab switching functionality (only if elements exist)
+      const buttons = document.querySelectorAll(".tab-button");
       const contents = document.querySelectorAll(".content-item");
 
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const target = btn.dataset.target;
+      if (buttons.length > 0) {
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const target = btn.dataset.target;
 
-          // Reset active states
-          buttons.forEach((b) => {
-            b.classList.remove("text-white");
-            b.classList.add("text-gray-500");
+            // Reset active states
+            buttons.forEach((b) => {
+              b.classList.remove("text-white");
+              b.classList.add("text-gray-500");
+            });
+            contents.forEach((c) => c.classList.add("hidden"));
+
+            // Activate selected
+            btn.classList.remove("text-gray-500");
+            btn.classList.add("text-white");
+            const targetElement = document.getElementById(target);
+            if (targetElement) {
+              targetElement.classList.remove("hidden");
+            }
           });
-          contents.forEach((c) => c.classList.add("hidden"));
-
-          // Activate selected
-          btn.classList.remove("text-gray-500");
-          btn.classList.add("text-white");
-          document.getElementById(target).classList.remove("hidden");
         });
-      });
-    </script>
-    <script>
-      $(function () {
-        $(".popup-youtube, .popup-vimeo").magnificPopup({
-          // disableOn: 700,
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false,
-        });
-      });
-    </script>
-
-    <!-- Related Blogs: Owl Carousel init (unique instance) -->
-    <script>
-      $(document).ready(function () {
-        const $rb = $(".related-blogs-carousel");
-        if ($rb.length) {
-          $rb.owlCarousel({
-            loop: false,
-            margin: 24,
-            dots: false,
-            nav: true,
-            // navText: [
-            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
-            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
-            // ],
-
-            responsive: {
-              0: { items: 1, margin: 12 },
-              640: { items: 2, margin: 16 },
-              1024: { items: 3, margin: 20 },
-            },
-          });
-        }
-      });
+      }
     </script>
   </body>
+
 </html>
