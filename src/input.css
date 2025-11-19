@@ -1865,6 +1865,7 @@ video {
   width: 100%;
   height: auto !important;
 }
+
 #slider3 .owl-stage-outer {
   overflow: unset !important;
 }
@@ -1889,7 +1890,19 @@ video {
 }
 
 .slider-4 .owl-stage-outer {
-  overflow: unset !important;
+  overflow: visible !important;
+}
+
+.slider-4 .owl-stage {
+  overflow: visible !important;
+}
+
+.slider-4 {
+  overflow: visible !important;
+}
+
+.slider-container {
+  overflow: visible !important;
 }
 
 .unique-accordion-content {
@@ -6235,6 +6248,101 @@ footer ul li {
     height: 600px;
   }
 }
+
+
+
+
+
+.slider-3-saas .owl-nav button.owl-prev {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+  rotate: 180deg;
+}
+
+.slider-3-saas .owl-nav button.owl-next {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+}
+
+.slider-3-saas .owl-nav button.owl-prev:hover {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+  rotate: 180deg;
+}
+
+.slider-3-saas .owl-nav button.owl-next:hover {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+}
+
+.slider-3-saas .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 0deg;
+}
+
+.slider-3-saas .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  rotate: 180deg;
+}
+
+@media (min-width: 1280px) {
+  .slider-3-saas .owl-nav {
+    position: absolute;
+    top: -100px;
+    display: flex;
+    justify-content: start;
+
+    /* padding-left: 200px !important; */
+  }
+}
+
+@media (min-width: 1025px) {
+  .slider-3-saas .owl-nav {
+    /* position: absolute; */
+    top: -100px;
+    display: flex;
+    justify-content: start;
+
+    /* padding-left: 200px !important; */
+  }
+}
+
+@media (max-width: 1025px) {
+  .slider-3-saas .owl-nav {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: start;
+
+    padding-left: 10px !important;
+  }
+}
+
+.slider-3-saas.owl-carousel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider-3-saas.owl-carousel .owl-stage {
+  display: flex;
+}
+
+.slider-3-saas.owl-carousel .owl-item {
+  display: flex;
+}
+
+.slider-3-saas.owl-carousel .owl-item > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.slider-3-saas.ios-slider-3.owl-carousel .owl-item > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto !important;
+}
+
+#slider3-saas .owl-stage-outer {
+  overflow: unset !important;
+}
+
 .supermenu__inner ul li a:hover{
   color: #0284c7 !important;
 }
