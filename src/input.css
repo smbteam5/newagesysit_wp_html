@@ -6258,3 +6258,34 @@ footer ul li {
 .supermenu__inner.supermenu__inner_services{
   padding: 50px;
 }
+.is-open{
+  background: linear-gradient(90deg, #2525F3 0%, rgba(11, 17, 41, 0.11) 100%);
+}
+.image_expand{
+    filter: grayscale(1);
+    opacity: .5;
+}
+.is-open .image_expand{
+    filter: grayscale(0);
+    opacity: 1;
+}
+.image_expand {
+    transform: scale(1);
+    position: relative;
+    transition: all .6s;
+}
+.is-open .image_expand {
+    transform: scale(1.1);
+    position: relative;
+    transition: all .6s;
+}
+.image_expand img{
+    transform: scale(.8);
+    position: relative;
+    transition: all .6s;
+}
+.is-open .image_expand img{
+    transform: scale(1.1);
+    position: relative;
+    transition: all .6s;
+}
