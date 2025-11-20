@@ -1620,6 +1620,10 @@ video {
   margin-left: -15%;
 }
 
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
 .-mt-2 {
   margin-top: -0.5rem;
 }
@@ -3772,6 +3776,11 @@ video {
 .columns-1 {
   -moz-columns: 1;
        columns: 1;
+}
+
+.break-inside-avoid {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 
 .grid-flow-row-dense {
@@ -6219,8 +6228,20 @@ video {
   background-image: linear-gradient(89.96deg,#4361EE 31.02%,#293481 51.12%,#0D1330 99.96%);
 }
 
+.bg-\[linear-gradient\(89\.98deg\2c rgba\(0\2c 0\2c 0\2c 0\.05\)_1\.76\%\2c rgba\(0\2c 0\2c 0\2c 0\.05\)_99\.98\%\)\] {
+  background-image: linear-gradient(89.98deg,rgba(0,0,0,0.05) 1.76%,rgba(0,0,0,0.05) 99.98%);
+}
+
+.bg-\[linear-gradient\(90\.14deg\2c \#329A35_-14\.79\%\2c \#FFFFFF_42\.76\%\)\] {
+  background-image: linear-gradient(90.14deg,#329A35 -14.79%,#FFFFFF 42.76%);
+}
+
 .bg-\[linear-gradient\(90\.42deg\2c \#0E0E0E_43\.53\%\2c \#263788_190\.15\%\)\] {
   background-image: linear-gradient(90.42deg,#0E0E0E 43.53%,#263788 190.15%);
+}
+
+.bg-\[linear-gradient\(90deg\2c \#0B870F_0\%\2c \#FFFFFF_50\.51\%\2c \#0B870F_100\%\)\] {
+  background-image: linear-gradient(90deg,#0B870F 0%,#FFFFFF 50.51%,#0B870F 100%);
 }
 
 .bg-\[linear-gradient\(90deg\2c \#280712_0\%\2c \#4F0E14_26\.13\%\2c \#1F144E_78\.03\%\2c \#342171_100\%\)\] {
@@ -7876,6 +7897,10 @@ video {
   padding-left: 2.5rem;
 }
 
+.pl-11 {
+  padding-left: 2.75rem;
+}
+
 .pl-12 {
   padding-left: 3rem;
 }
@@ -7890,6 +7915,10 @@ video {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-44 {
+  padding-left: 11rem;
 }
 
 .pl-5 {
@@ -7928,8 +7957,16 @@ video {
   padding-right: 3.5rem;
 }
 
+.pr-16 {
+  padding-right: 4rem;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pr-24 {
+  padding-right: 6rem;
 }
 
 .pr-3 {
@@ -7938,6 +7975,10 @@ video {
 
 .pr-4 {
   padding-right: 1rem;
+}
+
+.pr-44 {
+  padding-right: 11rem;
 }
 
 .pr-5 {
@@ -8038,6 +8079,10 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-9 {
+  padding-top: 2.25rem;
 }
 
 .pt-\[10\%\] {
@@ -8786,6 +8831,11 @@ video {
 .text-\[\#DEE3E9\] {
   --tw-text-opacity: 1;
   color: rgb(222 227 233 / var(--tw-text-opacity));
+}
+
+.text-\[\#E4F9F3\] {
+  --tw-text-opacity: 1;
+  color: rgb(228 249 243 / var(--tw-text-opacity));
 }
 
 .text-\[\#E8E8E8\] {
@@ -9618,6 +9668,10 @@ video {
 .\[column-gap\:15px\] {
   -moz-column-gap: 15px;
        column-gap: 15px;
+}
+
+.\[grid-auto-flow\:dense\] {
+  grid-auto-flow: dense;
 }
 
 .\[mask-image\:linear-gradient\(to_bottom\2c transparent_0\%\2c black_20\%\2c black_100\%\)\] {
@@ -16837,6 +16891,114 @@ footer ul li {
   transition: all 0.6s;
 }
 
+.mission-bg-green{
+  background-image: url("./img/mission-foogly-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.mission-card-foogly-1{
+  position: relative;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+.mission-card-foogly-1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #666666 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.mission-card-foogly-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,        /* fully transparent */
+    rgba(0, 0, 0, 0) 40%,       /* still transparent till 40% */
+    rgba(0, 0, 0, 0.05) 100%    /* color from 40% to end */
+  ),
+  linear-gradient(
+    0deg,
+    rgba(4, 27, 5, 0.3)0%,
+    rgba(4, 27, 5, 0.3)40%,
+    rgba(4, 27, 5, 0.05)100%
+  );
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+.mission-card-foogly-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #209123 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.mission-card-foogly-3 {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  overflow: hidden;
+}
+
+.mission-card-foogly-3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(
+    90.01deg,
+    #666666 0.01%,
+    rgba(0, 0, 0, 0) 133.47%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -20225,6 +20387,14 @@ footer ul li {
 
   .lg\:col-span-7 {
     grid-column: span 7 / span 7;
+  }
+
+  .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .lg\:col-start-2 {
+    grid-column-start: 2;
   }
 
   .lg\:m-10 {

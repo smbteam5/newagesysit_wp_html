@@ -6386,3 +6386,109 @@ footer ul li {
   position: relative;
   transition: all 0.6s;
 }
+
+
+.mission-bg-green{
+ background-image: url("./img/mission-foogly-bg.webp");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+}
+
+.mission-card-foogly-1{
+  position: relative;
+ background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+
+  backdrop-filter: blur(20px);
+  border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+.mission-card-foogly-1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #666666 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+.mission-card-foogly-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,        /* fully transparent */
+    rgba(0, 0, 0, 0) 40%,       /* still transparent till 40% */
+    rgba(0, 0, 0, 0.05) 100%    /* color from 40% to end */
+  ),
+  linear-gradient(
+    0deg,
+    rgba(4, 27, 5, 0.3)0%,
+    rgba(4, 27, 5, 0.3)40%,
+    rgba(4, 27, 5, 0.05)100%
+  );
+
+
+  backdrop-filter: blur(20px);
+ border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+.mission-card-foogly-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #209123 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+
+.mission-card-foogly-3 {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  backdrop-filter: blur(20px);
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  overflow: hidden;
+}
+
+.mission-card-foogly-3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(
+    90.01deg,
+    #666666 0.01%,
+    rgba(0, 0, 0, 0) 133.47%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
