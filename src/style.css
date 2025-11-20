@@ -786,6 +786,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .bottom-2 {
   bottom: 0.5rem;
 }
@@ -794,8 +798,16 @@ video {
   bottom: 0.625rem;
 }
 
+.bottom-20 {
+  bottom: 5rem;
+}
+
 .bottom-3 {
   bottom: 0.75rem;
+}
+
+.bottom-60 {
+  bottom: 15rem;
 }
 
 .bottom-8 {
@@ -2560,6 +2572,10 @@ video {
   min-height: 100px;
 }
 
+.min-h-\[110vh\] {
+  min-height: 110vh;
+}
+
 .min-h-\[130px\] {
   min-height: 130px;
 }
@@ -3046,6 +3062,10 @@ video {
 
 .w-\[70\%\] {
   width: 70%;
+}
+
+.w-\[700px\] {
+  width: 700px;
 }
 
 .w-\[70px\] {
@@ -4494,6 +4514,16 @@ video {
   border-bottom-width: 2px;
 }
 
+.border-x-2 {
+  border-left-width: 2px;
+  border-right-width: 2px;
+}
+
+.border-x-\[1px\] {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .\!border-l-0 {
   border-left-width: 0px !important;
 }
@@ -4532,6 +4562,10 @@ video {
 
 .border-l-2 {
   border-left-width: 2px;
+}
+
+.border-l-\[1px\] {
+  border-left-width: 1px;
 }
 
 .border-r {
@@ -8061,6 +8095,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-40 {
+  padding-top: 10rem;
+}
+
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -8885,6 +8923,11 @@ video {
 .text-\[\#FF5D00\] {
   --tw-text-opacity: 1;
   color: rgb(255 93 0 / var(--tw-text-opacity));
+}
+
+.text-\[\#FF8214\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 130 20 / var(--tw-text-opacity));
 }
 
 .text-\[\#FF9B43\] {
@@ -16892,17 +16935,18 @@ footer ul li {
 }
 
 .mission-bg-green{
-  background-image: url("./img/mission-foogly-bg.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  /* background-image: url("./img/mission-foogly-bg.webp");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover; */
 }
 
 .mission-card-foogly-1{
   position: relative;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-top-right-radius: 18px ;
   border-bottom-right-radius: 18px ;
   overflow: hidden;
@@ -16940,8 +16984,8 @@ footer ul li {
     rgba(4, 27, 5, 0.3)40%,
     rgba(4, 27, 5, 0.05)100%
   );
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-top-right-radius: 18px ;
   border-bottom-right-radius: 18px ;
   overflow: hidden;
@@ -16971,8 +17015,8 @@ footer ul li {
     rgba(0, 0, 0, 0.05) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
   overflow: hidden;
@@ -16988,7 +17032,7 @@ footer ul li {
   background: linear-gradient(
     90.01deg,
     #666666 0.01%,
-    rgba(0, 0, 0, 0) 133.47%
+    rgba(0, 0, 0, 0) 50%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -24130,3 +24174,5 @@ footer ul li {
 .\[\&\>svg\]\:w-4>svg {
   width: 1rem;
 }
+
+
