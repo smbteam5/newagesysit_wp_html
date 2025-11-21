@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission</title>
+
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  </head>
+  <body class="bg-black font-inter overflow-hidden">
+    <header
+      class="top-0 left-0 right-0 fixed text-white z-[100]"
+      style="background-color: rgba(0, 10, 31) !important"
+    >
+      <div
+        class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto"
+      >
+        <nav class="flex">
+          <a href="#">
+            <img
+              src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
+              class="h-[40px] md:h-[47px]"
+              alt=""
+            />
+          </a>
+        </nav>
+
+        <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
+          <button class="py-2 px-3 rounded uppercase">
+            <img class="max-w-6" src="./img/call.png" alt="call" />
+          </button>
+          <button id="mobile-menu-button" class="xl:hidden">
+            <svg
+              class="w-7 h-7 text-white fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- mobile-menu start-->
+      <div id="mobile-menu" class="hidden w-full min-h-screen lg:hidden">
+        <nav class="p-4 container mx-auto">
+          <ul
+            class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
+          >
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Services
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
+                <div class="relative z-10 pb-5">
+                  <div
+                    class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh]"
+                  >
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      SOFTWARE DEVELOPMENT
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="/custom-software-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Custom Software Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/software-product-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Software Product Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/saas-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Saas Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/web-application-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Web Application Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="//newagesysit.com/app-development-service/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Mobile App Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/maintenance-and-support/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Maintenance and Support
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      CLOUD SERVICES
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Managed Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AWS
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Application Development
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      IDEATION AND DESIGN
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          UI/UX Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          UX/UI Design
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          MVP Design
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      MVP Design
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Consulting Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps CI/CD Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Development Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Implementation Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevSecOps Services
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      EMERGING TECHNOLOGIES
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AI/ML
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AR/VR
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Data Science and Analytics
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Blockchain
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Robotic Process Automation
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      STARTUP SERVICES
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Minimal Viable Product (MVP)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Product Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Maintenance & Support
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Start-up Advisory / Consulting
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      Start-up Advisory / Consulting
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Digital Transformation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          IT Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Implementation Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          IT Security and Cybersecurity
+                        </a>
+                      </li>
+                    </ul>
+                    <p
+                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
+                    >
+                      Workforce Management
+                    </p>
+                    <ul
+                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Staff Augmentation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Dedicated Development Team
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          QA & Testing
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Industries
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
+                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/transportation.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Transportation</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/on-demand.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>On Demand</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/healthcare.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Healthcare</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/social-networking.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Social Networking</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/entertainment.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Entertainment</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/travel.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Travel</div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/restaurant.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Restaurant</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/e-commerce.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>E-commerce</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/uber-like.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Uber Like Platform</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/saas.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>SaaS</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/game-app.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Game App</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/fintech.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>FinTech</div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/wellness.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Wellness</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/realestate.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Real Estate</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/education.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Education</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/petcare.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Pet Care</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img
+                            class="max-w-[22px]"
+                            src="./img/door-to-door.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>Door to Door Sales</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Technologies
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
+                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
+                  <div class="grid grid-cols-1">
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/ios.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>iOS</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/android.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Android</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/react-native.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>React Native</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/python.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Python</div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/flutter.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Flutter</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/php.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>PHP</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/nodejs.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Node JS</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/mainframe.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Mainframe</div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/coldfusion.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>ColdFusion</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/rubyrails.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Ruby on Rails</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img
+                              class="max-w-[22px]"
+                              src="./img/xamarin.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>Xamarin</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Portfolio
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Blog
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile-menu end-->
+    </header>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <section class="min-h-[110vh] relative">
+          <img
+            src="./img/mission-newage-logo.webp"
+            alt="Mission Hero Background"
+            class="w-full absolute bottom-20 opacity-100"
+          />
+          <div class="absolute bottom-10 w-full flex justify-center z-10 reveal-text">
+            <img
+              src="./img/mission-ellipse.webp"
+              alt="Mission Hero Background"
+              class="w-[700px]"
+            />
+          </div>
+          <div class="absolute bottom-60 w-full flex justify-center">
+            <img
+              src="./img/mission-man.gif"
+              alt="Mission Hero Background"
+              class="w-[600px] rounded-full"
+              style="
+                mask-image: radial-gradient(
+                  circle,
+                  rgba(0, 0, 0, 1) 40%,
+                  rgba(0, 0, 0, 0) 70%
+                );
+                -webkit-mask-image: radial-gradient(
+                  circle,
+                  rgba(0, 0, 0, 1) 40%,
+                  rgba(0, 0, 0, 0) 70%
+                );
+              "
+            />
+          </div>
+
+          <div class="container pt-40 text-white">
+            <div class="w-full flex justify-between">
+              <div class="border-l-[1px] px-8">
+                <h1 class="text-[80px] bg-[linear-gradient(105.3deg,#EAEAEA_51.69%,#5466E9_114.42%)] bg-clip-text text-transparent">We’re on <br/> a Mission</h1>
+              </div>
+              <div class="text-[23px] font-normal border-x-[1px] px-10 flex justify-center items-center">
+                <p >Technology <span class="text-[#FF8214]">with Purpose.</span><br/>
+                     Innovation <span class="text-[#6981F1]">that Creates</span> <br/> Impact.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-10 lg:py-20 mission-bg-green relative">
+          <div class="absolute left-0 right-0 z-0">
+            <img
+              src="./img/mission-foogly-circle.webp"
+              alt=""
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div class="container h-screen w-full text-white">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-8 [grid-auto-flow:dense] items-start"
+            >
+              <div
+                class="break-inside-avoid mission-card-foogly-1 lg:col-start-1 py-8 pr-24"
+              >
+                <h2
+                  class="text-[80px] font-[400] bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent"
+                >
+                  Sustainability
+                </h2>
+              </div>
+              <div
+                class="py-12 pl-11 pr-16 mission-card-foogly-3 break-inside-avoid lg:col-start-2"
+              >
+                <h3
+                  class="text-[35px] font-medium bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent mb-8"
+                >
+                  Foogly
+                </h3>
+                <p
+                  class="text-[28px] font-[400] bg-[linear-gradient(90.14deg,#329A35_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                >
+                  Turning Food Waste into a Sustainable Future
+                </p>
+              </div>
+              <div
+                class="mission-card-foogly-2 py-8 pl-44 pr-44 break-inside-avoid -mt-10 lg:col-start-1"
+              >
+                <h3 class="text-[35px] font-medium text-[#E4F9F3] mb-5">
+                  Problem Statement
+                </h3>
+                <p class="font-[400] text-[#F5FAFE] text-[18px] leading-[25px]">
+                  Millions of tons of food go to waste every year due to the
+                  lack of a direct farm-to-consumer connection
+                </p>
+              </div>
+              <div class="relative break-inside-avoid lg:col-start-2">
+                <img src="./img/mission-foogly.webp" alt="" />
+              </div>
+
+              <div
+                class="mission-card-foogly-1 py-8 pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] break-inside-avoid lg:col-start-1"
+              >
+                <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                  About the Project
+                </h3>
+                <p class="text-[18px] text-[#65686C]">
+                  Kevin Speina, PhD in Chemistry with a specialization in Green
+                  Chemistry, envisioned a sustainable way to reduce global food
+                  waste. What started as a research concept soon evolved into a
+                  viable platform. Kevin partnered with NewAgeSysIT to transform
+                  his vision into Foogly — a digital marketplace that connects
+                  farmers directly with consumers.
+                  <br />
+                  <br />
+                  <span class="mt-5">
+                    We built a scalable, intuitive e-commerce system that
+                    empowers farmers to sell surplus produce, promote
+                    sustainability, and reduce environmental impact.
+                  </span>
+                </p>
+              </div>
+              <div class="lg:col-start-2">
+                <div
+                  class="pt-9 pb-12 pl-11 pr-44 mission-card-foogly-3 break-inside-avoid"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    Testimonial
+                  </h3>
+                  <p class="text-[18px] text-[#65686C] mb-3">
+                    Foogly turned my academic research into a real, working
+                    solution. The NewAgeSysIT team didn’t just build an app —
+                    they built impact.
+                  </p>
+                  <p class="text-[#A3ACB5] text-[18px] mt-3">
+                    Dr. Kevin Speina, Founder of Foogly
+                  </p>
+                </div>
+                <div class="w-full flex justify-start">
+                  <a
+                    href="#"
+                    class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
+                  >
+                    Talk to a Specialist about SaaS Development
+
+                    <span>
+                      <svg
+                        width="7"
+                        height="11"
+                        viewBox="0 0 7 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                          stroke="#212121"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <script>
+      // Initialize GSAP ScrollSmoother after DOM is ready
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        // Only enable ScrollSmoother on desktop for better mobile performance
+        const isDesktop = window.innerWidth >= 1024;
+
+        // Create smooth scrolling with parallax effects (desktop only)
+        if (isDesktop) {
+          const smoother = ScrollSmoother.create({
+            wrapper: "#smooth-wrapper",
+            content: "#smooth-content",
+            smooth: 1.5,
+            effects: true,
+            smoothTouch: 0.1,
+            normalizeScroll: true,
+            ignoreMobileResize: true,
+          });
+        }
+
+        // Text Reveal Animation - Only for elements with .reveal-text class
+        gsap.utils.toArray(".reveal-text").forEach((element) => {
+          // Skip elements that are inside carousels, dropdowns, or have 'no-animate-text' class
+          if (
+            element.closest(".owl-carousel") ||
+            element.closest(".dropdown") ||
+            element.closest("#mobile-menu") ||
+            element.closest(".no-animate-text")
+          ) {
+            return;
+          }
+
+          gsap.fromTo(
+            element,
+            {
+              opacity: 0,
+              y: 50, // Start 50px below
+            },
+            {
+              opacity: 1,
+              y: 0, // End at normal position
+              duration: 0.8,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 90%", // Animation starts when element is 90% from top of viewport
+                end: "top 60%",
+                toggleActions: "play none none none", // Only play once
+              },
+            }
+          );
+        });
+
+        // Animate from LEFT - Add class "animate-from-left" to any element
+        gsap.utils.toArray(".animate-from-left").forEach((element) => {
+          gsap.fromTo(
+            element,
+            {
+              opacity: 0,
+              x: -100, // Start 100px to the left
+            },
+            {
+              opacity: 1,
+              x: 0, // End at normal position
+              duration: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+                end: "top 55%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        });
+
+        // Animate from RIGHT - Add class "animate-from-right" to any element
+        gsap.utils.toArray(".animate-from-right").forEach((element) => {
+          gsap.fromTo(
+            element,
+            {
+              opacity: 0,
+              x: 100, // Start 100px to the right
+            },
+            {
+              opacity: 1,
+              x: 0, // End at normal position
+              duration: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+                end: "top 55%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        });
+
+        // Hero section animation on page load
+        const heroSection = document.querySelector("#heroSection");
+        if (heroSection) {
+          gsap.fromTo(
+            heroSection,
+            {
+              y: 100, // Start 100px below
+              opacity: 0, // Start invisible
+            },
+            {
+              y: 0, // Move to center position
+              opacity: 1, // Fade to full opacity
+              duration: 1.2, // Duration
+              ease: "power3.out", // Smooth easing
+              delay: 0.1, // Small delay after page load
+            }
+          );
+        }
+
+        // Refresh ScrollTrigger after carousels are initialized
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
