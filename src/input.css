@@ -6380,6 +6380,18 @@ footer ul li {
   position: relative;
   transition: all 0.6s;
 }
+
+@media(max-width:768px){
+  #accordion button{
+    flex-direction: column;
+  }
+  .image_expand {
+    height: 100px;
+  }
+  .is-open .image_expand {
+    height: 150px !important;
+  }
+}
 .image_expand img {
   transform: scale(0.8);
   position: relative;
@@ -6506,11 +6518,12 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
     position: relative;
     transition: all .6s;
 }
-
+@media (min-width: 1024px) {
+  
   .flip-container {
     height: 460px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 24px;
   }
 
   .flip-inner {
@@ -6539,7 +6552,6 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* You can adjust this */
   }
 
   .flip-back {
@@ -6555,6 +6567,12 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
     width: 100%;
     scale: 1.06;
   }
+}
+@media(max-width: 1024px) {
+  .flip-front {
+    display: none !important;
+  }
+}
   .bg-img{
     transition: all 1s;
   }
