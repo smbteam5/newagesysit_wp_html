@@ -1901,9 +1901,7 @@ video {
   overflow: visible !important;
 }
 
-.slider-container {
-  overflow: visible !important;
-}
+
 
 .unique-accordion-content {
   max-height: 0;
@@ -6404,14 +6402,22 @@ footer ul li {
 }
 
 
-.mission-bg-green{
-background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
- /* background-image: url("./img/mission-foogly-bg.webp");
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover; */
+.mission-bg-foogly {
+background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 100%) 
 }
+.mission-bg-we {
+background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #B10BAC 100%) 
+
+}
+.mission-bg-hipaa{
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #4361EE 100%) 
+
+}
+.mission-bg-youth{
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #F88A36 100%) 
+
+}
+
 
 
 .mission-card-foogly-1{
@@ -6450,8 +6456,8 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
     rgba(0, 0, 0, 0.05) 100%    /* color from 40% to end */
   ),
   linear-gradient(
-    0deg,
-    rgba(4, 27, 5, 0.3)0%,
+    90deg,
+    rgba(4, 27, 5, 0.037)0%,
     rgba(4, 27, 5, 0.3)40%,
     rgba(4, 27, 5, 0.05)100%
   );
@@ -6512,6 +6518,114 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
   pointer-events: none;
 }
 
+
+
+
+
+
+.mission-card-we-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 40%,       
+    rgba(0, 0, 0, 0.05) 100%    
+  ),
+  linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #b10bab4e 133.47%);
+  backdrop-filter: blur(2px);
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+.mission-card-we-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #B10BAC 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.mission-card-hipaa-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 40%,       
+    rgba(0, 0, 0, 0.05) 100%    
+  ),
+ 
+linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
+
+
+  backdrop-filter: blur(2px);
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+
+.mission-card-hipaa-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.574) 0.01%, #5671EF 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+
+
+.mission-card-youth-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,        
+    rgba(0, 0, 0, 0) 40%,       
+    rgba(0, 0, 0, 0.05) 100%   
+  ),
+  linear-gradient(90.1deg, rgba(55, 30, 11, 0), rgba(55, 30, 11, 0.3));
+
+
+  backdrop-filter: blur(5px);
+ border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+
+
+.mission-card-youth-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #F99448 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
 
 .is-open .image_expand img{
     transform: scale(1.1);
