@@ -8,9 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
-    h1 span { font-family: 'Montserrat', sans-serif; font-weight: 500; font-style: normal;
-    font-size: 69.71px; line-height: 76px; letter-spacing: 0; text-align: right; vertical-align:
-    middle; display: inline-block; }
+
     <style>
       * {
         margin: 0;
@@ -367,10 +365,33 @@
         }
       }
     </style>
+    <style>
+      /* Show section only below 800px, hide above 800px */
+      .section-below-800 {
+        display: block;
+      }
+
+      @media (min-width: 800px) {
+        .section-below-800 {
+          display: none;
+        }
+      }
+
+      /* Show section only above 800px, hide below 800px */
+      .section-above-800 {
+        display: none;
+      }
+
+      @media (min-width: 800px) {
+        .section-above-800 {
+          display: block;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <section>
+    <section class="section-above-800">
       <div class="grid-bg"></div>
       <div class="hero-content">
         <!-- Left image section -->
