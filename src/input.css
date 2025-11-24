@@ -1901,9 +1901,7 @@ video {
   overflow: visible !important;
 }
 
-.slider-container {
-  overflow: visible !important;
-}
+
 
 .unique-accordion-content {
   max-height: 0;
@@ -3487,7 +3485,6 @@ html {
 }
 
 .custom-dashed-small-white {
-  display: inline-block;
   width: 2px;
   height: 30px;
   border-right-width: 2px;
@@ -5735,7 +5732,8 @@ footer ul li {
 .flexible-border-react {
   position: relative;
 }
-.flexible-border-react::after {
+
+.flexible-border-react:not(:last-child)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -5751,7 +5749,11 @@ footer ul li {
     #000000 100%
   );
 }
-
+@media(max-width:992px){
+  .flexible-border-react::after {
+    display: none;
+  }
+}
 .slider-2a .owl-stage-outer {
   overflow: unset !important;
 }
@@ -6376,6 +6378,18 @@ footer ul li {
   position: relative;
   transition: all 0.6s;
 }
+
+@media(max-width:768px){
+  #accordion button{
+    flex-direction: column;
+  }
+  .image_expand {
+    height: 100px;
+  }
+  .is-open .image_expand {
+    height: 150px !important;
+  }
+}
 .image_expand img {
   transform: scale(0.8);
   position: relative;
@@ -6388,14 +6402,48 @@ footer ul li {
 }
 
 
-.mission-bg-green{
-background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
- /* background-image: url("./img/mission-foogly-bg.webp");
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover; */
+.mission-bg-foogly {
+background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #0780197b 100%) 
 }
+
+@media(min-width:1024px){
+  .mission-bg-foogly {
+background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 100%) 
+}
+
+  }
+
+@media(min-width:1024px){
+  .mission-bg-we {
+background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #B10BAC 100%) 
+}
+
+}
+.mission-bg-we {
+background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #b10bab63 100%) 
+}
+
+@media(min-width:1024px){
+  .mission-bg-hipaa{
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #4361EE 100%) 
+}
+}
+.mission-bg-hipaa{
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #4362ee6d 100%) 
+}
+
+@media(min-width:1024px){
+  .mission-bg-youth{
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #F88A36 100%) 
+
+}
+}
+.mission-bg-youth{
+  background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #f88a3676 100%) 
+
+}
+
 
 
 .mission-card-foogly-1{
@@ -6434,8 +6482,8 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
     rgba(0, 0, 0, 0.05) 100%    /* color from 40% to end */
   ),
   linear-gradient(
-    0deg,
-    rgba(4, 27, 5, 0.3)0%,
+    90deg,
+    rgba(4, 27, 5, 0.037)0%,
     rgba(4, 27, 5, 0.3)40%,
     rgba(4, 27, 5, 0.05)100%
   );
@@ -6497,3 +6545,198 @@ background: radial-gradient(96.11% 263.2% at 50% 50%, #09090B 39.01%, #078019 10
 }
 
 
+
+
+
+
+.mission-card-we-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 40%,       
+    rgba(0, 0, 0, 0.05) 100%    
+  ),
+  linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #b10bab4e 133.47%);
+  backdrop-filter: blur(2px);
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+.mission-card-we-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #B10BAC 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.mission-card-hipaa-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 40%,       
+    rgba(0, 0, 0, 0.05) 100%    
+  ),
+ 
+linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
+
+
+  backdrop-filter: blur(2px);
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+
+.mission-card-hipaa-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top-right-radius: 18px ;
+  border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.574) 0.01%, #5671EF 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+
+
+.mission-card-youth-2{
+  position: relative;
+  background: 
+  linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,        
+    rgba(0, 0, 0, 0) 40%,       
+    rgba(0, 0, 0, 0.05) 100%   
+  ),
+  linear-gradient(90.1deg, rgba(55, 30, 11, 0), rgba(55, 30, 11, 0.3));
+
+
+  backdrop-filter: blur(5px);
+ border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  overflow: hidden;
+}
+
+
+
+.mission-card-youth-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ border-top-right-radius: 18px ;
+   border-bottom-right-radius: 18px ;
+  padding: 1px;
+  background: linear-gradient(90.01deg, rgba(0, 0, 0, 0) 0.01%, #F99448 133.47%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.is-open .image_expand img{
+    transform: scale(1.1);
+    position: relative;
+    transition: all .6s;
+}
+@media (min-width: 1024px) {
+  
+  .flip-container {
+    height: 460px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .flip-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  .flip-container:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-front, .flip-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .flip-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-image {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    scale: 1.06;
+  }
+}
+@media(max-width: 1024px) {
+  .flip-front {
+    display: none !important;
+  }
+}
+  .bg-img{
+    transition: all 1s;
+  }
+  .oci{
+    position: relative;
+    transition: all 1s;
+  }
+  .oci::before{
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    right: 0;
+    top: 0;
+    transition: all 1s;
+    content: "";
+  }
+  .card-ds:hover .oci::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, #0B0B10 0%, #131627 70%, #1F2B66 150%);
+    transition: all 1s;
+    height: 150%;
+    width: 150%;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 400px;
+  }
