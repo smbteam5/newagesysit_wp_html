@@ -18,9 +18,9 @@
 
       body {
         font-family: "Inter", sans-serif;
-        background: #000 url("../img/bgnew.webp") center center/cover no-repeat;
+        background: #000;
         color: #fff;
-        overflow: hidden;
+        overflow: auto;
       }
 
       .hero {
@@ -391,7 +391,10 @@
   </head>
 
   <body>
-    <section class="section-above-800">
+    <section
+      class="section-above-800"
+      style="background: #000 url('../img/bgnew.webp') center center/cover no-repeat"
+    >
       <div class="grid-bg"></div>
       <div class="hero-content">
         <!-- Left image section -->
@@ -670,6 +673,8 @@
         </div>
       </div>
     </section>
+
+    <section class="section-below-800"></section>
 
     <script>
       const cards = document.querySelectorAll(".card");
