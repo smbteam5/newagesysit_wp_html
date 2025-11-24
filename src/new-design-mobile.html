@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Hero Section</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #000;
+        color: #fff;
+        overflow: auto;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000 url("./img/bgnew.webp") center center/cover no-repeat;
+      }
+
+      .grid-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+        opacity: 0.1;
+        z-index: 1;
+      }
+
+      .hero-content {
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+      }
+
+      /* Left image section (fixed) */
+      .image-area {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .image-area img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+
+      .image-area img.active {
+        opacity: 1;
+        z-index: 2;
+      }
+
+      /* Right section */
+      .right-section {
+        margin-left: 40%;
+        width: 60%;
+        padding: 6rem 3rem;
+        position: relative;
+      }
+
+      .card-wrapper {
+        position: relative;
+        z-index: 1;
+        margin-left: -80px; /* Pull cards under the image */
+      }
+
+      .image-area {
+        z-index: 2;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #148f09 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+
+      h1 span {
+        color: #7aff6b;
+      }
+
+      p {
+        color: #ccc;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+      }
+      .custom-style {
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        letter-spacing: 0;
+        text-align: right;
+      }
+
+      .custom-style2 {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.9rem;
+        line-height: 1.5;
+        letter-spacing: 0;
+        text-align: right;
+      }
+
+      .card-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0;
+        transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        will-change: transform;
+        position: relative;
+      }
+
+      .card {
+        flex: 1;
+        border-radius: 0;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: #fff;
+        cursor: pointer;
+        opacity: 0.1;
+        height: 320px;
+        background-size: cover;
+        background-position: center;
+        transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 38px;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(0, 0, 0, 0.55) 80%, transparent 100%);
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* Fade & Slide Out Animation */
+      .card.fade-slide-out {
+        animation: fadeSlideOut 0.6s forwards ease-out;
+      }
+      .card.fade-slide-out-left {
+        animation: fadeSlideOutLeft 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      @keyframes fadeSlideOut {
+        0% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-80px);
+        }
+      }
+      @keyframes fadeSlideOutLeft {
+        0% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-300px);
+        }
+      }
+
+      /* Only active card shows text */
+      .card h2,
+      .card button {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, transform 0.4s ease;
+        transform: translateY(20px);
+      }
+
+      .card.active h2,
+      .card.active button {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .card.active {
+        flex: 7;
+        opacity: 1;
+        z-index: 5;
+      }
+
+      .card.tail {
+        flex: 0.7;
+        opacity: 1;
+        filter: brightness(0.9);
+      }
+
+      .card h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      .sustainability-heading {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 32px;
+        line-height: 76px;
+        letter-spacing: 0;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 1.5rem;
+      }
+      .sustainability-heading {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 32px;
+        line-height: 76px;
+        letter-spacing: 0;
+        text-align: right;
+        vertical-align: middle;
+        margin-bottom: 1.5rem;
+      }
+
+      .card button {
+        background: #b8f347;
+        color: #000;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+      .card.sustainability button {
+        background: #073b0a73;
+        color: #fff;
+      }
+
+      .card button:hover {
+        background: #a3e635;
+        transform: translateY(-2px);
+      }
+
+      .tag-bar,
+      .tag-bar-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .tag-bar .tag:nth-child(1).active,
+      .tag-bar-mobile .tag:nth-child(1).active {
+        background: #073b0a73;
+        color: #fff;
+        border-color: #65686c;
+        opacity: 1;
+      }
+      .tag-bar .tag:nth-child(2).active,
+      .tag-bar-mobile .tag:nth-child(2).active {
+        background: #6e129361;
+        color: #fff;
+        border-color: #65686c;
+        opacity: 1;
+      }
+      .tag-bar .tag:nth-child(3).active,
+      .tag-bar-mobile .tag:nth-child(3).active {
+        background: #1017388a;
+        color: #fff;
+        border-color: #65686c;
+        opacity: 1;
+      }
+      .tag-bar .tag:nth-child(4).active,
+      .tag-bar-mobile .tag:nth-child(4).active {
+        background: #271a08;
+        color: #fff;
+        border-color: #65686c;
+        opacity: 1;
+      }
+
+      .tag {
+        background: transparent;
+        border: 1px solid #d1d5db;
+        border-radius: 9px;
+        padding: 10px;
+        color: #a3acb5;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.9rem;
+        font-weight: 600;
+        width: 190px;
+        height: 45px;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+      }
+
+      .tag.active {
+        background: rgba(122, 255, 107, 0.1);
+        color: var(--active-tag-color, #7aff6b);
+        border-color: var(--active-tag-color, #7aff6b);
+      }
+
+      @media (max-width: 900px) {
+        .image-area {
+          position: relative;
+          width: 100%;
+          height: 300px;
+        }
+        .right-section {
+          margin-left: 0;
+          width: 100%;
+          padding: 3rem 1.5rem;
+        }
+        .card-wrapper {
+          flex-direction: column;
+        }
+        .card.active,
+        .card.tail {
+          flex: 1 !important;
+        }
+      }
+    </style>
+    <style>
+      /* Show section only below 800px, hide above 800px */
+      .section-below-800 {
+        display: block;
+      }
+
+      @media (min-width: 800px) {
+        .section-below-800 {
+          display: none;
+        }
+      }
+
+      /* Show section only above 800px, hide below 800px */
+      .section-above-800 {
+        display: none;
+      }
+
+      @media (min-width: 800px) {
+        .section-above-800 {
+          display: block;
+        }
+      }
+
+      /* Section wrapper */
+      .impact-section {
+        min-height: 100svh;
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 28px 16px 24px;
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(
+            1200px 600px at -30% -20%,
+            rgba(59, 255, 148, 0.08) 0%,
+            rgba(0, 0, 0, 0) 60%
+          ),
+          var(--bg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- //below 800px section -->
+
+    <section class="section-below-800 impact-section">
+      <div class="layout">
+        <header>
+          <h1 class="kicker">
+            <span class="line">Every Project</span>
+            <span class="line">-Tells a Story</span>
+            <span class="line">of <strong>Impact</strong></span>
+          </h1>
+          <p class="sub">
+            We partner with visionaries to create solutions that shape a smarter tomorrow.
+          </p>
+        </header>
+
+        <div style="background: #000 url('./img/bgnew.webp') center center/cover no-repeat">
+          <img
+            src="./img/new1.webp"
+            alt="Hero Visual"
+            style="width: 100%; height: auto; display: block"
+          />
+        </div>
+        <div
+          class="mobile-image-card-container"
+          style="
+            position: relative;
+            width: 100vw;
+            max-width: none;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          "
+        >
+          <img
+            id="mobile-bg-img"
+            src="./img/ca1.webp"
+            alt="Hero Visual"
+            style="
+              width: 100vw;
+              max-width: none;
+              height: auto;
+              display: block;
+              min-height: 320px;
+              object-fit: cover;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: 0;
+              transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            "
+          />
+          <div
+            class="mobile-card-wrapper"
+            style="
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 100vw;
+              max-width: none;
+              z-index: 1;
+            "
+          >
+            <div
+              class="mobile-card active"
+              data-index="0"
+              style="
+                margin: 0;
+                padding: 32px 10px 28px 10px;
+                border-radius: 10px;
+                background: linear-gradient(
+                    120deg,
+                    rgba(0, 255, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.9) 100%
+                  ),
+                  #0a1a0a, url('./img/mobile-sustainability.webp') center center/cover no-repeat;
+                box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+                width: 100vw;
+                max-width: 420px;
+                margin-left: 0;
+                margin-right: 0;
+                position: relative;
+                background-blend-mode: overlay, normal;
+                transition: background 0.5s;
+              "
+            >
+              <h2
+                class="mobile-card-heading"
+                style="
+                  color: #fff;
+                  font-family: 'Montserrat', 'Inter', sans-serif;
+                  font-size: 1.6rem;
+                  font-weight: 500;
+                  text-align: center;
+                  margin-bottom: 1.7rem;
+                "
+              >
+                Sustainability
+              </h2>
+              <button
+                style="
+                  background: #d1ff6a;
+                  color: #000;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.2em;
+                  padding: 0.9rem 1.5rem;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  border: none;
+                  cursor: pointer;
+                  min-width: 0;
+                  width: 100%;
+                  max-width: 260px;
+                  margin: 0 auto;
+                  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+                "
+              >
+                <span
+                  style="
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 0.1em;
+                  "
+                  >Read Our Client Stories</span
+                >
+                <span
+                  style="
+                    background: #000;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 0.5em;
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 5L11 9L7 13"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tag-bar-mobile"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 18px;
+          "
+        >
+          <span class="tag active" data-index="0">Sustainability</span>
+          <span class="tag" data-index="1">Women Empowerment</span>
+          <span class="tag" data-index="2">HIPAA Transformation</span>
+          <span class="tag" data-index="3">Youth Wellness</span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Mobile card/tag logic matching desktop functionality
+      const mobileCards = document.querySelectorAll(".mobile-card");
+      const mobileTags = document.querySelectorAll(".tag-bar-mobile .tag");
+      const mobileCardWrapper = document.querySelector(".mobile-card-wrapper");
+      const mobileHeading = document.querySelector(".mobile-card-heading");
+
+      const mobileCardData = [
+        {
+          heading: "Sustainability",
+          cardBg:
+            "linear-gradient(120deg, rgba(0,255,0,0.08) 0%, rgba(0,0,0,0.9) 100%), #0a1a0a, url('./img/mobile-sustainability.webp') center center/cover no-repeat",
+          headingText: "Every Project <br>-Tells a Story<br>of <strong>Impact</strong>",
+          headingColor: "linear-gradient(90deg, #148F09 0%, #FFFFFF 100%)",
+        },
+        {
+          heading: "Women Empowerment",
+          cardBg:
+            "linear-gradient(120deg, rgba(110,18,147,0.08) 0%, rgba(0,0,0,0.9) 100%), #1a0a1a, url('./img/mobile-women.webp') center center/cover no-repeat",
+          headingText: "Every Project <br>-Tells a Story<br>of <strong>Impact</strong>",
+          headingColor: "linear-gradient(90deg, #69098F 0%, #FFFFFF 100%)",
+        },
+        {
+          heading: "HIPAA Transformation",
+          cardBg:
+            "linear-gradient(120deg, rgba(16,23,56,0.08) 0%, rgba(0,0,0,0.9) 100%), #0a0a1a, url('./img/mobile-hipaa.webp') center center/cover no-repeat",
+          headingText: "Every Project <br>-Tells a Story<br>of <strong>Impact</strong>",
+          headingColor: "linear-gradient(90deg, #093F8F 0%, #FFFFFF 100%)",
+        },
+        {
+          heading: "Youth Wellness",
+          cardBg:
+            "linear-gradient(120deg, rgba(201,94,21,0.08) 0%, rgba(0,0,0,0.9) 100%), #1a1208, url('./img/mobile-youth.webp') center center/cover no-repeat",
+          headingText: "Every Project <br>-Tells a Story<br>of <strong>Impact</strong>",
+          headingColor: "linear-gradient(90deg, #C95E15 0%, #FFFFFF 100%)",
+        },
+      ];
+
+      // Map for background images for each card index
+      const mobileBgImages = [
+        "./img/ca1.webp",
+        "./img/ca2.webp",
+        "./img/ca3.webp",
+        "./img/ca4.webp",
+      ];
+
+      function showMobileCard(index, animateImg = false) {
+        // Animate card (fade/slide out if needed)
+        const activeCard = document.querySelector(".mobile-card.active");
+        if (activeCard && parseInt(activeCard.dataset.index) !== index) {
+          activeCard.classList.remove("active");
+        }
+        // Only one card, so just update its content and style
+        const card = document.querySelector(".mobile-card");
+        card.classList.add("active");
+        card.style.background = mobileCardData[index].cardBg;
+        card.style.backgroundBlendMode = "overlay, normal";
+        // Update card heading
+        if (mobileHeading) mobileHeading.textContent = mobileCardData[index].heading;
+        // Update tag active state
+        mobileTags.forEach((tag, i) => {
+          tag.classList.toggle("active", i === index);
+        });
+        // Update main hero heading (h1.kicker)
+        const kicker = document.querySelector("h1.kicker");
+        if (kicker) {
+          kicker.innerHTML = mobileCardData[index].headingText;
+          kicker.style.background = mobileCardData[index].headingColor;
+          kicker.style.webkitBackgroundClip = "text";
+          kicker.style.backgroundClip = "text";
+          kicker.style.color = "transparent";
+          kicker.style.webkitTextFillColor = "transparent";
+        }
+        // Animate and update background image
+        const bgImg = document.getElementById("mobile-bg-img");
+        if (bgImg && typeof mobileBgImages[index] !== "undefined") {
+          if (animateImg) {
+            bgImg.style.transform = "translateX(100vw)";
+            bgImg.style.opacity = "0";
+            setTimeout(() => {
+              bgImg.src = mobileBgImages[index];
+              bgImg.style.transform = "translateX(-100vw)";
+              setTimeout(() => {
+                bgImg.style.transition =
+                  "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.6s cubic-bezier(0.4,0,0.2,1)";
+                bgImg.style.transform = "translateX(0)";
+                bgImg.style.opacity = "1";
+              }, 20);
+            }, 600);
+          } else {
+            bgImg.src = mobileBgImages[index];
+            bgImg.style.transform = "translateX(0)";
+            bgImg.style.opacity = "1";
+          }
+        }
+      }
+
+      // Tag click
+      mobileTags.forEach((tag, i) => {
+        tag.addEventListener("click", () => showMobileCard(i, true));
+      });
+
+      // Card click (optional: cycle to next card)
+      const card = document.querySelector(".mobile-card");
+      if (card) {
+        card.addEventListener("click", () => {
+          let current = 0;
+          mobileTags.forEach((tag, i) => {
+            if (tag.classList.contains("active")) current = i;
+          });
+          const next = (current + 1) % mobileCardData.length;
+          showMobileCard(next, true);
+        });
+      }
+
+      // Set initial state
+      showMobileCard(0);
+    </script>
+  </body>
+</html>
