@@ -20,6 +20,26 @@
       onload="this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <style>
+      /* Enhanced gradient support for mobile */
+      .gradient-text-mission {
+        background: linear-gradient(105.3deg, #eaeaea 51.69%, #5466e9 114.42%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline-block;
+        width: 100%;
+      }
+
+      @supports (-webkit-background-clip: text) {
+        .gradient-text-mission {
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    </style>
   </head>
   <body class="bg-black font-inter overflow-hidden">
     <header
@@ -950,28 +970,39 @@
     </header>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <section class="min-h-[1100px] relative">
-          <div class="absolute bottom-10 w-full flex justify-center z-10">
+        <section
+          class="min-h-[800px] md:min-h-[1000px] xl:min-h-[1200px] relative py-20"
+        >
+          <div
+            class="absolute bottom-10 w-full justify-center z-10 hidden lg:flex"
+          >
             <img
               src="./img/mission-newage-logo.webp"
               alt="Mission Hero Background"
-              class="w-full max-w-[1600px] absolute bottom-20 opacity-100"
+              class="w-full max-w-[90%] absolute bottom-20 opacity-100"
             />
           </div>
           <div
-            class="absolute bottom-10 w-full flex justify-center z-10 reveal-text"
+            class="absolute bottom-[30%] md:bottom-10 lg:bottom-10 w-full justify-center z-10 flex"
           >
             <img
               src="./img/mission-ellipse.webp"
               alt="Mission Hero Background"
-              class="w-[900px]"
+              class="w-[370px] md:w-[700px] xl:w-[900px]"
             />
           </div>
-          <div class="absolute bottom-72 w-full flex justify-center">
-            <img
-              src="./img/mission-man.gif"
-              alt="Mission Hero Background"
-              class="w-[700px] rounded-full"
+          <div
+            class="absolute bottom-[45%] md:bottom-60 xl:bottom-72 w-full justify-center flex"
+          >
+            <video
+              class="w-[300px] md:w-[600px] xl:w-[700px] rounded-full"
+              poster="./img/mission-poster.webp"
+              playsinline
+              autoplay
+              loop
+              muted
+              preload="auto"
+              id="missionHeroVideo"
               style="
                 mask-image: radial-gradient(
                   circle,
@@ -984,22 +1015,27 @@
                   rgba(0, 0, 0, 0) 70%
                 );
               "
-            />
+            >
+              <source src="./video/mission-video.mp4" type="video/mp4" />
+              <source src="./video/mission-man.webm" type="video/webm" />
+            </video>
           </div>
 
-          <div class="container pt-40 text-white">
+          <div
+            class="container pt-20 md:pt-28 xl:pt-32 text-white flex flex-col justify-between h-full absolute inset-0"
+          >
             <div class="w-full flex justify-between">
-              <div class="flex px-8">
+              <div class="flex">
                 <div class="h-[100%] w-px bg-white/50 mr-6"></div>
                 <h1
-                  class="text-[80px] bg-[linear-gradient(105.3deg,#EAEAEA_51.69%,#5466E9_114.42%)] bg-clip-text text-transparent"
+                  class="text-[40px] sm:text-[50px] md:text-[50px] lg:text-[80px] bg-[linear-gradient(105.3deg,#EAEAEA_51.69%,#5466E9_114.42%)] bg-clip-text text-transparent"
                 >
-                  We’re on <br />
+                  We’re on <br class="hidden md:block" />
                   a Mission
                 </h1>
               </div>
               <div
-                class="text-[23px] font-normal px-10 flex justify-center items-center"
+                class="text-[23px] font-normal lg:px-10 justify-center items-center hidden md:flex"
               >
                 <div class="h-full w-[1px] bg-white/50"></div>
                 <p class="mx-7">
@@ -1007,13 +1043,25 @@
                   ><br />
                   Innovation
                   <span class="text-[#6981F1]"
-                    >that Creates <br />
+                    >that Creates <br class="hidden lg:block" />
                     Impact.</span
                   >
                   <br />
                 </p>
                 <div class="h-full w-[1px] bg-white/50 mx-3"></div>
               </div>
+            </div>
+            <div
+              class="text-[23px] font-normal lg:px-10 justify-center items-center flex pb-14 md:hidden text-center"
+            >
+              <div class="h-full w-[1px] bg-white/50"></div>
+              <p class="mx-7">
+                Technology <span class="text-[#FF8214]">with Purpose.</span>
+                Innovation
+                <span class="text-[#6981F1]">that Creates Impact.</span>
+                <br />
+              </p>
+              <div class="h-full w-[1px] bg-white/50 mx-3"></div>
             </div>
           </div>
         </section>
@@ -1027,20 +1075,18 @@
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-8  "
-            >
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div
-                class=" mission-card-foogly-1  pl-5 py-10 lg:py-[64px] md:py-14  2xl:pr-24"
+                class="mission-card-foogly-1 pl-5 py-10 lg:py-[64px] md:py-14 2xl:pr-24"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent"
                 >
                   Sustainability
                 </h2>
               </div>
               <div
-                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3 "
+                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3"
               >
                 <h3
                   class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#329A35_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
@@ -1062,7 +1108,7 @@
               </div>
               <div class="space-y-8">
                 <div
-                  class="mission-card-foogly-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44 "
+                  class="mission-card-foogly-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
                 >
                   <h3
                     class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
@@ -1078,7 +1124,7 @@
                 </div>
 
                 <div
-                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)]  -mt-2"
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
                 >
                   <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                     About the Project
@@ -1101,14 +1147,12 @@
                 </div>
               </div>
               <div class="lg:space-y-8">
-                <div
-                  class="relative  hidden lg:block"
-                >
+                <div class="relative hidden lg:block">
                   <img src="./img/mission-foogly.webp" alt="" />
                 </div>
                 <div class="">
                   <div
-                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3 "
+                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
                   >
                     <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                       Testimonial
@@ -1125,11 +1169,11 @@
                   <div class="w-full flex justify-start">
                     <a
                       href="#"
-                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
+                      class="bg-white text-black rounded-full px-8 py-4 inline-flex justify-center items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                     >
-                      Talk to a Specialist about SaaS Development
+                      <span class="truncate">cta content goes here</span>
 
-                      <span>
+                      <span class="flex-shrink-0">
                         <svg
                           width="7"
                           height="11"
@@ -1163,14 +1207,12 @@
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-8 "
-            >
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div
-                class=" mission-card-foogly-1  pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#B10BAC_0%,#FFFFFF_50.51%,#B10BAC_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#B10BAC_0%,#FFFFFF_50.51%,#B10BAC_100%)] bg-clip-text text-transparent"
                 >
                   Women <br />
                   Empowerment <br />
@@ -1192,10 +1234,12 @@
                     Empowering Women through Trusted Childcare
                   </p>
                 </div>
-                <div
-                  class="relative hidden lg:block h-1/"
-                >
-                  <img src="./img/mission-we.webp" alt="" class="w-full h-auto object-cover" />
+                <div class="relative hidden lg:block h-1/">
+                  <img
+                    src="./img/mission-we.webp"
+                    alt=""
+                    class="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
               <div class="lg:hidden px-2">
@@ -1207,7 +1251,7 @@
               </div>
               <div class="space-y-8">
                 <div
-                  class="mission-card-we-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44  "
+                  class="mission-card-we-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
                 >
                   <h3
                     class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
@@ -1224,7 +1268,7 @@
                 </div>
 
                 <div
-                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)]   -mt-2"
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
                 >
                   <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                     About the Project
@@ -1249,7 +1293,7 @@
 
               <div class=" ">
                 <div
-                  class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3 "
+                  class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
                 >
                   <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                     Testimonial
@@ -1259,17 +1303,17 @@
                     trust. NewAgeSysIT made that vision possible.”
                   </p>
                   <p class="text-[#A3ACB5] text-[18px] mt-3">
-                    — Founder, Auntie App
+                    Founder, Auntie App
                   </p>
                 </div>
                 <div class="w-full flex justify-start">
                   <a
                     href="#"
-                    class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
+                    class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                   >
-                    Talk to a Specialist about SaaS Development
+                    <span class="truncate">cta content goes here</span>
 
-                    <span>
+                    <span class="flex-shrink-0">
                       <svg
                         width="7"
                         height="11"
@@ -1302,20 +1346,18 @@
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-8 "
-            >
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div
-                class=" mission-card-foogly-1  pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
                 >
                   HIPAA-driven Transformation
                 </h2>
               </div>
               <div
-                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3  "
+                class="mission-card-foogly-3 flex flex-col justify-center py-8 md:py-11 pl-5 md:pl-11 lg:pr-16"
               >
                 <h3
                   class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
@@ -1337,7 +1379,7 @@
               </div>
               <div class="space-y-8">
                 <div
-                  class="mission-card-hipaa-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44  "
+                  class="mission-card-hipaa-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
                 >
                   <h3
                     class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
@@ -1353,7 +1395,7 @@
                 </div>
 
                 <div
-                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)]   -mt-2"
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
                 >
                   <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                     About the Project
@@ -1377,14 +1419,12 @@
                 </div>
               </div>
               <div class="lg:space-y-8">
-                <div
-                  class="relative   hidden lg:block"
-                >
+                <div class="relative hidden lg:block">
                   <img src="./img/mission-hipaa.webp" alt="" />
                 </div>
                 <div class="">
                   <div
-                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3 "
+                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
                   >
                     <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                       Testimonial
@@ -1395,32 +1435,35 @@
                       experience.”
                     </p>
                     <p class="text-[#A3ACB5] text-[18px] mt-3">
-                      — Dr. A. Williams, Co-founder of CashDocs
+                      Dr. A. Williams, Co-founder of CashDocs
                     </p>
                   </div>
                   <div class="w-full flex justify-start">
                     <a
                       href="#"
-                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
+                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                     >
-                      Talk to a Specialist about SaaS Development
-
-                      <span>
-                        <svg
-                          width="7"
-                          height="11"
-                          viewBox="0 0 7 11"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                            stroke="#212121"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
+                      <span class="truncate"
+                        >Let’s build your next healthcare innovation</span
+                      >
+                      <span class="flex-shrink-0">
+                        <span>
+                          <svg
+                            width="7"
+                            height="11"
+                            viewBox="0 0 7 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                              stroke="#212121"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -1440,20 +1483,18 @@
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-8 "
-            >
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div
-                class=" mission-card-foogly-1  pl-5 py-10 md:py-14 lg:pr-10 "
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 flex flex-col justify-center"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#F88A36_0%,#FFFFFF_50.51%,#F88A36_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#F88A36_0%,#FFFFFF_50.51%,#F88A36_100%)] bg-clip-text text-transparent"
                 >
                   Youth Wellness
                 </h2>
               </div>
               <div
-                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3  "
+                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3"
               >
                 <h3
                   class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#F88A36_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
@@ -1475,7 +1516,7 @@
               </div>
               <div class="space-y-8">
                 <div
-                  class="mission-card-youth-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44  "
+                  class="mission-card-youth-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
                 >
                   <h3
                     class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
@@ -1491,7 +1532,7 @@
                 </div>
 
                 <div
-                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)]   -mt-2"
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
                 >
                   <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                     About the Project
@@ -1515,14 +1556,12 @@
                 </div>
               </div>
               <div class="lg:space-y-8">
-                <div
-                  class="relative   hidden lg:block"
-                >
+                <div class="relative hidden lg:block">
                   <img src="./img/mission-youth.webp" alt="" />
                 </div>
                 <div class="">
                   <div
-                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3 "
+                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
                   >
                     <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                       Testimonial
@@ -1532,32 +1571,35 @@
                       our mission to help teens thrive.”
                     </p>
                     <p class="text-[#A3ACB5] text-[18px] mt-3">
-                      — Team Zen for Teens
+                      Team Zen for Teens
                     </p>
                   </div>
                   <div class="w-full flex justify-start">
                     <a
                       href="#"
-                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
+                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                     >
-                      Talk to a Specialist about SaaS Development
-
-                      <span>
-                        <svg
-                          width="7"
-                          height="11"
-                          viewBox="0 0 7 11"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                            stroke="#212121"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
+                      <span class="truncate"
+                        >Let’s bring your purpose-driven app to life</span
+                      >
+                      <span class="flex-shrink-0">
+                        <span>
+                          <svg
+                            width="7"
+                            height="11"
+                            viewBox="0 0 7 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                              stroke="#212121"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -1576,39 +1618,39 @@
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-8 "
-            >
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div
-                class=" mission-card-foogly-1  pl-5 py-10  lg:pr-10 2xl:pr-24"
+                class="mission-card-foogly-1 pl-5 py-10 lg:pr-10 2xl:pr-24 flex flex-col justify-center"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
                 >
                   Cross-Cultural Learning - EdTech
                 </h2>
               </div>
-              <div class="space-y-8 flex flex-col ">
-              <div
-                class="py-8 md:py-16 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3  h-1/2 "
-              >
-                <h3
-                  class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
-                >
-                  Quran Easy
-                </h3>
-                <p
-                  class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
-                >
-                  Building Bridges Through Learning
-                </p>
-              </div>
+              <div class="space-y-8 flex flex-col">
                 <div
-                  class="relative   hidden lg:block h-1/2 "
+                  class="py-8 md:py-16 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3 lg:h-1/2"
                 >
-                  <img src="./img/mission-cross.webp" alt="" class="w-full h-full" />
+                  <h3
+                    class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
+                  >
+                    Quran Easy
+                  </h3>
+                  <p
+                    class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                  >
+                    Building Bridges Through Learning
+                  </p>
                 </div>
-</div>
+                <div class="relative hidden lg:block h-1/2">
+                  <img
+                    src="./img/mission-cross.webp"
+                    alt=""
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
               <div class="lg:hidden px-2">
                 <img
                   src="./img/mission-cross-mob.webp"
@@ -1616,9 +1658,9 @@
                   class="w-full h-auto object-cover"
                 />
               </div>
-              <div class="space-y-8 ">
+              <div class="space-y-8">
                 <div
-                  class="mission-card-hipaa-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44  "
+                  class="mission-card-hipaa-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
                 >
                   <h3
                     class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
@@ -1634,7 +1676,7 @@
                 </div>
 
                 <div
-                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)]   -mt-2"
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
                 >
                   <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
                     About the Project
@@ -1656,57 +1698,189 @@
                   </p>
                 </div>
               </div>
-              
-              
-                <div class="">
-                  <div
-                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3 "
-                  >
-                    <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
-                      Testimonial
-                    </h3>
-                    <p class="text-[18px] text-[#65686C] mb-3">
-                      “This wasn’t just about an app — it was about making
-                      learning accessible to everyone, everywhere.”
-                    </p>
-                    <p class="text-[#A3ACB5] text-[18px] mt-3">
-                      — Founder, Quran Easy
-                    </p>
-                  </div>
-                  <div class="w-full flex justify-start">
-                    <a
-                      href="#"
-                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
-                    >
-                      Talk to a Specialist about SaaS Development
 
-                      <span>
-                        <svg
-                          width="7"
-                          height="11"
-                          viewBox="0 0 7 11"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                            stroke="#212121"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
+              <div class="">
+                <div
+                  class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    Testimonial
+                  </h3>
+                  <p class="text-[18px] text-[#65686C] mb-3">
+                    “This wasn’t just about an app — it was about making
+                    learning accessible to everyone, everywhere.”
+                  </p>
+                  <p class="text-[#A3ACB5] text-[18px] mt-3">
+                    Founder, Quran Easy
+                  </p>
                 </div>
-              
+                <div class="w-full flex justify-start">
+                  <a
+                    href="#"
+                    class="bg-white text-black rounded-full px-4 md:px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
+                  >
+                    <span class="truncate"
+                      >Have a learning vision that bridges cultures?</span
+                    >
+                    <span class="flex-shrink-0">
+                      <svg
+                        width="7"
+                        height="11"
+                        viewBox="0 0 7 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                          stroke="#212121"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
+          <div class="w-full container mx-auto px-4">
+            <!-- Heading -->
+            <h2
+              class="text-white text-[28px] md:text-[36px] font-semibold mb-8"
+            >
+              Related Blogs
+            </h2>
+
+            <!-- Blog Carousel Container -->
+            <div class="related-blogs-carousel owl-carousel owl-theme">
+              <!-- Blog Card 1 -->
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List.png"
+                    alt="How to Build a SaaS Application"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    How to Build a SaaS Application?– Cover Nuances,
+                    Step-by-Step Process, Cost, and More
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Add more blog cards here as needed -->
             </div>
           </div>
         </section>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
@@ -1835,6 +2009,43 @@
           ScrollTrigger.refresh();
         }, 500);
       });
+    </script>
+    <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            // navText: [
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
+            // ],
+
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
+    <script>
+      const vid = document.getElementById("missionHeroVideo");
+
+      function attemptAutoplay() {
+        vid.play().catch(() => {
+          // will retry once user touches the screen
+          document.addEventListener("touchstart", () => vid.play(), {
+            once: true,
+          });
+        });
+      }
+
+      attemptAutoplay();
     </script>
   </body>
 </html>
