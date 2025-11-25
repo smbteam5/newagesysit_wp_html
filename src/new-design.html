@@ -560,6 +560,7 @@
       .hero {
         position: relative;
         min-height: 100vh;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -596,7 +597,7 @@
         height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         overflow: hidden;
       }
 
@@ -913,6 +914,8 @@
       /* Show section only above 800px, hide below 800px */
       .section-above-922 {
         display: none;
+         padding-top: 120px;
+  /* padding-bottom: 120px; */
       }
 
       @media (min-width: 922px) {
@@ -1744,7 +1747,19 @@
     </section>
 
 
-
+<div 
+  style="
+    width: 100%; 
+    height: 150px; 
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  "
+>
+</div>
 
     <!-- new area -->
     <section
@@ -1771,7 +1786,7 @@
             We partner with visionaries to create solutions that shape a smarter <br />tomorrow.
           </p>
 
-          <div class="card-wrapper">
+          <div class="card-wrapper whitespace-nowrap" >
             <div
               class="card sustainability active"
               data-index="0"
@@ -1803,6 +1818,7 @@
                 "
               >
                 <span
+                class="whitespace-nowrap"
                   style="
                     display: inline-block;
                     vertical-align: middle;

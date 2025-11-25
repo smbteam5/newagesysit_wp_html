@@ -20,6 +20,26 @@
       onload="this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <style>
+      /* Enhanced gradient support for mobile */
+      .gradient-text-mission {
+        background: linear-gradient(105.3deg, #eaeaea 51.69%, #5466e9 114.42%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline-block;
+        width: 100%;
+      }
+
+      @supports (-webkit-background-clip: text) {
+        .gradient-text-mission {
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    </style>
   </head>
   <body class="bg-black font-inter overflow-hidden">
     <header
@@ -950,7 +970,9 @@
     </header>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <section class="min-h-[800px] md:min-h-[1000px] xl:min-h-[1200px] relative py-20">
+        <section
+          class="min-h-[800px] md:min-h-[1000px] xl:min-h-[1200px] relative py-20"
+        >
           <div
             class="absolute bottom-10 w-full justify-center z-10 hidden lg:flex"
           >
@@ -961,7 +983,7 @@
             />
           </div>
           <div
-            class="absolute bottom-[30%] md:bottom-10 lg:bottom-10 w-full justify-center z-10 reveal-text flex"
+            class="absolute bottom-[30%] md:bottom-10 lg:bottom-10 w-full justify-center z-10 flex"
           >
             <img
               src="./img/mission-ellipse.webp"
@@ -972,10 +994,15 @@
           <div
             class="absolute bottom-[45%] md:bottom-60 xl:bottom-72 w-full justify-center flex"
           >
-            <img
-              src="./img/mission-man.gif"
-              alt="Mission Hero Background"
-              class="w-[300px]  md:w-[600px] xl:w-[700px] rounded-full"
+            <video
+              class="w-[300px] md:w-[600px] xl:w-[700px] rounded-full"
+              poster="./img/mission-poster.webp"
+              playsinline
+              autoplay
+              loop
+              muted
+              preload="auto"
+              id="missionHeroVideo"
               style="
                 mask-image: radial-gradient(
                   circle,
@@ -988,22 +1015,27 @@
                   rgba(0, 0, 0, 0) 70%
                 );
               "
-            />
+            >
+              <source src="./video/mission-video.mp4" type="video/mp4" />
+              <source src="./video/mission-man.webm" type="video/webm" />
+            </video>
           </div>
 
-          <div class="container pt-20 md:pt-28 xl:pt-32 text-white flex flex-col justify-between h-full absolute inset-0">
+          <div
+            class="container pt-20 md:pt-28 xl:pt-32 text-white flex flex-col justify-between h-full absolute inset-0"
+          >
             <div class="w-full flex justify-between">
               <div class="flex">
                 <div class="h-[100%] w-px bg-white/50 mr-6"></div>
                 <h1
-                  class="text-[40px] sm:text-[50px]  md:text-[50px] lg:text-[80px] bg-[linear-gradient(105.3deg,#EAEAEA_51.69%,#5466E9_114.42%)] bg-clip-text text-transparent "
+                  class="text-[40px] sm:text-[50px] md:text-[50px] lg:text-[80px] bg-[linear-gradient(105.3deg,#EAEAEA_51.69%,#5466E9_114.42%)] bg-clip-text text-transparent"
                 >
                   We’re on <br class="hidden md:block" />
                   a Mission
                 </h1>
               </div>
               <div
-                class="text-[23px] font-normal lg:px-10 justify-center items-center hidden md:flex "
+                class="text-[23px] font-normal lg:px-10 justify-center items-center hidden md:flex"
               >
                 <div class="h-full w-[1px] bg-white/50"></div>
                 <p class="mx-7">
@@ -1019,22 +1051,18 @@
                 <div class="h-full w-[1px] bg-white/50 mx-3"></div>
               </div>
             </div>
-             <div
-                class="text-[23px] font-normal lg:px-10 justify-center items-center flex pb-14 md:hidden"
-              >
-                <div class="h-full w-[1px] bg-white/50"></div>
-                <p class="mx-7">
-                  Technology <span class="text-[#FF8214]">with Purpose.</span
-                  ><br />
-                  Innovation
-                  <span class="text-[#6981F1]"
-                    >that Creates <br class="hidden lg:block" />
-                    Impact.</span
-                  >
-                  <br />
-                </p>
-                <div class="h-full w-[1px] bg-white/50 mx-3"></div>
-              </div>
+            <div
+              class="text-[23px] font-normal lg:px-10 justify-center items-center flex pb-14 md:hidden text-center"
+            >
+              <div class="h-full w-[1px] bg-white/50"></div>
+              <p class="mx-7">
+                Technology <span class="text-[#FF8214]">with Purpose.</span>
+                Innovation
+                <span class="text-[#6981F1]">that Creates Impact.</span>
+                <br />
+              </p>
+              <div class="h-full w-[1px] bg-white/50 mx-3"></div>
+            </div>
           </div>
         </section>
         <!--Foogly-->
@@ -1052,7 +1080,7 @@
                 class="mission-card-foogly-1 pl-5 py-10 lg:py-[64px] md:py-14 2xl:pr-24"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent"
                 >
                   Sustainability
                 </h2>
@@ -1184,7 +1212,7 @@
                 class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#B10BAC_0%,#FFFFFF_50.51%,#B10BAC_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#B10BAC_0%,#FFFFFF_50.51%,#B10BAC_100%)] bg-clip-text text-transparent"
                 >
                   Women <br />
                   Empowerment <br />
@@ -1275,7 +1303,7 @@
                     trust. NewAgeSysIT made that vision possible.”
                   </p>
                   <p class="text-[#A3ACB5] text-[18px] mt-3">
-                   Founder, Auntie App
+                    Founder, Auntie App
                   </p>
                 </div>
                 <div class="w-full flex justify-start">
@@ -1323,13 +1351,13 @@
                 class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
               >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
                 >
                   HIPAA-driven Transformation
                 </h2>
               </div>
               <div
-                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3"
+                class="mission-card-foogly-3 flex flex-col justify-center py-8 md:py-11 pl-5 md:pl-11 lg:pr-16"
               >
                 <h3
                   class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
@@ -1415,25 +1443,27 @@
                       href="#"
                       class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                     >
-                     <span class="truncate">Let’s build your next healthcare innovation</span> 
- <span class="flex-shrink-0">
-                      <span>
-                        <svg
-                          width="7"
-                          height="11"
-                          viewBox="0 0 7 11"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                            stroke="#212121"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </span>
+                      <span class="truncate"
+                        >Let’s build your next healthcare innovation</span
+                      >
+                      <span class="flex-shrink-0">
+                        <span>
+                          <svg
+                            width="7"
+                            height="11"
+                            viewBox="0 0 7 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                              stroke="#212121"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -1454,9 +1484,11 @@
           </div>
           <div class="container min-h-[1100px] w-full text-white">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 flex flex-col justify-center"
+              >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#F88A36_0%,#FFFFFF_50.51%,#F88A36_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#F88A36_0%,#FFFFFF_50.51%,#F88A36_100%)] bg-clip-text text-transparent"
                 >
                   Youth Wellness
                 </h2>
@@ -1539,7 +1571,7 @@
                       our mission to help teens thrive.”
                     </p>
                     <p class="text-[#A3ACB5] text-[18px] mt-3">
-                     Team Zen for Teens
+                      Team Zen for Teens
                     </p>
                   </div>
                   <div class="w-full flex justify-start">
@@ -1547,25 +1579,27 @@
                       href="#"
                       class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                     >
-                       <span class="truncate">Let’s bring your purpose-driven app to life</span>
- <span class="flex-shrink-0">
-                      <span>
-                        <svg
-                          width="7"
-                          height="11"
-                          viewBox="0 0 7 11"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
-                            stroke="#212121"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </span>
+                      <span class="truncate"
+                        >Let’s bring your purpose-driven app to life</span
+                      >
+                      <span class="flex-shrink-0">
+                        <span>
+                          <svg
+                            width="7"
+                            height="11"
+                            viewBox="0 0 7 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                              stroke="#212121"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
                       </span>
                     </a>
                   </div>
@@ -1585,9 +1619,11 @@
           </div>
           <div class="container min-h-[1100px] w-full text-white">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div class="mission-card-foogly-1 pl-5 py-10 lg:pr-10 2xl:pr-24">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 lg:pr-10 2xl:pr-24 flex flex-col justify-center"
+              >
                 <h2
-                  class="text-[50px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
                 >
                   Cross-Cultural Learning - EdTech
                 </h2>
@@ -1683,7 +1719,9 @@
                     href="#"
                     class="bg-white text-black rounded-full px-4 md:px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
                   >
-                    <span class="truncate">Have a learning vision that bridges cultures?</span>
+                    <span class="truncate"
+                      >Have a learning vision that bridges cultures?</span
+                    >
                     <span class="flex-shrink-0">
                       <svg
                         width="7"
@@ -1707,124 +1745,131 @@
             </div>
           </div>
         </section>
-         <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
-      <div class="w-full container mx-auto px-4">
-        <!-- Heading -->
-        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">Related Blogs</h2>
+        <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
+          <div class="w-full container mx-auto px-4">
+            <!-- Heading -->
+            <h2
+              class="text-white text-[28px] md:text-[36px] font-semibold mb-8"
+            >
+              Related Blogs
+            </h2>
 
-        <!-- Blog Carousel Container -->
-        <div class="related-blogs-carousel owl-carousel owl-theme">
-          <!-- Blog Card 1 -->
-          <div class=" ">
-            <div class="rounded-lg overflow-hidden">
-              <img
-                src="./img/Blog_Thumb_List.png"
-                alt="How to Build a SaaS Application"
-                class="w-full h-[180px] md:h-[200px] object-fit"
-              />
-            </div>
-            <div class="mt-4">
-              <span
-                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
-                >SOFTWARE DEVELOPMENT</span
-              >
-              <h3
-                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
-              >
-                How to Build a SaaS Application?– Cover Nuances, Step-by-Step Process, Cost, and
-                More
-              </h3>
-            </div>
-          </div>
-          <div class=" ">
-            <div class="rounded-lg overflow-hidden">
-              <img
-                src="./img/Blog_Thumb_List1.png"
-                alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
-              />
-            </div>
-            <div class="mt-4">
-              <span
-                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
-                >SOFTWARE DEVELOPMENT</span
-              >
-              <h3
-                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
-              >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
-              </h3>
-            </div>
-          </div>
-          <div class=" ">
-            <div class="rounded-lg overflow-hidden">
-              <img
-                src="./img/Blog_Thumb_List1.png"
-                alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
-              />
-            </div>
-            <div class="mt-4">
-              <span
-                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
-                >SOFTWARE DEVELOPMENT</span
-              >
-              <h3
-                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
-              >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
-              </h3>
-            </div>
-          </div>
-          <div class=" ">
-            <div class="rounded-lg overflow-hidden">
-              <img
-                src="./img/Blog_Thumb_List1.png"
-                alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
-              />
-            </div>
-            <div class="mt-4">
-              <span
-                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
-                >SOFTWARE DEVELOPMENT</span
-              >
-              <h3
-                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
-              >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
-              </h3>
-            </div>
-          </div>
-          <div class=" ">
-            <div class="rounded-lg overflow-hidden">
-              <img
-                src="./img/Blog_Thumb_List1.png"
-                alt="WCAG Compliance Explained"
-                class="w-full h-[180px] md:h-[200px] object-fit"
-              />
-            </div>
-            <div class="mt-4">
-              <span
-                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
-                >SOFTWARE DEVELOPMENT</span
-              >
-              <h3
-                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
-              >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
-              </h3>
-            </div>
-          </div>
+            <!-- Blog Carousel Container -->
+            <div class="related-blogs-carousel owl-carousel owl-theme">
+              <!-- Blog Card 1 -->
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List.png"
+                    alt="How to Build a SaaS Application"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    How to Build a SaaS Application?– Cover Nuances,
+                    Step-by-Step Process, Cost, and More
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class=" ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
 
-          <!-- Add more blog cards here as needed -->
-        </div>
-      </div>
-    </section>
-
+              <!-- Add more blog cards here as needed -->
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Owl Carousel -->
     <link
@@ -1965,7 +2010,7 @@
         }, 500);
       });
     </script>
-      <script>
+    <script>
       $(document).ready(function () {
         const $rb = $(".related-blogs-carousel");
         if ($rb.length) {
@@ -1987,6 +2032,20 @@
           });
         }
       });
+    </script>
+    <script>
+      const vid = document.getElementById("missionHeroVideo");
+
+      function attemptAutoplay() {
+        vid.play().catch(() => {
+          // will retry once user touches the screen
+          document.addEventListener("touchstart", () => vid.play(), {
+            once: true,
+          });
+        });
+      }
+
+      attemptAutoplay();
     </script>
   </body>
 </html>
