@@ -2018,5 +2018,19 @@
         }
       });
     </script>
+    <script>
+      const vid = document.getElementById("missionHeroVideo");
+
+      function attemptAutoplay() {
+        vid.play().catch(() => {
+          // will retry once user touches the screen
+          document.addEventListener("touchstart", () => vid.play(), {
+            once: true,
+          });
+        });
+      }
+
+      attemptAutoplay();
+    </script>
   </body>
 </html>
