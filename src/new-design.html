@@ -90,6 +90,18 @@
   </head>
 
   <style>
+    /* Make dots gray */
+.slick-dots li button:before {
+  color: gray !important;
+  opacity: 0.5;
+}
+
+/* Active dot darker gray */
+.slick-dots li.slick-active button:before {
+  color: #555 !important;
+  opacity: 1;
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -453,6 +465,27 @@
       text-align: center;
       height: auto !important;
     }
+    /* Custom Slick Dots for tag-bar-slider - closer to tag bar */
+    .tag-bar-slider .slick-dots {
+      position: absolute;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex !important;
+      justify-content: center;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      z-index: 10;
+    }
+    .tag-bar-slider .slick-dots li {
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      padding: 0;
+    }
+   
+    
   </style>
   <style>
     /* Show section only below 800px, hide above 800px */
@@ -1748,12 +1781,26 @@
 
 
     <!-- new area -->
+     <div 
+  style="
+    width: 100%; 
+    height: 150px; 
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  "
+>
+</div>
+
     <section
       class="section-above-922"
       style="background: #000 url('./img/bgnew.webp') center center/cover no-repeat"
     >
       <div class="grid-bg"></div>
-      <div class="hero-content">
+      <div class="hero-content" style="padding-bottom: 190px;">
         <!-- Left image section -->
         <div class="image-area">
           <img src="./img/new1.webp" class="active" data-index="0" alt="Sustainability" />
@@ -2881,7 +2928,7 @@
           slidesToShow: 3,
           slidesToScroll: 1,
           arrows: false,
-          dots: false,
+          dots: true,
           infinite: false,
           variableWidth: true,
           swipeToSlide: true,
@@ -3034,6 +3081,8 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+
+
 
     <script>
       $(document).ready(function () {
