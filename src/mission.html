@@ -20,6 +20,26 @@
       onload="this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <style>
+      /* Enhanced gradient support for mobile */
+      .gradient-text-mission {
+        background: linear-gradient(105.3deg, #eaeaea 51.69%, #5466e9 114.42%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline-block;
+        width: 100%;
+      }
+
+      @supports (-webkit-background-clip: text) {
+        .gradient-text-mission {
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    </style>
   </head>
   <body class="bg-black font-inter overflow-hidden">
     <header
@@ -1032,17 +1052,13 @@
               </div>
             </div>
             <div
-              class="text-[23px] font-normal lg:px-10 justify-center items-center flex pb-14 md:hidden"
+              class="text-[23px] font-normal lg:px-10 justify-center items-center flex pb-14 md:hidden text-center"
             >
               <div class="h-full w-[1px] bg-white/50"></div>
               <p class="mx-7">
-                Technology <span class="text-[#FF8214]">with Purpose.</span
-                ><br />
+                Technology <span class="text-[#FF8214]">with Purpose.</span>
                 Innovation
-                <span class="text-[#6981F1]"
-                  >that Creates <br class="hidden lg:block" />
-                  Impact.</span
-                >
+                <span class="text-[#6981F1]">that Creates Impact.</span>
                 <br />
               </p>
               <div class="h-full w-[1px] bg-white/50 mx-3"></div>
