@@ -977,12 +977,15 @@
             <video
               class="w-[300px] md:w-[600px] xl:w-[700px] rounded-full"
               poster="./img/mission-poster.webp"
+              muted
               playsinline
               autoplay
-              muted
               loop
               preload="auto"
               aria-label="Mission Hero Video"
+              controlslist="nodownload noremoteplayback noplaybackrate nofullscreen"
+              disablePictureInPicture
+              controls="false"
               style="
                 mask-image: radial-gradient(
                   circle,
@@ -995,6 +998,7 @@
                   rgba(0, 0, 0, 0) 70%
                 );
               "
+              id="missionHeroVideo"
             >
               <!-- Primary video sources: add/replace files as needed -->
               <source src="./video/mission-video.mp4" type="video/mp4" />
@@ -1007,6 +1011,28 @@
                 class="w-[300px] md:w-[600px] xl:w-[700px] rounded-full"
               />
             </video>
+
+            <script>
+              // Force video autoplay on mobile devices
+              document.addEventListener("DOMContentLoaded", function () {
+                var vid = document.getElementById("missionHeroVideo");
+                if (vid) {
+                  var playPromise = vid.play();
+                  if (playPromise !== undefined) {
+                    playPromise.catch(function () {
+                      // Try to play again after user interaction if needed
+                      var tryPlay = function () {
+                        vid.play();
+                        document.removeEventListener("touchstart", tryPlay);
+                        document.removeEventListener("click", tryPlay);
+                      };
+                      document.addEventListener("touchstart", tryPlay);
+                      document.addEventListener("click", tryPlay);
+                    });
+                  }
+                }
+              });
+            </script>
           </div>
 
           <div
