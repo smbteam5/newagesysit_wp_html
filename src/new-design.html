@@ -171,6 +171,7 @@
       .hero {
         position: relative;
         min-height: 100vh;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -207,7 +208,7 @@
         height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         overflow: hidden;
       }
 
@@ -524,6 +525,8 @@
       /* Show section only above 800px, hide below 800px */
       .section-above-922 {
         display: none;
+         padding-top: 120px;
+  /* padding-bottom: 120px; */
       }
 
       @media (min-width: 922px) {
@@ -3767,7 +3770,19 @@
     </section>
 
 
-
+<div 
+  style="
+    width: 100%; 
+    height: 150px; 
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  "
+>
+</div>
 
 
     <section
@@ -3785,7 +3800,7 @@
         </div>
 
         <!-- Right content -->
-        <div class="right-section custom-style2" style="margin-top: 10px;">
+        <div class="right-section custom-style2">
           <h1>
             <span>Every Project -Tells a <br />Story of Impact</span>
           </h1>
@@ -3793,7 +3808,7 @@
             We partner with visionaries to create solutions that shape a smarter <br />tomorrow.
           </p>
 
-          <div class="card-wrapper">
+          <div class="card-wrapper whitespace-nowrap" >
             <div
               class="card sustainability active"
               data-index="0"
@@ -3821,6 +3836,7 @@
                 "
               >
                 <span
+                class="whitespace-nowrap"
                   style="
                     display: inline-block;
                     vertical-align: middle;
@@ -4047,7 +4063,7 @@
             </div>
           </div>
 
-          <div class="tag-bar">
+          <div class="tag-bar flex-row"  style="padding-bottom: 200px;">
             <span class="tag active" data-index="0">Sustainability</span>
             <span class="tag" data-index="1">Women Empowerment</span>
             <span class="tag" data-index="2">HIPAA Transformation</span>
