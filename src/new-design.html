@@ -2100,7 +2100,7 @@
           </div>
 
           <!-- Slick Slider Tag Bar Carousel -->
-          <div class="tag-bar tag-bar-slider">
+          <div class="tag-bar tag-bar-slider" style="padding-bottom: 120px;">
             <span class="tag active" data-index="0">Sustainability</span>
             <span class="tag" data-index="1">Women Empowerment</span>
             <span class="tag" data-index="2">HIPAA Transformation</span>
@@ -2947,7 +2947,13 @@
 
           tags.forEach((tag, i) => {
             tag.classList.toggle("active", i === index);
-            if (i === index) tag.style.setProperty("--active-tag-color", headingData[index].color);
+            if (i === index) {
+              tag.style.setProperty("--active-tag-color", headingData[index].color);
+              // Auto-scroll to active tag
+              if (typeof tag.scrollIntoView === 'function') {
+                tag.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+              }
+            }
           });
 
           images.forEach((img, i) => img.classList.toggle("active", i === index));
