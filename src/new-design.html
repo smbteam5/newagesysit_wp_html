@@ -84,7 +84,58 @@
       }
     </style>
   </head>
-
+  <style>
+              @media (max-width: 1248px) {
+                .responsive-btn {
+                  padding: 0.45rem 0.9rem !important;
+                  font-size: 0.7rem !important;
+                  max-width: 200px !important;
+                  flex-direction: row !important;
+                  gap: 0.2em !important;
+                  align-items: center !important;
+                  justify-content: center !important;
+                }
+                .responsive-btn-text {
+                  margin: 0 0 0.2em 0 !important;
+                  white-space: normal !important;
+                  line-height: 1.2 !important;
+                  display: block !important;
+                  padding: 0.2em 0.5em !important;
+                  text-align: center !important;
+                }
+                .responsive-btn svg {
+                  width: 32px !important;
+                  height: 32px !important;
+                  display: block !important;
+                  margin: 0 auto !important;
+                }
+                .responsive-btn-break {
+                  display: inline !important;
+                }
+              }
+              @media (min-width: 1248.01px) {
+                .responsive-btn {
+                  flex-direction: row !important;
+                  gap: 0.05em !important;
+                }
+                .responsive-btn-text {
+                  margin: 0 0.1em 0 0 !important;
+                  white-space: nowrap !important;
+                  line-height: normal !important;
+                  display: inline-block !important;
+                }
+                .responsive-btn-break {
+                  display: none !important;
+                }
+                .responsive-btn svg {
+                  display: inline-block !important;
+                  margin: 0 !important;
+                  width: 50px !important;
+                  height: 50px !important;
+                  vertical-align: middle !important;
+                }
+              }
+              </style>
   <style>
     /* Make dots gray */
 .slick-dots li button:before {
@@ -1762,14 +1813,19 @@
             We partner with visionaries to create solutions that shape a smarter <br />tomorrow.
           </p>
 
-          <div class="card-wrapper whitespace-nowrap" >
+            <div class="card-wrapper whitespace-nowrap">
             <div
               class="card sustainability active"
               data-index="0"
               style="
                 background-image: url('./img/ca1.webp');
                 background-color: rgba(0, 0, 0, 0.45);
-                background-blend-mode: multiply; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%;
+                background-blend-mode: multiply;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
               "
             >
               <h2 class="sustainability-heading">Sustainability</h2>
@@ -1778,40 +1834,41 @@
                   background-color: #d1ff6a;
                   color: #000;
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  gap: 0.05em;
+                  gap: 0.2em;
                   padding: 0.5rem 1.2rem;
                   border-radius: 50px;
-                  font-weight: 600;
+                  font-weight: 400;
                   font-size: 1rem;
                   border: none;
                   cursor: pointer;
                   min-width: 0;
-                  max-width: 260px;
+                  max-width: 300px;
                   margin-left: auto;
                   margin-right: auto;
                 "
+                class="responsive-btn"
               >
-                <span
-                class="whitespace-nowrap"
+                <span class="responsive-btn-text"
                   style="
-                    display: inline-block;
-                    vertical-align: middle;
                     text-align: center;
                     width: auto;
-                    margin-right: 0.1em;
-                    white-space: nowrap;
-                  "
-                  >Read Our Client Stories</span
-                >
+                    margin: 0 0 0.2em 0;
+                    white-space: normal;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    display: block;"
+                >Read Our Client<span class="responsive-btn-break"><br></span>Stories</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   viewBox="0 0 72 69"
                   fill="none"
-                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                  style="display: block; margin: 0 auto; min-width: 0"
                 >
                   <rect
                     y="29.1523"
@@ -1830,12 +1887,21 @@
                   />
                 </svg>
               </button>
+            
+              <!-- Next Button for Desktop -->
             </div>
 
             <div
               class="card women tail"
               data-index="1"
-              style="background-image: url('./img/ca2.webp'); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%;"
+              style="
+                background-image: url('./img/ca2.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
             >
               <h2 class="sustainability-heading">Women Empowerment</h2>
               <button
@@ -1843,39 +1909,41 @@
                   background-color: #d1ff6a;
                   color: #000;
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  gap: 0.05em;
+                  gap: 0.2em;
                   padding: 0.5rem 1.2rem;
                   border-radius: 50px;
-                  font-weight: 600;
+                  font-weight: 400;
                   font-size: 1rem;
                   border: none;
                   cursor: pointer;
                   min-width: 0;
-                  max-width: 260px;
+                  max-width: 300px;
                   margin-left: auto;
                   margin-right: auto;
                 "
+                class="responsive-btn"
               >
-                <span
+                <span class="responsive-btn-text"
                   style="
-                    display: inline-block;
-                    vertical-align: middle;
                     text-align: center;
                     width: auto;
-                    margin-right: 0.1em;
-                    white-space: nowrap;
-                  "
-                  >Read Our Client Stories</span
-                >
+                    margin: 0 0 0.2em 0;
+                    white-space: normal;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    display: block;"
+                >Read Our Client<span class="responsive-btn-break"><br></span>Stories</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   viewBox="0 0 72 69"
                   fill="none"
-                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                  style="display: block; margin: 0 auto; min-width: 0"
                 >
                   <rect
                     y="29.1523"
@@ -1899,7 +1967,14 @@
             <div
               class="card hipaa tail"
               data-index="2"
-              style="background-image: url('./img/ca3.webp'); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%;"
+              style="
+                background-image: url('./img/ca3.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
             >
               <h2 class="sustainability-heading">HIPAA-Driven Transformation</h2>
               <button
@@ -1907,39 +1982,41 @@
                   background-color: #d1ff6a;
                   color: #000;
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  gap: 0.05em;
+                  gap: 0.2em;
                   padding: 0.5rem 1.2rem;
                   border-radius: 50px;
-                  font-weight: 600;
+                  font-weight: 400;
                   font-size: 1rem;
                   border: none;
                   cursor: pointer;
                   min-width: 0;
-                  max-width: 260px;
+                  max-width: 300px;
                   margin-left: auto;
                   margin-right: auto;
                 "
+                class="responsive-btn"
               >
-                <span
+                <span class="responsive-btn-text"
                   style="
-                    display: inline-block;
-                    vertical-align: middle;
                     text-align: center;
                     width: auto;
-                    margin-right: 0.1em;
-                    white-space: nowrap;
-                  "
-                  >Read Our Client Stories</span
-                >
+                    margin: 0 0 0.2em 0;
+                    white-space: normal;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    display: block;"
+                >Read Our Client<span class="responsive-btn-break"><br></span>Stories</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   viewBox="0 0 72 69"
                   fill="none"
-                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                  style="display: block; margin: 0 auto; min-width: 0"
                 >
                   <rect
                     y="29.1523"
@@ -1963,7 +2040,14 @@
             <div
               class="card innovation tail"
               data-index="3"
-              style="background-image: url('./img/ca4.webp'); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%;"
+              style="
+                background-image: url('./img/ca4.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
             >
               <h2 class="sustainability-heading">Youth Wellness</h2>
               <button
@@ -1971,39 +2055,41 @@
                   background-color: #d1ff6a;
                   color: #000;
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  gap: 0.05em;
+                  gap: 0.2em;
                   padding: 0.5rem 1.2rem;
                   border-radius: 50px;
-                  font-weight: 600;
+                  font-weight: 400;
                   font-size: 1rem;
                   border: none;
                   cursor: pointer;
                   min-width: 0;
-                  max-width: 260px;
+                  max-width: 300px;
                   margin-left: auto;
                   margin-right: auto;
                 "
+                class="responsive-btn"
               >
-                <span
+                <span class="responsive-btn-text"
                   style="
-                    display: inline-block;
-                    vertical-align: middle;
                     text-align: center;
                     width: auto;
-                    margin-right: 0.1em;
-                    white-space: nowrap;
-                  "
-                  >Read Our Client Stories</span
-                >
+                    margin: 0 0 0.2em 0;
+                    white-space: normal;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    display: block;"
+                >Read Our Client<span class="responsive-btn-break"><br></span>Stories</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   viewBox="0 0 72 69"
                   fill="none"
-                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                  style="display: block; margin: 0 auto; min-width: 0"
                 >
                   <rect
                     y="29.1523"
@@ -2027,7 +2113,14 @@
             <div
               class="card new tail"
               data-index="4"
-              style="background-image: url('./img/ca3.webp'); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%;"
+              style="
+                background-image: url('./img/ca3.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
             >
               <h2 class="sustainability-heading">Cross-Cultural Learning-EdTech</h2>
               <button
@@ -2035,39 +2128,41 @@
                   background-color: #d1ff6a;
                   color: #000;
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  gap: 0.05em;
+                  gap: 0.2em;
                   padding: 0.5rem 1.2rem;
                   border-radius: 50px;
-                  font-weight: 600;
+                  font-weight: 400;
                   font-size: 1rem;
                   border: none;
                   cursor: pointer;
                   min-width: 0;
-                  max-width: 260px;
+                  max-width: 300px;
                   margin-left: auto;
                   margin-right: auto;
                 "
+                class="responsive-btn"
               >
-                <span
+                <span class="responsive-btn-text"
                   style="
-                    display: inline-block;
-                    vertical-align: middle;
                     text-align: center;
                     width: auto;
-                    margin-right: 0.1em;
-                    white-space: nowrap;
-                  "
-                  >Read Our Client Stories</span
-                >
+                    margin: 0 0 0.2em 0;
+                    white-space: normal;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    display: block;"
+                >Read Our Client<span class="responsive-btn-break"><br></span>Stories</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
+                  width="50"
+                  height="50"
                   viewBox="0 0 72 69"
                   fill="none"
-                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                  style="display: block; margin: 0 auto; min-width: 0"
                 >
                   <rect
                     y="29.1523"
@@ -2088,6 +2183,7 @@
               </button>
             </div>
           </div>
+
 
           <!-- Slick Slider Tag Bar Carousel -->
           <div class="tag-bar tag-bar-slider" style="padding-bottom: 120px;">
