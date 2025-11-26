@@ -5,22 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mission</title>
 
-    <!-- Google Fonts - Inter and Manrope -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./img/mission-poster.webp" as="image" />
+    
+    <!-- Google Fonts - Inter and Manrope with font-display swap -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-<!-- Owl Carousel -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    
+    <!-- Owl Carousel - Deferred loading -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      media="print"
+      onload="this.media='all'"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      />
+    </noscript>
     <link
       rel="preload"
       href="style.css"
@@ -1080,6 +1109,8 @@
               src="./img/mission-foogly-circle.webp"
               alt=""
               class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
@@ -1112,6 +1143,8 @@
                   src="./img/mission-foogly-mob.webp"
                   alt=""
                   class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="space-y-8">
@@ -1156,7 +1189,7 @@
               </div>
               <div class="lg:space-y-8">
                 <div class="relative hidden lg:block">
-                  <img src="./img/mission-foogly.webp" alt="" />
+                  <img src="./img/mission-foogly.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <div class="">
                   <div
@@ -1212,6 +1245,8 @@
               src="./img/mission-we-circle.webp"
               alt=""
               class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
@@ -1247,6 +1282,8 @@
                     src="./img/mission-we.webp"
                     alt=""
                     class="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -1255,6 +1292,8 @@
                   src="./img/mission-we-mob.webp"
                   alt=""
                   class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="space-y-8">
@@ -1383,6 +1422,8 @@
                   src="./img/mission-hipaa-mob.webp"
                   alt=""
                   class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="space-y-8">
@@ -1428,7 +1469,7 @@
               </div>
               <div class="lg:space-y-8">
                 <div class="relative hidden lg:block">
-                  <img src="./img/mission-hipaa.webp" alt="" />
+                  <img src="./img/mission-hipaa.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <div class="">
                   <div
@@ -1488,6 +1529,8 @@
               src="./img/mission-youth-circle.webp"
               alt=""
               class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="container min-h-[1100px] w-full text-white">
@@ -1520,6 +1563,8 @@
                   src="./img/mission-youth-mob.webp"
                   alt=""
                   class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="space-y-8">
@@ -1565,7 +1610,7 @@
               </div>
               <div class="lg:space-y-8">
                 <div class="relative hidden lg:block">
-                  <img src="./img/mission-youth.webp" alt="" />
+                  <img src="./img/mission-youth.webp" alt="" loading="lazy" decoding="async" />
                 </div>
                 <div class="">
                   <div
@@ -1656,6 +1701,8 @@
                     src="./img/mission-cross.webp"
                     alt=""
                     class="w-full h-full"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -1664,6 +1711,8 @@
                   src="./img/mission-cross-mob.webp"
                   alt=""
                   class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="space-y-8">
@@ -1771,6 +1820,8 @@
                     src="./img/Blog_Thumb_List.png"
                     alt="How to Build a SaaS Application"
                     class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div class="mt-4">
@@ -1792,6 +1843,8 @@
                     src="./img/Blog_Thumb_List1.png"
                     alt="WCAG Compliance Explained"
                     class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div class="mt-4">
@@ -1813,6 +1866,8 @@
                     src="./img/Blog_Thumb_List1.png"
                     alt="WCAG Compliance Explained"
                     class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div class="mt-4">
@@ -1834,6 +1889,8 @@
                     src="./img/Blog_Thumb_List1.png"
                     alt="WCAG Compliance Explained"
                     class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div class="mt-4">
@@ -1855,6 +1912,8 @@
                     src="./img/Blog_Thumb_List1.png"
                     alt="WCAG Compliance Explained"
                     class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div class="mt-4">
