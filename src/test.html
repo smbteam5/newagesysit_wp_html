@@ -1,292 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>GSAP Scroll Stack – Banner Style</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <style>
-    html, body {
-      background: #020617;
-      color: #e5e7eb;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swag Stack Expand Clone</title>
+    <script src="https://cdn.cdn-tailwind.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-8">
 
-  <!-- Intro -->
-  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-    <h1 class="text-3xl md:text-5xl font-semibold mb-4">
-      Scroll Stack – Banner Style Like Your Design
-    </h1>
-    <p class="max-w-xl text-slate-300">
-      Scroll down – content on the left switches, and the right side shows a stacked banner
-      similar to your Sustainability CTA.
-    </p>
-    <div class="mt-8 text-xs uppercase tracking-[0.25em] text-slate-500">
-      ↓ Scroll
+   <!-- Container -->
+<section class="w-full bg-[#E6EDFF] py-16 relative overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+    <!-- LEFT CONTENT -->
+    <div class="flex flex-col justify-center">
+      <h2 class="text-[42px] font-bold text-[#171738] leading-tight">
+        Your money,<br> your way.
+      </h2>
+
+      <p class="text-[#2E2E52] mt-6 max-w-md leading-relaxed">
+        With a Swag Visa Debit card and Spend Account, you can pay, send money
+        and save instantly. Paying with your Swag card unlocks exclusive Cashback
+        offers that put money back in your pocket.
+        <br><br>
+        The best bit? $0 fees. No international transaction fees. And no fees at
+        all major bank ATMs anywhere in the world.
+      </p>
     </div>
-  </section>
 
-  <!-- Scroll-controlled stack section -->
-  <section id="stack-section" class="relative h-[350vh]">
-    <!-- Sticky wrapper -->
-    <div class="sticky top-0 h-screen flex items-center bg-black">
-      <div class="max-w-6xl mx-auto w-full px-4 md:px-8">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+    <!-- RIGHT STACKED EXPAND CARDS -->
+    <div class="relative flex justify-end">
 
-          <!-- LEFT: changing text blocks -->
-          <div class="relative h-[60vh] flex items-center">
-            <div class="relative w-full max-w-md mx-auto">
-              <!-- Text 1 -->
-              <div
-                class="stack-copy space-y-4"
-                data-step="0">
-                <p class="text-xs uppercase tracking-[0.25em] text-lime-300">
-                  01 / Sustainability
-                </p>
-                <h2 class="text-2xl md:text-3xl font-semibold">
-                  Building Climate-Conscious Products
-                </h2>
-                <p class="text-slate-300 text-sm md:text-base">
-                  Align your digital roadmap with sustainability goals – from cloud
-                  efficiency to responsible data practices.
-                </p>
-              </div>
+      <div id="stack-container" class="flex gap-3">
 
-              <!-- Text 2 -->
-              <div
-                class="stack-copy space-y-4"
-                data-step="1">
-                <p class="text-xs uppercase tracking-[0.25em] text-fuchsia-300">
-                  02 / Inclusion
-                </p>
-                <h2 class="text-2xl md:text-3xl font-semibold">
-                  Designing for Everyone
-                </h2>
-                <p class="text-slate-300 text-sm md:text-base">
-                  Accessibility-first interfaces and inclusive UX so your product
-                  works for real people in real-world conditions.
-                </p>
-              </div>
-
-              <!-- Text 3 -->
-              <div
-                class="stack-copy space-y-4"
-                data-step="2">
-                <p class="text-xs uppercase tracking-[0.25em] text-sky-300">
-                  03 / Innovation
-                </p>
-                <h2 class="text-2xl md:text-3xl font-semibold">
-                  Turning Ideas into Impact
-                </h2>
-                <p class="text-slate-300 text-sm md:text-base">
-                  Use AI, automation, and modern architectures to launch products
-                  that stay relevant as markets evolve.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT: stacked banner cards (like your screenshot) -->
-          <div class="h-[60vh] flex items-center justify-center">
-            <div class="relative w-full max-w-xl h-48 md:h-56 lg:h-64 overflow-hidden rounded-3xl bg-black">
-              
-              <!-- Card 1 (active / green) -->
-              <article
-                class="stack-card absolute inset-y-0 right-0 w-[72%]
-                       rounded-3xl overflow-hidden">
-                <div class="relative w-full h-full flex items-center">
-                  <!-- gradient background -->
-                  <div class="absolute inset-0 bg-gradient-to-r from-[#0a0f08] via-[#16a34a] to-[#a3e635]"></div>
-                  
-                  <!-- big faint letters -->
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-[8rem] md:text-[9rem] font-semibold tracking-[0.15em] text-lime-200/10 select-none">
-                      SUST
-                    </span>
-                  </div>
-
-                  <!-- left dark fade to mimic card edge -->
-                  <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black/70 to-transparent"></div>
-
-                  <!-- content -->
-                  <div class="relative z-10 px-8">
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4">
-                      Sustainability
-                    </h3>
-                    <button
-                      class="inline-flex items-center gap-3 px-6 py-3 rounded-full
-                             bg-gradient-to-r from-[#bbff3c] to-[#a3ff1f]
-                             text-black text-sm md:text-base font-medium shadow-lg shadow-black/40">
-                      <span>Read Our Client Stories</span>
-                      <span
-                        class="flex items-center justify-center w-8 h-8 rounded-full bg-black text-lime-200 text-sm">
-                        →
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Card 2 (purple) -->
-              <article
-                class="stack-card absolute inset-y-0 right-[-8%] w-[72%]
-                       rounded-3xl overflow-hidden opacity-60">
-                <div class="relative w-full h-full flex items-center">
-                  <div class="absolute inset-0 bg-gradient-to-r from-[#050109] via-[#581c87] to-[#020617]"></div>
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-[8rem] md:text-[9rem] font-semibold tracking-[0.15em] text-fuchsia-200/10 select-none">
-                      INCL
-                    </span>
-                  </div>
-                  <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black/80 to-transparent"></div>
-                </div>
-              </article>
-
-              <!-- Card 3 (blue) -->
-              <article
-                class="stack-card absolute inset-y-0 right-[-16%] w-[72%]
-                       rounded-3xl overflow-hidden opacity-40">
-                <div class="relative w-full h-full flex items-center">
-                  <div class="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#1d4ed8] to-[#020617]"></div>
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-[8rem] md:text-[9rem] font-semibold tracking-[0.15em] text-sky-200/10 select-none">
-                      INNO
-                    </span>
-                  </div>
-                  <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black/80 to-transparent"></div>
-                </div>
-              </article>
-
-            </div>
-          </div>
-
+        <!-- Card 1 -->
+        <div class="stack-card bg-[#4361EE] w-12 hover:w-40 transition-all duration-300
+                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
+                    relative"
+             data-title="InstaPay">
+          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
+            02 InstaPay
+          </span>
         </div>
+
+        <!-- Card 2 -->
+        <div class="stack-card bg-[#6C8CFF] w-12 hover:w-40 transition-all duration-300
+                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
+                    relative"
+             data-title="Pay Split">
+          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
+            03 Pay Split
+          </span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="stack-card bg-[#A6B9FF] w-12 hover:w-40 transition-all duration-300
+                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
+                    relative"
+             data-title="Hero Dollars">
+          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
+            04 Hero Dollars
+          </span>
+        </div>
+
       </div>
     </div>
-  </section>
 
-  <!-- Outro -->
-  <section class="min-h-[50vh] flex flex-col items-center justify-center px-6 text-center">
-    <h2 class="text-2xl md:text-3xl font-semibold mb-4">
-      Style + Scroll behavior are now wired together.
-    </h2>
-    <p class="max-w-xl text-slate-300">
-      You can duplicate cards/steps, change gradients, and plug in your real
-      CTA links without touching the animation logic.
-    </p>
-  </section>
+  </div>
+</section>
 
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
+<!-- JS for mobile click expand -->
+<script>
+  const cards = document.querySelectorAll('.stack-card');
 
-    window.addEventListener("load", () => {
-      const copies = gsap.utils.toArray(".stack-copy");
-      const cards = gsap.utils.toArray(".stack-card");
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // Remove active from others
+      cards.forEach(c => c.classList.remove('!w-40'));
 
-      // LEFT: all text blocks stacked in the same place
-      gsap.set(copies, {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        opacity: 0,
-        y: 30
-      });
-
-      // Show the first text block
-      gsap.set(copies[0], { opacity: 1, y: 0 });
-
-      // RIGHT: initial staggered stack positions
-      gsap.set(cards, (i) => ({
-        zIndex: cards.length - i
-      }));
-
-      // Make the first (green) banner the hero state
-      gsap.set(cards[0], {
-        right: "0%",
-        opacity: 1,
-        filter: "brightness(1)"
-      });
-
-      // Slightly pushed & dimmed look for the others initially
-      gsap.set(cards[1], {
-        right: "-8%",
-        opacity: 0.6,
-        filter: "brightness(0.8)"
-      });
-
-      gsap.set(cards[2], {
-        right: "-16%",
-        opacity: 0.4,
-        filter: "brightness(0.6)"
-      });
-
-      // Timeline that controls both sides
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#stack-section",
-          start: "top top",
-          end: () => "+=" + (window.innerHeight * (copies.length)),
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1
-        }
-      });
-
-      copies.forEach((copy, i) => {
-        if (i === 0) return;
-
-        const prevCopy = copies[i - 1];
-        const prevCard = cards[i - 1];
-        const currentCard = cards[i];
-
-        tl.addLabel("step-" + i);
-
-        // LEFT: fade old out, new in
-        tl.to(prevCopy, {
-          opacity: 0,
-          y: -30,
-          duration: 0.5
-        }, "step-" + i);
-
-        tl.to(copy, {
-          opacity: 1,
-          y: 0,
-          duration: 0.5
-        }, "step-" + i);
-
-        // RIGHT: slide previous banner a bit right & dim,
-        // bring current banner to hero position
-        tl.to(prevCard, {
-          right: "-8%",
-          opacity: 0.6,
-          filter: "brightness(0.8)",
-          duration: 0.6,
-          ease: "power1.out"
-        }, "step-" + i);
-
-        tl.to(currentCard, {
-          right: "0%",
-          opacity: 1,
-          filter: "brightness(1)",
-          duration: 0.6,
-          ease: "power1.out"
-        }, "step-" + i);
-      });
-
-      window.addEventListener("resize", () => {
-        ScrollTrigger.refresh();
-      });
+      // Toggle active
+      card.classList.toggle('!w-40');
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
