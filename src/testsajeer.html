@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golang-DevelopmentService Hire</title>
+
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    /* Make dots gray */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Show section only above 800px, hide below 800px */
+    .section-above-922 {
+      display: none;
+    }
+
+    @media (min-width: 922px) {
+      .section-above-922 {
+        display: block;
+      }
+    }
+  </style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000 url("./img/bgnew.webp") center center/cover no-repeat;
+    }
+
+    .grid-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.1;
+      z-index: 1;
+    }
+
+    .hero-content {
+      padding-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+    }
+
+    /* Left image section (fixed) */
+    .image-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      overflow: hidden;
+    }
+
+    .image-area img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .image-area img.active {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    /* Right section */
+    .right-section {
+      margin-left: 40%;
+      width: 60%;
+      padding: 6rem 3rem;
+      position: relative;
+    }
+
+    .card-wrapper {
+      position: relative;
+      z-index: 1;
+      margin-left: -80px; /* Pull cards under the image */
+    }
+
+    .image-area {
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #148f09 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    h1 span {
+      color: #7aff6b;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .custom-style {
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-align: right;
+    }
+
+    .custom-style2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.9rem;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-align: right;
+    }
+
+    .card-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+      will-change: transform;
+      position: relative;
+    }
+
+    /* Fade & Slide Out Animation */
+    .card.fade-slide-out {
+      animation: fadeSlideOut 0.6s forwards ease-out;
+    }
+    .card.fade-slide-out-left {
+      animation: fadeSlideOutLeft 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeSlideOut {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+    }
+    @keyframes fadeSlideOutLeft {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-300px);
+      }
+    }
+
+    /* Only active card shows text */
+    .card h2,
+    .card button {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, transform 0.4s ease;
+      transform: translateY(20px);
+    }
+
+    .card.active h2,
+    .card.active button {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .card.active {
+      flex: 7;
+      opacity: 1;
+      z-index: 5;
+    }
+
+    .card.tail {
+      /* flex: 0.7; */
+      opacity: 10;
+      filter: brightness(1.9);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .sustainability-heading {
+      font-weight: 300;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 76px;
+      letter-spacing: 0;
+      text-align: center;
+      vertical-align: middle;
+      margin-bottom: 1.5rem;
+    }
+    .sustainability-heading {
+      font-weight: 300;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 76px;
+      letter-spacing: 0;
+      text-align: right;
+      vertical-align: middle;
+      margin-bottom: 1.5rem;
+    }
+
+    .card button {
+      background: #b8f347;
+      color: #000;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .card.sustainability button {
+      background: #073b0a73;
+      color: #fff;
+    }
+
+    .card button:hover {
+      background: #a3e635;
+      transform: translateY(-2px);
+    }
+
+    .tag-bar {
+      /* display: flex; */
+      justify-content: center;
+      margin-top: 2rem;
+      /* gap: 10px; */
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+    }
+    .tag-bar .tag:nth-child(1).active {
+      background: #073b0a73;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag-bar .tag:nth-child(2).active {
+      background: #6e129361;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag-bar .tag:nth-child(3).active {
+      background: #1017388a;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag-bar .tag:nth-child(4).active {
+      background: #271a08;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag {
+      background: transparent;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      padding: 4px 16px;
+      color: #a3acb5;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+      font-weight: 400;
+      min-width: 180px;
+      width: auto;
+      height: 32px;
+      opacity: 0.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .image-area {
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
+      .right-section {
+        margin-left: 0;
+        width: 100%;
+        padding: 3rem 1.5rem;
+      }
+      .card-wrapper {
+        flex-direction: column;
+      }
+      .card.active,
+      .card.tail {
+        flex: 1 !important;
+      }
+    }
+  </style>
+  <style>
+    /* Show section only below 800px, hide above 800px */
+    .section-below-922 {
+      display: block;
+    }
+
+    @media (min-width: 922px) {
+      .section-below-922 {
+        display: none;
+      }
+    }
+
+    /* Show section only above 800px, hide below 800px */
+    .section-above-922 {
+      display: none;
+      padding-top: 120px;
+      /* padding-bottom: 120px; */
+    }
+
+    @media (min-width: 922px) {
+      .section-above-922 {
+        display: block;
+      }
+    }
+  </style>
+  <style>
+    .tag-bar,
+    .tag-bar-mobile {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 10px;
+      /* flex-wrap: wrap; */
+      align-items: center;
+    }
+    .tag-bar .tag:nth-child(1).active,
+    .tag-bar-mobile .tag1:nth-child(1).active {
+      background: #073b0a73;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag-bar .tag:nth-child(2).active,
+    .tag-bar-mobile .tag1:nth-child(2).active {
+      background: #6e129361;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag-bar .tag1:nth-child(3).active,
+    .tag-bar-mobile .tag1:nth-child(3).active {
+      background: #1017388a;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+    .tag-bar .tag:nth-child(4).active,
+    .tag-bar-mobile .tag1:nth-child(4).active {
+      background: #271a08;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+
+    .tag-bar .tag:nth-child(5).active,
+    .tag-bar-mobile .tag1:nth-child(5).active {
+      background: #1017388a;
+      color: #fff;
+      border-color: #65686c;
+      opacity: 1;
+    }
+
+    .tag1 {
+      background: transparent;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      padding: 10px;
+      color: #a3acb5;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 0.9rem;
+      font-weight: 400;
+      width: 300px;
+      height: 45px;
+      opacity: 0.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .tag1.active {
+      background: rgba(122, 255, 107, 0.1);
+      color: var(--active-tag1-color, #7aff6b);
+      border-color: var(--active-tag1-color, #7aff6b);
+    }
+
+    @media (max-width: 900px) {
+      .image-area {
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
+      .right-section {
+        margin-left: 0;
+        width: 100%;
+        padding: 3rem 1.5rem;
+      }
+      .card-wrapper {
+        flex-direction: column;
+      }
+      .card.active,
+      .card.tail {
+        flex: 1 !important;
+      }
+    }
+  </style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000 url("./img/bgnew.webp") center center/cover no-repeat;
+    }
+
+    .grid-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.1;
+      z-index: 1;
+    }
+
+    .hero-content {
+      padding-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+    }
+
+    /* Left image section (fixed) */
+    .image-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .image-area img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .image-area img.active {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    /* Right section */
+    .right-section {
+      margin-left: 40%;
+      width: 60%;
+      padding: 6rem 3rem;
+      position: relative;
+    }
+
+    .card-wrapper {
+      position: relative;
+      z-index: 1;
+      margin-left: -80px; /* Pull cards under the image */
+    }
+
+    .image-area {
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #148f09 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    h1 span {
+      color: #7aff6b;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .custom-style {
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-align: right;
+    }
+
+    .custom-style2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.9rem;
+      line-height: 1.5;
+      letter-spacing: 0;
+      text-align: right;
+    }
+
+    .card-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+      will-change: transform;
+      position: relative;
+    }
+
+    .card {
+      border: none !important;
+
+      flex: 1;
+      border-radius: 0;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+      cursor: pointer;
+      opacity: 0.1;
+      height: 320px;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .card.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 38px;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(0, 0, 0, 0.55) 80%, transparent 100%);
+      clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Fade & Slide Out Animation */
+    .card.fade-slide-out {
+      animation: fadeSlideOut 0.6s forwards ease-out;
+    }
+    .card.fade-slide-out-left {
+      animation: fadeSlideOutLeft 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeSlideOut {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+    }
+    @keyframes fadeSlideOutLeft {
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-300px);
+      }
+    }
+
+    /* Only active card shows text */
+    .card h2,
+    .card button {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, transform 0.4s ease;
+      transform: translateY(20px);
+    }
+
+    .card.active h2,
+    .card.active button {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .card.active {
+      flex: 7;
+      opacity: 1;
+      z-index: 5;
+    }
+
+    .card.tail {
+      /* flex: 0.7; */
+      opacity: 10;
+      filter: brightness(1.9);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .sustainability-heading {
+      font-weight: 300;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 76px;
+      letter-spacing: 0;
+      text-align: center;
+      vertical-align: middle;
+      margin-bottom: 1.5rem;
+    }
+    .sustainability-heading {
+      font-weight: 300;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 76px;
+      letter-spacing: 0;
+      text-align: right;
+      vertical-align: middle;
+      margin-bottom: 1.5rem;
+    }
+
+    .card button {
+      background: #b8f347;
+      color: #000;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .card.sustainability button {
+      background: #073b0a73;
+      color: #fff;
+    }
+
+    .card button:hover {
+      background: #a3e635;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .image-area {
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
+      .right-section {
+        margin-left: 0;
+        width: 100%;
+        padding: 3rem 1.5rem;
+      }
+      .card-wrapper {
+        flex-direction: column;
+      }
+      .card.active,
+      .card.tail {
+        flex: 1 !important;
+      }
+    }
+    .slick-slide {
+      text-align: center;
+      height: auto !important;
+    }
+  </style>
+
+  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
+    <!-- new area -->
+    <div
+      style="
+        width: 100%;
+        height: 150px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      "
+    ></div>
+
+    <section
+      class="section-above-922"
+      style="background: #000 url('./img/bgnew.webp') center center/cover no-repeat"
+    >
+      <div class="grid-bg"></div>
+      <div class="hero-content" style="padding-bottom: 190px">
+        <!-- Left image section -->
+        <div class="image-area">
+          <img src="./img/new1.webp" class="active" data-index="0" alt="Sustainability" />
+          <img src="./img/new2.webp" data-index="1" alt="Women Empowerment" />
+          <img src="./img/new3.webp" data-index="2" alt="HIPAA Transformation" />
+          <img src="./img/new4.webp" data-index="3" alt="Innovation" />
+          <img src="./img/new5.webp" data-index="4" alt="new" />
+        </div>
+
+        <!-- Right content -->
+        <div class="right-section custom-style2" style="margin-top: 10px">
+          <h1>
+            <span
+              style="
+                font-family: 'Montserrat', 'Inter', sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 69.71px;
+                line-height: 76px;
+                letter-spacing: 0%;
+                text-align: right;
+                vertical-align: middle;
+                display: inline-block;
+              "
+              >Every Project -Tells a <br />Story of Impact</span
+            >
+          </h1>
+          <p class="custom-style">
+            We partner with visionaries to create solutions that shape a smarter <br />tomorrow.
+          </p>
+
+          <div class="card-wrapper whitespace-nowrap">
+            <div
+              class="card sustainability active"
+              data-index="0"
+              style="
+                background-image: url('./img/ca1.webp');
+                background-color: rgba(0, 0, 0, 0.45);
+                background-blend-mode: multiply;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
+            >
+              <h2 class="sustainability-heading">Sustainability</h2>
+              <button
+                style="
+                  background-color: #d1ff6a;
+                  color: #000;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.05em;
+                  padding: 0.5rem 1.2rem;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  border: none;
+                  cursor: pointer;
+                  min-width: 0;
+                  max-width: 260px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <span
+                  class="whitespace-nowrap"
+                  style="
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 0.1em;
+                    white-space: nowrap;
+                  "
+                  >Read Our Client Stories</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 72 69"
+                  fill="none"
+                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                >
+                  <rect
+                    y="29.1523"
+                    width="53"
+                    height="53"
+                    rx="26.5"
+                    transform="rotate(-36.7944 0 29.1523)"
+                    fill="black"
+                  />
+                  <path
+                    d="M38.6536 39.0896L39.522 33.0676L33.5 32.1992"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <!-- Next Button for Desktop -->
+            </div>
+
+            <div
+              class="card women tail"
+              data-index="1"
+              style="
+                background-image: url('./img/ca2.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
+            >
+              <h2 class="sustainability-heading">Women Empowerment</h2>
+              <button
+                style="
+                  background-color: #d1ff6a;
+                  color: #000;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.05em;
+                  padding: 0.5rem 1.2rem;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  border: none;
+                  cursor: pointer;
+                  min-width: 0;
+                  max-width: 260px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <span
+                  style="
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 0.1em;
+                    white-space: nowrap;
+                  "
+                  >Read Our Client Stories</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 72 69"
+                  fill="none"
+                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                >
+                  <rect
+                    y="29.1523"
+                    width="53"
+                    height="53"
+                    rx="26.5"
+                    transform="rotate(-36.7944 0 29.1523)"
+                    fill="black"
+                  />
+                  <path
+                    d="M38.6536 39.0896L39.522 33.0676L33.5 32.1992"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="card hipaa tail"
+              data-index="2"
+              style="
+                background-image: url('./img/ca3.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
+            >
+              <h2 class="sustainability-heading">HIPAA-Driven Transformation</h2>
+              <button
+                style="
+                  background-color: #d1ff6a;
+                  color: #000;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.05em;
+                  padding: 0.5rem 1.2rem;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  border: none;
+                  cursor: pointer;
+                  min-width: 0;
+                  max-width: 260px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <span
+                  style="
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 0.1em;
+                    white-space: nowrap;
+                  "
+                  >Read Our Client Stories</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 72 69"
+                  fill="none"
+                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                >
+                  <rect
+                    y="29.1523"
+                    width="53"
+                    height="53"
+                    rx="26.5"
+                    transform="rotate(-36.7944 0 29.1523)"
+                    fill="black"
+                  />
+                  <path
+                    d="M38.6536 39.0896L39.522 33.0676L33.5 32.1992"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="card innovation tail"
+              data-index="3"
+              style="
+                background-image: url('./img/ca4.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
+            >
+              <h2 class="sustainability-heading">Youth Wellness</h2>
+              <button
+                style="
+                  background-color: #d1ff6a;
+                  color: #000;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.05em;
+                  padding: 0.5rem 1.2rem;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  border: none;
+                  cursor: pointer;
+                  min-width: 0;
+                  max-width: 260px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <span
+                  style="
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 0.1em;
+                    white-space: nowrap;
+                  "
+                  >Read Our Client Stories</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 72 69"
+                  fill="none"
+                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                >
+                  <rect
+                    y="29.1523"
+                    width="53"
+                    height="53"
+                    rx="26.5"
+                    transform="rotate(-36.7944 0 29.1523)"
+                    fill="black"
+                  />
+                  <path
+                    d="M38.6536 39.0896L39.522 33.0676L33.5 32.1992"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="card new tail"
+              data-index="4"
+              style="
+                background-image: url('./img/ca3.webp');
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100%;
+              "
+            >
+              <h2 class="sustainability-heading">Cross-Cultural Learning-EdTech</h2>
+              <button
+                style="
+                  background-color: #d1ff6a;
+                  color: #000;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 0.05em;
+                  padding: 0.5rem 1.2rem;
+                  border-radius: 50px;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  border: none;
+                  cursor: pointer;
+                  min-width: 0;
+                  max-width: 260px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <span
+                  style="
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 0.1em;
+                    white-space: nowrap;
+                  "
+                  >Read Our Client Stories</span
+                >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 72 69"
+                  fill="none"
+                  style="display: inline-block; vertical-align: middle; margin: 0; min-width: 0"
+                >
+                  <rect
+                    y="29.1523"
+                    width="53"
+                    height="53"
+                    rx="26.5"
+                    transform="rotate(-36.7944 0 29.1523)"
+                    fill="black"
+                  />
+                  <path
+                    d="M38.6536 39.0896L39.522 33.0676L33.5 32.1992"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Slick Slider Tag Bar Carousel -->
+          <div class="tag-bar tag-bar-slider" style="padding-bottom: 120px">
+            <span class="tag active" data-index="0">Sustainability</span>
+            <span class="tag" data-index="1">Women Empowerment</span>
+            <span class="tag" data-index="2">HIPAA Transformation</span>
+            <span class="tag" data-index="3">Youth Wellness</span>
+            <span class="tag" data-index="4">Cross-Cultural Learning-EdTech</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Desktop card/tag logic for Next button
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card-wrapper .card");
+        const tags = document.querySelectorAll(".tag-bar-slider .tag");
+        const images = document.querySelectorAll(".image-area img");
+        const heading = document.querySelector("h1 span");
+
+        const headingData = [
+          {
+            text: "Every Project -Tells<br> a Story of Impact",
+            color: "linear-gradient(90deg, #148F09 0%, #FFFFFF 100%)",
+          },
+          {
+            text: "Every Project -Tells<br> a Story of Impact",
+            color: "linear-gradient(90deg, #69098F 0%, #FFFFFF 100%)",
+          },
+          {
+            text: "Every Project -Tells<br> a Story of Impact",
+            color: "linear-gradient(90deg, #093F8F 0%, #FFFFFF 100%)",
+          },
+          {
+            text: "Every Project -Tells<br> a Story of Impact",
+            color: "linear-gradient(90deg, #C95E15 0%, #FFFFFF 100%)",
+          },
+          {
+            text: "Every Project -Tells<br> a Story of Impact",
+            color: "linear-gradient(90deg, #093F8F 0%, #FFFFFF 100%)",
+          },
+        ];
+
+        function showCard(index) {
+          cards.forEach((card, i) => {
+            card.classList.remove("active", "tail");
+            card.style.display = "";
+            if (i === index) {
+              card.classList.add("active");
+            } else if (i > index) {
+              card.classList.add("tail");
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          tags.forEach((tag, i) => {
+            tag.classList.toggle("active", i === index);
+            if (i === index) {
+              tag.style.setProperty("--active-tag-color", headingData[index].color);
+              if (typeof tag.scrollIntoView === "function") {
+                tag.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+              }
+            }
+          });
+
+          images.forEach((img, i) => img.classList.toggle("active", i === index));
+
+          heading.innerHTML = headingData[index].text;
+          heading.style.background = headingData[index].color;
+          heading.style.webkitBackgroundClip = "text";
+          heading.style.backgroundClip = "text";
+          heading.style.color = "transparent";
+          heading.style.webkitTextFillColor = "transparent";
+        }
+
+        // Next button click handler
+
+        // Tag click handler
+        tags.forEach((tag, i) => {
+          tag.addEventListener("click", function () {
+            showCard(i);
+          });
+        });
+
+        // Card click handler
+        cards.forEach((card) => {
+          card.addEventListener("click", function () {
+            showCard(parseInt(card.dataset.index));
+          });
+        });
+
+        // Set initial state
+        showCard(0);
+      });
+    </script>
+  </body>
+</html>
