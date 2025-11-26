@@ -37,6 +37,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <style>
+      /* Responsive heading break for all 5 card headings */
+      .heading-break-1172 {
+        display: none;
+      }
+      @media (max-width: 1172px) {
+        .heading-break-1172 {
+          display: inline;
+        }
+      }
       .custom-scrollbar::-webkit-scrollbar {
         width: 5px;
       }
@@ -135,6 +144,16 @@
                   vertical-align: middle !important;
                 }
               }
+               @media (max-width: 1172px) {
+                              .women-emp-responsive .heading-break-1172 {
+                                display: inline !important;
+                              }
+                            }
+                            @media (min-width: 1172.01px) {
+                              .women-emp-responsive .heading-break-1172 {
+                                display: none !important;
+                              }
+                            }
               </style>
   <style>
     /* Make dots gray */
@@ -1828,7 +1847,7 @@
                 min-height: 100%;
               "
             >
-              <h2 class="sustainability-heading">Sustainability</h2>
+              <h2 class="sustainability-heading sustainability-responsive">Sustainability</h2>
               <button
                 style="
                   background-color: #d1ff6a;
@@ -1903,7 +1922,8 @@
                 min-height: 100%;
               "
             >
-              <h2 class="sustainability-heading">Women Empowerment</h2>
+              <h2 class="sustainability-heading women-emp-responsive">Women <span class="heading-break-1172"><br></span>Empowerment</h2>
+                           
               <button
                 style="
                   background-color: #d1ff6a;
@@ -1976,7 +1996,7 @@
                 min-height: 100%;
               "
             >
-              <h2 class="sustainability-heading">HIPAA-Driven Transformation</h2>
+              <h2 class="sustainability-heading hipaa-responsive">HIPAA-Driven <span class="heading-break-1172"><br></span>Transformation</h2>
               <button
                 style="
                   background-color: #d1ff6a;
@@ -2049,7 +2069,7 @@
                 min-height: 100%;
               "
             >
-              <h2 class="sustainability-heading">Youth Wellness</h2>
+              <h2 class="sustainability-heading youth-responsive">Youth <span class="heading-break-1172"><br></span>Wellness</h2>
               <button
                 style="
                   background-color: #d1ff6a;
@@ -2122,7 +2142,8 @@
                 min-height: 100%;
               "
             >
-              <h2 class="sustainability-heading">Cross-Cultural Learning-EdTech</h2>
+              <h2 class="sustainability-heading crosscultural-responsive">Cross-Cultural <span class="heading-break-1172"><br></span>Learning-EdTech</h2>
+                          
               <button
                 style="
                   background-color: #d1ff6a;
