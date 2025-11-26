@@ -308,17 +308,14 @@
       opacity: 1;
     }
     .tag {
-      background: transparent;
       border: 1px solid #d1d5db;
       border-radius: 9px;
-      padding: 4px 16px;
       color: #a3acb5;
       cursor: pointer;
       transition: 0.3s;
       font-size: 1rem;
       font-weight: 400;
       min-width: 180px;
-      width: auto;
       height: 32px;
       opacity: 0.7;
       display: flex;
@@ -1158,16 +1155,50 @@
           </div>
 
           <!-- Slick Slider Tag Bar Carousel -->
-          <div class="tag-bar tag-bar-slider" style="padding-bottom: 120px">
+          <div class="tag-bar tag-bar-slider owl-carousel" style="padding-bottom: 120px">
             <span class="tag active" data-index="0">Sustainability</span>
             <span class="tag" data-index="1">Women Empowerment</span>
             <span class="tag" data-index="2">HIPAA Transformation</span>
             <span class="tag" data-index="3">Youth Wellness</span>
             <span class="tag" data-index="4">Cross-Cultural Learning-EdTech</span>
           </div>
-        </div>
+        </div>                              
       </div>
     </section>
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+<!-- jQuery (Required for Owl) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  $(".tag-bar-slider").owlCarousel({
+    loop: false,
+    margin: 12,
+    nav: false,
+    dots: false,
+    autoWidth: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true
+  });
+
+  // Re-apply your tag click event so carousel doesn’t break your logic
+  document.querySelectorAll(".tag-bar-slider .tag").forEach((tag, i) => {
+    tag.addEventListener("click", function () {
+      showCard(i);          // Your existing function
+      $(".tag-bar-slider").trigger("to.owl.carousel", [i, 300]); // Move carousel to the clicked item
+    });
+  });
+});
+</script>
+
 
     <script>
       // Desktop card/tag logic for Next button
