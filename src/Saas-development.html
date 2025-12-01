@@ -4400,7 +4400,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> 
 
     <!-- GSAP can load with defer for better performance -->
-    <!-- <script
+    <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
       defer
     ></script>
@@ -4411,9 +4411,153 @@
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"
       defer
-    ></script> -->
+    ></script>
 
-   
+    <script>
+      // Initialize GSAP ScrollSmoother after DOM is ready
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        // Only enable ScrollSmoother on desktop for better mobile performance
+        // const isDesktop = window.innerWidth >= 1024;
+        // const isTouchDevice = () => {
+        //   return (
+        //     navigator.maxTouchPoints > 0 ||
+        //     navigator.msMaxTouchPoints > 0 ||
+        //     window.ontouchstart !== undefined
+        //   );
+        // };
+
+        // Create smooth scrolling with parallax effects (desktop only, non-touch)
+        // if (isDesktop && !isTouchDevice()) {
+        //   try {
+        //     const smoother = ScrollSmoother.create({
+        //       wrapper: "#smooth-wrapper",
+        //       content: "#smooth-content",
+        //       smooth: 1.5,
+        //       effects: true,
+        //       smoothTouch: 0.1,
+        //       normalizeScroll: true,
+        //       ignoreMobileResize: true,
+        //     });
+        //   } catch (e) {
+        //     console.warn("ScrollSmoother initialization failed:", e);
+        //   }
+        // }
+
+        // Text Reveal Animation - Only for elements with .reveal-text class
+        // Optimize: Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        if (!prefersReducedMotion) {
+          gsap.utils.toArray(".reveal-text").forEach((element) => {
+            // Skip elements that are inside carousels, dropdowns, or have 'no-animate-text' class
+            if (
+              element.closest(".owl-carousel") ||
+              element.closest(".dropdown") ||
+              element.closest("#mobile-menu") ||
+              element.closest(".no-animate-text")
+            ) {
+              return;
+            }
+
+            gsap.fromTo(
+              element,
+              {
+                opacity: 0,
+                y: 50, // Start 50px below
+              },
+              {
+                opacity: 1,
+                y: 0, // End at normal position
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: element,
+                  start: "top 90%", // Animation starts when element is 90% from top of viewport
+                  end: "top 60%",
+                  toggleActions: "play none none none", // Only play once
+                },
+              }
+            );
+          });
+
+          // Animate from LEFT - Add class "animate-from-left" to any element
+          gsap.utils.toArray(".animate-from-left").forEach((element) => {
+            gsap.fromTo(
+              element,
+              {
+                opacity: 0,
+                x: -100, // Start 100px to the left
+              },
+              {
+                opacity: 1,
+                x: 0, // End at normal position
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: element,
+                  start: "top 85%",
+                  end: "top 55%",
+                  toggleActions: "play none none none",
+                },
+              }
+            );
+          });
+
+          // // Animate from RIGHT - Add class "animate-from-right" to any element
+          gsap.utils.toArray(".animate-from-right").forEach((element) => {
+            gsap.fromTo(
+              element,
+              {
+                opacity: 0,
+                x: 100, // Start 100px to the right
+              },
+              {
+                opacity: 1,
+                x: 0, // End at normal position
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: element,
+                  start: "top 85%",
+                  end: "top 55%",
+                  toggleActions: "play none none none",
+                },
+              }
+            );
+          });
+
+          // Hero section animation on page load
+          const heroSection = document.querySelector("#heroSection");
+          if (heroSection) {
+            gsap.fromTo(
+              heroSection,
+              {
+                y: 100, // Start 100px below
+                opacity: 0, // Start invisible
+
+                
+              },
+              {
+                y: 0, // Move to center position
+                opacity: 1, // Fade to full opacity
+                duration: 1.2, // Duration
+                ease: "power3.out", // Smooth easing
+                delay: 0.1, // Small delay after page load
+              }
+            );
+          }
+        }
+
+        // Refresh ScrollTrigger after carousels are initialized
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 1000);
+      });
+    </script>
+
     <script>
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
