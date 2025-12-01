@@ -1,0 +1,255 @@
+<!-- ==========================
+     OWL CAROUSEL SECTION
+========================== -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+/>
+
+<style>
+  /* ======== SECTION WRAPPER ======== */
+  .compliance-section {
+    padding: 0;
+    background: #0f0f14;
+    position: relative;
+  }
+
+  /* ======== SLIDE BOX ======== */
+  .slide-box {
+    display: flex;
+    background: #1a1a20;
+    border-radius: 12px;
+    /* padding: 30px; */
+    color: #fff;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* ======== IMAGE ======== */
+  .slide-image img {
+    width: 500px;
+    height: 300px;
+  }
+
+  /* ======== TEXT ======== */
+  .slide-content {
+    margin-left: 30px;
+    max-width: 600px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+
+  .slide-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4c8df6;
+    padding-left: 12px;
+  }
+
+  .slide-content p {
+    opacity: 0.85;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* ======== NAV BUTTONS ======== */
+  .owl-nav {
+    position: absolute;
+    right: 40px;
+    top: 85%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+  }
+
+  .owl-nav button {
+    background: #45484b !important;
+    color: #fff !important;
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+    border: none !important;
+    font-size: 18px !important;
+    outline: none !important;
+    transition: 0.3s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+
+  .owl-nav button:hover {
+    background: #5b7eff !important;
+  }
+
+  /* Selected/active nav button (persistently blue) */
+  .owl-nav button.selected {
+    background: #5b7eff !important;
+  }
+
+  .owl-nav .owl-prev:before,
+  .owl-nav .owl-prev:before,
+  .owl-nav .owl-next:before {
+    content: none !important;
+  }
+
+  /* DOTS */
+  .owl-dots {
+    position: absolute;
+    top: 220px;
+    left: 49%;
+    transform: translateX(-50%);
+    display: flex !important;
+    gap: 8px;
+    justify-content: center;
+    z-index: 100;
+    width: auto;
+  }
+
+  .owl-dots .owl-dot {
+    display: inline-block !important;
+    position: relative;
+  }
+
+  .owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.3) !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .owl-dots .owl-dot.active span {
+    background: #5b7eff !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 12px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .slide-box {
+      flex-direction: column;
+      text-align: center;
+    }
+    .slide-content {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .slide-image img {
+      width: 90%;
+    }
+    .owl-dots {
+      display: none !important;
+    }
+  }
+
+  /* Large screens: shift dots left a bit */
+  @media (min-width: 1800px) {
+    .owl-dots {
+      left: 30%;
+    }
+  }
+</style>
+
+<!-- ==========================
+     HTML SECTION
+========================== -->
+<section class="compliance-section">
+  <div class="owl-carousel compliance-carousel">
+    <!-- ======== SLIDE 1 ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="HIPAA" />
+      </div>
+      <div class="slide-content">
+        <h2>HIPAA</h2>
+        <p>
+          As a healthcare software company, we develop HIPAA-compliant software to ensure that the
+          solutions we build adhere to the Health Insurance Portability and Accountability Act
+          (HIPAA), prioritizing high privacy and maximum data security for patients.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 2 ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="" />
+      </div>
+      <div class="slide-content">
+        <h2>GDPR</h2>
+        <p>
+          We ensure complete General Data Protection Regulation (GDPR) compliance by protecting user
+          data, implementing strong encryption, and ensuring full transparency in data processing.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 3 ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="" />
+      </div>
+      <div class="slide-content">
+        <h2>SOC 2</h2>
+        <p>
+          Our software meets SOC 2 standards, ensuring robust internal controls for security,
+          availability, confidentiality, and privacy.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="custom-nav owl-nav">
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
+  </div>
+</section>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  /* ======== INIT OWL CAROUSEL ======== */
+  $(document).ready(function () {
+    var owl = $(".compliance-carousel");
+    owl.owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      // navText: ["←", " ➜ "],
+      items: 1,
+      autoplay: false,
+    });
+    /* ======== ADD NUMBERS TO DOTS ======== */
+    $(".owl-dots .owl-dot span").each(function (index) {
+      $(this).text(index + 1);
+    });
+    // Custom Navigation Events
+    $("#nextBtn").click(function () {
+      owl.trigger("next.owl.carousel");
+    });
+    $("#prevBtn").click(function () {
+      owl.trigger("prev.owl.carousel");
+    });
+  });
+</script>
