@@ -16,11 +16,19 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <title>SAAS Development</title>
 
-    <!-- Google Fonts - Inter and Manrope -->
+    <!-- Google Fonts - Inter and Manrope with optimized loading -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- Owl Carousel CSS -->
     <link
@@ -36,9 +44,17 @@
       onload="this.rel='stylesheet'"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+      />
+    </noscript>
     <link
       rel="preload"
       href="style.css"
@@ -51,6 +67,20 @@
       /* Performance optimizations */
       * {
         box-sizing: border-box;
+      }
+
+      /* Critical font loading - prevent FOIT */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      /* Apply custom fonts when loaded */
+      .font-inter {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      .font-manrope {
+        font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       }
 
       .owl-carousel .owl-stage {
@@ -124,933 +154,7 @@
     </style>
   </head>
   <body class="bg-black font-inter overflow-hidden">
-    <header
-      class="top-0 left-0 right-0 fixed text-white z-[100]"
-      style="background-color: rgba(0, 10, 31) !important"
-    >
-      <div
-        class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto"
-      >
-        <nav class="flex">
-          <a href="#">
-            <img
-              src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
-              class="h-[40px] md:h-[47px]"
-              alt="NewAgeSys IT Logo"
-              loading="eager"
-            />
-          </a>
-        </nav>
-
-        <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
-          <button class="py-2 px-3 rounded uppercase">
-            <img class="max-w-6" src="./img/call.png" alt="call" />
-          </button>
-          <button id="mobile-menu-button" class="xl:hidden">
-            <svg
-              class="w-7 h-7 text-white fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- mobile-menu start-->
-      <div id="mobile-menu" class="hidden w-full min-h-screen lg:hidden">
-        <nav class="p-4 container mx-auto">
-          <ul
-            class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
-          >
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Services
-                <svg
-                  class="w-4 h-4 ml-2 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  ></path>
-                </svg>
-              </button>
-              <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
-                <div class="relative z-10 pb-5">
-                  <div
-                    class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh]"
-                  >
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      SOFTWARE DEVELOPMENT
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="/custom-software-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Custom Software Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/software-product-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Software Product Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/saas-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Saas Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/web-application-development/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Web Application Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="//newagesysit.com/app-development-service/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Mobile App Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/maintenance-and-support/"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Maintenance and Support
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      CLOUD SERVICES
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Cloud Managed Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Cloud Consulting
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          AWS
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Cloud Application Development
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      IDEATION AND DESIGN
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          UI/UX Consulting
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          UX/UI Design
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          MVP Design
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      MVP Design
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps Consulting Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps CI/CD Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps Development Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevOps Implementation Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          DevSecOps Services
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      EMERGING TECHNOLOGIES
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          AI/ML
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          AR/VR
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Data Science and Analytics
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Blockchain
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Robotic Process Automation
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      STARTUP SERVICES
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Minimal Viable Product (MVP)
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Product Development
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Maintenance & Support
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Start-up Advisory / Consulting
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      Start-up Advisory / Consulting
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Digital Transformation
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          IT Consulting
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Implementation Consulting
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          IT Security and Cybersecurity
-                        </a>
-                      </li>
-                    </ul>
-                    <p
-                      class="uppercase text-gray-500 font-medium text-[13px] mt-2"
-                    >
-                      Workforce Management
-                    </p>
-                    <ul
-                      class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Staff Augmentation
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          Dedicated Development Team
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
-                        >
-                          QA & Testing
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Industries
-                <svg
-                  class="w-4 h-4 ml-2 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  ></path>
-                </svg>
-              </button>
-              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
-                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
-                  <ul class="text-[15px] space-y-3">
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/transportation.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Transportation</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/on-demand.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>On Demand</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/healthcare.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Healthcare</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/social-networking.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Social Networking</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/entertainment.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Entertainment</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/travel.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Travel</div>
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="text-[15px] space-y-3">
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/restaurant.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Restaurant</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/e-commerce.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>E-commerce</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/uber-like.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Uber Like Platform</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/saas.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>SaaS</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/game-app.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Game App</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/fintech.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>FinTech</div>
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="text-[15px] space-y-3">
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/wellness.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Wellness</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/realestate.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Real Estate</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/education.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Education</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/petcare.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Pet Care</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                      >
-                        <div class="p-2 bg-blue-600 rounded-full">
-                          <img
-                            class="max-w-[22px]"
-                            src="./img/door-to-door.png"
-                            alt=""
-                          />
-                        </div>
-                        <div>Door to Door Sales</div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Technologies
-                <svg
-                  class="w-4 h-4 ml-2 stroke-current"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  ></path>
-                </svg>
-              </button>
-              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
-                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
-                  <div class="grid grid-cols-1">
-                    <ul class="text-[15px] space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/ios.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>iOS</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/android.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Android</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/react-native.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>React Native</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/python.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Python</div>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="text-[15px] space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/flutter.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Flutter</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/php.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>PHP</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/nodejs.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Node JS</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/mainframe.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Mainframe</div>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul class="text-[15px] space-y-3">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/coldfusion.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>ColdFusion</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/rubyrails.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Ruby on Rails</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
-                        >
-                          <div class="p-2 bg-blue-600 rounded-full">
-                            <img
-                              class="max-w-[22px]"
-                              src="./img/xamarin.png"
-                              alt=""
-                            />
-                          </div>
-                          <div>Xamarin</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Portfolio
-              </button>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Blog
-              </button>
-            </li>
-            <li class="relative w-full">
-              <button
-                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!-- mobile-menu end-->
-    </header>
+   
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <section
@@ -1063,7 +167,7 @@
               src="./img/top-glow.svg"
               alt="Glow-Effect"
               class="object-cover object-top"
-              loading="eager"
+              fetchpriority="high"
             />
           </div>
 
@@ -1071,12 +175,13 @@
             class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex justify-center"
           >
             <img
+            fetchpriority="high"
               src="./img/bg-transparent.svg"
               alt="Background Transparent"
               class="lg:hidden w-full h-[75%] md:h-full object-cover object-top"
             />
             <img
-              src="./img/golang-seo-bg.webp"
+              src="./img/golang-seo-bg.svg"
               alt="Golang SEO Background"
               class="hidden lg:block w-full h-full object-cover object-center"
             />
@@ -1159,6 +264,7 @@
                 >
                   <!-- First set of logos -->
                   <img
+                  
                     src="./img/Deloitte-1.svg"
                     alt="logo"
                     class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
@@ -4708,12 +3814,12 @@
 
         <div class="relative overflow-hidden text-white py-10 lg:py-20">
           <img
-            src="./img/grid-bg-golang.png"
+            src="./img/grid-bg-golang.webp"
             alt="Background"
             class="absolute top-0 left-0 w-full lg:w-1/2 h-auto -z-10"
           />
           <img
-            src="./img/gradi-golang.png"
+            src="./img/gradi-golang.svg"
             alt="Background"
             class="absolute top-0 left-0 w-full h-auto -z-10"
           />
@@ -4731,7 +3837,7 @@
               </h2>
               <div class="hidden lg:flex justify-end">
                 <img
-                  src="./img/golang-client.png"
+                  src="./img/golang-client.webp"
                   alt="FAQ Image"
                   class="w-[80%] h-auto rounded-lg"
                 />
@@ -5291,7 +4397,7 @@
     <!-- jQuery must load synchronously for plugins to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> 
 
     <!-- GSAP can load with defer for better performance -->
     <script
@@ -5313,31 +4419,31 @@
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
         // Only enable ScrollSmoother on desktop for better mobile performance
-        const isDesktop = window.innerWidth >= 1024;
-        const isTouchDevice = () => {
-          return (
-            navigator.maxTouchPoints > 0 ||
-            navigator.msMaxTouchPoints > 0 ||
-            window.ontouchstart !== undefined
-          );
-        };
+        // const isDesktop = window.innerWidth >= 1024;
+        // const isTouchDevice = () => {
+        //   return (
+        //     navigator.maxTouchPoints > 0 ||
+        //     navigator.msMaxTouchPoints > 0 ||
+        //     window.ontouchstart !== undefined
+        //   );
+        // };
 
         // Create smooth scrolling with parallax effects (desktop only, non-touch)
-        if (isDesktop && !isTouchDevice()) {
-          try {
-            const smoother = ScrollSmoother.create({
-              wrapper: "#smooth-wrapper",
-              content: "#smooth-content",
-              smooth: 1.5,
-              effects: true,
-              smoothTouch: 0.1,
-              normalizeScroll: true,
-              ignoreMobileResize: true,
-            });
-          } catch (e) {
-            console.warn("ScrollSmoother initialization failed:", e);
-          }
-        }
+        // if (isDesktop && !isTouchDevice()) {
+        //   try {
+        //     const smoother = ScrollSmoother.create({
+        //       wrapper: "#smooth-wrapper",
+        //       content: "#smooth-content",
+        //       smooth: 1.5,
+        //       effects: true,
+        //       smoothTouch: 0.1,
+        //       normalizeScroll: true,
+        //       ignoreMobileResize: true,
+        //     });
+        //   } catch (e) {
+        //     console.warn("ScrollSmoother initialization failed:", e);
+        //   }
+        // }
 
         // Text Reveal Animation - Only for elements with .reveal-text class
         // Optimize: Check for reduced motion preference
@@ -5400,7 +4506,7 @@
             );
           });
 
-          // Animate from RIGHT - Add class "animate-from-right" to any element
+          // // Animate from RIGHT - Add class "animate-from-right" to any element
           gsap.utils.toArray(".animate-from-right").forEach((element) => {
             gsap.fromTo(
               element,
@@ -5431,6 +4537,8 @@
               {
                 y: 100, // Start 100px below
                 opacity: 0, // Start invisible
+
+                
               },
               {
                 y: 0, // Move to center position
@@ -5480,10 +4588,7 @@
           autoplay: false,
           autoplayTimeout: 3000,
           smartSpeed: 800,
-          // navText: [
-          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
-          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
-          // ],
+         
           responsive: {
             0: {
               items: 1,

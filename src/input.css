@@ -5180,6 +5180,13 @@ footer ul li {
   margin-top: 40px !important;
   padding-left: 160px !important;
 }
+.tech-carousel .owl-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-right: 0px;
+  gap: 25px;
+}
 
 @media (min-width: 1600px) {
   .slider-1 .owl-nav {
@@ -5200,9 +5207,38 @@ footer ul li {
 .slider-1 .owl-nav button.owl-next {
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
-.slider-1 .owl-nav button.owl-prev:hover {
+.tech-carousel .owl-nav button.owl-prev:hover {
   background-image: url("./img/Carousel Next-blue.svg") !important;
   rotate: 180deg;
+}
+
+.tech-carousel .owl-nav button.owl-next:hover {
+  background-image: url("./img/uads/white-arrow.svg") !important;
+}
+.tech-carousel .owl-nav button.owl-next {
+  background-image: url("./img/uads/white-arrow.svg") !important;
+}
+.tech-carousel .owl-nav button.owl-prev {
+  background-image: url("./img/uads/white-arrow.svg") !important;
+  transform: rotate(0deg) scale(1);
+}
+.tech-carousel .owl-nav button.owl-prev:hover {
+  background-image: url("./img/uads/white-arrow.svg") !important;
+  transform: rotate(0deg) scale(1);
+}
+
+.tech-carousel .owl-nav button.owl-prev.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  transform: rotate(180deg) scale(1);
+}
+
+.tech-carousel .owl-nav button.owl-next.disabled {
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  transform: rotate(-180deg) scale(1);
+}
+.slider-1 .owl-nav button.owl-prev:hover {
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+  transform: rotate(0deg) scale(1);
 }
 
 .slider-1 .owl-nav button.owl-next:hover {
@@ -6767,4 +6803,7 @@ footer ul li {
   fill: #000;
   fill-opacity: 1;
   transition: all 0.5s;
+}
+.tifm .owl-stage-outer {
+  overflow: unset !important;
 }
