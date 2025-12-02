@@ -19,8 +19,10 @@
   /* ======== SECTION WRAPPER ======== */
   .compliance-section {
     padding: 0;
-    background: #0f0f14;
+    background: #1a1a20;
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   /* ======== SLIDE BOX ======== */
@@ -51,11 +53,18 @@
   .slide-content h2 {
     font-size: 28px;
     margin-bottom: 10px;
-    border-left: 4px solid #4c8df6;
-    padding-left: 12px;
+    padding-left: 3px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+    border-image-source: linear-gradient(90deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%);
+    border-image-slice: 1;
+    border-image-repeat: no-repeat;
+    display: inline-block;
+    font-family: "Inter", sans-serif;
   }
 
   .slide-content p {
+    font-family: "Inter", sans-serif;
     opacity: 0.85;
     font-size: 15px;
     line-height: 1.6;
@@ -73,7 +82,7 @@
     z-index: 100;
   }
 
-  .owl-nav button {
+  .owl-nav span {
     background: #45484b !important;
     color: #fff !important;
     width: 35px;
@@ -90,12 +99,12 @@
     cursor: pointer !important;
   }
 
-  .owl-nav button:hover {
+  .owl-nav span:hover {
     background: #5b7eff !important;
   }
 
   /* Selected/active nav button (persistently blue) */
-  .owl-nav button.selected {
+  .owl-nav span.selected {
     background: #5b7eff !important;
   }
 
@@ -109,7 +118,7 @@
   .owl-dots {
     position: absolute;
     top: 220px;
-    left: 49%;
+    left: 70%;
     transform: translateX(-50%);
     display: flex !important;
     gap: 8px;
@@ -125,8 +134,8 @@
 
   .owl-dots .owl-dot span {
     background: rgba(255, 255, 255, 0.3) !important;
-    width: 20px !important;
-    height: 20px !important;
+    width: 15px !important;
+    height: 15px !important;
     border-radius: 50% !important;
     transition: all 0.3s ease !important;
     display: flex !important;
@@ -175,7 +184,7 @@
 ========================== -->
 <section class="compliance-section">
   <div class="owl-carousel compliance-carousel">
-    <!-- ======== SLIDE 1 ======== -->
+    <!-- ======== SLIDE 1: HIPAA ======== -->
     <div class="slide-box">
       <div class="slide-image">
         <img src="./img/650.jpg" alt="HIPAA" />
@@ -184,43 +193,126 @@
         <h2>HIPAA</h2>
         <p>
           As a healthcare software company, we develop HIPAA-compliant software to ensure that the
-          solutions we build adhere to the Health Insurance Portability and Accountability Act
-          (HIPAA), prioritizing high privacy and maximum data security for patients.
+          software we build adheres to the Health Insurance Portability and Accountability (HIPAA)
+          regulations, prioritizing high privacy and security.
         </p>
       </div>
     </div>
 
-    <!-- ======== SLIDE 2 ======== -->
+    <!-- ======== SLIDE 2: HITECH ======== -->
     <div class="slide-box">
       <div class="slide-image">
-        <img src="./img/650.jpg" alt="" />
+        <img src="./img/650.jpg" alt="HITECH" />
       </div>
       <div class="slide-content">
-        <h2>GDPR</h2>
+        <h2>HITECH</h2>
         <p>
-          We ensure complete General Data Protection Regulation (GDPR) compliance by protecting user
-          data, implementing strong encryption, and ensuring full transparency in data processing.
+          We develop healthcare software that adheres to the HITECH compliance standards. As a
+          highly established medical software development company, we ensure the stringent
+          enforcement of HITECH-compliance standards in the software.
         </p>
       </div>
     </div>
 
-    <!-- ======== SLIDE 3 ======== -->
+    <!-- ======== SLIDE 3: HL7 ======== -->
     <div class="slide-box">
       <div class="slide-image">
-        <img src="./img/650.jpg" alt="" />
+        <img src="./img/650.jpg" alt="HL7" />
+      </div>
+      <div class="slide-content">
+        <h2>HL7</h2>
+        <p>
+          As mandated by Health Level 7 (HL7) standards, we develop software that aligns with
+          international standards for integrating, retrieving, and exchanging data, ensuring
+          efficiency in healthcare data management.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 4: SOC 2 ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="SOC 2" />
       </div>
       <div class="slide-content">
         <h2>SOC 2</h2>
         <p>
-          Our software meets SOC 2 standards, ensuring robust internal controls for security,
-          availability, confidentiality, and privacy.
+          As a globally recognized medical software development company, we adhere to SOC 2
+          compliance policies, ensuring the accuracy and highest levels of privacy for sensitive
+          medical records.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 5: PHIPA ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="PHIPA" />
+      </div>
+      <div class="slide-content">
+        <h2>PHIPA</h2>
+        <p>
+          As a vital compliance standard in Ontario, we ensure that the software we develop is
+          secure and adheres to data privacy and confidentiality standards, thereby promoting
+          patient confidence in healthcare services.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 6: FHIR ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="FHIR" />
+      </div>
+      <div class="slide-content">
+        <h2>FHIR</h2>
+        <p>
+          As a leading provider of medical device software development services, we adhere to FHIR
+          standards to ensure our software aligns with healthcare industry standards, thereby
+          enhancing patient coordination.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 7: FDA ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="FDA" />
+      </div>
+      <div class="slide-content">
+        <h2>FDA</h2>
+        <p>
+          With our leading software development services for healthcare, we also adhere to the
+          regulatory standards set forth by the Food and Drug Administration (FDA), including
+          documentation, testing, and compliance with Good Manufacturing Practices (GMP), as
+          applicable.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 8: GDPR ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="GDPR" />
+      </div>
+      <div class="slide-content">
+        <h2>GDPR</h2>
+        <p>
+          As a reliable healthcare software development company, we follow GDPR compliance
+          standards, prioritizing data security to maintain the highest level of software security
+          at all times.
         </p>
       </div>
     </div>
   </div>
   <div class="custom-nav owl-nav">
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
+    <span id="prevBtn" aria-label="Previous">
+      <img src="./img/ar2.svg" alt="" />
+    </span>
+
+    <span id="nextBtn" aria-label="Next">
+      <img src="./img/ar1.svg" alt="" />
+    </span>
   </div>
 </section>
 
@@ -246,9 +338,15 @@
     });
     // Custom Navigation Events
     $("#nextBtn").click(function () {
+      // Add selected class to next, remove from prev
+      $("#nextBtn").addClass("selected");
+      $("#prevBtn").removeClass("selected");
       owl.trigger("next.owl.carousel");
     });
     $("#prevBtn").click(function () {
+      // Add selected class to prev, remove from next
+      $("#prevBtn").addClass("selected");
+      $("#nextBtn").removeClass("selected");
       owl.trigger("prev.owl.carousel");
     });
   });
