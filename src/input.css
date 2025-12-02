@@ -5176,11 +5176,18 @@ footer ul li {
   border-image-slice: 1;
 }
 
-.slider-1 .owl-nav {
+.slider-1 .owl-nav{
   display: flex;
   justify-content: start;
   margin-top: 40px !important;
   padding-left: 160px !important;
+}
+.tech-carousel .owl-nav{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-right: 0px;
+  gap: 25px;
 }
 
 @media (min-width: 1600px) {
@@ -5194,29 +5201,59 @@ footer ul li {
   }
 }
 
-.slider-1 .owl-nav button.owl-prev {
+.slider-1 .owl-nav button.owl-prev ,.tech-carousel .owl-nav button.owl-prev{
   background-image: url("./img/Carousel Next-blue.svg") !important;
   rotate: 180deg;
 }
 
-.slider-1 .owl-nav button.owl-next {
+.slider-1 .owl-nav button.owl-next{
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
-.slider-1 .owl-nav button.owl-prev:hover {
+.tech-carousel .owl-nav button.owl-prev:hover{
   background-image: url("./img/Carousel Next-blue.svg") !important;
   rotate: 180deg;
 }
 
-.slider-1 .owl-nav button.owl-next:hover {
+.tech-carousel .owl-nav button.owl-next:hover{
+  background-image: url("./img/uads/white-arrow.svg") !important;
+}
+.tech-carousel .owl-nav button.owl-next{
+  background-image: url("./img/uads/white-arrow.svg") !important;
+}
+.tech-carousel .owl-nav button.owl-prev{
+  background-image: url("./img/uads/white-arrow.svg") !important;
+      transform: rotate(0deg) scale(1);
+}
+.tech-carousel .owl-nav button.owl-prev:hover{
+  background-image: url("./img/uads/white-arrow.svg") !important;
+      transform: rotate(0deg) scale(1);
+}
+
+.tech-carousel .owl-nav button.owl-prev.disabled{
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  transform: rotate(180deg) scale(1);
+}
+
+.tech-carousel .owl-nav button.owl-next.disabled{
+  background-image: url("./img/Carousel Prev-gray.svg") !important;
+  transform: rotate(-180deg) scale(1);
+  
+}
+.slider-1 .owl-nav button.owl-prev:hover{
+  background-image: url("./img/Carousel Next-blue.svg") !important;
+  transform: rotate(180deg) scale(1);
+}
+
+.slider-1 .owl-nav button.owl-next:hover{
   background-image: url("./img/Carousel Next-blue.svg") !important;
 }
 
-.slider-1 .owl-nav button.owl-prev.disabled {
+.slider-1 .owl-nav button.owl-prev.disabled{
   background-image: url("./img/Carousel Prev-gray.svg") !important;
   rotate: 0deg;
 }
 
-.slider-1 .owl-nav button.owl-next.disabled {
+.slider-1 .owl-nav button.owl-next.disabled{
   background-image: url("./img/Carousel Prev-gray.svg") !important;
   rotate: 180deg;
 }
@@ -6780,4 +6817,7 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
   fill: #000;
   fill-opacity: 1;
   transition: all 0.5s;
+}
+.tifm .owl-stage-outer{
+  overflow: unset !important;
 }
