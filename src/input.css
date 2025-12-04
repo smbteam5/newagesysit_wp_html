@@ -6821,3 +6821,97 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
 .tifm .owl-stage-outer{
   overflow: unset !important;
 }
+
+
+
+.gradient-heading-animation{
+  /* background: linear-gradient(90deg, #FD5333 0%, #DB4BB0 50%, #3088FD 100%);
+  background: linear-gradient(90deg, #FD5333 0%, #DB4BB0 50%, #3088FD 90.87%);
+background: linear-gradient(90.76deg, #3088FD 9.03%, #DB4BB0 49.04%, #FD5333 97.42%); */
+
+ background: linear-gradient(90deg, #FD5333, #DB4BB0, #3088FD);
+  background-size: 150% 150%;
+  animation: gradientLoop 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientLoop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.landing-card-1{
+  position: relative;
+  background: linear-gradient(131.77deg, rgba(0, 0, 0, 0.36) 10.7%, rgba(0, 0, 0, 0.45) 105.87%),
+    radial-gradient(circle at top left, rgba(255, 130, 20, 0.1) 0%, #07070A 70%),
+    linear-gradient(172.55deg, rgba(0, 0, 0, 0) 5.78%, rgba(222, 123, 60, 0.2) 124.02%);
+  background-blend-mode: normal, normal, normal;
+  border: 1px solid rgba(78, 83, 186, 0.31);
+  backdrop-filter: blur(94px);
+  -webkit-backdrop-filter: blur(94px);
+}
+.landing-card-2{
+  position: relative;
+ background: linear-gradient(125.4deg, #F2D21B -193.37%, #07070A 19.13%),
+linear-gradient(189.56deg, rgba(0, 0, 0, 0) 7.21%, rgba(229, 222, 31, 0.2) 124.55%);
+
+  background-blend-mode: normal, normal, normal;
+  border: 1px solid rgba(78, 83, 186, 0.31);
+  backdrop-filter: blur(94px);
+  -webkit-backdrop-filter: blur(94px);
+}
+.landing-card-3{
+  position: relative;
+ background: linear-gradient(125.4deg, #12BF54 -193.37%, #07070A 19.13%),
+linear-gradient(211.14deg, rgba(0, 0, 0, 0) 18.83%, rgba(18, 190, 85, 0.2) 113.18%);
+
+  background-blend-mode: normal, normal, normal;
+  border: 1px solid rgba(78, 83, 186, 0.31);
+  backdrop-filter: blur(94px);
+  -webkit-backdrop-filter: blur(94px);
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  width:60px;
+  height: 4px;
+  background: #4361EE;
+  bottom: -10px;
+  left: 0;
+  
+}
+
+.bg-blurred-industry{
+  position: relative;
+  background-image: linear-gradient(180deg, #000000 0%, rgba(53, 53, 53, 0) 56.19%, #09090B 108.76%), 
+                    url("./img/cashdocs-landing-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.bg-blurred-industry::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, #000000 0%, rgba(53, 53, 53, 0) 56.19%, #09090B 108.76%),
+                    url("./img/cashdocs-landing-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px);
+  z-index: -1;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}

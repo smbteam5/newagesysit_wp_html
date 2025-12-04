@@ -1406,6 +1406,10 @@ video {
   z-index: -10;
 }
 
+.-z-20 {
+  z-index: -20;
+}
+
 .-z-50 {
   z-index: -50;
 }
@@ -2208,6 +2212,10 @@ video {
   height: 100px;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[104px\] {
   height: 104px;
 }
@@ -2569,6 +2577,10 @@ video {
   max-height: 180px;
 }
 
+.max-h-\[220px\] {
+  max-height: 220px;
+}
+
 .max-h-\[320px\] {
   max-height: 320px;
 }
@@ -2711,6 +2723,10 @@ video {
 
 .min-h-\[54px\] {
   min-height: 54px;
+}
+
+.min-h-\[550px\] {
+  min-height: 550px;
 }
 
 .min-h-\[600px\] {
@@ -17565,6 +17581,98 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
   overflow: unset !important;
 }
 
+.gradient-heading-animation{
+  /* background: linear-gradient(90deg, #FD5333 0%, #DB4BB0 50%, #3088FD 100%);
+  background: linear-gradient(90deg, #FD5333 0%, #DB4BB0 50%, #3088FD 90.87%);
+background: linear-gradient(90.76deg, #3088FD 9.03%, #DB4BB0 49.04%, #FD5333 97.42%); */
+  background: linear-gradient(90deg, #FD5333, #DB4BB0, #3088FD);
+  background-size: 150% 150%;
+  animation: gradientLoop 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientLoop {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.landing-card-1{
+  position: relative;
+  background: linear-gradient(131.77deg, rgba(0, 0, 0, 0.36) 10.7%, rgba(0, 0, 0, 0.45) 105.87%),
+    radial-gradient(circle at top left, rgba(255, 130, 20, 0.1) 0%, #07070A 70%),
+    linear-gradient(172.55deg, rgba(0, 0, 0, 0) 5.78%, rgba(222, 123, 60, 0.2) 124.02%);
+  background-blend-mode: normal, normal, normal;
+  border: 1px solid rgba(78, 83, 186, 0.31);
+  backdrop-filter: blur(94px);
+  -webkit-backdrop-filter: blur(94px);
+}
+
+.landing-card-2{
+  position: relative;
+  background: linear-gradient(125.4deg, #F2D21B -193.37%, #07070A 19.13%),
+linear-gradient(189.56deg, rgba(0, 0, 0, 0) 7.21%, rgba(229, 222, 31, 0.2) 124.55%);
+  background-blend-mode: normal, normal, normal;
+  border: 1px solid rgba(78, 83, 186, 0.31);
+  backdrop-filter: blur(94px);
+  -webkit-backdrop-filter: blur(94px);
+}
+
+.landing-card-3{
+  position: relative;
+  background: linear-gradient(125.4deg, #12BF54 -193.37%, #07070A 19.13%),
+linear-gradient(211.14deg, rgba(0, 0, 0, 0) 18.83%, rgba(18, 190, 85, 0.2) 113.18%);
+  background-blend-mode: normal, normal, normal;
+  border: 1px solid rgba(78, 83, 186, 0.31);
+  backdrop-filter: blur(94px);
+  -webkit-backdrop-filter: blur(94px);
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  width:60px;
+  height: 4px;
+  background: #4361EE;
+  bottom: -10px;
+  left: 0;
+}
+
+.bg-blurred-industry{
+  position: relative;
+  background-image: linear-gradient(180deg, #000000 0%, rgba(53, 53, 53, 0) 56.19%, #09090B 108.76%), 
+                    url("./img/cashdocs-landing-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.bg-blurred-industry::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, #000000 0%, rgba(53, 53, 53, 0) 56.19%, #09090B 108.76%),
+                    url("./img/cashdocs-landing-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px);
+  z-index: -1;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -17860,6 +17968,10 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
 
 .hover\:border-b:hover {
   border-bottom-width: 1px;
+}
+
+.hover\:border-\[\#303071b1\]:hover {
+  border-color: #303071b1;
 }
 
 .hover\:border-\[\#92C8FD\]:hover {
@@ -18330,6 +18442,11 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:translate-x-\[10px\] {
+  --tw-translate-x: 10px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:translate-x-\[12\.65rem\] {
   --tw-translate-x: 12.65rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -18367,6 +18484,12 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
 
 .group:hover .group-hover\:rotate-45 {
   --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -20160,6 +20283,11 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
        object-fit: contain;
   }
 
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .md\:object-center {
     -o-object-position: center;
        object-position: center;
@@ -21562,6 +21690,10 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
     width: 40%;
   }
 
+  .lg\:w-\[400px\] {
+    width: 400px;
+  }
+
   .lg\:w-\[420px\] {
     width: 420px;
   }
@@ -22146,6 +22278,11 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .lg\:py-28 {
@@ -22777,6 +22914,10 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
     margin-bottom: 5rem;
   }
 
+  .xl\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .xl\:ml-auto {
     margin-left: auto;
   }
@@ -22931,6 +23072,10 @@ linear-gradient(90deg, rgba(13, 32, 110, 0), rgba(15, 25, 72, 0.3));
 
   .xl\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .xl\:w-\[600px\] {
+    width: 600px;
   }
 
   .xl\:w-\[70\%\] {
