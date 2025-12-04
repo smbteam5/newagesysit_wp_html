@@ -1,0 +1,3298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sys IT - Testimonials</title>
+
+    <!-- DNS + TCP warmups -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Google Fonts (simple & reliable). display=swap prevents text-render delay -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Third-party vendor CSS (non-blocking via preload + onload). Noscript fallbacks below -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+      />
+    </noscript>
+
+    <!-- Preload hero images (use media to avoid fetching both); 'fetchpriority' belongs on <img>, not here -->
+    <link rel="preload" as="image" href="./img/banner-testi1.webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="./img/bannermob-testi.webp" media="(max-width: 767px)" />
+
+    <!-- Your main CSS: early hint + real stylesheet. (Preload is optional but harmless; browsers coalesce the request.) -->
+    <link rel="preload" href="style.css" as="style" />
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom gradient border styles -->
+    <style>
+      .gradient-border {
+        border: 1px solid;
+        border-image-source: linear-gradient(180deg, #5d5d5d 0%, #6981f1 100%);
+        border-image-slice: 1;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+
+  <style>
+    .border-gradient {
+      border: 1px solid transparent;
+      border-radius: 16px;
+      background: var(--Body-BG, #f5fafe);
+
+      /* Replace black background with your desired variable color */
+      background: linear-gradient(var(--Body-BG, #f5fafe), var(--Body-BG, #f5fafe)) padding-box,
+        linear-gradient(180deg, rgba(180, 180, 180, 0.12) 0%, rgba(105, 129, 241, 0.04) 100%)
+          border-box;
+    }
+
+    /* Show section only below 800px, hide above 800px */
+    .section-below-800 {
+      display: block;
+    }
+
+    @media (min-width: 800px) {
+      .section-below-800 {
+        display: none;
+      }
+    }
+
+    /* Show section only above 800px, hide below 800px */
+    .section-above-800 {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      .section-above-800 {
+        display: block;
+      }
+    }
+    /* Tablet: 2 columns - remove left border from odd cards (1st, 3rd, 5th, etc) */
+    @media (min-width: 769px) and (max-width: 1023px) {
+      .gradient-border-golang-md:nth-child(odd)::after,
+      .grid > div:nth-child(odd).gradient-border-golang-md::after {
+        display: none !important;
+      }
+    }
+
+    /* Desktop: 3 columns - show right borders on 1st and 2nd columns */
+    @media (min-width: 1024px) {
+      .gradient-border-golang::after,
+      .grid > div.gradient-border-golang::after {
+        display: block !important;
+      }
+    }
+
+    /* Mobile: show bottom borders */
+    @media (max-width: 768px) {
+      .gradient-border-golang-mob::after,
+      .grid > div.gradient-border-golang-mob::after {
+        display: block !important;
+      }
+    }
+  </style>
+
+  <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-black">
+    <section
+      id="hero-banner"
+      class="relative flex md:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px] max-768px:h-[calc(100vh-30px)]"
+    >
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <div class="w-full text-center pb-[40px] relative z-[9]">
+          <h1
+            class="text-[34px] md:text-[42px] lg:text-[60px] font-bold lg:leading-[54px] leading-normal inline-block"
+          >
+            <span
+              class="bg-[linear-gradient(180deg,#989AA4_35.07%,#F5FAFE_75.35%)] bg-clip-text text-transparent"
+            >
+              Building Future-Ready Digital
+            </span>
+          </h1>
+
+          <h1
+            class="text-[34px] md:text-[42px] lg:text-[60px] font-bold lg:leading-[54px] leading-normal inline-block pt-2"
+          >
+            <span class="bg-white bg-clip-text text-transparent"> Products That Drive Growth </span>
+          </h1>
+
+          <!-- Button -->
+          <div class="text-center flex justify-center mt-[20px] md:mt-[30px] bnr-btn">
+            <button
+              class="bg-[#4361EE] relative rounded-full text-white font-[500] lg:font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[25px] cursor-pointer overflow-hidden max-w-[280px] sm:max-w-none"
+            >
+              <span
+                class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141b3b00] to-[#D5DBFF]"
+              ></span>
+              <span
+                class="relative items-center bg-[#4361EE] rounded-full px-3 sm:px-4 md:px-8 py-2.5 sm:py-3 md:py-5 gap-1.5 sm:gap-2.5 text-center md:text-left flex"
+              >
+                <img src="./img/pho.svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span class="whitespace-nowrap">Let's Build Together</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop hero image -->
+      <img
+        src="./img/banner-testi1.webp"
+        srcset="
+          ./img/banner-testi1.webp 1280w,
+          ./img/banner-testi1.webp 1920w,
+          ./img/banner-testi1.webp 2560w
+        "
+        sizes="(min-width: 1280px) 100vw, 1920px"
+        alt="NewAgeSysIT Hero Banner"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        decoding="async"
+        class="w-full h-full object-cover absolute max-767px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
+        style="aspect-ratio: 16/9"
+      />
+
+      <!-- Mobile hero image -->
+      <img
+        src="./img/bannermob-testi.webp"
+        sizes="(max-width: 767px) 100vw, 100vw"
+        alt="NewAgeSysIT Hero Banner"
+        width="1080"
+        height="1080"
+        fetchpriority="high"
+        decoding="async"
+        class="w-full h-full object-cover absolute object-center min-1680px:object-[center_90px] block md:hidden"
+        style="aspect-ratio: 1/1"
+      />
+
+      <!-- Awards Bar -->
+      <div
+        class="recognition-section-ppc absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
+      >
+        <div class="container mx-auto w-full max-w-[1456px] px-4">
+          <div
+            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white xl:text-left text-center"
+          >
+            <p
+              class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
+            >
+              Recognized for building the best solutions for startups, businesses, and enterprises
+            </p>
+            <div class="logo-slider">
+              <ul class="logo-track">
+                <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <!-- repeat -->
+                <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span
+        class="hidden absolute w-full left-0 z-[9] max-768px:flex justify-center max-768px:bottom-[-10px]"
+      >
+        <img src="./img/glow.webp" alt="" class="w-auto" />
+      </span>
+    </section>
+
+    <!-- =======================
+       APP DEVELOPMENT
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            App Development
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Engaging Mobile Experiences, Engineered to Scale
+          </p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            Our process blends user-centric design with agile development and post-launch
+            optimization to ensure your app keeps evolving with your audience.
+          </p>
+          <p class="mt-4 text-gray-400 leading-relaxed">
+            We build mobile apps that don’t just work — they perform. From iOS and Android to
+            cross-platform frameworks like Flutter and React Native, we create secure,
+            high-performing apps that deliver real business value.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Our Expertise Includes:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-wrap gap-3 mb-4 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit">iOS</span>
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Android</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Cross-Platform Development</span
+            >
+          </div>
+
+          <div class="flex flex-col gap-3 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >App UI/UX Design & Prototyping</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >App Store Deployment & Maintenance</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Performance Optimization & Security</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12 prayer-circle-section">
+      <div class="container mx-auto px-2 max-w-[1400px]">
+        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+          <!-- Left Image -->
+          <div class="overflow-hidden">
+            <img src="./img/service1.webp" class="w-full h-full object-cover prayer-circle-img" />
+          </div>
+
+          <!-- Right Text -->
+          <div class="p-8 md:p-16">
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              Prayer Circle
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">Church Management Platform</p>
+
+            <p
+              class="mt-6 text-gray-400 leading-relaxed"
+              style="
+                font-family: Inter;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 19px;
+                line-height: 24px;
+                letter-spacing: 0%;
+              "
+            >
+              A New Jersey church embraced digital transformation with a platform uniting faith,
+              engagement, and community management tools.
+            </p>
+
+            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+              VIEW CASE STUDY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       SOFTWARE DEVELOPMENT
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Software Development
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Turning Ideas Into Powerful Software Solutions
+          </p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            We help businesses conceptualize, build, and maintain software that automates workflows,
+            enhances productivity, and accelerates digital transformation.
+          </p>
+          <p class="mt-4 text-gray-400 leading-relaxed">
+             Our software development teams work closely with your stakeholders to ensure
+            scalability, usability, and maintainability from day one.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Our Expertise Includes:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Enterprise & Custom Software Solutions</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >SaaS Application Development</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >API Development & System Integration</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Application Modernization & Maintenance</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12 town-connect-section">
+      <div class="container mx-auto px-2 max-w-[1400px]">
+        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+          <!-- Right Text -->
+          <div class="p-8 md:p-16">
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              Town Connect Network
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">
+              Auto Repair Booking and Maintenance Tracking Application
+            </p>
+
+            <p
+              class="mt-6 text-gray-400 leading-relaxed"
+              style="
+                font-family: Inter;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 19px;
+                line-height: 24px;
+                letter-spacing: 0%;
+              "
+            >
+              TownConnect Network revolutionized transportation through a custom app simplifying
+              shipment tracking, job management, and real-time driver coordination.
+            </p>
+
+            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+              VIEW CASE STUDY
+            </button>
+          </div>
+
+          <!-- Left Image -->
+          <div>
+            <img src="./img/service2.webp" class="w-full h-full object-cover town-connect-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       WEB DEVELOPMENT
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Web Development
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">Where Functionality Meets Performance</p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            Your website is more than a digital presence — it’s your growth engine.  We design and
+            develop modern, responsive, and lightning-fast web applications that deliver seamless
+            experiences across devices.
+          </p>
+          <p class="mt-4 text-gray-400 leading-relaxed">
+             Using the latest JavaScript frameworks and backend technologies, we ensure performance,
+            accessibility, and impact.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Our Expertise Includes:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Custom Web App Development</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Progressive Web Apps (PWA)</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Front-end (React, Next.js) & Back-end (Node.js, GoLang)</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >CMS & API-Driven Platforms</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12 l-card-section">
+      <div class="container mx-auto px-2 max-w-[1400px]">
+        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+          <!-- Left Image -->
+          <div>
+            <img src="./img/service3.webp" class="w-full h-full object-cover l-card-img" />
+          </div>
+
+          <!-- Right Text -->
+          <div class="p-8 md:p-16">
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              L-Card
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">
+              Digital Business Card App With Smart Technology
+            </p>
+
+            <p
+              class="mt-6 text-gray-400 leading-relaxed"
+              style="
+                font-family: Inter;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 19px;
+                line-height: 24px;
+                letter-spacing: 0%;
+              "
+            >
+              L-Card transformed professional networking with a smart digital business card app
+              earning recognition at GMASA 2024.
+            </p>
+
+            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+              VIEW CASE STUDY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       CLOUD DEVELOPMENT
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Cloud & DevOps
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Faster Deployments. Smarter Scalability. Continuous Innovation.
+          </p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            We help organizations modernize their infrastructure with secure, automated, and
+            scalable cloud solutions.
+          </p>
+          <p class="mt-4 text-gray-400 leading-relaxed">
+            Our DevOps engineers build continuous integration and delivery pipelines that ensure
+            faster releases, reduced downtime, and reliable performance across environments.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Our Expertise Includes:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Cloud Architecture (AWS, Azure, GCP)</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Containerization & Kubernetes</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >CI/CD Pipeline Setup</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Infrastructure as Code (Terraform, Ansible)</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12 polarity-section">
+      <div class="container mx-auto px-2 max-w-[1400px]">
+        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+          <!-- Left Image -->
+          <div>
+            <img src="./img/service4.webp" class="w-full h-full object-cover polarity-img" />
+          </div>
+
+          <!-- Right Text -->
+          <div class="p-8 md:p-16">
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              Polarity Partnerships
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">
+              SaaS-based Community Intelligence platform
+            </p>
+
+            <p
+              class="mt-6 text-gray-400 leading-relaxed"
+              style="
+                font-family: Inter;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 19px;
+                line-height: 24px;
+                letter-spacing: 0%;
+              "
+            >
+              Polarity Partnerships advanced organizational growth via a SaaS-based Community
+              Intelligence system integrating knowledge sharing and analytics.
+            </p>
+
+            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+              VIEW CASE STUDY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       EMERGING TECHNOLOGIES
+    ======================== -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+      <!-- Background effects -->
+
+      <div class="container mx-auto px-4 max-w-[1400px] relative z-10">
+        <!-- Central Image and Content -->
+        <div class="text-center mb-12">
+          <img
+            src="./img/emerg.webp"
+            alt="VR Technology Innovation"
+            class="mx-auto w-full max-w-[600px] h-auto mb-8 rounded-2xl shadow-2xl"
+          />
+
+          <p class="text-lg text-gray-400 mb-4">
+            <span
+              class="bg-gradient-to-r from-gray-500/50 via-gray-400/60 to-gray-400 bg-clip-text text-transparent"
+              >Stay</span
+            >
+            Ahead With Innovation That Defines Tomorrow
+          </p>
+
+          <h2
+            class="text-[40px] md:text-[48px] lg:text-[56px] font-semibold leading-tight text-white font-inter mb-8"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Emerging Technologies
+          </h2>
+
+          <p class="text-xl text-gray-400 max-w-1xl mx-auto leading-relaxed">
+            Harness the power of next-generation technologies to reinvent your products and
+            processes. Our R&D-<br />driven approach helps you adapt faster, explore new
+            possibilities, and lead your market with innovation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full px-2 md:px-6 py-6">
+      <div class="max-w-[1400px] mx-auto">
+        <div
+          class="border border-white/10 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row justify-between items-start gap-8"
+          style="background: linear-gradient(89.67deg, #000000 0.29%, #000726 45.33%)"
+        >
+          <!-- Left Content -->
+          <div class="flex-1">
+            <h2 class="text-3xl md:text-5xl font-semibold text-[#6981F1] mb-4">Think and Go AI</h2>
+
+            <button
+              class="bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+            >
+              Book AI Consultation Session
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_17539_20229)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.74874 8.38588C8.59497 8.39551 8.45091 8.46431 8.34677 8.57785C8.24262 8.69139 8.18649 8.84084 8.19015 8.99487C8.19381 9.14889 8.25697 9.29552 8.36639 9.40398C8.4758 9.51245 8.62297 9.57433 8.77702 9.57665L15.1841 9.42745L8.37468 16.2369C8.26291 16.3487 8.20012 16.5003 8.20012 16.6583C8.20012 16.8164 8.26291 16.968 8.37468 17.0798C8.48645 17.1915 8.63805 17.2543 8.79612 17.2543C8.95418 17.2543 9.10578 17.1915 9.21755 17.0798L16.027 10.2703L15.8771 16.6767C15.8721 16.7568 15.8833 16.837 15.91 16.9126C15.9367 16.9883 15.9785 17.0577 16.0327 17.1168C16.0869 17.1759 16.1525 17.2235 16.2256 17.2566C16.2986 17.2898 16.3776 17.3079 16.4578 17.3098C16.538 17.3117 16.6177 17.2974 16.6922 17.2677C16.7668 17.2381 16.8345 17.1937 16.8915 17.1372C16.9485 17.0807 16.9935 17.0134 17.0238 16.9391C17.0541 16.8648 17.0691 16.7852 17.0679 16.705L17.2517 8.81085C17.2539 8.72969 17.2395 8.64894 17.2092 8.5736C17.179 8.49826 17.1335 8.42993 17.0758 8.37285C17.0181 8.31578 16.9492 8.27116 16.8735 8.24178C16.7979 8.2124 16.7169 8.19887 16.6358 8.20203L8.74874 8.38588Z"
+                    fill="#121314"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_17539_20229">
+                    <rect
+                      width="18"
+                      height="18"
+                      fill="white"
+                      transform="translate(0 12.728) rotate(-45)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Right Content -->
+          <div class="flex-1 text-gray-400 leading-relaxed text-sm md:text-base">
+            <p>
+              AI has been the new lifeline for businesses, with brands chasing futuristic
+              possibilities of AI at every step. With intelligent automation, language models, and
+              smart processing, we help you make the best out of AI for a bright business future.
+              Connect with our certified AI specialists to start your AI journey!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+      AI / Machine Learning
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            AI / Machine Learning
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Transform Data Into Actionable Intelligence
+          </p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            We build intelligent systems that automate, predict, and optimize.<br />From predictive
+            analytics to generative AI and computer vision, our AI solutions help businesses make
+            data-backed decisions and scale intelligently.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Solutions Include:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Predictive Analytics & Forecasting</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Generative AI & Chatbots</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Image Recognition & NLP</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Recommendation Engines</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12 cft-section">
+      <div class="container mx-auto px-2 max-w-[1400px]">
+        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+          <!-- Left Image -->
+          <div>
+            <img src="./img/sp5.webp" class="w-full h-full object-cover cft-img" />
+          </div>
+
+          <!-- Right Text -->
+          <div class="p-8 md:p-16">
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              CFT
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">
+              Transport ERP & Mobility App for Process Automation
+            </p>
+
+            <p
+              class="mt-6 text-gray-400 leading-relaxed"
+              style="
+                font-family: Inter;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 19px;
+                line-height: 24px;
+                letter-spacing: 0%;
+              "
+            >
+              Central Florida Transport boosted logistics efficiency with a custom ERP and mobile
+              app for better automation and visibility.
+            </p>
+
+            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+              VIEW CASE STUDY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+     AR / VR
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            AR / VR
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Immersive Digital Experiences for Real-World Impact
+          </p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            We create augmented and virtual reality solutions that bridge the digital and physical
+            worlds — enhancing training, retail, healthcare, and entertainment experiences.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Solutions Include:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >AR Product Visualization</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >VR Training Simulations</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Mixed Reality Applications</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Immersive 3D Environments</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator Line -->
+    <div class="container mx-auto max-w-[1400px] px-2 my-12">
+      <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+    </div>
+
+    <!-- =======================
+    Data Science & Analytics
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Data Science & Analytics
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Our data experts transform raw data into real-time insights using advanced analytics,
+            dashboards, and machine learning pipelines.
+          </p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            We help you predict outcomes, improve performance, and stay ahead of the curve.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Solutions Include:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Data Warehousing & ETL</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Business Intelligence Dashboards</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Predictive & Prescriptive Analytics</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Real-time Data Processing</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+     Blockchain
+    ======================== -->
+    <section class="py-8 md:py-12 eco-auto-section">
+      <div class="container mx-auto px-2 max-w-[1400px]">
+        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+          <!-- Left Image -->
+          <div>
+            <img src="./img/sp6.webp" class="w-full h-full object-cover eco-auto-img" />
+          </div>
+
+          <!-- Right Text -->
+          <div class="p-8 md:p-16">
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              Eco Auto School
+
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">
+              Driving School App to Streamline Operations
+            </p>
+
+            <p
+              class="mt-6 text-gray-400 leading-relaxed"
+              style="
+                font-family: Inter;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 19px;
+                line-height: 24px;
+                letter-spacing: 0%;
+              "
+            >
+              Eco Auto School modernized driving education with a tailored app simplifying student
+              onboarding, scheduling, and instructor coordination.
+            </p>
+
+            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+              VIEW CASE STUDY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Blockchain
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">Building Trust in the Digital Age</p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            From secure smart contracts to decentralized applications, we build blockchain solutions
+            that redefine transparency and security in digital ecosystems.
+          </p>
+
+          <button
+            class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Explore Service
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Solutions Include:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Smart Contract Development</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >dApp Design & Development</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Tokenization & Wallet Integration</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Supply Chain & Identity Solutions</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator Line -->
+    <div class="container mx-auto max-w-[1400px] px-2 my-12">
+      <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+    </div>
+
+    <!-- =======================
+  Robotic Process Automation (RPA)
+    ======================== -->
+    <section class="py-8 md:py-12">
+      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Robotic Process Automation (RPA)
+          </h2>
+          <p class="mt-2 text-lg md:text-xl text-white">Simplify Workflows. Amplify Efficiency.</p>
+
+          <p class="mt-6 text-gray-400 leading-relaxed">
+            We help enterprises automate repetitive processes using RPA frameworks, enabling teams
+            to focus on strategic growth.
+
+            <button
+              class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+            >
+              Explore Service
+              <span>
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                    stroke="#212121"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </p>
+        </div>
+
+        <!-- Right -->
+        <div>
+          <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
+            Solutions Include:
+            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+          </h4>
+
+          <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Workflow Automation</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Document & Data Processing</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >AI-Powered Bots</span
+            >
+            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >Process Monitoring & Reporting</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       Startup Services
+    ======================== -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+      <div class="container mx-auto px-4 max-w-[1400px] relative z-10">
+        <!-- Central Image and Content -->
+        <div class="text-center mb-12">
+          <img
+            src="./img/start.webp"
+            alt="VR Technology Innovation"
+            class="mx-auto w-full max-w-[600px] h-auto mb-8 rounded-2xl shadow-2xl"
+          />
+
+          <p class="text-lg text-gray-400 mb-4">
+            <span
+              class="bg-gradient-to-r from-gray-500/30 via-gray-400/60 to-gray-400 bg-clip-text text-transparent hover:from-gray-400/40 hover:via-gray-300/80 hover:to-gray-300 transition-all duration-300"
+              >Empow</span
+            >ering Startups to Build, Launch & Scale With Confidence
+          </p>
+
+          <h2
+            class="text-[40px] md:text-[48px] lg:text-[56px] font-semibold leading-tight text-white font-inter mb-8"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Startup Services
+          </h2>
+
+          <p class="text-xl text-gray-400 max-w-1xl mx-auto leading-relaxed">
+            We collaborate with startups to validate ideas, build MVPs, and evolve them into
+            successful digital products.<br />Our consulting approach ensures speed, agility, and
+            cost efficiency — without compromising quality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       Startup Services Cards
+    ======================== -->
+    <section class="py-16 md:py-24">
+      <div class="container mx-auto px-4 max-w-[1400px]">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- MVP Development Card -->
+          <div class="rounded-2xl p-8 h-full bg-black border-gradient">
+            <h3 class="text-2xl font-semibold text-white mb-4">
+              Minimal Viable Product (MVP) Development
+            </h3>
+
+            <h4 class="text-lg font-medium text-white mb-6">
+              Validate Fast. Iterate Smarter. Scale Confidently.
+            </h4>
+
+            <p class="text-gray-400 leading-relaxed mb-8">
+              We help you launch your MVP quickly with just the right features to validate your
+              concept, attract investors, and gather user feedback — ensuring faster market entry
+              and reduced development risk.
+            </p>
+
+            <button
+              class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#3850D1] transition-colors"
+            >
+              Explore Service
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Product Development Card -->
+          <div class="rounded-2xl p-8 h-full bg-black border-gradient">
+            <h3 class="text-2xl font-semibold text-white mb-4">Product Development</h3>
+
+            <h4 class="text-lg font-medium text-white mb-6">From Vision to Market-Ready Product</h4>
+
+            <p class="text-gray-400 leading-relaxed mb-8">
+              Once validated, we take your MVP to the next level with full-scale product
+              engineering, robust architecture, and scalable design systems. Our agile sprints
+              ensure speed and flexibility at every stage.
+            </p>
+
+            <button
+              class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#3850D1] transition-colors"
+            >
+              Explore Service
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Startup Advisory Card -->
+          <div
+            class="rounded-2xl p-8 h-full bg-black border-gradient md:col-span-2 md:max-w-[50%] md:mx-auto"
+          >
+            <h3 class="text-2xl font-semibold text-white mb-4">Startup Advisory / Consulting</h3>
+
+            <h4 class="text-lg font-medium text-white mb-6">
+              Tech & Strategy Support for Growing Ventures
+            </h4>
+
+            <p class="text-gray-400 leading-relaxed mb-8">
+              From tech stack selection to product-market fit, we provide end-to-end advisory
+              support to help startups make informed decisions, reduce costs, and scale sustainably.
+            </p>
+
+            <button
+              class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#3850D1] transition-colors"
+            >
+              Explore Service
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .border-gradient {
+        border: 1px solid transparent;
+        border-radius: 16px;
+        background: linear-gradient(#000, #000) padding-box,
+          linear-gradient(180deg, #5d5d5d 0%, #4361ee 100%) border-box;
+      }
+    </style>
+
+    <!-- =======================
+       workforce Services
+    ======================== -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+      <div class="container mx-auto px-4 max-w-[1400px] relative z-10">
+        <!-- Central Image and Content -->
+        <div class="text-center mb-12">
+          <img
+            src="./img/sp7.webp"
+            alt="VR Technology Innovation"
+            class="mx-auto w-full max-w-[600px] h-auto mb-8 rounded-2xl shadow-2xl"
+          />
+
+          <p class="text-lg text-gray-400 mb-4">
+            <span
+              class="bg-gradient-to-r from-gray-500/30 via-gray-400/60 to-gray-400 bg-clip-text text-transparent hover:from-gray-400/40 hover:via-gray-300/80 hover:to-gray-300 transition-all duration-300"
+            ></span>
+            Build Your Dream Tech Team, On-Demand
+          </p>
+
+          <h2
+            class="text-[40px] md:text-[48px] lg:text-[56px] font-semibold leading-tight text-white font-inter mb-8"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Workforce Management Solutions
+          </h2>
+
+          <p class="text-xl text-gray-400 max-w-1xl mx-auto leading-relaxed">
+            Whether you need one expert or a full dedicated squad, we provide flexible engagement
+            models that align <br />with your goals and budget.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       Staff Augmentation
+    ======================== -->
+    <section class="py-16 md:py-24 bg-black">
+      <div class="container mx-auto px-4 max-w-[1400px]">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <!-- Left Content -->
+          <div>
+            <h2
+              class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter mb-6"
+              style="
+                font-family: Inter;
+                font-weight: 600;
+                font-style: normal;
+                vertical-align: middle;
+                letter-spacing: 0%;
+              "
+            >
+              Staff Augmentation
+            </h2>
+
+            <h3 class="text-xl md:text-2xl font-medium text-white mb-6">
+              Scale Your Team Without Scaling Overheads
+            </h3>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Access skilled developers, designers, QA engineers, and project managers from
+              NewAgeSysIT's pool of vetted professionals.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed mb-8">
+              We seamlessly integrate with your workflows, ensuring consistent delivery and faster
+              ramp-up.
+            </p>
+
+            <button
+              class="bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+            >
+              Explore Service
+              <span>
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                    stroke="#212121"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <!-- Right - Benefits Grid -->
+          <div>
+            <h4 class="text-lg font-semibold pb-2 relative text-white">
+              Benefits:
+              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            </h4>
+
+            <div class="grid grid-cols-2 gap-4 pt-3">
+              <!-- Quick Onboarding & Easy Scalability -->
+              <div
+                class="rounded-lg p-6 border border-gray-800"
+                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+              >
+                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                  <img src="./img/beni1.svg" alt="" />
+                </div>
+                <h5 class="text-white font-medium mb-2">Quick Onboarding &</h5>
+                <h5 class="text-white font-medium mb-2">Easy Scalability</h5>
+              </div>
+
+              <!-- Cost-Effective Resource Models -->
+              <div
+                class="rounded-lg p-6 border border-gray-800"
+                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+              >
+                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                  <img src="./img/beni2.svg" alt="" />
+                </div>
+                <h5 class="text-white font-medium mb-2">Cost-Effective</h5>
+                <h5 class="text-white font-medium mb-2">Resource Models</h5>
+              </div>
+
+              <!-- Time-Zone Aligned Teams -->
+              <div
+                class="rounded-lg p-6 border border-gray-800"
+                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+              >
+                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                  <img src="./img/beni3.svg" alt="" />
+                </div>
+                <h5 class="text-white font-medium mb-2">Time-Zone Aligned</h5>
+                <h5 class="text-white font-medium mb-2">Teams</h5>
+              </div>
+
+              <!-- End-to-End Project Control -->
+              <div
+                class="rounded-lg p-6 border border-gray-800"
+                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+              >
+                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                  <img src="./img/beni4.svg" alt="" />
+                </div>
+                <h5 class="text-white font-medium mb-2">End-to-End Project</h5>
+                <h5 class="text-white font-medium mb-2">Control</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       Dedicated Development Team
+    ======================== -->
+    <section class="py-16 md:py-24 bg-black rounded-full">
+      <div class="container mx-auto px-4 max-w-[1400px]">
+        <div class="rounded-2xl p-8 md:p-12 bg-black border-gradient">
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[48px] font-semibold leading-snug text-white font-inter mb-4"
+            style="
+              font-family: Inter;
+              font-weight: 600;
+              font-style: normal;
+              vertical-align: middle;
+              letter-spacing: 0%;
+            "
+          >
+            Dedicated Development Team
+          </h2>
+
+          <h3 class="text-xl md:text-2xl font-medium text-white mb-6">
+            Your Team, Our Infrastructure
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed mb-8 max-w-4xl">
+            Hire a full-time dedicated team that works exclusively on your project — with complete
+            visibility, control, and transparency. Our dedicated models offer long-term
+            collaboration without the overhead of hiring and management.
+          </p>
+
+          <button
+            class="bg-[#4361EE] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+          >
+            Hire Dedicated Development Team
+            <span>
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                  stroke="WHITE"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-black">
+      <div class="container mx-auto max-w-[1400px] px-6 grid md:grid-cols-2 gap-12 items-start">
+        <!-- Left Section (Image + Vertical Timeline aligned to right side) -->
+        <div class="relative">
+          <h2 class="text-white text-4xl md:text-5xl mb-4 leading-tight">Our Process</h2>
+
+          <p
+            class="gradient-text text-2xl font-bold mb-8 bg-gradient-to-r from-white/[1] via-white/[1] to-[#364EBE] bg-clip-text text-transparent"
+          >
+            Transparent. Agile. Outcome-Driven.
+          </p>
+
+          <!-- Image -->
+          <div class="relative">
+            <img src="img/sp8.webp" alt="process" class="rounded-xl w-full max-w-lg" />
+          </div>
+        </div>
+
+        <!-- Right Timeline Content -->
+        <div class="relative pl-12">
+          <!-- Vertical Line moved LEFT near icons -->
+          <div
+            class="absolute top-3 bottom-3 left-0 flex flex-col items-center justify-between py-1 pointer-events-none"
+          >
+            <!-- Dots positioned first -->
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+
+            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+
+            <!-- Line that starts from first dot center and ends at last dot center -->
+            <div
+              class="absolute w-[2px] left-1/2 transform -translate-x-1/2"
+              style="top: 6px; bottom: 6px; background: #242840"
+            ></div>
+          </div>
+
+          <div class="space-y-12 ml-6">
+            <!-- Discover -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process1.svg" alt="Discover" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Discover</h4>
+                <p class="text-gray-400 max-w-md">
+                  Understanding your goals, audience, and vision through strategy workshops.
+                </p>
+              </div>
+            </div>
+
+            <!-- Design -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process2.svg" alt="Design" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Design</h4>
+                <p class="text-gray-400 max-w-md">
+                  Crafting pixel-perfect UI/UX and defining architecture blueprints.
+                </p>
+              </div>
+            </div>
+
+            <!-- Develop -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process3.svg" alt="Develop" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Develop</h4>
+                <p class="text-gray-400 max-w-md">
+                  Building, testing, and refining using agile sprints.
+                </p>
+              </div>
+            </div>
+
+            <!-- Deploy -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process4.svg" alt="Deploy" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Deploy</h4>
+                <p class="text-gray-400 max-w-md">
+                  Continuous integration, cloud setup, and secure go-live.
+                </p>
+              </div>
+            </div>
+
+            <!-- Scale -->
+            <div class="relative flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <img src="img/process5.svg" alt="Scale" />
+              </div>
+
+              <div>
+                <h4 class="text-white text-xl font-semibold mb-2">Scale</h4>
+                <p class="text-gray-400 max-w-md">
+                  Ongoing optimization, monitoring, and evolution for sustained growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       Why Choose NewAgeSysIT
+    ======================== -->
+    <section
+      class="section-above-800 relative text-center overflow-hidden pb-5"
+      style="padding: 60px"
+    >
+      <!-- 3-column layout -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 relative p-4 md:p-8 lg:p-16"
+      >
+        <!-- Left Side -->
+        <div
+          class="flex flex-col gap-10 items-end text-right justify-center min-h-[300px] md:min-h-[500px] w-full"
+        >
+          <div
+            class="w-full max-w-xs pb-5 relative"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+              border-image-slice: 1;
+            "
+          >
+            <p class="text-gray-400 text-sm text-right">
+              <span
+                class="text-lg font-semibold"
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >30+</span
+              >
+              <span
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >Y</span
+              >ears of Innovation <br />
+              Legacy
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+              class="absolute bottom-0 right-0 transform translate-y-1/2"
+            >
+              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+            </svg>
+          </div>
+
+          <div
+            class="w-full max-w-xs pb-5 relative"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+              border-image-slice: 1;
+            "
+          >
+            <p class="text-gray-400 text-sm text-right">
+              <span
+                class="text-lg font-semibold"
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >Multi</span
+              ><span
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >-i</span
+              >ndustry Expertise <br />
+              Healthcare, Education, On-<br />
+              Demand, FinTech, and more
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+              class="absolute bottom-0 right-0 transform translate-y-1/2"
+            >
+              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+            </svg>
+          </div>
+
+          <div class="w-full max-w-xs pb-5">
+            <p class="text-gray-400 text-sm text-right">
+              <span
+                class="text-lg font-semibold"
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >Full</span
+              ><span
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >-c</span
+              >ycle Product <br />
+              Development
+            </p>
+          </div>
+        </div>
+
+        <!-- Center Placeholder (keeps space) -->
+        <div
+          class="flex flex-col items-center justify-center relative min-h-[200px] md:min-h-[500px] mx-4 md:mx-8"
+        >
+          <!-- Center Card -->
+          <div
+            class="rounded-2xl p-8 md:p-12 max-w-xs text-center text-white shadow-xl"
+            style="background: radial-gradient(69.04% 112.93% at 50% 50%, #0e2281 0%, #3045b1 100%)"
+          >
+            <h2 class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4">
+              Why Choose <br />NewAgeSysIT?
+            </h2>
+            <p class="text-white/90 text-sm md:text-base leading-relaxed">
+              Being one of the top Golang development companies, NewAgeSysIT is dedicated to
+              delivering the finest custom Golang software development services to any business.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div
+          class="flex flex-col gap-10 items-start text-left justify-center min-h-[300px] md:min-h-[500px] w-full"
+        >
+          <div
+            class="w-full max-w-xs pb-5 relative"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+              class="absolute bottom-0 left-0 transform translate-y-1/2"
+            >
+              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+            </svg>
+            <p class="text-gray-400 text-sm text-left">
+              <span
+                class="text-lg font-semibold"
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >Certifi</span
+              >ed Cloud & DevOps <br />
+              Engineers
+            </p>
+          </div>
+
+          <div
+            class="w-full max-w-xs pb-5 relative"
+            style="
+              border-bottom: 1px solid;
+              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-slice: 1;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+              class="absolute bottom-0 left-0 transform translate-y-1/2"
+            >
+              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+            </svg>
+            <p class="text-gray-400 text-sm min-1510px:text-left">
+              <span
+                class="text-lg font-semibold"
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >Trans</span
+              ><span
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >p</span
+              >arent <br />
+              Communication & Support
+            </p>
+          </div>
+
+          <div class="w-full max-w-xs pb-5">
+            <p class="text-gray-400 text-sm text-left">
+              <span
+                class="text-lg font-semibold"
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >Post</span
+              ><span
+                style="
+                  background: linear-gradient(90deg, #f5fafe 0%, #4361ee 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                "
+                >-L</span
+              >aunch Maintenance <br />
+              & Growth Partnership
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-below-800 relative overflow-hidden pb-5 p-6">
+      <div
+        class="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr] gap-8 relative p-4 md:p-8 lg:p-16"
+      >
+        <!-- Center Card (Shown first on mobile) -->
+        <div
+          class="order-1 md:order-none flex flex-col items-start relative min-h-[200px] md:min-h-[500px] mx-4 md:mx-8"
+        >
+          <div
+            class="rounded-2xl p-8 md:p-12 max-w-xs text-left text-white shadow-xl"
+            style="background: radial-gradient(69.04% 112.93% at 50% 50%, #0e2281 0%, #3045b1 100%)"
+          >
+            <h2 class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4">
+              Why Choose <br />NewAgeSysIT?
+            </h2>
+            <p class="text-white/90 text-sm md:text-base leading-relaxed">
+              Being one of the top Golang development companies, NewAgeSysIT is dedicated to
+              delivering the finest custom Golang software development services to any business.
+            </p>
+          </div>
+        </div>
+
+        <!-- All points combined into a single flex column for mobile -->
+        <div class="order-2 md:order-none flex flex-col gap-10 w-full text-left md:text-right">
+          <!-- Row of points as flex for mobile, grid for desktop -->
+          <div class="flex flex-col md:flex-col items-start md:items-end gap-10 w-full">
+            <!-- Point 1 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">30+ </span
+                ><span class="gradient-text">Y</span>ears of Innovation Legacy
+              </p>
+            </div>
+
+            <!-- Point 2 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Multi</span
+                ><span class="text-lg gradient-text">-i</span>ndustry Expertise<br />Healthcare,
+                Education, On-Demand, FinTech, and more
+              </p>
+            </div>
+
+            <!-- Point 3 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Full</span
+                ><span class="gradient-text">-c</span>ycle Product Development
+              </p>
+            </div>
+
+            <!-- Point 4 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Certi</span
+                ><span class="gradient-text">fied</span>Cloud & DevOps Engineers
+              </p>
+            </div>
+
+            <!-- Point 5 -->
+            <div
+              class="flex items-start w-full max-w-xs pb-5 relative"
+              style="
+                border-bottom: 1px solid;
+                border-image-source: linear-gradient(
+                  90deg,
+                  #ffffff 0%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-image-slice: 1;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="absolute bottom-0 left-0 transform translate-y-1/2"
+              >
+                <path d="M14 7.5L7 15L0 7.5L7 0L14 7.5Z" fill="#F1F1F1" />
+              </svg>
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Trans</span
+                ><span class="gradient-text">p</span>arent Communication & Support
+              </p>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="flex items-start w-full max-w-xs pb-5">
+              <p class="text-gray-400 text-sm pl-6">
+                <span class="text-lg font-semibold gradient-text">Post-</span
+                ><span class="gradient-text">L</span>aunch Maintenance & Growth Partnership
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+       Call to Action
+    ======================== -->
+
+    <section class="py-8 lg:pb-20 xl:py-32">
+      <div class="container">
+        <div class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]">
+          <div
+            class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:pl-10 md:pr-5 min-h-[600px]"
+          >
+            <div class="hidden lg:grid md:grid-cols-2 gap-6">
+              <!-- First Column - Moving Up -->
+              <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                <div class="animate-marquee-pcc space-y-6">
+                  <!-- First set of tiles -->
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Transportation</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">On-Demand</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Healthcare</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Blockchain</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Wellness</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
+                      Social Networking
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Entertainment</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Travel</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">FinTech</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Column - Moving Down -->
+              <div class="h-[400px] lg:h-[600px] overflow-hidden">
+                <div class="animate-marquee-pcc-reverse space-y-6">
+                  <!-- First set of tiles -->
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Real Estate</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Restaurant</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">E Commerce</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
+                      Uber Like Platform
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Education</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Saas</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Game App</h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Pet Care</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center lg:text-left text-white p-2 md:p-10">
+              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
+                Industries We
+
+                <br />Serve
+              </h2>
+
+              <p
+                class="text-[#FFFFFFB2] text-[18px] md:text-[20px] font-normal lg:text-[23px] mb-8"
+              >
+                Our journey is something more than inspiring. We’ve come a long way with experience
+                in serving across multiple industries. Here’s a glance into them to
+              </p>
+              <div class="overflow-hidden flex flex-col justify-center items-center lg:hidden">
+                <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Transportation</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">On-Demand</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Healthcare</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <div>
+                      <h3
+                        class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                      >
+                        Blockchain
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Wellness</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      Social Networking
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
+                    >
+                      Entertainment
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Travel</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4">
+                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                    </div>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">FinTech</h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Real Estate
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Restaurant
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      E Commerce
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Uber Like Platform
+                    </h3>
+                  </div>
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Education
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Saas
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Game App
+                    </h3>
+                  </div>
+
+                  <div
+                    class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
+                  >
+                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
+                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    </div>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
+                    >
+                      Pet Care
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center items-center mt-3 lg:justify-start">
+                <a href="#" class="text-white">
+                  <div class="with-transparency">
+                    <span>Schedule Your Free Consultation</span>
+                    <svg
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.59473 10.442L5.897 6.1398L1.59473 1.83759"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="pb-10 lg:pb-20 xl:py-32 mx-6 md:mx-12 lg:mx-16 xl:mx-20 rounded-2xl"
+      style="
+        background: linear-gradient(89.67deg, #000000 0.29%, #000726 45.33%);
+        border: 1px solid #4e3656cc; /* gray-300 */
+        border-radius: 30px;
+        overflow: hidden;
+      "
+    >
+      <div class="container mx-auto px-4 max-w-[1400px]">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2
+            class="whitespace-nowrap md:text-[48px] lg:text-[50px] font-semibold mb-6 pt-2"
+            style="
+              background: linear-gradient(90deg, #4361ee 0%, #6981f1 50%, #8bb6ff 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            "
+          >
+            Let's Build Something Extraordinary
+          </h2>
+
+          <p class="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
+            From idea to deployment — we make innovatfan happen. Get in touch with our team to
+            discuss your next digital initiative.
+          </p>
+
+          <button
+            class="bg-[#FF8214] items-center flex items-center gap-3 mx-auto text-white px-6 py-3 rounded-full font-medium flex items-center gap-2"
+          >
+            Talk to Our Experts
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="41"
+              height="41"
+              viewBox="0 0 41 41"
+              fill="none"
+            >
+              <rect y="0.5" width="40" height="40" rx="20" fill="white" />
+              <circle cx="20.5" cy="20.5" r="20.5" fill="white" />
+              <g clip-path="url(#clip0_17613_15573)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.0222 16.1574C15.8684 16.167 15.7243 16.2358 15.6202 16.3493C15.5161 16.4629 15.4599 16.6123 15.4636 16.7664C15.4672 16.9204 15.5304 17.067 15.6398 17.1755C15.7492 17.2839 15.8964 17.3458 16.0505 17.3481L22.4576 17.1989L15.6481 24.0084C15.5363 24.1201 15.4736 24.2717 15.4736 24.4298C15.4736 24.5879 15.5363 24.7395 15.6481 24.8512C15.7599 24.963 15.9115 25.0258 16.0696 25.0258C16.2276 25.0258 16.3792 24.963 16.491 24.8512L23.3004 18.0418L23.1505 24.4482C23.1455 24.5282 23.1567 24.6085 23.1834 24.6841C23.2102 24.7597 23.2519 24.8292 23.3061 24.8883C23.3604 24.9474 23.426 24.995 23.499 25.0281C23.572 25.0613 23.651 25.0794 23.7312 25.0813C23.8114 25.0832 23.8911 25.0689 23.9657 25.0392C24.0402 25.0096 24.108 24.9652 24.165 24.9087C24.2219 24.8522 24.2669 24.7848 24.2972 24.7106C24.3275 24.6363 24.3425 24.5567 24.3413 24.4765L24.5251 16.5823C24.5274 16.5012 24.5129 16.4204 24.4826 16.3451C24.4524 16.2697 24.407 16.2014 24.3492 16.1443C24.2915 16.0873 24.2227 16.0426 24.147 16.0133C24.0713 15.9839 23.9904 15.9704 23.9092 15.9735L16.0222 16.1574Z"
+                  fill="#121314"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_17613_15573">
+                  <rect
+                    width="18"
+                    height="18"
+                    fill="white"
+                    transform="translate(7.27344 20.5) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#0F0F0F] py-20 lg:py-28 px-0 mt-10 overflow-x-hidden">
+      <div class="w-full container mx-auto px-4 lg:px-8">
+        <!-- Heading -->
+        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">Related Blogs</h2>
+
+        <!-- Blog Carousel Container -->
+        <div class="related-blogs-carousel owl-carousel owl-theme">
+          <!-- Blog Card 1 -->
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List.png"
+                alt="How to Build a SaaS Application"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4 cursor-pointer">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                How to Build a SaaS Application?– Cover Nuances, Step-by-Step Process, Cost, and
+                More
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+              </h3>
+            </div>
+          </div>
+
+          <!-- Add more blog cards here as needed -->
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .shadow-glow {
+        box-shadow: 0 0 10px #4361ee, 0 0 20px rgba(67, 97, 238, 0.7);
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      defer
+    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./js/jquery.magnific-popup.js" defer></script>
+    <script src="./js/optimize.js" defer></script>
+    <!-- supermenu position -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menus = document.querySelectorAll(".supermenu");
+
+        menus.forEach((menu) => {
+          const parent = menu.closest(".group");
+          if (!parent) return;
+
+          function checkCutoff() {
+            const rect = menu.getBoundingClientRect();
+            const pad = 10;
+            if (rect.left < pad || rect.right > window.innerWidth - pad) {
+              menu.classList.add("cutoff");
+            } else {
+              menu.classList.remove("cutoff");
+            }
+          }
+
+          parent.addEventListener("mouseenter", () => {
+            requestAnimationFrame(checkCutoff);
+          });
+          parent.addEventListener("mouseleave", () => {
+            menu.classList.remove("cutoff");
+          });
+        });
+      });
+    </script>
+    <!-- end -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+        // Hamburger menu
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden-view");
+          });
+        }
+
+        // Dropdown mobile
+        if (dropdownToggles.length > 0) {
+          dropdownToggles.forEach((toggle) => {
+            toggle.addEventListener("click", (e) => {
+              e.stopPropagation(); // prevent window click from closing immediately
+
+              const dropdown = toggle.nextElementSibling;
+              const otherDropdowns = document.querySelectorAll(".dropdown");
+
+              if (dropdown) {
+                // Close other dropdowns and remove active class from other toggles
+                dropdownToggles.forEach((otherToggle) => {
+                  if (otherToggle !== toggle) {
+                    const otherDropdown = otherToggle.nextElementSibling;
+                    if (otherDropdown) otherDropdown.classList.add("hidden");
+                    otherToggle.classList.remove("active");
+
+                    const otherSvg = otherToggle.querySelector("svg");
+                    if (otherSvg) otherSvg.classList.remove("rotate-180");
+                  }
+                });
+
+                // Toggle current dropdown
+                const isOpen = !dropdown.classList.contains("hidden");
+                dropdown.classList.toggle("hidden");
+                toggle.classList.toggle("active", !isOpen); // Add active only when opened
+
+                // Rotate SVG icon
+                const svgElement = toggle.querySelector("svg");
+                if (svgElement) {
+                  svgElement.classList.toggle("rotate-180", !isOpen);
+                } else {
+                  console.error("SVG element not found within the toggle.");
+                }
+              } else {
+                console.error("Dropdown element not found.");
+              }
+            });
+          });
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener("click", (event) => {
+          if (!event.target.matches(".dropdown-toggle") && !event.target.closest(".dropdown")) {
+            dropdownToggles.forEach((toggle) => {
+              const dropdown = toggle.nextElementSibling;
+              if (dropdown) dropdown.classList.add("hidden");
+              toggle.classList.remove("active");
+
+              const svgElement = toggle.querySelector("svg");
+              if (svgElement) svgElement.classList.remove("rotate-180");
+            });
+          }
+          if (
+            !event.target.closest("#mobile-menu") &&
+            !event.target.closest("#mobile-menu-button")
+          ) {
+            mobileMenu.classList.add("hidden-view");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // ---- helpers ----
+        const isIOS =
+          /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+        const vh = () => (isIOS ? screen.height : window.innerHeight);
+
+        // More accurate "below-the-fold" check (partially visible counts as in-viewport)
+        function isBelowFold(el) {
+          const r = el.getBoundingClientRect();
+          return (
+            r.top >= vh() || r.left >= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Preload an image (file or SVG) and then run a callback
+        function preload(src, done) {
+          if (!src) return done && done();
+          if (/\.(svg)(\?|#|$)/i.test(src)) {
+            // For SVG: a quick HEAD/GET check, then just set src
+            fetch(src)
+              .then((r) => (r.ok ? r.text() : Promise.reject()))
+              .then((txt) => {
+                if (txt.includes("<svg")) done && done();
+                else done && done();
+              })
+              .catch(() => done && done());
+            return;
+          }
+          const tmp = new Image();
+          tmp.onload = () => done && done();
+          tmp.onerror = () => done && done();
+          tmp.src = src;
+        }
+
+        // Fade-in after load
+        function revealImg(img) {
+          img.classList.add("lazy-loaded");
+          img.classList.remove("lazy-load");
+        }
+        function revealBg(el) {
+          el.classList.add("lazy-loaded");
+          el.classList.remove("lazy-load");
+        }
+
+        // ---- IntersectionObservers ----
+        const imageObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const img = entry.target;
+
+              const src = img.getAttribute("data-src");
+              const srcset = img.getAttribute("data-srcset");
+              const sizes = img.getAttribute("data-sizes");
+
+              const apply = () => {
+                if (srcset) img.setAttribute("srcset", srcset);
+                if (sizes) img.setAttribute("sizes", sizes);
+                if (src) img.setAttribute("src", src);
+                // Remove data-* so future scans ignore it
+                img.removeAttribute("data-src");
+                img.removeAttribute("data-srcset");
+                img.removeAttribute("data-sizes");
+                // If already complete (cache), reveal immediately; else wait for onload
+                if (img.complete) {
+                  revealImg(img);
+                } else {
+                  img.addEventListener("load", () => revealImg(img), { once: true });
+                  img.addEventListener("error", () => revealImg(img), { once: true });
+                }
+              };
+
+              // Preload first (ensures smooth fade-in)
+              const primary = src || (srcset ? srcset.split(",").pop().trim().split(" ")[0] : "");
+              preload(primary, apply);
+
+              obs.unobserve(img);
+            });
+          },
+          { rootMargin: "200px 0px", threshold: 0.01 }
+        );
+
+        const bgObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target;
+              const bg = el.getAttribute("data-bg");
+              if (!bg) {
+                obs.unobserve(el);
+                return;
+              }
+
+              const setBg = () => {
+                el.style.backgroundImage = `url("${bg}")`;
+                el.removeAttribute("data-bg");
+                revealBg(el);
+              };
+
+              preload(bg, setBg);
+              obs.unobserve(el);
+            });
+          },
+          { rootMargin: "200px 0px", threshold: 0.01 }
+        );
+
+        // ---- Process <img> elements ----
+        document.querySelectorAll("img").forEach((img) => {
+          // Skip LCP/eager/explicitly excluded images
+          if (
+            img.hasAttribute("fetchpriority") ||
+            img.getAttribute("loading") === "eager" ||
+            img.hasAttribute("data-lcp") ||
+            img.hasAttribute("data-skip-lazy")
+          )
+            return;
+
+          // If already using native lazy, leave it — but still respect fade-in after load
+          const natLazy = img.getAttribute("loading") === "lazy";
+
+          // If it's in (or near) viewport, don't lazy it; just attach fade-in
+          if (!isBelowFold(img)) {
+            // ensure fade-in after load
+            if (!img.complete) {
+              img.classList.add("lazy-load");
+              img.addEventListener("load", () => revealImg(img), { once: true });
+              img.addEventListener("error", () => revealImg(img), { once: true });
+            }
+            return;
+          }
+
+          // Move src/srcset/sizes to data-* and observe
+          const src = img.getAttribute("src");
+          const srcset = img.getAttribute("srcset");
+          const sizes = img.getAttribute("sizes");
+          if (src) {
+            img.setAttribute("data-src", src);
+            img.removeAttribute("src");
+          }
+          if (srcset) {
+            img.setAttribute("data-srcset", srcset);
+            img.removeAttribute("srcset");
+          }
+          if (sizes) {
+            img.setAttribute("data-sizes", sizes);
+            img.removeAttribute("sizes");
+          }
+
+          // Mark for animation and use native lazy as a hint
+          img.classList.add("lazy-load");
+          if (!natLazy) img.setAttribute("loading", "lazy");
+
+          imageObserver.observe(img);
+        });
+
+        // ---- Process elements with background images ----
+        document.querySelectorAll("[style*='background-image']").forEach((el) => {
+          // Skip eager/LCP backgrounds
+          if (el.hasAttribute("data-lcp") || el.hasAttribute("data-skip-lazy")) return;
+
+          const comp = window.getComputedStyle(el);
+          const bgImage = comp.backgroundImage;
+          if (!bgImage || bgImage === "none") return;
+
+          // If already near viewport, keep as-is
+          if (!isBelowFold(el)) return;
+
+          // Extract URL("...") -> ...
+          const url = bgImage.slice(4, -1).replace(/["']/g, "");
+          if (!url) return;
+
+          // Move to data-bg, clear background and observe
+          el.setAttribute("data-bg", url);
+          el.style.backgroundImage = "none";
+          el.classList.add("lazy-load");
+          bgObserver.observe(el);
+        });
+
+        // ---- minimal CSS for fade-in ----
+        const style = document.createElement("style");
+        style.textContent = `
+    .lazy-load { opacity: 0; transition: opacity .35s ease; }
+    .lazy-loaded { opacity: 1; }
+  `;
+        document.head.appendChild(style);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        $(".video_card").on("mouseenter", function () {
+          $(this).find(".video_poster,.video_play").hide();
+          $(this).find(".unmute").show();
+          $(this).find(".mute").hide();
+          var video = $(this).find("video")[0];
+          video.muted = true;
+          video.play();
+        });
+        $(".video_card").on("mouseleave", function () {
+          var video = $(this).find("video")[0];
+          video.pause();
+          video.muted = true;
+          $(this).find(".video_play,.video_poster").show();
+          $(this).find(".unmute,.mute").hide();
+        });
+        $(".unmute").on("click", function () {
+          $(this).parents(".video_card").find(".video_poster").hide();
+          var video = $(this).parents(".video_card").find("video")[0];
+          video.play();
+          video.muted = false;
+          $(this).hide();
+          $(this).siblings(".mute").show();
+        });
+        $(".mute").on("click", function () {
+          var video = $(this).parents(".video_card").find("video")[0];
+          video.muted = true;
+          $(this).hide();
+          $(this).siblings(".unmute").show();
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            items: 4,
+            margin: 12,
+            lazyLoad: true,
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
+
+    <!-- GSAP Animation for All Case Study Sections -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Array of case study configurations
+      const caseStudies = [
+        {
+          sectionClass: ".prayer-circle-section",
+          imageClass: ".prayer-circle-img",
+        },
+        {
+          sectionClass: ".town-connect-section",
+          imageClass: ".town-connect-img",
+        },
+        {
+          sectionClass: ".l-card-section",
+          imageClass: ".l-card-img",
+        },
+        {
+          sectionClass: ".polarity-section",
+          imageClass: ".polarity-img",
+        },
+        {
+          sectionClass: ".cft-section",
+          imageClass: ".cft-img",
+        },
+        {
+          sectionClass: ".eco-auto-section",
+          imageClass: ".eco-auto-img",
+        },
+      ];
+
+      // Initialize animations for each case study
+      caseStudies.forEach((study, index) => {
+        const imageElement = document.querySelector(study.imageClass);
+
+        if (imageElement) {
+          // Set initial scale
+          gsap.set(study.imageClass, { scale: 1 });
+
+          let currentScrollScale = 1; // Track current scroll-based scale
+
+          // ScrollTrigger animation
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: study.sectionClass,
+              start: "top 80%",
+              end: "bottom 20%",
+              scrub: false,
+              onEnter: () => {
+                currentScrollScale = 1.1;
+                gsap.to(study.imageClass, {
+                  scale: 1.1,
+                  duration: 0.6,
+                  ease: "power2.out",
+                });
+              },
+              onLeave: () => {
+                currentScrollScale = 1;
+                gsap.to(study.imageClass, {
+                  scale: 1,
+                  duration: 0.6,
+                  ease: "power2.out",
+                });
+              },
+              onEnterBack: () => {
+                currentScrollScale = 1.1;
+                gsap.to(study.imageClass, {
+                  scale: 1.1,
+                  duration: 0.6,
+                  ease: "power2.out",
+                });
+              },
+              onLeaveBack: () => {
+                currentScrollScale = 1;
+                gsap.to(study.imageClass, {
+                  scale: 1,
+                  duration: 0.6,
+                  ease: "power2.out",
+                });
+              },
+            },
+          });
+
+          // Hover animations
+          imageElement.addEventListener("mouseenter", () => {
+            gsap.to(study.imageClass, {
+              scale: currentScrollScale + 0.1, // Add extra zoom on hover
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+
+          imageElement.addEventListener("mouseleave", () => {
+            gsap.to(study.imageClass, {
+              scale: currentScrollScale, // Return to current scroll-based scale
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

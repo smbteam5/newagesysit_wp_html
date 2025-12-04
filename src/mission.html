@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./img/mission-poster.webp" as="image" />
+    
+    <!-- Google Fonts - Inter only with font-display swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    
+    <!-- Owl Carousel - Deferred loading -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      />
+    </noscript>
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <style>
+      /* Enhanced gradient support for mobile */
+      .gradient-text-mission {
+        background: linear-gradient(105.3deg, #eaeaea 51.69%, #5466e9 114.42%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline-block;
+        width: 100%;
+      }
+
+      @supports (-webkit-background-clip: text) {
+        .gradient-text-mission {
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black font-inter overflow-hidden">
+    
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <section
+          class="min-h-[800px] md:min-h-[980px] lg:min-h-[1050px] xl:min-h-[1020px] relative py-20"
+        >
+          <div
+            class="absolute bottom-10 w-full justify-center z-10 hidden lg:flex"
+          >
+            <img
+                fetchpriority="high"
+              src="./img/mission-newage-logo.svg"
+              alt="NewAgeSys IT Mission Logo"
+              width="1200"
+              height="800"
+              class="w-full max-w-[90%] absolute bottom-20 opacity-100"
+            />
+          </div>
+          <div
+            class="absolute bottom-[30%] md:bottom-10 lg:bottom-10 w-full justify-center z-10 flex"
+          >
+            <img
+            fetchpriority="high"
+              src="./img/mission-ellipse.webp"
+              alt="Mission background ellipse"
+              class="w-[370px] md:w-[700px] xl:w-[900px]"
+            />
+          </div>
+          <div
+            class="absolute bottom-[45%] md:bottom-60 xl:bottom-72 w-full justify-center flex"
+          >
+            <video
+              class="w-[300px] md:w-[600px] xl:w-[700px] rounded-full"
+              poster="./img/mission-poster.webp"
+              playsinline
+              autoplay
+              loop
+              muted
+              preload="none"
+               width="700"
+               height="700"
+              id="missionHeroVideo"
+              style="
+                mask-image: radial-gradient(
+                  circle,
+                  rgba(0, 0, 0, 1) 40%,
+                  rgba(0, 0, 0, 0) 70%
+                );
+                -webkit-mask-image: radial-gradient(
+                  circle,
+                  rgba(0, 0, 0, 1) 40%,
+                  rgba(0, 0, 0, 0) 70%
+                );
+              "
+            >
+              <source src="./video/mission-video.mp4" type="video/mp4" />
+              <source src="./video/mission-man.webm" type="video/webm" />
+            </video>
+          </div>
+
+          <div
+            class="container pt-20 md:pt-28 xl:pt-32 text-white flex flex-col justify-between h-full absolute inset-0"
+          >
+            <div class="w-full flex justify-between">
+              <div class="flex">
+                <div class="h-[100%] w-px bg-white/50 mr-6"></div>
+                <h1
+                  class="text-[40px] sm:text-[50px] md:text-[50px] lg:text-[80px] bg-[linear-gradient(105.3deg,#EAEAEA_51.69%,#5466E9_114.42%)] bg-clip-text text-transparent"
+                >
+                  We’re on <br class="hidden md:block" />
+                  a Mission
+                </h1>
+              </div>
+              <div
+                class="text-[23px] font-normal lg:px-10 justify-center items-center hidden md:flex"
+              >
+                <div class="h-full w-[1px] bg-white/50"></div>
+                <p class="mx-7">
+                  Technology <span class="text-[#FF8214]">with Purpose.</span
+                  ><br />
+                  Innovation
+                  <span class="text-[#6981F1]"
+                    >that Creates <br class="hidden lg:block" />
+                    Impact.</span
+                  >
+                  <br />
+                </p>
+                <div class="h-full w-[1px] bg-white/50 mx-3"></div>
+              </div>
+            </div>
+            <div
+              class="text-[23px] font-normal lg:px-10 justify-center items-center flex pb-14 md:hidden text-center"
+            >
+              <div class="h-full w-[1px] bg-white/50"></div>
+              <p class="mx-7">
+                Technology <span class="text-[#FF8214]">with Purpose.</span>
+                Innovation
+                <span class="text-[#6981F1]">that Creates Impact.</span>
+                <br />
+              </p>
+              <div class="h-full w-[1px] bg-white/50 mx-3"></div>
+            </div>
+          </div>
+        </section>
+        <!--Foogly-->
+        <section class="py-10 lg:py-20 mission-bg-foogly relative">
+          <div class="absolute left-0 right-0 z-0 hidden lg:block">
+            <img
+              src="./img/foogly-circle.svg"
+              alt="Foogly sustainability background"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="container min-h-[1100px] w-full text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 lg:py-[64px] md:py-14 2xl:pr-24"
+              >
+                <h2
+                  class="text-[40px] md:text-[60px] xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#0B870F_0%,#FFFFFF_50.51%,#0B870F_100%)] bg-clip-text text-transparent"
+                >
+                  Sustainability
+                </h2>
+              </div>
+              <div
+                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3"
+              >
+                <h3
+                  class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#329A35_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
+                >
+                  Foogly
+                </h3>
+                <p
+                  class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#329A35_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                >
+                  Turning Food Waste into a Sustainable Future
+                </p>
+              </div>
+              <div class="lg:hidden px-2">
+                <img
+                  src="./img/mission-foogly-mob.webp"
+                  alt="Foogly mobile app interface"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-8">
+                <div
+                  class="mission-card-foogly-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
+                >
+                  <h3
+                    class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
+                  >
+                    Problem Statement
+                  </h3>
+                  <p
+                    class="font-[400] text-[#F5FAFE] text-[18px] leading-[25px]"
+                  >
+                    Millions of tons of food go to waste every year due to the
+                    lack of a direct farm-to-consumer connection.
+                  </p>
+                </div>
+
+                <div
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    About the Project
+                  </h3>
+                  <p class="text-[18px] text-[#9ea3aa]">
+                    Kevin Speina, PhD in Chemistry with a specialization in
+                    Green Chemistry, envisioned a sustainable way to reduce
+                    global food waste. What started as a research concept soon
+                    evolved into a viable platform. Kevin partnered with
+                    NewAgeSysIT to transform his vision into Foogly — a digital
+                    marketplace that connects farmers directly with consumers.
+                    <br />
+                    <br />
+                    <span class="mt-5">
+                      We built a scalable, intuitive e-commerce system that
+                      empowers farmers to sell surplus produce, promote
+                      sustainability, and reduce environmental impact.
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="lg:space-y-8">
+                <div class="relative hidden lg:block">
+                  <img src="./img/mission-foogly.webp" alt="Foogly platform interface" loading="lazy" decoding="async" />
+                </div>
+                <div class="">
+                  <div
+                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
+                  >
+                    <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                      Testimonial
+                    </h3>
+                    <p class="text-[18px] text-[#65686C] mb-3">
+                      "Foogly turned my academic research into a real, working
+                      solution. The NewAgeSysIT team didn’t just build an app —
+                      they built impact."
+                    </p>
+                    <p class="text-[#A3ACB5] text-[18px] mt-3">
+                      Dr. Kevin Speina, Founder of Foogly
+                    </p>
+                  </div>
+                  <div class="w-full flex justify-start">
+                    <a
+                      href="#"
+                      class="bg-white text-black rounded-full px-8 py-4 inline-flex justify-center items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
+                    >
+                      <span class="truncate">cta content goes here</span>
+
+                      <span class="flex-shrink-0">
+                        <svg
+                          width="7"
+                          height="11"
+                          viewBox="0 0 7 11"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                            stroke="#212121"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--women empowerment-->
+        <section class="py-10 lg:py-20 mission-bg-we relative">
+          <div class="absolute left-0 right-0 z-0 hidden lg:block">
+            <img
+              src="./img/we-circle.svg"
+              alt="Women empowerment background"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="container min-h-[1100px] w-full text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
+              >
+                <h2
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#B10BAC_0%,#FFFFFF_50.51%,#B10BAC_100%)] bg-clip-text text-transparent"
+                >
+                  Women <br />
+                  Empowerment <br />
+                  Tech for Care
+                </h2>
+              </div>
+              <div class="space-y-8">
+                <div
+                  class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3"
+                >
+                  <h3
+                    class="text-[35px] font-medium bg-[linear-gradient(90deg,#B10BAC_0%,#FFFFFF_50.51%,#B10BAC_100%)] bg-clip-text text-transparent mb-2"
+                  >
+                    Auntie App
+                  </h3>
+                  <p
+                    class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#B10BAC_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                  >
+                    Empowering Women through Trusted Childcare
+                  </p>
+                </div>
+                <div class="relative hidden lg:block h-1/">
+                  <img
+                    src="./img/mission-we.webp"
+                    alt="Auntie App platform interface"
+                    class="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div class="lg:hidden px-2">
+                <img
+                  src="./img/mission-we-mob.webp"
+                  alt="Auntie App mobile interface"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-8">
+                <div
+                  class="mission-card-we-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
+                >
+                  <h3
+                    class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
+                  >
+                    Problem Statement
+                  </h3>
+                  <p
+                    class="font-[400] text-[#F5FAFE] text-[18px] leading-[25px]"
+                  >
+                    Working mothers often struggle to find reliable, verified
+                    babysitters — balancing career and family becomes a daily
+                    challenge.
+                  </p>
+                </div>
+
+                <div
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    About the Project
+                  </h3>
+                  <p class="text-[18px] text-[#65686C]">
+                    Founded by two working professionals who understood this
+                    pain firsthand, Auntie App was built to make childcare safe,
+                    transparent, and empowering.
+
+                    <br />
+                    <br />
+                    <span class="mt-5">
+                      NewAgeSysIT collaborated to design and develop a secure,
+                      AI-driven caregiver platform that verifies babysitters,
+                      manages bookings, and ensures care transparency —
+                      empowering women to work confidently while ensuring their
+                      children are in safe hands.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class=" ">
+                <div
+                  class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    Testimonial
+                  </h3>
+                  <p class="text-[18px] text-[#65686C] mb-3">
+                    “We wanted to build more than an app — we wanted to build
+                    trust. NewAgeSysIT made that vision possible.”
+                  </p>
+                  <p class="text-[#A3ACB5] text-[18px] mt-3">
+                    Founder, Auntie App
+                  </p>
+                </div>
+                <div class="w-full flex justify-start">
+                  <a
+                    href="#"
+                    class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
+                  >
+                    <span class="truncate">Empower your next idea. Let’s Talk About Your Vision</span>
+
+                    <span class="flex-shrink-0">
+                      <svg
+                        width="7"
+                        height="11"
+                        viewBox="0 0 7 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                          stroke="#212121"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--HIPAA-driven Transformation-->
+        <section class="py-10 lg:py-20 mission-bg-hipaa relative">
+          <div class="absolute left-0 right-0 z-0 hidden lg:block">
+            <img
+              src="./img/hipaa-circle.svg"
+              alt="Healthcare transformation background"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="container min-h-[1100px] w-full text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 2xl:pr-24"
+              >
+                <h2
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
+                >
+                  HIPAA-driven Transformation
+                </h2>
+              </div>
+              <div
+                class="mission-card-foogly-3 flex flex-col justify-center py-8 md:py-11 pl-5 md:pl-11 lg:pr-16"
+              >
+                <h3
+                  class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
+                >
+                  CashDocs
+                </h3>
+                <p
+                  class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                >
+                  Transforming Doctor-Patient Communication
+                </p>
+              </div>
+              <div class="lg:hidden px-2">
+                <img
+                  src="./img/mission-hipaa-mob.webp"
+                  alt="CashDocs mobile healthcare app"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-8">
+                <div
+                  class="mission-card-hipaa-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
+                >
+                  <h3
+                    class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
+                  >
+                    Problem Statement
+                  </h3>
+                  <p
+                    class="font-[400] text-[#F5FAFE] text-[18px] leading-[25px]"
+                  >
+                    Patients and healthcare providers struggle with inefficient
+                    appointment systems and fragmented communication.
+                  </p>
+                </div>
+
+                <div
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    About the Project
+                  </h3>
+                  <p class="text-[18px] text-[#65686C]">
+                    When a physician and a legal expert came together, they
+                    envisioned a digital bridge between doctors and patients
+                    that’s efficient, compliant, and easy to use.
+
+                    <br />
+                    <br />
+                    <span class="mt-5">
+                      NewAgeSysIT built CashDocs, a HIPAA-compliant healthcare
+                      platform that simplifies scheduling, enables secure
+                      patient communication, and reduces administrative
+                      friction. From concept to compliance, we designed CashDocs
+                      to deliver accessibility and trust — one appointment at a
+                      time.
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="lg:space-y-8">
+                <div class="relative hidden lg:block">
+                  <img src="./img/mission-hipaa.webp" alt="CashDocs healthcare platform" loading="lazy" decoding="async" />
+                </div>
+                <div class="">
+                  <div
+                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
+                  >
+                    <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                      Testimonial
+                    </h3>
+                    <p class="text-[18px] text-[#65686C] mb-3">
+                      “Our goal was to simplify healthcare without compromising
+                      security. NewAgeSysIT turned that dream into a seamless
+                      experience.”
+                    </p>
+                    <p class="text-[#A3ACB5] text-[18px] mt-3">
+                      Dr. A. Williams, Co-founder of CashDocs
+                    </p>
+                  </div>
+                  <div class="w-full flex justify-start">
+                    <a
+                      href="#"
+                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
+                    >
+                      <span class="truncate"
+                        >Let’s build your next healthcare innovation</span
+                      >
+                      <span class="flex-shrink-0">
+                        <span>
+                          <svg
+                            width="7"
+                            height="11"
+                            viewBox="0 0 7 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                              stroke="#212121"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Youth Wellness-->
+        <section class="py-10 lg:py-20 mission-bg-youth relative">
+          <div class="absolute left-0 right-0 z-0 hidden lg:block">
+            <img
+              src="./img/youth-circle.svg"
+              alt="Youth wellness background"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="container min-h-[1100px] w-full text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 md:py-14 lg:pr-10 flex flex-col justify-center"
+              >
+                <h2
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#F88A36_0%,#FFFFFF_50.51%,#F88A36_100%)] bg-clip-text text-transparent"
+                >
+                  Youth Wellness
+                </h2>
+              </div>
+              <div
+                class="py-8 md:py-11 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3"
+              >
+                <h3
+                  class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#F88A36_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
+                >
+                  Zen for Teens
+                </h3>
+                <p
+                  class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#F88A36_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                >
+                  Supporting Emotional Wellness in Young Minds
+                </p>
+              </div>
+              <div class="lg:hidden px-2">
+                <img
+                  src="./img/mission-youth-mob.webp"
+                  alt="Zen for Teens mobile app"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-8">
+                <div
+                  class="mission-card-youth-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
+                >
+                  <h3
+                    class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
+                  >
+                    Problem Statement
+                  </h3>
+                  <p
+                    class="font-[400] text-[#F5FAFE] text-[18px] leading-[25px]"
+                  >
+                    Teenagers often face emotional stress and lack accessible
+                    wellness tools tailored for them.
+                  </p>
+                </div>
+
+                <div
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    About the Project
+                  </h3>
+                  <p class="text-[18px] text-[#65686C]">
+                    A group of educators and wellness experts approached
+                    NewAgeSysIT with a mission — to make mindfulness accessible
+                    for every teen.
+
+                    <br />
+                    <br />
+                    <span class="mt-5">
+                      Together, we developed Zen for Teens, an interactive
+                      mental wellness app that delivers guided practices,
+                      journaling tools, and mindfulness exercises personalized
+                      to each user. Built with empathy, the platform encourages
+                      young users to manage stress, embrace mindfulness, and
+                      grow emotionally strong.
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="lg:space-y-8">
+                <div class="relative hidden lg:block">
+                  <img src="./img/mission-youth.webp" alt="Zen for Teens wellness platform" loading="lazy" decoding="async" />
+                </div>
+                <div class="">
+                  <div
+                    class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
+                  >
+                    <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                      Testimonial
+                    </h3>
+                    <p class="text-[18px] text-[#65686C] mb-3">
+                      "NewAgeSysIT didn’t just create a product — they understood
+                      our mission to help teens thrive.”
+                    </p>
+                    <p class="text-[#A3ACB5] text-[18px] mt-3">
+                      Team Zen for Teens
+                    </p>
+                  </div>
+                  <div class="w-full flex justify-start">
+                    <a
+                      href="#"
+                      class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
+                    >
+                      <span class="truncate"
+                        >Let’s bring your purpose-driven app to life</span
+                      >
+                      <span class="flex-shrink-0">
+                        <span>
+                          <svg
+                            width="7"
+                            height="11"
+                            viewBox="0 0 7 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                              stroke="#212121"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--CRoss-->
+        <section class="py-10 lg:py-20 mission-bg-hipaa relative">
+          <div class="absolute left-0 right-0 z-0 hidden lg:block">
+            <img
+              src="./img/hipaa-circle.svg"
+              alt="Cross-cultural learning background"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="container min-h-[1100px] w-full text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div
+                class="mission-card-foogly-1 pl-5 py-10 lg:pr-10 2xl:pr-24 flex flex-col justify-center"
+              >
+                <h2
+                  class="text-[40px] md:text-[60px] 2xl:text-[80px] font-[400] bg-[linear-gradient(90deg,#4361EE_0%,#FFFFFF_50.51%,#4361EE_100%)] bg-clip-text text-transparent"
+                >
+                  Cross-Cultural Learning - EdTech
+                </h2>
+              </div>
+              <div class="space-y-8 flex flex-col">
+                <div
+                  class="py-8 md:py-16 pl-5 md:pl-11 lg:pr-16 mission-card-foogly-3 lg:h-1/2"
+                >
+                  <h3
+                    class="text-[35px] font-medium bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent mb-2"
+                  >
+                    Quran Easy
+                  </h3>
+                  <p
+                    class="text-[23px] md:text-[28px] font-[400] bg-[linear-gradient(90.14deg,#4361EE_-14.79%,#FFFFFF_42.76%)] bg-clip-text text-transparent"
+                  >
+                    Building Bridges Through Learning
+                  </p>
+                </div>
+                <div class="relative hidden lg:block h-1/2">
+                  <img
+                    src="./img/mission-cross.webp"
+                    alt="Quran Easy learning platform"
+                    class="w-full h-full"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div class="lg:hidden px-2">
+                <img
+                  src="./img/mission-cross-mob.webp"
+                  alt="Quran Easy mobile app"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-8">
+                <div
+                  class="mission-card-hipaa-2 py-8 px-5 md:px-10 xl:px-20 2xl:px-44"
+                >
+                  <h3
+                    class="text-[28px] md:text-[35px] font-medium text-[#E4F9F3] mb-5"
+                  >
+                    Problem Statement
+                  </h3>
+                  <p
+                    class="font-[400] text-[#F5FAFE] text-[18px] leading-[25px]"
+                  >
+                    Learners worldwide seek accessible, structured ways to study
+                    and understand the Quran in a modern, inclusive format.
+                  </p>
+                </div>
+
+                <div
+                  class="mission-card-foogly-1 py-8 pl-5 md:pl-10 xl:pl-20 2xl:pl-44 pr-8 bg-[linear-gradient(89.98deg,rgba(0,0,0,0.05)_1.76%,rgba(0,0,0,0.05)_99.98%)] -mt-2"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    About the Project
+                  </h3>
+                  <p class="text-[18px] text-[#65686C]">
+                    Quran Easy began as a vision to make faith-based education
+                    more accessible globally. The founder approached NewAgeSysIT
+                    to design a digital learning experience where users could
+                    learn at their own pace, with structured lessons and
+                    multilingual support.
+                    <br />
+                    <br />
+                    <span class="mt-5">
+                      We developed an eLearning platform with adaptive learning
+                      paths, multimedia modules, and cloud-based progress
+                      tracking — designed to promote inclusivity, cultural
+                      respect, and global access to knowledge.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="">
+                <div
+                  class="pt-9 pb-24 pl-5 md:pl-11 pr-10 xl:pr-44 mission-card-foogly-3"
+                >
+                  <h3 class="text-[23px] text-[#F5FAFE] font-medium mb-5">
+                    Testimonial
+                  </h3>
+                  <p class="text-[18px] text-[#65686C] mb-3">
+                    “This wasn’t just about an app — it was about making
+                    learning accessible to everyone, everywhere.”
+                  </p>
+                  <p class="text-[#A3ACB5] text-[18px] mt-3">
+                    Founder, Quran Easy
+                  </p>
+                </div>
+                <div class="w-full flex justify-start">
+                  <a
+                    href="#"
+                    class="bg-white text-black rounded-full px-4 md:px-8 py-4 inline-flex items-center justify-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition w-[80%] lg:w-full mx-auto z-20"
+                  >
+                    <span class="truncate"
+                      >Have a learning vision that bridges cultures?</span
+                    >
+                    <span class="flex-shrink-0">
+                      <svg
+                        width="7"
+                        height="11"
+                        viewBox="0 0 7 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                          stroke="#212121"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+       <!--related blogs-->
+        </section>
+        <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
+          <div class="w-full container mx-auto px-4">          
+            <h2
+              class="text-white text-[28px] md:text-[36px] font-semibold mb-8"
+            >
+              Related Blogs
+            </h2>
+
+            <!-- Blog Carousel Container -->
+            <div class="related-blogs-carousel owl-carousel owl-theme">
+              <!-- Blog Card 1 -->
+              <div class="cursor-pointer ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List.png"
+                    alt="How to Build a SaaS Application"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    How to Build a SaaS Application?– Cover Nuances,
+                    Step-by-Step Process, Cost, and More
+                  </h3>
+                </div>
+              </div>
+             <div class="cursor-pointer ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class="cursor-pointer ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class="cursor-pointer ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+              <div class="cursor-pointer ">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./img/Blog_Thumb_List1.png"
+                    alt="WCAG Compliance Explained"
+                    class="w-full h-[180px] md:h-[200px] object-fit"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="mt-4">
+                  <span
+                    class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                    >SOFTWARE DEVELOPMENT</span
+                  >
+                  <h3
+                    class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                  >
+                    WCAG Compliance Explained: Benefits, Legal Requirements, and
+                    Best Practices!
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
+    <script defer>
+      const vid = document.getElementById("missionHeroVideo");
+      function attemptAutoplay() {
+        vid.play().catch(() => {
+          document.addEventListener("touchstart", () => vid.play(), {
+            once: true,
+          });
+        });
+      }
+      attemptAutoplay();
+    </script>
+  </body>
+</html>

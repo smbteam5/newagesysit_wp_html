@@ -1,0 +1,353 @@
+<!-- ==========================
+     OWL CAROUSEL SECTION
+========================== -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+/>
+
+<style>
+  /* ======== SECTION WRAPPER ======== */
+  .compliance-section {
+    padding: 0;
+    background: #1a1a20;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* ======== SLIDE BOX ======== */
+  .slide-box {
+    display: flex;
+    background: #1a1a20;
+    border-radius: 12px;
+    /* padding: 30px; */
+    color: #fff;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* ======== IMAGE ======== */
+  .slide-image img {
+    width: 500px;
+    height: 300px;
+  }
+
+  /* ======== TEXT ======== */
+  .slide-content {
+    margin-left: 30px;
+    max-width: 600px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+
+  .slide-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+    border-image-source: linear-gradient(90deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%);
+    border-image-slice: 1;
+    border-image-repeat: no-repeat;
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+  }
+
+  .slide-content p {
+    font-family: "Inter", sans-serif;
+    opacity: 0.85;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* ======== NAV BUTTONS ======== */
+  .owl-nav {
+    position: absolute;
+    right: 40px;
+    top: 85%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+  }
+
+  .owl-nav span {
+    background: #45484b !important;
+    color: #fff !important;
+    width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+    border: none !important;
+    font-size: 18px !important;
+    outline: none !important;
+    transition: 0.3s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+
+  .owl-nav span:hover {
+    background: #5b7eff !important;
+  }
+
+  /* Selected/active nav button (persistently blue) */
+  .owl-nav span.selected {
+    background: #5b7eff !important;
+  }
+
+  .owl-nav .owl-prev:before,
+  .owl-nav .owl-prev:before,
+  .owl-nav .owl-next:before {
+    content: none !important;
+  }
+
+  /* DOTS */
+  .owl-dots {
+    position: absolute;
+    top: 220px;
+    left: 70%;
+    transform: translateX(-50%);
+    display: flex !important;
+    gap: 8px;
+    justify-content: center;
+    z-index: 100;
+    width: auto;
+  }
+
+  .owl-dots .owl-dot {
+    display: inline-block !important;
+    position: relative;
+  }
+
+  .owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.3) !important;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .owl-dots .owl-dot.active span {
+    background: #5b7eff !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 12px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .slide-box {
+      flex-direction: column;
+      text-align: center;
+    }
+    .slide-content {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .slide-image img {
+      width: 90%;
+    }
+    .owl-dots {
+      display: none !important;
+    }
+  }
+
+  /* Large screens: shift dots left a bit */
+  @media (min-width: 1800px) {
+    .owl-dots {
+      left: 30%;
+    }
+  }
+</style>
+
+<!-- ==========================
+     HTML SECTION
+========================== -->
+<section class="compliance-section">
+  <div class="owl-carousel compliance-carousel">
+    <!-- ======== SLIDE 1: HIPAA ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="HIPAA" />
+      </div>
+      <div class="slide-content">
+        <h2>HIPAA</h2>
+        <p>
+          As a healthcare software company, we develop HIPAA-compliant software to ensure that the
+          software we build adheres to the Health Insurance Portability and Accountability (HIPAA)
+          regulations, prioritizing high privacy and security.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 2: HITECH ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="HITECH" />
+      </div>
+      <div class="slide-content">
+        <h2>HITECH</h2>
+        <p>
+          We develop healthcare software that adheres to the HITECH compliance standards. As a
+          highly established medical software development company, we ensure the stringent
+          enforcement of HITECH-compliance standards in the software.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 3: HL7 ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="HL7" />
+      </div>
+      <div class="slide-content">
+        <h2>HL7</h2>
+        <p>
+          As mandated by Health Level 7 (HL7) standards, we develop software that aligns with
+          international standards for integrating, retrieving, and exchanging data, ensuring
+          efficiency in healthcare data management.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 4: SOC 2 ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="SOC 2" />
+      </div>
+      <div class="slide-content">
+        <h2>SOC 2</h2>
+        <p>
+          As a globally recognized medical software development company, we adhere to SOC 2
+          compliance policies, ensuring the accuracy and highest levels of privacy for sensitive
+          medical records.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 5: PHIPA ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="PHIPA" />
+      </div>
+      <div class="slide-content">
+        <h2>PHIPA</h2>
+        <p>
+          As a vital compliance standard in Ontario, we ensure that the software we develop is
+          secure and adheres to data privacy and confidentiality standards, thereby promoting
+          patient confidence in healthcare services.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 6: FHIR ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="FHIR" />
+      </div>
+      <div class="slide-content">
+        <h2>FHIR</h2>
+        <p>
+          As a leading provider of medical device software development services, we adhere to FHIR
+          standards to ensure our software aligns with healthcare industry standards, thereby
+          enhancing patient coordination.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 7: FDA ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="FDA" />
+      </div>
+      <div class="slide-content">
+        <h2>FDA</h2>
+        <p>
+          With our leading software development services for healthcare, we also adhere to the
+          regulatory standards set forth by the Food and Drug Administration (FDA), including
+          documentation, testing, and compliance with Good Manufacturing Practices (GMP), as
+          applicable.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== SLIDE 8: GDPR ======== -->
+    <div class="slide-box">
+      <div class="slide-image">
+        <img src="./img/650.jpg" alt="GDPR" />
+      </div>
+      <div class="slide-content">
+        <h2>GDPR</h2>
+        <p>
+          As a reliable healthcare software development company, we follow GDPR compliance
+          standards, prioritizing data security to maintain the highest level of software security
+          at all times.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="custom-nav owl-nav">
+    <span id="prevBtn" aria-label="Previous">
+      <img src="./img/ar2.svg" alt="" />
+    </span>
+
+    <span id="nextBtn" aria-label="Next">
+      <img src="./img/ar1.svg" alt="" />
+    </span>
+  </div>
+</section>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  /* ======== INIT OWL CAROUSEL ======== */
+  $(document).ready(function () {
+    var owl = $(".compliance-carousel");
+    owl.owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      // navText: ["←", " ➜ "],
+      items: 1,
+      autoplay: false,
+    });
+    /* ======== ADD NUMBERS TO DOTS ======== */
+    $(".owl-dots .owl-dot span").each(function (index) {
+      $(this).text(index + 1);
+    });
+    // Custom Navigation Events
+    $("#nextBtn").click(function () {
+      // Add selected class to next, remove from prev
+      $("#nextBtn").addClass("selected");
+      $("#prevBtn").removeClass("selected");
+      owl.trigger("next.owl.carousel");
+    });
+    $("#prevBtn").click(function () {
+      // Add selected class to prev, remove from next
+      $("#prevBtn").addClass("selected");
+      $("#nextBtn").removeClass("selected");
+      owl.trigger("prev.owl.carousel");
+    });
+  });
+</script>
