@@ -17,301 +17,2289 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
-  <!-- NAVBAR -->
-  <header class="bg-black text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <nav class="flex items-center gap-6">
-          <a class="text-sm hover:underline" href="#">Portfolio</a>
-          <a class="text-sm hover:underline" href="#">Hire</a>
-          <a class="text-sm hover:underline" href="#">Blog</a>
-          <a class="text-sm hover:underline" href="#">Contact</a>
-        </nav>
-
-        <div class="flex items-center gap-3">
-          <button class="bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-full">GET A QUOTE</button>
-
-          <!-- Book a call button (opens Calendly popover) -->
-          <div class="relative">
-            <!-- <button id="book-call-btn" class="flex items-center gap-2 bg-white text-black rounded-lg px-4 py-2 shadow hover:shadow-md">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3M16 7V3M3 11h18M21 21H3a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z"/></svg>
-              <span class="text-sm font-medium">BOOK A CALL</span>
-            </button> -->
-<form id="form" action="javascript:showCalendly()" autocomplete="off">
-                
-
-                <div>
-                    <input type="submit" value="Submit Form" id="submit">
-                </div>
-            </form>
+    <section class="py-10 lg:py-20 bg-black text-white">
+        <div class="container">
+          <div class="text-[20px] text-center">
+            <h2
+              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 mx-auto"
+            >
+            Tools and Technologies Used by Our Devs <br class="hidden lg:block"/> Offered Through Technology Staff <br class="hidden lg:block"/> Augmentation
+            </h2>
+            <p
+              class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto font-[400] leading-normal text-[#FFFFFFB2]"
+            >
+              Our IT augmented teams utilize a wide array of modern technologies and tools, ranging from machine-level programming languages to communication tools to integrate with your team and elevate your project.
+            </p>
           </div>
-
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <h1 class="text-3xl font-bold mb-4">Calendly Popover Demo</h1>
-    <p class="text-gray-600">Click the "BOOK A CALL" button in the navbar to open a Calendly popover (demo).</p>
-  </main>
-
-  <!-- Popover (anchored to the BOOK A CALL button) -->
-  <div id="calendly-popover" class="absolute z-50 hidden" style="top:0;left:0;">
-
-    <!-- Popover card (wider so Calendly shows calendar + time slots side-by-side) -->
-    <div id="calendly-card" class="relative w-[900px] bg-white rounded-2xl shadow-2xl overflow-hidden">
-      <div class="p-4 sm:p-6 calendly-scroll" style="max-height:80vh; overflow:auto;">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-lg font-semibold">Select a Date & Time</h3>
-          <button id="calendly-close" class="text-gray-500 hover:text-gray-700">
-            <span class="sr-only">Close</span>
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
-        </div>
-
-        <!-- Custom calendar + time slots (left calendar, right time list) -->
-        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <!-- Left: Calendar month grid -->
-          <div class="bg-white">
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-3">
-                <button id="prev-month" class="p-2 rounded hover:bg-gray-100">◀</button>
-                <div class="text-base font-semibold" id="month-label">July 2019</div>
-                <button id="next-month" class="p-2 rounded hover:bg-gray-100">▶</button>
-              </div>
-              <div class="text-sm text-gray-500" id="weekday-label">Tuesday, July 16</div>
-            </div>
-
-            <div class="grid grid-cols-7 gap-2 text-center text-xs text-gray-500 mb-2">
-              <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
-            </div>
-
-            <div id="days-grid" class="grid grid-cols-7 gap-2">
-              <!-- days injected by JS -->
-            </div>
-          </div>
-
-          <!-- Right: time slots list -->
-          <div class="bg-white p-2 rounded">
-            <div class="mb-2 text-sm text-gray-600">Available times</div>
-            <div id="times-list" class="flex flex-col gap-3">
-              <!-- times injected by JS -->
-            </div>
-
-            <div class="mt-4">
-              <button id="confirm-btn" class="w-full py-2 rounded bg-blue-100 text-blue-700 font-semibold disabled:opacity-50" disabled>Confirm</button>
-            </div>
-
-            <div class="mt-4 text-xs text-gray-500 flex items-center gap-2">
-              <svg class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-              <div id="timezone-label">Eastern Time - US & Canada (7:18pm)</div>
-            </div>
-          </div>
-        </div>
-      </div>
+          
+          <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+            <div class="accordion faq-accordion">
+              <div class="flex flex-wrap relative">
+                <div class="basis-full lg:basis-1/2 text-black">
+                  <div class="px-[6px]">
+                    <div class="bg-[#20212B] rounded-[10px] min-h-[80px]">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Frontend & Mobile Programming Languages</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                           <!-- Swift -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/tic-swift.svg" alt="Swift" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Swift</p>
     </div>
   </div>
 
-  <!-- no external widget script - using native JS for calendar UI -->
+  <!-- Kotlin -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/isa/tic-Kotlin.svg" alt="Kotlin" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Kotlin</p>
+    </div>
+  </div>
 
-  <script>
-    // Popover logic: position the popover under the BOOK A CALL button and handle outside clicks
-    const openBtn = document.getElementById('book-call-btn');
-    const popover = document.getElementById('calendly-popover');
-    const popoverCard = document.getElementById('calendly-card');
-    const closeBtn = document.getElementById('calendly-close');
+  <!-- Dart -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/dart-thumb.svg" alt="Dart" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Dart</p>
+    </div>
+  </div>
 
-    function openPopover() {
-      // position the popover under the button and align the popover's RIGHT edge
-      // with the button's RIGHT edge, but keep it inside the viewport.
-      const rect = openBtn.getBoundingClientRect();
-  const popWidth = popoverCard.offsetWidth || 900;
-      const gap = 8; // space between button and popover
+  <!-- JavaScript -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/tic-JavaScript.svg" alt="JavaScript" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">JavaScript</p>
+    </div>
+  </div>
 
-      // desired left so popover.right === button.right
-      let left = rect.right + window.scrollX - popWidth;
+  <!-- TypeScript -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/TypeScript.svg" alt="TypeScript" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">TypeScript</p>
+    </div>
+  </div>
+                        </div>
+                      </div>
+                    </div>
 
-      // keep a small page margin (12px)
-      const pageMargin = 12 + window.scrollX;
-      if (left < pageMargin) left = pageMargin;
+                    <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">General Purpose / Legacy / System</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Objective-C -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/obj-c.svg" alt="Objective-C" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Objective-C</p>
+    </div>
+  </div>
 
-      // ensure it doesn't overflow the right edge either
-      const maxLeft = window.scrollX + window.innerWidth - popWidth - 12;
-      if (left > maxLeft) left = maxLeft;
+  <!-- C++ -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/cpp.svg" alt="C++" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">C++</p>
+    </div>
+  </div>
 
-      const top = rect.bottom + window.scrollY + gap;
+  <!-- ColdFusion -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/cf.svg" alt="ColdFusion" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">ColdFusion</p>
+    </div>
+  </div>
+                        </div>
+                      </div>
+                    </div>
 
-      popover.style.left = `${left}px`;
-      popover.style.top = `${top}px`;
+                    <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">APIs & Integrations</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                           <!-- GO build -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/g-icon.svg" alt="GO build" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">GO build</p>
+    </div>
+  </div>
 
-      popover.classList.remove('hidden');
+  <!-- Go Test -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/g-icon.svg" alt="Go Test" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Go Test</p>
+    </div>
+  </div>
 
-      // focus close button for accessibility
-      closeBtn.focus();
-    }
+  <!-- Go Fmt -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/g-icon.svg" alt="Go Fmt" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Go Fmt</p>
+    </div>
+  </div>
 
-    function closePopover() {
-      popover.classList.add('hidden');
-    }
+  <!-- Go Get -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/g-icon.svg" alt="Go Get" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Go Get</p>
+    </div>
+  </div>
 
-    openBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      // toggle
-      if (popover.classList.contains('hidden')) openPopover();
-      else closePopover();
-    });
+  <!-- Go Run -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/g-icon.svg" alt="Go Run" class="w-8 h-8 md:w-10 md:h-10" />
+      <p class="text-white text-[16px] md:text-[18px]">Go Run</p>
+    </div>
+  </div>
+                        </div>
+                      </div>
+                    </div>
 
-    closeBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      closePopover();
-    });
+                     <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Backend Frameworks</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Node.js -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/tic-Node.js.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Node.js</p>
+    </div>
+  </div>
 
-    // Close when clicking outside the popover or the button
-    document.addEventListener('click', (e) => {
-      const target = e.target;
-      if (popover.classList.contains('hidden')) return;
-      if (popover.contains(target) || openBtn.contains(target)) return;
-      closePopover();
-    });
+  <!-- Express.js -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/express-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Express.js</p>
+    </div>
+  </div>
 
-    // Reposition on resize and scroll while popover is open
-    window.addEventListener('resize', () => { if (!popover.classList.contains('hidden')) openPopover(); });
-    window.addEventListener('scroll', () => { if (!popover.classList.contains('hidden')) openPopover(); });
+  <!-- Django -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/tic-Django.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Django</p>
+    </div>
+  </div>
 
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closePopover();
-      }
-    });
+  <!-- Flask -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/flask-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Flask</p>
+    </div>
+  </div>
 
-    // ---------- Custom calendar + times logic ----------
-    const daysGrid = document.getElementById('days-grid');
-    const monthLabel = document.getElementById('month-label');
-    const weekdayLabel = document.getElementById('weekday-label');
-    const prevBtn = document.getElementById('prev-month');
-    const nextBtn = document.getElementById('next-month');
-    const timesList = document.getElementById('times-list');
-    const confirmBtn = document.getElementById('confirm-btn');
-    const timezoneLabel = document.getElementById('timezone-label');
+  <!-- FastAPI -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/FastAPI 1.png" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">FastAPI</p>
+    </div>
+  </div>
 
-    let now = new Date();
-    let viewDate = new Date(now.getFullYear(), now.getMonth(), 1);
-    let selectedDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    let selectedSlot = null;
+  <!-- Laravel -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/laravel.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Laravel</p>
+    </div>
+  </div>
 
-    // Example static set of time slots (in 30-min increments). Could be fetched per-date.
-    const exampleSlots = ['10:30am','11:00am','11:30am','12:00pm','12:30pm','1:00pm','1:30pm','2:00pm'];
+  <!-- Spring -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/tic-Spring_Boot.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Spring</p>
+    </div>
+  </div>
 
-    function formatMonthYear(d) {
-      return d.toLocaleString(undefined, { month: 'long', year: 'numeric' });
-    }
+  <!-- Ruby on Rails -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/ruby-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Ruby on Rails</p>
+    </div>
+  </div>
 
-    function formatWeekdayFull(d) {
-      return d.toLocaleString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
-    }
+  <!-- .NET -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/dotnet.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">.NET</p>
+    </div>
+  </div>
 
-    function renderCalendar() {
-      monthLabel.textContent = formatMonthYear(viewDate);
-      weekdayLabel.textContent = formatWeekdayFull(selectedDate);
+  <!-- Revel -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/tic-revel.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Revel</p>
+    </div>
+  </div>
 
-      // clear grid
-      daysGrid.innerHTML = '';
+  <!-- Gin -->
+  <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+    <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+      <img src="./img/isa/gin.svg" class="w-8 h-8 md:w-10 md:h-10" alt="">
+      <p class="text-white text-[16px] md:text-[18px]">Gin</p>
+    </div>
+  </div>
+                        </div>
+                      </div>
+                    </div>
 
-      const year = viewDate.getFullYear();
-      const month = viewDate.getMonth();
-      const firstDayIndex = new Date(year, month, 1).getDay();
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
+<div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">State Management & Utilities</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Redux -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-React-Redux.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Redux">
+    <p class="text-white text-[16px] md:text-[18px]">Redux</p> 
+  </div>
+</div>
 
-      // add blank slots for previous month days
-      for (let i = 0; i < firstDayIndex; i++) {
-        const el = document.createElement('div');
-        el.className = 'h-10';
-        daysGrid.appendChild(el);
-      }
+<!-- MobX -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/m-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="MobX">
+    <p class="text-white text-[16px] md:text-[18px]">MobX</p> 
+  </div>
+</div>
 
-      for (let d = 1; d <= daysInMonth; d++) {
-        const date = new Date(year, month, d);
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'h-10 w-10 rounded-full flex items-center justify-center text-sm';
-        btn.textContent = String(d);
+<!-- Zustand -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/z-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Zustand">
+    <p class="text-white text-[16px] md:text-[18px]">Zustand</p> 
+  </div>
+</div>
 
-        // disable past dates
-        const isPast = new Date(date.getFullYear(), date.getMonth(), date.getDate()) < new Date(now.getFullYear(), now.getMonth(), now.getDate());
-        if (isPast) {
-          btn.classList.add('text-gray-300');
-          btn.disabled = true;
-        } else {
-          btn.classList.add('text-gray-700','hover:bg-blue-50');
-        }
+<!-- BLoC -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/b-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="BLoC">
+    <p class="text-white text-[16px] md:text-[18px]">BLoC</p> 
+  </div>
+</div>
 
-        // highlight selected
-        if (selectedDate.getFullYear() === date.getFullYear() && selectedDate.getMonth() === date.getMonth() && selectedDate.getDate() === date.getDate()) {
-          btn.classList.add('bg-blue-600','text-white');
-        }
+<!-- Hooks -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/h-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Hooks">
+    <p class="text-white text-[16px] md:text-[18px]">Hooks</p> 
+  </div>
+</div>
 
-        btn.addEventListener('click', () => {
-          selectedDate = date;
-          selectedSlot = null;
-          renderCalendar();
-          renderSlots();
-        });
+<!-- HOC -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/h-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="HOC">
+    <p class="text-white text-[16px] md:text-[18px]">HOC</p> 
+  </div>
+</div>
 
-        daysGrid.appendChild(btn);
-      }
-    }
+                        </div>
+                        
+                      </div>
+                    </div>
 
-    function renderSlots() {
-      timesList.innerHTML = '';
-      // create a labelled header with selected date
-      const header = document.createElement('div');
-      header.className = 'text-sm font-medium mb-1';
-      header.textContent = formatWeekdayFull(selectedDate);
-      timesList.appendChild(header);
+                    <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Social Media APIs</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Facebook API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/fb-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Facebook API">
+    <p class="text-white text-[16px] md:text-[18px]">Facebook API</p> 
+  </div>
+</div>
 
-      exampleSlots.forEach((t) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'text-left px-4 py-3 border rounded hover:bg-gray-50';
-        b.textContent = t;
-        b.addEventListener('click', () => {
-          selectedSlot = t;
-          // update selection visuals
-          Array.from(timesList.querySelectorAll('button')).forEach(el => el.classList.remove('bg-gray-800','text-white'));
-          b.classList.add('bg-gray-800','text-white');
-          confirmBtn.disabled = false;
-          confirmBtn.classList.remove('bg-blue-100','text-blue-700');
-          confirmBtn.classList.add('bg-blue-600','text-white');
-        });
-        timesList.appendChild(b);
-      });
+<!-- Instagram API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/insta-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Instagram API">
+    <p class="text-white text-[16px] md:text-[18px]">Instagram API</p> 
+  </div>
+</div>
 
-      // reset confirm
-      confirmBtn.disabled = true;
-      confirmBtn.classList.remove('bg-blue-600','text-white');
-      confirmBtn.classList.add('bg-blue-100','text-blue-700');
-    }
+<!-- YouTube API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/youtube.svg" class="w-8 h-8 md:w-10 md:h-10" alt="YouTube API">
+    <p class="text-white text-[16px] md:text-[18px]">YouTube API</p> 
+  </div>
+</div>
 
-    prevBtn.addEventListener('click', () => { viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()-1, 1); renderCalendar(); });
-    nextBtn.addEventListener('click', () => { viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 1); renderCalendar(); });
+<!-- Spotify API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Spotify API">
+    <p class="text-white text-[16px] md:text-[18px]">Spotify API</p> 
+  </div>
+</div>
 
-    confirmBtn.addEventListener('click', () => {
-      if (!selectedSlot) return;
-      // for demo we'll alert and close popover
-      alert(`Booked: ${formatWeekdayFull(selectedDate)} at ${selectedSlot}`);
-      closePopover();
-    });
+<!-- Apple Music API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/apple-173_svgrepo.com.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Apple Music API">
+    <p class="text-white text-[16px] md:text-[18px]">Apple Music API</p> 
+  </div>
+</div>
 
-    // timezone label (simple local timezone display)
-    timezoneLabel.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local Time';
+<!-- Google API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/google-g.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Google API">
+    <p class="text-white text-[16px] md:text-[18px]">Google API</p> 
+  </div>
+</div>
 
-    // initial render
-    renderCalendar();
-    renderSlots();
-  </script>
+<!-- SoundCloud API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="SoundCloud API">
+    <p class="text-white text-[16px] md:text-[18px]">SoundCloud API</p> 
+  </div>
+</div>
+
+<!-- Jira REST API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/jira-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Jira REST API">
+    <p class="text-white text-[16px] md:text-[18px]">Jira REST API</p> 
+  </div>
+</div>
+
+<!-- GitHub API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/github-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GitHub API">
+    <p class="text-white text-[16px] md:text-[18px]">GitHub API</p> 
+  </div>
+</div>
+
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Location & Utility APIs</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Google Maps -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/g-maps.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Google Maps">
+    <p class="text-white text-[16px] md:text-[18px]">Google Maps</p> 
+  </div>
+</div>
+
+<!-- Open Maps -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/open-maps-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Open Maps">
+    <p class="text-white text-[16px] md:text-[18px]">Open Maps</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                     <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Payments & Monetization</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                         <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Stripe -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/stripe.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Stripe">
+    <p class="text-white text-[16px] md:text-[18px]">Stripe</p> 
+  </div>
+</div>
+
+<!-- PayPal -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-Paypal.svg" class="w-8 h-8 md:w-10 md:h-10" alt="PayPal">
+    <p class="text-white text-[16px] md:text-[18px]">PayPal</p> 
+  </div>
+</div>
+
+<!-- Square Up -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/squareup.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Square Up">
+    <p class="text-white text-[16px] md:text-[18px]">Square Up</p> 
+  </div>
+</div>
+
+<!-- Razorpay -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/r-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Razorpay">
+    <p class="text-white text-[16px] md:text-[18px]">Razorpay</p> 
+  </div>
+</div>
+
+<!-- Braintree -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/b-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Braintree">
+    <p class="text-white text-[16px] md:text-[18px]">Braintree</p> 
+  </div>
+</div>
+
+<!-- Authorize.net -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Authorize.net">
+    <p class="text-white text-[16px] md:text-[18px]">Authorize.net</p> 
+  </div>
+</div>
+
+<!-- GoDaddy Poynt -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/g-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GoDaddy Poynt">
+    <p class="text-white text-[16px] md:text-[18px]">GoDaddy Poynt</p> 
+  </div>
+</div>
+
+<!-- AfterPay -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AfterPay">
+    <p class="text-white text-[16px] md:text-[18px]">AfterPay</p> 
+  </div>
+</div>
+
+<!-- Affirm -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Affirm">
+    <p class="text-white text-[16px] md:text-[18px]">Affirm</p> 
+  </div>
+</div>
+
+<!-- Klarna -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/k-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Klarna">
+    <p class="text-white text-[16px] md:text-[18px]">Klarna</p> 
+  </div>
+</div>
+
+<!-- Apple Pay -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/apple-pay.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Apple Pay">
+    <p class="text-white text-[16px] md:text-[18px]">Apple Pay</p> 
+  </div>
+</div>
+
+                         </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">NoSQL Databases</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- MongoDB -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-Mongodb.svg" class="w-8 h-8 md:w-10 md:h-10" alt="MongoDB">
+    <p class="text-white text-[16px] md:text-[18px]">MongoDB</p> 
+  </div>
+</div>
+
+<!-- Firebase Realtime Database -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-firebase.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Firebase Realtime Database">
+    <p class="text-white text-[16px] md:text-[18px]">Firebase Realtime Database</p> 
+  </div>
+</div>
+
+<!-- Firestore -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/firestore-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Firestore">
+    <p class="text-white text-[16px] md:text-[18px]">Firestore</p> 
+  </div>
+</div>
+
+<!-- DynamoDB -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/dynamodb-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="DynamoDB">
+    <p class="text-white text-[16px] md:text-[18px]">DynamoDB</p> 
+  </div>
+</div>
+
+<!-- Redis -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/redis-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Redis">
+    <p class="text-white text-[16px] md:text-[18px]">Redis</p> 
+  </div>
+</div>
+
+<!-- CouchDB -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/c-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="CouchDB">
+    <p class="text-white text-[16px] md:text-[18px]">CouchDB</p> 
+  </div>
+</div>
+
+<!-- RethinkDB -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/r-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="RethinkDB">
+    <p class="text-white text-[16px] md:text-[18px]">RethinkDB</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Cloud Platforms & Hosting</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- AWS -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/aws--thumb.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AWS">
+    <p class="text-white text-[16px] md:text-[18px]">AWS (EC2, Lambda, Amplify, Datastore)</p> 
+  </div>
+</div>
+
+<!-- Google Cloud Platform -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/GCP.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Google Cloud Platform">
+    <p class="text-white text-[16px] md:text-[18px]">Google Cloud Platform (GCP)</p> 
+  </div>
+</div>
+
+<!-- Microsoft Azure -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/azure-logo.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Microsoft Azure">
+    <p class="text-white text-[16px] md:text-[18px]">Microsoft Azure</p> 
+  </div>
+</div>
+
+<!-- Netlify -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic_Netlify.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Netlify">
+    <p class="text-white text-[16px] md:text-[18px]">Netlify</p> 
+  </div>
+</div>
+
+<!-- Vercel -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/vercel.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Vercel">
+    <p class="text-white text-[16px] md:text-[18px]">Vercel</p> 
+  </div>
+</div>
+
+<!-- GoDaddy -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/g-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GoDaddy">
+    <p class="text-white text-[16px] md:text-[18px]">GoDaddy</p> 
+  </div>
+</div>
+
+<!-- ngrok -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/n-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="ngrok">
+    <p class="text-white text-[16px] md:text-[18px]">ngrok</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1 -->
+                     <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Project Management</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/jira-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Jira">
+            <p class="text-white text-[16px] md:text-[18px]">Jira</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/t-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Trello">
+            <p class="text-white text-[16px] md:text-[18px]">Trello</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Asana">
+            <p class="text-white text-[16px] md:text-[18px]">Asana</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/b-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Basecamp">
+            <p class="text-white text-[16px] md:text-[18px]">Basecamp</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/slack-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Slack">
+            <p class="text-white text-[16px] md:text-[18px]">Slack</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                     <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]"> Testing & QA</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/jest-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Jest">
+            <p class="text-white text-[16px] md:text-[18px]">Jest</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/Detox.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Detox">
+            <p class="text-white text-[16px] md:text-[18px]">Detox</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/espresso-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Espresso (UI Test)">
+            <p class="text-white text-[16px] md:text-[18px]">Espresso (UI Test)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/junit-thumb.svg" class="w-8 h-8 md:w-10 md:h-10" alt="JUnit (Functional Test)">
+            <p class="text-white text-[16px] md:text-[18px]">JUnit (Functional Test)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/selenium-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Selenium">
+            <p class="text-white text-[16px] md:text-[18px]">Selenium</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/go-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Go Test">
+            <p class="text-white text-[16px] md:text-[18px]">Go Test</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                     <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Build tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/go-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Go Build">
+            <p class="text-white text-[16px] md:text-[18px]">Go Build</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/go-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Go Fmt">
+            <p class="text-white text-[16px] md:text-[18px]">Go Fmt</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/go-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Go Get">
+            <p class="text-white text-[16px] md:text-[18px]">Go Get</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/go-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Go Run">
+            <p class="text-white text-[16px] md:text-[18px]">Go Run</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                     <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Monitoring & Analytics</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic-firebase.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Firebase">
+            <p class="text-white text-[16px] md:text-[18px]">Firebase</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/f-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Flurry">
+            <p class="text-white text-[16px] md:text-[18px]">Flurry</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/g-analytics.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Google Analytics">
+            <p class="text-white text-[16px] md:text-[18px]">Google Analytics</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/m-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Mixpanel">
+            <p class="text-white text-[16px] md:text-[18px]">Mixpanel</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AppsFlyer">
+            <p class="text-white text-[16px] md:text-[18px]">AppsFlyer</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/n-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="NewRelic">
+            <p class="text-white text-[16px] md:text-[18px]">NewRelic</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Amplitude">
+            <p class="text-white text-[16px] md:text-[18px]">Amplitude</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                  </div>
+                </div>
+                <div class="basis-full lg:basis-1/2 text-black">
+                  <!-- 1 -->
+                  <div class="px-[6px]">
+                    <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3 lg:mt-0">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Backend Programming Languages</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Python -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-Python.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Python">
+    <p class="text-white text-[16px] md:text-[18px]">Python</p> 
+  </div>
+</div>
+
+<!-- Java -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-java.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Java">
+    <p class="text-white text-[16px] md:text-[18px]">Java</p> 
+  </div>
+</div>
+
+<!-- Go -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/go-thumb.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Go">
+    <p class="text-white text-[16px] md:text-[18px]">Go</p> 
+  </div>
+</div>
+
+<!-- Ruby -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/ruby-1.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Ruby">
+    <p class="text-white text-[16px] md:text-[18px]">Ruby</p> 
+  </div>
+</div>
+
+<!-- PHP -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/php.svg" class="w-8 h-8 md:w-10 md:h-10" alt="PHP">
+    <p class="text-white text-[16px] md:text-[18px]">PHP</p> 
+  </div>
+</div>
+
+<!-- C# -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/c-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="C#">
+    <p class="text-white text-[16px] md:text-[18px]">C#</p> 
+  </div>
+</div>
+
+<!-- Rust -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/r-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Rust">
+    <p class="text-white text-[16px] md:text-[18px]">Rust</p> 
+  </div>
+</div>
+
+<!-- R -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/r-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="R">
+    <p class="text-white text-[16px] md:text-[18px]">R</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 1 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Frontend & Mobile Frameworks</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">  
+                          <!-- React -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/react--thumb.svg" class="w-8 h-8 md:w-10 md:h-10" alt="React">
+    <p class="text-white text-[16px] md:text-[18px]">React</p> 
+  </div>
+</div>
+
+<!-- React Native -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/reactnative-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="React Native">
+    <p class="text-white text-[16px] md:text-[18px]">React Native</p> 
+  </div>
+</div>
+
+<!-- Next.js -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/next-js.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Next.js">
+    <p class="text-white text-[16px] md:text-[18px]">Next.js</p> 
+  </div>
+</div>
+
+<!-- Angular -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/angular.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Angular">
+    <p class="text-white text-[16px] md:text-[18px]">Angular</p> 
+  </div>
+</div>
+
+<!-- Vue.js -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/vue.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Vue.js">
+    <p class="text-white text-[16px] md:text-[18px]">Vue.js</p> 
+  </div>
+</div>
+
+<!-- Flutter -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-Flutter.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Flutter">
+    <p class="text-white text-[16px] md:text-[18px]">Flutter</p> 
+  </div>
+</div>
+
+<!-- Ionic -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/ionic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Ionic">
+    <p class="text-white text-[16px] md:text-[18px]">Ionic</p> 
+  </div>
+</div>
+
+<!-- NativeScript -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/nativescript-1-1-1.webp" class="w-8 h-8 md:w-10 md:h-10" alt="NativeScript">
+    <p class="text-white text-[16px] md:text-[18px]">NativeScript</p> 
+  </div>
+</div>
+
+<!-- SwiftUI -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/swiftui-96x96_2x.webp" class="w-8 h-8 md:w-10 md:h-10" alt="SwiftUI">
+    <p class="text-white text-[16px] md:text-[18px]">SwiftUI</p> 
+  </div>
+</div>
+
+<!-- Android SDK -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/android-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Android SDK">
+    <p class="text-white text-[16px] md:text-[18px]">Android SDK</p> 
+  </div>
+</div>
+
+<!-- Android Jetpack Compose -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/android-jetpack-compose-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Android Jetpack Compose">
+    <p class="text-white text-[16px] md:text-[18px]">Android Jetpack Compose</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">UI Libraries & Components</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Material UI -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/m-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Material UI">
+    <p class="text-white text-[16px] md:text-[18px]">Material UI</p> 
+  </div>
+</div>
+
+<!-- Tailwind CSS -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tailwind-css-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Tailwind CSS">
+    <p class="text-white text-[16px] md:text-[18px]">Tailwind CSS</p> 
+  </div>
+</div>
+
+<!-- Tailwind UI -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tailwind-ui-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Tailwind UI">
+    <p class="text-white text-[16px] md:text-[18px]">Tailwind UI</p> 
+  </div>
+</div>
+
+<!-- PrimeReact -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/p-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="PrimeReact">
+    <p class="text-white text-[16px] md:text-[18px]">PrimeReact</p> 
+  </div>
+</div>
+
+<!-- Flowbite React -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/f-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Flowbite React">
+    <p class="text-white text-[16px] md:text-[18px]">Flowbite React</p> 
+  </div>
+</div>
+
+<!-- shadcn/ui -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="shadcn/ui">
+    <p class="text-white text-[16px] md:text-[18px]">shadcn/ui</p> 
+  </div>
+</div>
+
+<!-- React Bootstrap -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/r-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="React Bootstrap">
+    <p class="text-white text-[16px] md:text-[18px]">React Bootstrap</p> 
+  </div>
+</div>
+
+<!-- UIKit -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/u-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="UIKit">
+    <p class="text-white text-[16px] md:text-[18px]">UIKit</p> 
+  </div>
+</div>
+
+<!-- Material Design Kit -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/m-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Material Design Kit">
+    <p class="text-white text-[16px] md:text-[18px]">Material Design Kit</p> 
+  </div>
+</div>
+
+<!-- React Native Components -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/react-native-components-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="React Native Components">
+    <p class="text-white text-[16px] md:text-[18px]">React Native Components</p> 
+  </div>
+</div>
+
+<!-- Flutter Widgets -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/flutter-widgets-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Flutter Widgets">
+    <p class="text-white text-[16px] md:text-[18px]">Flutter Widgets</p> 
+  </div>
+</div>
+
+                        </div>
+                        </div>
+                      </div>
+                       <!-- 3 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Analytics & Marketing Integrations</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- CleverTap -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/c-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="CleverTap">
+    <p class="text-white text-[16px] md:text-[18px]">CleverTap</p> 
+  </div>
+</div>
+
+<!-- Firebase -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-firebase.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Firebase">
+    <p class="text-white text-[16px] md:text-[18px]">Firebase</p> 
+  </div>
+</div>
+
+<!-- Amplitude -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Amplitude">
+    <p class="text-white text-[16px] md:text-[18px]">Amplitude</p> 
+  </div>
+</div>
+
+<!-- AppsFlyer -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AppsFlyer">
+    <p class="text-white text-[16px] md:text-[18px]">AppsFlyer</p> 
+  </div>
+</div>
+
+<!-- Mixpanel -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/m-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Mixpanel">
+    <p class="text-white text-[16px] md:text-[18px]">Mixpanel</p> 
+  </div>
+</div>
+
+<!-- Flurry Analytics -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/f-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Flurry Analytics">
+    <p class="text-white text-[16px] md:text-[18px]">Flurry Analytics</p> 
+  </div>
+</div>
+
+<!-- Game Analytics -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/g-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Game Analytics">
+    <p class="text-white text-[16px] md:text-[18px]">Game Analytics</p> 
+  </div>
+</div>
+
+<!-- Urban Airship -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/u-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Urban Airship">
+    <p class="text-white text-[16px] md:text-[18px]">Urban Airship</p> 
+  </div>
+</div>
+
+<!-- Yandex -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/y-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Yandex">
+    <p class="text-white text-[16px] md:text-[18px]">Yandex</p> 
+  </div>
+</div>
+
+<!-- AppMetrica -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AppMetrica">
+    <p class="text-white text-[16px] md:text-[18px]">AppMetrica</p> 
+  </div>
+</div>
+
+<!-- AppLovin -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AppLovin">
+    <p class="text-white text-[16px] md:text-[18px]">AppLovin</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">SQL Databases</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- MySQL -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-mysql.svg" class="w-8 h-8 md:w-10 md:h-10" alt="MySQL">
+    <p class="text-white text-[16px] md:text-[18px]">MySQL</p> 
+  </div>
+</div>
+
+<!-- PostgreSQL -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-postgresql.svg" class="w-8 h-8 md:w-10 md:h-10" alt="PostgreSQL">
+    <p class="text-white text-[16px] md:text-[18px]">PostgreSQL</p> 
+  </div>
+</div>
+
+<!-- SQLite -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/sqllite.svg" class="w-8 h-8 md:w-10 md:h-10" alt="SQLite">
+    <p class="text-white text-[16px] md:text-[18px]">SQLite</p> 
+  </div>
+</div>
+
+<!-- Apple Music API -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/apple-173_svgrepo.com.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Apple Music API">
+    <p class="text-white text-[16px] md:text-[18px]">Apple Music API</p> 
+  </div>
+</div>
+
+<!-- MSSQL Server -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-mysql.svg" class="w-8 h-8 md:w-10 md:h-10" alt="MSSQL Server">
+    <p class="text-white text-[16px] md:text-[18px]">MSSQL Server</p> 
+  </div>
+</div>
+
+<!-- MariaDB -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/tic-MariaDB.svg" class="w-8 h-8 md:w-10 md:h-10" alt="MariaDB">
+    <p class="text-white text-[16px] md:text-[18px]">MariaDB</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 5 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">ORMs / Data Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- CoreData -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/c-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="CoreData">
+    <p class="text-white text-[16px] md:text-[18px]">CoreData</p> 
+  </div>
+</div>
+
+<!-- Swift Data -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Swift Data">
+    <p class="text-white text-[16px] md:text-[18px]">Swift Data</p> 
+  </div>
+</div>
+
+<!-- Realm -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/realm-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Realm">
+    <p class="text-white text-[16px] md:text-[18px]">Realm</p> 
+  </div>
+</div>
+
+<!-- Hive -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/h-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Hive">
+    <p class="text-white text-[16px] md:text-[18px]">Hive</p> 
+  </div>
+</div>
+
+<!-- ObjectBox -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/o-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="ObjectBox">
+    <p class="text-white text-[16px] md:text-[18px]">ObjectBox</p> 
+  </div>
+</div>
+
+<!-- Sembast -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Sembast">
+    <p class="text-white text-[16px] md:text-[18px]">Sembast</p> 
+  </div>
+</div>
+
+<!-- StorageMoor -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="StorageMoor">
+    <p class="text-white text-[16px] md:text-[18px]">StorageMoor</p> 
+  </div>
+</div>
+
+<!-- GORM -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/g-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GORM">
+    <p class="text-white text-[16px] md:text-[18px]">GORM</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">IDEs</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Android Studio -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/android-studio-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Android Studio">
+    <p class="text-white text-[16px] md:text-[18px]">Android Studio</p> 
+  </div>
+</div>
+
+<!-- Xcode -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/xcode-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Xcode">
+    <p class="text-white text-[16px] md:text-[18px]">Xcode</p> 
+  </div>
+</div>
+
+<!-- Eclipse -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/eclipse-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Eclipse">
+    <p class="text-white text-[16px] md:text-[18px]">Eclipse</p> 
+  </div>
+</div>
+
+<!-- IntelliJ IDEA -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/intellij-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="IntelliJ IDEA">
+    <p class="text-white text-[16px] md:text-[18px]">IntelliJ IDEA</p> 
+  </div>
+</div>
+
+<!-- Visual Studio Code -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/vscode-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Visual Studio Code">
+    <p class="text-white text-[16px] md:text-[18px]">Visual Studio Code</p> 
+  </div>
+</div>
+
+<!-- WebStorm -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/webstorm-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="WebStorm">
+    <p class="text-white text-[16px] md:text-[18px]">WebStorm</p> 
+  </div>
+</div>
+
+<!-- Vim -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/vim-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Vim">
+    <p class="text-white text-[16px] md:text-[18px]">Vim</p> 
+  </div>
+</div>
+
+<!-- Goland -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/goland-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Goland">
+    <p class="text-white text-[16px] md:text-[18px]">Goland</p> 
+  </div>
+</div>
+
+<!-- LiteIDE -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/liteide-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="LiteIDE">
+    <p class="text-white text-[16px] md:text-[18px]">LiteIDE</p> 
+  </div>
+</div>
+
+<!-- Wide -->
+<div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+  <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+    <img src="./img/wide-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Wide">
+    <p class="text-white text-[16px] md:text-[18px]">Wide</p> 
+  </div>
+</div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!-- new 1 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Version Control</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/g-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Git">
+            <p class="text-white text-[16px] md:text-[18px]">Git</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic-GitHub.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GitHub">
+            <p class="text-white text-[16px] md:text-[18px]">GitHub</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/gitlab-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GitLab">
+            <p class="text-white text-[16px] md:text-[18px]">GitLab</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/b-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Bitbucket">
+            <p class="text-white text-[16px] md:text-[18px]">Bitbucket</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="SVN">
+            <p class="text-white text-[16px] md:text-[18px]">SVN</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/m-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Mercurial">
+            <p class="text-white text-[16px] md:text-[18px]">Mercurial</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- new 2 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Designer Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/figma-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Git">
+            <p class="text-white text-[16px] md:text-[18px]">Figma</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/xd-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GitHub">
+            <p class="text-white text-[16px] md:text-[18px]">Adobe XD</p>
+        </div>
+    </div>
+    </div>
+
+                      </div>
+                    </div>
+                    <!-- new 3 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Deployment & DevOps</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/c-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="CI/CD">
+            <p class="text-white text-[16px] md:text-[18px]">CI/CD</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic-docker.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Docker (implied)">
+            <p class="text-white text-[16px] md:text-[18px]">Docker (implied)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/aws.svg" class="w-8 h-8 md:w-10 md:h-10" alt="AWS EC2">
+            <p class="text-white text-[16px] md:text-[18px]">AWS EC2</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic_Netlify.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Netlify">
+            <p class="text-white text-[16px] md:text-[18px]">Netlify</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic_Vercel.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Vercel">
+            <p class="text-white text-[16px] md:text-[18px]">Vercel</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- new 4 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Monitoring</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic-firebase.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Firebase Crashlytics">
+            <p class="text-white text-[16px] md:text-[18px]">Firebase Crashlytics</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/xd-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="NewRelic">
+            <p class="text-white text-[16px] md:text-[18px]">NewRelic</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- new 5 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">AI & Productivity Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/github-ic.svg" class="w-8 h-8 md:w-10 md:h-10" alt="GitHub Copilot">
+            <p class="text-white text-[16px] md:text-[18px]">GitHub Copilot</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/c-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="ChatGPT">
+            <p class="text-white text-[16px] md:text-[18px]">ChatGPT</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- new 6 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Other / Specialized Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic-Twilio.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Twilio (Communication API)">
+            <p class="text-white text-[16px] md:text-[18px]">Twilio (Communication API)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/s-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Socket.IO (Real-time communication)">
+            <p class="text-white text-[16px] md:text-[18px]">Socket.IO (Real-time communication)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/a-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Axios">
+            <p class="text-white text-[16px] md:text-[18px]">Axios</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/appolo.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Apollo (API Clients)">
+            <p class="text-white text-[16px] md:text-[18px]">Apollo (API Clients)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/j-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="JSON">
+            <p class="text-white text-[16px] md:text-[18px]">JSON</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/b-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Babel">
+            <p class="text-white text-[16px] md:text-[18px]">Babel</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/j-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="JSX">
+            <p class="text-white text-[16px] md:text-[18px]">JSX</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/t-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="TSX">
+            <p class="text-white text-[16px] md:text-[18px]">TSX</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/r-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Routing">
+            <p class="text-white text-[16px] md:text-[18px]">Routing</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/redis-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Redis (as cache & message broker)">
+            <p class="text-white text-[16px] md:text-[18px]">Redis (as cache & message broker)</p>
+        </div>
+    </div>
+
+    <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
+        <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
+            <img src="./img/tic-Rabbitmq.svg" class="w-8 h-8 md:w-10 md:h-10" alt="RabbitMQ (message broker)">
+            <p class="text-white text-[16px] md:text-[18px]">RabbitMQ (message broker)</p>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 </body>
 </html>

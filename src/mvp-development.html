@@ -1,0 +1,4140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVP-Development</title>
+
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <style>
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.87);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 0.647);
+      }
+      .card {
+        background-color: #0f0f10;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        color: white;
+        width: 300px;
+      }
+
+      /* Add smooth transition */
+      .owl-carousel .owl-stage {
+        transition: all 0.5s ease !important;
+      }
+
+      .mobile-slider .owl-dots .owl-dot {
+        display: none;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .mobile-slider .owl-nav {
+        margin-top: 40px;
+        padding-right: 0px !important;
+      }
+
+      .slider-3 .owl-nav {
+        padding-left: 10px !important;
+      }
+
+      @media (max-width: 1024px) {
+        .slider-3 .owl-nav {
+          margin-top: 120px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
+   
+    <section
+      class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden"
+    >
+      <div
+        class="absolute z-40 top-0 inset-x-0 pointer-events-none h-full flex justify-center"
+      >
+        <img src="./img/top-glow.webp" alt="Glow-Effect" class="object-cover object-top" />
+      </div>
+
+      <div
+        class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex justify-center"
+      >
+        <img
+          src="./img/bg-transparent.svg"
+          alt="Background Transparent"
+          class="lg:hidden w-full h-[75%] md:h-full object-cover object-top"
+        />
+        <img
+          src="./img/golang-seo-bg.webp"
+          alt="Golang SEO Background"
+          class="hidden lg:block w-full h-full object-cover object-center"
+        />
+      </div>
+
+      <div class="absolute z-0 bottom-0 left-0 w-full hidden lg:block">
+        <img
+          src="./img/glow-new-1.webp"
+          alt="Glow"
+          class="w-full h-full opacity-100 mx-auto"
+        />
+      </div>
+
+      <div
+        class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="hidden absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="hidden absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="container flex flex-col items-center justify-center pt-[45%] md:pt-[20%] z-40 pb-[110px] relative"
+      >
+        <div class="relative flex flex-col items-center justify-center">
+          <h1
+            class="text-[30px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
+          >
+            MVP Development Services 
+            <br class="hidden lg:block" />
+            for Investor-Ready Solution
+          </h1>
+          <p
+            class="text-[16px] md:text-[23px] xl:mt-4 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[70%] p-2"
+          >
+            Transform your incredible idea into a tangible product that is investor-ready and ready to be published for real engagement and insights.
+          </p>
+          <a href="#"
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-4 pl-5 pr-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden z-10"
+          >
+            <span class="truncate max-w-[200px] sm:max-w-none">Talk About Your Idea With Us</span>
+
+            <img
+              src="./img/arrow-right-white.svg"
+              alt="arrow-right"
+              class="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-6 flex-shrink-0"
+            />
+
+            <img
+              src="./img/Ellipse 444.svg"
+              alt="arrow-right"
+              class="absolute bottom-0"
+            />
+          </a>
+        </div>
+        <div class="absolute z-0 bottom-0 left-0 w-full lg:hidden">
+          <img
+            src="./img/glow-new.webp"
+            alt="Glow"
+            class="w-full h-full opacity-100 mx-auto"
+          />
+        </div>
+      </div>
+      <div
+        class="relative w-full xl:mt-[170px] z-50 recognition-section-ppc backdrop-blur-[10px]"
+      >
+        <div
+          class=" relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-12 md:px-12 py-5"
+        >
+          
+          <div class="lg:w-[40%] text-center lg:text-left">
+            <p
+              class="text-white text-base text-[16px] md:text-[18px] leading-snug"
+            >
+              Recognized for delivering the best solutions for businesses of all
+              sizes and across industries.
+            </p>
+          </div>
+
+          <!-- Logos Marquee -->
+          <div class="w-full overflow-hidden">
+            <div
+              class="flex items-center gap-10 logos-arquee whitespace-nowrap"
+            >
+              <!-- First set of logos -->
+              <img
+                src="./img/Deloitte-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
+              />
+              <img
+                src="./img/Inc5000-1 (1).svg"
+                alt="logo"
+                class="h-[100px] flex-shrink-0"
+              />
+              <img
+                src="./img/uspaacc-1-1.svg"
+                alt="logo"
+                class=" h-[90px] flex-shrink-0 mt-1"
+              />
+              <img
+                src="./img/NJBIZ-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[140px] flex-shrink-0"
+              />
+              <img
+                src="./img/50Fastest-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
+              />
+
+              <!-- Duplicate set for seamless loop -->
+              <img
+                src="./img/Deloitte-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
+              />
+              <img
+                src="./img/Inc5000-1 (1).svg"
+                alt="logo"
+                class="h-[100px] flex-shrink-0"
+              />
+              <img
+                src="./img/uspaacc-1-1.svg"
+                alt="logo"
+                class=" h-[90px] flex-shrink-0"
+              />
+              <img
+                src="./img/NJBIZ-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[140px] flex-shrink-0"
+              />
+              <img
+                src="./img/50Fastest-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivering Results That Matter Section -->
+    <section class="bg-black text-white py-12">
+      <div
+        class="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10"
+      >
+        <!-- Left: Text + Stats -->
+        <div class="text-center">
+          <h3 class="text-gray-300 text-lg md:text-[23px] mb-8">
+            Delivering Results That Matter
+          </h3>
+
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-center"
+          >
+            <!-- Stat 1 -->
+            <div>
+              <h4
+                class="text-[50px] font-semibold bg-[linear-gradient(193.77deg,#364EBE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+              >
+                20+
+              </h4>
+              <!-- <img src="./img/20+.svg" class="w-[90px] mx-auto my-4" /> -->
+              <p class="text-gray-400 text-[18px] mt-1">Years of Expertise</p>
+            </div>
+
+            <div class="w-px h-16 bg-gray-700"></div>
+
+            <!-- Stat 2 -->
+            <div>
+              <h4
+                class="text-[50px] font-semibold bg-[linear-gradient(113.8deg,#4361EE_28.27%,#FFFFFF_64.38%)] bg-clip-text text-transparent"
+              >
+                200+
+              </h4>
+              <!-- <img src="./img/200+.svg" class="w-[120px] mx-auto my-4" /> -->
+              <p class="text-gray-400 text-[18px] mt-1">Software Developers</p>
+            </div>
+
+            <div class="w-px h-16 bg-gray-700"></div>
+
+            <!-- Stat 3 -->
+            <div>
+              <h4
+                class="text-[50px] font-semibold bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+              >
+                150+
+
+              </h4>
+              <!-- <img src="./img/150+.svg" alt="" class="w-[110px] mx-auto my-4" /> -->
+              <p class="text-gray-400 text-[18px] mt-1">Enterprise Projects</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Button -->
+        <div class="flex justify-center lg:justify-end w-full lg:w-auto pb-5">
+          <a
+            href="#"
+            class="border-[1px] border-[#f5fafec8] rounded-full px-6 py-3 text-[18px] font-medium text-[#F5FAFE] hover:bg-white/10 transition"
+          >
+            Book a Consultation Call
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- Spectrum of minimum value -->
+  <section class="relative text-white pb-40 overflow-hidden bg-center bg-no-repeat bg-cover"
+      style="background-image: url('./img/driving-inn-react-bg.webp');"
+      >
+        <div
+          id="leftOverlay-spectrum"
+          class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
+        >
+         <div class="relative px-5">
+            <h2
+              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] leading-relaxed xl:leading-[60px] mb-6"
+            >
+            Spectrum of Minimum Viable <br class="hidden md:block" />
+             Product Development  <br class="hidden md:block" />
+             Services, We Cover!
+            </h2>
+            <p
+              class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[80%]"
+            >
+              From user feedback collection to product-market fit testing, the significance of having an MVP is empirical. At NewAgeSysIT, we assimilate with these requirements, and with our team of highly vetted developers and our agile, lean, and data-driven approach, deliver a range of MVP app development services.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Industry Cards Slider -->
+        <div class="w-full xl:w-[55%] relative xl:ml-auto z-10 lg:pt-20">
+          <div class="slider-1 slider-spectrum owl-carousel owl-theme overflow-visible">
+            <!-- Card: Healthcare -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec1.svg"
+                  alt="Healthcare"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  MVP Ideation & Strategy
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+We help validate MVP ideas and help our clients come up with a product strategy and its roadmapping. Not only this, our team of product managers helps you with feature prioritization, technical feasibility study, and definition of scope.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/healthcare-software-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: FinTech -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec2.svg"
+                  alt="FinTech"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">MVP UI/UX Design
+</h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+Get an engaging and intuitive UI/UX experience with your MVP. Our MVP development solutions are built through user persona study, with a unique visual design, and keeping the branding in check. Additionally, we deliver usability testing with target users.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/fintech-app-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: ECommerce -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec3.svg"
+                  alt="MVP Software Development
+"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  MVP Software Development
+
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+As an MVP software development company, we deliver MVPs that are modern and scalable in nature. For this, we deliver backend development services, custom web & mobile app development, third-party integrations, cloud setup, AI-enablement, etc.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/e-commerce-app-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: Logistics -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec4.svg"
+                  alt="DevOps & Cloud Setup for MVP
+"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  DevOps & Cloud Setup for MVP
+
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+We effectively provide services like CI/CD, cloud infrastructure setup, containerization & orchestration, monitoring & logging configuration, and basic security and compliance. Our goal? To deliver solutions that are scalable and reliable from Day 1.
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/transportation-app/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: EdTech -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec5.svg"
+                  alt="MVP Testing & Quality Assurance
+"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">MVP Testing & Quality Assurance
+</h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+Get your MVP tested to make it bug-free, secure, and user-friendly. Get a range of MVP testing services that cover functional & regression testing, performance testing, cross-browser & vulnerability assessment, security & vulnerability assessment, and automated testing integration.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/education-app-development/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: Manufacturing -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec6.svg"
+                  alt="Post-MVP Services
+"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  Post-MVP Services
+
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+Cover your MVP, get maintenance & support services for consistent bug fixes, updates, and optimization. Additionally, we help with feature expansion, DevSecOps, security enhancements, and scalability planning.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/contact/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: Real Estate -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/mvp/spec7.svg"
+                  alt="Real Estate"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+Specialized MVP Offerings
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+A regular MVP isn’t enough. Our comprehensive range of MVP development services covers AI/ML-powered MVPs, blockchain MVPs, AR/VR MVPs, and RPA MVPs, based on industry and implementation.
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/real-estate-app-development/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute right-0 bottom-[150px] bg-[#283A8F] w-[210px] h-[400px] lg:w-[420px] lg:h-[350px]"
+        ></div>
+      </section>
+      <!-- end -->
+       <!-- why startup -->
+        <section class="bg-[#050816] text-white py-16 relative overflow-hidden">
+          <div class="absolute top-1/2 left-1/2 w-full h-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
+            <svg width="1465" height="1465" viewBox="0 0 1465 1465" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_13490_12885)">
+<circle cx="732.219" cy="732.218" r="151" transform="rotate(-7.76089 732.219 732.218)" fill="#4158FF"/>
+</g>
+<defs>
+<filter id="filter0_f_13490_12885" x="-0.000793457" y="0.000183105" width="1464.44" height="1464.44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="290.6" result="effect1_foregroundBlur_13490_12885"/>
+</filter>
+</defs>
+</svg>
+
+          </div>
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="lg:grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+          <article class="self-center shadow-lg py-6 md:col-span-2 xl:col-span-2 xl:row-span-2 flex flex-col">
+         <!-- Cloud-Based Hybrid Infrastructure -->
+       <div class="flex flex-col xl:max-w-[75%] w-full text-center lg:text-left">
+      <h2 class="text-3xl md:text-[50px] font-normal mb-4 md:leading-[56px]">
+        Why Startups Consider Getting an MVP Done?
+      </h2>
+    </div>
+      </article>
+      <!-- 111 -->
+      <article class="rounded-2xl shadow-lg p-6 xl:row-span-2 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why1.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Idea Validation Before Big Investment</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Building an MVP allows startups to test their idea with real users before committing to any heavy resources. Instead of investing months of time and high development costs, a functional version aids them in gathering real feedback and verifying market fit.
+        </p>
+      </article>
+    </div>
+    <div class="mt-6 grid gap-6 grid-cols-1 lg:grid-cols-3">   
+      <!-- Faster Time -->
+      <article class="rounded-2xl shadow-lg p-6">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why2.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Faster Time-to-Market</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+         In the world of startups, speed is everything. Getting an MVP done helps founders bring their ideas into a tangible reality within weeks. This helps in attracting early adopters, investors, or even potential partners while competitors are still brainstorming.
+        </p>
+      </article>
+
+      <!-- Robotic Process Automation -->
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why3.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Data-Driven Decision Making</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">An MVP helps startups collect real-world data on how their prospective users interact with the product. These insights further guide iterations, ensuring that the final version is built based on user needs rather than assumptions or intuition.
+        </p>
+      </article>
+
+      <!-- Reduced Development Costs & Risks -->
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why4.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Reduced Development Costs & Risks</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Instead of building a full-featured application upfront, startups focus on core functionalities that define their value proposition. This lean approach minimizes costs, reduces financial risks, and ensures that funds are spent on features that truly matter.
+        </p>
+      </article>
+
+      <!-- Easier Investor Buy-In -->
+      <article class="rounded-2xl shadow-lg p-6">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why5.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Easier Investor Buy-In</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Today, having an MVP is a prerequisite to funding. Investors prefer to see tangible traction through metrics, feedback, or even basic adoption before making any investment. A working MVP demonstrates both execution ability and market demand.
+        </p>
+      </article>
+
+      <!-- AR/VR -->
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why6.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Scalability & Flexibility</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          An MVP acts as a solid foundation to scale later. Once the product gains traction, additional features, integrations, and design enhancements can be done with ease, without reworking the entire architecture.
+        </p>
+      </article>
+
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/why7.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Early Market Entry & Competitive Advantage</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+         Launching an MVP allows startups to establish a presence early, even in competitive markets. It acts as a segue to valuable learnings and delivers the ability to refine faster than late entrants, helping founders carve out their niche ahead of others.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- end -->
+ <!-- why sysit -->
+  <section class="bg-black py-10 lg:py-20">
+  <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-6 leading-[40px] xl:leading-[60px] w-[90%] mx-auto text-white">
+          Why NewAgeSysIT Can Be Your Ideal Partner?
+        </h2>
+
+        <p class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[90%] mx-auto">
+         As an MVP development company, we are driven by the intention of solving our clients ' problems. Our MVP solutions are built with the perspective of maximum user adoption and being investor-ready.
+        </p>
+        <a href="#" class="border-[1px] border-[#f5fafece] rounded-full px-8 py-4 text-[#F5FAFE] inline-block text-[17px] font-medium hover:bg-white/10 transition">
+          <span class="md:inline">Turn Your Idea into an MVP</span>
+        </a>
+      </div>
+      <div class="container mx-auto px-4 pt-[50px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+            <div>
+               <div class="icon mb-[20px]">
+                <img src="./img/isa/nfi1.svg" alt="" class="w-[50px]">
+              </div>
+              <div class="bottom-content ">
+                <h2 class="inline-block text-white font-[400] text-[23px]">
+                  Proven Expertise in MVP Strategy & Execution
+                </h2>
+                <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                  We have been operating for more than 25+ years in the software development domain. So, we have perfected our process over time. And, even as an MVP development firm, we have helped startups and enterprises define, design, and deliver functional products that deal with real problems.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+            <div>
+               <div class="icon mb-[20px]">
+                <img src="./img/isa/nfi2.svg" alt="" class="w-[50px]">
+              </div>
+              <div class="bottom-content ">
+                <h2 class="inline-block text-white font-[400] text-[23px]">
+                  End-to-End Product Development Capabilities
+                </h2>
+                <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                  As an MVP development agency, we cater to our clients throughout the entire MVP lifecycle. Our services include every aspect of MVP development from product discovery to final launch, and everything in between. To sum up, our full-stack capability allows us to work as a single, reliable partner.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+            <div>
+               <div class="icon mb-[20px]">
+                <img src="./img/isa/nfi3.svg" alt="" class="w-[50px]">
+              </div>
+              <div class="bottom-content">
+                <h2 class="inline-block text-white font-[400] text-[23px]">
+                  Agile and Cost-Effective Development Approach
+                </h2>
+                <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                  We understand the needs of startups and growing businesses. This is why our iterative development process focuses on building your core features. For this, we use agile sprints, continuous feedback loops, and rapid prototyping to ensure MVP remains lean, adaptable, and ready for market.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+            <div>
+               <div class="icon mb-[20px]">
+                <img src="./img/isa/nfi4.svg" alt="" class="w-[50px]">
+              </div>
+              <div class="bottom-content ">
+                <h2 class="inline-block text-white font-[400] text-[23px]">
+                Multi-Platform and Future-Ready Expertise
+                </h2>
+                <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                  Our team of developers specializes in modern technologies like React, Flutter, Kotlin, Node.js, and cloud native development on AWS, Azure, and GCP. So, whether you need a mobile app, web app, or cross-platform MVP, at NewAgeSysIT, we are perfectly capable of delivering high-performance solutions with scalable architecture.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E]">
+            <div>
+               <div class="icon mb-[20px]">
+                <img src="./img/isa/nfi5.svg" alt="" class="w-[50px]">
+              </div>
+              <div class="bottom-content ">
+                <h2 class="inline-block text-white font-[400] text-[23px]">
+                  Trusted Partner for Startups & Enterprises Alike
+                </h2>
+                <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                  We are a trusted name for the startups, SMEs, and global enterprises we have worked with, as we are committed to quality, transparency, and confidentiality. With strong IP protection policies, flexible engagement models, and a keen focus on long-term scalability, we don’t just build MVPs but reliable partnerships.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-[24px] min-h-[400px] bg-[#1B1D1E] relative overflow-hidden">
+            <span class="absolute left-0 top-0 w-full h-full">
+              <img src="./img/isa/bg-card.webp" alt="" class="w-full h-full object-cover">
+            </span>
+            <div class="relative flex flex-col justify-between h-full">
+              <div>
+                <h2 class="inline-block text-white font-[400] lg:text-[35px] text-[28px]">
+                  Create a  <br class="hidden lg:block">
+                  Partnership
+                </h2>
+              </div>
+              <div>
+                <a href="#" class="bg-white text-black rounded-full px-8 py-4 inline-flex w-full items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 transition text-center justify-center">
+          <span>Call Us Today</span>
+        </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- end -->
+   <!-- flexible hire model -->
+     <section class="bg-black py-10 lg:pt-20">
+      <div class="container mx-auto max-w-4xl text-center pb-[50px]">
+        <h2 class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-6 leading-[40px] xl:leading-[60px] w-[90%] mx-auto text-white">
+          Flexible Hiring Models for MVP Development
+        </h2>
+
+        <p class="text-[#A3ACB5] text-[17px] leading-[28px] mb-[40px] lg:w-[90%] mx-auto">
+         Every startup or business is at a different stage in its product journey, meaning different requirements. And, at NewAgeSysIT, we understand the need to have flexibility in terms of team structure and budget. That’s why we offer multiple hiring models, enabling you to hire MVP developers, designers, and strategists, specific to your needs.
+        </p>
+        <a href="#" class="border-[1px] border-[#f5fafece] rounded-full px-8 py-4 text-[#F5FAFE] inline-block text-[17px] font-medium hover:bg-white/10 transition">
+          <span class="md:inline">Hire MVP Developers Today</span>
+        </a>
+      </div>
+      <div class="container">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="accordion w-full lg:px-[6px] flex flex-col gap-[10px] ">
+            <div class="min-h-[30px] group/1 acc-wrap rounded-t-[16px] md:rounded-[16px] flexible-border-react lg:p-5">
+              <button class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pr-[50px] relative text-[18px] lg:p-0 p-5 bg-[#1B1D1E] lg:bg-transparent rounded-tl-[14px] rounded-tr-[14px] lg:rounded-tl-[0px] lg:rounded-tr-[0px]" onclick="toggleUniqueAccordion(this)" data-img-index="0">
+                <div class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3">
+                  <div class="text-[23px] md:text-[28px]">01</div>
+                  <span class="custom-dashed-small-white mx-3 hidden lg:block"></span>
+                  <div class="pl-[10px]">Dedicated MVP Team</div>
+                </div>
+
+                <span class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]">
+                  <img src="./img/arrow.svg" alt="Arrow Icon" class="arrow-icon w-8 h-8 transform transition-transform duration-300">
+                </span>
+              </button>
+              <div class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent">
+                <div class="text-[16px] py-5 text-[#A3ACB5] lg:pl-16 lg:pr-10">
+                  <p>
+                    Our dedicated hiring model delivers you a team of your own that will work exclusively for you, delivering MVP development services. This would ensure you have a faster turnaround and consistent quality
+                  </p>
+                  <p class="mt-2">
+                    Other reasons to consider this model:
+                  </p>
+                  <ul class="list-disc pl-5 mt-2">
+                    <li>Long-term collaboration and continuous iteration</li>
+                    <li>Full control over the project flow</li>
+                    <li>Flexible yet accountable remote setup</li>  
+                  </ul>
+                  <p class="mt-2">
+                    Even if you have an internal development team, our experts can work as an extension to it, bringing in technical and strategic experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+<div class="min-h-[30px] group/1 acc-wrap rounded-t-[16px] md:rounded-[16px] flexible-border-react lg:p-5">
+              <button class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pr-[50px] relative text-[18px] lg:p-0 p-5 bg-[#1B1D1E] lg:bg-transparent rounded-tl-[14px] rounded-tr-[14px] lg:rounded-tl-[0px] lg:rounded-tr-[0px]" onclick="toggleUniqueAccordion(this)" data-img-index="0">
+                <div class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3">
+                  <div class="text-[23px] md:text-[28px]">02</div>
+                  <span class="custom-dashed-small-white mx-3 hidden lg:block"></span>
+                  <div class="pl-[10px]">Staff Augmentation for MVPs</div>
+                </div>
+
+                <span class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]">
+                  <img src="./img/arrow.svg" alt="Arrow Icon" class="arrow-icon w-8 h-8 transform transition-transform duration-300">
+                </span>
+              </button>
+              <div class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent">
+                <div class="text-[16px] py-5 text-[#A3ACB5] lg:pl-16 lg:pr-10">
+                  <p>
+                    Already have a product or development team but need specialized talent? Well, we can offer you skilled UI/UX designers, backend engineers, product strategists, etc. With our staff augmentation model, you get access to top-tier professionals without recruitment delays. 
+
+                  </p>
+                  <p class="mt-2">
+                    Additionally, you can scale up or down based on your requirements, ensuring agility and cost efficiency at the same time.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+             <div class="min-h-[30px] group/1 acc-wrap rounded-t-[16px] md:rounded-[16px] flexible-border-react lg:p-5">
+              <button class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pr-[50px] relative text-[18px] lg:p-0 p-5 bg-[#1B1D1E] lg:bg-transparent rounded-tl-[14px] rounded-tr-[14px] lg:rounded-tl-[0px] lg:rounded-tr-[0px]" onclick="toggleUniqueAccordion(this)" data-img-index="0">
+                <div class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3">
+                  <div class="text-[23px] md:text-[28px]">03</div>
+                  <span class="custom-dashed-small-white mx-3 hidden lg:block"></span>
+                  <div class="pl-[10px]">Project-Based Engagement</div>
+                </div>
+
+                <span class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]">
+                  <img src="./img/arrow.svg" alt="Arrow Icon" class="arrow-icon w-8 h-8 transform transition-transform duration-300">
+                </span>
+              </button>
+              <div class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent">
+                <div id="content" class="text-[16px] font-[400] text-[#A3ACB5] py-5 lg:pl-16 lg:pr-10">
+                <p>Have a well-defined MVP roadmap and clear deliverables? Our project-based model ensures complete ownership from concept validation to deployment.</p>
+                <p class="mt-2">By choosing this hiring model, we handle:</p>
+                <ul class="list-disc pl-5">
+                    <li>MVP planning and scoping</li>
+                    <li>Agile sprint execution</li>
+                    <li>Testing, launch, and iteration</li>
+                </ul>
+                <p class="mt-2">Meanwhile, you can stay focused on your core business goals while our project managers ensure your MVP is delivered on time and within budget.</p>
+            </div>
+              </div>
+            </div>
+            <!-- 4 -->
+             <div class="min-h-[30px] group/1 acc-wrap rounded-t-[16px] md:rounded-[16px] flexible-border-react lg:p-5">
+              <button class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pr-[50px] relative text-[18px] lg:p-0 p-5 bg-[#1B1D1E] lg:bg-transparent rounded-tl-[14px] rounded-tr-[14px] lg:rounded-tl-[0px] lg:rounded-tr-[0px]" onclick="toggleUniqueAccordion(this)" data-img-index="0">
+                <div class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3">
+                  <div class="text-[23px] md:text-[28px]">04</div>
+                  <span class="custom-dashed-small-white mx-3 hidden lg:block"></span>
+                  <div class="pl-[10px]">Fixed-Price MVP Model</div>
+                </div>
+
+                <span class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]">
+                  <img src="./img/arrow.svg" alt="Arrow Icon" class="arrow-icon w-8 h-8 transform transition-transform duration-300">
+                </span>
+              </button>
+              <div class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent">
+                <div class="py-2 text-[#A3ACB5] lg:pl-16 lg:pr-10">
+                  <div class="text-[16px] font-[400] text-[#A3ACB5]">
+                <p>This model is ideal for startups and businesses that expect budget predictability. Once the project scope and milestones are finalized, we agree on a fixed cost for complete MVP delivery. </p>
+                <p class="mt-2">It’s ideal for:</p>
+                <ul class="list-disc pl-5">
+                    <li>Startups validating a single core idea</li>
+                    <li>Early-stage funding rounds</li>
+                    <li>MVPs with clearly defined features and timelines</li>
+                    </ul>
+            </div>
+                </div>
+              </div>
+            </div>
+<!-- 5 -->
+  <div class="min-h-[30px] group/1 acc-wrap rounded-t-[16px] md:rounded-[16px] flexible-border-react lg:p-5">
+              <button class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pr-[50px] relative text-[18px] lg:p-0 p-5 bg-[#1B1D1E] lg:bg-transparent rounded-tl-[14px] rounded-tr-[14px] lg:rounded-tl-[0px] lg:rounded-tr-[0px]" onclick="toggleUniqueAccordion(this)" data-img-index="0">
+                <div class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3">
+                  <div class="text-[23px] md:text-[28px]">05</div>
+                  <span class="custom-dashed-small-white mx-3 hidden lg:block"></span>
+                  <div class="pl-[10px]">Time & Material Model</div>
+                </div>
+
+                <span class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]">
+                  <img src="./img/arrow.svg" alt="Arrow Icon" class="arrow-icon w-8 h-8 transform transition-transform duration-300">
+                </span>
+              </button>
+              <div class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent">
+                <div class="py-5 text-[#A3ACB5] lg:pl-16 lg:pr-10">
+                  <div class="text-[16px] font-[400] text-[#A3ACB5]">
+                <p>This would suit startups where the MVP idea is evolving or requires continuous user feedback. Here, the startup only pays for the actual hours and resources used, while retaining the flexibility to adjust scope, features, and timelines dynamically.</p>
+                <p class="mt-2">It is perfect for:</p>
+                <ul class="list-disc pl-5">
+                    <li>R&D and experimentation</li>
+                    <li>Iterative product builds</li>
+                    <li>Agile MVPs that evolve based on market validation</li>
+                    </ul>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="accordionImageContaine" class="w-full overflow-hidden hidden lg:flex p-2 rounded-[24px] !h-[600px] relative">
+            <img id="accordionImage" src="./img/mvp/mvp-fh.webp" alt="Healthcare App" class="rounded-[24px] transition-opacity h-[500px] w-[500px] xl:h-[600px] xl:lg:w-[600px] duration-300 inset-0 object-cover bg-cover opacity-100">
+          </div>
+        </div>
+      </div>
+     </section>        
+    <!-- end -->
+   
+    <!-- React Native Services Cards Section -->
+    <section class="py-10 lg:py-20 relative overflow-hidden">
+        <div class="text-white text-center px-4 ">
+          <div class="container mx-auto max-w-4xl">
+            <h2
+              class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-6 leading-[40px] xl:leading-[60px] w-[90%] mx-auto"
+            >
+            Our Six-Step Process to Develop <br class="hidden lg:block" />
+             Investor-Ready MVPs
+            </h2>
+
+            <p
+              class="text-gray-300 text-[17px] leading-[28px] mb-10 lg:w-[90%] mx-auto"
+            >
+              Build custom iOS applications with our tech-driven iOS app development company to build digital business<br class="hidden lg:block" /> engagements, exceptional usability, and brand value.
+            </p>
+
+          </div>
+        </div>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 xl:grid-cols-3 max-992px:gap-y-[30px]">
+          <div class="lg:pr-[25px] py-[40px] relative card-ds">  
+            <div class="bottom-top-anim block lg:hidden">
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-45px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+
+            <div class="bottom-dot-anim hidden lg:block">
+              <span class="border-line-left-gradient"></span>
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] bottom-[-15px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+              <span class="border-line-right"></span>              
+            </div>         
+            
+            <div class="oci p-6 rounded-[40px] min-h-[400px] bg-transparent relative overflow-hidden">
+               <div class="bg-img absolute left-0 w-full h-full top-0">
+              <img src="./img/bg-sr.webp" class="w-full h-full"/>
+            </div>
+                <div class="relative">
+                <div class="icon mb-[20px]">
+                    <p class="text-[64px] font-semibold mb-0 text-white inter_font">01</p>
+                </div>
+                <div class="bottom-content ">
+                    <h2 class="inline-block text-white font-[400] text-[23px]">
+                    iOS App Development Consulting
+                    </h2>
+                    <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                    With a dedicated team to assist you with the right iOS app consulting services, our iOS app development agency can help your business decide if iOS is a go-to solution for them and which tech stack suits their requirements the best. 
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="lg:pr-[25px] py-[40px] relative card-ds">
+            <div class="bottom-top-anim block lg:hidden">
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-45px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+            <div class="bottom-dot-anim hidden lg:block">
+              <span class="border-line-left"></span>
+            <span class="border-line-right"></span>
+            <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] bottom-[-15px]">
+                <span class="dot-wave"></span>
+                <span class="dot-anim"></span>
+            </div>
+            </div>
+            <div class="oci p-6 rounded-[40px] min-h-[400px] bg-transparent relative overflow-hidden">
+              <div class="bg-img absolute left-0 w-full h-full top-0">
+              <img src="./img/bg-sr.webp" class="w-full h-full"/>
+            </div>
+                <div class="relative">
+                <div class="icon mb-[20px]">
+                    <p class="text-[64px] font-semibold mb-0 text-white inter_font">02</p>
+                </div>
+                <div class="bottom-content ">
+                    <h2 class="inline-block text-white font-[400] text-[23px]">
+                    iOS UI/UX Design
+                    </h2>
+                    <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                   iOS applications are well-known for their immersive and engaging designs. As a leading iOS app development agency, we align your brand with what your users need from the Apple ecosystem to deliver lasting user experiences.
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="lg:pr-[25px] py-[40px] relative card-ds">
+            <div class="bottom-top-anim block lg:hidden">
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-45px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+            <div class="bottom-dot-anim hidden lg:block">
+              <span class="border-line-left"></span>
+            <span class="border-line-right-gradient"></span>
+            <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] bottom-[-15px]">
+                <span class="dot-wave"></span>
+                <span class="dot-anim"></span>
+            </div>
+            </div>
+            <div class="oci p-6 rounded-[40px] min-h-[400px] bg-transparent relative overflow-hidden">
+              <div class="bg-img absolute left-0 w-full h-full top-0">
+              <img src="./img/bg-sr.webp" class="w-full h-full"/>
+            </div>  
+              <div class="relative">
+                <div class="icon mb-[20px]">
+                    <p class="text-[64px] font-semibold mb-0 text-white inter_font">03</p>
+                </div>
+                <div class="bottom-content ">
+                    <h2 class="inline-block text-white font-[400] text-[23px]">
+                    Custom iOS Application Development
+                    </h2>
+                    <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                    
+As one of the leading iOS development companies, we have a panel of expert iPhone app developers with experience in creating scalable and future-specific iOS applications. We offer iOS app development services to businesses and enterprises across various industries.
+
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>          
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-3 pt-[60px] max-992px:gap-y-[30px]">
+          <div class="lg:pr-[25px] py-[40px] relative card-ds">
+            <div class="bottom-top-anim block lg:hidden">
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-45px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+            <div class="bottom-dot-anim hidden lg:block">
+              <span class="border-line-left-gradient top-0"></span>
+              <span class="border-line-right top-0"></span>
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-15px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+            <div class="oci p-6 rounded-[40px] min-h-[400px] bg-transparent relative overflow-hidden">
+              <div class="bg-img absolute left-0 w-full h-full top-0">
+              <img src="./img/bg-sr.webp" class="w-full h-full"/>
+            </div>  
+              <div class="relative">
+                <div class="icon mb-[20px]">
+                    <p class="text-[64px] font-semibold mb-0 text-white inter_font">04</p>
+                </div>
+                <div class="bottom-content ">
+                    <h2 class="inline-block text-white font-[400] text-[23px]">
+                    iOS Software Testing
+                    </h2>
+                    <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                    Our iOS app development process is centered on keeping performance and security as key focuses. As an evolving iOS development company, we ensure your applications are bug-free and future-proof with our AI-led and manual testing methodologies.
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="lg:pr-[25px] py-[40px] relative card-ds">
+            <div class="bottom-top-anim block lg:hidden">
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-45px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+            <div class="bottom-dot-anim hidden lg:block">
+              <span class="border-line-left top-0"></span>
+            <span class="border-line-right top-0"></span>
+            <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-15px] ">
+                <span class="dot-wave"></span>
+                <span class="dot-anim"></span>
+            </div>
+            </div>
+            <div class="oci p-6 rounded-[40px] min-h-[400px] bg-transparent relative overflow-hidden">
+              <div class="bg-img absolute left-0 w-full h-full top-0">
+              <img src="./img/bg-sr.webp" class="w-full h-full"/>
+            </div>  
+              <div class="relative">
+                <div class="icon mb-[20px]">
+                    <p class="text-[64px] font-semibold mb-0 text-white inter_font">05</p>
+                </div>
+                <div class="bottom-content ">
+                    <h2 class="inline-block text-white font-[400] text-[23px]">
+                    Multi-platform Deployment
+                    </h2>
+                    <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                    As a custom iOS mobile app development services company, we integrate applications seamlessly across various Apple devices, ensuring the brand is present on every device where users are active.
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="lg:pr-[25px] py-[40px] relative card-ds">
+            <div class="bottom-top-anim block lg:hidden">
+              <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-45px]">
+                  <span class="dot-wave"></span>
+                  <span class="dot-anim"></span>
+              </div>
+            </div>
+            <div class="bottom-dot-anim hidden lg:block">
+              <span class="border-line-left top-0"></span>
+            <span class="border-line-right-gradient top-0"></span>
+            <div class="absolute left-[50%] transform -translate-x-1/2 flex items-center justify-center z-[9] w-[30px] h-[30px] top-[-15px]">
+                <span class="dot-wave"></span>
+                <span class="dot-anim"></span>
+            </div>
+            </div>
+            <div class="oci p-6 rounded-[40px] min-h-[400px] bg-transparent relative overflow-hidden">
+              <div class="bg-img absolute left-0 w-full h-full top-0">
+              <img src="./img/bg-sr.webp" class="w-full h-full"/>
+            </div>  
+              <div class="relative">
+                <div class="icon mb-[20px]">
+                    <p class="text-[64px] font-semibold mb-0 text-white inter_font">06</p>
+                </div>
+                <div class="bottom-content ">
+                    <h2 class="inline-block text-white font-[400] text-[23px]">
+                    Post-Launch maintenance & Support
+                    </h2>
+                    <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">                    
+Our experts regularly monitor and update your app to ensure it complies with the latest iOS updates and meets user expectations. Through maintenance and support services, we keep your iOS app up to date, secure, and optimized with the latest advancements and iOS App Store updates.
+
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+    <!-- Grab the attention -->
+    <section>
+      <div class="px-[15px] md:px-0">
+        <div
+    class="text-white pt-8 md:pt-20 text-center px-4 bg-gradient-tor bg-[url('./img/cta-bgmob-optimized1.webp')]  md:bg-[url('./img/cta-bg-optimized.webp')]  bg-cover bg-left lg:bg-center bg-no-repeat relative md:min-h-[500px] level-cta-golang flex items-start md:items-center justify-center pb-10 max-768px:rounded-[24px] overflow-hidden"
+  >
+    <div class="relative container mx-auto z-10 pb-7">
+      <h2
+        class="text-3xl md:text-4xl xl:text-[50px] font-medium mb-6 mx-auto leading-[40px] md:leading-[50px] xl:leading-[60px]"
+      >
+        Grab the Attention of<br class="hidden lg:block" />
+        Investors Through MVP
+      </h2>
+      <a
+        href="#"
+        class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 transition"
+      >
+        <span>Book Free Consultation</span>
+        <span>
+          <svg
+            width="7"
+            height="11"
+            viewBox="0 0 7 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+              stroke="#212121"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+        </div>
+      </div>
+    </section>
+      <!-- industry covered -->
+      <section class="relative text-white pt-20 pb-40 overflow-hidden bg-center bg-no-repeat bg-cover"
+      style="background-image: url('./img/driving-inn-react-bg.webp');"
+      >
+        <div
+          id="leftOverlay"
+          class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
+        >
+         <div class="relative px-5">
+            <h2
+              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] leading-relaxed xl:leading-[60px] mb-6"
+            >
+            Industries Covered by Our
+              <br class="hidden md:block" />
+            MVP Development Services
+            </h2>
+            <p
+              class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 lg:w-[80%]"
+            >
+Every industry poses a different challenge, and at NewAgeSysIT, we understand it. This is why, through our MVP development services, we effectively take them down and turn them into usable products, enabling your product journey.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Industry Cards Slider -->
+        <div class="w-full xl:w-[55%] relative xl:ml-auto z-10 lg:pt-20">
+          <div class="slider-1 owl-carousel owl-theme overflow-visible">
+            <!-- Card: Healthcare -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/ic_health-care01.svg"
+                  alt="Healthcare"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  Healthcare
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+We have a suite of MVP development services for startups that primarily focus on HIPAA-compliant MVPs and cater to use cases like patient data security, telemedicine integration, real-time health tracking, etc.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/healthcare-software-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: FinTech -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/ic-fin-tech.svg"
+                  alt="FinTech"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">FinTech</h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+To garner investor attention, we help create MVPs that are secure and scalable, with a focus on trust, seamless transactions, and regulatory compliance. Plus, our MVP app development services cover digital wallets to AI-driven investment apps.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/fintech-app-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Card: ECommerce -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/ic-ecommerce.svg"
+                  alt="ECommerce"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  ECommerce
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+Our conversion-focused MVPs for e-commerce startups combine features like AI-driven recommendations, secure payments, and intuitive shopping journeys to boost retention and revenue.
+
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/e-commerce-app-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+
+            <!-- Card: On-Demand -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/On-Demand.svg"
+                  alt="On-Demand"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  On-Demand Services
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+From food delivery to home assistance, our on-demand MVP development services ensure seamless user experiences, real-time tracking, and smart resource allocation built for meeting growing consumer expectations.
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/on-demand-app-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+
+            
+
+            <!-- Card: Social Networking -->
+            <div
+              class="bg-[#D9DFFC] slider-card-bg text-black rounded-2xl p-8 text-left shadow-lg min-h-[380px] flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src="./img/ic-social-network.svg"
+                  alt="Social Networking"
+                  class="!w-10 h-10 mb-4"
+                />
+                <h3 class="text-xl font-medium mb-2 text-[#1B1D1E]">
+                  Social Networking
+                </h3>
+                <p class="text-gray-700 text-[16px] leading-[26px]">
+We build social networking MVPs that double down on prioritizing engagement, content discovery, and community safety, allowing startups to test new social experiences while scaling sustainably.
+                </p>
+              </div>
+              <div class="flex items-center group mt-5">
+                <a
+                  href="https://newagesysit.com/social-media-application-development-services/"
+                  class="text-[16px] font-normal text-[#1B275F] flex"
+                  ><span>Learn more</span>
+
+                  <img
+                    src="./img/Carousel Next.svg"
+                    alt=""
+                    class="!w-[22px] ml-2 group-hover:translate-x-2 transition-transform duration-200"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background gradient overlay -->
+
+        <div
+          class="absolute right-0 bottom-[150px] bg-[#283A8F] w-[210px] h-[400px] lg:w-[420px] lg:h-[350px]"
+        ></div>
+      </section>
+      <!-- end -->
+      <!-- technology stack -->
+           <section class="py-10 lg:py-20 bg-black text-white">
+        <div class="container">
+          <div class="text-[20px] text-center">
+            <h2
+              class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 mx-auto"
+            >
+              Tools and Technologies Used by Our MVP  <br class="hidden lg:block"/> 
+              Development Team
+            </h2>
+            <p
+              class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto font-[400] leading-normal text-[#FFFFFFB2]"
+            >
+              To deliver MVP development services, our team of developers makes use of the latest technologies and tools to achieve a fast product launch.
+            </p>
+          </div>
+          <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+            <div class="accordion faq-accordion">
+              <div class="flex flex-wrap relative">
+                <div class="basis-full lg:basis-1/2 text-black">
+                  <div class="px-[6px]">
+                    <div class="bg-[#20212B] rounded-[10px] min-h-[80px]">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Testing / Quality Assurance Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Kotlin -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/kotliin-thumb.svg"
+                                  alt="web.go"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Kotlin
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Java -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/tic-java.svg"
+                                  alt="Revel"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Java
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Dart -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/dart-thumb.svg"
+                                  alt="Gin"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Dart
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Swift -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/swift0-thumb.svg"
+                                  alt="Martini"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Swift
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- javascript -->
+                           <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/tic-JavaScript.svg"
+                                  alt="Martini"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Java
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- TypeScript -->
+                           <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/TypeScript.svg"
+                                  alt="Martini"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  TypeScript
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- golang -->
+                           <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/goland-icon.svg"
+                                  alt="Martini"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Golang
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">UI/UX / Design Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/android-studio-icon.svg"
+                                  alt="tech"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Android Studio
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/intellijeclipse-icon.svg"
+                                  alt="tech"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  IntelliJ / Eclipse
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]"
+                    >
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Testing / Quality Assurance Tools</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/espresso-icon.svg"
+                                  alt="tech"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Espresso
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/junit-thumb.svg"
+                                  alt="tech"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  JUnit
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-full lg:basis-1/2 text-black">
+                  <div class="px-[6px]">
+                    
+
+                    <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3 lg:mt-0">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Frameworks / Cross-Platform</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                          <!-- Android SDK -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/android-icon.svg"
+                                  alt="MySQL"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Android SDK
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Flutter -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/tic-Flutter.svg"
+                                  alt="Flutter"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  Flutter
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                         <!-- React Native -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/reactnative-icon.svg"
+                                  alt="React Native"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  React Native
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- NativeScript / Ionic -->
+                           <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/native-thumb.svg"
+                                  alt="NativeScript / Ionic"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  NativeScript / Ionic
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 1 -->
+                     <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordionPPC(this)"
+                      >
+                        <span class="font-[300]">Cloud / Backend / DevOps / Data</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/down-arrow-accrodion.svg"
+                              alt="plus"
+                              class="w-[20px] h-[20px]"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content-ppc">
+                        <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">                         
+                          <!-- AWS -->
+                          <div
+                            class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                          >
+                            <div class="flex flex-wrap">
+                              <div
+                                class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                              >
+                                <img
+                                  src="./img/aws.svg"
+                                  alt="AWS"
+                                  class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                                />
+                                <p
+                                  class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
+                                >
+                                  AWS
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- end -->
+<!-- MVP Tech Integrations -->
+<section class="bg-[#050816] text-white py-16">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="lg:grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+          <article class="self-center shadow-lg py-6 md:col-span-2 xl:col-span-2 xl:row-span-2 flex flex-col">
+         <!-- Cloud-Based Hybrid Infrastructure -->
+       <div class="flex flex-col xl:max-w-[75%] w-full text-center lg:text-left">
+      <h2 class="text-3xl md:text-[50px] font-normal mb-4 md:leading-[56px]">
+        MVP Tech Integrations Offered to Our Clients
+      </h2>
+      <p class="text-[18px] text-[#A3ACB5]">
+        We leverage a blend of modern technologies and frameworks to design, build, and scale MVPs that align with your vision.
+      </p>
+    </div>
+      </article>
+      <!-- 111 -->
+      <article class="rounded-2xl shadow-lg p-6 xl:row-span-2 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti1.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + iOS</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          We craft elegant, high-performance iOS MVPs using Swift and Objective-C, ensuring smooth navigation, optimized performance, and complete alignment with Apple’s Human Interface Guidelines.
+        </p>
+      </article>
+    </div>
+    <div class="mt-6 grid gap-6 grid-cols-1 lg:grid-cols-3 ">   
+      <!-- AI & ML -->
+      <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti2.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + Android</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Our Android specialists use Kotlin and Java to develop scalable MVPs delivering responsive UI, security, and reliability, perfect for quick market testing and full-scale expansion.
+        </p>
+      </article>
+
+      <!-- 5G & IoT -->
+      <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti3.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + Flutter</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          With Flutter, we build cross-platform MVPs with native-like performance and expressive UI, for speed to market solutions, reduced cost, and consistent design across Android + iOS.
+        </p>
+      </article>
+
+      <!-- Robotic Process Automation -->
+      <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti4.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + React Native</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+         React Native delivers MVPs that blend native performance with rapid development cycles, ideal for validating ideas quickly while maintaining quality and smooth cross-platform functionality.
+        </p>
+      </article>
+
+      <!-- Metaverse -->
+      <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti5.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + Node.js</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Node.js delivers a real-time MVP backend, ensuring lightning-fast data transfer, scalability, and support for chat apps, live dashboards, and collaborative platforms.
+        </p>
+      </article>
+
+      <!-- Blockchain -->
+      <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti6.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + Python</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Our developers use Python to integrate AI, ML, and analytics capabilities for data-driven MVPs. Plus, its versatility makes it perfect for rapid prototyping, automation, and a scalable backend.
+        </p>
+      </article>
+
+      <!-- AR/VR -->
+      <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti7.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + Golang</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Our Golang MVPs build backends that deliver unmatched performance, concurrency, and security, ideal for real-time features, heavy computation, or high-volume API communication.
+        </p>
+      </article>
+
+      <!-- 1 -->
+        <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti8.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + PHP / Ruby on Rails</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          For startups seeking agility and simplicity, we build MVPs using PHP or Ruby on Rails, enabling quick deployment, easy interactions, and proven reliability for web-based platforms.
+        </p>
+      </article>
+      <!-- 2 -->
+        <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti9.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + AI / ML</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Integrate AI and ML systems to make the MVP intelligent with features like predictive analytics, smart recommendations, automated decisions, and adaptive personalization.
+        </p>
+      </article>
+      <!-- 3 -->
+        <article class="rounded-2xl shadow-lg p-6 bg-[#121314]">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/ti10.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">MVP + AWS / Cloud</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          Deploy your MVP on secure and scalable AWS infrastructure, ensuring seamless cloud storage, auto-scaling, CI/CD, and global availability from day one.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- end -->
+<section class="bg-[#050816]">
+  <div class="container">
+    <div>
+      <div class="text-[20px] text-center text-white">
+            <h2 class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 mx-auto">
+              Security & Compliance Expertise for MVPs
+            </h2>
+            <p class="text-[18px] md:text-[20px] lg:text-[24px] min-992px:max-w-[70%] mx-auto font-[400] leading-normal text-[#FFFFFFB2]">
+              Even at the MVP stage, the product developed often collects sensitive user data, compelling us to focus on security & compliance for sustained credibility as an MVP development company. To achieve this, we integrate robust security practices at every stage of MVP development to ensure that not only does the product scale fast, but it is also compliant and secure for users.
+            </p>
+          </div>
+    </div>
+    <div class="mt-6 grid gap-6 grid-cols-1 lg:grid-cols-3 text-white">   
+      <!-- Faster Time -->
+      <article class="rounded-2xl shadow-lg p-6">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/sec1.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Secure Architecture by Design</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+We keep a security-first mindset while building MVPs, incorporating encryption into data, authentication layers for stakeholders, and an architecture for safe data flow, as early as the design stage.        </p>
+      </article>
+
+      <!-- Robotic Process Automation -->
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/sec2.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Data Privacy & Compliance 
+Alignment</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">Different regions demand different data privacy and compliance alignment. For most scenarios, we aim to remain compliant as per standards like GDPR, HIPAA, and CCPA, in addition to any regional or industry requirements.
+        </p>
+      </article>
+
+      <!-- Reduced Development Costs & Risks -->
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/sec3.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Cloud Security Implementation</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+Cloud ensures a scalable architecture, so we utilize platforms like AWS and Azure, and enable secure cloud storage, IAM (Identity & Access Management), and encrypted communication for end-to-end backend protection.        </p>
+      </article>
+
+      <!-- Easier Investor Buy-In -->
+      <article class="rounded-2xl shadow-lg p-6">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/sec4.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Continuous Vulnerability Testing</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+          For continuous vulnerability testing, we use regular code reviews, penetration testing, and automated security scans to ensure that the MVP stays resilient against evolving threats.
+        </p>
+      </article>
+
+      <!-- AR/VR -->
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/sec5.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Secure DevOps & Deployment</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+Through DevSecOps practices, we embed security into your CI/CD pipelines, making sure that every build, integration, and deployment meets top security standards.        </p>
+      </article>
+
+      <article class="rounded-2xl p-6 gradient-border-golang gradient-border-golang-mob gradient-border-golang-md">
+        <div class="mb-[20px]">
+          <img src="./img/mvp/sec6.svg" alt="">
+        </div>
+        <h3 class="text-[23px] font-[500] mb-[20px] font-inter">Access Control & User Authentication</h3>
+        <p class="text-[18px] text-[#A3ACB5] leading-relaxed">
+We implement OAuth 2.0, JWT, and Multi-Factor Authentication (MFA) mechanisms to protect user identity, prevent unauthorized access, and maintain trust from day one.     </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+      <!-- Technical Benefits of Using React Native Section -->
+      <div class="relative text-white lg:pt-[80px] bg-[#050816]">
+        <div class=" bg-grad-cc pointer-events-none w-full h-full  lg:block hidden">
+          <svg width="1322" height="1465" viewBox="0 0 1322 1465" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_13335_12285)">
+<circle cx="589" cy="732.2" r="151" fill="#4158FF"/>
+</g>
+<defs>
+<filter id="filter0_f_13335_12285" x="-143.2" y="0.000183105" width="1464.4" height="1464.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="290.6" result="effect1_foregroundBlur_13335_12285"/>
+</filter>
+</defs>
+</svg>
+
+        </div>
+        <section
+          class="relative text-white py-10 overflow-hidden px-5 border-b-gradient"
+        >
+          <div
+            class="w-full xl:w-[50%] xl:absolute z-30 left-0 bottom-[2px] h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
+          >
+            <div class="relative slider-border-golang lg:pt-20 w-full">
+              <h2
+                class="text-[30px] md:text-[40px] lg:text-[50px] leading-relaxed font-[400] xl:leading-[56px] mb-6"
+              >
+                Technical Benefits of MVP  <br />
+                Development
+              </h2>
+            </div>
+          </div>
+
+          <!-- Benefits Cards Slider -->
+          <div
+            class="w-full xl:w-[50%] relative xl:ml-auto z-10 pb-10 xl:pt-20 xl:pl-[250px]"
+          >
+            <div
+              id="slider3"
+              class="slider-3 ios-slider-3 owl-carousel owl-theme overflow-visible"
+            >
+              <!-- Card: Bridgeless Mode -->
+              <div
+                class="bg-[#11171a] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">Faster Development Cycle</h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+MVP focuses on core features, allowing teams to cover the distance from prototype to full product faster. It reduces time-to-market and lets you test functionality and performance beforehand in the real world.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card: Cross-Platform Support -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+Scalable Architecture from Day One
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+By adopting a modular, API-first, and cloud-ready architecture, MVPs make up for easy feature scalability, integration of new technologies, and the capability to handle higher user loads as the product evolves.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card: Native Module Integration -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+Optimized Resource Utilization
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+MVPs help learn efficient use of development resources for startups, helping teams validate key technical assumptions before committing to a full-scale or complex infrastructure.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card: Cost & Time Efficiency -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+Easier Iteration & Integration
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+Lean codebase and agile workflows enhance MVPs, and the integration of third-party tools or any future restructuring is easy without massive redevelopment efforts.
+
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card: Hot Reloading -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">Early Performance & Security Testing</h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+MVP builds offer a controlled environment to test app performance, data handling, and security measures, helping you identify and fix issues before scaling to a full product.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+                    Apple App Store Guidelines
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+                    Includes the mandatory policies for privacy, user security, and performance that every iOS application must comply with before the app launch.
+                  </p>
+                </div>
+              </div>
+              <!-- 1 -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+                    GDPR 
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+                    Incorporates the international standards to manage personal data, ensuring user consent and transparency for applications that cater to EU users.
+
+                  </p>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+                    ISO/IEC 27001
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+                    A globally recognized standard that lays a reliable information security management system (ISMS) to secure sensitive app data.
+                  </p>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div
+                class="bg-[#1B1D1E] !w-[300px] !h-[300px] text-[#F5FAFE] rounded-2xl p-8 text-left shadow-lg flex flex-col justify-between border border-[#f5fafe97]"
+              >
+                <div>
+                  <h3 class="text-[23px] font-semibold mb-4">
+                    OWASP Mobile Security Standards 
+                  </h3>
+                  <p class="text-[#F5FAFE] text-[16px] leading-[26px]">
+                    An industrial framework that identifies and alleviates mobile-specific threats, securing apps against regular security threats and data leakages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Background gradient overlay -->
+        </section>
+     </div>
+    
+ <section class="text-white py-20 relative">
+        <div class="absolute inset-0 top-0 pointer-events-none -z-10 h-[50%]">
+        <img
+          src="./img/top-glow-timeline.svg"
+          alt="Glow Background"
+          class="w-full object-cover object-top h-full"
+        />
+      </div>
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-[30px] md:text-[40px] font-[400] mb-16 leading-snug">
+          Here’s What Our Clients Say About The <br class="hidden lg:block"/> Results They’ve Made With Us
+        </h2>
+      </div>
+
+      <div
+        class="relative min-h-screen text-zinc-100 px-6 py-24 hidden lg:flex flex-col items-center justify-center overflow-hidden !pt-0"
+      >
+        <!-- Background SVGs -->
+        <img
+          src="./img/left.svg"
+          alt="Background Top"
+          class="absolute top-0 left-0 pointer-events-none hidden xl:block"
+        />
+        <img
+          src="./img/right upper.svg"
+          alt="Background Top"
+          class="absolute top-[70px] right-0 pointer-events-none hidden xl:block"
+        />
+        <img
+          src="./img/right under.svg"
+          alt="Background Top"
+          class="absolute top-1/2 right-0 pointer-events-none hidden xl:block"
+        />
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 max-w-6xl w-full"
+        >
+          <!-- Left Column -->
+          <div class="flex flex-col gap-6">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-transparent backdrop-blur-md p-6 transition-opacity duration-1000 ease-in-out opacity-30 max-w-lg"
+            >
+              <p
+                class="text-base leading-relaxed font-[Inter,sans-serif] bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text"
+              >
+                <img
+                  src="./img/quote-golang.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="block w-8 h-8 mb-2 opacity-20"
+                />
+                NewAgeSys built and maintains my app with outstanding quality
+                and personal service — I'd give them six out of five stars!
+              </p>
+              <div
+                class="mt-4 pt-3 border-t bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text font-[Inter,sans-serif]"
+              >
+                <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                  Rob Evans
+                </p>
+                <p class="text-sm text-zinc-400">CEO - DONUT MAN APP</p>
+              </div>
+            </div>
+
+            <!-- Video thumbnail -->
+            <div
+              class="relative rounded-2xl overflow-hidden max-h-64 opacity-50"
+            >
+              <img
+                src="./img/v1.gif"
+                alt="LARRY SEIBEL"
+                class="w-[470px] h-full object-cover rounded-2xl"
+              />
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 w-full v1-gradient z-10"
+              ></div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-transparent backdrop-blur-md p-6 transition-opacity duration-1000 ease-in-out opacity-60"
+            >
+              <p
+                class="text-[18px] font-[400] leading-relaxed bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text"
+              >
+                <img
+                  src="./img/quote-golang.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="block w-10 mb-2 opacity-50"
+                />
+                NewAgeSys built our app with great design, professionalism, and
+                ongoing support.
+              </p>
+              <div
+                class="mt-4 pt-3 border-t"
+                style="
+                  border-image: linear-gradient(
+                      to right,
+                      rgba(255, 255, 255, 0.5),
+                      rgba(255, 255, 255, 0.05)
+                    )
+                    1;
+                "
+              >
+                <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                  LARRY SEIBEL
+                </p>
+                <p class="text-sm text-zinc-400">Founder - CAR-UP App</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex flex-col gap-6 pt-[70px]">
+            <!-- IMAN -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div
+                class="relative w-full md:w-[380px] h-[280px] rounded-2xl overflow-hidden"
+              >
+                <img
+                  src="./img/v2.gif"
+                  alt="IMAN KHAWAJA"
+                  class="w-full h-full object-cover rounded-2xl"
+                />
+                <div
+                  class="v2-gradient w-full h-full absolute inset-0 pointer-events-none z-10"
+                ></div>
+              </div>
+
+              <div
+                class="bg-transparent backdrop-blur-md p-6 md:w-1/2 flex flex-col justify-between"
+              >
+                <p
+                  class="text-[18px] leading-relaxed mb-4 font-[400] bg-gradient-to-r from-white to-white/20 text-transparent bg-clip-text"
+                >
+                  <img
+                    src="./img/quote-golang.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-10 mb-2"
+                  />
+                  NewAgeSys delivered exceptional, reliable work and truly cared
+                  about our app's success.
+                </p>
+                <div
+                  class="mt-4 pt-3 border-t"
+                  style="
+                    border-image: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0.5),
+                        rgba(255, 255, 255, 0.05)
+                      )
+                      1;
+                  "
+                >
+                  <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                    IMAN KHAWAJA
+                  </p>
+                  <p class="text-sm text-zinc-400">Owner - ISRA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DAVID -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div
+                class="relative w-full md:w-1/2 rounded-2xl overflow-hidden max-h-[350px]"
+              >
+                <img
+                  src="./img/v3.gif"
+                  alt="DAVID CHABUKASHVILI"
+                  class="w-full h-full object-cover rounded-2xl"
+                />
+                <div
+                  class="v3-gradient w-full h-full absolute inset-0 pointer-events-none z-10"
+                ></div>
+              </div>
+
+              <div
+                class="bg-transparent backdrop-blur-md p-6 md:w-2/3 flex flex-col justify-end"
+              >
+                <p
+                  class="text-[18px] leading-relaxed mb-4 font-[400] bg-gradient-to-r from-white to-white/20 text-transparent bg-clip-text"
+                >
+                  <img
+                    src="./img/quote-golang.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-10 mb-2"
+                  />
+                  NewAgeSys delivered high-quality mobile and web apps on time,
+                  always going above and beyond our expectations.
+                </p>
+                <div
+                  class="pt-3 border-t"
+                  style="
+                    border-image: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0.5),
+                        rgba(255, 255, 255, 0.05)
+                      )
+                      1;
+                  "
+                >
+                  <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                    DAVID CHABUKASHVILI
+                  </p>
+                  <p class="text-sm text-zinc-400">Founder - LCard App</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:hidden">
+        <div
+          class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto"
+        >
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=_AG--jyDX3c"
+            >
+              <img
+                src="./img/client-img-1.webp"
+                alt="Roger J. Clappe"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  ROGER J CLAPPE
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  CEO - Whip-Flip
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+            >
+              <img
+                src="./img/larry-image.svg"
+                alt="Larry Seibel"
+                class="w-full h-full object-cover rounded-[24px] transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Larry Seibel
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  Founder - CAR-UP App
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
+            >
+              <img
+                src="./img/client-img-3.webp"
+                alt="Rob Salerno"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Rob Salerno
+                </p>
+                <p
+                  class="text-[16px] text-white opacity-[0.5] truncate uppercase"
+                >
+                  CEO - CliquePrize
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=PttTsDGO2AA"
+            >
+              <img
+                src="./img/client-img-4.webp"
+                alt="Chris O'Rorke"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Chris O'Rorke
+                </p>
+                <p
+                  class="text-[16px] text-white opacity-[0.5] truncate uppercase"
+                >
+                  Guaranteed Tip Sheet
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
+            >
+              <img
+                src="./img/client-img-5.webp"
+                alt="Iman Khawaja"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Iman Khawaja
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  Owner - ISRA
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+            >
+              <img
+                src="./img/client-img-6.webp"
+                alt="David Chabukashvili"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  David Chabukashvili
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  Founder - Lcard App
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=slRQbxC1UoI"
+            >
+              <img
+                src="./img/client-img-7.webp"
+                alt="Rob Evans"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Rob Evans
+                </p>
+                <p
+                  class="text-[16px] text-white opacity-[0.5] truncate uppercase"
+                >
+                  CEO - Donut Man app
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- View All Button -->
+      <div class="mt-12 mx-auto w-full text-center flex justify-center">
+        <a href="#" class="btn-knowmore">
+          View All Testimonials
+          <span>
+            <svg
+              width="7"
+              height="11"
+              viewBox="0 0 7 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                stroke="#212121"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <!-- Soft Gradient Overlay -->
+      <!-- <div
+        class="absolute top-0 left-0 w-full h-[300px] bg-gradient-to-b from-[#283A8F]/40 to-transparent pointer-events-none"
+      ></div> -->
+    </section>
+
+
+    <div class="relative overflow-hidden text-white py-10 lg:py-20">
+      <img
+        src="./img/grid-bg-golang.webp"
+        alt="Background"
+        class="absolute top-0 left-0 w-full lg:w-1/2 h-auto -z-10"
+      />
+      <img
+        src="./img/gradi-golang.webp"
+        alt="Background"
+        class="absolute top-0 left-0 w-full h-auto -z-10"
+      />
+
+      <!-- FAQs Header Section -->
+      <section class="py-12 bg golang-sect-border relative">
+        <div
+          class="container grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto px-4 items-center"
+        >
+          <div>
+            <h2
+            class="text-white text-[30px] md:text-[40px] xl:text-[50px]  font-[400] mb-6 md:text-left text-center"
+          >
+            Case Studies of Solutions <br class="hidden lg:block"/>
+            Delivered by Our MVP <br class="hidden lg:block"/>
+            Development Services for <br class="hidden lg:block"/>
+            Startups
+          </h2>
+          <p class="text-[#A3ACB5] text-[17px] leading-[28px] mb-10 ">
+            Over the years, as an MVP design and development company, we have delivered numerous solutions with success, encompassing multiple complex solutions across industries. Our solutions not only focus on delivering a core value proposition but are built with the perspective of gaining investor attention.
+          </p>
+          </div>
+          <div class="hidden lg:flex justify-end">
+            <img
+              src="./img/golang-client.webp"
+              alt="FAQ Image"
+              class="w-[80%] h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Content Section -->
+      <section class="faq py-10 md:py-[80px]">
+        <div class="container">
+          <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+            <div class="accordion faq-accordion">
+              <div class="flex justify-center relative">
+                <div class="w-full lg:w-[80%] text-white">
+                  <div class="px-[6px]">
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] 
+                        lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal"
+                          >What are MVP development services?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content show">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+                            MVP development services, in general, are about building a smaller version of your full-fledged product that covers all its core features.
+                          </p>
+                          <p class="mt-2">
+                            To add, it is the end-to-end process utilized to build a simplified and launch-ready version of a product that can generate real user insights, attract early users, and gain the interest of investors (showcasing product value).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal"
+                          >What is the typical cost range for developing an MVP?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+                            The typical cost range for developing an MVP depends on the range of services you are asking for and the region of outsourcing. For instance, in the North American region, the per-hour cost can lie between $100-$200, while in Latin America, the cost per hour lies between $30-$70.
+                          </p>
+                          <p class="mt-2">At NewAgeSysIT, despite being a US-based company, the price range lies between $25-$49 per hour because we take the help of our offshore development centers to minimize development cost.
+</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal"
+                          >How do we measure the ROI and success of an MVP beyond immediate revenue?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+                            Some of the key points to measure the ROI and immediate revenue success of an MVP are:
+                          </p>
+                          <ul class="list-disc list-inside mt-2">
+                            <li>Tracking user engagement & retention of the MVP</li>
+                            <li>Measuring sign-ups, downloads, or trial completions is a strong indicator of interest</li>
+                            <li>Positive customer feedback and validation of users</li>
+                            <li>Insights with minimal investment</li>
+                            <li>Determining how quickly the MVP reached users for testing and iteration</li>
+                            <li>Checking if the MVP can handle future growth and technical expansion</li>
+                            <li>Checking if the MVP can handle future growth and technical expansion</li>
+                            <li>Early traction and confidence from external parties.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal"
+                          >How do you protect my business idea during the MVP development process?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+                          As an MVP software development agency that has remained operational for more than 25+ years, we understand the importance of protecting our clients’ business ideas.
+
+                          </p>
+                          <p class="mt-2">
+                            For client confidence, we make use of strict NDAs, IP ownership agreements, and secure development environments.
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal">
+                          What happens after my MVP is launched?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                        <p>After your MVP is launched, your strategy moves from validation to growth. 
+</p>
+                          <p class="mt-2">
+                            Here you track user feedback, performance analytics, and engagement data to identify what works and what needs improvement. 
+                          </p>
+                          <p>
+                            We can help you with all this and more, in terms of feature enhancements, scalability upgrades, and UI/UX refinements. In fact, our post-launch support ensures smooth operations, continuous optimization, and a seamless transition from MVP to a full-scale market-ready product.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 1 -->
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal">
+                          How long does it take to develop an MVP?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+The time to develop an MVP depends on factors like complexity, feature integration, and tech stack. Ideally, the time of development lies between 8 and 16 weeks, which covers various stages ranging from discovery to testing. 
+                          </p>
+                          <p class="mt-2">
+                            For sustained pace, we make use of an agile approach for faster iterations, thereby allowing you to validate your idea quickly and move toward scaling without compromises.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                     <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal">
+                            Can NewAgeSysIT help in turning my MVP into a full product later?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+Absolutely. In fact, every MVP we build follows a scalable architecture, which means that post-validation of the idea, you can expand it into a full-fledged product. And, our team of designers and developers delivers full-stack capabilities for added features, integrations, and design enhancement.
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                     <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal">
+                         Do you provide post-launch analytics and performance monitoring?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+                           Yes. After the MVP is launched, we integrate analytics dashboards and tracking tools to monitor user engagement, retention, and performance metrics. It allows us to gather actionable insights, understand user behavior, and even plan the next iteration of your product with precision.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                     <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal">
+                         Is NewAgeSysIT the best MVP development company?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="Plus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                          <span class="minus-icon">
+                            <img
+                              src="./img/arrow-down.svg"
+                              alt="minus Icon"
+                              class="w-6 h-6"
+                            />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div
+                          class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
+                        >
+                          <p>
+                           We can’t entertain ourselves as the self-proclaimed best MVP development company. In fact, in reality, there are none. Each company caters to a certain set of problems and is chosen by the client because they are the ideal fit for them, in all aspects. 
+                          </p>
+                          <p class="mt-2">
+                            However, as an MVP software development agency, here are certain points that definitely showcase our credibility in the market:
+                          </p>
+                          <div>
+                            <ul class="list-disc list-inside mt-2">
+                              <li>We offer a 100% in-house team model, which means you get a dedicated staff.</li>
+                              <li>We cover a diverse range of industries, which include healthcare, fintech, e-commerce, transportation, etc., that showcase industry adaptability.</li>
+                              <li>
+                                We have developers who offer full-lifecycle capabilities, so you get everything under a single roof.
+                              </li>
+                              <li>
+                                We have a GoodFirms rating of 4.8, and have strong testimonials and ratings.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
+      <div class="w-full container mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">
+          Related Blogs
+        </h2>
+
+        <!-- Blog Carousel Container -->
+        <div class="related-blogs-carousel owl-carousel owl-theme">
+          <!-- Blog Card 1 -->
+          <a href="#">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List.webp"
+                alt="How to Build a SaaS Application"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                How to Build a SaaS Application?– Cover Nuances, Step-by-Step
+                Process, Cost, and More
+              </h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.webp"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.webp"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.webp"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.webp"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+        document
+          .querySelectorAll(".accordion-content")
+          .forEach((item) => item.classList.remove("show"));
+        document
+          .querySelectorAll(".transform")
+          .forEach((icon) => icon.classList.remove("rotate-180"));
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".client_says").owlCarousel({
+          stagePadding: 200,
+          loop: true,
+          margin: 80,
+          dots: false,
+          items: 1,
+          lazyLoad: true,
+          nav: true,
+          autoplay: false,
+          autoplayTimeout: 3000,
+          smartSpeed: 800,
+          // navText: [
+          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+          // ],
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+            },
+            600: {
+              items: 1,
+              stagePadding: 50,
+            },
+            1000: {
+              items: 1,
+              stagePadding: 200,
+            },
+            1200: {
+              items: 1,
+              stagePadding: 250,
+            },
+            1400: {
+              items: 1,
+              stagePadding: 300,
+            },
+            1600: {
+              items: 1,
+              stagePadding: 350,
+            },
+            1800: {
+              items: 1,
+              stagePadding: 400,
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".video-popup").magnificPopup({
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 300,
+          preloader: true,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      function toggleAccordionPPC(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Find the parent section that contains this accordion
+        const parentSection = button.closest(".basis-full");
+
+        if (parentSection) {
+          // Close all accordion items within this section only
+          const sectionAccordionItems = parentSection.querySelectorAll(
+            ".accordion-content-ppc"
+          );
+          sectionAccordionItems.forEach((item) => {
+            item.classList.remove("show");
+          });
+
+          // Rotate all accordion icons within this section only
+          const sectionAccordionIcons =
+            parentSection.querySelectorAll(".transform");
+          sectionAccordionIcons.forEach((icon) => {
+            icon.classList.remove("rotate-180");
+          });
+        }
+
+        // Open the clicked accordion item if it was closed
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-1").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 300,
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-1 .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-1 .owl-nav .owl-next");
+        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-2a").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              // stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 3, // Show 3 items at larger screens
+              // stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 4, // Show 3 items at larger screens
+
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-1 .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay1");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-1 .owl-nav .owl-next");
+        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const owl = $(".slider-3");
+        const leftOverlay = document.getElementById("leftOverlay3");
+
+        owl.owlCarousel({
+          autoWidth: true,
+          margin: 30,
+          loop: false,
+          dots: false,
+          nav: true,
+          // stagePadding: 180,
+          // responsive: {
+          // 0: { items: 1, stagePadding: 20 },
+          // 768: { items: 2, stagePadding: 50 },
+          // 1024: { items: 3, stagePadding: 100 },
+          // 1440: { items: 1, stagePadding: 0 },
+          // 1600: { items: 1, stagePadding: 0 },
+          // },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        const owl = $(".mobile-slider");
+
+        owl.owlCarousel({
+          items: 2,
+          margin: 30,
+          loop: false,
+          dots: false,
+          nav: true,
+          stagePadding: 180,
+          responsive: {
+            0: { items: 1, stagePadding: 20 },
+            768: { items: 2, stagePadding: 50 },
+          },
+        });
+
+        const nextbutton = document.querySelector(
+          ".slider-1 .owl-nav .owl-next"
+        );
+        const prevbutton = document.querySelector(
+          ".slider-1 .owl-nav .owl-prev"
+        );
+      });
+    </script>
+
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const collapsed = document.getElementById("collapsedState");
+      const expanded = document.getElementById("expandedState");
+
+      toggleBtn.addEventListener("click", () => {
+        collapsed.classList.add("hidden");
+        expanded.classList.remove("hidden");
+      });
+
+      document.getElementById("viewLessBtn").addEventListener("click", () => {
+        expanded.classList.add("hidden");
+        collapsed.classList.remove("hidden");
+      });
+    </script>
+
+    <script>
+      (function () {
+        const SELECTOR = ".timeline__item";
+        const CLASS_NAME = "in-view";
+
+        const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
+          (el) => !el.classList.contains(CLASS_NAME)
+        );
+        if (!all.length) return;
+
+        // --- Helper for manual checks (used by Locomotive & fallback) ---
+        function hasEntered(el, offset = 0.9) {
+          const r = el.getBoundingClientRect();
+          const vh =
+            window.innerHeight || document.documentElement.clientHeight;
+          const triggerY = vh * offset; // 0.9 => 90% of viewport height
+          return r.top <= triggerY && r.bottom >= 0;
+        }
+
+        // --- If LocomotiveScroll is present, use its scroll event ---
+        if (window.locoScroll) {
+          const loco = window.locoScroll;
+          const pending = new Set(all);
+
+          function check() {
+            pending.forEach((el) => {
+              if (hasEntered(el)) {
+                el.classList.add(CLASS_NAME);
+                pending.delete(el);
+              }
+            });
+            if (!pending.size && loco.off) {
+              loco.off("scroll", check);
+              window.removeEventListener("resize", check);
+            }
+          }
+
+          loco.on("scroll", check);
+          window.addEventListener("resize", check, { passive: true });
+          // initial pass
+          check();
+          return;
+        }
+
+        // --- Prefer IntersectionObserver when no LocomotiveScroll ---
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add(CLASS_NAME);
+                  obs.unobserve(entry.target); // ONCE
+                }
+              });
+            },
+            {
+              root: null,
+              threshold: 0.15, // fire when ~15% visible
+              rootMargin: "0px 0px -10% 0px", // a touch earlier
+            }
+          );
+
+          all.forEach((el) => io.observe(el));
+          return;
+        }
+
+        // --- Fallback: plain scroll listener ---
+        const pending = new Set(all);
+        function checkFallback() {
+          pending.forEach((el) => {
+            if (hasEntered(el)) {
+              el.classList.add(CLASS_NAME);
+              pending.delete(el);
+            }
+          });
+          if (!pending.size) {
+            window.removeEventListener("scroll", checkFallback);
+            window.removeEventListener("resize", checkFallback);
+          }
+        }
+        window.addEventListener("scroll", checkFallback, { passive: true });
+        window.addEventListener("resize", checkFallback, { passive: true });
+        checkFallback();
+      })();
+    </script>
+    <script>
+      const imageSources = [
+        "./img/uai-1.webp",
+
+        "./img/uai-2.webp",
+        "./img/uai-3.webp",
+        "./img/uai-4.webp",
+        "./img/uai-5.webp",
+      ];
+
+      function toggleUniqueAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Collapse all
+        document.querySelectorAll(".accordion-content").forEach((item) => {
+          item.classList.remove("show");
+          item.parentElement.classList.remove("bg-[#121314]");
+        });
+        document
+          .querySelectorAll(".arrow-icon")
+          .forEach((icon) => icon.classList.remove("-rotate-90"));
+
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
+          content.parentElement.classList.add("bg-[#121314]");
+          // Smooth image fade
+          const imgIndex = button.getAttribute("data-img-index");
+          const newSrc = imageSources[imgIndex];
+          const currentImg = document.getElementById("accordionImage");
+          const nextImg = document.getElementById("accordionImageNext");
+
+          if (currentImg && nextImg) {
+            nextImg.src = newSrc;
+            nextImg.classList.add("opacity-100");
+            currentImg.classList.remove("opacity-100");
+            currentImg.classList.add("opacity-0");
+
+            // After fade completes, swap image sources
+            setTimeout(() => {
+              currentImg.src = newSrc;
+              currentImg.classList.remove("opacity-0");
+              currentImg.classList.add("opacity-100");
+              nextImg.classList.remove("opacity-100");
+              nextImg.src = ""; // Optional cleanup
+            }, 300); // matches transition duration
+          }
+        }
+      }
+    </script>
+    <script>
+      const buttons = document.querySelectorAll(".");
+      const contents = document.querySelectorAll(".content-item");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.target;
+
+          // Reset active states
+          buttons.forEach((b) => {
+            b.classList.remove("text-white");
+            b.classList.add("text-gray-500");
+          });
+          contents.forEach((c) => c.classList.add("hidden"));
+
+          // Activate selected
+          btn.classList.remove("text-gray-500");
+          btn.classList.add("text-white");
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          // disableOn: 700,
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+
+    <!-- Related Blogs: Owl Carousel init (unique instance) -->
+    <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            // navText: [
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
+            // ],
+
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-spectrum").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 300,
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-spectrum .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-spectrum .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-spectrum .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-spectrum .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-spectrum .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay-spectrum");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-fuel .owl-nav .owl-next");
+        const prevButton = $(".slider-fuel .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+</body>
+</html>
