@@ -2777,6 +2777,10 @@ video {
   min-height: 44px;
 }
 
+.min-h-\[450px\] {
+  min-height: 450px;
+}
+
 .min-h-\[45px\] {
   min-height: 45px;
 }
@@ -8519,6 +8523,10 @@ video {
   padding-right: 15px;
 }
 
+.pr-\[30px\] {
+  padding-right: 30px;
+}
+
 .pr-\[50px\] {
   padding-right: 50px;
 }
@@ -8669,6 +8677,10 @@ video {
 
 .pt-\[90px\] {
   padding-top: 90px;
+}
+
+.pb-\[60px\] {
+  padding-bottom: 60px;
 }
 
 .text-left {
@@ -16282,6 +16294,22 @@ footer ul li {
     pointer-events: none;
     /* decorative only */
     background: linear-gradient(0deg, #ccccccb9 0%, rgba(153, 153, 153, 0) 100%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gradient-border-golang-lg {
+    position: relative;
+  }
+
+  .gradient-border-golang-lg:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0 !important;
+    height: 0 !important;
+    background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
   }
 }
 
@@ -25465,6 +25493,14 @@ linear-gradient(211.14deg, rgba(0, 0, 0, 0) 18.83%, rgba(18, 190, 85, 0.2) 113.1
 
   .min-1240px\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .min-1240px\:pr-\[50px\] {
+    padding-right: 50px;
+  }
+
+  .min-1240px\:pl-\[50px\] {
+    padding-left: 50px;
   }
 }
 
