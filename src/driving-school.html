@@ -22,15 +22,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.12.1.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-    />
     <link href="style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -60,13 +51,20 @@
       .feature-scrollbar::-webkit-scrollbar-thumb:hover {
         background: #cfcfcf;
       }
+@media(min-width: 1440px)  {
+      .slider-3 .owl-nav {
+        margin-top: 0px !important;
+      }
+    }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   </head>
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
     <section
+    
       class="bg-cover bg-center bg-no-repeat flex flex-col justify-between items-center h-[80vh] md:h-[100vh] lg:h-[120vh] relative overflow-hidden"
       style="background-image: url('./img/driving-banner.webp')"
     >
@@ -951,7 +949,7 @@
               >
                 <div class="py-2 text-[#A3ACB5] lg:pl-16 lg:pr-10">
                   <div class="text-[16px] font-[400] text-[#A3ACB5]">
-                    <ul class="list-disc space-y-3">
+                    <ul class="list-disc space-y-3 p-3">
                       <li>CRM and accounting tool integration</li>
 
                       <li>Branch-wise export templates</li>
@@ -1047,7 +1045,7 @@
 
     <!-- Banner Call To Action Section -->
     <section
-      class="px-6 py-8 lg:py-16 bg-[url('./img/ctamobile2.webp')]  md:bg-[url('./img/driving-cta-2.webp')] md:bg-none bg-black bg-cover bg-center bg-no-repeat relative overflow-hidden"
+      class="px-6 py-8 lg:py-16 bg-[url('./img/ctamobile2.webp')] md:bg-none bg-black bg-cover bg-center bg-no-repeat relative overflow-hidden"
     >
       <div class="container mx-auto">
         <div
@@ -1176,7 +1174,7 @@
                   <div class="bg-[#20212B] rounded-[10px] min-h-[80px]">
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordionTech(this)"
                     >
                       <span class="font-[300]">Payment Integrations</span>
                       <span
@@ -1291,7 +1289,7 @@
                   <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordionTech(this)"
                     >
                       <span class="font-[300]">Calendar & Navigation </span>
                       <span
@@ -1362,7 +1360,7 @@
                   <div class="bg-[#20212B] rounded-[10px] min-h-[80px] mt-3">
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordionTech(this)"
                     >
                       <span class="font-[300]">AI-Powered Capabilities </span>
                       <span
@@ -1503,7 +1501,7 @@
                   >
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordionTech(this)"
                     >
                       <span class="font-[300]">Messaging Services </span>
                       <span
@@ -1576,7 +1574,7 @@
                   <div class="bg-[#20212B] rounded-[10px] mt-3 min-h-[80px]">
                     <button
                       class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                      onclick="toggleAccordionPPC(this)"
+                      onclick="toggleAccordionTech(this)"
                     >
                       <span class="font-[300]">Digital Signatures </span>
                       <span
@@ -2914,7 +2912,7 @@
     </section>
 
     <section
-      class="relative text-white py-20 overflow-hidden px-5 golang-sect-border-1"
+      class="relative text-white py-10 xl:py-20 overflow-hidden px-5 golang-sect-border-1"
     >
       <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
       <!-- Blur is removed by default and will be toggled when the slider moves -->
@@ -4100,10 +4098,7 @@
           autoplay: false,
           autoplayTimeout: 3000,
           smartSpeed: 800,
-          // navText: [
-          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
-          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
-          // ],
+         
           responsive: {
             0: {
               items: 1,
@@ -4139,31 +4134,33 @@
     </script>
     <script>
       $(document).ready(function () {
-        $(".video-popup").magnificPopup({
+        // Initialize Magnific Popup for YouTube and Vimeo videos
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
           type: "iframe",
           mainClass: "mfp-fade",
           removalDelay: 300,
           preloader: true,
           fixedContentPos: false,
+          iframe: {
+            patterns: {
+              youtube: {
+                index: "youtube.com/",
+                id: "v=",
+                src: "https://www.youtube.com/embed/%id%?autoplay=1"
+              },
+              vimeo: {
+                index: "vimeo.com/",
+                id: "/",
+                src: "https://player.vimeo.com/video/%id%?autoplay=1"
+              }
+            }
+          }
         });
       });
     </script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-      function toggleAccordionPPC(button) {
+      function toggleAccordionTech(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
 
@@ -4197,243 +4194,19 @@
 
     <script>
       $(document).ready(function () {
-        // Initialize carousel
-        const owl = $(".slider-1").owlCarousel({
-          loop: false,
-          margin: 20,
-          nav: true,
-          dots: false,
-          center: false,
-          responsive: {
-            0: {
-              items: 1,
-              stagePadding: 20,
-              margin: 10,
-            },
-            768: {
-              items: 2,
-              stagePadding: 50,
-              margin: 15,
-            },
-            1024: {
-              items: 3,
-              stagePadding: 40,
-              margin: 20,
-            },
-            1440: {
-              items: 1, // Show 3 items at larger screens
-              stagePadding: 200,
-              margin: 20,
-            },
-            1600: {
-              items: 1, // Show 3 items at larger screens
-              stagePadding: 300,
-              margin: 25,
-            },
-          },
-          onInitialized: function () {
-            // Get the tallest item height
-            var maxHeight = Math.max.apply(
-              null,
-              $(".slider-1 .owl-item")
-                .map(function () {
-                  return $(this).height();
-                })
-                .get()
-            );
-            // Set all items to that height
-            $(".slider-1 .owl-item").height(maxHeight);
-          },
-          onResized: function () {
-            // Recalculate heights on resize
-            $(".slider-1 .owl-item").css("height", "auto");
-            var maxHeight = Math.max.apply(
-              null,
-              $(".slider-1 .owl-item")
-                .map(function () {
-                  return $(this).height();
-                })
-                .get()
-            );
-            $(".slider-1 .owl-item").height(maxHeight);
-          },
-        });
-
-        // Get leftOverlay element
-        const leftOverlay = document.getElementById("leftOverlay");
-
-        // Add blur effect on slide change
-        owl.on("translate.owl.carousel", function () {
-          if (leftOverlay) {
-            leftOverlay.classList.add("backdrop-blur-3xl");
-          }
-        });
-
-        // Remove blur when back to first slide
-        owl.on("changed.owl.carousel", function (event) {
-          if (!leftOverlay) return;
-
-          const carousel = event.relatedTarget;
-          const current = carousel.current();
-          const firstIndex = carousel.minimum();
-
-          if (current === firstIndex) {
-            setTimeout(() => {
-              leftOverlay.classList.remove("backdrop-blur-3xl");
-            }, 300); // wait for animation to finish
-          } else {
-            leftOverlay.classList.add("backdrop-blur-3xl");
-          }
-        });
-
-        // Custom navigation setup if needed
-        const nextButton = $(".slider-1 .owl-nav .owl-next");
-        const prevButton = $(".slider-1 .owl-nav .owl-prev");
-
-        if (nextButton.length && prevButton.length) {
-          nextButton.on("click", function () {
-            owl.trigger("next.owl.carousel");
-          });
-
-          prevButton.on("click", function () {
-            owl.trigger("prev.owl.carousel");
-          });
-        }
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        // Initialize carousel
-        const owl = $(".slider-2").owlCarousel({
-          loop: false,
-          margin: 20,
-          nav: true,
-          dots: false,
-          center: false,
-          responsive: {
-            0: {
-              items: 1,
-              stagePadding: 20,
-              margin: 10,
-            },
-            768: {
-              items: 2,
-              stagePadding: 50,
-              margin: 15,
-            },
-            1024: {
-              items: 3,
-              stagePadding: 40,
-              margin: 20,
-            },
-            1440: {
-              items: 1, // Show 3 items at larger screens
-              stagePadding: 200,
-              margin: 20,
-            },
-            1600: {
-              items: 1, // Show 3 items at larger screens
-              stagePadding: 300,
-              margin: 25,
-            },
-          },
-          onInitialized: function () {
-            // Get the tallest item height
-            var maxHeight = Math.max.apply(
-              null,
-              $(".slider-1 .owl-item")
-                .map(function () {
-                  return $(this).height();
-                })
-                .get()
-            );
-            // Set all items to that height
-            $(".slider-1 .owl-item").height(maxHeight);
-          },
-          onResized: function () {
-            // Recalculate heights on resize
-            $(".slider-1 .owl-item").css("height", "auto");
-            var maxHeight = Math.max.apply(
-              null,
-              $(".slider-1 .owl-item")
-                .map(function () {
-                  return $(this).height();
-                })
-                .get()
-            );
-            $(".slider-1 .owl-item").height(maxHeight);
-          },
-        });
-
-        // Get leftOverlay element
-        const leftOverlay = document.getElementById("leftOverlay1");
-
-        // Add blur effect on slide change
-        owl.on("translate.owl.carousel", function () {
-          if (leftOverlay) {
-            leftOverlay.classList.add("backdrop-blur-3xl");
-          }
-        });
-
-        // Remove blur when back to first slide
-        owl.on("changed.owl.carousel", function (event) {
-          if (!leftOverlay) return;
-
-          const carousel = event.relatedTarget;
-          const current = carousel.current();
-          const firstIndex = carousel.minimum();
-
-          if (current === firstIndex) {
-            setTimeout(() => {
-              leftOverlay.classList.remove("backdrop-blur-3xl");
-            }, 300); // wait for animation to finish
-          } else {
-            leftOverlay.classList.add("backdrop-blur-3xl");
-          }
-        });
-
-        // Custom navigation setup if needed
-        const nextButton = $(".slider-1 .owl-nav .owl-next");
-        const prevButton = $(".slider-1 .owl-nav .owl-prev");
-
-        if (nextButton.length && prevButton.length) {
-          nextButton.on("click", function () {
-            owl.trigger("next.owl.carousel");
-          });
-
-          prevButton.on("click", function () {
-            owl.trigger("prev.owl.carousel");
-          });
-        }
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        const owl = $(".slider-3");
-        const leftOverlay = document.getElementById("leftOverlay3");
-
+        const owl = $(".slider-3");  
         owl.owlCarousel({
           autoWidth: true,
           margin: 30,
           loop: false,
           dots: false,
-          nav: true,
-          // stagePadding: 180,
-          // responsive: {
-          // 0: { items: 1, stagePadding: 20 },
-          // 768: { items: 2, stagePadding: 50 },
-          // 1024: { items: 3, stagePadding: 100 },
-          // 1440: { items: 1, stagePadding: 0 },
-          // 1600: { items: 1, stagePadding: 0 },
-          // },
+          nav: true,    
         });
       });
     </script>
     <script>
       $(document).ready(function () {
         const owl = $(".mobile-slider");
-
         owl.owlCarousel({
           items: 2,
           margin: 30,
@@ -4447,12 +4220,7 @@
           },
         });
 
-        const nextbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-next"
-        );
-        const prevbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-prev"
-        );
+       
       });
     </script>
 
@@ -4460,116 +4228,19 @@
       const toggleBtn = document.getElementById("toggleBtn");
       const collapsed = document.getElementById("collapsedState");
       const expanded = document.getElementById("expandedState");
-
       toggleBtn.addEventListener("click", () => {
         collapsed.classList.add("hidden");
         expanded.classList.remove("hidden");
       });
-
       document.getElementById("viewLessBtn").addEventListener("click", () => {
         expanded.classList.add("hidden");
         collapsed.classList.remove("hidden");
       });
     </script>
-
     <script>
-      (function () {
-        const SELECTOR = ".timeline__item";
-        const CLASS_NAME = "in-view";
-
-        const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
-          (el) => !el.classList.contains(CLASS_NAME)
-        );
-        if (!all.length) return;
-
-        // --- Helper for manual checks (used by Locomotive & fallback) ---
-        function hasEntered(el, offset = 0.9) {
-          const r = el.getBoundingClientRect();
-          const vh =
-            window.innerHeight || document.documentElement.clientHeight;
-          const triggerY = vh * offset; // 0.9 => 90% of viewport height
-          return r.top <= triggerY && r.bottom >= 0;
-        }
-
-        // --- If LocomotiveScroll is present, use its scroll event ---
-        if (window.locoScroll) {
-          const loco = window.locoScroll;
-          const pending = new Set(all);
-
-          function check() {
-            pending.forEach((el) => {
-              if (hasEntered(el)) {
-                el.classList.add(CLASS_NAME);
-                pending.delete(el);
-              }
-            });
-            if (!pending.size && loco.off) {
-              loco.off("scroll", check);
-              window.removeEventListener("resize", check);
-            }
-          }
-
-          loco.on("scroll", check);
-          window.addEventListener("resize", check, { passive: true });
-          // initial pass
-          check();
-          return;
-        }
-
-        // --- Prefer IntersectionObserver when no LocomotiveScroll ---
-        if ("IntersectionObserver" in window) {
-          const io = new IntersectionObserver(
-            (entries, obs) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add(CLASS_NAME);
-                  obs.unobserve(entry.target); // ONCE
-                }
-              });
-            },
-            {
-              root: null,
-              threshold: 0.15, // fire when ~15% visible
-              rootMargin: "0px 0px -10% 0px", // a touch earlier
-            }
-          );
-
-          all.forEach((el) => io.observe(el));
-          return;
-        }
-
-        // --- Fallback: plain scroll listener ---
-        const pending = new Set(all);
-        function checkFallback() {
-          pending.forEach((el) => {
-            if (hasEntered(el)) {
-              el.classList.add(CLASS_NAME);
-              pending.delete(el);
-            }
-          });
-          if (!pending.size) {
-            window.removeEventListener("scroll", checkFallback);
-            window.removeEventListener("resize", checkFallback);
-          }
-        }
-        window.addEventListener("scroll", checkFallback, { passive: true });
-        window.addEventListener("resize", checkFallback, { passive: true });
-        checkFallback();
-      })();
-    </script>
-    <script>
-      const imageSources = [
-        "./img/staff-augmentation-golang.webp",
-        "./img/dedicated-team-golang.webp",
-        "./img/project-based.webp",
-        "./img/fixed-price-models.webp",
-        "./img/time&material.webp",
-      ];
-
       function toggleUniqueAccordion(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
-
         // Collapse all
         document.querySelectorAll(".accordion-content").forEach((item) => {
           item.classList.remove("show");
@@ -4578,38 +4249,14 @@
         document
           .querySelectorAll(".arrow-icon")
           .forEach((icon) => icon.classList.remove("-rotate-90"));
-
         if (!isOpen) {
           content.classList.add("show");
           button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
-          content.parentElement.classList.add("bg-[#121314]");
-          // Smooth image fade
-          const imgIndex = button.getAttribute("data-img-index");
-          const newSrc = imageSources[imgIndex];
-          const currentImg = document.getElementById("accordionImage");
-          const nextImg = document.getElementById("accordionImageNext");
-
-          if (currentImg && nextImg) {
-            nextImg.src = newSrc;
-            nextImg.classList.add("opacity-100");
-            currentImg.classList.remove("opacity-100");
-            currentImg.classList.add("opacity-0");
-
-            // After fade completes, swap image sources
-            setTimeout(() => {
-              currentImg.src = newSrc;
-              currentImg.classList.remove("opacity-0");
-              currentImg.classList.add("opacity-100");
-              nextImg.classList.remove("opacity-100");
-              nextImg.src = ""; // Optional cleanup
-            }, 300); // matches transition duration
-          }
+          content.parentElement.classList.add("bg-[#121314]");  
         }
       }
     </script>
     <script>
-     
-
       function toggleUniqueAccordionNew(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
@@ -4630,69 +4277,6 @@
         }
       }
     </script>
-
-
-
-    <script>
-      const buttons = document.querySelectorAll(".");
-      const contents = document.querySelectorAll(".content-item");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const target = btn.dataset.target;
-
-          // Reset active states
-          buttons.forEach((b) => {
-            b.classList.remove("text-white");
-            b.classList.add("text-gray-500");
-          });
-          contents.forEach((c) => c.classList.add("hidden"));
-
-          // Activate selected
-          btn.classList.remove("text-gray-500");
-          btn.classList.add("text-white");
-          document.getElementById(target).classList.remove("hidden");
-        });
-      });
-    </script>
-    <script>
-      $(function () {
-        $(".popup-youtube, .popup-vimeo").magnificPopup({
-          // disableOn: 700,
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false,
-        });
-      });
-    </script>
-
-    <!-- Related Blogs: Owl Carousel init (unique instance) -->
-    <script>
-      $(document).ready(function () {
-        const $rb = $(".related-blogs-carousel");
-        if ($rb.length) {
-          $rb.owlCarousel({
-            loop: false,
-            margin: 24,
-            dots: false,
-            nav: true,
-            // navText: [
-            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
-            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
-            // ],
-
-            responsive: {
-              0: { items: 1, margin: 12 },
-              640: { items: 2, margin: 16 },
-              1024: { items: 3, margin: 20 },
-            },
-          });
-        }
-      });
-    </script>
-
     <script>
       // Feature content switching functionality for "Why Choose" section
       const flexButtons = document.querySelectorAll(".flex_button");
@@ -4733,8 +4317,7 @@
           flexButtons[0].classList.remove("border", "border-[#2A2D30]");
         }
       }
-    </script>
-    
+    </script> 
     <!-- Dual Scrollbar Synchronization -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
