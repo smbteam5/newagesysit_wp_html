@@ -23,6 +23,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <noscript>
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
@@ -57,6 +65,28 @@
       onload="this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <style>
+      body {
+        background: 
+    /* Top & bottom black fade */ linear-gradient(
+            180deg,
+            #000 0%,
+            rgba(0, 0, 0, 0.9) 15%,
+            rgba(0, 0, 0, 0) 40%,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0.9) 85%,
+            #000 100%
+          ),
+          /* Left→center→right gradient */
+            linear-gradient(
+              90deg,
+              #000000 0%,
+              rgb(47, 63, 176) 50%,
+              #000000 100%
+            );
+        background-blend-mode: normal;
+      }
+    </style>
   </head>
   <body class="bg-black font-inter overflow-hidden">
     <section
@@ -190,127 +220,623 @@
       </div>
     </section>
 
+    <section class="text-white relative pt-10">
+      <div class="absolute inset-0 pointer-events-none -z-10">
+        <img
+          src="./img/glow-center.svg"
+          alt="Glow Background"
+          class="w-1/2 object-cover object-center scale-110"
+        />
+      </div>
 
+      <img
+        src="./img/landing-glow.svg"
+        alt="Glow Background"
+        class="left-0 absolute scale-110"
+      />
 
-        <!-- Industries We Empower Section -->
-        <section class=" text-white py-16 lg:py-24 relative">
-             <div class="absolute inset-0 pointer-events-none -z-10">
-            <img
-              src="./img/glow-center.svg"
-              alt="Glow Background"
-              class="w-1/2 object-cover object-center scale-110"
-            />
-          </div>
+      <img
+        src="./img/landing-glow-bottom.svg"
+        alt="Glow Background"
+        class="right-0 bottom-0 absolute scale-110"
+      />
 
-           <img
-              src="./img/landing-glow.svg"
-              alt="Glow Background"
-              class="left-0 absolute scale-110"
-            />
-           
-           <img
-              src="./img/landing-glow-bottom.svg"
-              alt="Glow Background"
-              class="right-0 bottom-0 absolute scale-110"
-            />
-       
+      <div class="container mx-auto px-4">
+        <h2 class="text-[36px] md:text-[48px] font-semibold mb-12">
+          Industries We Empower
+        </h2>
+      </div>
+    </section>
 
-
-          <div class="container mx-auto px-4">
-            <h2 class="text-[36px] md:text-[48px] font-semibold mb-12">
-              Industries We Empower
-            </h2>
-
-            <!-- Transportation Card -->
-            <div class="flex flex-col lg:flex-row gap-8 mb-4 xl:mb-8 bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group">
-              <div class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0">
-                <img 
-                  src="./img/land-1.webp" 
-                  alt="Transportation" 
-                  class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
-                />
+    <div class="flex flex-col space-y-8">
+      <section>
+        <div class="container">
+          <!-- Transportation Card -->
+          <div
+            class="flex flex-col lg:flex-row gap-8 bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/land-1.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Transportation
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                Custom logistics and fleet management solutions to optimize
+                routes, reduce costs, and increase supply chain visibility for
+                transportation providers.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Advanced logistics platforms, fleet automation software, and
+                    real-time tracking dashboards.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Reduced delivery times by up to 30%, improved route
+                    efficiency, and enhanced transparency across supply chains.
+                  </p>
+                </div>
               </div>
-              <div class="flex flex-col justify-center flex-1">
-                <h3 class="text-[28px] font-semibold mb-4 heading-underline relative">Transportation</h3>
-                <p class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6">
-                  Custom logistics and fleet management solutions to optimize routes, reduce costs, and increase supply chain visibility for transportation providers.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <!-- On Demand and Healthcare Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-8">
+            <!-- On Demand Card -->
+            <div
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div class="mb-6">
+                <div
+                  class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                >
+                  <img
+                    src="./img/land-2.webp"
+                    alt="On Demand"
+                    class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  On Demand
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  Scalable on-demand apps, from delivery platforms to home
+                  services, designed for instant booking, seamless payments, and
+                  real-time tracking.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-                  <div class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]">
-                    <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
-                    <p class="text-[16px] text-[#A3ACB5]">
-                      Advanced logistics platforms, fleet automation software, and real-time tracking dashboards.
-                    </p>
-                  </div>
-                  <div class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]">
-                    <h4 class="text-[23px] font-medium mb-2">Impact</h4>
-                    <p class="text-[16px] text-[#A3ACB5]">
-                      Reduced delivery times by up to 30%, improved route efficiency, and enhanced transparency across supply chains.
-                    </p>
-                  </div>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="p-3 md:p-6 rounded-[12px] bg-[#1B1B1B]">
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Custom on-demand apps for delivery services, ride sharing,
+                    and appointments. Equipped with instant notifications and
+                    secure payments.
+                  </p>
+                </div>
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Increased order volume, higher customer retention, and
+                    streamlined service fulfillment.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <!-- On Demand and Healthcare Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-8 ">
+            <!-- Healthcare Card -->
+            <div
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div class="mb-6">
+                <div
+                  class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                >
+                  <img
+                    src="./img/land-3.webp"
+                    alt="Healthcare"
+                    class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  Healthcare
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  End-to-end healthcare apps for clinics, hospitals, and
+                  telemedicine—HIPAA-compliant, patient-centric, and powered by
+                  secure medical records.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    End-to-end healthcare apps for clinics, hospitals, and
+                    telemedicine—HIPAA-compliant, patient-centric, and powered
+                    by secure medical records.
+                  </p>
+                </div>
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Faster diagnoses, secure data sharing, and a 35% boost in
+                    patient engagement and satisfaction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative">
+     
+
+        <img
+          src="./img/landing-glow.svg"
+          alt="Glow Background"
+          class="left-0 absolute scale-110"
+        />
+
+       
+        <div class="container mx-auto">
+          <div
+            class="xl:flex min-h-[550px] bg-blurred-industry rounded-[24px] p-5 md:p-10 backdrop-blur-xl"
+          >
+            <div class="w-full xl:w-[70%]">
+              <div
+                class="flex flex-col lg:flex-row border-b border-white/20 gap-5 items-start p-3"
+              >
+                <h2 class="text-[28px]  xl:text-[50px] font-normal">Cashdocs</h2>
+                <p class="text-[18px] xl:pt-5 text-[#A3ACB5] font-normal">
+                  Revolutionizing Doctor-Patien Relations & Doctor Appointments
+                  With a Mobile Application
+                </p>
+              </div>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10">
+                <div class="p-3 lg:p-8 ">
+                  <p class="text-[18px] font-normal">
+                    CashDocs is a healthcare app created by a doctor–lawyer duo
+                    to streamline patient–doctor communication. It simplifies
+                    appointment scheduling, medical queries, and health
+                    management using advanced digital solutions, delivering
+                    efficient and convenient care.
+                  </p>
+ <div class="p-5 w-full hidden lg:block xl:hidden">
+              <div class="relative h-full flex justify-center items-center">
+                <img
+                  src="./img/cashdocs-landing.webp"
+                  alt="Cashdocs Mockup"
+                  class="w-full h-auto rounded-[16px] object-cover"
+                />
+                <img
+                  src="./img/cash-top.webp"
+                  alt="Cashdocs Mockup"
+                  class="absolute top-[-45px] w-full hidden xl:block"
+                />
+                <img
+                  src="./img/cash-bottom.webp"
+                  alt="Cashdocs Mockup"
+                  class="absolute bottom-[-50px] w-full hidden xl:block"
+                />
+              </div>
+            </div>
+                  <div class="lg:pt-4 flex lg:mt-10 hidden lg:block">
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 bg-white text-black font-semibold rounded-full pl-6 pr-3 py-2 hover:bg-gray-200 transition group text-[18px]  justify-between xl:w-[90%] 2xl:w-[70%]"
+                    >
+                      <span>View Full Case Study</span>
+                      <span
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-black border group-hover:translate-x-[10px] transition-all duration-200"
+                        ><svg
+                          width="10"
+                          height="11"
+                          viewBox="0 0 10 11"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.0537 9.46717L6.92213 3.44517L0.900116 2.57683"
+                            stroke="white"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="lg:border-l border-white/20 p-3 lg:p-8 xl:max-h-[220px]">
+                  <p class="text-[18px] lg:text-[28px]">Services</p>
+                  <ul
+                    class="list-disc list-inside text-[18px] mt-4 space-y-2 text-[#A3ACB5]"
+                  >
+                    <li>Mobile App Development</li>
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>HIPAA Compliant Data Protection</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 w-full lg:hidden xl:block xl:w-[30%]">
+              <div class="relative h-full flex justify-center items-center">
+                <img
+                  src="./img/cashdocs-landing.webp"
+                  alt="Cashdocs Mockup"
+                  class="w-full h-auto rounded-[16px] object-cover"
+                />
+                <img
+                  src="./img/cash-top.webp"
+                  alt="Cashdocs Mockup"
+                  class="absolute top-[-45px] w-full hidden xl:block"
+                />
+                <img
+                  src="./img/cash-bottom.webp"
+                  alt="Cashdocs Mockup"
+                  class="absolute bottom-[-50px] w-full hidden xl:block"
+                />
+              </div>
+            </div>
+            <div class="py-4 flex justify-center lg:mt-10  lg:hidden">
+                    <a
+                      href="#"
+                      class="flex items-center gap-2 bg-white text-black font-semibold rounded-full pl-6 pr-3 py-2 hover:bg-gray-200 transition group text-[18px]  justify-between xl:w-[70%]"
+                    >
+                      <span>View Full Case Study</span>
+                      <span
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-black border group-hover:translate-x-[10px] transition-all duration-200"
+                        ><svg
+                          width="10"
+                          height="11"
+                          viewBox="0 0 10 11"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.0537 9.46717L6.92213 3.44517L0.900116 2.57683"
+                            stroke="white"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row gap-8 bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/industry-social.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Social Networking
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                Engaging social media platforms with real-time messaging,
+                advanced privacy controls, and scalable infrastructure for
+                growing online communities.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Networking platforms, community tools, and scalable chat
+                    systems supporting rich media and robust privacy.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Accelerated user growth, improved retention, and
+                    high-performance, real-time communication.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row gap-8  bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/industry-entertainment.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Entertainment
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                Rich media streaming, gaming, and interactive entertainment apps
+                that boost user engagement and deliver seamless cross-device
+                experiences.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    OTT streaming platforms, AR/VR experiences, and interactive
+                    gaming hubs.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Increased audience reach, stronger engagement, and new
+                    monetization streams for creators and brands.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[url('./img/industry-trusted.webp')] bg-cover bg-no-repeat bg-center xl:bg-none">
+        <div class="container mx-auto rounded-[40px] flex items-center min-h-[500px] 
+        sm:bg-[url('./img/industry-trusted.webp')] bg-cover bg-no-repeat bg-center xl:bg-none
+        ">
+          <img
+            src="./img/industry-trusted.webp"
+            alt="Background"
+            class="inset-0 w-full h-full object-cover object-center rounded-[40px] -z-10 hidden xl:block"
+            fetchpriority="high"
+          />
+
+          <div
+            class="absolute rounded-3xl overflow-hidden p-2 xl:p-16  flex flex-col justify-center items-start"
+          >
+            <h2
+              class="text-3xl md:text-[40px] xl:text-[50px] font-semibold leading-normal lg:leading-[60px] text-white max-w-2xl"
+            >
+              Trusted by
+              <span class="text-[#D1FF6A]">industry leaders</span> across the
+              US. Recognized for
+              <span class="text-[#D1FF6A]">excellence</span> by Deloitte.
+            </h2>
+
+            <button
+              class="mt-6 inline-flex items-center gap-2 bg-[#D1FF6A] text-black font-medium pl-6 pr-3 py-2 rounded-full shadow-lg hover:bg-[#D1FF6A]/70 transition group"
+            >
+              Start Your Project
+              <span
+                class="w-12 h-12 inline-flex justify-center items-center rounded-full bg-black group-hover:rotate-[40deg] transition-transform duration-300 group-hover:translate-x-2"
+                ><svg
+                  width="10"
+                  height="11"
+                  viewBox="0 0 10 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row gap-8  bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/industry-travel.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Travel
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                End-to-end travel applications including booking engines,
+                itinerary management, and immersive travel experiences to
+                delight explorers worldwide.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Booking engines, dynamic itinerary planners, and in-app
+                    travel support modules.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Simplified reservations, improved traveler satisfaction, and
+                    up to 40% faster booking processes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+        <section>
+          <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-8">
               <!-- On Demand Card -->
-              <div class="landing-card flex flex-col justify-between  bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group">
+              <div
+                class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              >
                 <div class="mb-6">
-                 <div class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6">
-                    <img 
-                      src="./img/land-2.webp" 
-                      alt="On Demand" 
-                     class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  <div
+                    class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                  >
+                    <img
+                      src="./img/industry-restaurent.webp"
+                      alt="On Demand"
+                      class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 class="text-[28px] font-semibold mb-4 heading-underline relative">On Demand</h3>
-                  <p class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6">
-                    Scalable on-demand apps, from delivery platforms to home services, designed for instant booking, seamless payments, and real-time tracking.
+                  <h3
+                    class="text-[28px] font-semibold mb-4 heading-underline relative"
+                  >
+                    Restaurant
+                  </h3>
+                  <p
+                    class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                  >
+                    Smart restaurant solutions for reservations, menu
+                    management, and contactless orders, built for improved
+                    customer experience and efficient operations.
                   </p>
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
-                  <div class=" p-3 md:p-6 rounded-[12px] bg-[#1B1B1B]">
+                  <div class="p-3 md:p-6 rounded-[12px] bg-[#1B1B1B]">
                     <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
                     <p class="text-[16px] text-[#A3ACB5]">
-                      Custom on-demand apps for delivery services, ride sharing, and appointments. Equipped with instant notifications and secure payments.
+                      Order management systems, reservation booking, and
+                      contactless checkout solutions.
                     </p>
                   </div>
                   <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
                     <h4 class="text-[23px] font-medium mb-2">Impact</h4>
                     <p class="text-[16px] text-[#A3ACB5]">
-                      Increased order volume, higher customer retention, and streamlined service fulfillment.
+                      Higher table turnover rates, streamlined kitchen
+                      operations, and increased customer loyalty.
                     </p>
                   </div>
                 </div>
               </div>
 
               <!-- Healthcare Card -->
-              <div class="landing-card flex flex-col justify-between  bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group">
-                <div class="mb-6 ">
-                  <div class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6">
-                    <img 
-                      src="./img/land-3.webp" 
-                      alt="Healthcare" 
+              <div
+                class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              >
+                <div class="mb-6">
+                  <div
+                    class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                  >
+                    <img
+                      src="./img/industry-ecommerse.webp"
+                      alt="Healthcare"
                       class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 class="text-[28px] font-semibold mb-4 heading-underline relative">Healthcare</h3>
-                  <p class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6">
-                    End-to-end healthcare apps for clinics, hospitals, and telemedicine—HIPAA-compliant, patient-centric, and powered by secure medical records.
+                  <h3
+                    class="text-[28px] font-semibold mb-4 heading-underline relative"
+                  >
+                    E-commerce
+                  </h3>
+                  <p
+                    class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                  >
+                    Feature-rich eCommerce platforms enabling fast online
+                    shopping, secure transactions, personalized recommendations,
+                    and automated inventory.
                   </p>
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
                   <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
                     <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
                     <p class="text-[16px] text-[#A3ACB5]">
-                      End-to-end healthcare apps for clinics, hospitals, and telemedicine—HIPAA-compliant, patient-centric, and powered by secure medical records.
+                      Multi-channel online stores, AI-powered personalized
+                      shopping, and secure payment gateways.
                     </p>
                   </div>
                   <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
                     <h4 class="text-[23px] font-medium mb-2">Impact</h4>
                     <p class="text-[16px] text-[#A3ACB5]">
-                      Faster diagnoses, secure data sharing, and a 35% boost in patient engagement and satisfaction.
+                      Boosted conversion rates, reduced cart abandonment, and
+                      scalable growth for diverse retailers.
                     </p>
                   </div>
                 </div>
@@ -319,72 +845,590 @@
           </div>
         </section>
 
- 
-<section class="relative">
-   <div class="absolute inset-0 pointer-events-none -z-10">
-            <!-- <img
-              src="./img/glow-center.svg"
-              alt="Glow Background"
-              class="w-1/2 object-cover object-center scale-110"
-            /> -->
+        <section >
+          <div class="container mx-auto px-4">
+            <div
+              class="flex flex-col lg:flex-row gap-8 bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div
+                class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+              >
+                <img
+                  src="./img/industry-uber.webp"
+                  alt="Transportation"
+                  class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div class="flex flex-col justify-center flex-1">
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  Uber Like Platform
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  Custom ride-sharing and logistics platforms for fast
+                  onboarding, real-time driver tracking, and scalable
+                  marketplace growth.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                  >
+                    <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                    <p class="text-[16px] text-[#A3ACB5]">
+                      Custom ride-hailing, logistics, and delivery platform
+                      architectures.
+                    </p>
+                  </div>
+                  <div
+                    class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                  >
+                    <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                    <p class="text-[16px] text-[#A3ACB5]">
+                      Quick market launch, real-time driver/user matching, and
+                      seamless scaling to new regions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+      
 
-           <img
-              src="./img/landing-glow.svg"
-              alt="Glow Background"
-              class="left-0 absolute scale-110"
-            />
-           
-           <!-- <img
-              src="./img/landing-glow-bottom.svg"
-              alt="Glow Background"
-              class="right-0 bottom-0 absolute scale-110"
-            /> -->
-  <div class="container mx-auto ">
-<div class=" xl:flex min-h-[550px] bg-blurred-industry rounded-[24px] p-5 md:p-10 backdrop-blur-xl">
-<div class="w-full xl:w-[70%]">
-  <div class="flex flex-col lg:flex-row border-b border-white/20 gap-5  items-start p-5">
-<h2 class="text-[50px] font-normal">Cashdocs</h2>
-<p class="text-[18px] lg:pt-5 text-[#A3ACB5] font-normal">Revolutionizing Doctor-Patien Relations & Doctor Appointments With a Mobile Application  
-</p>
-  </div>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 ">
-<div class="p-8" >
-  <p class="text-[18px] font-normal">CashDocs is a healthcare app created by a doctor–lawyer duo to streamline patient–doctor communication. It simplifies appointment scheduling, medical queries, and health management using advanced digital solutions, delivering efficient and convenient care.</p>
-
-   <div class="pt-4 flex mt-10 hidden lg:block">
-          <a href="#"
-            class="flex items-center gap-2 bg-white text-black font-semibold rounded-full pl-6 pr-3 py-2 hover:bg-gray-200 transition group text-[18px] ">
-            View Full Case Study
-            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-black border  group-hover:translate-x-[10px] transition-all duration-200"><svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.0537 9.46717L6.92213 3.44517L0.900116 2.57683" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</span>
-          </a>
+      <section >
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row gap-8  bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Game App
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                Mobile and web game development services, leveraging interactive
+                graphics and multiplayer features for ultimate player
+                engagement.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Cross-platform games, multiplayer modules, and integrated
+                    payment/leaderboard features.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Extended playtime, viral user acquisition, and new revenue
+                    channels for developers.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/industry-game.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
         </div>
-</div>
-<div class="lg:border-l border-white/20 p-8 pt-0 max-h-[220px]">
-  <p class="text-[28px]">Services</p>
-  <ul class="list-disc list-inside text-[18px] mt-4 space-y-2 text-[#A3ACB5]">
-    <li>Mobile App Development</li>
-    <li>Web Development</li>
-    <li>UI/UX Design</li>
-    <li>HIPAA Compliant Data Protection</li>
-  </ul>
-</div>
-  </div>
-</div>
-<div class="p-5 w-full xl:w-[30%] ">
-  <div class="relative h-full flex justify-center items-center">
-  <img src="./img/cashdocs-landing.webp" alt="Cashdocs Mockup" class="w-full h-auto rounded-[16px] object-cover"/>
-  <img src="./img/cash-top.webp" alt="Cashdocs Mockup" class="absolute top-[-45px] w-full hidden xl:block"/>
-  <img src="./img/cash-bottom.webp" alt="Cashdocs Mockup" class="absolute bottom-[-50px] w-full hidden xl:block"/>
-</div>
+      </section>
 
-</div>
-</div>
-  </div>
-</section>
+      <section>
+        <div class="container">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-8">
+            <!-- On Demand Card -->
+            <div
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div class="mb-6">
+                <div
+                  class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                >
+                  <img
+                    src="./img/industry-fintech.webp"
+                    alt="On Demand"
+                    class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  FinTech
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  Robust fintech platforms, secure payment gateways, and
+                  financial analytics tools—engineered for compliance, speed,
+                  and reliability.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="p-3 md:p-6 rounded-[12px] bg-[#1B1B1B]">
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Secure banking portals, instant loan apps, automated
+                    investment tools, and KYC integration.
+                  </p>
+                </div>
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Guaranteed compliance, fast onboarding, and significant
+                    improvement in financial transactions and analysis.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Healthcare Card -->
+            <div
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div class="mb-6">
+                <div
+                  class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                >
+                  <img
+                    src="./img/industry-wellness.webp"
+                    alt="Healthcare"
+                    class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  Wellness
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  Wellness and fitness applications supporting virtual coaching,
+                  health tracking, and seamless integration with wearable
+                  devices.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Virtual fitness trainers, health tracking apps, and
+                    interactive wellness communities.
+                  </p>
+                </div>
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Increased active users, higher engagement on wellness
+                    programs, and real-time insights for trainers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row gap-8 bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/industry-real-estate.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Real Estate
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                Property management portals, virtual tours, and AI-powered
+                listing engines designed for agents, brokers, and modern home
+                buyers.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Digital listing platforms, virtual viewing tools, and CRM
+                    integrations for agents.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Faster property closures, improved lead conversion, and
+                    enhanced property browsing experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-8">
+            <!-- On Demand Card -->
+            <div
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div class="mb-6">
+                <div
+                  class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                >
+                  <img
+                    src="./img/industry-education.webp"
+                    alt="On Demand"
+                    class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  Education
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  E-learning platforms and smart classroom solutions that
+                  support interactive content delivery, progress tracking, and
+                  secure student management.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="p-3 md:p-6 rounded-[12px] bg-[#1B1B1B]">
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    E-learning platforms, student management systems, and
+                    real-time video classrooms.
+                  </p>
+                </div>
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Higher enrollment rates, improved student outcomes, and
+                    efficient performance analytics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Healthcare Card -->
+            <div
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+            >
+              <div class="mb-6">
+                <div
+                  class="w-full md:h-[280px] overflow-hidden rounded-[16px] mb-6"
+                >
+                  <img
+                    src="./img/industry-petcare.webp"
+                    alt="Healthcare"
+                    class="w-full h-full object-contain md:object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3
+                  class="text-[28px] font-semibold mb-4 heading-underline relative"
+                >
+                  Pet Care
+                </h3>
+                <p
+                  class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+                >
+                  Digital solutions for pet owners and service providers,
+                  including booking, tele-medicine, and pet health tracking
+                  features.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Vet booking apps, pet tracking devices, and community
+                    features for pet owners.
+                  </p>
+                </div>
+                <div class="bg-[#1B1B1B] p-3 md:p-6 rounded-[12px]">
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Quick access to care, easy appointment management, and
+                    happier, healthier pets.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row gap-8  bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+          >
+            <div class="flex flex-col justify-center flex-1">
+              <h3
+                class="text-[28px] font-semibold mb-4 heading-underline relative"
+              >
+                Door to Door Sales
+              </h3>
+              <p
+                class="text-[#A3ACB5] text-[18px] xl:text-[23px] leading-relaxed mb-6"
+              >
+                Field sales automation apps for door-to-door teams: lead
+                management, customer engagement, routing, and performance
+                dashboards.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Our Solutions</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Field sales automation, route planning, and CRM integrations
+                    for door-to-door teams.
+                  </p>
+                </div>
+                <div
+                  class="landing-card p-3 md:p-6 rounded-[16px] bg-[#1B1B1B]"
+                >
+                  <h4 class="text-[23px] font-medium mb-2">Impact</h4>
+                  <p class="text-[16px] text-[#A3ACB5]">
+                    Increased lead conversion, optimized sales routes, and
+                    comprehensive sales performance tracking.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-[24px] overflow-hidden w-full lg:w-[400px] xl:w-[600px] flex-shrink-0"
+            >
+              <img
+                src="./img/industry-door-to-door.webp"
+                alt="Transportation"
+                class="w-full h-full object-cover rounded-[24px] group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="px-6  bg-[url('./img/ctamobile2.webp')] md:bg-none bg-cover bg-center bg-no-repeat relative overflow-hidden"
+      >
+        <div class="container mx-auto">
+          <div
+            class="rounded-3xl overflow-hidden relative bg-cover bg-center bg-no-repeat md:p-16 min-h-[450px] lg:min-h-[600px] flex flex-col justify-center items-start md:bg-[url('./img/driving-cta-2.webp')]"
+          >
+            <h2
+              class="text-[28px] md:text-[36px] xl:text-[50px] font-semibold lg:font-normal leading-normal lg:leading-[60px] text-transparent bg-clip-text max-w-3xl bg-[linear-gradient(152.71deg,#F5FAFE_33.7%,#1088FE_91.56%)]"
+            >
+              Transform Your Industry With Purpose-Built Digital Solutions
+            </h2>
+
+            <button
+              class="mt-12 inline-flex items-center gap-2 bg-white text-black font-medium pl-6 pr-3 py-2 rounded-full shadow-lg hover:bg-gray-200 transition group"
+            >
+              Contact Us Now
+              <span
+                class="w-12 h-12 inline-flex justify-center items-center rounded-full bg-black group-hover:rotate-[40deg] transition-transform duration-300 group-hover:translate-x-2"
+                ><svg
+                  width="10"
+                  height="11"
+                  viewBox="0 0 10 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
+        <div class="w-full container mx-auto px-4">
+          <!-- Heading -->
+          <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">
+            Related Blogs
+          </h2>
+
+          <!-- Blog Carousel Container -->
+          <div class="related-blogs-carousel owl-carousel owl-theme">
+            <!-- Blog Card 1 -->
+            <div class=" ">
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  src="./img/Blog_Thumb_List.png"
+                  alt="How to Build a SaaS Application"
+                  class="w-full h-[180px] md:h-[200px] object-fit"
+                />
+              </div>
+              <div class="mt-4">
+                <span
+                  class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                  >SOFTWARE DEVELOPMENT</span
+                >
+                <h3
+                  class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                >
+                  How to Build a SaaS Application?– Cover Nuances, Step-by-Step
+                  Process, Cost, and More
+                </h3>
+              </div>
+            </div>
+            <div class=" ">
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  src="./img/Blog_Thumb_List1.png"
+                  alt="WCAG Compliance Explained"
+                  class="w-full h-[180px] md:h-[200px] object-fit"
+                />
+              </div>
+              <div class="mt-4">
+                <span
+                  class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                  >SOFTWARE DEVELOPMENT</span
+                >
+                <h3
+                  class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                >
+                  WCAG Compliance Explained: Benefits, Legal Requirements, and
+                  Best Practices!
+                </h3>
+              </div>
+            </div>
+            <div class=" ">
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  src="./img/Blog_Thumb_List1.png"
+                  alt="WCAG Compliance Explained"
+                  class="w-full h-[180px] md:h-[200px] object-fit"
+                />
+              </div>
+              <div class="mt-4">
+                <span
+                  class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                  >SOFTWARE DEVELOPMENT</span
+                >
+                <h3
+                  class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                >
+                  WCAG Compliance Explained: Benefits, Legal Requirements, and
+                  Best Practices!
+                </h3>
+              </div>
+            </div>
+            <div class=" ">
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  src="./img/Blog_Thumb_List1.png"
+                  alt="WCAG Compliance Explained"
+                  class="w-full h-[180px] md:h-[200px] object-fit"
+                />
+              </div>
+              <div class="mt-4">
+                <span
+                  class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                  >SOFTWARE DEVELOPMENT</span
+                >
+                <h3
+                  class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                >
+                  WCAG Compliance Explained: Benefits, Legal Requirements, and
+                  Best Practices!
+                </h3>
+              </div>
+            </div>
+            <div class=" ">
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  src="./img/Blog_Thumb_List1.png"
+                  alt="WCAG Compliance Explained"
+                  class="w-full h-[180px] md:h-[200px] object-fit"
+                />
+              </div>
+              <div class="mt-4">
+                <span
+                  class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                  >SOFTWARE DEVELOPMENT</span
+                >
+                <h3
+                  class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+                >
+                  WCAG Compliance Explained: Benefits, Legal Requirements, and
+                  Best Practices!
+                </h3>
+              </div>
+            </div>
+
+            <!-- Add more blog cards here as needed -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- jQuery must load synchronously for plugins to work -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
 
     <!-- jQuery must load synchronously for plugins to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
