@@ -3,85 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Custom SaaS development services. Build scalable, secure SaaS products with our expert development team."
-    />
-    <meta name="theme-color" content="#000000" />
-    <meta name="color-scheme" content="dark" />
-    <!-- Performance: Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+   
+    
     <title>SAAS Development</title>
 
-    <!-- Google Fonts - Inter and Manrope with optimized loading -->
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
     />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
 
     <!-- Owl Carousel CSS -->
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      as="style"
-      onload="this.rel='stylesheet'"
     />
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      as="style"
-      onload="this.rel='stylesheet'"
     />
+    <link href="style.css" rel="stylesheet" />
     <link
-      rel="preload"
-      as="style"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-      />
-    </noscript>
-    <link
-      rel="preload"
-      href="style.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+   
 
     <style>
-      /* Performance optimizations */
-      * {
-        box-sizing: border-box;
-      }
-
-      /* Critical font loading - prevent FOIT */
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      }
-
-      /* Apply custom fonts when loaded */
-      .font-inter {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      }
-
-      .font-manrope {
-        font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      }
+    
 
       .owl-carousel .owl-stage {
         transition: all 0.5s ease !important;
@@ -109,7 +60,16 @@
         padding-left: 10px !important;
       }
       /* GPU acceleration for smooth animations */
-    
+    @media(max-width: 1024px){
+      .slider-1 .owl-nav {
+        padding-left: 30px !important;
+      }
+    }
+    @media(max-width: 576px){
+      .slider-1 .owl-nav {
+        padding-left: 20px !important;
+      }
+    }
 
      
 
@@ -122,13 +82,7 @@
         }
       }
 
-      /* Reduce motion for accessibility */
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation: none !important;
-          transition: none !important;
-        }
-      }
+    
 
       /* Optimize for low-end devices */
       @media (max-width: 768px) {
@@ -635,9 +589,9 @@
                 href="#"
                 class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 mt-5 md:mt-12 transition"
               >
-                Talk to a Specialist about SaaS Development
+                <span class="truncate max-w-[200px] sm:max-w-none">Talk to a Specialist about SaaS Development</span>
 
-                <span>
+                <span class="flex-shrink-0">
                   <svg
                     width="7"
                     height="11"
@@ -817,7 +771,7 @@
               </p>
               <a
                 href="#"
-                class="border-[1px] border-[#f5fafece] rounded-full px-8 py-4 text-[#F5FAFE] mx-autoinline-flex items-center text-[17px] font-medium hover:bg-white/10 transition my-5"
+                class="border-[1px] border-[#f5fafece] rounded-full px-8 py-4 text-[#F5FAFE] mx-auto inline-flex items-center gap-2 text-[17px] font-medium hover:bg-white/10 transition my-5"
               >
                 <span class="truncate max-w-[200px] sm:max-w-none"
                   >Speak with Our SaaS Development Experts</span
@@ -1402,16 +1356,16 @@
 
         <!-- Left Content Overlay -->
         <section
-          class="relative text-white pt-20 pb-40 overflow-hidden bg-center bg-no-repeat bg-cover no-animate-text"
+          class="relative text-white py-20 xl:pb-40 overflow-hidden bg-center bg-no-repeat bg-cover no-animate-text"
           style="background-image: url('./img/driving-inn-react-bg.webp')"
         >
           <div
             id="leftOverlay"
-            class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex lg:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]"
+            class="w-full xl:w-[55%] xl:absolute z-30 left-0 h-full flex xl:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)]  top-0"
           >
-            <div class="relative px-5 ">
+            <div class="relative px-5 xl:px-8 xl:pt-20">
               <h2
-                class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] leading-relaxed xl:leading-[60px] mb-6"
+                class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] leading-normal xl:leading-[60px] xl:mb-6 "
               >
                 Driving Innovation Across
                 <br class="hidden md:block" />
@@ -1431,7 +1385,7 @@
           </div>
 
           <!-- Industry Cards Slider -->
-          <div class="w-full xl:w-[55%] relative xl:ml-auto z-10 lg:pt-20">
+          <div class="w-full xl:w-[55%] relative xl:ml-auto z-10 xl:pt-20">
             <div
               class="slider-1 owl-carousel owl-theme overflow-visible "
             >
@@ -1883,7 +1837,7 @@
                       <div class="bg-[#20212B] rounded-[10px] min-h-[80px]">
                         <button
                           class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                          onclick="toggleAccordionPPC(this)"
+                          onclick="toggleAccordionTech(this)"
                         >
                           <span class="font-[300]">Frontend</span>
                           <span
@@ -2119,7 +2073,7 @@
                       >
                         <button
                           class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                          onclick="toggleAccordionPPC(this)"
+                          onclick="toggleAccordionTech(this)"
                         >
                           <span class="font-[300]">Backend </span>
                           <span
@@ -2291,7 +2245,7 @@
                       >
                         <button
                           class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                          onclick="toggleAccordionPPC(this)"
+                          onclick="toggleAccordionTech(this)"
                         >
                           <span class="font-[300]">Database</span>
                           <span
@@ -2453,7 +2407,7 @@
                       >
                         <button
                           class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                          onclick="toggleAccordionPPC(this)"
+                          onclick="toggleAccordionTech(this)"
                         >
                           <span class="font-[300]">Content Management </span>
                           <span
@@ -2586,7 +2540,7 @@
                       >
                         <button
                           class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                          onclick="toggleAccordionPPC(this)"
+                          onclick="toggleAccordionTech(this)"
                         >
                           <span class="font-[300]">Cloud Consulting</span>
                           <span
@@ -2702,7 +2656,7 @@
                       >
                         <button
                           class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
-                          onclick="toggleAccordionPPC(this)"
+                          onclick="toggleAccordionTech(this)"
                         >
                           <span class="font-[300]">Big Data & Analytics</span>
                           <span
@@ -4384,35 +4338,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> 
 
-    <!-- GSAP can load with defer for better performance -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"
-      defer
-    ></script>
-
    
-
+  
     <script>
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
-        document
-          .querySelectorAll(".accordion-content")
-          .forEach((item) => item.classList.remove("show"));
-        document
-          .querySelectorAll(".transform")
-          .forEach((icon) => icon.classList.remove("rotate-180"));
+        
+        // Find parent container to limit scope
+        const parentContainer = button.closest('.faq-accordion') || document;
+        
         if (!isOpen) {
+          // Only query within parent scope for better performance
+          const activeContent = parentContainer.querySelector(".accordion-content.show");
+          const activeIcon = activeContent?.previousElementSibling?.querySelector(".transform.rotate-180");
+          
+          // Remove only from currently active item
+          if (activeContent) activeContent.classList.remove("show");
+          if (activeIcon) activeIcon.classList.remove("rotate-180");
+          
+          // Add to clicked item
           content.classList.add("show");
-          button.querySelector("span:last-child").classList.add("rotate-180");
+          const icon = button.querySelector("span:last-child");
+          if (icon) icon.classList.add("rotate-180");
+        } else {
+          // Just close current item
+          content.classList.remove("show");
+          const icon = button.querySelector("span:last-child");
+          if (icon) icon.classList.remove("rotate-180");
         }
       }
     </script>
@@ -4475,7 +4428,7 @@
     </script>
 
     <script>
-      function toggleAccordionPPC(button) {
+      function toggleAccordionTech(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
 
@@ -4589,81 +4542,7 @@
           }
         });
 
-        // Slider-2a carousel
-        const owl2 = $(".slider-2a").owlCarousel({
-          loop: false,
-          margin: 20,
-          nav: true,
-          dots: false,
-          center: false,
-          responsive: {
-            0: {
-              items: 1,
-              stagePadding: 20,
-              margin: 10,
-            },
-            768: {
-              items: 2,
-              stagePadding: 50,
-              margin: 15,
-            },
-            1024: {
-              items: 3,
-              margin: 20,
-            },
-            1440: {
-              items: 3,
-              margin: 20,
-            },
-            1600: {
-              items: 4,
-              margin: 25,
-            },
-          },
-          onInitialized: function () {
-            // Optimize: Batch DOM operations
-            const $items = $(".slider-1 .owl-item");
-            const heights = $items
-              .map(function () {
-                return $(this).height();
-              })
-              .get();
-            const maxHeight = Math.max.apply(null, heights);
-            $items.css("height", maxHeight + "px");
-          },
-          onResized: function () {
-            const $items = $(".slider-1 .owl-item");
-            $items.css("height", "auto");
-            const heights = $items
-              .map(function () {
-                return $(this).height();
-              })
-              .get();
-            const maxHeight = Math.max.apply(null, heights);
-            $items.css("height", maxHeight + "px");
-          },
-        });
-
-        const leftOverlay1 = document.getElementById("leftOverlay1");
-        owl2.on("translate.owl.carousel", function () {
-          if (leftOverlay1) leftOverlay1.classList.add("backdrop-blur-3xl");
-        });
-
-        owl2.on("changed.owl.carousel", function (event) {
-          if (!leftOverlay1) return;
-          const carousel = event.relatedTarget;
-          const current = carousel.current();
-          const firstIndex = carousel.minimum();
-          if (current === firstIndex) {
-            setTimeout(
-              () => leftOverlay1.classList.remove("backdrop-blur-3xl"),
-              300
-            );
-          } else {
-            leftOverlay1.classList.add("backdrop-blur-3xl");
-          }
-        });
-
+     
         // Slider-3-saas carousel
         $(".slider-3-saas").owlCarousel({
           autoWidth: true,
@@ -4689,23 +4568,7 @@
           },
         });
 
-        // Related blogs carousel
-        const $rb = $(".related-blogs-carousel");
-        if ($rb.length) {
-          $rb.owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: true,
-            dots: false,
-            autoplay: false,
-            lazyLoad: true,
-            responsive: {
-              0: { items: 1 },
-              768: { items: 2 },
-              1024: { items: 3 },
-            },
-          });
-        }
+     
 
         // Popup initialization - Defer to improve initial load
         setTimeout(function () {
@@ -4728,7 +4591,24 @@
         }, 100);
       });
     </script>
-
+ <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
     <script>
       const toggleBtn = document.getElementById("toggleBtn");
       const collapsed = document.getElementById("collapsedState");
@@ -4837,18 +4717,9 @@
     </script>
 
     <script>
-      const imageSources = [
-        "./img/wc-saas-1.webp",
-        "./img/wc-saas-2.webp",
-        "./img/wc-saas-3.webp",
-        "./img/wc-saas-4.webp",
-      ];
-
       function toggleUniqueAccordion(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
-
-        // Collapse all
         document.querySelectorAll(".accordion-content").forEach((item) => {
           item.classList.remove("show");
           item.parentElement.classList.remove("bg-[#121314]");
@@ -4861,27 +4732,6 @@
           content.classList.add("show");
           button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
           content.parentElement.classList.add("bg-[#121314]");
-          // Smooth image fade
-          const imgIndex = button.getAttribute("data-img-index");
-          const newSrc = imageSources[imgIndex];
-          const currentImg = document.getElementById("accordionImage");
-          const nextImg = document.getElementById("accordionImageNext");
-
-          if (currentImg && nextImg) {
-            nextImg.src = newSrc;
-            nextImg.classList.add("opacity-100");
-            currentImg.classList.remove("opacity-100");
-            currentImg.classList.add("opacity-0");
-
-            // After fade completes, swap image sources
-            setTimeout(() => {
-              currentImg.src = newSrc;
-              currentImg.classList.remove("opacity-0");
-              currentImg.classList.add("opacity-100");
-              nextImg.classList.remove("opacity-100");
-              nextImg.src = ""; // Optional cleanup
-            }, 300); // matches transition duration
-          }
         }
       }
     </script>
