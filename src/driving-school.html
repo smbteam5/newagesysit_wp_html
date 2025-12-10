@@ -22,15 +22,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.12.1.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-    />
     <link href="style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -60,13 +51,20 @@
       .feature-scrollbar::-webkit-scrollbar-thumb:hover {
         background: #cfcfcf;
       }
+@media(min-width: 1440px)  {
+      .slider-3 .owl-nav {
+        margin-top: 0px !important;
+      }
+    }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   </head>
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
     <section
+    
       class="bg-cover bg-center bg-no-repeat flex flex-col justify-between items-center h-[80vh] md:h-[100vh] lg:h-[120vh] relative overflow-hidden"
       style="background-image: url('./img/driving-banner.webp')"
     >
@@ -951,7 +949,7 @@
               >
                 <div class="py-2 text-[#A3ACB5] lg:pl-16 lg:pr-10">
                   <div class="text-[16px] font-[400] text-[#A3ACB5]">
-                    <ul class="list-disc space-y-3">
+                    <ul class="list-disc space-y-3 p-3">
                       <li>CRM and accounting tool integration</li>
 
                       <li>Branch-wise export templates</li>
@@ -1047,7 +1045,7 @@
 
     <!-- Banner Call To Action Section -->
     <section
-      class="px-6 py-8 lg:py-16 bg-[url('./img/ctamobile2.webp')]  md:bg-[url('./img/driving-cta-2.webp')] md:bg-none bg-black bg-cover bg-center bg-no-repeat relative overflow-hidden"
+      class="px-6 py-8 lg:py-16 bg-[url('./img/ctamobile2.webp')] md:bg-none bg-black bg-cover bg-center bg-no-repeat relative overflow-hidden"
     >
       <div class="container mx-auto">
         <div
@@ -2914,7 +2912,7 @@
     </section>
 
     <section
-      class="relative text-white py-20 overflow-hidden px-5 golang-sect-border-1"
+      class="relative text-white py-10 xl:py-20 overflow-hidden px-5 golang-sect-border-1"
     >
       <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
       <!-- Blur is removed by default and will be toggled when the slider moves -->
@@ -4139,29 +4137,31 @@
     </script>
     <script>
       $(document).ready(function () {
-        $(".video-popup").magnificPopup({
+        // Initialize Magnific Popup for YouTube and Vimeo videos
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
           type: "iframe",
           mainClass: "mfp-fade",
           removalDelay: 300,
           preloader: true,
           fixedContentPos: false,
+          iframe: {
+            patterns: {
+              youtube: {
+                index: "youtube.com/",
+                id: "v=",
+                src: "https://www.youtube.com/embed/%id%?autoplay=1"
+              },
+              vimeo: {
+                index: "vimeo.com/",
+                id: "/",
+                src: "https://player.vimeo.com/video/%id%?autoplay=1"
+              }
+            }
+          }
         });
       });
     </script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       function toggleAccordionPPC(button) {
         const content = button.nextElementSibling;
@@ -4327,12 +4327,12 @@
               margin: 20,
             },
             1440: {
-              items: 1, // Show 3 items at larger screens
+              items: 1,
               stagePadding: 200,
               margin: 20,
             },
             1600: {
-              items: 1, // Show 3 items at larger screens
+              items: 1,
               stagePadding: 300,
               margin: 25,
             },
@@ -4341,27 +4341,27 @@
             // Get the tallest item height
             var maxHeight = Math.max.apply(
               null,
-              $(".slider-1 .owl-item")
+              $(".slider-2 .owl-item")
                 .map(function () {
                   return $(this).height();
                 })
                 .get()
             );
             // Set all items to that height
-            $(".slider-1 .owl-item").height(maxHeight);
+            $(".slider-2 .owl-item").height(maxHeight);
           },
           onResized: function () {
             // Recalculate heights on resize
-            $(".slider-1 .owl-item").css("height", "auto");
+            $(".slider-2 .owl-item").css("height", "auto");
             var maxHeight = Math.max.apply(
               null,
-              $(".slider-1 .owl-item")
+              $(".slider-2 .owl-item")
                 .map(function () {
                   return $(this).height();
                 })
                 .get()
             );
-            $(".slider-1 .owl-item").height(maxHeight);
+            $(".slider-2 .owl-item").height(maxHeight);
           },
         });
 
@@ -4393,8 +4393,8 @@
         });
 
         // Custom navigation setup if needed
-        const nextButton = $(".slider-1 .owl-nav .owl-next");
-        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+        const nextButton = $(".slider-2 .owl-nav .owl-next");
+        const prevButton = $(".slider-2 .owl-nav .owl-prev");
 
         if (nextButton.length && prevButton.length) {
           nextButton.on("click", function () {
@@ -4411,22 +4411,14 @@
     <script>
       $(document).ready(function () {
         const owl = $(".slider-3");
-        const leftOverlay = document.getElementById("leftOverlay3");
-
+    
         owl.owlCarousel({
           autoWidth: true,
           margin: 30,
           loop: false,
           dots: false,
           nav: true,
-          // stagePadding: 180,
-          // responsive: {
-          // 0: { items: 1, stagePadding: 20 },
-          // 768: { items: 2, stagePadding: 50 },
-          // 1024: { items: 3, stagePadding: 100 },
-          // 1440: { items: 1, stagePadding: 0 },
-          // 1600: { items: 1, stagePadding: 0 },
-          // },
+         
         });
       });
     </script>
@@ -4629,43 +4621,6 @@
           content.parentElement.classList.add("bg-[#121314]");
         }
       }
-    </script>
-
-
-
-    <script>
-      const buttons = document.querySelectorAll(".");
-      const contents = document.querySelectorAll(".content-item");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const target = btn.dataset.target;
-
-          // Reset active states
-          buttons.forEach((b) => {
-            b.classList.remove("text-white");
-            b.classList.add("text-gray-500");
-          });
-          contents.forEach((c) => c.classList.add("hidden"));
-
-          // Activate selected
-          btn.classList.remove("text-gray-500");
-          btn.classList.add("text-white");
-          document.getElementById(target).classList.remove("hidden");
-        });
-      });
-    </script>
-    <script>
-      $(function () {
-        $(".popup-youtube, .popup-vimeo").magnificPopup({
-          // disableOn: 700,
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false,
-        });
-      });
     </script>
 
     <!-- Related Blogs: Owl Carousel init (unique instance) -->
