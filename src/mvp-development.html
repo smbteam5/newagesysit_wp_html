@@ -37,8 +37,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
     <style>
       .custom-scrollbar::-webkit-scrollbar {
         width: 5px;
@@ -1420,7 +1419,7 @@ We build social networking MVPs that double down on prioritizing engagement, con
                                 <p
                                   class="text-[16px] md:text-[18px] text-white px-1 md:px-2"
                                 >
-                                  Java
+                                  Javascript
                                 </p>
                               </div>
                             </div>
@@ -3318,7 +3317,9 @@ Absolutely. In fact, every MVP we build follows a scalable architecture, which m
         </div>
       </div>
     </section>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script>
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
@@ -3385,31 +3386,10 @@ Absolutely. In fact, every MVP we build follows a scalable architecture, which m
         });
       });
     </script>
-    <script>
-      $(document).ready(function () {
-        $(".video-popup").magnificPopup({
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 300,
-          preloader: true,
-          fixedContentPos: false,
-        });
-      });
-    </script>
+    
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       function toggleAccordionPPC(button) {
         const content = button.nextElementSibling;
@@ -3755,18 +3735,7 @@ Absolutely. In fact, every MVP we build follows a scalable architecture, which m
         });
       });
     </script>
-    <script>
-      $(function () {
-        $(".popup-youtube, .popup-vimeo").magnificPopup({
-          // disableOn: 700,
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 160,
-          preloader: false,
-          fixedContentPos: false,
-        });
-      });
-    </script>
+    
 
     <!-- Related Blogs: Owl Carousel init (unique instance) -->
     <script>
@@ -3917,6 +3886,31 @@ Absolutely. In fact, every MVP we build follows a scalable architecture, which m
     });
   });
 </script>
-
+<script>
+      $(document).ready(function () {
+        // Initialize Magnific Popup for YouTube and Vimeo videos
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 300,
+          preloader: true,
+          fixedContentPos: false,
+          iframe: {
+            patterns: {
+              youtube: {
+                index: "youtube.com/",
+                id: "v=",
+                src: "https://www.youtube.com/embed/%id%?autoplay=1"
+              },
+              vimeo: {
+                index: "vimeo.com/",
+                id: "/",
+                src: "https://player.vimeo.com/video/%id%?autoplay=1"
+              }
+            }
+          }
+        });
+      });
+    </script>
 </body>
 </html>
