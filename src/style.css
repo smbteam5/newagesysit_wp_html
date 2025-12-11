@@ -18259,10 +18259,21 @@ footer ul li {
   background-size: cover;
   background-position: center;
   filter: blur(100px);
+  -webkit-filter: blur(100px);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: filter;
   z-index: -1;
   border-radius: 24px;
   width: 200%;
   height: 200%;
+}
+
+@media (max-width: 768px) {
+  .bg-blurred-industry::before {
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+  }
 }
 
 .bg-blurred-industry-localil{
@@ -18287,10 +18298,21 @@ footer ul li {
   background-size: cover;
   background-position: center;
   filter: blur(100px);
+  -webkit-filter: blur(100px);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: filter;
   z-index: -1;
   border-radius: 24px;
   width: 200%;
   height: 200%;
+}
+
+@media (max-width: 768px) {
+  .bg-blurred-industry-localil::before {
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+  }
 }
 
 .driving-gradient-border{
