@@ -6847,12 +6847,9 @@ footer ul li {
 
 
 .gradient-heading-animation{
-  /* background: linear-gradient(90deg, #FD5333 0%, #DB4BB0 50%, #3088FD 100%);
-  background: linear-gradient(90deg, #FD5333 0%, #DB4BB0 50%, #3088FD 90.87%);
-background: linear-gradient(90.76deg, #3088FD 9.03%, #DB4BB0 49.04%, #FD5333 97.42%); */
-
- background: linear-gradient(90deg, #FD5333, #DB4BB0, #3088FD);
-  background-size: 150% 150%;
+ 
+ background: linear-gradient(90deg, #FD5333, #DB4BB0, #3088FD, #FD5333);
+  background-size: 200% 100%;
   animation: gradientLoop 6s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6862,15 +6859,37 @@ background: linear-gradient(90.76deg, #3088FD 9.03%, #DB4BB0 49.04%, #FD5333 97.
   0% {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 100% 50%;
-  }
   100% {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
 }
 
 .landing-card-1{
+background:
+  /* Warm bottom glow (brown/orange tint) */
+  radial-gradient(
+    circle at bottom right,
+    rgba(222, 123, 60, 0.18) 0%,
+    rgba(0, 0, 0, 0) 55%
+  ),
+
+  /* Dark vignette fade */
+  radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.85) 90%
+  ),
+
+  /* Base dark layer */
+  linear-gradient(
+    130deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+
+}
+
+/* .landing-card-1{
   position: relative;
   background: linear-gradient(131.77deg, rgba(0, 0, 0, 0.36) 10.7%, rgba(0, 0, 0, 0.45) 105.87%),
     radial-gradient(circle at top left, rgba(255, 130, 20, 0.1) 0%, #07070A 70%),
@@ -6879,26 +6898,55 @@ background: linear-gradient(90.76deg, #3088FD 9.03%, #DB4BB0 49.04%, #FD5333 97.
   border: 1px solid rgba(78, 83, 186, 0.31);
   backdrop-filter: blur(94px);
   -webkit-backdrop-filter: blur(94px);
-}
-.landing-card-2{
-  position: relative;
- background: linear-gradient(125.4deg, #F2D21B -193.37%, #07070A 19.13%),
-linear-gradient(189.56deg, rgba(0, 0, 0, 0) 7.21%, rgba(229, 222, 31, 0.2) 124.55%);
+} */
 
-  background-blend-mode: normal, normal, normal;
-  border: 1px solid rgba(78, 83, 186, 0.31);
-  backdrop-filter: blur(94px);
-  -webkit-backdrop-filter: blur(94px);
+.landing-card-2{
+ background:
+  /* Yellow–olive bottom glow */
+  radial-gradient(
+    circle at bottom center,
+    rgba(205, 180, 50, 0.18) 0%,
+    rgba(0, 0, 0, 0) 55%
+  ),
+
+  /* Dark vignette fade from top */
+  radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.85) 90%
+  ),
+
+  /* Base dark layer */
+  linear-gradient(
+    130deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+
 }
 .landing-card-3{
-  position: relative;
- background: linear-gradient(125.4deg, #12BF54 -193.37%, #07070A 19.13%),
-linear-gradient(211.14deg, rgba(0, 0, 0, 0) 18.83%, rgba(18, 190, 85, 0.2) 113.18%);
+ background:
+  /* Soft green glow at the bottom-left */
+  radial-gradient(
+    circle at bottom left,
+    rgba(60, 180, 120, 0.18) 0%,
+    rgba(0, 0, 0, 0) 55%
+  ),
 
-  background-blend-mode: normal, normal, normal;
-  border: 1px solid rgba(78, 83, 186, 0.31);
-  backdrop-filter: blur(94px);
-  -webkit-backdrop-filter: blur(94px);
+  /* Dark vignette from the top */
+  radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.85) 90%
+  ),
+
+  /* Base dark layer for depth */
+  linear-gradient(
+    130deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+
 }
 
 .heading-underline::after {
@@ -6925,17 +6973,48 @@ linear-gradient(211.14deg, rgba(0, 0, 0, 0) 18.83%, rgba(18, 190, 85, 0.2) 113.1
 .bg-blurred-industry::before{
   content: "";
   position: absolute;
-  inset: 0;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
   background-image: linear-gradient(180deg, #000000 0%, rgba(53, 53, 53, 0) 56.19%, #09090B 108.76%),
                     url("./img/cashdocs-landing-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: blur(30px);
+  filter: blur(100px);
   z-index: -1;
   border-radius: 24px;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
+}
+
+.bg-blurred-industry-localil{
+  position: relative;
+  background-image: url("./img/localil-landing-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.bg-blurred-industry-localil::before{
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background-image: linear-gradient(180deg, #000000 0%, rgba(53, 53, 53, 0) 56.19%, #09090B 108.76%),
+                    url("./img/localil-landing-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(100px);
+  z-index: -1;
+  border-radius: 24px;
+  width: 200%;
+  height: 200%;
 }
 
 
