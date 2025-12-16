@@ -2299,7 +2299,7 @@
       <!--------------New-Slider----------->
 
       <section
-        class="section-above-922 py-20 bg-black"
+        class="section-above-922 py-20 bg-black  overflow-hidden"
         style="
           background: #000 url('./img/bgnew.webp') center center/cover no-repeat;
         "
@@ -2307,7 +2307,7 @@
         <div class="grid-bg"></div>
         <div class="hero-content" style="padding-bottom: 190px">
           <!-- Left image section -->
-          <div class="image-area pointer-events-none">
+          <div class="image-area pointer-events-none  ">
             <img
               src="./img/new1.webp"
               class="active"
@@ -2325,7 +2325,7 @@
           </div>
 
           <!-- Right content -->
-          <div class="right-section custom-style2" style="margin-top: 80px">
+          <div class="right-section custom-style2 " style="margin-top: 80px">
             <h1>
               <span
                 style="
@@ -3942,13 +3942,15 @@
       $(document).ready(function () {
         // Initialize Slick Slider for tag-bar
         $(".tag-bar-slider").slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 5,
+          slidesToScroll:1,
           arrows: false,
-          dots: true,
+          dots: false,
           infinite: false,
           variableWidth: true,
           swipeToSlide: true,
+          centerMode: true,
+       centerPadding: 0,
           responsive: [
             {
               breakpoint: 900,
