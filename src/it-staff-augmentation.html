@@ -22,11 +22,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.12.1.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    
+   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
@@ -36,8 +33,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
     <style>
       .custom-scrollbar::-webkit-scrollbar {
         width: 5px;
@@ -2168,7 +2164,7 @@
 <!-- Braintree -->
 <div class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block">
   <div class="flex items-center gap-2 border rounded-xl px-3 py-2 bg-[#2B2D3A]">
-    <img src="./img/braintree-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Braintree">
+    <img src="./img/b-icon.svg" class="w-8 h-8 md:w-10 md:h-10" alt="Braintree">
     <p class="text-white text-[16px] md:text-[18px]">Braintree</p> 
   </div>
 </div>
@@ -5480,7 +5476,19 @@ At NewAgeSysIT, we try to maintain high performance standards and offer complete
         </div>
       </div>
     </section>
+<!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
@@ -5547,31 +5555,8 @@ At NewAgeSysIT, we try to maintain high performance standards and offer complete
         });
       });
     </script>
-    <script>
-      $(document).ready(function () {
-        $(".video-popup").magnificPopup({
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 300,
-          preloader: true,
-          fixedContentPos: false,
-        });
-      });
-    </script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
     <script>
       function toggleAccordionPPC(button) {
         const content = button.nextElementSibling;
@@ -5866,21 +5851,6 @@ At NewAgeSysIT, we try to maintain high performance standards and offer complete
       });
     </script>
 
-    <script>
-      const toggleBtn = document.getElementById("toggleBtn");
-      const collapsed = document.getElementById("collapsedState");
-      const expanded = document.getElementById("expandedState");
-
-      toggleBtn.addEventListener("click", () => {
-        collapsed.classList.add("hidden");
-        expanded.classList.remove("hidden");
-      });
-
-      document.getElementById("viewLessBtn").addEventListener("click", () => {
-        expanded.classList.add("hidden");
-        collapsed.classList.remove("hidden");
-      });
-    </script>
 
     <script>
       (function () {
@@ -6019,30 +5989,8 @@ At NewAgeSysIT, we try to maintain high performance standards and offer complete
       }
     </script>
     <script>
-      const buttons = document.querySelectorAll(".");
-      const contents = document.querySelectorAll(".content-item");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const target = btn.dataset.target;
-
-          // Reset active states
-          buttons.forEach((b) => {
-            b.classList.remove("text-white");
-            b.classList.add("text-gray-500");
-          });
-          contents.forEach((c) => c.classList.add("hidden"));
-
-          // Activate selected
-          btn.classList.remove("text-gray-500");
-          btn.classList.add("text-white");
-          document.getElementById(target).classList.remove("hidden");
-        });
-      });
-    </script>
-    <script>
       $(function () {
-        $(".popup-youtube, .popup-vimeo").magnificPopup({
+        $(".popup-youtube").magnificPopup({
           // disableOn: 700,
           type: "iframe",
           mainClass: "mfp-fade",
