@@ -167,6 +167,7 @@
       }
 
       .grid-bg {
+        
         position: absolute;
         width: 100%;
         height: 100%;
@@ -178,6 +179,7 @@
         background-size: 50px 50px;
         opacity: 0.1;
         z-index: 1;
+        pointer-events: none;
       }
 
       .hero-content {
@@ -1405,29 +1407,11 @@
       }
     </style>
     <style>
-      body {
-        background: 
-    /* Top & bottom black fade */ linear-gradient(
-            180deg,
-            #000 0%,
-            rgba(0, 0, 0, 0.9) 15%,
-            rgba(0, 0, 0, 0.577) 40%,
-            rgba(0, 0, 0, 0.318) 60%,
-            rgba(0, 0, 0, 0.9) 85%,
-            #000 100%
-          ),
-          /* Left→center→right gradient */
-            linear-gradient(
-              90deg,
-              #000000 0%,
-              rgb(47, 63, 176) 50%,
-              #000000a6 80%
-            );
-        background-blend-mode: normal;
-      }
+     
     </style>
   </head>
-  <body class="bg-black font-inter overflow-hidden">
+  <body class="font-inter overflow-x-hidden ">
+
     <section
       class="bg-contain bg-no-repeat flex flex-col items-center justify-between relative overflow-hidden h-[100vh]"
     >
@@ -1488,7 +1472,7 @@
         >
           <div class="lg:w-[30%] text-center lg:text-left">
             <p
-              class="text-white text-base text-[16px] md:text-[18px] leading-snug"
+              class="text-white text-base text-[16px] md:text-[18px] leading-snug !mb-0"
             >
               Recognized for delivering the best solutions for businesses of all
               sizes and across industries.
@@ -1558,13 +1542,7 @@
         </div>
       </div>
     </section>
-    <section class="w-full py-12 lg:py-24 relative">
-      <img
-        src="./img/ind-glow.svg"
-        alt="Glow Background"
-        class="right-0 absolute scale-110 top-[-50%] -z-10 pointer-events-none"
-      />
-
+    <section class="w-full py-12 lg:py-20 relative">
       <div class="container mx-auto">
         <!-- Cards Wrapper -->
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
@@ -1572,7 +1550,7 @@
             <h2
               class="text-[28px] md:text-[40px] xl:text-[35px] 2xl:text-[40px] font-semibold text-white mb-12"
             >
-              Why<br />NewagesysIT?
+              Why<br />NewAgesysIT?
             </h2>
           </div>
           <!-- Card 1 -->
@@ -1625,34 +1603,27 @@
       </div>
     </section>
     <section class="text-white relative pt-10">
-      <div class="absolute inset-0 pointer-events-none -z-10">
-        <img
-          src="./img/glow-center.svg"
-          alt="Glow Background"
-          class="w-1/2 object-cover object-center scale-110"
-        />
-      </div>
-
-      <img
-        src="./img/landing-glow.svg"
-        alt="Glow Background"
-        class="left-0 absolute scale-110"
-      />
-
-      <img
-        src="./img/landing-glow-bottom.svg"
-        alt="Glow Background"
-        class="right-0 bottom-0 absolute scale-110"
-      />
+     
 
       <div class="container mx-auto px-4">
-        <h2 class="text-[28px] md:text-[40px] font-semibold mb-12">
+        <h2 class="text-[28px] md:text-[40px] font-semibold mb-3">
           Industries We Empower
         </h2>
       </div>
     </section>
 
-    <div class="flex flex-col space-y-8">
+    <div class="flex flex-col space-y-8 relative overflow-hidden">
+
+
+        <img
+  src="./img/industries-glow.svg"
+  alt="Gradient Top"
+  class="w-full h-screen object-cover object-center fixed top-0 left-0 -z-10 pointer-events-none opacity-30"
+  fetchpriority="high"
+/>
+
+
+
       <section>
         <div class="container">
           <!-- Transportation Card -->
@@ -1712,7 +1683,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- On Demand Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -1762,7 +1733,7 @@
 
             <!-- Healthcare Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -1813,11 +1784,7 @@
       </section>
 
       <section class="relative">
-        <img
-          src="./img/landing-glow.svg"
-          alt="Glow Background"
-          class="left-0 absolute scale-110"
-        />
+       
 
         <div class="container mx-auto">
           <div
@@ -1881,7 +1848,7 @@
                   </div>
                 </div>
                 <div
-                  class="lg:border-l border-white/20 p-3 lg:p-8 xl:max-h-[220px]"
+                  class="lg:border-l border-white/20 p-3 lg:p-8 xl:max-h-[250px]"
                 >
                   <p class="text-[18px] lg:text-[28px]">Services</p>
                   <ul
@@ -1999,11 +1966,7 @@
       </section>
 
       <section class="relative">
-        <img
-          src="./img/landing-glow.svg"
-          alt="Glow Background"
-          class="left-0 absolute scale-110"
-        />
+      
 
         <div class="container mx-auto">
           <div
@@ -2070,12 +2033,10 @@
                   </div>
                 </div>
                 <div
-                  class="lg:border-l border-white/20 p-3 lg:p-8 xl:max-h-[220px]"
+                  class="lg:border-l border-white/20 p-3 lg:p-8 xl:max-h-[260px]"
                 >
-                  <p class="text-[18px] lg:text-[28px]">Services</p>
-                  <ul
-                    class="list-disc text-[18px] mt-4 space-y-2 text-[#A3ACB5]"
-                  >
+                  <p class="text-[18px] lg:text-[28px] !mb-3">Services</p>
+                  <ul class="list-disc text-[18px] space-y-2 text-[#A3ACB5]">
                     <li>Mobile App Development</li>
                     <li>Admin Panel</li>
                     <li>UI/UX Design</li>
@@ -2299,7 +2260,7 @@
       <!--------------New-Slider----------->
 
       <section
-        class="section-above-922 py-20 bg-black  overflow-hidden"
+        class="section-above-922 pt-20 bg-black overflow-hidden"
         style="
           background: #000 url('./img/bgnew.webp') center center/cover no-repeat;
         "
@@ -2307,7 +2268,7 @@
         <div class="grid-bg"></div>
         <div class="hero-content" style="padding-bottom: 190px">
           <!-- Left image section -->
-          <div class="image-area pointer-events-none  ">
+          <div class="image-area pointer-events-none">
             <img
               src="./img/new1.webp"
               class="active"
@@ -2325,7 +2286,7 @@
           </div>
 
           <!-- Right content -->
-          <div class="right-section custom-style2 " style="margin-top: 80px">
+          <div class="right-section custom-style2" style="margin-top: 80px">
             <h1>
               <span
                 style="
@@ -3007,7 +2968,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- On Demand Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -3056,7 +3017,7 @@
 
             <!-- Healthcare Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -3214,7 +3175,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- On Demand Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -3263,7 +3224,7 @@
 
             <!-- Healthcare Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -3370,7 +3331,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- On Demand Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -3419,7 +3380,7 @@
 
             <!-- Healthcare Card -->
             <div
-              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
+              class="landing-card flex flex-col justify-between bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] p-4 md:p-5 xl:p-10 rounded-[32px] backdrop-blur-3xl border lg:border-transparent hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
             >
               <div class="mb-6">
                 <div
@@ -3470,17 +3431,7 @@
       </section>
 
       <section class="relative">
-        <img
-          src="./img/landing-glow.svg"
-          alt="Glow Background"
-          class="left-0 absolute scale-110"
-        />
-
-        <!-- <img
-        src="./img/landing-glow-bottom.svg"
-        alt="Glow Background"
-        class="right-0 bottom-0 absolute scale-110"
-      /> -->
+      
         <div class="container mx-auto px-4">
           <div
             class="flex flex-col lg:flex-row gap-8 bg-[linear-gradient(131.77deg,rgba(0,0,0,0.36)_10.7%,rgba(0,0,0,0.45)_105.87%)] backdrop-blur-3xl p-4 md:p-5 xl:p-10 rounded-[32px] border border-[#303071b1] lg:border-transparent lg:hover:border-[#303071b1] transition-all duration-200 cursor-pointer group"
@@ -3943,14 +3894,14 @@
         // Initialize Slick Slider for tag-bar
         $(".tag-bar-slider").slick({
           slidesToShow: 5,
-          slidesToScroll:1,
+          slidesToScroll: 1,
           arrows: false,
           dots: false,
           infinite: false,
           variableWidth: true,
           swipeToSlide: true,
           centerMode: true,
-       centerPadding: 0,
+          centerPadding: 0,
           responsive: [
             {
               breakpoint: 900,
