@@ -5644,17 +5644,25 @@ $(document).ready(function(){
         console.log("test");
         if (!isAlreadyRun) {
           $element.find(".count-number .no-i").each(function () {
-            $(this)
+            var $this = $(this);
+            var countTo = $this.text();
+            var isDecimal = countTo.indexOf('.') > -1;
+            
+            $this
               .prop("Counter", 0)
               .animate(
                 {
-                  Counter: $(this).text(),
+                  Counter: countTo,
                 },
                 {
                   duration: 1500,
                   easing: "swing",
                   step: function (now) {
-                    $(this).text(Math.ceil(now));
+                    if (isDecimal) {
+                      $this.text(now.toFixed(1));
+                    } else {
+                      $this.text(Math.ceil(now));
+                    }
                   },
                 }
               );
