@@ -39,6 +39,26 @@
                 margin-top: 30px !important;
             }
         }
+
+        /* Marquee Animation */
+        @keyframes scroll-marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logos-arquee {
+            display: flex;
+            animation: scroll-marquee 25s linear infinite;
+            width: max-content;
+        }
+
+        .logos-arquee img {
+            flex-shrink: 0;
+        }
     
 </style>
   
@@ -216,7 +236,7 @@
             class="relative w-full  z-50  bg-white text-black"
           >
             <div
-              class="relative flex flex-col lg:flex-row items-start justify-start gap-2 lg:gap-8 px-12 md:px-12 py-5"
+              class="relative flex flex-col lg:flex-row items-start lg:items-center justify-start gap-2 lg:gap-8 px-12 md:px-12 py-5"
             >
               <div class="lg:w-[25%] text-left">
                 <p
@@ -383,7 +403,7 @@
                    <h2 class="inline-block  font-bold text-[20px] md:text-[28px]">
                      iOS App<br/>Development
                     </h2>
-                    <p class="font-[300] text-[17px] pt-2">
+                    <p class="font-normal text-[17px] pt-2">
                      Our iOS team builds apps from scratch, joins projects at any stage, offers expertise, and assists with tasks like app store optimization
                     </p>
                   </div>
@@ -1081,7 +1101,7 @@
           </div>
         </div>
 
-        <div class="text-center xl:-mt-[10rem] lg::-mt-[5rem]">
+        <div class="text-center mt-3 xl:-mt-[10rem] lg:-mt-[5rem]">
           <h3
             class="text-[24px] md:text-[40px] font-semibold text-white mb-4 max-w-xl mx-auto"
           >
