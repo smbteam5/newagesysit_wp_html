@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+       <style>
+      :root {
+        /* Colors */
+        --color-primary: #ff8214;
+        --color-secondary: #4361ee;
+        --color-accent: #747bff;
+        --color-dark: #2a2d30;
+        --color-black: #090d21;
+        --color-white: #ffffff;
+        --color-light-blue: #f0f3ff;
+        --color-gray: #626970;
+        --color-light-gray: #c3c9d0;
+
+        /* Fonts */
+        --font-inter: "Inter", sans-serif;
+      }
+
+      body {
+        font-family: var(--font-inter);
+        overflow-x: hidden;
+      }
+
+      .gradient-text {
+        background: linear-gradient(
+          90deg,
+         
+          var(--color-primary),
+           var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .bg-primary {
+        background-color: var(--color-primary);
+      }
+      .bg-secondary {
+        background-color: var(--color-secondary);
+      }
+      .bg-accent {
+        background-color: var(--color-accent);
+      }
+      .bg-dark {
+        background-color: var(--color-dark);
+      }
+      .bg-black {
+        background-color: var(--color-black);
+      }
+      .bg-light-blue {
+        background-color: var(--color-light-blue);
+      }
+
+      .text-primary {
+        color: var(--color-primary);
+      }
+      .text-secondary {
+        color: var(--color-secondary);
+      }
+      .text-accent {
+        color: var(--color-accent);
+      }
+      .text-dark {
+        color: var(--color-dark);
+      }
+      .text-gray {
+        color: var(--color-gray);
+      }
+      .text-black {
+        color: var(--color-black);
+      }
+
+      .border-light-gray {
+        border-color: var(--color-light-gray);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      .client-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="font-inter overflow-x-hidden">
+    <section class="mt-40">
+      <div class="container flex flex-col items-center justify-center">
+        <div class="mx-auto w-[100%]">
+          <!-- Heading -->
+          <h1 class="text-[38px] md:text-[60px] font-bold leading-snug text-center">
+            The
+            <span
+             class="gradient-text"
+            >
+             Modernizing CDL 
+            </span>
+            <span class="text-black">Training Management <br/> with a</span>
+            <span
+              class="gradient-text"
+            >
+             Comprehensive Digital Platform
+            </span>
+
+          <!-- Subheading -->
+        </div>
+        <div
+          class="flex flex-col justify-center items-center sm:flex-row gap-4 mb-10 sm:mb-12 mt-10"
+        >
+          <button
+            class="modal-open bg-[#FF8214] group text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+          >
+            Let’s Build Your App
+
+            <div class="relative w-[30px] h-[30px] inline-block ml-4 rounded-full ripple-wrapper">
+              <!-- Outgoing arrow -->
+              <img
+                src="./img/Arrow Wrapper.svg"
+                alt="Arrow Right"
+                class="absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-0 mx-auto my-auto"
+              />
+
+              <!-- Incoming arrow -->
+              <img
+                src="./img/Arrow Wrapper.svg"
+                alt="Arrow Right"
+                class="absolute top-[100%] left-[-100%] w-full transition-all duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-100 opacity-0"
+              />
+            </div>
+          </button>
+
+          <div class="flex p-1 justify-center items-center mt-3 md:mt-0">
+            <img src="./img/client-thumbnail.webp" class="w-[140px] h-auto" alt="client thumb" />
+            <div class="ml-4">
+              <div class="flex gap-2">
+                <img src="./img/rating-star.svg" alt="star rating" class="h-3 w-3" />
+                <img src="./img/rating-star.svg" alt="star rating" class="h-3 w-3" />
+                <img src="./img/rating-star.svg" alt="star rating" class="h-3 w-3" />
+                <img src="./img/rating-star.svg" alt="star rating" class="h-3 w-3" />
+                <img src="./img/rating-star.svg" alt="star rating" class="h-3 w-3" />
+              </div>
+              <p class="group relative inline-block text-sm mt-1 text-gray-600 cursor-pointer">
+                Trusted by 40+ clients
+                <span
+                  class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
+                ></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative h-[50vh] lg:h-[80vh] overflow-hidden bg-center bg-no-repeat bg-cover"
+      style="background-image: url('./img/parallax.webp') !important"
+    >
+      <!-- Optional: Overlay content here -->
+    </section>
+
+    <section class="px-6 pt-16 md:px-20 bg-white text-[#2A2D30]">
+      <div class="container grid grid-cols-1 lg:grid-cols-2">
+        <!-- Heading -->
+        <div class="mb-12">
+          <h2 class="text-[35px] md:text-[50px] font-bold leading-tight lg:w-[80%]">
+            Client Overview & Partnership
+          </h2>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid mb-12">
+          <div class="text-lg leading-relaxed">
+            <p class="text-[20px] md:text-[28px]">
+             Prime Time CDL wished to digitize and streamline its Commercial Driver’s License (CDL) training operations by creating a mobile-first learning and scheduling ecosystem. With a holistic app and admin panel in place, NewAgeSysIT helped them centralize learner management, instructional content, scheduling, payments, invoicing, and progress monitoring—the system aimed at replacing fragmented, manual processes with a unified system for an exceptional user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-10">
+      <!-- Details Box -->
+      <div
+        class="border rounded-2xl p-8 grid group grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"
+      >
+        <!-- Industry -->
+        <div>
+          <h4 class="font-bold text-[20px] md:text-[28px] mb-2">Industry</h4>
+          <p class="relative w-fit">
+            <a
+              href="https://newagesysit.com/education-app-development/"
+              class="hover:text-blue-500"
+              >Education
+            </a>
+            <span
+              class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </p>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-bold text-[20px] md:text-[28px] mb-2">Services</h4>
+          <ul class="space-y-1 text-[16px] md:text-[18px]">
+            <li class="w-fit relative">
+              <a href="https://newagesysit.com/app-development-service/" class="hover:text-blue-500"
+                >Mobile App Development</a
+              >
+              <span
+                class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </li>
+            <li>Admin Panel</li>
+
+            <li class="w-fit relative">
+              <a
+                href="https://newagesysit.com/ui-ux-design-services/"
+                class="hover:text-blue-500"
+                >UI/UX Design</a
+              >
+              <span
+                class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Business Type -->
+        <div>
+          <h4 class="font-bold text-[20px] md:text-[28px] mb-2">Business Type</h4>
+           Startup
+            
+            <span
+              class="absolute bottom-0 left-0 h-[1px] w-0 bg-gray-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+        </div>
+
+        <!-- Call to Action -->
+        <div>
+          <h4 class="font-bold text-[28px] mb-4">Make your idea real</h4>
+          <a
+            href="https://newagesysit.com/contact/"
+            class="bg-[#2A231F] group/inner border border-white text-white text-[16px] md:text-md font-medium py-3 pl-4 pr-5 rounded-md flex items-center justify-between sm:justify-start gap-2 shadow-md w-fit"
+          >
+            Talk to our experts
+
+            <div class="relative w-[15px] h-[15px] overflow-hidden inline-block ml-4">
+              <img
+                src="./img/arrow-right-white.svg"
+                alt="Arrow Right"
+                class="absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out group-hover/inner:translate-x-[100%] group-hover/inner:opacity-0"
+              />
+
+              <img
+                src="./img/arrow-right-white.svg"
+                alt="Arrow Right"
+                class="absolute top-0 -left-[100%] w-full transition-all duration-300 ease-in-out group-hover/inner:left-0 group-hover/inner:opacity-100 opacity-0"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-12 md:px-20 bg-white text-[#2A2D30]">
+      <div class="container grid grid-cols-1 lg:grid-cols-2">
+        <!-- Heading -->
+        <div class="mb-12">
+          <h2 class="text-[35px] md:text-[50px] font-bold leading-tight lg:w-[80%]">
+            A Centralized Ecosystem for Improved Learner Experience & Revenue Transparency
+          </h2>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid mb-12">
+          <div class="text-lg leading-relaxed">
+            <p class="text-[20px] md:text-[28px]">
+             With an end-to-end digital platform, our team has helped Prime Time CDL to revolutionize CDL training management. The solution replaced manual workflows with a mobile application for learners and a reliable admin system to manage payments, scheduling, and progress monitoring. By bringing role-based access, integrated notifications, and real-time scheduling, the platform has scaled learner experience, operational growth, and revenue transparency, creating a strong foundation for business expansion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+       <section
+      class="relative h-[50vh] lg:h-[80vh] overflow-hidden bg-center bg-no-repeat bg-cover"
+      style="background-image: url('./img/shot.webp') !important"
+    >
+      <!-- Optional: Overlay content here -->
+    </section>
+
+    <section class="px-6 pt-5 md:px-20 bg-white text-[#2A2D30]">
+      <div class="container mx-auto text-center">
+        <!-- Section Title -->
+        <h2 class="text-[35px] md:text-[50px] font-bold mb-6">Application Overview</h2>
+
+        <!-- Description -->
+        <p class="text-[20px] md:text-[28px] leading-relaxed mb-8 text-left">
+         The Prime Time CDL mobile application and web-based admin panel were developed as a unified ecosystem to digitize commercial driver training processes. The platform focuses on centralized learner management, instructor content, instructor scheduling, and conversion of payments to an easy-to-use system. It enables learners to access training content, schedule, and monitor their progress. At the same time, instructors and administrators can take advantage of auto-scheduling validation, real-time financial visibility, and role-based access control mechanisms. The admin dashboard offers a complete oversight of user management, operations, scheduling, earnings reports, and invoice tracking, with a secure digital solution.
+        </p>
+
+        <!-- Subsection -->
+        <h3 class="text-[28px] md:text-[40px] font-semibold mb-2 text-left">
+          Features & Functionalities
+        </h3>
+        <p class="text-[20px] md:text-[28px] leading-relaxed text-left">
+       Our experts designed and developed a mobile application and a comprehensive admin panel to deliver a stunning user experience for users and administrators. The key app functionalities include:
+        </p>
+      </div>
+    </section>
+
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <ul class="space-y-6 text-[#1E1E1E] text-[18px] leading-relaxed">
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-black shrink-0"></span>
+            <span>
+              Centralized all scheduling, invoicing, and learner progress.
+            </span>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-black shrink-0"></span>
+            <span>
+              Established role-based access controls to ensure consistent and
+              secure data management across learners, instructors, and admins.
+            </span>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-black shrink-0"></span>
+            <span>
+              Implemented system-driven scheduling validation to prevent
+              conflicts between learners, instructors, and time slots.
+            </span>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-black shrink-0"></span>
+            <span>
+              Unified invoice and payment tracking to distinguish pending and
+              paid transactions clearly.
+            </span>
+          </li>
+
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-black shrink-0"></span>
+            <span>
+              Enabled real-time financial reporting for accurate earnings
+              visibility and payment history tracking.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="relative rounded-[30px] overflow-hidden shadow-xl">
+          <img
+            src="./img/featur_thumb.webp"
+            alt="App UI"
+            class="w-[280px] md:w-[320px] lg:w-[560px]"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section class="py-10 px-6 md:px-12 md:my-10">
+      <div
+        class="container mx-auto min-h-[320px] pt-10 lg:pt-0 px-6 md:px-12 rounded-[24px] flex flex-col lg:flex-row md:items-center justify-between gap-6"
+        style="background-color: #a71318"
+      >
+        <div>
+          <h2 class="text-2xl md:text-[40px] font-bold text-white leading-normal">
+            Building Your Digital Solutions with Precision
+          </h2>
+          <p class="text-[23px] text-white">
+            Tell us about your project. Let’s move ahead with a tailored approach and scale your
+            business like never before!
+          </p>
+          <button
+            class="modal-open mt-5 inline-flex items-center gap-2 text-[18px] font-medium border bg-black group border-[#111827] text-white px-4 py-2 rounded-lg hover:bg-black/80 transition-colors"
+          >
+            Get Connected 
+            <div class="relative w-[15px] h-[15px] overflow-hidden inline-block ml-4">
+              <img
+                src="./img/arrow-right-white.svg"
+                alt="Arrow Right"
+                class="absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:opacity-0"
+              />
+
+              <img
+                src="./img/arrow-right-white.svg"
+                alt="Arrow Right"
+                class="absolute top-0 -left-[100%] w-full transition-all duration-300 ease-in-out group-hover:left-0 group-hover:opacity-100 opacity-0"
+              />
+            </div>
+          </button>
+        </div>
+
+        <div class="w-full max-w-[350px] flex flex-col justify-end ">
+          <img src="./img/group_38179.webp" alt="Build Image" class="w-full h-auto object-contain " />
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-10 md:pt-16 bg-white text-left">
+      <div class="container mx-auto md:px-4">
+        <!-- Heading -->
+        <h2 class="text-[34px] md:text-[50px] font-bold text-[#111827] mb-4 leading-normal">
+          Project Challenges
+        </h2>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Card -->
+          <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
+         Data Inconsistency 
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+              Data consistency became difficult for the client due to the effort required to manage multiple user roles. With a unified system in place, the establishment of role-based access controls resolved this concern with consistent and secure data management.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
+             Data Inconsistency 
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+             Data consistency became difficult for the client due to the effort required to manage multiple user roles. With a unified system in place, the establishment of role-based access controls resolved this concern with consistent and secure data management.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
+            Management Concerns
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+            Manual scheduling led to frequent overlaps among learners, time slots, and instructors, posing a challenge. Auto-scheduling made it effective for scheduling and avoiding clashes among them.
+            </p>
+          </div>
+
+            <div class="flex flex-col items-start text-left p-3">
+            <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
+            <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
+          Inaccurate Reporting 
+            </h3>
+            <p class="text-[18px] text-[#4B5563]">
+           Earnings & payments history reporting were time-consuming and inaccurate. With a real-time financial reporting system, it became effortless to track payments and gain visibility into earnings.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white text-[#2A2D30] py-12" style="padding-top: 130px">
+      <div class="container mx-auto" style="max-width: 1078px">
+        <!-- Title -->
+        <h2 class="text-3xl md:text-[50px] font-bold text-center mb-12">Our Process</h2>
+
+        <!-- Process Steps Container -->
+
+        <div class="flex flex-col lg:flex-row gap-6 justify-center mx-auto">
+          <!-- Step 1 -->
+          <div class="flex justify-center">
+            <div
+              class="bg-[#F0F3FF] rounded-[16px] w-full max-w-[300px] lg:max-w-[345px] h-[225px] p-6 flex flex-col justify-start items-start"
+              style="width: 345px"
+            >
+              <div class="bg-white/0 rounded-full mb-3">
+                <img src="./img/pro-1.svg" alt="Step 1" class="w-10 h-10" />
+              </div>
+              <p class="text-xs text-[#626970] font-semibold uppercase mb-2">STEP 1</p>
+              <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1C1F] leading-snug">
+              Discovery & Planning
+              </h3>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex justify-center">
+            <div
+              class="bg-[#F0F3FF] rounded-[16px] w-full max-w-[300px] lg:max-w-[345px] h-[225px] p-6 flex flex-col justify-start items-start"
+              style="width: 345px"
+            >
+              <div class="bg-white/0 rounded-full mb-3">
+                <img src="./img/pro-2.svg" alt="Step 2" class="w-10 h-10" />
+              </div>
+              <p class="text-xs text-[#626970] font-semibold uppercase mb-2">STEP 2</p>
+              <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1C1F] leading-snug">
+               UI/UX Design
+              </h3>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex justify-center">
+            <div
+              class="bg-[#F0F3FF] rounded-[16px] w-full max-w-[300px] lg:max-w-[345px] h-[225px] p-6 flex flex-col justify-start items-start"
+              style="width: 345px"
+            >
+              <div class="bg-white/0 rounded-full mb-3">
+                <img src="./img/pro-3.svg" alt="Step 3" class="w-10 h-10" />
+              </div>
+              <p class="text-xs text-[#626970] font-semibold uppercase mb-2">STEP 3</p>
+              <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1C1F] leading-snug">
+              Development
+              </h3>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex justify-center md:col-start-1 lg:col-start-2">
+            <div
+              class="bg-[#F0F3FF] rounded-[16px] w-full max-w-[300px] lg:max-w-[345px] h-[225px] p-6 flex flex-col justify-start items-start"
+              style="width: 345px"
+            >
+              <div class="bg-white/0 rounded-full mb-3">
+                <img src="./img/pro-4.svg" alt="Step 4" class="w-10 h-10" />
+              </div>
+              <p class="text-xs text-[#626970] font-semibold uppercase mb-2">STEP 4</p>
+              <h3 class="text-[20px] md:text-[22px] font-bold text-[#1A1C1F] leading-snug">
+               Deployment
+              </h3>
+            </div>
+          </div>
+
+      
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full py-20 md:py-40 px-4 md:px-8">
+      <div
+        class="container mx-auto bg-[#F0F3FF] p-16"
+        style="padding-left: 0px; padding-right: 0px"
+      >
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-20 text-center">
+          Technology Stack
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-10">
+          <!-- Mobile App -->
+          <div class="bg-white rounded-[40px] p-8 relative">
+            <div
+              class="absolute -top-7 left-1/2 transform -translate-x-1/2 bg-[#F0F3FF] px-4 py-2 rounded-full"
+            >
+              <span class="font-semibold text-[#7A8086] text-[16px]">Mobile App</span>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-5">
+              <div class="flex flex-col items-center">
+                <div class="bg-[#F0F3FF] p-8 rounded-2xl mb-4">
+                  <div class="w-[74px] h-[74px] flex items-center justify-center">
+                    <img src="./img/cld1.svg" alt="ios" class="w-24 h-24" />
+                  </div>
+                </div>
+                <span class="text-lg">iOS</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="bg-[#F0F3FF] p-8 rounded-2xl mb-4">
+                  <div class="w-[74px] h-[74px] flex items-center justify-center">
+                    <img src="./img/cdl2.svg" alt="android" class="w-16 h-16" />
+                  </div>
+                </div>
+                <span class="text-lg">Android</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="bg-[#F0F3FF] p-8 rounded-2xl mb-4">
+                  <div class="w-[74px] h-[74px] flex items-center justify-center">
+                    <img src="./img/cdl3.svg" alt="Twilio" class="w-16 h-16" />
+                  </div>
+                </div>
+                <span class="text-lg">Twilio</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="bg-[#F0F3FF] p-8 rounded-2xl mb-4">
+                  <div class="w-[74px] h-[74px] flex items-center justify-center">
+                    <img src="./img/cdl4.svg" alt="YouTube" class="w-16 h-16" />
+                  </div>
+                </div>
+                <span class="text-lg">YouTube embedding</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="bg-[#F0F3FF] p-8 rounded-2xl mb-4">
+                  <div class="w-[74px] h-[74px] flex items-center justify-center">
+                    <img src="./img/cdl5.svg" alt="Stripe" class="w-16 h-16" />
+                  </div>
+                </div>
+                <span class="text-lg">Stripe</span>
+              </div>
+
+              
+              <div class="flex flex-col items-center">
+                <div class="bg-[#F0F3FF] p-8 rounded-2xl mb-4">
+                  <div class="w-[74px] h-[74px] flex items-center justify-center">
+                    <img src="./img/cdl6.svg" alt="Google" class="w-16 h-16" />
+                  </div>
+                </div>
+                <span class="text-lg">Google Places 
+API</span>
+              </div>
+              
+            </div>
+          </div>
+
+      
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-12 md:px-20 md:py-24 bg-white text-[#2A2D30]">
+      <div class="container mx-auto">
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-[50px] font-bold text-center mb-12">Key Highlights</h2>
+
+        <!-- Result Cards Grid -->
+        <div class="grid lg:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img src="./img/check 1.svg" alt="tick" class="w-10 h-10" />
+            <div class="ml-5">
+              <h3 class="font-bold text-[28px] mb-1 text-[#2A2D30]">
+               Improved Operational Efficiency
+              </h3>
+              <p class="text-[#626970] text-[23px]">
+             Enhanced operational efficiency by centralizing scheduling, learner, and instructor management while eliminating manual conflicts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img src="./img/check 1.svg" alt="tick" class="w-10 h-10" />
+            <div class="ml-5">
+              <h3 class="font-bold text-[28px] mb-1 text-[#2A2D30]">
+               Increased Financial Control
+              </h3>
+              <p class="text-[#626970] text-[23px]">
+              Increased financial visibility and control through centralized invoicing, payment tracking, and real-time revenue reporting.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex items-start p-6 bg-[#F5FAFE] hover:bg-[#E3E7FF] rounded-xl border-[1px] border-[#D9DFFC]"
+          >
+            <img src="./img/check 1.svg" alt="tick" class="w-10 h-10" />
+            <div class="ml-5">
+              <h3 class="font-bold text-[28px] mb-1 text-[#2A2D30]">
+             Minimized Administrative Overhead
+              </h3>
+              <p class="text-[#626970] text-[23px]">
+               Reduced administrative overhead by automating notifications and routine coordination tasks.
+              </p>
+            </div>
+          </div>
+
+       
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- Footer form Section -->
+    <section
+      class="bg-[url('./img/lets-discuss-bg.png')] bg-cover bg-center text-white px-4 lg:px-8"
+    >
+      <div class="container py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 relative">
+          <div class="text-black self-center">
+            <div class="ld_left_wrap text-white">
+              <h2
+                class="text-[28px] md:text-[50px] min-992px:text-[50px] font-bold text-white md:mb-[25px]"
+              >
+                Are you experiencing similar challenges?
+              </h2>
+              <p class="text-[23px] text-[#DEE3E9]">
+                Share your challenges and our team will craft a personalized
+                proposal. Get expert advice and unlock your growth potential.
+              </p>
+              <a
+                class="bg-[#FF8214] mt-12 group text-white text-[16px] md:text-md font-normal py-3 pl-4 pr-3 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+              >
+                Discuss with our experts
+                <div
+                  class="relative w-[30px] h-[30px] inline-block ml-4 rounded-full z-10 ripple-wrapper"
+                >
+                  <!-- Outgoing arrow -->
+                  <img
+                    src="./img/Arrow Wrapper.svg"
+                    alt="Arrow Right"
+                    class="absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-0 mx-auto my-auto"
+                  />
+
+                  <!-- Incoming arrow -->
+                  <img
+                    src="./img/Arrow Wrapper.svg"
+                    alt="Arrow Right"
+                    class="absolute top-[100%] left-[-100%] w-full transition-all duration-300 ease-in-out group-hover:translate-x-[100%] group-hover:-translate-y-[100%] group-hover:opacity-100 opacity-0"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="text-black flex justify-start lg:justify-center mt-10 lg:mt-0 items-center"
+          >
+            <div class="cta_right min-768px:p-5 py-0 max-768px:mt-[20px] flex">
+              <form
+                action=""
+                class="px-[30px] py-[40px] bg-white rounded-[15px] max-w-[580px]"
+              >
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Name*"
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Email*"
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                
+                <div class="form-group mb-3">
+                  <textarea
+                    name=""
+                    id=""
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                    placeholder="Project Description"
+                  ></textarea>
+        <div class="form-group mb-3">
+ <select
+  class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5] text-[#65686C] focus:text-black"
+>
+
+    <!-- Placeholder -->
+    <option value="" disabled selected hidden>
+   Budget
+    </option>
+
+    <option value="under-5k">Under $5,000</option>
+    <option value="5k-10k">$5,000 – $10,000</option>
+    <option value="10k-25k">$10,000 – $25,000</option>
+    <option value="25k-50k">$25,000 – $50,000</option>
+    <option value="50k-plus">$50,000+</option>
+  </select>
+</div>
+
+                </div>
+                   <div class="form-footer text-[#445D6E] pt-5 pb-5">
+                  <p class="flex items-center text-sm">
+                    <span class="pr-2"
+                      ><img src="./img/form.svg" alt="" /> </span
+                    ><span
+                      >Your idea is 100% protected by our non disclosure
+                      agreement.</span
+                    >
+                  </p>
+                </div>
+                <div class="form-group mb-3">
+                  <button
+                    class="text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white"
+                  >
+                    Submit
+                  </button>
+                </div>
+             
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
