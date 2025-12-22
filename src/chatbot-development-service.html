@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatbot-Development-Service</title>
 
-    <!-- Google Fonts - Inter and Manrope -->
+    <!-- DNS Prefetch for Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://code.jquery.com" />
+
+    <!-- Preconnect to External Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Optimized Google Fonts with font-display: swap for better FCP -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="style.css" as="style" />
 
     <!-- Owl Carousel CSS -->
     <link
@@ -96,21 +107,35 @@
       <div
         class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto"
       >
+        <!-- Header Logo -->
         <nav class="flex">
           <a href="#">
             <img
               src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
               class="h-[40px] md:h-[47px]"
-              alt=""
+              alt="NewAgeSysIT Logo - Leading Chatbot Development Company"
+              width="150"
+              height="47"
             />
           </a>
         </nav>
 
+        <!-- Mobile Navigation Controls -->
         <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
-          <button class="py-2 px-3 rounded uppercase">
-            <img class="max-w-6" src="./img/call.png" alt="call" />
+          <button class="py-2 px-3 rounded uppercase" aria-label="Call us">
+            <img
+              class="max-w-6"
+              src="./img/call.png"
+              alt="Call icon for contact"
+              width="24"
+              height="24"
+            />
           </button>
-          <button id="mobile-menu-button" class="xl:hidden">
+          <button
+            id="mobile-menu-button"
+            class="xl:hidden"
+            aria-label="Toggle mobile menu"
+          >
             <svg
               class="w-7 h-7 text-white fill-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -1016,35 +1041,48 @@
       <!-- mobile-menu end-->
     </header>
 
+    <!-- Hero Section: Custom Chatbot Development Services -->
     <section
       class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden"
     >
+      <!-- Hero Background Glow Effect -->
       <div
         class="absolute z-40 top-0 inset-x-0 pointer-events-none h-full flex justify-center"
       >
-        <img src="./img/top-glow.webp" alt="" class="object-cover object-top" />
+        <img
+          src="./img/top-glow.webp"
+          alt="Decorative gradient glow effect"
+          class="object-cover object-top"
+          loading="eager"
+          fetchpriority="high"
+        />
       </div>
 
+      <!-- Hero Background Pattern Images -->
       <div
         class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex justify-center"
       >
         <img
           src="./img/bg-transparent.svg"
-          alt=""
+          alt="Background pattern for mobile view"
           class="lg:hidden w-full h-[75%] md:h-full object-cover object-top"
+          loading="eager"
         />
         <img
           src="./img/golang-seo-bg.webp"
-          alt=""
+          alt="Background pattern for desktop view"
           class="hidden lg:block w-full h-full object-cover object-center"
+          loading="eager"
         />
       </div>
 
+      <!-- Bottom Glow Effect (Desktop) -->
       <div class="absolute z-0 bottom-0 left-0 w-full hidden lg:block">
         <img
           src="./img/glow-new-1.webp"
-          alt="Glow"
+          alt="Decorative bottom gradient glow effect for desktop"
           class="w-full h-full opacity-100 mx-auto"
+          loading="lazy"
         />
       </div>
 
@@ -1060,10 +1098,12 @@
         class="hidden absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
       ></div>
 
+      <!-- Hero Content Container -->
       <div
         class="container flex flex-col items-center justify-center pt-[45%] md:pt-[20%] z-40 pb-[110px] relative"
       >
         <div class="relative flex flex-col items-center justify-center">
+          <!-- Main Hero Heading -->
           <h1
             class="text-[28px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
           >
@@ -1078,39 +1118,49 @@
             streamline your business operations, and gather data to build
             futuristic business opportunities.
           </p>
+          <!-- Primary CTA Button -->
           <a
             class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-medium py-4 pl-5 pr-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden z-10"
+            href="#contact"
+            aria-label="Consult our chatbot development experts"
           >
             Consult Our Chatbot Development Experts
 
             <img
               src="./img/arrow-right-white.svg"
-              alt="arrow-right"
+              alt="Right arrow icon"
               class="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-6"
+              width="24"
+              height="24"
+              loading="lazy"
             />
 
             <img
               src="./img/Ellipse 444.svg"
-              alt="arrow-right"
+              alt="Button background decoration"
               class="absolute bottom-0"
+              loading="lazy"
             />
           </a>
         </div>
+        <!-- Bottom Glow Effect (Mobile) -->
         <div class="absolute z-0 bottom-0 left-0 w-full lg:hidden">
           <img
             src="./img/glow-new.webp"
-            alt="Glow"
+            alt="Decorative bottom gradient glow effect for mobile"
             class="w-full h-full opacity-100 mx-auto"
+            loading="lazy"
           />
         </div>
       </div>
+      <!-- Recognition and Awards Section -->
       <div
         class="relative w-full xl:mt-[170px] z-50 recognition-section-ppc backdrop-blur-[10px]"
       >
         <div
           class="container relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5"
         >
-          <!-- Left text -->
+          <!-- Recognition Text -->
           <div class="lg:w-[40%] text-center lg:text-left">
             <p
               class="text-white text-base text-[16px] md:text-[18px] leading-snug"
@@ -1120,7 +1170,7 @@
             </p>
           </div>
 
-          <!-- Logos Marquee -->
+          <!-- Awards Logos Marquee Carousel -->
           <div class="w-full overflow-hidden">
             <div
               class="flex items-center gap-10 logos-arquee whitespace-nowrap"
@@ -1128,55 +1178,90 @@
               <!-- First set of logos -->
               <img
                 src="./img/Deloitte-1.svg"
-                alt="logo"
+                alt="Deloitte Technology Fast 500 Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
               />
               <img
                 src="./img/Inc5000-1 (1).svg"
-                alt="logo"
+                alt="Inc 5000 Fastest Growing Companies Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
               />
               <img
                 src="./img/uspaacc-1-1.svg"
-                alt="logo"
+                alt="USPAACC Fastest Growing Company Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
               />
               <img
                 src="./img/NJBIZ-1-1.svg"
-                alt="logo"
+                alt="NJBIZ Best Places to Work Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
               />
               <img
                 src="./img/50Fastest-1.svg"
-                alt="logo"
+                alt="50 Fastest Growing Companies Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
               />
 
               <!-- Duplicate set for seamless loop -->
               <img
                 src="./img/Deloitte-1.svg"
-                alt="logo"
+                alt="Deloitte Technology Fast 500 Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
+                aria-hidden="true"
               />
               <img
                 src="./img/Inc5000-1 (1).svg"
-                alt="logo"
+                alt="Inc 5000 Fastest Growing Companies Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
+                aria-hidden="true"
               />
               <img
                 src="./img/uspaacc-1-1.svg"
-                alt="logo"
+                alt="USPAACC Fastest Growing Company Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
+                aria-hidden="true"
               />
               <img
                 src="./img/NJBIZ-1-1.svg"
-                alt="logo"
+                alt="NJBIZ Best Places to Work Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
+                aria-hidden="true"
               />
               <img
                 src="./img/50Fastest-1.svg"
-                alt="logo"
+                alt="50 Fastest Growing Companies Award"
                 class="w-[120px] md:w-[160px] flex-shrink-0"
+                width="160"
+                height="50"
+                loading="lazy"
+                aria-hidden="true"
               />
             </div>
           </div>
@@ -1184,12 +1269,12 @@
       </div>
     </section>
 
-    <!-- 🟩 SECTION 1: Delivering Results That Matter -->
+    <!-- SECTION: Delivering Results That Matter - Company Statistics -->
     <section class="bg-black text-white py-12">
       <div
         class="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10"
       >
-        <!-- Left: Text + Stats -->
+        <!-- Company Statistics -->
         <div class="text-center">
           <h3 class="text-gray-300 text-lg md:text-[23px] mb-8">
             Delivering Results That Matter
@@ -1198,60 +1283,59 @@
           <div
             class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-center"
           >
-            <!-- Stat 1 -->
+            <!-- Statistic: AI Expertise Years -->
             <div>
-              <!-- <h4
-                class="text-[50px] font-semibold golang-number-gradient1"
-              >
-                20+
-              </h4> -->
-              <img src="./img/chatbot-10+.svg" class="w-[90px] mx-auto my-4" />
+              <img
+                src="./img/chatbot-10+.svg"
+                class="w-[90px] mx-auto my-4"
+                alt="10+ Years of AI Expertise"
+                width="90"
+                height="60"
+                loading="lazy"
+              />
               <p class="text-gray-400 text-[18px] mt-1">
                 Years of AI Expertise
               </p>
             </div>
 
-            <div class="w-px h-10 bg-gray-700"></div>
+            <div class="w-px h-10 bg-gray-700" aria-hidden="true"></div>
 
-            <!-- Stat 2 -->
+            <!-- Statistic: AI Experts Count -->
             <div>
-              <!-- <h4
-                class="text-[50px] font-semibold golang-number-gradient2"
-              >
-                200+
-              </h4> -->
               <img
                 src="./img/chatbot-300+.svg"
                 class="w-[120px] mx-auto my-4"
+                alt="300+ AI Experts on Team"
+                width="120"
+                height="60"
+                loading="lazy"
               />
               <p class="text-gray-400 text-[18px] mt-1">AI Experts</p>
             </div>
 
-            <div class="w-px h-10 bg-gray-700"></div>
+            <div class="w-px h-10 bg-gray-700" aria-hidden="true"></div>
 
-            <!-- Stat 3 -->
+            <!-- Statistic: Industries Served -->
             <div>
-              <!-- <h4
-                class="text-[50px] font-semibold golang-number-gradient3"
-              >
-                150+
-
-              </h4> -->
               <img
                 src="./img/chatbot-30+.svg"
-                alt=""
+                alt="30+ Industries Served"
                 class="w-[110px] mx-auto my-4"
+                width="110"
+                height="60"
+                loading="lazy"
               />
               <p class="text-gray-400 text-[18px] mt-1">Industries Served</p>
             </div>
           </div>
         </div>
 
-        <!-- Right: Button -->
+        <!-- CTA Button -->
         <div class="flex justify-center lg:justify-end w-full lg:w-auto pb-5">
           <a
-            href="#"
+            href="#contact"
             class="border-[1px] border-[#f5fafec8] rounded-full px-6 py-3 text-[18px] font-medium text-[#F5FAFE] hover:bg-white/10 transition"
+            aria-label="Book a consultation call with our experts"
           >
             Book a Consultation Call
           </a>
@@ -1259,7 +1343,7 @@
       </div>
     </section>
 
-    <!-- 🟦 SECTION 2: Comprehensive Golang Development Services -->
+    <!-- SECTION: Comprehensive Chatbot Development Services Overview -->
     <section class="text-white lg:pt-20 lg:pb-20 text-center px-4 bg-[#0f0f10]">
       <div class="container mx-auto max-w-4xl">
         <h2
@@ -1288,26 +1372,24 @@
       </div>
     </section>
 
+    <!-- SECTION: Chatbot Development Services - Interactive Tabs (Desktop View) -->
     <div class="relative overflow-hidden text-white">
       <div class="absolute inset-0 pointer-events-none -z-10">
-        <!-- <img
-          src="./img/why-choose-gradient.webp"
-          alt="Glow Background"
-          class="w-full h-full object-cover object-center scale-110"
-        /> -->
+        <!-- Background gradient placeholder -->
       </div>
 
       <section class="text-white pt-0 pb-20 hidden md:block">
         <div class="mx-auto flex flex-col lg:flex-row gap-10">
-          <!-- LEFT SIDE: Scrollable Category List -->
+          <!-- Service Categories Navigation -->
           <div class="lg:w-1/2 bg-[#121314]">
             <div
               class="lg:max-w-[720px] lg:ml-auto max-h-[400px] overflow-y-auto p-5 custom-scrollbar grid grid-cols-2 bg-[#121314]"
             >
-              <!-- Each button -->
+              <!-- Custom AI Chatbot Development Button -->
               <button
                 class="cbtn-golang text-white text-[23px] text-left px-10 py-10 focus:outline-none transition cbtn-border-bottom-left"
                 data-target="web-app"
+                aria-label="View Custom AI Chatbot Development services"
               >
                 <span class="font-[400]">Custom AI Chatbot Development </span>
               </button>
@@ -1515,6 +1597,8 @@
         </div>
       </section>
 
+      <!-- SECTION: Mobile Services Accordion (Mobile View Only) -->
+      <!-- Purpose: Displays chatbot development services in accordion format for mobile devices -->
       <section class="py-10 md:hidden">
         <div class="container mx-auto px-4 text-center">
           <div class="accordion faq-accordion">
@@ -2254,6 +2338,8 @@
         </div>
       </section>
 
+      <!-- SECTION: Key Features of Smart Chatbots (Desktop View) -->
+      <!-- Purpose: Displays chatbot features in a visual card grid with hover effects (desktop only) -->
       <!-- Desktop (lg+): maintain 3-column 2-1-2 arrangement -->
       <section class="hidden lg:block text-white py-16 px-4 md:px-8 lg:px-12">
         <div class="container mx-auto max-w-7xl">
@@ -2406,7 +2492,8 @@
         </div>
       </section>
 
-      <!-- 🟩 SECTION 1: Why Top Industries Choose Golang Today -->
+      <!-- SECTION: Types of AI Chatbots We Build -->
+      <!-- Purpose: Showcases different chatbot types with descriptions and icons -->
       <section class="text-white py-20">
         <div class="container mx-auto px-4 text-center">
           <h2 class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-12">
@@ -2537,8 +2624,8 @@
       </section>
     </div>
 
-    <!-- 🟨 SECTION 3: Why Choose NewAgeSysIT For Golang Development -->
-
+    <!-- SECTION: Why Choose NewAgeSysIT for Chatbot Development -->
+    <!-- Purpose: Highlights company advantages with icon-based feature cards -->
     <section class="bg-black py-10 lg:py-20">
       <div class="container mx-auto px-4">
         <div class="py-4 md:pb-14">
@@ -2581,8 +2668,11 @@
               <div class="icon mb-[20px]">
                 <img
                   src="./img/why-choose-chatbot-1.svg"
-                  alt=""
+                  alt="Enterprise Architecture Icon"
                   class="w-[60px]"
+                  width="60"
+                  height="60"
+                  loading="lazy"
                 />
               </div>
               <div class="bottom-content">
@@ -2605,7 +2695,13 @@
           >
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/why-choose-chatbot-2.svg" alt="" />
+                <img
+                  src="./img/why-choose-chatbot-2.svg"
+                  alt="Revenue Intelligence Icon"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-[400] text-[23px]">
@@ -2627,7 +2723,13 @@
           >
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/why-choose-chatbot-3.svg" alt="" />
+                <img
+                  src="./img/why-choose-chatbot-3.svg"
+                  alt="Security and Compliance Icon"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-[400] text-[23px]">
@@ -2646,7 +2748,13 @@
           >
             <div>
               <div class="icon mb-[20px]">
-                <img src="./img/why-choose-chatbot-4.svg" alt="" />
+                <img
+                  src="./img/why-choose-chatbot-4.svg"
+                  alt="Portfolio Success Icon"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                />
               </div>
               <div class="bottom-content">
                 <h2 class="inline-block text-white font-[400] text-[23px]">
@@ -2665,7 +2773,8 @@
       </div>
     </section>
 
-    <!-- Flexible Engagement Models Section -->
+    <!-- SECTION: Flexible Engagement Models -->
+    <!-- Purpose: Displays different hiring and engagement options with accordion-style cards -->
     <section class="mt-5 py-16 relative overflow-hidden">
       <div class="absolute inset-0 pointer-events-none -z-10">
         <img
@@ -2822,6 +2931,8 @@
       </a>
     </section>
 
+    <!-- SECTION: Flexible Engagement Models & Technology Stack -->
+    <!-- Purpose: Showcases different hiring models and technologies used -->
     <section class="py-16 px-4 flex justify-center lg:pb-[150px]">
       <div class="max-w-7xl w-full">
         <h2
@@ -3294,6 +3405,8 @@
         </div>
       </div>
     </section>
+    <!-- SECTION: Augmented Services - Why Your Business Needs a Chatbot -->
+    <!-- Purpose: Explains business benefits and displays complementary services -->
     <!-- augServices -->
     <section class="augServices py-10 md:py-[80px]">
       <div class="container mx-auto max-w-4xl">
@@ -3689,6 +3802,8 @@
       </div>
     </section>
 
+    <!-- SECTION: Development Process Timeline -->
+    <!-- Purpose: Visual timeline showing chatbot development process steps with images -->
     <div class="relative overflow-hidden text-white">
       <section class="relative text-white py-10 overflow-hidden px-5">
         <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
@@ -4135,6 +4250,8 @@
       </section>
     </div>
 
+    <!-- SECTION: Industries We Serve -->
+    <!-- Purpose: Carousel showcasing different industries served with chatbot solutions -->
     <section class="py-10 lg:py-20 bg-black text-white">
       <div class="container">
         <div class="text-[20px] text-center">
@@ -4677,6 +4794,8 @@
         />
       </div>
 
+      <!-- SECTION: Success Stories & Project Showcase -->
+      <!-- Purpose: Displays successful project implementations with metrics and details -->
       <section
         class="relative text-white py-10 overflow-hidden px-5 golang-sect-border-1"
       >
@@ -4951,31 +5070,33 @@
         />
       </div>
 
-      <!-- Add this script for the golang service buttons -->
+      <!-- JavaScript: Service Category Tab Switcher -->
+      <!-- Purpose: Handles tab navigation for service categories -->
+      <!-- Features: Active state management, show/hide content panels -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          // Get all buttons
+          // Get all service category buttons
           const buttons = document.querySelectorAll("[data-target]");
 
           // Add click event listener to each button
           buttons.forEach((button) => {
             button.addEventListener("click", function () {
-              // Remove active class from all buttons
+              // Remove active state from all buttons
               buttons.forEach((btn) => {
                 btn.classList.remove("text-white");
                 btn.classList.add("text-gray-500");
               });
 
-              // Add active class to clicked button
+              // Add active state to clicked button
               this.classList.remove("text-gray-500");
               this.classList.add("text-white");
 
-              // Hide all content items
+              // Hide all content panels
               document.querySelectorAll(".content-item").forEach((item) => {
                 item.classList.add("hidden");
               });
 
-              // Show the target content
+              // Show the target content panel
               const targetId = this.getAttribute("data-target");
               const targetContent = document.getElementById(targetId);
               if (targetContent) {
@@ -4986,8 +5107,8 @@
         });
       </script>
 
-      <!-- TESTIMONIAL SECTION -->
-
+      <!-- SECTION: Client Video Testimonials -->
+      <!-- Purpose: Grid of video testimonials from satisfied clients -->
       <section class="text-white py-20 relative">
         <div class="container mx-auto px-4 text-center">
           <h2 class="text-[30px] md:text-[40px] font-[400] mb-16 leading-snug">
@@ -5470,6 +5591,8 @@
       </section>
     </div>
 
+    <!-- SECTION: Case Studies Carousel -->
+    <!-- Purpose: Owl Carousel showcasing detailed case studies with client testimonials -->
     <section class="client_experiences bg-[#09090B] relative z-10">
       <div class="container">
         <div
@@ -5515,13 +5638,25 @@
             </div>
           </div>
           <div class="item-middle">
-            <img src="./img/Lcard.webp" alt="" />
+            <img
+              src="./img/Lcard.webp"
+              alt="Lcard Digital Business Card App Interface"
+              width="800"
+              height="500"
+              loading="lazy"
+            />
           </div>
           <div class="item-last">
             <div class="il-left">
               <div class="il-left-top">
                 <div class="ilt-left">
-                  <img src="./img/David-Chabukashvili-1-1-1.webp" alt="" />
+                  <img
+                    src="./img/David-Chabukashvili-1-1-1.webp"
+                    alt="David Chabukashvili - Founder of L-Card App"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="ilt-right">
                   <h3>David-Chabukashvili</h3>
@@ -5582,13 +5717,25 @@
             </div>
           </div>
           <div class="item-middle">
-            <img src="./img/Isra.webp" alt="" />
+            <img
+              src="./img/Isra.webp"
+              alt="ISRA Hairstylist and Makeup Artist Booking App Interface"
+              width="800"
+              height="500"
+              loading="lazy"
+            />
           </div>
           <div class="item-last">
             <div class="il-left">
               <div class="il-left-top">
                 <div class="ilt-left">
-                  <img src="./img/iman.webp" alt="" />
+                  <img
+                    src="./img/iman.webp"
+                    alt="Iman Khwaja - Owner of ISRA"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="ilt-right">
                   <h3>Iman Khwaja</h3>
@@ -5650,13 +5797,25 @@
             </div>
           </div>
           <div class="item-middle">
-            <img src="./img/WhipFlip.webp" alt="" />
+            <img
+              src="./img/WhipFlip.webp"
+              alt="WhipFlip Car Buying and Selling App Interface"
+              width="800"
+              height="500"
+              loading="lazy"
+            />
           </div>
           <div class="item-last">
             <div class="il-left">
               <div class="il-left-top">
                 <div class="ilt-left">
-                  <img src="./img/whipflip-ceo.jpg" alt="" />
+                  <img
+                    src="./img/whipflip-ceo.jpg"
+                    alt="Roger C Clappe - CEO of WhipFlip"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="ilt-right">
                   <h3>Roger C Clappe</h3>
@@ -5717,13 +5876,25 @@
             </div>
           </div>
           <div class="item-middle">
-            <img src="./img/Car-up.webp" alt="" />
+            <img
+              src="./img/Car-up.webp"
+              alt="Car-up Auto Repair Service App Interface"
+              width="800"
+              height="500"
+              loading="lazy"
+            />
           </div>
           <div class="item-last">
             <div class="il-left">
               <div class="il-left-top">
                 <div class="ilt-left">
-                  <img src="./img/LARRY-SEIBEL-CARUP.webp" alt="" />
+                  <img
+                    src="./img/LARRY-SEIBEL-CARUP.webp"
+                    alt="Larry Seibel - Founder of Car-Up App"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="ilt-right">
                   <h3>Larry Seibel</h3>
@@ -5779,6 +5950,8 @@
         alt="Background"
         class="absolute top-0 left-0 w-full h-auto -z-10"
       />
+      <!-- SECTION: Call-to-Action Banner -->
+      <!-- Purpose: Encourages visitors to get started with chatbot development services -->
       <section class="py-12 bg golang-sect-border relative">
         <!-- <div
     class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(68,88,210,0.25)_0%,rgba(10,12,25,0.95)_70%,#0B0C18_100%)] -z-10"
@@ -5801,6 +5974,8 @@
           </div>
         </div>
       </section>
+      <!-- SECTION: Frequently Asked Questions (FAQ) -->
+      <!-- Purpose: Accordion-style FAQ answering common chatbot development questions -->
       <section class="faq py-10 md:py-[80px]">
         <div class="container">
           <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
@@ -6030,6 +6205,8 @@
           </div>
         </div>
       </section>
+      <!-- SECTION: Related Resources & Additional Content -->
+      <!-- Purpose: Displays related blog posts, articles, or additional resources -->
       <section
         class="bg-[#000000] flex justify-center items-center py-8 sm:py-12 lg:py-18 px-4 sm:px-5 relative bg-no-repeat"
       >
@@ -6121,6 +6298,8 @@
       </section>
     </div>
 
+    <!-- SECTION: Related Blog Posts -->
+    <!-- Purpose: Carousel showcasing related blog articles and content -->
     <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
       <div class="w-full container mx-auto px-4">
         <!-- Heading -->
@@ -6242,22 +6421,30 @@
       </div>
     </section>
 
+    <!-- JavaScript: Basic Accordion Toggle Function -->
+    <!-- Purpose: Handles simple accordion expand/collapse behavior -->
+    <!-- Features: Single-open accordion with rotation animation -->
     <script>
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
+        // Close all open accordions
         document
           .querySelectorAll(".accordion-content")
           .forEach((item) => item.classList.remove("show"));
         document
           .querySelectorAll(".transform")
           .forEach((icon) => icon.classList.remove("rotate-180"));
+        // Open clicked accordion if it was closed
         if (!isOpen) {
           content.classList.add("show");
           button.querySelector("span:last-child").classList.add("rotate-180");
         }
       }
     </script>
+    <!-- JavaScript: Client Testimonials Carousel -->
+    <!-- Purpose: Initializes Owl Carousel for client testimonials section -->
+    <!-- Features: Loop, stage padding for visual depth, responsive breakpoints, lazy loading -->
     <script>
       $(document).ready(function () {
         $(".client_says").owlCarousel({
@@ -6271,6 +6458,7 @@
           autoplay: false,
           autoplayTimeout: 3000,
           smartSpeed: 800,
+          // Custom navigation arrows (commented out):
           // navText: [
           //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
           //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
@@ -6308,6 +6496,9 @@
         });
       });
     </script>
+    <!-- JavaScript: Video Popup Initialization -->
+    <!-- Purpose: Initializes Magnific Popup for video testimonials -->
+    <!-- Features: Iframe mode, fade animation, preloader enabled -->
     <script>
       $(document).ready(function () {
         $(".video-popup").magnificPopup({
@@ -6333,6 +6524,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- JavaScript: PPC Accordion Toggle Function -->
+    <!-- Purpose: Handles accordion behavior for PPC (Pay-Per-Click) sections -->
+    <!-- Features: Scoped to parent section, prevents cross-section interference -->
     <script>
       function toggleAccordionPPC(button) {
         const content = button.nextElementSibling;
@@ -6472,6 +6666,9 @@
         }
       });
     </script>
+    <!-- JavaScript: Slider-2 Carousel Initialization -->
+    <!-- Purpose: Initializes responsive carousel with overlay blur effects -->
+    <!-- Features: Equal height items, dynamic blur effect on scroll, responsive breakpoints -->
     <script>
       $(document).ready(function () {
         // Initialize carousel
@@ -6579,6 +6776,9 @@
       });
     </script>
 
+    <!-- JavaScript: Slider-3 Carousel (Auto Width) -->
+    <!-- Purpose: Initializes carousel with automatic width calculation -->
+    <!-- Features: Auto width items, non-looping, navigation arrows -->
     <script>
       $(document).ready(function () {
         const owl = $(".slider-3");
@@ -6590,6 +6790,7 @@
           loop: false,
           dots: false,
           nav: true,
+          // Responsive settings commented out for auto-width behavior
           // stagePadding: 180,
           // responsive: {
           // 0: { items: 1, stagePadding: 20 },
@@ -6601,6 +6802,9 @@
         });
       });
     </script>
+    <!-- JavaScript: Mobile Slider Carousel -->
+    <!-- Purpose: Initializes optimized carousel for mobile devices -->
+    <!-- Features: Responsive items (1 on mobile, 2 on tablet), stage padding for visual depth -->
     <script>
       $(document).ready(function () {
         const owl = $(".mobile-slider");
@@ -6613,11 +6817,12 @@
           nav: true,
           stagePadding: 180,
           responsive: {
-            0: { items: 1, stagePadding: 20 },
-            768: { items: 2, stagePadding: 50 },
+            0: { items: 1, stagePadding: 20 }, // Mobile: 1 item
+            768: { items: 2, stagePadding: 50 }, // Tablet: 2 items
           },
         });
 
+        // Navigation button references (for potential future use)
         const nextbutton = document.querySelector(
           ".slider-1 .owl-nav .owl-next"
         );
@@ -6627,16 +6832,21 @@
       });
     </script>
 
+    <!-- JavaScript: View More/Less Toggle Functionality -->
+    <!-- Purpose: Handles expanding and collapsing content sections -->
+    <!-- Features: Toggle between collapsed and expanded states -->
     <script>
       const toggleBtn = document.getElementById("toggleBtn");
       const collapsed = document.getElementById("collapsedState");
       const expanded = document.getElementById("expandedState");
 
+      // Expand content when toggle button is clicked
       toggleBtn.addEventListener("click", () => {
         collapsed.classList.add("hidden");
         expanded.classList.remove("hidden");
       });
 
+      // Collapse content when view less button is clicked
       document.getElementById("viewLessBtn").addEventListener("click", () => {
         expanded.classList.add("hidden");
         collapsed.classList.remove("hidden");
@@ -6728,6 +6938,9 @@
         checkFallback();
       })();
     </script>
+    <!-- JavaScript: Accordion with Image Switcher -->
+    <!-- Purpose: Handles accordion toggle behavior with smooth image transitions -->
+    <!-- Features: Single-open accordion, smooth fade transitions between images -->
     <script>
       const imageSources = [
         "./img/staff-augmentation-golang.webp",
@@ -6741,7 +6954,7 @@
         const content = button.nextElementSibling;
         const isOpen = content.classList.contains("show");
 
-        // Collapse all
+        // Collapse all accordion items
         document.querySelectorAll(".accordion-content").forEach((item) => {
           item.classList.remove("show");
           item.parentElement.classList.remove("bg-[#121314]");
@@ -6750,11 +6963,13 @@
           .querySelectorAll(".arrow-icon")
           .forEach((icon) => icon.classList.remove("-rotate-90"));
 
+        // Expand clicked item if it was closed
         if (!isOpen) {
           content.classList.add("show");
           button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
           content.parentElement.classList.add("bg-[#121314]");
-          // Smooth image fade
+
+          // Smooth image fade transition
           const imgIndex = button.getAttribute("data-img-index");
           const newSrc = imageSources[imgIndex];
           const currentImg = document.getElementById("accordionImage");
@@ -6766,7 +6981,7 @@
             currentImg.classList.remove("opacity-100");
             currentImg.classList.add("opacity-0");
 
-            // After fade completes, swap image sources
+            // After fade completes, swap image sources for next transition
             setTimeout(() => {
               currentImg.src = newSrc;
               currentImg.classList.remove("opacity-0");
@@ -6778,32 +6993,37 @@
         }
       }
     </script>
+    <!-- JavaScript: Tab Navigation System -->
+    <!-- Purpose: Handles switching between different content tabs -->
+    <!-- Note: Selector appears incomplete - verify button class -->
     <script>
-      const buttons = document.querySelectorAll(".");
+      const buttons = document.querySelectorAll("."); // Note: This selector needs to be updated with proper class
       const contents = document.querySelectorAll(".content-item");
 
       buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
           const target = btn.dataset.target;
 
-          // Reset active states
+          // Reset all tabs to inactive state
           buttons.forEach((b) => {
             b.classList.remove("text-white");
             b.classList.add("text-gray-500");
           });
           contents.forEach((c) => c.classList.add("hidden"));
 
-          // Activate selected
+          // Activate selected tab
           btn.classList.remove("text-gray-500");
           btn.classList.add("text-white");
           document.getElementById(target).classList.remove("hidden");
         });
       });
     </script>
+    <!-- JavaScript: Magnific Popup for Video Modals -->
+    <!-- Purpose: Initializes lightbox for YouTube and Vimeo video links -->
+    <!-- Library: Magnific Popup (requires jQuery) -->
     <script>
       $(function () {
         $(".popup-youtube, .popup-vimeo").magnificPopup({
-          // disableOn: 700,
           type: "iframe",
           mainClass: "mfp-fade",
           removalDelay: 160,
@@ -6813,7 +7033,9 @@
       });
     </script>
 
-    <!-- Related Blogs: Owl Carousel init (unique instance) -->
+    <!-- JavaScript: Owl Carousel for Related Blogs Section -->
+    <!-- Purpose: Initializes responsive carousel for blog posts -->
+    <!-- Features: Touch/swipe enabled, responsive breakpoints, navigation arrows -->
     <script>
       $(document).ready(function () {
         const $rb = $(".related-blogs-carousel");
@@ -6823,21 +7045,26 @@
             margin: 24,
             dots: false,
             nav: true,
+            // Custom navigation arrows can be added here:
             // navText: [
             //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
             //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
             // ],
 
+            // Responsive breakpoints for different screen sizes
             responsive: {
-              0: { items: 1, margin: 12 },
-              640: { items: 2, margin: 16 },
-              1024: { items: 3, margin: 20 },
+              0: { items: 1, margin: 12 }, // Mobile: 1 item
+              640: { items: 2, margin: 16 }, // Tablet: 2 items
+              1024: { items: 3, margin: 20 }, // Desktop: 3 items
             },
           });
         }
       });
     </script>
 
+    <!-- JavaScript: FAQ Accordion Functionality -->
+    <!-- Purpose: Handles expand/collapse behavior for FAQ items -->
+    <!-- Features: Single-open accordion (closes others when opening new item) -->
     <script>
       const items = document.querySelectorAll("[data-accordion-item]");
 
@@ -6847,10 +7074,10 @@
         btn.addEventListener("click", () => {
           const isOpen = item.classList.contains("is-open");
 
-          // close all first (single-open behavior)
+          // Close all accordion items first (single-open behavior)
           items.forEach((i) => i.classList.remove("is-open"));
 
-          // toggle current
+          // Toggle current item
           if (!isOpen) {
             item.classList.add("is-open");
           } else {
