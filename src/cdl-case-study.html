@@ -347,7 +347,7 @@
 
 <section class="py-20 bg-white">
   <div class="container mx-auto px-4 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
 
       <!-- LEFT CONTENT -->
       <div>
@@ -464,7 +464,8 @@
          Data Inconsistency 
             </h3>
             <p class="text-[18px] text-[#4B5563]">
-              Data consistency became difficult for the client due to the effort required to manage multiple user roles. With a unified system in place, the establishment of role-based access controls resolved this concern with consistent and secure data management.
+             Data consistency became difficult for the client due to the effort required to manage multiple user roles. With a unified system in place, the establishment of role-based access controls resolved this concern with consistent and secure data management. 
+
             </p>
           </div>
 
@@ -472,10 +473,12 @@
           <div class="flex flex-col items-start text-left p-3">
             <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
             <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
-             Data Inconsistency 
+          Management Concerns 
+
             </h3>
             <p class="text-[18px] text-[#4B5563]">
-             Data consistency became difficult for the client due to the effort required to manage multiple user roles. With a unified system in place, the establishment of role-based access controls resolved this concern with consistent and secure data management.
+            Manual scheduling led to frequent overlaps among learners, time slots, and instructors, posing a challenge. Auto-scheduling made it effective for scheduling and avoiding clashes among them. 
+
             </p>
           </div>
 
@@ -483,20 +486,24 @@
           <div class="flex flex-col items-start text-left p-3">
             <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
             <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
-            Management Concerns
+          Transaction Tracking Issues 
+
             </h3>
             <p class="text-[18px] text-[#4B5563]">
-            Manual scheduling led to frequent overlaps among learners, time slots, and instructors, posing a challenge. Auto-scheduling made it effective for scheduling and avoiding clashes among them.
+           Payments and invoices were managed outside a centralized system, which made it challenging to track paid and pending transactions clearly. With a unified payment tracking system, it becomes easy to distinguish the transactions.
+
             </p>
           </div>
 
             <div class="flex flex-col items-start text-left p-3">
             <img src="./img/Shield-1.svg" alt="HIPAA" class="w-18 h-18 mb-4" />
             <h3 class="text-[28px] font-semibold text-[#111827] mb-2 text-left">
-          Inaccurate Reporting 
+         Inaccurate Reporting 
+
             </h3>
             <p class="text-[18px] text-[#4B5563]">
-           Earnings & payments history reporting were time-consuming and inaccurate. With a real-time financial reporting system, it became effortless to track payments and gain visibility into earnings.
+         Earnings & payments history reporting were time-consuming and inaccurate. With a real-time financial reporting system, it became effortless to track payments and gain visibility into earnings.
+
             </p>
           </div>
 
@@ -767,71 +774,76 @@ API</span>
             class="text-black flex justify-start lg:justify-center mt-10 lg:mt-0 items-center"
           >
             <div class="cta_right min-768px:p-5 py-0 max-768px:mt-[20px] flex">
-              <form
-                action=""
-                class="px-[30px] py-[40px] bg-white rounded-[15px] max-w-[580px]"
-              >
-                <div class="form-group mb-3">
-                  <input
-                    type="text"
-                    placeholder="Name*"
-                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
-                  />
-                </div>
-                <div class="form-group mb-3">
-                  <input
-                    type="text"
-                    placeholder="Email*"
-                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
-                  />
-                </div>
-                <div class="form-group mb-3">
-                
-                <div class="form-group mb-3">
-                  <textarea
-                    name=""
-                    id=""
-                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
-                    placeholder="Project Description"
-                  ></textarea>
-        <div class="form-group mb-3">
- <select
-  class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5] text-[#65686C] focus:text-black"
+            <form
+  class="bg-white rounded-2xl px-8 py-8 w-full max-w-[420px] shadow-xl"
 >
+  <!-- Name -->
+  <div class="mb-4">
+    <input
+      type="text"
+      placeholder="Name*"
+      class="w-full h-[44px] px-4 rounded-md border border-[#D6DEE6] text-sm placeholder-[#7A8A9A] focus:outline-none focus:border-[#003296]"
+    />
+  </div>
 
-    <!-- Placeholder -->
-    <option value="" disabled selected hidden>
-   Budget
-    </option>
+  <!-- Email -->
+  <div class="mb-4">
+    <input
+      type="email"
+      placeholder="Email*"
+      class="w-full h-[44px] px-4 rounded-md border border-[#D6DEE6] text-sm placeholder-[#7A8A9A] focus:outline-none focus:border-[#003296]"
+    />
+  </div>
 
-    <option value="under-5k">Under $5,000</option>
-    <option value="5k-10k">$5,000 – $10,000</option>
-    <option value="10k-25k">$10,000 – $25,000</option>
-    <option value="25k-50k">$25,000 – $50,000</option>
-    <option value="50k-plus">$50,000+</option>
-  </select>
-</div>
+  <!-- Project Description -->
+  <div class="mb-4">
+    <textarea
+      rows="4"
+      placeholder="Project Description"
+      class="w-full px-4 py-3 rounded-md border border-[#D6DEE6] text-sm placeholder-[#7A8A9A] resize-none focus:outline-none focus:border-[#003296]"
+    ></textarea>
+  </div>
 
-                </div>
-                   <div class="form-footer text-[#445D6E] pt-5 pb-5">
-                  <p class="flex items-center text-sm">
-                    <span class="pr-2"
-                      ><img src="./img/form.svg" alt="" /> </span
-                    ><span
-                      >Your idea is 100% protected by our non disclosure
-                      agreement.</span
-                    >
-                  </p>
-                </div>
-                <div class="form-group mb-3">
-                  <button
-                    class="text-[18px] px-[15px] py-[10px] bg-[#003296] w-full rounded-[5px] text-white"
-                  >
-                    Submit
-                  </button>
-                </div>
-             
-              </form>
+  <!-- Budget -->
+  <div class="mb-5 relative">
+    <select
+      required
+      class="w-full h-[44px] px-4 pr-10 rounded-md border border-[#D6DEE6] text-sm text-[#7A8A9A] focus:text-black focus:outline-none focus:border-[#003296] appearance-none bg-white"
+    >
+      <option value="" disabled selected hidden>Budget</option>
+      <option>Under $5,000</option>
+      <option>$5,000 – $10,000</option>
+      <option>$10,000 – $25,000</option>
+      <option>$25,000 – $50,000</option>
+      <option>$50,000+</option>
+    </select>
+
+    <!-- Dropdown Icon -->
+    <span class="absolute right-4 top-1/2 -translate-y-1/2 text-[#7A8A9A] pointer-events-none">
+      ▼
+    </span>
+  </div>
+
+  <!-- NDA -->
+  <div class="flex items-start gap-2 text-xs text-[#5F6E7A] mb-6">
+ <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.92071 7.43624C4.44531 8.11356 4.44531 10.1268 4.44531 14.1535V16.1364C4.44531 23.2362 9.78326 26.6816 13.1324 28.1446C14.0409 28.5414 14.4951 28.7399 15.7786 28.7399V3.55469C14.7569 3.55469 13.7701 3.89247 11.7965 4.56804L11.0752 4.81494C7.28912 6.11093 5.39609 6.75892 4.92071 7.43624Z" fill="#6B8DA4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.07 7.39058C26.5547 8.05992 26.5547 10.0495 26.5547 14.0288V15.9884C26.5547 23.0046 21.1121 26.4095 17.6973 27.8553C16.771 28.2475 16.3079 28.4436 14.9991 28.4436V3.55469C16.0409 3.55469 17.047 3.8885 19.0593 4.55612L19.7948 4.80012C23.6551 6.08086 25.5853 6.72123 26.07 7.39058Z" fill="#A0B6C5"/>
+</svg>
+
+    <p>
+      Your idea is 100% protected by our non disclosure agreement.
+    </p>
+  </div>
+
+  <!-- Submit -->
+  <button
+    class="w-full h-[46px] rounded-md bg-[#4A63F0] text-white text-sm font-medium hover:bg-[#3B52D9] transition"
+  >
+    Submit
+  </button>
+</form>
+
             </div>
           </div>
         </div>
