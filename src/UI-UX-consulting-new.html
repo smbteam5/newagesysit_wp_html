@@ -1,0 +1,3756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI/UX-Consultation</title>
+
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    
+    <!-- Load jQuery and libraries before any scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <style>
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.87);
+        border-radius: 10px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 0.647);
+      }
+
+      .card {
+        background-color: #0f0f10;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        color: white;
+        width: 300px;
+      }
+
+      /* Add smooth transition */
+      .owl-carousel .owl-stage {
+        transition: all 0.5s ease !important;
+      }
+
+      .mobile-slider .owl-dots .owl-dot {
+        display: none;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-slider .owl-nav {
+        margin-top: 40px;
+        padding-right: 0px !important;
+      }
+
+      .hero-business .swiper-slide:hover .hidden-area, .hero-business .swiper-slide.slide-selected .hidden-area
+
+ {
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: 150px !important;
+    position: relative !important;
+    transition: all 1s !important;
+    display: flex !important;
+    gap: 20px !important;
+    flex-direction: column !important;
+    margin-top: 10px !important;
+}
+    </style>
+  </head>
+
+  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
+    
+
+    <section
+      class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden"
+    >
+      <div
+        class="absolute z-40 top-0 inset-x-0 pointer-events-none h-full flex justify-center"
+      >
+        <img src="./img/top-glow.webp" alt="" class="object-cover object-top" />
+      </div>
+
+      <div
+        class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex justify-center"
+      >
+        <img
+          src="./img/bg-transparent.svg"
+          alt=""
+          class="lg:hidden w-full h-[75%] md:h-full object-cover object-top"
+        />
+        <img
+          src="./img/golang-seo-bg.webp"
+          alt=""
+          class="hidden lg:block w-full h-full object-cover object-center"
+        />
+      </div>
+
+      <div class="absolute z-0 bottom-0 left-0 w-full hidden lg:block">
+        <img
+          src="./img/glow-new-1.webp"
+          alt="Glow"
+          class="w-full h-full opacity-100 mx-auto"
+        />
+      </div>
+
+      <div
+        class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="hidden absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="hidden absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="container flex flex-col items-center justify-center pt-[20%]  xl:pt-[15%] z-40 pb-[110px] relative"
+      >
+        <div class="relative flex flex-col items-center justify-center">
+          <h1
+            class="text-[28px] md:text-[40px] xl:text-[60px] font-bold leading-normal xl:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
+          >
+           UI/UX
+          <br class="hidden lg:block" />
+            Consulting Services
+          </h1>
+          <p
+            class="text-[16px] md:text-[23px] xl:mt-4 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[70%] p-2"
+        >
+          At NewAgeSysIT, we offer UI/UX design services and UX consulting for startups, enterprises, and SaaS companies. Our UX team studies your target audience’s behavior, develops prototypes, and implements effective UI to elevate your product’s user experience.
+          </p>
+          <a
+            class="bg-[#FF5B14] group text-white text-[16px] md:text-[18px] mt-2 md:mt-8 md:text-md font-normal md:font-medium py-4 pl-5 pr-4 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden z-10 cursor-pointer"
+          >
+            Book Your Free CTO Consultation
+            <img
+              src="./img/arrow-right-white.svg"
+              alt="arrow-right"
+              class="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-6"
+            />
+
+            <img
+              src="./img/Ellipse 444.svg"
+              alt="arrow-right"
+              class="absolute bottom-0"
+            />
+          </a>
+        </div>
+        <div class="absolute z-0 bottom-0 left-0 w-full lg:hidden">
+          <img
+            src="./img/glow-new.webp"
+            alt="Glow"
+            class="w-full h-full opacity-100 mx-auto"
+          />
+        </div>
+      </div>
+      <div
+        class="relative w-full xl:mt-[170px] z-50 recognition-section-ppc backdrop-blur-[10px]"
+      >
+        <div
+          class="container relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-6 md:px-12 py-5"
+        >
+          <!-- Left text -->
+          <div class="lg:w-[40%] text-center lg:text-left">
+            <p
+              class="text-white text-base text-[16px] md:text-[18px] leading-snug"
+            >
+              Recognized for delivering the best solutions for businesses of all
+              sizes and across industries.
+            </p>
+          </div>
+
+          <!-- Logos Marquee -->
+          <div class="w-full overflow-hidden">
+            <div
+              class="flex items-center gap-10 logos-arquee whitespace-nowrap"
+            >
+              <!-- First set of logos -->
+              <img
+                src="./img/Deloitte-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/Inc5000-1 (1).svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/uspaacc-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/NJBIZ-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/50Fastest-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+
+              <!-- Duplicate set for seamless loop -->
+              <img
+                src="./img/Deloitte-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/Inc5000-1 (1).svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/uspaacc-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/NJBIZ-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+              <img
+                src="./img/50Fastest-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivering Results That Matter Section -->
+    <section class="bg-black text-white py-12">
+      <div
+        class="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10"
+      >
+        <!-- Left: Text + Stats -->
+        <div class="text-center">
+          <h3 class="text-gray-300 text-lg md:text-[23px] mb-8">
+            Delivering Results That Matter
+          </h3>
+
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-center"
+          >
+            <!-- Stat 1 -->
+            <div>
+              <h4
+                class="text-[50px] font-semibold bg-[linear-gradient(193.77deg,#364EBE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+              >
+                20+
+              </h4>
+              <!-- <img src="./img/20+.svg" class="w-[90px] mx-auto my-4" /> -->
+              <p class="text-gray-400 text-[18px] mt-1">Years of Expertise</p>
+            </div>
+
+            <div class="w-px h-16 bg-gray-700"></div>
+
+            <!-- Stat 2 -->
+            <div>
+              <h4
+                class="text-[50px] font-semibold bg-[linear-gradient(113.8deg,#4361EE_28.27%,#FFFFFF_64.38%)] bg-clip-text text-transparent"
+              >
+                200+
+              </h4>
+              <!-- <img src="./img/200+.svg" class="w-[120px] mx-auto my-4" /> -->
+              <p class="text-gray-400 text-[18px] mt-1">Software Developers</p>
+            </div>
+
+            <div class="w-px h-16 bg-gray-700"></div>
+
+            <!-- Stat 3 -->
+            <div>
+              <h4
+                class="text-[50px] font-semibold bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+              >
+                150+
+              </h4>
+              <!-- <img src="./img/150+.svg" alt="" class="w-[110px] mx-auto my-4" /> -->
+              <p class="text-gray-400 text-[18px] mt-1">Enterprise Projects</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Button -->
+        <div class="flex justify-center lg:justify-end w-full lg:w-auto pb-5">
+          <a
+            href="#"
+            class="border-[1px] border-[#f5fafec8] rounded-full px-6 py-3 text-[18px] font-medium text-[#F5FAFE] hover:bg-white/10 transition"
+          >
+            Schedule Your Free Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- /// -->
+    <section class="bg-[#000000] lg:py-20">
+      <div class="container mx-auto px-4">
+        <div class="py-4 md:pb-14">
+          <h2
+            class="text-[28px] md:text-[36px] xl:text-[50px] font-[400] mb-5 text-white mx-auto text-center leading-normal xl:leading-[60px]"
+          >
+           When to Consider UX Consulting.
+          </h2>        
+        </div>
+        <div class="space-y-5">          
+        <div class="flex flex-wrap gap-5 justify-center">
+          <div class="w-full md:w-[48%] xl:w-[30%]  p-10 rounded-[24px] min-h-[380px] bg-[#1B1D1E]">
+              <div>
+                <div class="icon mb-[20px]">
+                  <img src="./img/ic-trans-1.svg" alt="" />
+                </div>
+                <div class="bottom-content">
+                  <h2 class="inline-block text-white font-[400] text-[23px]">
+                  Services for Ride-Hailing
+                    <!-- underline (replaces ::before) -->
+                  </h2>
+                  <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                   We create applications that let customers reserve rides from a variety of modes of transportation, including private vehicles, cabs, and ride-sharing services like Lyft and Uber.
+                  </p>
+                </div>
+              </div>
+            </div>
+           <div class="w-full md:w-[48%] xl:w-[30%]  p-10 rounded-[24px] min-h-[380px] bg-[#1B1D1E]">
+              <div>
+                <div class="icon mb-[20px]">
+                  <img src="./img/c-trans-2.svg" alt="" />
+                </div>
+                <div class="bottom-content">
+                  <h2 class="inline-block text-white font-[400] text-[23px]">
+                 Ride-sharing and Carpooling
+                    <!-- underline (replaces ::before) -->
+                  </h2>
+                  <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                  We build apps that enable carpooling and ride-sharing by connecting users moving in the same direction, enabling them to split expenses and transportation.
+                  </p>
+                </div>
+              </div>
+            </div>
+           <div class="w-full md:w-[48%] xl:w-[30%]  p-10 rounded-[24px] min-h-[380px] bg-[#1B1D1E]">
+              <div>
+                <div class="icon mb-[20px]">
+                  <img src="./img/c-trans-3.svg" alt="" />
+                </div>
+                <div class="bottom-content">
+                  <h2 class="inline-block text-white font-[400] text-[23px]">
+                On-demand delivery
+                    <!-- underline (replaces ::before) -->
+                  </h2>
+                  <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                 We create applications that help link people who need packages delivered urgently like groceries and other items by matching users with couriers or delivery staff.
+                  </p>
+                </div>
+              </div>
+            </div>
+           <div class="w-full md:w-[48%] xl:w-[30%]  p-10 rounded-[24px] min-h-[380px] bg-[#1B1D1E]">
+              <div>
+                <div class="icon mb-[20px]">
+                  <img src="./img/c-trans-4.svg" alt="" />
+                </div>
+                <div class="bottom-content">
+                  <h2 class="inline-block text-white font-[400] text-[23px]">
+                   Public transportation
+                    <!-- underline (replaces ::before) -->
+                  </h2>
+                  <p class="font-[300] text-[17px] text-[#A3ACB5] pt-5">
+                   We build apps that make it simpler for customers to use public transit networks by offering real-time information on schedules, routes, and updates.
+                  </p>
+                </div>
+              </div>
+        </div>          
+          </div>      
+        </div>
+      </div>
+    </section>
+
+    
+ <section class="py-20 " >
+     <div
+          class="container rounded-[16px] text-white pt-8 md:pt-20 md:py-24 text-left px-4 bg-gradient-tor overflow-hidden  
+          bg-[url('./img/transport-cta-bg.webp')] bg-cover bg-left lg:bg-center bg-no-repeat relative "
+        >
+          <div class="relative container  z-10 pb-7">
+            <h2
+              class="text-3xl md:text-4xl xl:text-[50px] font-medium mb-6 max-w-3xl  leading-[40px] md:leading-[50px] xl:leading-[60px] "
+            >
+              Why Should You Partner<br/>with NewAgeSysIT?
+            </h2>
+            <p
+              class="text-[18px] md:text-[23px] text-[#F5FAFE] max-w-3xl  leading-7 md:leading-8 "
+            >
+            Partnering with NewAgeSysIT provides access to a collaborative app development process, where our experienced developers prioritize your unique needs to deliver bespoke, high-quality solutions. We guarantee timely delivery and full source code ownership, ensuring long-term control and adaptability for your project.
+
+
+            </p>
+            <a href="#" class="inline-flex justify-center items-center bg-white text-black rounded-full text-[16px]  py-4 px-6 mt-12">
+               Speak with Our Experts
+                <span class="ml-4">
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+          </div>
+        </div>
+        </section>
+
+
+
+  <section class="text-white py-20 relative">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-[30px] md:text-[40px] font-[400] mb-16 leading-snug">
+          Here’s What Our Clients Say About The <br> Results They’ve Made With Us
+        </h2>
+      </div>
+
+      <div
+        class="relative  text-zinc-100 px-6  hidden lg:flex flex-col items-center justify-center overflow-hidden"
+      >
+        <!-- Background SVGs -->
+        <img
+          src="./img/left.svg"
+          alt="Background Top"
+          class="absolute top-0 left-0 pointer-events-none hidden xl:block"
+        />
+        <img
+          src="./img/right upper.svg"
+          alt="Background Top"
+          class="absolute top-[70px] right-0 pointer-events-none hidden xl:block"
+        />
+        <img
+          src="./img/right under.svg"
+          alt="Background Top"
+          class="absolute top-1/2 right-0 pointer-events-none hidden xl:block"
+        />
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 max-w-6xl w-full"
+        >
+          <!-- Left Column -->
+          <div class="flex flex-col gap-6">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-transparent backdrop-blur-md p-6 transition-opacity duration-1000 ease-in-out opacity-30 max-w-lg"
+            >
+              <p
+                class="text-base leading-relaxed font-[Inter,sans-serif] bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text"
+              >
+                <img
+                  src="./img/quote-golang.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="block w-8 h-8 mb-2 opacity-20"
+                />
+                NewAgeSys built and maintains my app with outstanding quality
+                and personal service — I'd give them six out of five stars!
+              </p>
+              <div
+                class="mt-4 pt-3 border-t bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text font-[Inter,sans-serif]"
+              >
+                <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                  Rob Evans
+                </p>
+                <p class="text-sm text-zinc-400">CEO - DONUT MAN APP</p>
+              </div>
+            </div>
+
+            <!-- Video thumbnail -->
+            <div
+              class="relative rounded-2xl overflow-hidden max-h-64 opacity-50"
+            >
+              <img
+                src="./img/v1.gif"
+                alt="LARRY SEIBEL"
+                class="w-[470px] h-full object-cover rounded-2xl"
+              />
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 w-full v1-gradient z-10"
+              ></div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-transparent backdrop-blur-md p-6 transition-opacity duration-1000 ease-in-out opacity-60"
+            >
+              <p
+                class="text-[18px] font-[400] leading-relaxed bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text"
+              >
+                <img
+                  src="./img/quote-golang.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="block w-10 mb-2 opacity-50"
+                />
+                NewAgeSys built our app with great design, professionalism, and
+                ongoing support.
+              </p>
+              <div
+                class="mt-4 pt-3 border-t"
+                style="
+                  border-image: linear-gradient(
+                      to right,
+                      rgba(255, 255, 255, 0.5),
+                      rgba(255, 255, 255, 0.05)
+                    )
+                    1;
+                "
+              >
+                <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                  LARRY SEIBEL
+                </p>
+                <p class="text-sm text-zinc-400">Founder - CAR-UP App</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex flex-col gap-6 pt-[70px]">
+            <!-- IMAN -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div
+                class="relative w-full md:w-[380px] h-[280px] rounded-2xl overflow-hidden"
+              >
+                <img
+                  src="./img/v2.gif"
+                  alt="IMAN KHAWAJA"
+                  class="w-full h-full object-cover rounded-2xl"
+                />
+                <div
+                  class="v2-gradient w-full h-full absolute inset-0 pointer-events-none z-10"
+                ></div>
+              </div>
+
+              <div
+                class="bg-transparent backdrop-blur-md p-6 md:w-1/2 flex flex-col justify-between"
+              >
+                <p
+                  class="text-[18px] leading-relaxed mb-4 font-[400] bg-gradient-to-r from-white to-white/20 text-transparent bg-clip-text"
+                >
+                  <img
+                    src="./img/quote-golang.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-10 mb-2"
+                  />
+                  NewAgeSys delivered exceptional, reliable work and truly cared
+                  about our app's success.
+                </p>
+                <div
+                  class="mt-4 pt-3 border-t"
+                  style="
+                    border-image: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0.5),
+                        rgba(255, 255, 255, 0.05)
+                      )
+                      1;
+                  "
+                >
+                  <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                    IMAN KHAWAJA
+                  </p>
+                  <p class="text-sm text-zinc-400">Owner - ISRA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DAVID -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div
+                class="relative w-full md:w-1/2 rounded-2xl overflow-hidden max-h-[350px]"
+              >
+                <img
+                  src="./img/v3.gif"
+                  alt="DAVID CHABUKASHVILI"
+                  class="w-full h-full object-cover rounded-2xl"
+                />
+                <div
+                  class="v3-gradient w-full h-full absolute inset-0 pointer-events-none z-10"
+                ></div>
+              </div>
+
+              <div
+                class="bg-transparent backdrop-blur-md p-6 md:w-2/3 flex flex-col justify-end"
+              >
+                <p
+                  class="text-[18px] leading-relaxed mb-4 font-[400] bg-gradient-to-r from-white to-white/20 text-transparent bg-clip-text"
+                >
+                  <img
+                    src="./img/quote-golang.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-10 mb-2"
+                  />
+                  NewAgeSys delivered high-quality mobile and web apps on time,
+                  always going above and beyond our expectations.
+                </p>
+                <div
+                  class="pt-3 border-t"
+                  style="
+                    border-image: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0.5),
+                        rgba(255, 255, 255, 0.05)
+                      )
+                      1;
+                  "
+                >
+                  <p class="text-[18px] font-semibold text-[#8EA0F5]">
+                    DAVID CHABUKASHVILI
+                  </p>
+                  <p class="text-sm text-zinc-400">Founder - LCard App</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:hidden">
+        <div
+          class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto"
+        >
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=_AG--jyDX3c"
+            >
+              <img
+                src="./img/client-img-1.webp"
+                alt="Roger J. Clappe"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  ROGER J CLAPPE
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  CEO - Whip-Flip
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+            >
+              <img
+                src="./img/larry-image.svg"
+                alt="Larry Seibel"
+                class="w-full h-full object-cover rounded-[24px] transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Larry Seibel
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  Founder - CAR-UP App
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
+            >
+              <img
+                src="./img/client-img-3.webp"
+                alt="Rob Salerno"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Rob Salerno
+                </p>
+                <p
+                  class="text-[16px] text-white opacity-[0.5] truncate uppercase"
+                >
+                  CEO - CliquePrize
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=PttTsDGO2AA"
+            >
+              <img
+                src="./img/client-img-4.webp"
+                alt="Chris O'Rorke"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Chris O'Rorke
+                </p>
+                <p
+                  class="text-[16px] text-white opacity-[0.5] truncate uppercase"
+                >
+                  Guaranteed Tip Sheet
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=zd8bK6UKH5M"
+            >
+              <img
+                src="./img/client-img-5.webp"
+                alt="Iman Khawaja"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Iman Khawaja
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  Owner - ISRA
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=mr6aBH9l_d0"
+            >
+              <img
+                src="./img/client-img-6.webp"
+                alt="David Chabukashvili"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  David Chabukashvili
+                </p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  Founder - Lcard App
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a
+              class="popup-youtube"
+              href="https://www.youtube.com/watch?v=slRQbxC1UoI"
+            >
+              <img
+                src="./img/client-img-7.webp"
+                alt="Rob Evans"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">
+                  Rob Evans
+                </p>
+                <p
+                  class="text-[16px] text-white opacity-[0.5] truncate uppercase"
+                >
+                  CEO - Donut Man app
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- View All Button -->
+      <div class="mt-8 flex justify-center">
+        <a
+          href="#"
+          class="flex items-center justify-center gap-2 h-[65px] rounded-full border border-white bg-[#F5FAFE] text-[#212121] text-sm font-medium transition-all duration-300 hover:opacity-90 px-8 sm:w-[360px] sm:h-[55px] md:w-[420px] md:h-[60px] lg:w-[466px] lg:h-[65px]"
+        >
+          View All Testimonials
+          <svg
+            width="7"
+            height="11"
+            viewBox="0 0 7 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+              stroke="#212121"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Soft Blend into Case Studies -->
+      <div
+        class="pointer-events-none absolute bottom-0 left-0 w-full h-[140px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,#09090B_100%)]"
+      ></div>
+    </section>
+
+
+
+    <section
+      class="relative w-full bg-[#000000] text-white py-8  sm:py-12 sm:px-8 lg:py-20 lg:px-20 lg:pt-[96px] lg:pr-[80px] lg:pb-[96px] lg:pl-[80px]"
+    >
+      <div
+        class="container mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 relative"
+      >
+        <!-- LEFT STICKY PANEL -->
+        <div
+          class="lg:sticky lg:top-24 self-start h-fit flex flex-col items-center lg:items-start"
+        >
+          <!-- increased vertical gap -->
+
+          <!-- Heading -->
+          <div class="text-center lg:text-left w-full">
+            <h2
+              class="text-[28px] sm:text-[36px] md:text-[40px] font-normal text-[#FFFFFF]"
+            >
+           UX/UI Consulting Process in 4 Steps
+
+            </h2>
+          </div>
+
+          <!-- Blue Card -->
+          <div
+            class="mt-8 lg:mt-36 bg-[url('./img/php-service-frame.webp')] bg-cover bg-center bg-no-repeat rounded-2xl p-6 sm:p-8 lg:p-10 text-white shadow-[0_0_40px_rgba(110,110,255,0.4)] w-full  mx-auto lg:mx-0 text-center lg:text-left"
+          >
+            <h3
+              class="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-bold mb-2 sm:mb-3 text-[#FFFFFF]"
+            >
+             Let's Discuss Solutions.
+            </h3>
+            <p
+              class="text-[#FFFFFF] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[18px] font-normal leading-relaxed mb-4 sm:mb-6"
+            >
+            Share your challenges and our team will craft a personalized proposal. Get expert advice and unlock your growth potential.
+            </p>
+            <button
+              class="w-full sm:w-auto px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white text-[#000000] text-[12px] sm:text-[14px] md:text-[16px] font-medium rounded-full shadow-md transition-all duration-200 flex items-center justify-center gap-2 mx-auto lg:mx-0"
+            >
+              <span class="whitespace-nowrap"
+                >Discuss with our Experts</span
+              >
+              <span class="flex-shrink-0">
+                <img
+                  src="./img/php-d-arrow.svg"
+                  alt="arrow-right"
+                  class="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px] md:w-[20px] md:h-[20px]"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="">
+          <!-- Service Items -->
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7.svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+               Sign-up and User Profiles
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                Permit users to register for accounts to control preferences, payment information, and personal data.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (1).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+               Reservation of Rides
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                This feature gives the consumers the option to schedule rides by indicating the pickup and drop-off locations and the mode of transportation (e.g., bike, carpool, taxi).
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (2).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+                Real-Time Vehicles Tracking
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                 Utilize GPS technology to give customers real-time updates on the whereabouts of reserved cars so they may monitor their progress.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (3).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+               Calculating Fares
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+               Reliability Provide consumers with an estimated trip cost by calculating prices based on factors such as vehicle type, surge pricing, distance traveled, and additional costs.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0 ">
+                <div class="bg-[#121314] rounded-full w-[60px] h-[60px] flex justify-center items-center"> <img
+                  src="./img/$.svg"
+                  alt="$ Icon"
+                  class=" text-[#6F82FF] w-[25px]"
+                /></div>
+               
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+              Various Methods of Payment
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                Enable users to purchase premium content, subscriptions, or merchandise directly through the app for convenience and revenue generation.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (5).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+              Reviews and Rating
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                Allow users to evaluate and comment on drivers and cars to uphold service standards and foster community trust.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (6).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+              Push Alerts
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                Keep users informed and engaged with timely updates on new content releases, events, or personalized recommendations.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+               <div class="bg-[#121314] rounded-full w-[60px] h-[60px] flex justify-center items-center"> <img
+                  src="./img/driver-overview.svg"
+                  alt="$ Icon"
+                  class=" text-[#6F82FF] w-[30px]"
+                /></div>
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+             Driver Overviews
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                To assist consumers in making wise judgments, display driver information such as ratings, reviews, and vehicle specifications.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (7).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+                 Chat/In-App Messaging
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                Assist users and drivers in communicating about trip specifics, instructions for pickup, and other questions.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (8).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+                Travel Record
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                 For convenience, keep track of previous rides' locations for pickup and drop-off, rates, driver information, and invoices.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (9).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+              Advance Reservation
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                 Give people the option to reserve rides ahead of time so they can arrange their transportation with a verified reservation.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Enhanced Business Agility.svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+             Multilingual Assistance
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                 Provide a variety of language choices to cater to a varied user base and make sure the app is simple and accessible for individuals with different language tastes.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (10).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+             Journey Collaboration
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                   For enhanced safety, allow users to communicate journey information with friends and family, including the anticipated time of arrival.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-3 sm:gap-4 border-b border-[#1A1A1A] rounded-[16px] p-4 sm:p-6 md:p-[40px] hover:bg-[#1B1D1E]"
+          >
+            <div>
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Group 7 (11).svg"
+                  alt="Globe Icon"
+                  class="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] text-[#6F82FF]"
+                />
+              </div>
+
+              <h4
+                class="text-[20px] sm:text-[24px] md:text-[28px] font-bold mb-2 text-[#F5FAFE] mt-2"
+              >
+             Getting Around and Scheduling
+              </h4>
+              <p
+                class="text-[#A3ACB5] text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-relaxed"
+              >
+                   Provide precise instructions, the best routes, and real-time traffic updates for effective mobility by integrating with mapping services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="hero-business">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-bg--prev" id="heroBgPrev"></div>
+
+      <div class="hero-inner text-white">
+        <div class="lg:px-[50px] px-[25px]">
+          <h2
+            class="sechd text-left text-[30px] leading-[40px] mt-[30px] mb-[40px] lg:text-[38px] lg:leading-[48px] lg:mt-0 lg:mb-0 xl:text-[52px] xl:leading-[56px] text-white font-normal absolute top-[40px] z-[99]"
+          >
+            Achieving Business Excellence with <br class="hidden lg:block" />
+            Cross-Industry Experience
+          </h2>
+        </div>
+
+        <!-- Swiper slider start-->
+        <div
+          class="swiper industries h-full"
+          id="industriesSwiper"
+          aria-label="Industry list controlling background"
+        >
+          <div class="swiper-wrapper">
+            <!-- 1 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/healthcare-sl.webp"
+              aria-label="Healthcare"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Healthcare</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We build and integrate digital healthcare solutions that
+                    encompass the entire chain of care delivery.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/ecommerce-sl.webp"
+              aria-label="E-Commerce"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">E-Commerce</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We automate your e-commerce operations with the latest
+                    technologies and in line with the market trends.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/fintech-sl.webp"
+              aria-label="Fintech"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Fintech</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    Our fintech solutions incorporate every aspect of digital
+                    finance and analytics, ensuring compliance and security.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/wellness-sl.webp"
+              aria-label="Wellness"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Wellness</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We develop wellness platforms that focus on personalized
+                    care, progress monitoring, and a healthy lifestyle.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/education-sl.webp"
+              aria-label="Education"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Education</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We adopt an interactive learning approach that scales
+                    engagement and makes knowledge easily accessible.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/real-estate-sl.webp"
+              aria-label="Real Estate"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Real Estate</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    With smart real estate apps, we focus on simplifying
+                    transactions, property search, and management.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/social-net-sl.webp"
+              aria-label="Social Networking"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Social Networking</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We develop social networking experiences to create
+                    meaningful interactions and drive more social engagement.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/entertainment-sl.webp"
+              aria-label="Entertainment"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Entertainment</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    Our solutions are customized to meet the industry
+                    requirements, ranging from streaming apps to interactive
+                    media.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/travel-sl.webp"
+              aria-label="Travel"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Travel</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We build travel platforms that streamline itineraries,
+                    travel bookings, and customized trip planning.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/restaurant-sl.webp"
+              aria-label="Restaurant"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Restaurant</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    We offer restaurant management and ordering solutions that
+                    scale dining experiences and operations.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 11 -->
+            <div
+              class="swiper-slide"
+              tabindex="0"
+              data-bg="./img/transportation-sl.webp"
+              aria-label="Transportation"
+            >
+              <div class="relative flex flex-col items-start lg:pl-[15px]">
+                <div class="slide-title">Transportation</div>
+                <div class="hidden-area">
+                  <p class="text-[18px] text-white font-[400]">
+                    With transportation and logistics app services, we let you
+                    streamline your user experience with multiple options.
+                  </p>
+                  <a
+                    href="#"
+                    class="text-[18px] text-white inline-flex gap-2 items-center font-[400] w-[150px]"
+                  >
+                    <span>Learn More</span>
+                    <span>
+                      <svg
+                        width="16"
+                        height="13"
+                        viewBox="0 0 16 13"
+                        fill="none"
+                      >
+                        <path
+                          d="M0.6 7.09562H13.9517L9.53213 11.4832C9.29783 11.7158 9.29783 12.0929 9.53213 12.3255C9.64912 12.4419 9.80272 12.5 9.95632 12.5C10.1099 12.5 10.2635 12.4419 10.3805 12.3255L15.8243 6.92109C16.0586 6.68849 16.0586 6.31144 15.8243 6.07883L10.3808 0.674453C10.1468 0.441849 9.76642 0.441849 9.53243 0.674453C9.29813 0.907056 9.29813 1.28411 9.53243 1.51671L13.952 5.90431H0.6C0.268798 5.90431 0 6.17116 0 6.49996C0 6.82876 0.268498 7.09562 0.6 7.09562Z"
+                          fill="#F5FAFE"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+        </div>
+        <!-- Swiper slider end-->
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-navs">
+        <div class="swiper-button-prev" aria-label="Previous">
+          <svg
+            width="40"
+            height="32"
+            viewBox="0 0 40 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M38.5 17.8258H5.12078L16.1697 29.1604C16.7554 29.7613 16.7554 30.7354 16.1697 31.3362C15.8772 31.6371 15.4932 31.7871 15.1092 31.7871C14.7252 31.7871 14.3412 31.6371 14.0487 31.3362L0.439312 17.3749C-0.146435 16.774 -0.146435 15.8 0.439312 15.1991L14.048 1.23778C14.6329 0.636886 15.5839 0.636886 16.1689 1.23778C16.7547 1.83867 16.7547 2.81272 16.1689 3.41361L5.12003 14.7482H38.5C39.328 14.7482 40 15.4376 40 16.287C40 17.1364 39.3288 17.8258 38.5 17.8258Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div class="swiper-button-next" aria-label="Next">
+          <svg
+            width="40"
+            height="32"
+            viewBox="0 0 40 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 17.8258H34.8792L23.8303 29.1604C23.2446 29.7613 23.2446 30.7354 23.8303 31.3362C24.1228 31.6371 24.5068 31.7871 24.8908 31.7871C25.2748 31.7871 25.6588 31.6371 25.9513 31.3362L39.5607 17.3749C40.1464 16.774 40.1464 15.8 39.5607 15.1991L25.952 1.23778C25.3671 0.636886 24.4161 0.636886 23.8311 1.23778C23.2453 1.83867 23.2453 2.81272 23.8311 3.41361L34.88 14.7482H1.5C0.672 14.7482 0 15.4376 0 16.287C0 17.1364 0.671 17.8258 1.5 17.8258Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+
+     <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <h2
+          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
+          aria-label="Recognized For Excellence"
+        >
+          Recognized For Excellence
+        </h2>
+        <div class="hidden grid-cols-3 gap-8 xl:grid">
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="UpCity"
+                    loading="lazy"
+                    width="200"
+                    height="65"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/upcity.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    Top-rated mobile app solution <br/> providers in New Jersey
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Entrepreneur"
+                    loading="lazy"
+                    width="224"
+                    height="42"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/entrep.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    App of the year – L-Card <br />
+                    Developed by NewAgeSysIT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/clutch.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    Top global leaders in <br/> mobile app development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="BusinessofApps"
+                    loading="lazy"
+                    width="254"
+                    height="45"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/business.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="GoodFirms"
+                    loading="lazy"
+                    width="216"
+                    height="30"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/goodfirms.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="DesignRush"
+                    loading="lazy"
+                    width="284"
+                    height="64"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/designrush.webp"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    Redefining service <br/> excellence
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/clutch.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="UpCity"
+                  loading="lazy"
+                  width="200"
+                  height="65"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/upcity.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  Top-rated mobile app solution </br> providers in New Jersey
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Entrepreneur"
+                  loading="lazy"
+                  width="224"
+                  height="42"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/entrep.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  App of the year – L-Card </br>
+                  Developed by NewAgeSysIT
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/clutch.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope "
+                >
+                  Top global leaders in <br/> mobile app development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="BusinessofApps"
+                  loading="lazy"
+                  width="254"
+                  height="45"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/business.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="GoodFirms"
+                  loading="lazy"
+                  width="216"
+                  height="30"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/goodfirms.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="DesignRush"
+                  loading="lazy"
+                  width="284"
+                  height="64"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/designrush.webp"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  Redefining service <br/> excellence
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/clutch.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="client_experiences bg-[#09090B] relative z-10">
+      <div class="container">
+        <div
+          class="text-center mx-auto mb-10 px-4 max-w-[900px] lg:max-w-[850px]"
+        >
+          <h2
+            class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-[400] leading-[1.2] mb-6"
+          >
+            Success Stories that Speak for Themselves
+          </h2>
+          <p
+            class="text-[#A3ACB5] text-[16px] md:text-[18px] font-normal text-center leading-relaxed"
+          >
+            Deep dive into the heartfelt words from our clients about their experiences with the AI innovation we’ve offered to their businesses. With custom AI chatbot development, we have helped businesses transform and deliver the best to their clients for everlasting success. 
+          </p>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme client_says">
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>Lcard</h2>
+              <p>
+                A stunning digital business card app with a personalized and
+                interactive profile where a user can create and share unlimited
+                digital cards for different customers.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>100k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>300k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Lcard.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/David-Chabukashvili-1-1-1.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>David-Chabukashvili</h3>
+                  <p>Founder - L-Card App</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  They delivered everything on time and it was of great quality.
+                  They go above and beyond to meet your requirements and deliver
+                  the product you are looking for…
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>ISRA</h2>
+              <p>
+                An On-demand service-providing application that effortlessly
+                connects customers with hairstylist professionals and make-up
+                artists on schedule.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Isra.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/iman.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Iman Khwaja</h3>
+                  <p>Owner - ISRA</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end,
+                  they were there for me.
+                  <br />They were very systematic and methodical in every single
+                  step and…
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>WhipFlip</h2>
+              <p>
+                An on-demand app connects you with a network of experts, from
+                car buying and selling professionals to dedicated concierges who
+                ensure smooth appointment scheduling.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/WhipFlip.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/whipflip-ceo.jpg" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Roger C Clappe</h3>
+                  <p>CEO - WhipFlip</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end,
+                  they were there for me. They were very systematic and
+                  methodical in every single step and …..
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>Car-up</h2>
+              <p>
+                Car-Up offers the most convenient and transparent auto repair
+                service, disrupting the industry with unparalleled customer
+                service.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Car-up.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/LARRY-SEIBEL-CARUP.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Larry Seibel</h3>
+                  <p>Founder- Car-Up App</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end,
+                  they were there for me. They were very systematic and
+                  methodical in every single step and …
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-full h-[160px] bg-gradient-to-b from-[#09090B] via-[#0A0A0A] to-[#000000] pointer-events-none"
+      ></div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+
+  
+  <div class="relative overflow-hidden text-white py-10 lg:py-20">
+      <img
+        src="./img/grid-bg-golang.png"
+        alt="Background"
+        class="absolute top-0 left-0 w-full lg:w-1/2 h-auto -z-10"
+      />
+      <img
+        src="./img/gradi-golang.png"
+        alt="Background"
+        class="absolute top-0 left-0 w-full h-auto -z-10"
+      />
+      <section class="py-12 bg golang-sect-border relative">
+        <!-- <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(68,88,210,0.25)_0%,rgba(10,12,25,0.95)_70%,#0B0C18_100%)] -z-10"
+  ></div> -->
+        <div
+          class="container grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto px-4"
+        >
+          <h2
+            class="text-white text-[30px] md:text-[40px] xl:text-[50px] font-[400] mb-6 text-left p-5"
+          >
+            Business Leaders <br class="hidden lg:block" />
+            Often Ask
+          </h2>
+          <div class="hidden lg:flex justify-end">
+            <img src="./img/golang-client.png" alt="FAQ Image" class="w-[80%] h-auto rounded-lg" />
+          </div>
+        </div>
+      </section>
+      <section class="faq py-10 md:py-[80px]">
+        <div class="container">
+          <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+            <div class="accordion faq-accordion">
+              <div class="flex justify-center relative">
+                <div class="w-full lg:w-[80%] text-white">
+                  <div class="px-[6px]">
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-normal"
+                          >Which technologies are frequently employed in the transportation sector for app development?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content show">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                           We develop applications across all devices including iOS and Android. It is our responsibility to do research and then create an application that your user will want to use. You just need to tell us what your preferences are or what needs the target group you have specified have. We employ cross-platform frameworks like React Native or Flutter, native or hybrid app development frameworks like Java or Kotlin for Android, and Swift for iOS.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium">Well, how much time will it take for your team to create an app for transportation?
+</span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                           The time taken to develop depends on the complexity of the software required, the features sought after, and the experience of the development team.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium"
+                          >How can I make sure user data in a transportation app is secure?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                            Using authentication and authorization methods, encrypting sensitive data, employing secure coding techniques, and adhering to industry standards and laws like GDPR are all necessary to ensure data security.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium"
+                          >How do I ensure my transport app is scalable and ready for future updates?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                           We build a scalable architecture, utilize cloud-based services, and follow best practices for coding to ensure scalability and support future enhancements, as well as plan ahead for updates and feature additions.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium"
+                          >How can I incorporate payment channels into an application for transportation?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                           To secure transactions and manage payments within the app, payment gateway integration necessitates collaborating with outside payment service providers and utilizing their APIs.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium">Is it possible to incorporate live car monitoring into my transportation app? </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                           Unquestionably. GPS technology is used to perform real-time car tracking, which enables users to track their rides and offer precise location data.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium"
+                          >What features ought to be included in a transportation app to improve user experience?
+
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                            Notable attributes encompass a user-friendly interface, instantaneous updates, precise fare computation, driver evaluations, effortless reservation and payment procedures, and tailored suggestions.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                      <button
+                        class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px]"
+                        onclick="toggleAccordion(this)"
+                      >
+                        <span class="font-medium"
+                          >Is there any strategy for drawing customers to my transportation app?
+                        </span>
+                        <span
+                          class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                        >
+                          <span class="plus-icon">
+                            <img src="./img/arrow-down.svg" alt="Plus Icon" class="w-6 h-6" />
+                          </span>
+                          <span class="minus-icon">
+                            <img src="./img/arrow-down.svg" alt="minus Icon" class="w-6 h-6" />
+                          </span>
+                        </span>
+                      </button>
+                      <div class="accordion-content">
+                        <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                          <p>
+                            Various marketing techniques can make your app more visible on the app store, they include digital advertising, social media promotion, collaborating with nearby companies or events, referral schemes, and ASO (App Store Optimization). Furthermore, we offer customized digital marketing services for your needs in promoting an application.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+     <section class="bg-[#000000] py-16 px-0 overflow-x-hidden">
+      <div class="w-full container mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">
+          Related Blogs
+        </h2>
+
+        <!-- Blog Carousel Container -->
+        <div class="related-blogs-carousel owl-carousel owl-theme">
+          <!-- Blog Card 1 -->
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List.png"
+                alt="How to Build a SaaS Application"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                How to Build a SaaS Application?– Cover Nuances, Step-by-Step
+                Process, Cost, and More
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+
+          <!-- Add more blog cards here as needed -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+        document
+          .querySelectorAll(".accordion-content")
+          .forEach((item) => item.classList.remove("show"));
+        document
+          .querySelectorAll(".transform")
+          .forEach((icon) => icon.classList.remove("rotate-180"));
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".client_says").owlCarousel({
+          stagePadding: 200,
+          loop: true,
+          margin: 80,
+          dots: false,
+          items: 1,
+          lazyLoad: true,
+          nav: true,
+          autoplay: false,
+          autoplayTimeout: 3000,
+          smartSpeed: 800,
+          // navText: [
+          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+          // ],
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+            },
+            600: {
+              items: 1,
+              stagePadding: 50,
+            },
+            1000: {
+              items: 1,
+              stagePadding: 200,
+            },
+            1200: {
+              items: 1,
+              stagePadding: 250,
+            },
+            1400: {
+              items: 1,
+              stagePadding: 300,
+            },
+            1600: {
+              items: 1,
+              stagePadding: 350,
+            },
+            1800: {
+              items: 1,
+              stagePadding: 400,
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".video-popup").magnificPopup({
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 300,
+          preloader: true,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+
+    <script>
+      function toggleAccordionPPC(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Find the parent section that contains this accordion
+        const parentSection = button.closest(".basis-full");
+
+        if (parentSection) {
+          // Close all accordion items within this section only
+          const sectionAccordionItems = parentSection.querySelectorAll(
+            ".accordion-content-ppc"
+          );
+          sectionAccordionItems.forEach((item) => {
+            item.classList.remove("show");
+          });
+
+          // Rotate all accordion icons within this section only
+          const sectionAccordionIcons =
+            parentSection.querySelectorAll(".transform");
+          sectionAccordionIcons.forEach((icon) => {
+            icon.classList.remove("rotate-180");
+          });
+        }
+
+        // Open the clicked accordion item if it was closed
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-1").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 300,
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-1 .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-1 .owl-nav .owl-next");
+        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-2").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 300,
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-1 .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay1");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-1 .owl-nav .owl-next");
+        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const owl = $(".slider-3");
+        const leftOverlay = document.getElementById("leftOverlay3");
+
+        owl.owlCarousel({
+          autoWidth: true,
+          margin: 30,
+          loop: false,
+          dots: false,
+          nav: true,
+          // stagePadding: 180,
+          // responsive: {
+          // 0: { items: 1, stagePadding: 20 },
+          // 768: { items: 2, stagePadding: 50 },
+          // 1024: { items: 3, stagePadding: 100 },
+          // 1440: { items: 1, stagePadding: 0 },
+          // 1600: { items: 1, stagePadding: 0 },
+          // },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        const owl = $(".mobile-slider");
+
+        owl.owlCarousel({
+          items: 2,
+          margin: 30,
+          loop: false,
+          dots: false,
+          nav: true,
+          stagePadding: 180,
+          responsive: {
+            0: { items: 1, stagePadding: 20 },
+            768: { items: 2, stagePadding: 50 },
+          },
+        });
+
+        const nextbutton = document.querySelector(
+          ".slider-1 .owl-nav .owl-next"
+        );
+        const prevbutton = document.querySelector(
+          ".slider-1 .owl-nav .owl-prev"
+        );
+      });
+    </script>
+
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const collapsed = document.getElementById("collapsedState");
+      const expanded = document.getElementById("expandedState");
+
+      toggleBtn.addEventListener("click", () => {
+        collapsed.classList.add("hidden");
+        expanded.classList.remove("hidden");
+      });
+
+      document.getElementById("viewLessBtn").addEventListener("click", () => {
+        expanded.classList.add("hidden");
+        collapsed.classList.remove("hidden");
+      });
+    </script>
+
+    <script>
+      (function () {
+        const SELECTOR = ".timeline__item";
+        const CLASS_NAME = "in-view";
+
+        const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
+          (el) => !el.classList.contains(CLASS_NAME)
+        );
+        if (!all.length) return;
+
+        // --- Helper for manual checks (used by Locomotive & fallback) ---
+        function hasEntered(el, offset = 0.9) {
+          const r = el.getBoundingClientRect();
+          const vh =
+            window.innerHeight || document.documentElement.clientHeight;
+          const triggerY = vh * offset; // 0.9 => 90% of viewport height
+          return r.top <= triggerY && r.bottom >= 0;
+        }
+
+        // --- If LocomotiveScroll is present, use its scroll event ---
+        if (window.locoScroll) {
+          const loco = window.locoScroll;
+          const pending = new Set(all);
+
+          function check() {
+            pending.forEach((el) => {
+              if (hasEntered(el)) {
+                el.classList.add(CLASS_NAME);
+                pending.delete(el);
+              }
+            });
+            if (!pending.size && loco.off) {
+              loco.off("scroll", check);
+              window.removeEventListener("resize", check);
+            }
+          }
+
+          loco.on("scroll", check);
+          window.addEventListener("resize", check, { passive: true });
+          // initial pass
+          check();
+          return;
+        }
+
+        // --- Prefer IntersectionObserver when no LocomotiveScroll ---
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add(CLASS_NAME);
+                  obs.unobserve(entry.target); // ONCE
+                }
+              });
+            },
+            {
+              root: null,
+              threshold: 0.15, // fire when ~15% visible
+              rootMargin: "0px 0px -10% 0px", // a touch earlier
+            }
+          );
+
+          all.forEach((el) => io.observe(el));
+          return;
+        }
+
+        // --- Fallback: plain scroll listener ---
+        const pending = new Set(all);
+        function checkFallback() {
+          pending.forEach((el) => {
+            if (hasEntered(el)) {
+              el.classList.add(CLASS_NAME);
+              pending.delete(el);
+            }
+          });
+          if (!pending.size) {
+            window.removeEventListener("scroll", checkFallback);
+            window.removeEventListener("resize", checkFallback);
+          }
+        }
+        window.addEventListener("scroll", checkFallback, { passive: true });
+        window.addEventListener("resize", checkFallback, { passive: true });
+        checkFallback();
+      })();
+    </script>
+    <script>
+      const imageSources = [
+        "./img/staff-augmentation-golang.webp",
+        "./img/dedicated-team-golang.webp",
+        "./img/project-based.webp",
+        "./img/fixed-price-models.webp",
+        "./img/time&material.webp",
+      ];
+
+      function toggleUniqueAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Collapse all
+        document.querySelectorAll(".accordion-content").forEach((item) => {
+          item.classList.remove("show");
+          item.parentElement.classList.remove("bg-[#121314]");
+        });
+        document
+          .querySelectorAll(".arrow-icon")
+          .forEach((icon) => icon.classList.remove("-rotate-90"));
+
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
+          content.parentElement.classList.add("bg-[#121314]");
+          // Smooth image fade
+          const imgIndex = button.getAttribute("data-img-index");
+          const newSrc = imageSources[imgIndex];
+          const currentImg = document.getElementById("accordionImage");
+          const nextImg = document.getElementById("accordionImageNext");
+
+          if (currentImg && nextImg) {
+            nextImg.src = newSrc;
+            nextImg.classList.add("opacity-100");
+            currentImg.classList.remove("opacity-100");
+            currentImg.classList.add("opacity-0");
+
+            // After fade completes, swap image sources
+            setTimeout(() => {
+              currentImg.src = newSrc;
+              currentImg.classList.remove("opacity-0");
+              currentImg.classList.add("opacity-100");
+              nextImg.classList.remove("opacity-100");
+              nextImg.src = ""; // Optional cleanup
+            }, 300); // matches transition duration
+          }
+        }
+      }
+    </script>
+    <script>
+      const buttons = document.querySelectorAll(".");
+      const contents = document.querySelectorAll(".content-item");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.target;
+
+          // Reset active states
+          buttons.forEach((b) => {
+            b.classList.remove("text-white");
+            b.classList.add("text-gray-500");
+          });
+          contents.forEach((c) => c.classList.add("hidden"));
+
+          // Activate selected
+          btn.classList.remove("text-gray-500");
+          btn.classList.add("text-white");
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          // disableOn: 700,
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+
+    <!-- Related Blogs: Owl Carousel init (unique instance) -->
+    <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            // navText: [
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
+            // ],
+
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
+
+    <!-- Swiper JS and Magnific Popup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Industries Swiper Initialization -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        /* ---------------- Background swap helpers ---------------- */
+        const bg = document.getElementById("heroBg");
+        const bgPrev = document.getElementById("heroBgPrev");
+        
+        // Image preloader cache
+        const imageCache = new Map();
+        let preloadPromise = null;
+
+        // Preload all background images with priority loading
+        function preloadBackgroundImages() {
+          if (preloadPromise) return preloadPromise;
+          
+          const slides = document.querySelectorAll('#industriesSwiper .swiper-slide[data-bg]');
+          const imageUrls = Array.from(slides).map(slide => slide.dataset.bg);
+          
+          preloadPromise = Promise.allSettled(
+            imageUrls.map((url, index) => {
+              if (imageCache.has(url)) {
+                return Promise.resolve(imageCache.get(url));
+              }
+              
+              return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.decoding = 'async';
+                img.loading = 'eager';
+                
+                if (index < 3) {
+                  img.fetchpriority = 'high';
+                }
+                
+                img.onload = () => {
+                  imageCache.set(url, img);
+                  resolve(img);
+                };
+                img.onerror = () => {
+                  console.warn(`Failed to preload image: ${url}`);
+                  reject(new Error(`Failed to load ${url}`));
+                };
+                
+                img.src = url;
+              });
+            })
+          );
+          
+          return preloadPromise;
+        }
+
+        function swapBackground(url) {
+          if (!bg || !bgPrev || !url) return;
+          const currentUrl = bg.style.backgroundImage;
+
+          if (currentUrl) {
+            bgPrev.style.backgroundImage = currentUrl;
+            bgPrev.style.opacity = 1;
+            void bgPrev.offsetWidth;
+          }
+          bg.style.backgroundImage = `url("${url}")`;
+          requestAnimationFrame(() => {
+            bgPrev.style.opacity = 0;
+          });
+        }
+
+        // Start preloading images immediately  
+        preloadBackgroundImages().then(() => {
+          console.log('Background images preloaded successfully');
+        }).catch(error => {
+          console.warn('Some background images failed to preload:', error);
+        });
+
+        /* ---------------- Industries slider ---------------- */
+        let currentSelectedSlide = null;
+        let isHovering = false;
+
+        // Function to update slide selection
+        function updateSlideSelection(slideElement) {
+          if (!slideElement || slideElement === currentSelectedSlide) return;
+
+          const allSlides = document.querySelectorAll('#industriesSwiper .swiper-slide');
+          allSlides.forEach(slide => {
+            slide.classList.remove('slide-selected');
+            slide.classList.remove('swiper-slide-active');
+          });
+
+          slideElement.classList.add('slide-selected');
+          currentSelectedSlide = slideElement;
+
+          if (slideElement.dataset && slideElement.dataset.bg) {
+            swapBackground(slideElement.dataset.bg);
+          }
+        }
+
+        // Function to get first visible slide
+        function getFirstVisibleSlide(swiper) {
+          if (!swiper || !swiper.slides || swiper.slides.length === 0) return null;
+          
+          try {
+            const swiperRect = swiper.el.getBoundingClientRect();
+            let firstVisibleSlide = null;
+            let maxVisibility = 0;
+            
+            for (let i = 0; i < swiper.slides.length; i++) {
+              const slide = swiper.slides[i];
+              const slideRect = slide.getBoundingClientRect();
+              
+              const left = Math.max(slideRect.left, swiperRect.left);
+              const right = Math.min(slideRect.right, swiperRect.right);
+              const visibleWidth = Math.max(0, right - left);
+              const visibilityPercentage = visibleWidth / slideRect.width;
+              
+              if (visibilityPercentage > maxVisibility && visibilityPercentage > 0.3) {
+                maxVisibility = visibilityPercentage;
+                firstVisibleSlide = slide;
+              }
+            }
+            
+            return firstVisibleSlide || swiper.slides[0];
+          } catch (error) {
+            console.warn('Error getting first visible slide:', error);
+            return swiper.slides[0] || null;
+          }
+        }
+
+        const industriesSwiper = new Swiper("#industriesSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: false,
+          loop: false,
+          grabCursor: true,
+          lazy: {
+            loadPrevNext: true,
+            loadPrevNextAmount: 2,
+          },
+          breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 0 },
+            960: { slidesPerView: 3, spaceBetween: 0 },
+            1280: { slidesPerView: 4, spaceBetween: 0 },
+          },
+          navigation: {
+            nextEl: ".swiper-navs .swiper-button-next",
+            prevEl: ".swiper-navs .swiper-button-prev",
+          },
+          pagination: { el: ".swiper-pagination", enabled: false },
+          observer: true,
+          observeParents: true,
+          on: {
+            init(sw) {
+              const first = sw.slides[sw.activeIndex];
+              if (first && first.dataset && first.dataset.bg) {
+                if (imageCache.has(first.dataset.bg)) {
+                  swapBackground(first.dataset.bg);
+                } else {
+                  const firstImg = new Image();
+                  firstImg.decoding = 'async';
+                  firstImg.fetchpriority = 'high';
+                  firstImg.onload = () => {
+                    imageCache.set(first.dataset.bg, firstImg);
+                    swapBackground(first.dataset.bg);
+                  };
+                  firstImg.onerror = () => {
+                    console.warn('Failed to load first background image');
+                  };
+                  firstImg.src = first.dataset.bg;
+                }
+              }
+
+              setTimeout(() => {
+                const firstVisible = getFirstVisibleSlide(sw);
+                if (firstVisible && !isHovering) {
+                  updateSlideSelection(firstVisible);
+                }
+              }, 100);
+            },
+            slideChange(sw) {
+              if (!isHovering) {
+                setTimeout(() => {
+                  const firstVisible = getFirstVisibleSlide(sw);
+                  if (firstVisible) {
+                    updateSlideSelection(firstVisible);
+                  }
+                }, 50);
+              }
+            },
+            transitionEnd(sw) {
+              if (!isHovering) {
+                const firstVisible = getFirstVisibleSlide(sw);
+                if (firstVisible) {
+                  updateSlideSelection(firstVisible);
+                }
+              }
+            },
+          },
+        });
+
+        /* ---------------- Hover/focus previews with selection ---------------- */
+        function attachPreviewHandlers(slideEl) {
+          if (!slideEl) return;
+
+          const handleMouseEnter = () => {
+            isHovering = true;
+            updateSlideSelection(slideEl);
+          };
+
+          const handleFocus = () => {
+            isHovering = true;
+            updateSlideSelection(slideEl);
+          };
+
+          const handleBlur = () => {
+            isHovering = false;
+            setTimeout(() => {
+              if (!isHovering) {
+                const firstVisible = getFirstVisibleSlide(industriesSwiper);
+                if (firstVisible) {
+                  updateSlideSelection(firstVisible);
+                }
+              }
+            }, 100);
+          };
+
+          const handleClick = () => {
+            const idx = Array.prototype.indexOf.call(
+              industriesSwiper.slides,
+              slideEl
+            );
+            if (idx >= 0) {
+              isHovering = false;
+              industriesSwiper.slideTo(idx);
+            }
+          };
+
+          slideEl.onmouseenter = handleMouseEnter;
+          slideEl.onfocus = handleFocus;
+          slideEl.onblur = handleBlur;
+          slideEl.onclick = handleClick;
+        }
+
+        Array.prototype.forEach.call(industriesSwiper.slides, attachPreviewHandlers);
+
+        const swiperContainer = document.getElementById('industriesSwiper');
+        if (swiperContainer) {
+          swiperContainer.addEventListener('mouseleave', () => {
+            isHovering = false;
+            setTimeout(() => {
+              if (!isHovering) {
+                const firstVisible = getFirstVisibleSlide(industriesSwiper);
+                if (firstVisible) {
+                  updateSlideSelection(firstVisible);
+                }
+              }
+            }, 50);
+          });
+        }
+
+        industriesSwiper.on("resize", () => {
+          Array.prototype.forEach.call(
+            industriesSwiper.slides,
+            attachPreviewHandlers
+          );
+          
+          if (!isHovering) {
+            setTimeout(() => {
+              const firstVisible = getFirstVisibleSlide(industriesSwiper);
+              if (firstVisible) {
+                updateSlideSelection(firstVisible);
+              }
+            }, 100);
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          if (!isHovering) {
+            setTimeout(() => {
+              const firstVisible = getFirstVisibleSlide(industriesSwiper);
+              if (firstVisible) {
+                updateSlideSelection(firstVisible);
+              }
+            }, 200);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
