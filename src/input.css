@@ -6323,8 +6323,12 @@ footer ul li {
   transition: all 0.5s;
 }
 .for_super_hover:hover .supermenu {
-  top: 70px;
+  top: 140px;
   transition: all 0.5s;
+}
+.super-overflow{
+  overflow: hidden;
+  overflow-y: auto;
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   #hero-banner {
@@ -7278,3 +7282,28 @@ background: linear-gradient(94.34deg, #FFFFFF -22.48%, rgba(0, 0, 0, 0.46) 90.08
 .services-carousel .owl-stage {
   padding: 0 !important;
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.mySlides {display: none;}

@@ -1,171 +1,3452 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Services Grid</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Optional: fine-tune list bullets alignment */
-      .check-list li { position: relative; padding-left: 1.5rem; }
-      .check-list li::before {
-        content: ""; width: 10px; height: 10px; border-radius: 9999px; 
-        position: absolute; left: 0.25rem; top: 0.6rem; background: #1d4ed8;
-      }
-    </style>
-  </head>   
-  <body class="bg-slate-50 text-slate-800 antialiased">
-    <section class="mx-auto max-w-7xl px-4 py-12 lg:py-16">
-      <!-- Header / Breadcrumb optional -->
-      <div class="mb-8 text-center">
-        <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Our Services</h2>
-        <p class="mt-2 text-slate-600">Everything you need from discovery to delivery and beyond</p>
+<html
+  lang="en"
+>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sys IT - Testimonials</title>
+
+  <!-- DNS + TCP warmups -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts (simple & reliable). display=swap prevents text-render delay -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Third-party vendor CSS (non-blocking via preload + onload). Noscript fallbacks below -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+  </noscript>
+
+  <!-- Preload hero images (use media to avoid fetching both); 'fetchpriority' belongs on <img>, not here -->
+  <link rel="preload" as="image" href="./img/banner-testi1.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="./img/bannermob-testi.webp" media="(max-width: 767px)">
+
+  <!-- Your main CSS: early hint + real stylesheet. (Preload is optional but harmless; browsers coalesce the request.) -->
+  <link rel="preload" href="style.css" as="style">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+
+  <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
+
+    <header
+      class="top-0 left-0 right-0 fixed text-white z-[100]"
+      style="background-color: rgba(0, 10, 31) !important"
+    >
+    <div class="h-[70px] bg-[#4361EE] hidden lg:block">
+      <div class="container flex items-center justify-between px-4 xl:px-0 mx-auto h-full">
+        <div class="w-8/12">
+          <div class="relative overflow-hidden w-full">
+  <div class="flex w-max animate-marquee items-center">
+    
+    <p class="text-white py-2 flex gap-2 text-[16px] font-semibold tracking-[0.5px] items-center whitespace-nowrap">
+      <span class="mr-3">
+        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.03516 0L11.168 6.56434H18.0702L12.4862 10.6213L14.6191 17.1857L9.03516 13.1287L3.4512 17.1857L5.58408 10.6213L0.000119209 6.56434H6.90227L9.03516 0Z" fill="white"/>
+        </svg>
+      </span>
+
+      <span>30+ years in, and yes, we’re on a mission to engineer smarter systems!</span>
+
+      <a href="#" class="underline uppercase ml-3">Click Here!</a>
+    </p>
+
+    <!-- duplicate for seamless loop -->
+    <p class="text-white py-2 flex gap-2 text-[16px] font-semibold tracking-[0.5px] items-center whitespace-nowrap ml-10">
+      <span class="mr-3">
+        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.03516 0L11.168 6.56434H18.0702L12.4862 10.6213L14.6191 17.1857L9.03516 13.1287L3.4512 17.1857L5.58408 10.6213L0.000119209 6.56434H6.90227L9.03516 0Z" fill="white"/>
+        </svg>
+      </span>
+
+      <span>30+ years in, and yes, we’re on a mission to engineer smarter systems!</span>
+
+      <a href="#" class="underline uppercase ml-3">Click Here!</a>
+    </p>
+
+  </div>
+</div>
+
+        </div>
+        <div class="w-4/12">
+          <ul class="flex flex-wrap gap-2 justify-end">
+              <li>
+                <button class="bg-primary hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-[45px] uppercase xl:w-auto text-sm font-inter">
+                  GET A QUOTE
+                </button>
+              </li>
+              <li>
+                <a href="#" class="inline-flex items-center gap-3 rounded-full border border-white/50 bg-transparent py-3 px-6 text-sm font-semibold uppercase tracking-wide text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset] transition 
+            hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 font-inter">
+<span>
+    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.0518 2.70726H14.5681V0.796324C14.5681 0.412554 14.2556 0.0999985 13.8718 0.0999985C13.488 0.0999985 13.1755 0.412554 13.1755 0.796324V2.70726H5.86012V0.796324C5.86012 0.412554 5.54756 0.0999985 5.16379 0.0999985C4.78002 0.0999985 4.46747 0.412554 4.46747 0.796324V2.70726H2.94821C1.37752 2.70726 0.0996094 3.98518 0.0996094 5.55586V17.0294C0.0996094 18.6001 1.37752 19.878 2.94821 19.878H16.0518C17.6225 19.878 18.9004 18.6001 18.9004 17.0294V5.55586C18.9004 3.98518 17.6225 2.70726 16.0518 2.70726ZM17.5077 17.0334C17.5077 17.8365 16.8549 18.4933 16.0478 18.4933H2.94821C2.14506 18.4933 1.4883 17.8405 1.4883 17.0334V7.66858H17.5077V17.0334ZM17.5077 6.27593H1.49226V5.55586C1.49226 4.75272 2.14506 4.09596 2.95217 4.09596H16.0557C16.8589 4.09596 17.5157 4.74876 17.5157 5.55586V6.27593H17.5077Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  <path d="M9.50022 11.8823C10.1055 11.8823 10.5961 11.3917 10.5961 10.7864C10.5961 10.1811 10.1055 9.69049 9.50022 9.69049C8.89489 9.69049 8.4043 10.1811 8.4043 10.7864C8.4043 11.3917 8.89489 11.8823 9.50022 11.8823Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  <path d="M13.6735 11.8388C14.2551 11.8388 14.7259 11.368 14.7259 10.7864C14.7259 10.2049 14.2551 9.73405 13.6735 9.73405C13.0919 9.73405 12.6211 10.2049 12.6211 10.7864C12.6211 11.368 13.0919 11.8388 13.6735 11.8388Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  <path d="M5.32639 11.8823C5.93172 11.8823 6.42231 11.3917 6.42231 10.7864C6.42231 10.1811 5.93172 9.69049 5.32639 9.69049C4.72106 9.69049 4.23047 10.1811 4.23047 10.7864C4.23047 11.3917 4.72502 11.8823 5.32639 11.8823Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  <path d="M9.50022 16.4635C10.1055 16.4635 10.5961 15.9729 10.5961 15.3676C10.5961 14.7622 10.1055 14.2716 9.50022 14.2716C8.89489 14.2716 8.4043 14.7622 8.4043 15.3676C8.4043 15.9729 8.89489 16.4635 9.50022 16.4635Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  <path d="M13.674 16.4635C14.2794 16.4635 14.77 15.9729 14.77 15.3676C14.77 14.7622 14.2794 14.2716 13.674 14.2716C13.0687 14.2716 12.5781 14.7622 12.5781 15.3676C12.5781 15.9729 13.0687 16.4635 13.674 16.4635Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  <path d="M5.32639 16.4635C5.93172 16.4635 6.42231 15.9729 6.42231 15.3676C6.42231 14.7622 5.93172 14.2716 5.32639 14.2716C4.72106 14.2716 4.23047 14.7622 4.23047 15.3676C4.23047 15.9729 4.72502 16.4635 5.32639 16.4635Z" fill="white" stroke="white" stroke-width="0.2"></path>
+  </svg>
+  </span>
+    <span>Book a call</span>
+  </a>
+              </li>
+            </ul>
+        </div>
       </div>
-
-      <!-- Services Grid -->
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <!-- Card Template: copy for each column -->
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Software Development -->
-            <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M7 14h10M9 18h6" />
-            </svg>
-            <h3 class="text-lg font-semibold">Software Development</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>Custom Software Development</li>
-            <li>Software Product Development</li>
-            <li>SaaS Development</li>
-            <li>Web Application Development</li>
-            <li>Mobile App Development</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: DevOps -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 12a4 4 0 0 1 4-4h2v2H8a2 2 0 1 0 0 4h2v2H8a4 4 0 0 1-4-4Zm16 0a4 4 0 0 0-4-4h-2v2h2a2 2 0 1 1 0 4h-2v2h2a4 4 0 0 0 4-4Z"/>
-            </svg>
-            <h3 class="text-lg font-semibold">DevOps</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>DevOps Consulting Services</li>
-            <li>DevOps CI/CD Services</li>
-            <li>DevOps Development Services</li>
-            <li>DevOps Implementation Services</li>
-            <li>DevSecOps Services</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Startup Services -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7M5 19h14"/>
-            </svg>
-            <h3 class="text-lg font-semibold">Startup Services</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>Minimal Viable Product (MVP)</li>
-            <li>Product Development</li>
-            <li>Start-up Advisory / Consulting</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Cloud Services -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.31-1.5A4.5 4.5 0 0 0 7 18Z"/>
-            </svg>
-            <h3 class="text-lg font-semibold">Cloud Services</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>Cloud Managed Services</li>
-            <li>Cloud Consulting</li>
-            <li>AWS</li>
-            <li>Cloud Application Development</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Emerging Technologies -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v6m0 6v6M3 12h6m6 0h6"/>
-            </svg>
-            <h3 class="text-lg font-semibold">Emerging Technologies</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>AI/ML</li>
-            <li>AR/VR</li>
-            <li>Data Science and Analytics</li>
-            <li>Blockchain</li>
-            <li>Robotic Process Automation</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Consulting Services -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 21v-4a4 4 0 0 1 4-4h4M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/>
-            </svg>
-            <h3 class="text-lg font-semibold">Consulting Services</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>Digital Transformation</li>
-            <li>IT Consulting</li>
-            <li>Implementation Consulting</li>
-            <li>IT Security and Cybersecurity</li>
-            <li>QA Consulting</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Ideation and Design -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v6l4 2-4 2v6M6 7l-3 3 3 3M18 7l3 3-3 3"/>
-            </svg>
-            <h3 class="text-lg font-semibold">Ideation and Design</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>UI/UX Consulting</li>
-            <li>UX/UI Design</li>
-            <li>MVP Design</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <div class="mb-4 flex items-center gap-3">
-            <!-- Icon: Workforce Management -->
-            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0ZM3 21a7 7 0 0 1 18 0"/>
-            </svg>
-            <h3 class="text-lg font-semibold">Workforce Management</h3>
-          </div>
-          <ul class="check-list space-y-2 text-sm leading-6 text-slate-700">
-            <li>Staff Augmentation</li>
-            <li>Dedicated Development Team</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- CTA Banner -->
-      <div class="mt-10 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-1 shadow-lg">
-        <div class="flex flex-col items-center justify-between gap-6 rounded-2xl bg-white/5 px-6 py-8 sm:flex-row sm:px-10">
-          <p class="text-center text-base text-white sm:text-left">
-            Need something specific? Share your requirements, and we will create a solution that fits your needs.
-          </p>
-          <a href="#" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow ring-1 ring-inset ring-white/20 transition hover:shadow-md">
-            Schedule Free Consultation
+    </div>
+      <div
+        class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto"
+      >
+        <nav class="flex">
+          <a href="#">
+            <img src="./img/NewAgeSys_IT_W-2.svg"
+              alt="NewAgeSys IT Logo"
+              class="w-auto h-[40px] md:h-[47px]"
+              width="180" height="47"
+              fetchpriority="high" 
+              loading="lazy">
           </a>
+        </nav>
+        <div class="flex gap-2">
+          <nav class="hidden lg:flex">            
+            <ul class="hidden min-1240px:flex items-center justify-center">
+              <li class="relative px-4 group for_super_hover">
+                <button class="cursor -default flex gap-2 items-center">Services 
+                <span class="down_arrow">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 0.707031L5.70703 5.70703L0.707031 0.707031" stroke="#65686C" stroke-width="2"/></svg>
+                </span>
+              </button>
+                <div
+                  class="fixed left-[50%] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu container p-0 h-[520px] super-overflow rounded-[15px]"
+                >
+                  <!-- service megamenu -->
+                  <div class="relative w-full p-4 bg-white shadow-xl top-0 rounded-xl supermenu__inner supermenu__inner_services">   
+                    <!-- Services Grid -->  
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 service_spr_dropdown">
+                      <article>
+                        <div class="mb-4 flex items-center gap-3">
+                          <img class="h-6 w-6" src="img/service-menu/sr1.svg"/>
+                          <h3 class="text-lg font-semibold">Software Development</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">Custom Software Development</a></li>
+                          <li><a href="#">Software Product Development</a></li>
+                          <li><a href="#">SaaS Development</a></li>
+                          <li><a href="#">Web Application Development</a></li>
+                          <li><a href="#">Mobile App Development</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: DevOps -->
+                          <img class="h-6 w-6" src="img/service-menu/sr2.svg"/>
+                          <h3 class="text-lg font-semibold">DevOps</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">DevOps Consulting Services</a></li>
+                          <li><a href="#">DevOps CI/CD Services</a></li>
+                          <li><a href="#">DevOps Development Services</a></li>
+                          <li><a href="#">DevOps Implementation Services</a></li>
+                          <li><a href="#">DevSecOps Services</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: Startup Services -->
+                          <img class="h-6 w-6" src="img/service-menu/sr3.svg"/>
+                          <h3 class="text-lg font-semibold">Startup Services</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">Minimal Viable Product (MVP)</a></li>
+                          <li><a href="#">Product Development</a></li>
+                          <li><a href="#">Start-up Advisory / Consulting</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: Cloud Services -->
+                          <img class="h-6 w-6" src="img/service-menu/sr4.svg"/>
+                          <h3 class="text-lg font-semibold">Cloud Services</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">Cloud Managed Services</a></li>
+                          <li><a href="#">Cloud Consulting</a></li>
+                          <li><a href="#">AWS</a></li>
+                          <li><a href="#">Cloud Application Development</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: Emerging Technologies -->
+                          <img class="h-6 w-6" src="img/service-menu/sr5.svg"/>
+                          <h3 class="text-lg font-semibold">Emerging Technologies</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">AI/ML</a></li>
+                          <li><a href="#">AR/VR</a></li>
+                          <li><a href="#">Data Science and Analytics</a></li>
+                          <li><a href="#">Blockchain</a></li>
+                          <li><a href="#">Robotic Process Automation</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: Consulting Services -->
+                          <img class="h-6 w-6" src="img/service-menu/sr6.svg"/>
+                          <h3 class="text-lg font-semibold">Consulting Services</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">Digital Transformation</a></li>
+                          <li><a href="#"> IT Consulting</a></li>
+                          <li><a href="#">Implementation Consulting</a></li>
+                          <li><a href="#">IT Security and Cybersecurity</a></li>
+                          <li><a href="#">QA Consulting</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: Ideation and Design -->
+                          <img class="h-6 w-6" src="img/service-menu/sr7.svg"/>
+                          <h3 class="text-lg font-semibold">Ideation and Design</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#">UI/UX Consulting</a></li>
+                          <li><a href="#">UX/UI Design</a></li>
+                          <li><a href="#"> MVP Design</a></li>
+                        </ul>
+                      </article>
+
+                      <article >
+                        <div class="mb-4 flex items-center gap-3">
+                          <!-- Icon: Workforce Management -->
+                          <img class="h-6 w-6" src="img/service-menu/sr8.svg"/>
+                          <h3 class="text-lg font-semibold">Workforce Management</h3>
+                        </div>
+                        <ul class="check-list space-y-2 lg:leading-[26px]">
+                          <li><a href="#"> Staff Augmentation</a></li>
+                          <li><a href="#"> Dedicated Development Team </a></li>
+                        </ul>
+                      </article>
+                    </div>
+                    <div class="mt-10 rounded-2xl bg-[linear-gradient(90deg,#280712_0%,#4F0E14_26.13%,#1F144E_78.03%,#342171_100%)] p-1 shadow-lg">
+                      <div class="flex flex-col items-center justify-between gap-6 rounded-2xl bg-white/5 p-4 sm:flex-row">
+                        <p class="text-[16px] font-[500] text-white sm:text-left inline-flex items-center">
+                          <span>
+                            <img src="img/service-menu/foo.svg" class="inline-block mr-2 w-[50px] h-[50px]" />
+                          </span>
+                          <span>
+                            Need something specific? Share your requirements, and we will create a solution that fits your needs.
+                          </span>
+                        </p>
+                        <a href="#" class="inline-flex items-center justify-center rounded-full bg-[linear-gradient(94.4deg,#4574ED_23.99%,#1045CD_95.95%)] p-4 text-[16px] font-semibold text-[#fff] shadow ring-1 ring-inset ring-white/20  transition hover:shadow-md">
+                          Schedule Free Consultation
+                        </a>
+                      </div>
+                    </div>
+                  <!-- end service megamenu -->
+                  </div>
+                </div>
+              </li>
+              <li class="relative px-4 group for_super_hover">
+                <button class="cursor-default flex gap-2 items-center">Industries
+                  <span class="down_arrow">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 0.707031L5.70703 5.70703L0.707031 0.707031" stroke="#65686C" stroke-width="2"/></svg>
+                </span>
+                </button>
+                <div
+                  class="fixed left-[50%] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu container p-0"
+                >
+                  <div
+                    class="relative w-full bg-white shadow-xl top-0 rounded-xl supermenu__inner supermenu__inner_industry"
+                  >
+                    <div>
+      <div class="grid lg:grid-cols-4 service_spr_dropdown">
+        
+        <!-- Industry Columns -->
+        <div class="col-span-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-[50px]">
+          
+          <!-- Column 1 -->
+          <div >
+            <ul >
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+                <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                    <img src="./img/industries/ind1.svg" alt="">
+                  </span>
+                  <span class="font-medium">Transportation</span>
+                </a>
+              </li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+                <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                    <img src="./img/industries/ind2.svg" alt="">
+                  </span>
+                  <span class="font-medium">On-Demand</span>
+                </a>
+              </li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+                <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                    <img src="./img/industries/ind3.svg" alt="">
+                  </span>
+                  <span class="font-medium">Healthcare</span>
+                </a>
+              </li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+                <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                    <img src="./img/industries/ind4.svg" alt="">
+                  </span>
+                  <span class="font-medium">Social Networking</span>
+                </a>
+              </li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+                <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                    <img src="./img/industries/ind5.svg" alt="">
+                  </span>
+                  <span class="font-medium">Entertainment</span>
+                </a>
+              </li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+                <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                    <img src="./img/industries/ind6.svg" alt="">
+                  </span>
+                  <span class="font-medium">Travel</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div >
+            <ul >
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind7.svg" alt=""></span><span class="font-medium">Restaurant</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind-ecommerce.svg" alt=""></span><span class="font-medium">E-Commerce</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind-uber.svg" alt=""></span><span class="font-medium">Uber Like Platform</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind9.svg" alt=""></span><span class="font-medium">SaaS</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind10.svg" alt=""></span><span class="font-medium">Game App</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind11.svg" alt=""></span><span class="font-medium">FinTech</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div >
+            <ul >
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind12.svg" alt=""></span><span class="font-medium">Wellness</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind13.svg" alt=""></span><span class="font-medium">Real Estate</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind14.svg" alt=""></span><span class="font-medium">Education</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind15.svg" alt=""></span><span class="font-medium">Pet Care</span></a></li>
+              <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind16.svg" alt=""></span><span class="font-medium">Door to Door Sales</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Promo Card -->
+        <aside class="p-4 bg-[#0039CA1A]">
+          <div class="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-b from-sky-900 to-cyan-700 p-6 text-white ">
+            <span class="absolute w-full h-full object-cover left-0 top-0"><img src="./img/industries/ind-cta.webp" alt="" width="268px" height="364px" class="w-full h-full object-cover"></span>
+            <div class="relative z-10 flex h-full flex-col items-center justify-center text-center">
+              <div class="mb-4 inline-flex items-center gap-2 relative justify-center z-10">
+                <img src="./img/NewAgeSys_IT_W-2.svg" alt="" class="relative w-[calc(100%-40px)] pb-[20px]">
+                <span class="w-[80px] h-[1px] bg-[#fff] absolute bottom-0"></span>
+              </div>
+              <h3 class="text-[18px] font-semibold leading-snug !text-white uppercase">Ready to shine in the digital spotlight?</h3>
+              <p class="mt-3 text-[16px] text-[#fff] opacity-[.7] ">Supercharge your marketing strategy with NewAgeSysIT</p>
+              <a href="#" class="mt-6 inline-flex items-center justify-center rounded-full bg-[#FF5B14] px-5 py-3 text-sm font-semibold text-[#fff] shadow-sm transition hover:translate-y-0.5">Explore Services</a>
+            </div>
+            <div class="pointer-events-none absolute inset-0">
+              <div class="absolute left-1/2 top-1/3 -translate-x-1/2 h-40 w-40 rounded-full bg-white/20 blur-2xl"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="relative px-4 group for_super_hover">
+                <button class="cursor-default flex gap-2 items-center">Technologies
+                  <span class="down_arrow">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 0.707031L5.70703 5.70703L0.707031 0.707031" stroke="#65686C" stroke-width="2"/></svg>
+                </span>
+                </button>
+                <div
+                  class="fixed left-[50%] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu container p-0"
+                >
+                  <div
+                    class="relative w-full bg-white shadow-xl top-0 rounded-xl supermenu__inner supermenu__inner_tech"
+                  >
+                    <div class="relative z-10">
+                    <div>
+      <div class="flex flex-col lg:flex-row">
+
+        <!-- Left: Tech Stack Grid -->
+        <div class="flex-1 bg-[#fff] rounded-3xl p-[50px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+
+    <!-- iOS -->
+    <a href="#" class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/ios.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">iOS</p>
+    </a>
+
+    <!-- Android -->
+    <a href="#" class="flex items-center gap-4 bg-[#F8FFE4] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/android.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Android</p>
+    </a>
+
+    <!-- Mainframe -->
+    <a href="#" class="flex items-center gap-4 bg-[#F1EFFF] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/mainframe.svg" alt="">
+      </div>
+      <p class="text-slate-900 text-lg font-medium">Mainframe</p>
+    </a>
+
+    <!-- React Native -->
+    <a href="#" class="flex items-center gap-4 bg-[#E6F9FF] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/react-native.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">React Native</p>
+    </a>
+
+    <!-- Golang -->
+    <a href="#" class="flex items-center gap-4 bg-[#E5FFFD] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/golang.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Golang</p>
+    </a>
+
+    <!-- ColdFusion -->
+    <a href="#" class="flex items-center gap-4 bg-[#EBF3FF] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/coldfusion.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">ColdFusion</p>
+    </a>
+
+    <!-- PHP -->
+    <a href="#" class="flex items-center gap-4 bg-[#F0F3FF] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/php.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">PHP</p>
+    </a>
+
+    <!-- Ruby on Rails -->
+    <a href="#" class="flex items-center gap-4 bg-[#FFF7F7] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/ruby.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Ruby on Rails</p>
+    </a>
+
+    <!-- Flutter -->
+    <a href="#" class="flex items-center gap-4 bg-[#E3F8FF] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/flutter.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Flutter</p>
+    </a>
+
+    <!-- Python -->
+    <a href="#" class="flex items-center gap-4 bg-[#FAFAFA] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/python.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Python</p>
+    </a>
+
+    <!-- Node Js -->
+    <a href="#" class="flex items-center gap-4 bg-[#F0FFEE] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/nodejs.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Node Js</p>
+    </a>
+
+    <!-- Xamarin -->
+    <a href="#" class="flex items-center gap-4 bg-[#EDF8FF] rounded-2xl p-[12px]">
+      <div>
+        <img src="./img/tech-menu/xamarine.svg" alt="">
+      </div>
+      <p class="text-[#1B1D1E] text-[20px] font-[400]">Xamarin</p>
+    </a>
+
+  </div>
+
+        </div>
+
+        <!-- Right: Award Banner -->
+        <div class="w-full lg:w-80 xl:w-96 p-[20px] bg-[#0039CA1A]">
+          <div class="relative h-full min-h-[360px] flex flex-col items-center text-center overflow-hidden">
+            <img src="./img/tech-menu/award.webp" alt="" height="364px" class="h-[410px]">
+          </div>
+        </div>
+
+      </div>
+    </div> 
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="relative px-4 group for_super_hover">
+                <button class="cursor-default flex gap-2 items-center">Portfolio <span class="down_arrow">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 0.707031L5.70703 5.70703L0.707031 0.707031" stroke="#65686C" stroke-width="2"/></svg>
+                </span></button>
+                <div
+                  class="fixed left-[50%] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu container p-0"
+                >
+                  <div
+                    class="relative w-full bg-white shadow-xl top-0 rounded-xl supermenu__inner supermenu__inner_portfolio"
+                  >
+                    <div class="relative z-10">
+                    <div>
+      <div class="flex flex-col lg:flex-row ">
+
+        <!-- Left: Tech Stack Grid -->
+        <div class="flex-1 bg-[#fff] rounded-3xl p-[50px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+
+    <!-- whipflip -->
+    <a href="#" class="flex gap-4 rounded-2xl ">
+      <div>
+        <img src="./img/portfolio/pf1.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+      </div>
+      <div class="flex-1">
+        <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Whipflip</h3>
+        <p class="text-[#292929CC] text-[16px] font-[400]">WhipFlip, a Delaware-based digital automotive platform.</p>
+      </div>
+    </a>
+
+    <!-- local-il -->
+    <a href="#" class="flex gap-4 rounded-2xl ">
+      <div>
+        <img src="./img/portfolio/pf4.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+      </div>
+      <div class="flex-1">
+        <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Local IL</h3>
+        <p class="text-[#292929CC] text-[16px] font-[400]">Community-Focused Social App</p>
+      </div>
+    </a>
+    <!-- carup -->
+    <a href="#" class="flex gap-4 rounded-2xl ">
+      <div>
+        <img src="./img/portfolio/pf2.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+      </div>
+      <div class="flex-1">
+        <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Car-Up</h3>
+        <p class="text-[#292929CC] text-[16px] font-[400]">Auto Repair Booking and Maintenance Tracking Application</p>
+      </div>
+    </a>
+<!-- Eco-auto -->
+    <a href="#" class="flex gap-4 rounded-2xl ">
+      <div>
+        <img src="./img/portfolio/pf5.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+      </div>
+      <div class="flex-1">
+        <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Eco Auto School</h3>
+        <p class="text-[#292929CC] text-[16px] font-[400]">Driving School App to Streamline Operations</p>
+      </div>
+    </a>
+    <!-- town -->
+    <a href="#" class="flex gap-4 rounded-2xl ">
+      <div>
+        <img src="./img/portfolio/pf3.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+      </div>
+      <div class="flex-1">
+        <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Town Connect Network</h3>
+        <p class="text-[#292929CC] text-[16px] font-[400]">Shipment Tracking Application</p>
+      </div>
+    </a>
+
+    
+
+    
+
+    <!-- Prayer circle -->
+    <a href="#" class="flex gap-4 rounded-2xl ">
+      <div>
+        <img src="./img/portfolio/pf6.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+      </div>
+      <div class="flex-1">
+        <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Prayer Circle</h3>
+        <p class="text-[#292929CC] text-[16px] font-[400]">Church Management Platform.</p>
+      </div>
+    </a>
+
+  </div>
+
+        </div>
+
+        <!-- Right: Award Banner -->
+        <div class="w-full lg:w-80 xl:w-96 p-[20px] bg-[#0039CA1A]">
+          <div class="relative h-full min-h-[360px] flex flex-col items-center text-center overflow-hidden bg-[#000000] p-0 rounded-[16px] pb-[30px]">
+            <img src="./img/portfolio/portfolio.webp" alt="" class="h-[368px] object-cover w-full">
+          </div>
+        </div>
+
+      </div>
+    </div> 
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="relative px-4 group for_super_hover">
+                <button class="cursor-default flex gap-2 items-center">Hire <span class="down_arrow">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 0.707031L5.70703 5.70703L0.707031 0.707031" stroke="#65686C" stroke-width="2"/></svg>
+                </span></button>
+                <div
+                  class="fixed left-[50%] -translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 z-50 min-w-full lg:min-w-[900px] xl:min-w-[1200px] transform supermenu container p-0"
+                >
+                  <div
+                    class="relative w-full bg-white shadow-xl top-0 rounded-xl supermenu__inner"
+                  >
+                    <div class="relative z-10">
+                    <div>
+      <div class="flex flex-col lg:flex-row">
+
+        <!-- Left: Tech Stack Grid -->
+        <div class="flex-1 bg-[#fff] rounded-3xl p-[50px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Left column: Technologies -->
+        <div>
+          <div class="flex gap-2 mb-4">
+            <!-- Icon -->
+            <span>
+              <img src="./img/hire/tech.svg" alt="">
+            </span>
+            <h3 class="text-[#0B1A32] font-extrabold tracking-wide">TECHNOLOGIES</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Mobile App Developers</a></li>
+            <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Front-End Developers</a></li>
+            <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Web Developers</a></li>
+            <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire React Developers</a></li>
+            <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Golang Developers</a></li>
+          </ul>
+        </div>
+
+        <!-- Right column: two groups stacked -->
+        <div class="grid grid-cols-1 gap-10">
+          <!-- Development & Engineering -->
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <!-- Icon -->
+              <span>
+              <img src="./img/hire/dev.svg" alt="">
+            </span>
+              <h3 class="text-[#0B1A32] font-extrabold tracking-wide">DEVELOPMENT &amp; ENGINEERING</h3>
+            </div>
+
+            <ul class="space-y-4">
+              <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Software Engineers / Developers</a></li>
+            </ul>
+          </div>
+
+          <!-- Others -->
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <!-- Icon -->
+              <span>
+              <img src="./img/hire/other.svg" alt="">
+            </span>
+              <h3 class="text-[#0B1A32] font-extrabold tracking-wide">OTHERS</h3>
+            </div>
+
+            <ul class="space-y-4">
+              <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Dedicated Developers</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+        </div>
+
+        <!-- Right: Award Banner -->
+        <div class="w-full lg:w-80 xl:w-96 p-[20px] bg-[#0039CA1A]">
+          <div class="relative h-full flex flex-col items-center text-center overflow-hidden">
+            <img src="./img/hire/hire-win1.webp" alt="" class="lazy-loaded object-cover rounded-[16px] h-[325px]">
+          </div>
+        </div>
+      </div>
+    </div> 
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="relative px-4 group">
+                <a href="#" class="cursor-default">Blog </a>
+              </li>
+              <li class="relative px-4 group">
+                <a href="#" class="cursor-default">Contact </a>
+              </li>
+            </ul>
+          </nav>
+        <div class="flex items-center space-x-4 min-1240px:hidden md:space-x-0">
+          <button class="py-2 px-3 rounded uppercase">
+            <img class="max-w-6" src="./img/call.png" alt="call" loading="lazy" />
+          </button>
+          <button id="mobile-menu-button" class="xl:hidden">
+            <svg
+              class="w-7 h-7 text-white fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+        </div>
+        </div>
+      </div>
+
+      <!-- mobile-menu start-->
+      <div id="mobile-menu" class="hidden-view w-full min-h-screen min-1240px:hidden">
+        <nav class="p-4 container mx-auto pb-[100px]">
+          <ul
+            class="flex flex-col items-start justify-start w-full gap-2 font-semibold"
+          >
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Services
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full p-4  bg-white rounded-lg dropdown">
+                <div class="relative z-10 pb-5">
+                  <div>
+                   <div class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh] service_spr_dropdown">
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <img class="h-6 w-6" src="img/service-menu/sr1.svg">
+                        <h3 class="text-lg font-semibold">Software Development</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">Custom Software Development</a></li>
+                        <li><a href="#">Software Product Development</a></li>
+                        <li><a href="#">SaaS Development</a></li>
+                        <li><a href="#">Web Application Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: DevOps -->
+                        <img class="h-6 w-6" src="img/service-menu/sr2.svg">
+                        <h3 class="text-lg font-semibold">DevOps</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">DevOps Consulting Services</a></li>
+                        <li><a href="#">DevOps CI/CD Services</a></li>
+                        <li><a href="#">DevOps Development Services</a></li>
+                        <li><a href="#">DevOps Implementation Services</a></li>
+                        <li><a href="#">DevSecOps Services</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: Startup Services -->
+                        <img class="h-6 w-6" src="img/service-menu/sr3.svg">
+                        <h3 class="text-lg font-semibold">Startup Services</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">Minimal Viable Product (MVP)</a></li>
+                        <li><a href="#">Product Development</a></li>
+                        <li><a href="#">Start-up Advisory / Consulting</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: Cloud Services -->
+                        <img class="h-6 w-6" src="img/service-menu/sr4.svg">
+                        <h3 class="text-lg font-semibold">Cloud Services</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">Cloud Managed Services</a></li>
+                        <li><a href="#">Cloud Consulting</a></li>
+                        <li><a href="#">AWS</a></li>
+                        <li><a href="#">Cloud Application Development</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: Emerging Technologies -->
+                        <img class="h-6 w-6" src="img/service-menu/sr5.svg">
+                        <h3 class="text-lg font-semibold">Emerging Technologies</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">AI/ML</a></li>
+                        <li><a href="#">AR/VR</a></li>
+                        <li><a href="#">Data Science and Analytics</a></li>
+                        <li><a href="#">Blockchain</a></li>
+                        <li><a href="#">Robotic Process Automation</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: Consulting Services -->
+                        <img class="h-6 w-6" src="img/service-menu/sr6.svg">
+                        <h3 class="text-lg font-semibold">Consulting Services</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">Digital Transformation</a></li>
+                        <li><a href="#"> IT Consulting</a></li>
+                        <li><a href="#">Implementation Consulting</a></li>
+                        <li><a href="#">IT Security and Cybersecurity</a></li>
+                        <li><a href="#">QA Consulting</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: Ideation and Design -->
+                        <img class="h-6 w-6" src="img/service-menu/sr7.svg">
+                        <h3 class="text-lg font-semibold">Ideation and Design</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#">UI/UX Consulting</a></li>
+                        <li><a href="#">UX/UI Design</a></li>
+                        <li><a href="#"> MVP Design</a></li>
+                      </ul>
+                    </article>
+
+                    <article>
+                      <div class="mb-4 flex items-center gap-3">
+                        <!-- Icon: Workforce Management -->
+                        <img class="h-6 w-6" src="img/service-menu/sr8.svg">
+                        <h3 class="text-lg font-semibold">Workforce Management</h3>
+                      </div>
+                      <ul class="check-list space-y-2 lg:leading-[26px]">
+                        <li><a href="#"> Staff Augmentation</a></li>
+                        <li><a href="#"> Dedicated Development Team </a></li>
+                      </ul>
+                    </article>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Industries
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-0">
+                <div class="relative z-10 overflow-y-auto h-[45vh] px-5 py-5">
+                  <div class="grid grid-cols-1 service_spr_dropdown">
+        
+        <!-- Column 1 -->
+        <div>
+          <ul >
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+              <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                  <img src="./img/industries/ind1.svg" alt="">
+                </span>
+                <span class="font-medium">Transportation</span>
+              </a>
+            </li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+              <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                  <img src="./img/industries/ind2.svg" alt="">
+                </span>
+                <span class="font-medium">On-Demand</span>
+              </a>
+            </li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+              <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                  <img src="./img/industries/ind3.svg" alt="">
+                </span>
+                <span class="font-medium">Healthcare</span>
+              </a>
+            </li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+              <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                  <img src="./img/industries/ind4.svg" alt="">
+                </span>
+                <span class="font-medium">Social Networking</span>
+              </a>
+            </li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+              <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                  <img src="./img/industries/ind5.svg" alt="">
+                </span>
+                <span class="font-medium">Entertainment</span>
+              </a>
+            </li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]">
+              <a href="#" class="flex items-center gap-3 hover:text-sky-600 transition">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
+                  <img alt="" class="lazy-loaded" loading="lazy" src="./img/industries/ind6.svg">
+                </span>
+                <span class="font-medium">Travel</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <ul >
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind7.svg" alt=""></span><span class="font-medium">Restaurant</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind-ecommerce.svg" alt=""></span><span class="font-medium">E-Commerce</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind-uber.svg" alt=""></span><span class="font-medium">Uber Like Platform</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind9.svg" alt=""></span><span class="font-medium">SaaS</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind10.svg" alt=""></span><span class="font-medium">Game App</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img alt="" class="lazy-loaded" loading="lazy" src="./img/industries/ind11.svg"></span><span class="font-medium">FinTech</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <ul >
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind12.svg" alt=""></span><span class="font-medium">Wellness</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind13.svg" alt=""></span><span class="font-medium">Real Estate</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind14.svg" alt=""></span><span class="font-medium">Education</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind15.svg" alt=""></span><span class="font-medium">Pet Care</span></a></li>
+            <li class="py-3 border-b border-dashed border-[#e2e8f0]"><a href="#" class="flex items-center gap-3 hover:text-sky-600 transition"><span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200"><img src="./img/industries/ind16.svg" alt=""></span><span class="font-medium">Door to Door Sales</span></a></li>
+          </ul>
+        </div>
+      </div>
+                  
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Technologies
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-0">
+                <div class="relative z-10 overflow-y-auto h-[45vh] px-5 py-5">
+                  <div class="grid grid-cols-1 gap-4">
+
+          <!-- iOS -->
+          <div class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/ios.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">iOS</p>
+          </div>
+
+          <!-- Android -->
+          <div class="flex items-center gap-4 bg-[#F8FFE4] rounded-2xl p-[12px]">
+           <div>
+              <img src="./img/tech-menu/android.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Android</p>
+          </div>
+
+          <!-- Mainframe -->
+          <div class="flex items-center gap-4 bg-[#F1EFFF] p-[12px] rounded-2xl ">
+            <div>
+              <img src="./img/tech-menu/mainframe.svg" alt="">
+            </div>
+            <p class="text-slate-900 text-lg font-medium">Mainframe</p>
+          </div>
+
+          <!-- React Native -->
+          <div class="flex items-center gap-4 bg-[#E6F9FF] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/react-native.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">React Native</p>
+          </div>
+
+          <!-- Golang -->
+          <div class="flex items-center gap-4 bg-[#E5FFFD] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/golang.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Golang</p>
+          </div>
+
+          <!-- ColdFusion -->
+          <div class="flex items-center gap-4 bg-[#EBF3FF] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/coldfusion.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">ColdFusion</p>
+          </div>
+
+          <!-- PHP -->
+          <div class="flex items-center gap-4 bg-[#F0F3FF] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/php.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">PHP</p>
+          </div>
+
+          <!-- Ruby on Rails -->
+          <div class="flex items-center gap-4 bg-[#FFF7F7] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/ruby.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Ruby on Rails</p>
+          </div>
+
+          <!-- Flutter -->
+          <div class="flex items-center gap-4 bg-[#E3F8FF] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/tech-menu/flutter.svg" alt="">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Flutter</p>
+          </div>
+
+          <!-- Python -->
+          <div class="flex items-center gap-4 bg-[#FAFAFA] rounded-2xl p-[12px]">
+            <div>
+              <img alt="" class="lazy-loaded" loading="lazy" src="./img/tech-menu/python.svg">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Python</p>
+          </div>
+
+          <!-- Node Js -->
+          <div class="flex items-center gap-4 bg-[#F0FFEE] rounded-2xl p-[12px]">
+            <div>
+              <img alt="" class="lazy-loaded" loading="lazy" src="./img/tech-menu/nodejs.svg">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Node Js</p>
+          </div>
+
+          <!-- Xamarin -->
+          <div class="flex items-center gap-4 bg-[#EDF8FF] rounded-2xl p-[12px]">
+            <div>
+              <img alt="" class="lazy-loaded" loading="lazy" src="./img/tech-menu/xamarine.svg">
+            </div>
+            <p class="text-[#1B1D1E] text-[20px] font-[400]">Xamarin</p>
+          </div>
+        </div>
+                </div>
+              </div>
+            </li>
+<!-- Porfolio -->
+ <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Portfolio
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-0">
+                <div class="relative z-10 overflow-y-auto h-[45vh] px-5 py-5">
+                  <div>
+<div class="grid grid-cols-1 gap-4">
+
+          <!-- Whipflip -->
+          <div class="flex gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/portfolio/pf1.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Whipflip</h3>
+              <p class="text-[#292929CC] text-[16px] font-[400]">WhipFlip, a Delaware-based digital automotive platform.</p>
+            </div>
+          </div>
+
+           <!-- local-il -->
+          <div class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/portfolio/pf4.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px] lazy-loaded">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Local IL</h3>
+              <p class="text-[#292929CC] text-[16px] font-[400]">Community-Focused Social App</p>
+            </div>
+          </div>
+          <!-- carup -->
+          <div class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/portfolio/pf2.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px]">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Car-Up</h3>
+              <p class="text-[#292929CC] text-[16px] font-[400]">Auto Repair Booking and Maintenance Tracking Application</p>
+            </div>
+          </div>
+
+          <!-- Eco auto -->
+          <div class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/portfolio/pf5.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px] lazy-loaded">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Eco Auto School</h3>
+              <p class="text-[#292929CC] text-[16px] font-[400]">Driving School App to Streamline Operations</p>
+            </div>
+          </div>
+          <!-- townconnect -->
+          <div class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/portfolio/pf3.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px] lazy-loaded">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Town Connect Network</h3>
+              <p class="text-[#292929CC] text-[16px] font-[400]">Shipment Tracking Application</p>
+            </div>
+          </div>
+
+         
+
+          
+
+          <!-- Prayer -->
+          <div class="flex items-center gap-4 bg-[#F8F8F8] rounded-2xl p-[12px]">
+            <div>
+              <img src="./img/portfolio/pf6.webp" alt="" class="w-[80px] h-[80px] object-cover rounded-[12px] lazy-loaded">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[#292929] mb-[10px] font-[600] text-[18px]">Prayer Circle</h3>
+              <p class="text-[#292929CC] text-[16px] font-[400]">Church Management Platform.</p>
+            </div>
+          </div>
+        </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+ <!-- end -->
+  <!-- Hire -->
+ <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Hire
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-0">
+                <div class="relative z-10 overflow-y-auto h-[45vh] px-5 py-5">
+                  <div>
+<div class="grid grid-cols-1 gap-4">
+
+      <!-- Left column: Technologies -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <!-- Icon -->
+          <span>
+            <img src="./img/hire/tech.svg" alt="">
+          </span>
+          <h3 class="text-[#0B1A32] font-extrabold tracking-wide">TECHNOLOGIES</h3>
+        </div>
+
+        <ul class="space-y-4">
+          <li><a href="#" class="text-[#0B1A32] transition">Hire Mobile App Developers</a></li>
+          <li><a href="#" class="text-[#0B1A32] transition">Hire Front-End Developers</a></li>
+          <li><a href="#" class="text-[#0B1A32] transition">Hire Web Developers</a></li>
+          <li><a href="#" class="text-[#0B1A32] transition">Hire React Developers</a></li>
+          <li><a href="#" class="text-[#0B1A32] transition">Hire Golang Developers</a></li>
+        </ul>
+      </div>
+
+      <!-- Right column: two groups stacked -->
+      <div class="grid grid-cols-1 gap-6 mt-4">
+        <!-- Development & Engineering -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <!-- Icon -->
+            <span>
+            <img src="./img/hire/dev.svg" alt="">
+          </span>
+            <h3 class="text-[#0B1A32] font-extrabold tracking-wide">DEVELOPMENT &amp; ENGINEERING</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li><a href="#" class="text-[#0B1A32]  transition">Hire Software Engineers / Developers</a></li>
+          </ul>
+        </div>
+
+        <!-- Others -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <!-- Icon -->
+            <span>
+            <img src="./img/hire/other.svg" alt="">
+          </span>
+            <h3 class="text-[#0B1A32] font-extrabold tracking-wide">OTHERS</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li><a href="#" class="text-[#0B1A32] hover:text-sky-600 transition">Hire Dedicated Developers</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+ <!-- end -->
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Blog
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none rounded-xl  dropdown-toggle active justify-between"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile-menu end-->
+    </header>
+
+    <section
+      id="hero-banner"
+      class="relative flex md:h-screen flex-col items-center justify-center overflow-hidden before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(180deg,#090D21_0%,#020205_100%)] pt-[90px] lg:pt-[0px] max-768px:h-[calc(100vh-30px)]"
+    >
+      <div class="container mx-auto w-full max-w-[1456px] px-4">      
+
+        <div class="w-full text-center pb-[40px] relative z-[9]">
+          <h1
+            class=" text-[34px] md:text-[42px] lg:text-[60px] font-bold lg:leading-[54px] leading-normal inline-block"
+          >
+            <span class="bg-[linear-gradient(180deg,#989AA4_35.07%,#F5FAFE_75.35%)] bg-clip-text text-transparent">Proven Results</span>
+          </h1>
+          <p
+            class="lg:text-[40px] text-[30px] bg-[linear-gradient(180deg,#989AA4_35.07%,#F5FAFE_75.35%)] bg-clip-text text-transparent"
+          >
+            through our Client words
+          </p>
+
+          <!-- Button -->
+          <div
+            class="text-center flex justify-center mt-[30px] bnr-btn"
+          >
+            <button class="relative group p-[1px] rounded-full text-white font-[500] lg:font-semibold text-[16px] md:text-[18px] leading-[25px] cursor-pointer get-free-btn duration-300 overflow-hidden">
+            <span class="absolute inset-0 rounded-full p-[2px] bg-gradient-to-b from-[#141b3b00] to-[#D5DBFF]"></span>
+            <span class="relative  items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left hidden md:flex">
+              Let's Explore Partnership Opportunity
+              <img src="./images/arrow-up-right.svg" alt="arrow-right" class="!w-6 !h-6">
+            </span>
+            <span class="relative  items-center bg-[#4361EE] rounded-full px-6 md:px-8 py-4 md:py-5 gap-2.5 text-left flex md:hidden">
+              Partnership Opportunity
+              <img src="./images/arrow-up-right.svg" alt="arrow-right" class="!w-6 !h-6">
+            </span>
+          </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop hero image -->
+  <img
+    src="./img/banner-testi1.webp"
+    srcset="
+      ./img/banner-testi1.webp 1280w,
+      ./img/banner-testi1.webp 1920w,
+      ./img/banner-testi1.webp 2560w
+    "
+    sizes="(min-width: 1280px) 100vw, 1920px"
+    alt="NewAgeSysIT Hero Banner"
+    width="1920"
+    height="1080"
+    fetchpriority="high"
+    decoding="async"
+    class="w-full h-full object-cover absolute max-767px:object-[center_-155px] object-bottom min-1680px:object-[center_90px] hidden md:block"
+    style="aspect-ratio: 16/9;"
+  />
+
+  <!-- Mobile hero image -->
+  <img
+    src="./img/bannermob-testi.webp"
+    sizes="(max-width: 767px) 100vw, 100vw"
+    alt="NewAgeSysIT Hero Banner"
+    width="1080"
+    height="1080"
+    fetchpriority="high"
+    decoding="async"
+    class="w-full h-full object-cover absolute object-center min-1680px:object-[center_90px] block md:hidden"
+    style="aspect-ratio: 1/1;"
+  />
+
+      <!-- Awards Bar -->
+      <div
+        class="recognition-section-ppc absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
+      >
+        <div class="container mx-auto w-full max-w-[1456px] px-4">
+          <div
+            class="flex flex-col items-center justify-between gap-x-10 gap-y-4 xl:flex-row text-white xl:text-left text-center"
+          >
+            <p
+              class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
+            >
+              Recognized for building the best solutions for startups,
+              businesses, and enterprises
+            </p>
+            <div
+              class="logo-slider"
+            >
+              <ul
+                class="logo-track"
+              >
+                <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <!-- repeat -->
+                 <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
+                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
+                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
+                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="hidden absolute w-full left-0 z-[9] max-768px:flex justify-center max-768px:bottom-[-10px]">
+          <img src="./img/glow.webp" alt="" class="w-auto">
+        </span>
+    </section>
+    
+<section class="relative py-14 md:py-20">
+  <div class="mx-auto container">
+    <div>
+      <h2 class="sechd text-white font-[400] mt-0 md:mt-[30px] md:mb-[20px] mb-2 text-[38px] leading-[56px] xl:text-[40px] xl:leading-[56px] max-[1550px]:text-[35px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px] text-center">
+        Here’s What Industry Leaders Talk About The Results <br/>
+        They Achieved With Us
+      </h2>
+      <p class="text-[#fff] opacity-[.5] md:w-[70%] text-center mx-auto text-[18px] leading-[28px] mb-0">
+        Learn why entrepreneurs and businesses trust NewAgeSys for the best solutions that
+      </br> make their customer journeys refined, reliable, and efficient. 
+      </p>
+    </div>
+
+    <div class="mt-10 md:mt-14 columns-1 sm:columns-2 lg:columns-3 xl:columns-4 [column-gap:15px]">
+
+      <!-- Card 1 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]">            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/anne.webp" alt="Anne Walsh" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/anne.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Anne Walsh</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Palliative W Pro</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                    Developing my Palliative Wound Pro medical app with NewAgeSysIT was seamless and efficient. The team was professional, knowledgeable, and highly responsive. I strongly recommend NewAgeSysIT for exceptional results and a smooth, high-quality development experience!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automotive</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+
+      
+
+      <!-- Card 2-->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/ibrahim.webp" alt="Ibrahim Khaddash" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/ibrahim.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Ibrahim Khaddash</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">ShowCase Talks Inc</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                    NewAgeSysIT transformed my idea for ShowCase Talks into a fully realized app. Their team was organized, communicative, and supportive throughout, ensuring every detail met expectations. They delivered quality results on time and made the entire process simple and transparent. I highly recommend NewAgeSysIT for their commitment, creativity, and professionalism in app development.
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+
+      <!-- Card 3-->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/kimberly.webp" alt="Kimberly Beam" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/kimberly.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Kimberly Beam</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Zen For Teens</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                    Working with NewAgeSysIT on the Zen For Teens app was an incredible experience. They listened, embraced every idea, and made the process effortless. Their flexible, supportive team ensured everything ran smoothly from start to finish!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+
+     <!-- Card 4 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/marino.webp" alt="Marino Trejos" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/marino.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Marino Trejos</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">WUW</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                    NewAgeSysIT developed our WUW app beyond expectations. Their team listened carefully, executed ideas perfectly, and tackled challenges effortlessly. We truly appreciate their professionalism and creativity—NewAgeSysIT is our top recommendation for app development!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+
+
+      <!-- Card 5 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/robselerno.webp" alt="Rob Salerno" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/robselerno.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Rob Salerno</p>
+                <p class="text-[14px] text-[#65686C]">DIRECTOR</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">CliquePrize App</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                    NewAgeSysIT was highly professional, cost-effective, and flexible throughout the development of our complex mobile app. Their team delivered excellent results on time, adapted quickly to our evolving requirements, and provided outstanding support. I highly recommend NewAgeSysIT to anyone looking to build a mobile app.
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Card 6 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/teresa.webp" alt="Teresa Kent" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/teresa.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Teresa Kent</p>
+                <p class="text-[14px] text-[#65686C]">DIRECTOR</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">CMTA</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                  The team at NewAgeSysIT has been phenomenal—their dedication and support were key to building our CMTA portal. They respond quickly, deliver fast, and consistently exceed expectations. We look forward to continuing this great partnership!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Card 7 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/chris.webp" alt="Chris O'Rorke" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+            <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/chris.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Chris O'Rorke</p>
+                <p class="text-[14px] text-[#65686C]">DIRECTOR</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Guaranteed Tip Sheet </p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                  NewAgeSysIT built my Guaranteed Tip Sheet app, and the entire process was outstanding. Their agile approach, milestone system, and constant communication made development smooth. They listened to every idea, stuck to promised timeframes, and delivered a fantastic web and mobile app—both accepted on the first try by app stores! Highly recommended for anyone who wants reliability and great results.
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Video card 1 -->
+      <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
+        <div class="video_card">
+          <div class="video_card_inner">
+              <div class="video_poster"> 
+                <img
+                    alt="tlv1"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv1.webp"
+                  />
+              </div>
+              <video class="card_vid" muted="muted" autoplay loop>
+                <source src="./video/t1.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
+              <div class="muteunmute"> <img src="./img/unmute.svg" class="mute" alt=""> <img src="./img/mute.svg" class="unmute" alt=""></div>
+              <div class="btm_overlay"></div>
+          </div>
+        </div>
+      </article>
+      <!-- card 8 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/larry.webp" alt="Chris O'Rorke" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/larry.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Larry Seibel</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Car-Up</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                  NewAgeSysIT developed our Car-Up app with impressive design, technical expertise, and reliable support. Their professional team understood our vision, handled every phase with precision, and continues to provide excellent post-launch assistance. Highly recommended for app development!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Video card 2 -->
+      <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
+        <div class="video_card">
+          <div class="video_card_inner">
+              <div class="video_poster"> 
+                <img
+                    alt="tlv1"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv2.webp"
+                  />
+              </div>
+              <video class="card_vid" muted="muted" autoplay loop>
+                <source src="./video/t2.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
+              <div class="muteunmute"> <img src="./img/unmute.svg" class="mute" alt=""> <img src="./img/mute.svg" class="unmute" alt=""></div>
+              <div class="btm_overlay"></div>
+          </div>
+        </div>
+      </article>
+      <!-- card 9 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/timothy.webp" alt="Timothy Becker" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/timothy.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Timothy Becker</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Parky Pigeon</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                  NewAgeSysIT transformed my children’s book, Parky Pigeon, into a delightful interactive app. Their professional and responsive team guided us every step of the way, ensuring the app was executed perfectly. Parky Pigeon fans are grateful—highly recommend NewAgeSysIT to anyone seeking quality app development!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- card 10 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/myron.webp" alt="Myron Bowlin" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/myron.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Myron Bowlin</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">CFT</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                 NewAgeSysIT developed and continues to support our CFT app with exceptional skill and dedication. Their team’s expertise, clear communication, and reliability made the entire process smooth and efficient. They delivered beyond expectations, ensuring top-quality performance and ongoing support. I highly recommend NewAgeSysIT for any app or platform development project!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Video card 3 -->
+      <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
+        <div class="video_card">
+          <div class="video_card_inner">
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv3.webp" alt="" class="w-full h-full"> -->
+              
+              <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv3.webp"
+                  /></div>
+              <video class="card_vid" muted="muted" autoplay loop>
+                <source src="./video/t3.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
+              <div class="muteunmute"> <img src="./img/unmute.svg" class="mute" alt=""> <img src="./img/mute.svg" class="unmute" alt=""></div>
+              <div class="btm_overlay"></div>
+          </div>
+        </div>
+      </article>
+      <!-- card 11 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/imankwaja.webp" alt="Iman Khawaja" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/imankwaja.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Iman Khawaja</p>
+                <p class="text-[14px] text-[#65686C]">DIRECTOR</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Quran Easy</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                 NewAgeSysIT turned my vision for the Quran Easy app into reality with exceptional creativity, expertise, and support. They anticipated challenges, ensured a smooth process, and delivered outstanding results. I’ve trusted them for multiple successful projects!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- card 12 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/luz.webp" alt="Luz Angela Zidziunas" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/luz.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Luz Angela Zidziunas</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">AwareMe</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                 NewAgeSysIT turned my AwareMe app and website vision into reality with exceptional creativity and precision. Their team was organized, reliable, and proactive, improving my ideas and ensuring every milestone was met on time. From design to launch, they made the process smooth and collaborative. I highly recommend NewAgeSysIT for outstanding service and results!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Video card 4 -->
+      <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
+        <div class="video_card">
+          <div class="video_card_inner">
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv4.webp" alt="" class="w-full h-full"> -->
+                 <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv4.webp"
+                  />
+              </div>
+              <video class="card_vid" muted="muted" autoplay loop>
+                <source src="./video/t4.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
+              <div class="muteunmute"> <img src="./img/unmute.svg" class="mute" alt=""> <img src="./img/mute.svg" class="unmute" alt=""></div>
+              <div class="btm_overlay"></div>
+          </div>
+        </div>
+      </article>
+      <!-- card 13 -->
+      <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/roger.webp" alt="Roger J Clappe" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/roger.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Roger J Clappe</p>
+                <p class="text-[14px] text-[#65686C]">DIRECTOR</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Whip Flip Inc</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                 After evaluating several teams for our complex WhipFlip Inc platform, we chose NewAgeSysIT—and it was the best decision. Their technical expertise, responsiveness, and deep understanding of our vision made the process seamless. They consistently deliver top-quality results!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- card 14 -->
+       <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/tracey.webp" alt="Tracey Worthen" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/tracey.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Tracey Worthen</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">EasyVacay</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                 NewAgeSysIT transformed my EasyVacayPlanner app and website idea into a successful reality. Their innovative and professional team kept me informed at every stage, ensuring a smooth and transparent process. I’m extremely happy with the final product and appreciate their dedication, creativity, and patience. I highly recommend NewAgeSysIT for exceptional development services!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- card 15 -->
+       <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/david.webp" alt="David Chabukashvili" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/david.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">David Chabukashvili</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Lcard App</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                 NewAgeSysIT built and maintained our LCard app, web platform, and corporate site with exceptional quality. Their skilled team handled every challenge efficiently, met deadlines, and exceeded expectations. I look forward to continuing our partnership with NewAgeSysIT!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- card 16 -->
+       <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/jamar.webp" alt="Jamar Price" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/jamar.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Jamar Price</p>
+                <p class="text-[14px] text-[#65686C]">DIRECTOR</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Whistle App</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                NewAgeSysIT built my Whistle App exactly as I envisioned, welcoming every idea and change with enthusiasm. Their courteous, dedicated team ensured a smooth experience. I highly recommend NewAgeSysIT for delivering outstanding results and genuine client care!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- Video card 5 -->
+      <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
+        <div class="video_card">
+          <div class="video_card_inner">
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv5.webp" alt="" class="w-full h-full"> -->
+                <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv5.webp"
+                  />
+              </div>
+              <video class="card_vid" muted="muted" autoplay loop>
+                <source src="./video/t5.webm" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
+              <div class="muteunmute"> <img src="./img/unmute.svg" class="mute" alt=""> <img src="./img/mute.svg" class="unmute" alt=""></div>
+              <div class="btm_overlay"></div>
+          </div>
+        </div>
+      </article>
+      <!-- card 16 -->
+       <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/robevans.webp" alt="Rob Evans" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/robevans.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Rob Evans</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">Donut Man app</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+                NewAgeSysIT built and maintains my Donut Man app, helping me connect with my audience seamlessly. Their team delivered excellent iOS and Android apps, offering outstanding support and adaptability. I highly recommend NewAgeSysIT for going above and beyond expectations!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>
+      <!-- card 17 -->
+       <article class="rounded-[40px]  relative testimonial-item animation-element">
+        <a href="#" class="h-[50%] left-0 text-center text-white absolute z-0 w-full p-[10px] top-0 rounded-[40px] bg-[#4361EE] inline-flex justify-center gap-2">
+          <span>View full video</span>
+          <span>            
+            <img src="./img/redirection-arrow.svg" alt="">
+          </span>
+        </a>
+        <div class="glass ring-1 ring-white/10 rounded-[40px]  bg-[#D9DFFC] w-full inline-block mb-[15px] [break-inside:avoid] rounded-bl-[110px]"> 
+            
+            <div class="mt-4 px-5 md:px-6">
+              <div class="flex items-center gap-3 border-b border-[#6981F1] pb-[15px] mb-[15px]">
+            <!-- <img src="./img/testimonial/myron.webp" alt="Sterling Cannon" class="h-[70px] w-[70px] rounded-full object-cover" /> -->
+             <img
+              loading="lazy"
+              width="70"
+              height="70"
+              decoding="async"
+              data-nimg="1"
+              class="rounded-full object-cover"
+              style="color: transparent"
+              src="./img/testimonial/myron.webp"
+            />
+            <div>
+                <p class="text-[18px] font-semibold">Sterling Cannon</p>
+                <p class="text-[14px] text-[#65686C]">CEO</p>
+            </div>
+            </div>
+                <p class="text-[23px] tracking-wide text-[#1B275F] font-[600] font-inter">sirics.com</p>
+                <p class="mt-2 text-[16px] leading-6 text-[#1B1D1E]">
+               NewAgeSysIT brought my Sirics app vision to life, exceeding expectations with exceptional design, communication, and support. Their professional team handled every change smoothly, delivered on time, and made the entire process effortless. Highly recommended!
+                </p>
+            </div>
+           <div class="flex flex-wrap">
+            <div class="w-[100px] relative h-[100px]">
+              <img src="./img/card-left.png" alt="" class="absolute bottom-[1px] left-[1px]">
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 flex-1 items-center">
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">Automobile</span>
+                <span class="px-2.5 py-1 text-xs rounded-full bg-white ring-1 ring-white/10 text-[12px]">USA</span>
+            </div>
+           </div> 
+        </div>
+      </article>      
+      <!-- Video Testimonial (play overlay) -->
+      <article class="relative overflow-hidden glass ring-1 ring-white/10 rounded-[40px] w-full inline-block mb-[15px] [break-inside:avoid] h-[450px] testimonial-item animation-element">
+        <div class="video_card">
+          <div class="video_card_inner">
+              <div class="video_poster"> 
+                <!-- <img src="./img/tlv6.webp" alt="" class="w-full h-full"> -->
+                 <img
+                    alt="tlv"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="1"
+                    class=" mb-4 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="./img/tlv6.webp"
+                  />
+              </div>
+              <video class="card_vid" muted="muted" autoplay loop>
+                <source src="./video/t6.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video_play"> <img src="./img/video-play.svg" alt="Play Button" class="w-[70px] h-[70px]"></div>
+              <div class="muteunmute"> <img src="./img/unmute.svg" class="mute" alt=""> <img src="./img/mute.svg" class="unmute" alt=""></div>
+              <div class="btm_overlay"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <section
+      class="trusted-providers horizontal-scrolling flex flex-col gap-5 py-[50px] lg:py-[100px] bg-[#0D0D0D]"
+    >
+      <div class="container mx-auto px-4">
+        <div class="sec-head">
+          <h2
+            class="sechd text-center text-white font-normal mt-0 md:mt-[30px] text-[38px] leading-[56px] xl:text-[40px] xl:leading-[56px] max-[1550px]:text-[40px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
+          >
+            Discover How Our Partnerships Have <br class="hidden lg:block"/>
+            Revolutionized the Client Experiences
+          </h2>
+          <div class="text-center mt-5">
+            <a
+              href="#"
+              class="bg-[#4361EE] inline-block mx-auto text-center text-white text-[18px] font-semibold px-[30px] py-[15px] rounded-[999px]"
+              >Talk to Our Experts Today</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="anim-right md:pt-[80px] pt-[40px]">
+            <div class="marquee-right">
+              <div
+                class="horizontal-right-scroll flex gap-[0px] border-y-1 border-[#2b2b2b] justify-center max-992px:gap-[0px] max-768px:flex-col max-768px:gap-0 max-768px:[&>.m-item:not(:last-child)]:border-b-2 max-768px:[&>.m-item:not(:last-child)]:border-[#2b2b2b] max-1024px:flex-wrap"
+              >
+                <!-- Item 1 -->
+
+                <div
+                  class="m-item p-5 border-r border-l border-[#2b2b2b] bg-transparent flex flex-col items-center justify-center h-auto w-[220px] flex-none max-1024px:first-line:p-[10px] max-1024px:[&:not(:last-child)]:border-b-2 max-1024px:[&:not(:last-child)]:border-[#2b2b2b] max-1024px:py-[15px] max-1024px:w-full"
+                >
+                  <div class="m-item--inside">
+                    <ul class="m-item-ul mb-0">
+                      <li
+                        class="flex items-center gap-[15px] flex-col text-white"
+                      >
+                        <span
+                          ><img
+                            src="./img/whipflip-lg.webp"
+                            alt="Google Cloud"
+                            class="block max-1024px:max-w-[250px] max-1024px:h-[100px] max-1024px:object-contain"
+                        /></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                  class="m-item p-5 border-r max-1024px:border-l border-[#2b2b2b] bg-transparent flex flex-col items-center justify-center h-auto w-[220px] flex-none max-1024px:first-line:p-[10px] max-1024px:[&:not(:last-child)]:border-b-2 max-1024px:[&:not(:last-child)]:border-[#2b2b2b] max-1024px:py-[15px] max-1024px:w-full"
+                >
+                  <div class="m-item--inside">
+                    <ul class="m-item-ul mb-0">
+                      <li
+                        class="flex items-center gap-[15px] text-white flex-col"
+                      >
+                        <span
+                          ><img src="./img/carup-lg.webp" alt="Meta" class="block max-1024px:max-w-[250px] max-1024px:h-[100px] max-1024px:object-contain"
+                        /></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+
+                <!-- /items -->
+                <div
+                  class="m-item p-5 border-r max-1024px:border-l border-[#2b2b2b] bg-transparent flex flex-col items-center justify-center h-auto w-[220px] flex-none max-1024px:first-line:p-[10px] max-1024px:[&:not(:last-child)]:border-b-2 max-1024px:[&:not(:last-child)]:border-[#2b2b2b] max-1024px:py-[15px] max-1024px:w-full"
+                >
+                  <div class="m-item--inside">
+                    <ul class="m-item-ul mb-0">
+                      <li
+                        class="flex items-center gap-[15px] flex-col text-white"
+                      >
+                        <span
+                          ><img src="./img/aunty-lg.webp" alt="Aunty" class="block max-1024px:max-w-[250px] max-1024px:h-[100px] max-1024px:object-contain"
+                        /></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="m-item p-5 border-r max-1024px:border-l border-[#2b2b2b] bg-transparent flex flex-col items-center justify-center h-auto w-[220px] flex-none max-1024px:first-line:p-[10px] max-1024px:[&:not(:last-child)]:border-b-2 max-1024px:[&:not(:last-child)]:border-[#2b2b2b] max-1024px:py-[15px] max-1024px:w-full"
+                >
+                  <div class="m-item--inside">
+                    <ul class="m-item-ul mb-0">
+                      <li
+                        class="flex items-center gap-[15px] flex-col text-white"
+                      >
+                        <span
+                          ><img src="./img/junkshot-lg.webp" alt="Aunty" class="block h-[100px] w-[100px] max-1024px:max-w-[150px] max-1024px:h-[100px] object-contain"
+                        /></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+
+    <section class="pt-[50px] pb-[50px] xl:py-20 bg-[#0D0D0D]">
+      <div class="container mx-auto w-full max-w-[1456px] px-4">
+        <h2
+          class="mb-5 overflow-hidden text-center text-[clamp(32px,3vw,50px)] leading-[1.2] font-semibold md:mb-10 xl:mb-20 text-white"
+          aria-label="Recognized For Excellence"
+        >
+          Recognized For Excellence
+        </h2>
+        <div class="hidden grid-cols-3 gap-8 xl:grid">
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="UpCity"
+                    loading="lazy"
+                    width="200"
+                    height="65"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/upcity.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    Top-rated mobile app solution <br/> providers in New Jersey
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Entrepreneur"
+                    loading="lazy"
+                    width="224"
+                    height="42"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/entrep.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    App of the year – L-Card <br />
+                    Developed by NewAgeSysIT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/clutch.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    Top global leaders in <br/> mobile app development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="BusinessofApps"
+                    loading="lazy"
+                    width="254"
+                    height="45"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/business.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] h-full animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="GoodFirms"
+                    loading="lazy"
+                    width="216"
+                    height="30"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/goodfirms.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-8">
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="DesignRush"
+                    loading="lazy"
+                    width="284"
+                    height="64"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/designrush.webp"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    Redefining service <br/> excellence
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="min-h-[220px] animation-element">
+              <div
+                class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+              >
+                <div
+                  class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+                >
+                  <img
+                    alt="Clutch"
+                    loading="lazy"
+                    width="130"
+                    height="37"
+                    decoding="async"
+                    data-nimg="1"
+                    class="object-contain mb-4"
+                    style="color: transparent"
+                    src="./img/clutch.svg"
+                  />
+                  <p
+                    class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                  >
+                    iOS App Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:hidden">
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="UpCity"
+                  loading="lazy"
+                  width="200"
+                  height="65"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/upcity.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  Top-rated mobile app solution </br> providers in New Jersey
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Entrepreneur"
+                  loading="lazy"
+                  width="224"
+                  height="42"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/entrep.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  App of the year – L-Card </br>
+                  Developed by NewAgeSysIT
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/clutch.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope "
+                >
+                  Top global leaders in <br/> mobile app development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="BusinessofApps"
+                  loading="lazy"
+                  width="254"
+                  height="45"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/business.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="GoodFirms"
+                  loading="lazy"
+                  width="216"
+                  height="30"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/goodfirms.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="DesignRush"
+                  loading="lazy"
+                  width="284"
+                  height="64"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/designrush.webp"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  Redefining service <br/> excellence
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="min-h-[220px]">
+            <div
+              class="relative h-full overflow-hidden rounded-2xl p-px shadow-black/10 transition-transform duration-300 before:absolute before:inset-0 before:bg-[linear-gradient(0deg,#2C2C2C_0%,#71809E_44.71%,#242526_94.71%)] before:transition-transform before:duration-300 before:ease-in-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-md hover:before:rotate-90"
+            >
+              <div
+                class="bg-[#0D0D0D] relative z-10 flex h-full flex-col items-center justify-center rounded-2xl p-5 text-center xl:p-10"
+              >
+                <img
+                  alt="Clutch"
+                  loading="lazy"
+                  width="130"
+                  height="37"
+                  decoding="async"
+                  data-nimg="1"
+                  class="object-contain mb-4"
+                  style="color: transparent"
+                  src="./img/clutch.svg"
+                />
+                <p
+                  class="text-[17px] font-[400] text-white/50 xl:max-w-[256px] font-manrope"
+                >
+                  iOS App Development
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[url('./img/bg-cta-foo.webp')] bg-cover bg-center text-white relative bg-cta-form"
+    >
+      <div
+        class="h-full w-full absolute left-0 top-0 bg-[conic-gradient(from_233.5deg_at_100%_0%,_#7279FF_0deg,_#4361EE_169.4deg,_#7279FF_360deg)] opacity-[.85]"
+      ></div>
+      <div class="container py-20">
+        <div class="flex flex-wrap relative">
+          <div
+            class="basis-full md:basis-1/2 lg:basis-1/2 text-black self-center"
+          >
+            <div class="ld_left_wrap text-white">
+              <h2
+                class="text-[28px] md:text-[36px] min-992px:text-[50px] font-medium text-white md:mb-[15px] md:leading-[50px] mb-4 leading-normal"
+              >
+                Let’s Build Your Next Big <br class="hidden md:block"/>
+                Thing — Together!
+              </h2>
+              <p class="text-[#DEE3E9] md:text-[24px] text-[18px]">
+                We grow strong with 100% in-house team, industry expertise, and
+                proven results. From concept to launch, we deliver innovation
+                with precision and reliability.
+              </p>
+              <div class="flex mb-10 sm:mb-12 mt-10 max-992px:justify-center">
+                <a
+                  class="bg-[#FF5B14] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+                >
+                  Talk to Our Experts Today
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="basis-full md:basis-1/2 lg:basis-1/2 text-black flex justify-center items-center"
+          >
+            <div class="cta_right min-768px:p-5 py-0 max-768px:mt-[20px] flex">
+              <form
+                action=""
+                class="px-[30px] py-[40px] bg-white rounded-[15px] max-w-[580px]"
+              >
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Name *"
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Email *"
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Phone *"
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    placeholder="Company *"
+                    class="w-full px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <textarea
+                    name="user_role"
+                    placeholder="Message"
+                    rows="8"
+                    class="w-full h-[100px] px-[15px] py-[10px] rounded-[5px] border border-[#A0B6C5]"
+                    aria-label="Role Description"
+                  ></textarea>
+                </div>
+                <div class="form-group mb-3">
+                  <button
+                    class="text-[18px] px-[15px] py-[10px] bg-[#121314] w-full rounded-[5px] text-white"
+                  >
+                    Submit
+                  </button>
+                </div>
+                <div class="form-footer text-[#445D6E] pt-5">
+                  <p class="flex items-center text-sm">
+                    <span class="pr-2"
+                      ><img src="./img/form-black.svg" alt="" /> </span
+                    ><span
+                      >Your idea is 100% protected by our non disclosure
+                      agreement.</span
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="bg-[#0B0B0B] py-16 px-0 overflow-x-hidden">
+      <div class="w-full container mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">
+          Related Blogs
+        </h2>
+
+        <!-- Blog Carousel Container -->
+        <div class="related-blogs-carousel owl-carousel owl-theme">
+          <!-- Blog Card 1 -->
+          <div class=" ">
+            <div class="rounded-lg overflow-hidden">
+              
+              <img
+                src="./img/Blog_Thumb_List.png"
+                alt="How to Build a SaaS Application"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
+                decoding="async"
+                data-nimg="1"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                How to Build a SaaS Application?– Cover Nuances, Step-by-Step
+                Process, Cost, and More
+              </h3>
+            </div>
+          </div>
+          <div class=" ">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class=" ">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class=" ">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+          <div class=" ">
+            <div class="rounded-lg overflow-hidden">
+              <img
+                src="./img/Blog_Thumb_List1.png"
+                alt="WCAG Compliance Explained"
+                class="w-full h-[180px] md:h-[200px] object-fit owl-lazy"
+              />
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#1C1C1C] text-white text-[12px] font-medium px-3 py-1 rounded-sm tracking-wide"
+                >SOFTWARE DEVELOPMENT</span
+              >
+              <h3
+                class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
+              >
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  <script src="./js/jquery.magnific-popup.js" defer></script>
+  <script src="./js/optimize.js" defer></script>
+    <!-- supermenu position -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menus = document.querySelectorAll(".supermenu");
+
+  menus.forEach((menu) => {
+    const parent = menu.closest(".group");
+    if (!parent) return;
+
+    function checkCutoff() {
+      const rect = menu.getBoundingClientRect();
+      const pad = 10;
+      if (rect.left < pad || rect.right > window.innerWidth - pad) {
+        menu.classList.add("cutoff");
+      } else {
+        menu.classList.remove("cutoff");
+      }
+    }
+
+    parent.addEventListener("mouseenter", () => {
+      requestAnimationFrame(checkCutoff);
+    });
+    parent.addEventListener("mouseleave", () => {
+      menu.classList.remove("cutoff");
+    });
+  });
+});
+</script>
+     <!-- end -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    // Hamburger menu
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden-view");
+         document.documentElement.classList.toggle("overflow-hidden");
+      });
+    }
+
+    // Dropdown mobile
+    if (dropdownToggles.length > 0) {
+      dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation(); // prevent window click from closing immediately
+
+          const dropdown = toggle.nextElementSibling;
+          const otherDropdowns = document.querySelectorAll(".dropdown");
+
+          if (dropdown) {
+            // Close other dropdowns and remove active class from other toggles
+            dropdownToggles.forEach((otherToggle) => {
+              if (otherToggle !== toggle) {
+                const otherDropdown = otherToggle.nextElementSibling;
+                if (otherDropdown) otherDropdown.classList.add("hidden");
+                otherToggle.classList.remove("active");
+
+                const otherSvg = otherToggle.querySelector("svg");
+                if (otherSvg) otherSvg.classList.remove("rotate-180");
+              }
+            });
+
+            // Toggle current dropdown
+            const isOpen = !dropdown.classList.contains("hidden");
+            dropdown.classList.toggle("hidden");
+            toggle.classList.toggle("active", !isOpen); // Add active only when opened
+
+            // Rotate SVG icon
+            const svgElement = toggle.querySelector("svg");
+            if (svgElement) {
+              svgElement.classList.toggle("rotate-180", !isOpen);
+            } else {
+              console.error("SVG element not found within the toggle.");
+            }
+          } else {
+            console.error("Dropdown element not found.");
+          }
+        });
+      });
+    }
+
+    // Close dropdown when clicking outside
+    window.addEventListener("click", (event) => {
+      if (
+        !event.target.matches(".dropdown-toggle") &&
+        !event.target.closest(".dropdown")
+      ) {
+        dropdownToggles.forEach((toggle) => {
+          const dropdown = toggle.nextElementSibling;
+          if (dropdown) dropdown.classList.add("hidden");
+          toggle.classList.remove("active");
+
+          const svgElement = toggle.querySelector("svg");
+          if (svgElement) svgElement.classList.remove("rotate-180");
+        });
+      }
+      if (!event.target.closest("#mobile-menu") && !event.target.closest("#mobile-menu-button")) {
+    mobileMenu.classList.add("hidden-view");
+    document.documentElement.classList.remove("overflow-hidden");
+}
+    });
+  });
+</script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  // ---- helpers ----
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+  const vh = () => (isIOS ? screen.height : window.innerHeight);
+
+  // More accurate "below-the-fold" check (partially visible counts as in-viewport)
+  function isBelowFold(el) {
+    const r = el.getBoundingClientRect();
+    return r.top >= vh() || r.left >= (window.innerWidth || document.documentElement.clientWidth);
+  }
+
+  // Preload an image (file or SVG) and then run a callback
+  function preload(src, done) {
+    if (!src) return done && done();
+    if (/\.(svg)(\?|#|$)/i.test(src)) {
+      // For SVG: a quick HEAD/GET check, then just set src
+      fetch(src)
+        .then(r => r.ok ? r.text() : Promise.reject())
+        .then(txt => { if (txt.includes("<svg")) done && done(); else done && done(); })
+        .catch(() => done && done());
+      return;
+    }
+    const tmp = new Image();
+    tmp.onload = () => done && done();
+    tmp.onerror = () => done && done();
+    tmp.src = src;
+  }
+
+  // Fade-in after load
+  function revealImg(img) {
+    img.classList.add("lazy-loaded");
+    img.classList.remove("lazy-load");
+  }
+  function revealBg(el) {
+    el.classList.add("lazy-loaded");
+    el.classList.remove("lazy-load");
+  }
+
+  // ---- IntersectionObservers ----
+  const imageObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+
+      const src = img.getAttribute("data-src");
+      const srcset = img.getAttribute("data-srcset");
+      const sizes = img.getAttribute("data-sizes");
+
+      const apply = () => {
+        if (srcset) img.setAttribute("srcset", srcset);
+        if (sizes) img.setAttribute("sizes", sizes);
+        if (src) img.setAttribute("src", src);
+        // Remove data-* so future scans ignore it
+        img.removeAttribute("data-src");
+        img.removeAttribute("data-srcset");
+        img.removeAttribute("data-sizes");
+        // If already complete (cache), reveal immediately; else wait for onload
+        if (img.complete) {
+          revealImg(img);
+        } else {
+          img.addEventListener("load", () => revealImg(img), { once: true });
+          img.addEventListener("error", () => revealImg(img), { once: true });
+        }
+      };
+
+      // Preload first (ensures smooth fade-in)
+      const primary = src || (srcset ? srcset.split(",").pop().trim().split(" ")[0] : "");
+      preload(primary, apply);
+
+      obs.unobserve(img);
+    });
+  }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+  const bgObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const bg = el.getAttribute("data-bg");
+      if (!bg) { obs.unobserve(el); return; }
+
+      const setBg = () => {
+        el.style.backgroundImage = `url("${bg}")`;
+        el.removeAttribute("data-bg");
+        revealBg(el);
+      };
+
+      preload(bg, setBg);
+      obs.unobserve(el);
+    });
+  }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+  // ---- Process <img> elements ----
+  document.querySelectorAll("img").forEach(img => {
+    // Skip LCP/eager/explicitly excluded images
+    if (
+      img.hasAttribute("fetchpriority") ||
+      img.getAttribute("loading") === "eager" ||
+      img.hasAttribute("data-lcp") ||
+      img.hasAttribute("data-skip-lazy")
+    ) return;
+
+    // If already using native lazy, leave it — but still respect fade-in after load
+    const natLazy = img.getAttribute("loading") === "lazy";
+
+    // If it's in (or near) viewport, don't lazy it; just attach fade-in
+    if (!isBelowFold(img)) {
+      // ensure fade-in after load
+      if (!img.complete) {
+        img.classList.add("lazy-load");
+        img.addEventListener("load", () => revealImg(img), { once: true });
+        img.addEventListener("error", () => revealImg(img), { once: true });
+      }
+      return;
+    }
+
+    // Move src/srcset/sizes to data-* and observe
+    const src = img.getAttribute("src");
+    const srcset = img.getAttribute("srcset");
+    const sizes = img.getAttribute("sizes");
+    if (src) { img.setAttribute("data-src", src); img.removeAttribute("src"); }
+    if (srcset) { img.setAttribute("data-srcset", srcset); img.removeAttribute("srcset"); }
+    if (sizes) { img.setAttribute("data-sizes", sizes); img.removeAttribute("sizes"); }
+
+    // Mark for animation and use native lazy as a hint
+    img.classList.add("lazy-load");
+    if (!natLazy) img.setAttribute("loading", "lazy");
+
+    imageObserver.observe(img);
+  });
+
+  // ---- Process elements with background images ----
+  document.querySelectorAll("[style*='background-image']").forEach(el => {
+    // Skip eager/LCP backgrounds
+    if (el.hasAttribute("data-lcp") || el.hasAttribute("data-skip-lazy")) return;
+
+    const comp = window.getComputedStyle(el);
+    const bgImage = comp.backgroundImage;
+    if (!bgImage || bgImage === "none") return;
+
+    // If already near viewport, keep as-is
+    if (!isBelowFold(el)) return;
+
+    // Extract URL("...") -> ...
+    const url = bgImage.slice(4, -1).replace(/["']/g, "");
+    if (!url) return;
+
+    // Move to data-bg, clear background and observe
+    el.setAttribute("data-bg", url);
+    el.style.backgroundImage = "none";
+    el.classList.add("lazy-load");
+    bgObserver.observe(el);
+  });
+
+  // ---- minimal CSS for fade-in ----
+  const style = document.createElement("style");
+  style.textContent = `
+    .lazy-load { opacity: 0; transition: opacity .35s ease; }
+    .lazy-loaded { opacity: 1; }
+  `;
+  document.head.appendChild(style);
+});
+      
+    </script>
+    <script>
+       document.addEventListener("DOMContentLoaded", () => {
+          $(".video_card").on("mouseenter", function () {
+    $(this).find(".video_poster,.video_play").hide();
+    $(this).find(".unmute").show();
+    $(this).find(".mute").hide();
+    var video = $(this).find("video")[0];
+    video.muted = true;
+    video.play();
+  });
+  $(".video_card").on("mouseleave", function () {
+    var video = $(this).find("video")[0];
+    video.pause();
+    video.muted = true;
+    $(this).find(".video_play,.video_poster").show();
+    $(this).find(".unmute,.mute").hide();
+  });
+  $(".unmute").on("click", function () {
+    $(this).parents(".video_card").find(".video_poster").hide();
+    var video = $(this).parents(".video_card").find("video")[0];
+    video.play();
+    video.muted = false;
+    $(this).hide();
+    $(this).siblings(".mute").show();
+  });
+  $(".mute").on("click", function () {
+    var video = $(this).parents(".video_card").find("video")[0];
+    video.muted = true;
+    $(this).hide();
+    $(this).siblings(".unmute").show();
+  });
+       })
+    </script>
+     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            items: 4, margin: 12,
+            lazyLoad: true,
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
   </body>
 </html>
