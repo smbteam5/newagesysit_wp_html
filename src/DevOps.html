@@ -1,0 +1,3915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps CI/CD Services</title>
+
+    <!-- Google Fonts - Inter and Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <style>
+      .border-gradient {
+        border-bottom: 1px solid transparent;
+        background: linear-gradient(#0e0e0e, #121212) padding-box,
+          linear-gradient(60deg, #d5dbff 1.68%, #d5dbff 104.11%);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.87);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 0.647);
+      }
+      .card {
+        background-color: #0f0f10;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        color: white;
+        width: 300px;
+      }
+
+      /* Add smooth transition */
+      .owl-carousel .owl-stage {
+        transition: all 0.5s ease !important;
+      }
+
+      .mobile-slider .owl-dots .owl-dot {
+        display: none;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .mobile-slider .owl-nav {
+        margin-top: 40px;
+        padding-right: 0px !important;
+      }
+
+      .slider-3 .owl-nav {
+        padding-left: 10px !important;
+      }
+
+      @media (max-width: 1024px) {
+        .slider-3 .owl-nav {
+          margin-top: 120px;
+        }
+      }
+      /* Service card name styling (matches reference) */
+      [data-accordion-body="services"] .flex.items-center > span {
+        color: #f5fafe;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        line-height: 1.1;
+      }
+      @media (min-width: 768px) {
+        [data-accordion-body="services"] .flex.items-center > span {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
+    <header
+      class="top-0 left-0 right-0 fixed text-white z-[100]"
+      style="background-color: rgba(0, 10, 31) !important"
+    >
+      <div class="container flex items-center justify-between px-4 py-3 xl:px-0 mx-auto">
+        <nav class="flex">
+          <a href="#">
+            <img
+              src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
+              class="h-[40px] md:h-[47px]"
+              alt=""
+            />
+          </a>
+        </nav>
+
+        <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
+          <button class="py-2 px-3 rounded uppercase">
+            <img class="max-w-6" src="./img/call.png" alt="call" />
+          </button>
+          <button id="mobile-menu-button" class="xl:hidden">
+            <svg
+              class="w-7 h-7 text-white fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- mobile-menu start-->
+      <div id="mobile-menu" class="hidden w-full min-h-screen lg:hidden">
+        <nav class="p-4 container mx-auto">
+          <ul class="flex flex-col items-start justify-start w-full gap-2 font-semibold">
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Services
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full p-4 mt-2 bg-white rounded-lg dropdown">
+                <div class="relative z-10 pb-5">
+                  <div class="grid items-stretch grid-cols-1 gap-4 overflow-y-auto h-[45vh]">
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      SOFTWARE DEVELOPMENT
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="/custom-software-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Custom Software Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/software-product-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Software Product Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/saas-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Saas Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/web-application-development/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Web Application Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="//newagesysit.com/app-development-service/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Mobile App Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/maintenance-and-support/"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Maintenance and Support
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      CLOUD SERVICES
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Managed Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AWS
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Cloud Application Development
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      IDEATION AND DESIGN
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          UI/UX Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          UX/UI Design
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          MVP Design
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">MVP Design</p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Consulting Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps CI/CD Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Development Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevOps Implementation Services
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          DevSecOps Services
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      EMERGING TECHNOLOGIES
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AI/ML
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          AR/VR
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Data Science and Analytics
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Blockchain
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Robotic Process Automation
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      STARTUP SERVICES
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Minimal Viable Product (MVP)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Product Development
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Maintenance & Support
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Start-up Advisory / Consulting
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      Start-up Advisory / Consulting
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Digital Transformation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          IT Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Implementation Consulting
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          IT Security and Cybersecurity
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="uppercase text-gray-500 font-medium text-[13px] mt-2">
+                      Workforce Management
+                    </p>
+                    <ul class="text-[15px] space-y-2 border-l-2 border-orange-500 ps-5">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Staff Augmentation
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          Dedicated Development Team
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center transition text-gray-800 hover:text-blue-700 ease-in-out rounded-lg"
+                        >
+                          QA & Testing
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Industries
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
+                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/transportation.png" alt="" />
+                        </div>
+                        <div>Transportation</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/on-demand.png" alt="" />
+                        </div>
+                        <div>On Demand</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/healthcare.png" alt="" />
+                        </div>
+                        <div>Healthcare</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/social-networking.png" alt="" />
+                        </div>
+                        <div>Social Networking</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/entertainment.png" alt="" />
+                        </div>
+                        <div>Entertainment</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/travel.png" alt="" />
+                        </div>
+                        <div>Travel</div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/restaurant.png" alt="" />
+                        </div>
+                        <div>Restaurant</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/e-commerce.png" alt="" />
+                        </div>
+                        <div>E-commerce</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/uber-like.png" alt="" />
+                        </div>
+                        <div>Uber Like Platform</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/saas.png" alt="" />
+                        </div>
+                        <div>SaaS</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/game-app.png" alt="" />
+                        </div>
+                        <div>Game App</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/fintech.png" alt="" />
+                        </div>
+                        <div>FinTech</div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="text-[15px] space-y-3">
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/wellness.png" alt="" />
+                        </div>
+                        <div>Wellness</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/realestate.png" alt="" />
+                        </div>
+                        <div>Real Estate</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/education.png" alt="" />
+                        </div>
+                        <div>Education</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/petcare.png" alt="" />
+                        </div>
+                        <div>Pet Care</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                      >
+                        <div class="p-2 bg-blue-600 rounded-full">
+                          <img class="max-w-[22px]" src="./img/door-to-door.png" alt="" />
+                        </div>
+                        <div>Door to Door Sales</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Technologies
+                <svg
+                  class="w-4 h-4 ml-2 stroke-current"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div class="hidden w-full bg-white rounded-lg dropdown py-5">
+                <div class="relative z-10 overflow-y-auto h-[45vh] p-5">
+                  <div class="grid grid-cols-1">
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/ios.png" alt="" />
+                          </div>
+                          <div>iOS</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/android.png" alt="" />
+                          </div>
+                          <div>Android</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/react-native.png" alt="" />
+                          </div>
+                          <div>React Native</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/python.png" alt="" />
+                          </div>
+                          <div>Python</div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/flutter.png" alt="" />
+                          </div>
+                          <div>Flutter</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/php.png" alt="" />
+                          </div>
+                          <div>PHP</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/nodejs.png" alt="" />
+                          </div>
+                          <div>Node JS</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/mainframe.png" alt="" />
+                          </div>
+                          <div>Mainframe</div>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul class="text-[15px] space-y-3">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/coldfusion.png" alt="" />
+                          </div>
+                          <div>ColdFusion</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/rubyrails.png" alt="" />
+                          </div>
+                          <div>Ruby on Rails</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center p-1 -mx-2 space-x-2 text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out rounded-lg hover:bg-blue-50"
+                        >
+                          <div class="p-2 bg-blue-600 rounded-full">
+                            <img class="max-w-[22px]" src="./img/xamarin.png" alt="" />
+                          </div>
+                          <div>Xamarin</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Portfolio
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Blog
+              </button>
+            </li>
+            <li class="relative w-full">
+              <button
+                class="flex items-center w-full p-4 focus:outline-none hover:bg-gray-100 rounded-xl hover:text-gray-600 dropdown-toggle"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile-menu end-->
+    </header>
+
+    <section
+      class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden"
+    >
+      <div class="absolute z-40 top-0 inset-x-0 pointer-events-none h-full flex justify-center">
+        <img src="./img/top-glow.webp" alt="" class="object-cover object-top" />
+      </div>
+
+      <div
+        class="absolute z-40 top-[100px] md:top-0 inset-x-0 pointer-events-none h-full md:h-[87%] flex justify-center"
+      >
+        <img
+          src="./img/bg-transparent.svg"
+          alt=""
+          class="lg:hidden w-full h-[75%] md:h-full object-cover object-top"
+        />
+        <img
+          src="./img/golang-seo-bg.webp"
+          alt=""
+          class="hidden lg:block w-full h-full object-cover object-center"
+        />
+      </div>
+
+      <div class="absolute z-0 bottom-0 left-0 w-full hidden lg:block">
+        <img src="./img/glow-new-1.webp" alt="Glow" class="w-full h-full opacity-100 mx-auto" />
+      </div>
+
+      <div
+        class="hidden absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle,transparent_90%,#000_100%)] xl:bg-[radial-gradient(circle,transparent_50%,#000_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="hidden absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[linear-gradient(to_right,#000_0%,#000_15%,transparent_50%,#000_85%,#000_100%)] 2xl:bg-[linear-gradient(to_right,#000_0%,#000_25%,transparent_50%,#000_75%,#000_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="hidden absolute z-30 bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,#000_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.3)_90%,transparent_100%)] pointer-events-none"
+      ></div>
+
+      <div
+        class="container flex flex-col items-center justify-center pt-[45%] md:pt-[20%] z-40 pb-[110px] relative"
+      >
+        <div class="relative flex flex-col items-center justify-center">
+          <h1
+            class="text-[28px] md:text-[48px] xl:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8"
+          >
+            DevOps CI/CD Services
+          </h1>
+          <p
+            class="text-[16px] md:text-[23px] xl:mt-4 text-center text-[#F5FAFE] w-full md:w-[90%] lg:w-[100%] p-2"
+          >
+            Streamline software delivery and boost reliability with tailored DevOps CI/CD solutions.
+          </p>
+          <div class="flex flex-col md:flex-row items-center gap-4 mt-2 md:mt-8">
+            <a
+              class="cursor-pointer bg-[#FF5B14] group text-white text-[16px] md:text-[18px] md:text-md font-medium py-4 pl-5 pr-4 rounded-full flex items-center md:justify-start justify-center gap-2 shadow-md w-full md:w-fit relative overflow-hidden z-10"
+            >
+              Calculate Pricing
+              <img
+                src="./img/arrow-right-white.svg"
+                alt="arrow-right"
+                class="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-6"
+              />
+
+              <img src="./img/Ellipse 444.svg" alt="arrow-right" class="absolute bottom-0" />
+            </a>
+
+            <a
+              href="#"
+              class="bg-[#141B3B] group text-white text-[16px] md:text-[18px] md:text-md font-medium py-4 pl-5 pr-4 rounded-full flex items-center md:justify-start justify-center gap-2 shadow-md w-full md:w-fit mt-2 md:mt-0 relative overflow-hidden z-10 cursor-pointer border-gradient"
+            >
+              <span>Talk to us</span>
+              <img
+                src="./img/arrow-right-white.svg"
+                alt="arrow-right"
+                class="-rotate-45 group-hover:rotate-0 transition-transform duration-300 w-5 ml-1"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="absolute z-0 bottom-0 left-0 w-full lg:hidden">
+          <img src="./img/glow-new.webp" alt="Glow" class="w-full h-full opacity-100 mx-auto" />
+        </div>
+      </div>
+      <div class="relative w-full xl:mt-[170px] z-50 recognition-section-ppc backdrop-blur-[10px]">
+        <div
+          class="relative flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8 px-12 md:px-12 py-5"
+        >
+          <div class="lg:w-[30%] text-center lg:text-left">
+            <p class="text-white text-base text-[16px] md:text-[18px] leading-snug">
+              Recognized for delivering the best solutions for businesses of all sizes and across
+              industries.
+            </p>
+          </div>
+
+          <!-- Logos Marquee -->
+          <div class="w-full overflow-hidden">
+            <div class="flex items-center gap-10 logos-arquee whitespace-nowrap">
+              <!-- First set of logos -->
+              <img
+                src="./img/Deloitte-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
+              />
+              <img src="./img/Inc5000-1 (1).svg" alt="logo" class="h-[100px] flex-shrink-0" />
+              <img src="./img/uspaacc-1-1.svg" alt="logo" class="h-[90px] flex-shrink-0 mt-1" />
+              <img
+                src="./img/NJBIZ-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[140px] flex-shrink-0"
+              />
+              <img
+                src="./img/50Fastest-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
+              />
+
+              <!-- Duplicate set for seamless loop -->
+              <img
+                src="./img/Deloitte-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0 mt-1"
+              />
+              <img src="./img/Inc5000-1 (1).svg" alt="logo" class="h-[100px] flex-shrink-0" />
+              <img src="./img/uspaacc-1-1.svg" alt="logo" class="h-[90px] flex-shrink-0" />
+              <img
+                src="./img/NJBIZ-1-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[140px] flex-shrink-0"
+              />
+              <img
+                src="./img/50Fastest-1.svg"
+                alt="logo"
+                class="w-[120px] md:w-[160px] flex-shrink-0"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-10 lg:py-20">
+      <div class="container mx-auto px-4">
+        <!-- Section Heading -->
+        <div class="py-4 md:pb-14 text-center">
+          <h2
+            class="text-[24px] sm:text-[28px] md:text-[36px] xl:text-[50px] font-[400] mb-4 text-white leading-[32px] md:leading-[44px]"
+          >
+            CI/CD Services By NewAgeSysIT
+          </h2>
+          <p class="text-[#A3ACB5] text-[15px] sm:text-[17px] leading-[26px] xl:w-[60%] mx-auto">
+            With over 25 years of expertise in the tech industry, NewAgeSysIT offers tailored CI/CD
+            services to enhance agility and responsiveness, enabling your business to stay ahead in
+            an ever-evolving market.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Card 1 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20557_66761)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M49.8719 30.4499C48.1939 30.4521 46.5753 31.0716 45.3247 32.1904C44.074 33.3091 43.2786 34.849 43.0902 36.5164H38.9672C37.8553 36.5178 36.7567 36.274 35.7499 35.8024C34.7429 35.3307 33.8523 34.6429 33.1415 33.7879L29.8748 29.8679C31.3583 29.2134 32.5604 28.0521 33.2655 26.5919C33.9707 25.1317 34.1327 23.4682 33.7228 21.8994C33.3128 20.3305 32.3576 18.9589 31.0283 18.0304C29.699 17.1018 28.0825 16.677 26.4683 16.8321C24.8543 16.987 23.3482 17.7117 22.2198 18.8763C21.0915 20.0409 20.4148 21.5692 20.3109 23.1874C20.207 24.8055 20.6828 26.4078 21.6529 27.7071C22.623 29.0064 24.0241 29.9178 25.6051 30.2779V39.7216C23.9691 40.0945 22.5278 41.057 21.5566 42.4252C20.5853 43.7935 20.152 45.4716 20.3397 47.139C20.5273 48.8064 21.3226 50.3463 22.5736 51.4645C23.8247 52.5827 25.4438 53.2008 27.1218 53.2008C28.7997 53.2008 30.4189 52.5827 31.6699 51.4645C32.9209 50.3463 33.7163 48.8064 33.9039 47.139C34.0915 45.4716 33.6583 43.7935 32.687 42.4252C31.7157 41.057 30.2744 40.0945 28.6384 39.7216V33.1223L30.8114 35.7296C31.8064 36.9267 33.0532 37.8897 34.4629 38.55C35.8726 39.2104 37.4105 39.5517 38.9672 39.5497H43.4384C43.8556 40.7292 44.589 41.7714 45.5585 42.5623C46.5279 43.3532 47.6961 43.8623 48.9354 44.0341C50.1747 44.2059 51.4374 44.0337 52.5854 43.5363C53.7334 43.0389 54.7226 42.2355 55.4449 41.214C56.1671 40.1924 56.5947 38.9919 56.6807 37.7437C56.7667 36.4955 56.508 35.2477 55.9328 34.1367C55.3576 33.0256 54.488 32.0941 53.4191 31.4439C52.3502 30.7936 51.1231 30.4498 49.8719 30.4499ZM30.9133 46.3746C30.9133 47.1245 30.691 47.8575 30.2744 48.4811C29.8577 49.1046 29.2656 49.5906 28.5728 49.8776C27.88 50.1645 27.1176 50.2396 26.382 50.0933C25.6465 49.947 24.971 49.5859 24.4407 49.0556C23.9104 48.5254 23.5493 47.8498 23.403 47.1143C23.2567 46.3788 23.3318 45.6164 23.6188 44.9236C23.9058 44.2308 24.3917 43.6386 25.0153 43.222C25.6388 42.8053 26.3719 42.583 27.1218 42.583C28.127 42.5841 29.0908 42.9839 29.8016 43.6948C30.5125 44.4055 30.9123 45.3693 30.9133 46.3746ZM49.8719 41.0663C49.122 41.0663 48.389 40.8439 47.7655 40.4274C47.1419 40.0107 46.6559 39.4185 46.369 38.7257C46.082 38.0329 46.0069 37.2705 46.1532 36.535C46.2995 35.7995 46.6606 35.124 47.1909 34.5937C47.7212 34.0634 48.3968 33.7023 49.1322 33.556C49.8677 33.4097 50.6301 33.4848 51.323 33.7718C52.0158 34.0588 52.608 34.5447 53.0246 35.1683C53.4412 35.7918 53.6636 36.5248 53.6636 37.2747C53.6624 38.28 53.2626 39.2437 52.5518 39.9546C51.841 40.6654 50.8772 41.0652 49.8719 41.0663Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20557_66761">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              AWS CI/CD Implementation
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              Streamline serverless deployments and minimize deployment times with our standardized
+              AWS CI/CD pipelines, reinforced by DevSecOps for role-based security and a proven
+              go-to-market approach.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20440_50662)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M22.8359 54.5984H46.4609C47.5052 54.5984 48.5068 54.1854 49.2452 53.4503C49.9836 52.7152 50.3984 51.7181 50.3984 50.6784V26.8221C50.3984 25.7824 49.9835 24.7854 49.2451 24.0503L41.708 16.5466C40.9696 15.8114 39.9681 15.3984 38.9238 15.3984H22.8359C21.7917 15.3984 20.7901 15.8114 20.0517 16.5466C19.3133 17.2817 18.8984 18.2788 18.8984 19.3184V50.6784C18.8984 51.7181 19.3133 52.7152 20.0517 53.4503C20.7901 54.1854 21.7917 54.5984 22.8359 54.5984ZM38.5859 18.3384H38.9234C39.0528 18.3382 39.1811 18.3634 39.3006 18.4127C39.4203 18.462 39.5289 18.5343 39.6203 18.6256L47.1569 26.1287C47.2486 26.2197 47.3212 26.3278 47.3707 26.4469C47.4202 26.566 47.4456 26.6936 47.4453 26.8225V27.1584H42.5234C41.4792 27.1584 40.4776 26.7454 39.7392 26.0103C39.0008 25.2752 38.5859 24.2781 38.5859 23.2384V18.3384ZM27.3503 39.4927C27.533 39.3106 27.75 39.1662 27.9888 39.0677C28.2277 38.9691 28.4837 38.9184 28.7422 38.9184C29.0007 38.9184 29.2567 38.9691 29.4955 39.0677C29.7344 39.1662 29.9514 39.3106 30.1341 39.4927L32.6797 42.0268L39.1628 35.5727C39.5341 35.2157 40.0314 35.0181 40.5476 35.0226C41.0638 35.0271 41.5576 35.2332 41.9226 35.5966C42.2876 35.96 42.4947 36.4516 42.4991 36.9655C42.5036 37.4794 42.3052 37.9745 41.9466 38.3442L34.0716 46.1842C33.8889 46.3662 33.6719 46.5106 33.433 46.6092C33.1942 46.7077 32.9382 46.7584 32.6797 46.7584C32.4212 46.7584 32.1652 46.7077 31.9263 46.6092C31.6875 46.5106 31.4705 46.3662 31.2878 46.1842L27.3503 42.2642C27.1674 42.0822 27.0223 41.8662 26.9233 41.6285C26.8243 41.3907 26.7734 41.1358 26.7734 40.8784C26.7734 40.621 26.8243 40.3662 26.9233 40.1284C27.0223 39.8907 27.1674 39.6746 27.3503 39.4927Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20440_50662">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              Azure DevOps CI/CD Services
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              Automate your development and deployment processes with Azure’s integrated CI/CD
+              capabilities, including agile planning, source control, automated testing, and
+              streamlined release feedback.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20440_50670)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M53.9 33.6H51.1V26.6C51.1 25.4861 50.6575 24.4178 49.8698 23.6302C49.0822 22.8425 48.0139 22.4 46.9 22.4H39.9V19.6C39.9 18.1148 39.31 16.6904 38.2598 15.6402C37.2096 14.59 35.7852 14 34.3 14C32.8148 14 31.3904 14.59 30.3402 15.6402C29.29 16.6904 28.7 18.1148 28.7 19.6V22.4H21.7C20.5861 22.4 19.5178 22.8425 18.7302 23.6302C17.9425 24.4178 17.5 25.4861 17.5 26.6V35C17.5 35.3713 17.6475 35.7274 17.9101 35.9899C18.1726 36.2525 18.5287 36.4 18.9 36.4H23.1C23.8426 36.4 24.5548 36.695 25.0799 37.2201C25.605 37.7452 25.9 38.4574 25.9 39.2C25.9 39.9426 25.605 40.6548 25.0799 41.1799C24.5548 41.705 23.8426 42 23.1 42H18.9C18.5287 42 18.1726 42.1475 17.9101 42.4101C17.6475 42.6726 17.5 43.0287 17.5 43.4V51.8C17.5 52.9139 17.9425 53.9822 18.7302 54.7698C19.5178 55.5575 20.5861 56 21.7 56H30.1C30.4713 56 30.8274 55.8525 31.0899 55.5899C31.3525 55.3274 31.5 54.9713 31.5 54.6V50.4C31.5 49.6574 31.795 48.9452 32.3201 48.4201C32.8452 47.895 33.5574 47.6 34.3 47.6C35.0426 47.6 35.7548 47.895 36.2799 48.4201C36.805 48.9452 37.1 49.6574 37.1 50.4V54.6C37.1 54.9713 37.2475 55.3274 37.5101 55.5899C37.7726 55.8525 38.1287 56 38.5 56H46.9C48.0139 56 49.0822 55.5575 49.8698 54.7698C50.6575 53.9822 51.1 52.9139 51.1 51.8V44.8H53.9C55.3852 44.8 56.8096 44.21 57.8598 43.1598C58.91 42.1096 59.5 40.6852 59.5 39.2C59.5 37.7148 58.91 36.2904 57.8598 35.2402C56.8096 34.19 55.3852 33.6 53.9 33.6Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20440_50670">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              CI/CD Value Design Proposal
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              Our DevOps experts analyze your business requirements to recommend and implement the
+              most effective CI/CD solutions, ensuring an operationally efficient pipeline that
+              delivers results.
+            </p>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20440_50679)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M30.3707 16.1621H19.6762C17.3127 16.1621 15.3984 18.0701 15.3984 20.4257V50.2712C15.3984 52.6268 17.3127 54.5348 19.6762 54.5348H30.3707V58.7984H34.6484V11.8984H30.3707V16.1621ZM30.3707 48.1393H19.6762L30.3707 35.3484V48.1393ZM49.6207 16.1621H38.9262V20.4257H49.6207V48.1393L38.9262 35.3484V54.5348H49.6207C51.9841 54.5348 53.8984 52.6268 53.8984 50.2712V20.4257C53.8984 18.0701 51.9841 16.1621 49.6207 16.1621Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20440_50679">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              Continuous Integration Services
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              With our robust CI strategies, you can unify your codebase, address errors early in
+              the development cycle, and increase the reliability of your software products.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20440_50687)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M42.5833 30.9291C43.2476 30.9291 43.8988 30.9851 44.5335 31.0928L44.5895 31.3262C45.3784 34.6197 48.7438 36.5776 51.9708 35.6222C52.7907 36.686 53.4475 37.8921 53.9016 39.1993C51.5014 41.5295 51.5014 45.4003 53.9013 47.7304C53.4475 49.0377 52.7907 50.2436 51.9708 51.3077C48.7438 50.3521 45.3784 52.31 44.5895 55.6037L44.5335 55.8369C43.8988 55.9448 43.2476 56.0008 42.5833 56.0008C41.9195 56.0008 41.2682 55.9448 40.6335 55.8369L40.5776 55.6037C39.7886 52.31 36.4232 50.3521 33.1961 51.3077C32.3762 50.2436 31.7195 49.0377 31.2655 47.7304C33.6655 45.4003 33.6655 41.5295 31.2655 39.1992C31.7195 37.8921 32.3762 36.686 33.1961 35.6222C36.4232 36.5776 39.7886 34.6197 40.5776 31.3262L40.6335 31.0928C41.2682 30.9851 41.9195 30.9291 42.5833 30.9291ZM43.3223 16.8008C47.7918 16.8008 51.415 20.4489 51.415 24.9491V31.6139C50.0974 30.6171 48.6087 29.8378 47.0008 29.329V25.6868H20.5157V44.2086C20.5157 46.2543 22.1627 47.9124 24.1942 47.9124H28.5443C29.0497 49.5313 29.8237 51.0306 30.8137 52.3569H24.1942C19.7248 52.3569 16.1016 48.7088 16.1016 44.2086V24.9491C16.1016 20.4489 19.7248 16.8008 24.1942 16.8008H43.3223ZM42.5833 40.046C40.7712 40.046 39.3019 41.5766 39.3019 43.4649C39.3019 45.3529 40.7712 46.8836 42.5833 46.8836C44.3958 46.8836 45.8651 45.3529 45.8651 43.4649C45.8651 41.5766 44.3958 40.046 42.5833 40.046ZM33.7554 28.6466C34.5679 28.6466 35.2267 29.3099 35.2267 30.1281V30.6318C34.1526 31.2575 33.1643 32.0158 32.284 32.8848V31.6096H26.3984V41.9834H27.9424C27.8944 42.4708 27.8698 42.965 27.8698 43.4649C27.8698 43.9648 27.8944 44.459 27.9424 44.9464H24.927C24.1144 44.9464 23.4556 44.283 23.4556 43.4649V30.1281C23.4556 29.3099 24.1144 28.6466 24.927 28.6466H33.7554Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20440_50687">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              GCP CI/CD Cloud Solutions
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              Achieve seamless scaling on multi-cloud and hybrid platforms with our GCP CI/CD
+              services, designed to maximize flexibility and enhance development efficiency using
+              serverless infrastructure.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20440_50695)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M35 32.2992C37.8802 32.2992 40.5721 32.036 43.0755 31.5098C45.579 30.9835 47.5538 30.2063 49 29.1782V32.2992C49 33.1437 48.3741 33.9271 47.1224 34.6492C45.8707 35.3713 44.1693 35.9436 42.0182 36.3658C39.8672 36.7881 37.5278 36.9992 35 36.9992C32.4722 36.9992 30.1328 36.7881 27.9818 36.3658C25.8307 35.9436 24.1294 35.3713 22.8776 34.6492C21.6259 33.9271 21 33.1437 21 32.2992V29.1782C22.4462 30.2063 24.421 30.9835 26.9245 31.5098C29.4279 32.036 32.1198 32.2992 35 32.2992ZM35 46.3992C37.8802 46.3992 40.5721 46.1361 43.0755 45.6097C45.579 45.0835 47.5538 44.3063 49 43.2781V46.3992C49 47.2438 48.3741 48.0271 47.1224 48.7493C45.8707 49.4714 44.1693 50.0436 42.0182 50.4658C39.8672 50.8881 37.5278 51.0992 35 51.0992C32.4722 51.0992 30.1328 50.8881 27.9818 50.4658C25.8307 50.0436 24.1294 49.4714 22.8776 48.7493C21.6259 48.0271 21 47.2438 21 46.3992V43.2781C22.4462 44.3063 24.421 45.0835 26.9245 45.6097C29.4279 46.1361 32.1198 46.3992 35 46.3992ZM35 39.3492C37.8802 39.3492 40.5721 39.0861 43.0755 38.5598C45.579 38.0334 47.5538 37.2562 49 36.2281V39.3492C49 40.1938 48.3741 40.9771 47.1224 41.6992C45.8707 42.4214 44.1693 42.9936 42.0182 43.4158C39.8672 43.8381 37.5278 44.0492 35 44.0492C32.4722 44.0492 30.1328 43.8381 27.9818 43.4158C25.8307 42.9936 24.1294 42.4214 22.8776 41.6992C21.6259 40.9771 21 40.1938 21 39.3492V36.2281C22.4462 37.2562 24.421 38.0334 26.9245 38.5598C29.4279 39.0861 32.1198 39.3492 35 39.3492ZM35 18.1992C37.5278 18.1992 39.8672 18.4103 42.0182 18.8326C44.1693 19.2549 45.8707 19.8271 47.1224 20.5492C48.3741 21.2714 49 22.0547 49 22.8992V25.2492C49 26.0937 48.3741 26.877 47.1224 27.5992C45.8707 28.3214 44.1693 28.8935 42.0182 29.3159C39.8672 29.7381 37.5278 29.9492 35 29.9492C32.4722 29.9492 30.1328 29.7381 27.9818 29.3159C25.8307 28.8935 24.1294 28.3214 22.8776 27.5992C21.6259 26.877 21 26.0937 21 25.2492V22.8992C21 22.0547 21.6259 21.2714 22.8776 20.5492C24.1294 19.8271 25.8307 19.2549 27.9818 18.8326C30.1328 18.4103 32.4722 18.1992 35 18.1992Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20440_50695">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              Continuous Deployment Services
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              Ensure automatic deployment of your code changes to production-ready environments,
+              backed by our expertise in continuous deployment practices to enhance operational
+              consistency.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-8 rounded-[20px] bg-[#1B1D1E] flex flex-col items-start text-left">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20440_50704)">
+                <path
+                  d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70Z"
+                  fill="#121617"
+                />
+                <path
+                  d="M35.875 17.5C33.4291 17.5 31.0767 18.0221 28.8829 19.0523C27.8558 19.5363 27.4131 20.7591 27.8959 21.7873C28.3789 22.8175 29.6038 23.2571 30.632 22.7753C32.2735 22.004 34.0375 21.6125 35.875 21.6125C42.6783 21.6125 48.2125 27.1467 48.2125 33.95C48.2125 40.7533 42.6783 46.2875 35.875 46.2875C34.4202 46.2875 32.9975 46.0385 31.6451 45.5485C30.5797 45.1609 29.398 45.7111 29.0105 46.7775C28.6228 47.8457 29.1741 49.0246 30.2413 49.4122C32.0446 50.0688 33.9403 50.4 35.875 50.4C44.9453 50.4 52.325 43.0203 52.325 33.95C52.325 24.8797 44.9453 17.5 35.875 17.5ZM17.3687 31.8938C16.2333 31.8938 15.3125 32.8135 15.3125 33.95C15.3125 35.0865 16.2333 36.0063 17.3687 36.0063H25.5938C26.7292 36.0063 27.65 35.0865 27.65 33.95C27.65 32.8135 26.7292 31.8938 25.5938 31.8938H17.3687Z"
+                  fill="#F5FAFE"
+                />
+                <path
+                  d="M29.7094 25.7242C29.7094 24.5877 28.7886 23.668 27.6531 23.668H21.4844C20.3489 23.668 19.4281 24.5877 19.4281 25.7242C19.4281 26.8607 20.3489 27.7805 21.4844 27.7805H27.6531C28.7886 27.7805 29.7094 26.8607 29.7094 25.7242ZM13.2594 44.2305H27.6531C28.7886 44.2305 29.7094 43.3107 29.7094 42.1742C29.7094 41.0377 28.7886 40.118 27.6531 40.118H13.2594C12.1239 40.118 11.2031 41.0377 11.2031 42.1742C11.2031 43.3107 12.1239 44.2305 13.2594 44.2305ZM35.8781 27.7805C34.7427 27.7805 33.8219 28.7002 33.8219 29.8367V33.9492C33.8219 34.7283 34.2617 35.4392 34.9584 35.7885L39.0709 37.8448C39.3662 37.9914 39.6803 38.0617 39.9886 38.0617C40.7436 38.0617 41.4695 37.6461 41.8299 36.9252C42.3381 35.9092 41.9264 34.6743 40.9102 34.1661L37.9344 32.678V29.8367C37.9344 28.7002 37.0136 27.7805 35.8781 27.7805Z"
+                  fill="#F5FAFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_20440_50704">
+                  <rect width="70" height="70" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <h2 class="text-white font-[400] text-[20px] sm:text-[22px]">
+              Custom CI/CD Solutions for Diverse Needs
+            </h2>
+            <p class="text-[#A3ACB5] text-[15px] sm:text-[16px] pt-3 leading-[26px]">
+              Beyond software development, NewAgeSysIT helps businesses optimize IT operations,
+              including production management, data backup, monitoring, and AI/ML-based self-healing
+              infrastructure through bespoke CI/CD workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-black flex items-center py-20 px-5 relative bg-no-repeat">
+      <div
+        class="container bg-[#09090B] px-4 border border-[#666666] rounded-[58px] flex justify-center items-start relative"
+      >
+        <div class="grid lg:grid-cols-2 gap-10 items-center py-8 px-3 md:p-12 w-full">
+          <div class="left_cs flex-1">
+            <div
+              class="mb-4 block p-[1px] rounded-full bg-gradient-to-r from-[#ffffff57] to-black/50"
+            >
+              <div
+                class="lg:px-[60px] px-[30px] py-2 text-[#F5FAFE] text-[23px] flex items-center gap-5 rounded-full bg-[#09090B] backdrop-blur-[60px]"
+              >
+                <p class="flex lg:gap-[20px] gap-2 items-center">
+                  <span
+                    class="font-semibold text-[24px] block w-[70px] lg:w-[100px] xl:text-[40px] min-992px::text-[32px] bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+                    >30+</span
+                  >
+                  <span
+                    class="lg:text-[18px] text-[16px] flex-1 count-para min-1380px:text-[22px] text-[#A3ACB5]"
+                  >
+                    Years of Experience
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="mb-4 block p-[1px] rounded-full bg-gradient-to-r from-[#ffffff57] to-black/50"
+            >
+              <div
+                class="lg:px-[60px] px-[30px] py-2 text-[#F5FAFE] text-[23px] flex items-center gap-5 rounded-full bg-[#09090B] backdrop-blur-[60px]"
+              >
+                <p class="flex lg:gap-[20px] gap-2 items-center">
+                  <span
+                    class="font-semibold text-[24px] block w-[70px] lg:w-[100px] xl:text-[40px] min-992px::text-[32px] bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+                    >200+</span
+                  >
+                  <span
+                    class="lg:text-[18px] text-[16px] flex-1 count-para min-1380px:text-[22px] text-[#A3ACB5]"
+                  >
+                    App Developers
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="mb-4 block p-[1px] rounded-full bg-gradient-to-r from-[#ffffff57] to-black/50"
+            >
+              <div
+                class="lg:px-[60px] px-[30px] py-2 text-[#F5FAFE] text-[23px] flex items-center gap-5 rounded-full bg-[#09090B] backdrop-blur-[60px]"
+              >
+                <p class="flex lg:gap-[20px] gap-2 items-center">
+                  <span
+                    class="font-semibold text-[24px] block w-[70px] lg:w-[100px] xl:text-[40px] min-992px::text-[32px] bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+                    >100%</span
+                  >
+                  <span
+                    class="lg:text-[18px] text-[16px] flex-1 count-para min-1380px:text-[22px] text-[#A3ACB5]"
+                  >
+                    Client Satisfaction
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="mb-4 block p-[1px] rounded-full bg-gradient-to-r from-[#ffffff57] to-black/50"
+            >
+              <div
+                class="lg:px-[60px] px-[30px] py-2 text-[#F5FAFE] text-[23px] flex items-center gap-5 rounded-full bg-[#09090B] backdrop-blur-[60px]"
+              >
+                <p class="flex lg:gap-[20px] gap-2 items-center">
+                  <span
+                    class="font-semibold text-[24px] block w-[70px] lg:w-[100px] xl:text-[40px] min-992px::text-[32px] bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+                    >4.8M</span
+                  >
+                  <span
+                    class="lg:text-[18px] text-[16px] flex-1 count-para min-1380px:text-[22px] text-[#A3ACB5]"
+                  >
+                    Total App Downloads
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="mb-4 block p-px rounded-full bg-gradient-to-r from-[#ffffff57] to-black/50">
+              <div
+                class="lg:px-[60px] px-[30px] py-2 text-[#F5FAFE] text-[23px] flex items-center gap-5 rounded-full bg-[#09090B] backdrop-blur-[60px]"
+              >
+                <p class="flex lg:gap-[20px] gap-2 items-center">
+                  <span
+                    class="font-semibold text-[24px] block w-[70px] lg:w-[100px] xl:text-[40px] min-992px::text-[32px] bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+                    >5.0★</span
+                  >
+
+                  <span
+                    class="lg:text-[18px] text-[16px] flex-1 count-para min-1380px:text-[22px] text-[#A3ACB5]"
+                  >
+                    on
+                  </span>
+                  <img src="./img/clutch (1).svg" alt="clutch" class="w-[80px] xl:w-[100px]" />
+                </p>
+              </div>
+            </div>
+            <div
+              class="mb-4 block p-[1px] rounded-full bg-gradient-to-r from-[#ffffff57] to-black/50"
+            >
+              <div
+                class="lg:px-[60px] px-[30px] py-2 text-[#F5FAFE] text-[23px] flex items-center gap-5 rounded-full bg-[#09090B] backdrop-blur-[60px]"
+              >
+                <p class="flex lg:gap-[20px] gap-2 items-center">
+                  <span
+                    class="font-semibold text-[24px] block w-[70px] lg:w-auto xl:text-[40px] min-992px::text-[32px] bg-[linear-gradient(193.77deg,#4361EE_12.49%,#FFFFFF_82.16%)] bg-clip-text text-transparent"
+                    >1000+</span
+                  >
+                  <span
+                    class="lg:text-[18px] text-[16px] flex-1 count-para min-1380px:text-[22px] text-[#A3ACB5]"
+                  >
+                    Projects Delivered
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="right_cs text-white justify-center items-center flex flex-col">
+            <div class="w-full xl:max-w-md">
+              <h3 class="text-[#D9DFFC] text-[32px] xl:text-[50px] font-semibold leading-snug">
+                Why Should You Partner With NewAgeSysIT?
+              </h3>
+              <p class="text-[18px] mt-5">
+                Partnering with NewAgeSysIT means accessing a team of seasoned DevOps professionals
+                dedicated to optimizing your IT operations. We prioritize your business objectives,
+                delivering tailored solutions that enhance scalability, performance, and security.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+
+    <section class="text-white py-20 relative">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-[30px] md:text-[40px] font-[400] mb-10 leading-snug">
+          Here’s What Our Clients Say About The <br class="hidden md:block" />
+          Results They’ve Made With Us
+        </h2>
+      </div>
+
+      <div
+        class="relative min-h-screen text-zinc-100 px-6 py-24 hidden lg:flex flex-col items-center justify-center overflow-hidden"
+      >
+        <!-- Background SVGs -->
+        <img
+          src="./img/left.svg"
+          alt="Background Top"
+          class="absolute top-0 left-0 pointer-events-none hidden xl:block"
+        />
+        <img
+          src="./img/right upper.svg"
+          alt="Background Top"
+          class="absolute top-[70px] right-0 pointer-events-none hidden xl:block"
+        />
+        <img
+          src="./img/right under.svg"
+          alt="Background Top"
+          class="absolute top-1/2 right-0 pointer-events-none hidden xl:block"
+        />
+
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 max-w-6xl w-full">
+          <!-- Left Column -->
+          <div class="flex flex-col gap-6">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-transparent backdrop-blur-md p-6 transition-opacity duration-1000 ease-in-out opacity-30 max-w-lg"
+            >
+              <p
+                class="text-base leading-relaxed font-[Inter,sans-serif] bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text"
+              >
+                <img
+                  src="./img/quote-golang.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="block w-8 h-8 mb-2 opacity-20"
+                />
+                NewAgeSys built and maintains my app with outstanding quality and personal service —
+                I'd give them six out of five stars!
+              </p>
+              <div
+                class="mt-4 pt-3 border-t bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text font-[Inter,sans-serif]"
+              >
+                <p class="text-[18px] font-semibold text-[#8EA0F5]">Rob Evans</p>
+                <p class="text-sm text-zinc-400">CEO - DONUT MAN APP</p>
+              </div>
+            </div>
+
+            <!-- Video thumbnail -->
+            <div class="relative rounded-2xl overflow-hidden max-h-64 opacity-50">
+              <img
+                src="./img/v1.gif"
+                alt="LARRY SEIBEL"
+                class="w-[470px] h-full object-cover rounded-2xl"
+              />
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 w-full v1-gradient z-10"
+              ></div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-transparent backdrop-blur-md p-6 transition-opacity duration-1000 ease-in-out opacity-60"
+            >
+              <p
+                class="text-[18px] font-[400] leading-relaxed bg-gradient-to-r from-white/20 to-white text-transparent bg-clip-text"
+              >
+                <img
+                  src="./img/quote-golang.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="block w-10 mb-2 opacity-50"
+                />
+                NewAgeSys built our app with great design, professionalism, and ongoing support.
+              </p>
+              <div
+                class="mt-4 pt-3 border-t"
+                style="
+                  border-image: linear-gradient(
+                      to right,
+                      rgba(255, 255, 255, 0.5),
+                      rgba(255, 255, 255, 0.05)
+                    )
+                    1;
+                "
+              >
+                <p class="text-[18px] font-semibold text-[#8EA0F5]">LARRY SEIBEL</p>
+                <p class="text-sm text-zinc-400">Founder - CAR-UP App</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex flex-col gap-6 pt-[70px]">
+            <!-- IMAN -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="relative w-full md:w-[380px] h-[280px] rounded-2xl overflow-hidden">
+                <img
+                  src="./img/v2.gif"
+                  alt="IMAN KHAWAJA"
+                  class="w-full h-full object-cover rounded-2xl"
+                />
+                <div
+                  class="v2-gradient w-full h-full absolute inset-0 pointer-events-none z-10"
+                ></div>
+              </div>
+
+              <div
+                class="bg-transparent backdrop-blur-md p-6 md:w-1/2 flex flex-col justify-between"
+              >
+                <p
+                  class="text-[18px] leading-relaxed mb-4 font-[400] bg-gradient-to-r from-white to-white/20 text-transparent bg-clip-text"
+                >
+                  <img
+                    src="./img/quote-golang.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-10 mb-2"
+                  />
+                  NewAgeSys delivered exceptional, reliable work and truly cared about our app's
+                  success.
+                </p>
+                <div
+                  class="mt-4 pt-3 border-t"
+                  style="
+                    border-image: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0.5),
+                        rgba(255, 255, 255, 0.05)
+                      )
+                      1;
+                  "
+                >
+                  <p class="text-[18px] font-semibold text-[#8EA0F5]">IMAN KHAWAJA</p>
+                  <p class="text-sm text-zinc-400">Owner - ISRA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DAVID -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="relative w-full md:w-1/2 rounded-2xl overflow-hidden max-h-[350px]">
+                <img
+                  src="./img/v3.gif"
+                  alt="DAVID CHABUKASHVILI"
+                  class="w-full h-full object-cover rounded-2xl"
+                />
+                <div
+                  class="v3-gradient w-full h-full absolute inset-0 pointer-events-none z-10"
+                ></div>
+              </div>
+
+              <div class="bg-transparent backdrop-blur-md p-6 md:w-2/3 flex flex-col justify-end">
+                <p
+                  class="text-[18px] leading-relaxed mb-4 font-[400] bg-gradient-to-r from-white to-white/20 text-transparent bg-clip-text"
+                >
+                  <img
+                    src="./img/quote-golang.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-10 mb-2"
+                  />
+                  NewAgeSys delivered high-quality mobile and web apps on time, always going above
+                  and beyond our expectations.
+                </p>
+                <div
+                  class="pt-3 border-t"
+                  style="
+                    border-image: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0.5),
+                        rgba(255, 255, 255, 0.05)
+                      )
+                      1;
+                  "
+                >
+                  <p class="text-[18px] font-semibold text-[#8EA0F5]">DAVID CHABUKASHVILI</p>
+                  <p class="text-sm text-zinc-400">Founder - LCard App</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden">
+        <div class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto">
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=_AG--jyDX3c">
+              <img
+                src="./img/client-img-1.webp"
+                alt="Roger J. Clappe"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">ROGER J CLAPPE</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">CEO - Whip-Flip</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=vjy2p5kXaxI">
+              <img
+                src="./img/larry-image.svg"
+                alt="Larry Seibel"
+                class="w-full h-full object-cover rounded-[24px] transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">Larry Seibel</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">Founder - CAR-UP App</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=DgRYCbDIcfA">
+              <img
+                src="./img/client-img-3.webp"
+                alt="Rob Salerno"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">Rob Salerno</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate uppercase">
+                  CEO - CliquePrize
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=PttTsDGO2AA">
+              <img
+                src="./img/client-img-4.webp"
+                alt="Chris O'Rorke"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">Chris O'Rorke</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate uppercase">
+                  Guaranteed Tip Sheet
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=zd8bK6UKH5M">
+              <img
+                src="./img/client-img-5.webp"
+                alt="Iman Khawaja"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">Iman Khawaja</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">Owner - ISRA</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=mr6aBH9l_d0">
+              <img
+                src="./img/client-img-6.webp"
+                alt="David Chabukashvili"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">David Chabukashvili</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate">Founder - Lcard App</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="relative group cursor-pointer">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=slRQbxC1UoI">
+              <img
+                src="./img/client-img-7.webp"
+                alt="Rob Evans"
+                class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+              />
+              <div
+                class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+              >
+                <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <img
+                    src="./img/video-play.svg"
+                    alt="Play Button"
+                    loading="lazy"
+                    class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
+                  />
+                </div>
+                <p class="text-[18px] font-[300] truncate mb-0.5 uppercase">Rob Evans</p>
+                <p class="text-[16px] text-white opacity-[0.5] truncate uppercase">
+                  CEO - Donut Man app
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- View All Button -->
+      <div class="mt-8 flex justify-center">
+        <a
+          href="#"
+          class="flex items-center justify-center gap-2 h-[65px] rounded-full border border-white bg-[#F5FAFE] text-[#212121] text-sm font-medium transition-all duration-300 hover:opacity-90 px-8 sm:w-[360px] sm:h-[55px] md:w-[420px] md:h-[60px] lg:w-[466px] lg:h-[65px]"
+        >
+          View All Testimonials
+          <svg
+            width="7"
+            height="11"
+            viewBox="0 0 7 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+              stroke="#212121"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Soft Blend into Case Studies -->
+      <div
+        class="pointer-events-none absolute bottom-0 left-0 w-full h-[140px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,#09090B_100%)]"
+      ></div>
+    </section>
+
+    <section class="relative text-white py-10 lg:pt-20 overflow-hidden px-5 tech-sect-bg-android">
+      <div class="w-full container relative z-10 pt-20">
+        <h2
+          class="text-[34px] md:text-[50px] text-white font-[400] text-center mb-3 lg:text-left lg:mb-12"
+        >
+          The Tangible Benefits Of CI/<br />CD Implementation
+        </h2>
+        <p class="text-left text-[#A3ACB5] text-[15px] sm:text-[17px] pb-10 leading-[26px]">
+          Experience the transformative power of CI/CD in DevOps, enabling
+          <br />iterative workflows, swift bug resolution, and enhanced transparency.
+        </p>
+        <div class="slider-2a owl-carousel owl-theme overflow-visible">
+          <!-- CARD 1 -->
+
+          <div
+            class="bg-[#1B1D1E] text-[#A3ACB5] rounded-[18px] p-8 text-left shadow-lg min-h-[400px] flex flex-col justify-between"
+          >
+            <div>
+              <img src="./img/tca-1.svg" alt="" class="!w-10 h-10 mb-4" />
+
+              <h3 class="text-xl font-semibold mb-2">Improved Collaboration</h3>
+              <p class="text-[16px] leading-[26px]">
+                CI/CD fosters cohesive teamwork among development, operations, QA, and management
+                teams, eliminating blame culture and promoting a unified business infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#1B1D1E] text-[#A3ACB5] rounded-[18px] p-8 text-left shadow-lg min-h-[400px] flex flex-col justify-between"
+          >
+            <div>
+              <img src="./img/tca-4.svg" alt="Logistics" class="!w-10 h-10 mb-4" />
+
+              <h3 class="text-xl font-semibold mb-2">Cost Optimization</h3>
+              <p class="text-[16px] leading-[26px]">
+                Reduce project costs by automating development and deployment processes, minimizing
+                repetitive errors, and saving valuable time and resources.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#1B1D1E] text-[#A3ACB5] rounded-[18px] p-8 text-left shadow-lg min-h-[400px] flex flex-col justify-between"
+          >
+            <div>
+              <img src="./img/tca-3.svg" alt="ECommerce" class="!w-10 h-10 mb-4" />
+
+              <h3 class="text-xl font-semibold mb-2">Enhanced Testability</h3>
+              <p class="text-[16px] leading-[26px]">
+                Deploying code in smaller batches through CI/CD enables precise execution of
+                automated tests, significantly reducing bug rates and accelerating release cycles.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#1B1D1E] text-[#A3ACB5] rounded-[18px] p-8 text-left shadow-lg min-h-[400px] flex flex-col justify-between"
+          >
+            <div>
+              <img src="./img/tca-2.svg" alt="" class="!w-10 h-10 mb-4" />
+              <h3 class="text-xl font-semibold mb-2">Time Efficiency</h3>
+              <p class="text-[16px] leading-[26px]">
+                When configured properly, a DevOps CI/CD pipeline uses metrics and tools to track
+                progress, allowing teams to focus on delivering new features and functionalities
+                only when needed.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="bg-[#1B1D1E] text-[#A3ACB5] rounded-[18px] p-8 text-left shadow-lg min-h-[400px] flex flex-col justify-between"
+          >
+            <div>
+              <img src="./img/tca-6.svg" alt="FinTech" class="!w-10 h-10 mb-4" />
+              <h3 class="text-xl font-semibold mb-2">Speed and Productivity</h3>
+              <p class="text-[16px] leading-[26px]">
+                Continuous delivery ensures developers receive immediate feedback based on market
+                trends, enabling early bug detection and prompt resolutions with innovative
+                solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="bg-[#1B1D1E] text-[#A3ACB5] rounded-[18px] p-8 text-left shadow-lg min-h-[400px] flex flex-col justify-between"
+          >
+            <div>
+              <img src="./img/tca-1.svg" alt="ECommerce" class="!w-10 h-10 mb-4" />
+              <h3 class="text-xl font-semibold mb-2">Streamlined Delivery</h3>
+              <p class="text-[16px] leading-[26px]">
+                CI/CD automates the entire delivery process, synchronizing staging and production
+                environments while providing the flexibility to roll back to earlier development
+                stages as necessary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background gradient overlay -->
+
+      <div
+        class="absolute right-0 bottom-0 bg-[linear-gradient(111.27deg,#D9DFFC_22.8%,#364EBE_94.24%)] w-[210px] h-[400px] lg:w-[1000px] lg:h-[450px]"
+      ></div>
+    </section>
+
+    <section class="w-full bg-[#1B1B1B] py-16 md:py-20 lg:py-[80px] text-white">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Heading -->
+
+        <h2
+          class="text-center text-[24px] sm:text-[28px] md:text-[36px] xl:text-[50px] font-[400] mb-4 text-white leading-[32px] md:leading-[44px]"
+        >
+          Industries We Specialize In
+        </h2>
+        <p class="text-center text-[#A3ACB5] text-[15px] sm:text-[17px] leading-[26px]">
+          At NewAgeSysIT, we provide tailored CI/CD consulting and implementation services across
+          diverse industries.<br />Whether you’re in healthcare, finance, e-commerce,
+          transportation, or manufacturing, our expertise ensures that <br />your CI/CD pipelines
+          are customized to address your sector's specific challenges and objectives. By aligning
+          with<br />
+          your business goals, we drive operational excellence, accelerate delivery cycles, and
+          enhance scalability to meet<br />
+          the demands of an ever-evolving market.
+        </p>
+
+        <!-- Divider line -->
+        <div class="mt-10 mb-8 h-px bg-[#2A2A2A]"></div>
+
+        <!-- Helper comment:
+         Card structure = outer gradient border + inner double-gradient bg
+    -->
+
+        <!-- ============ SERVICES ============ -->
+        <div class="mb-10 pb-10">
+          <button
+            type="button"
+            class="w-full flex items-center justify-between mb-6"
+            data-accordion-header="services"
+          >
+            <h3 class="text-[18px] md:text-[35px] font-medium">Services</h3>
+            <span data-accordion-arrow="services" class="transition-transform duration-200">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-[#A3A3A3]"
+                viewBox="0 0 20 20"
+                fill="#FFFFFF"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.061l-4.24 4.243a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </button>
+
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3" data-accordion-body="services">
+            <!-- col 1 -->
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Transportation </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Social Networking </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Restaurant </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> SaaS </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> ON-Demand </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Entertainment </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]">E-commerce </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Game App </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Healthcare </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Travel </span>
+              </div>
+            </div>
+
+            <!-- DevOps & advanced services -->
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Uber Like Platform </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> FinTech </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Wellness </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Real Estate </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Education </span>
+              </div>
+            </div>
+
+            <div
+              class="rounded-[10px] p-[1px] bg-[linear-gradient(118.67deg,rgba(163,163,163,0.48)_14.52%,rgba(61,61,61,0)_62.68%)]"
+            >
+              <div
+                class="flex items-center gap-3 rounded-[9px] px-4 py-5 bg-[linear-gradient(90deg,#262330_39.03%,rgba(32,33,43,0)_100%),linear-gradient(128.8deg,rgba(255,255,255,0.06)_5.96%,rgba(255,255,255,0)_38.06%)]"
+              >
+                <div class="relative flex w-[28px] h-[28px] items-center justify-center">
+                  <!-- Gradient circle with 50% opacity -->
+                  <div
+                    class="absolute inset-0 rounded-full opacity-50 bg-gradient-to-br from-[#60fa82] to-[#00b227] shadow-[0px_4px_21px_0px_#0000005C]"
+                  ></div>
+
+                  <!-- White check icon on top -->
+                  <svg
+                    viewBox="0 0 12 8"
+                    class="relative z-10 w-[14px] h-[14px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#D2C9C9"
+                  >
+                    <path
+                      d="M3.96588 7.9455C3.74417 7.9455 3.53354 7.85681 3.37835 7.70162L0.241109 4.56443C-0.0803695 4.24296 -0.0803695 3.71085 0.241109 3.38938C0.562587 3.0679 1.09469 3.0679 1.41617 3.38938L3.96588 5.93903L9.6638 0.241109C9.98527 -0.0803695 10.5174 -0.0803695 10.8389 0.241109C11.1603 0.562587 11.1603 1.09469 10.8389 1.41617L4.5534 7.70162C4.39821 7.85681 4.18758 7.9455 3.96588 7.9455Z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-[14px] md:text-[15px] text-[#F5FAFE]"> Pet Care </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 lg:py-20 bg-[#000000] text-white">
+      <div class="container">
+        <div class="text-[20px] text-center">
+          <h2
+            class="text-[30px] md:text-[40px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-2 max-w-[800px] mx-auto"
+          >
+            Technology
+          </h2>
+          <div class="ill-dec text-[#8C8C8C]">
+            <!-- <p>
+                 We help businesses build iOS applications that are intuitive and extensible, with adequate room for <br/>scalability for the future. Here’s a list of technologies and tools our iOS app developers use while <br/>building your business applications.
+                </p> -->
+          </div>
+        </div>
+        <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+          <div class="accordion faq-accordion">
+            <div class="flex flex-wrap relative">
+              <div class="basis-full text-black">
+                <div class="px-[6px]">
+                  <div class="bg-[#20212B] rounded-[10px] min-h-[80px]">
+                    <!-- <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[23px] border-b border-white/20"
+                    >
+                      <span class="font-[300]">Technology</span>
+                    </button> -->
+
+                    <div class="accordion-content-ppc show">
+                      <div class="p-2 md:p-5 flex flex-wrap gap-2 md:gap-4">
+                        <!-- Web.go -->
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/dov1.svg"
+                                alt="web.go"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p class="text-[16px] md:text-[18px] text-white px-1 md:px-2">
+                                GitLab CI/CD
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Revel -->
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/dov2.svg"
+                                alt="Revel"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p class="text-[16px] md:text-[18px] text-white px-1 md:px-2">
+                                AWS Developer Tools
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Gin -->
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/dov3.svg"
+                                alt="Gin"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p class="text-[16px] md:text-[18px] text-white px-1 md:px-2">
+                                Amazon Web Services
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Martini -->
+                        <div
+                          class="p-[1px] rounded-xl bg-gradient-to-b from-[#f9fafb7e] to-[#2b2d3a50] inline-block"
+                        >
+                          <div class="flex flex-wrap">
+                            <div
+                              class="flex items-center justify-center border rounded-xl px-2 bg-[#2B2D3A]"
+                            >
+                              <img
+                                src="./img/dov4.svg"
+                                alt="Martini"
+                                class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] m-2"
+                              />
+                              <p class="text-[16px] md:text-[18px] text-white px-1 md:px-2">Jira</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#1b1b1b8c] client_experiences relative z-10 bg-[#09090B]">
+      <div class="container">
+        <div class="text-center max-w-8xl mx-auto mb-10 px-4">
+          <h2
+            class="text-[30px] text-white md:text-[36px] lg:text-[50px] font-[400] text-center min-992px:leading-[60px] mb-12 max-w-6xl mx-auto"
+          >
+            Case Studies that Resonate with Our DevOps CI/CD Services
+          </h2>
+          <p class="text-center text-[#A3ACB5] text-[15px] sm:text-[17px] leading-[26px]">
+            Deep dive into the heartfelt words from our clients about their experiences with the
+            DevOps CI/CD Services we’ve offered<br />
+            to their businesses. With custom DevOps CI/CD Services, we have helped businesses
+            transform and deliver <br />the best to their clients for everlasting success.
+          </p>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme client_says">
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>Lcard</h2>
+              <p>
+                A stunning digital business card app with a personalized and interactive profile
+                where a user can create and share unlimited digital cards for different customers.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>100k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>300k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Lcard.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/David-Chabukashvili-1-1-1.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>David-Chabukashvili</h3>
+                  <p>Founder - L-Card App</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  They delivered everything on time and it was of great quality. They go above and
+                  beyond to meet your requirements and deliver the product you are looking for…
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>ISRA</h2>
+              <p>
+                An On-demand service-providing application that effortlessly connects customers with
+                hairstylist professionals and make-up artists on schedule.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Isra.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/iman.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Iman Khwaja</h3>
+                  <p>Owner - ISRA</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end, they were there for me.
+                  <br />They were very systematic and methodical in every single step and…
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>WhipFlip</h2>
+              <p>
+                An on-demand app connects you with a network of experts, from car buying and selling
+                professionals to dedicated concierges who ensure smooth appointment scheduling.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/WhipFlip.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/whipflip-ceo.jpg" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Roger C Clappe</h3>
+                  <p>CEO - WhipFlip</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end, they were there for me.
+                  They were very systematic and methodical in every single step and …..
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-top">
+            <div class="it-left">
+              <h2>Car-up</h2>
+              <p>
+                Car-Up offers the most convenient and transparent auto repair service, disrupting
+                the industry with unparalleled customer service.
+              </p>
+            </div>
+            <div class="it-right">
+              <div class="itr-item">
+                <h2>10k</h2>
+                <p>Active Users</p>
+              </div>
+              <div class="itr-item">
+                <h2>15k+</h2>
+                <p>Total Appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-middle">
+            <img src="./img/Car-up.webp" alt="" />
+          </div>
+          <div class="item-last">
+            <div class="il-left">
+              <div class="il-left-top">
+                <div class="ilt-left">
+                  <img src="./img/LARRY-SEIBEL-CARUP.webp" alt="" />
+                </div>
+                <div class="ilt-right">
+                  <h3>Larry Seibel</h3>
+                  <p>Founder- Car-Up App</p>
+                </div>
+              </div>
+              <div class="ill-dec">
+                <p>
+                  From every single moment, from the beginning till the end, they were there for me.
+                  They were very systematic and methodical in every single step and …
+                </p>
+              </div>
+            </div>
+            <div class="il-right">
+              <a href="#" class="btn-knowmore">
+                View Case Study
+                <span>
+                  <svg
+                    width="7"
+                    height="11"
+                    viewBox="0 0 7 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.16718 9.50482L5.46945 5.20261L1.16718 0.900391"
+                      stroke="#212121"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq py-10 md:py-[80px] relative overflow-hidden">
+      <!-- <div class="absolute inset-0 pointer-events-none -z-10">
+        <img
+          src="./img/why-choose-gradient.webp"
+          alt="Glow Background"
+          class="w-full h-full object-cover object-center scale-110"
+        />
+      </div> -->
+      <div class="container">
+        <h2
+          class="text-3xl md:text-4xl xl:text-[50px] font-[400] mb-2 text-center mx-auto w-full text-white"
+        >
+          FAQ
+        </h2>
+        <p
+          class="text-[#A3ACB5] text-[16px] md:text-[18px] font-normal text-center leading-relaxed pt-12 pb-5"
+        >
+          Here are some questions you might have. If you have other questions, feel free to contact
+          or have a consultation session.
+        </p>
+        <div class="slider_wrapper pt-6 md:pt-[50px] w-full mx-auto relative">
+          <div class="accordion faq-accordion">
+            <div class="flex justify-center relative">
+              <div class="w-full lg:w-[80%] text-white">
+                <div class="px-[6px]">
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal">Why Opt for CI/CD Deployment?</span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content show">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          The main benefit of implementing CI/CD (Continuous Integration and
+                          Continuous Deployment) is the significant boost in development efficiency
+                          and product quality. CI/CD automates various stages of the software
+                          development lifecycle, reducing manual errors and speeding up the delivery
+                          process. It enables teams to release updates and features more frequently,
+                          improving time-to-market while allowing businesses to focus on innovation
+                          and their core strengths.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >Our infrastructure is hosted on AWS. Is it possible to integrate CI/CD with
+                        our AWS environment using NewAgeSysIT?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Yes, AWS CI/CD implementations are our area of expertise. We customize
+                          solutions to match your company's needs and guarantee seamless operations,
+                          whether setting up AWS CodePipeline or integrating with Amazon EC2, S3, or
+                          other AWS services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >CI/CD is unfamiliar to my team. Can NewAgeSysIT assist us with setup and
+                        training?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Of course! In addition to putting CI/CD pipelines into place, we also help
+                          your team along the way by providing training and support to guarantee
+                          smooth adoption and long-term success.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >Security is an issue for us. Are safeguards for our applications part of
+                        CI/CD?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Indeed, security plays a key role in how we execute CI/CD. We guarantee
+                          that automated security checks, role-based access, and vulnerability
+                          assessments are a part of your CI/CD pipeline by integrating DevSecOps
+                          methods.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >Bugs discovered late in development cause delays. Can this be handled by
+                        CI/CD?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Indeed, automated testing is incorporated into CI/CD pipelines at every
+                          development stage, enabling the early detection and correction of bugs.
+                          Higher-quality software and quicker releases are the outcomes of this.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >Are large-scale enterprise apps compatible with CI/CD pipelines?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Of course! Scaling CI/CD pipelines for businesses is something that
+                          NewAgeSysIT has experience with. We make sure your pipeline can easily
+                          handle huge development teams, complicated workflows, and high-volume
+                          deployments.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >How can I begin implementing CI/CD in my company?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          It's easy to get started. Get in touch with NewAgeSysIT, our professionals
+                          will evaluate your existing processes, suggest the optimal CI/CD plan, and
+                          put a solution in place that meets your company's goals.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >My organization needs to update its software more quickly. Can we
+                        accomplish this with CI/CD?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Of course! Software development, testing, and deployment procedures are
+                          automated by CI/CD pipelines, allowing for quicker and more frequent
+                          releases. We at NewAgeSysIT make sure your pipeline is efficient, which
+                          minimizes delays and enables the prompt release of updates and new
+                          features.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal">How may CI/CD lower my company's expenses?</span>
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          CI/CD lowers project costs by automating repetitive operations, reducing
+                          human error, and guaranteeing quicker issue fixes. NewAgeSysIT increases
+                          productivity while saving time and money by streamlining your development
+                          and deployment procedures.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >We use a variety of cloud systems. Is it possible to configure a CI/CD
+                        pipeline for a multi-cloud or hybrid environment?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Indeed, our team has a great deal of experience creating CI/CD pipelines
+                          for hybrid and multi-cloud environments. We design solutions that
+                          guarantee compatibility, scalability, and performance whether you utilize
+                          AWS, Azure, GCP, or a combination of these.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >Can we make the switch from manual to continuous deployment with the aid of
+                        NewAgeSysIT?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Of course! In order to guarantee that your application is constantly
+                          deployment-ready and released with the least amount of manual
+                          intervention, we assist companies in implementing continuous deployment
+                          procedures.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >My organization lacks internal DevOps knowledge. Is it possible for
+                        NewAgeSysIT to manage the complete CI/CD process for us?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Indeed, we provide complete CI/CD services, including strategy, design,
+                          implementation, and continuing support. Our staff makes sure your pipeline
+                          is properly maintained so you can concentrate on running your main
+                          company.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="min-h-[80px] border-b border-[#c4b2b22c] mb-4">
+                    <button
+                      class="w-full text-left focus:outline-none flex justify-between items-center text-white py-5 pl-5 pr-[50px] relative text-[18px] lg:text-[23px]"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <span class="font-normal"
+                        >How can CI/CD enhance the quality of our software?</span
+                      >
+                      <span
+                        class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
+                      >
+                        <img src="./img/arrow-down.svg" alt="icon" class="w-6 h-6" />
+                      </span>
+                    </button>
+                    <div class="accordion-content">
+                      <div class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]">
+                        <p>
+                          Every code change is automatically tested and validated prior to
+                          deployment thanks to CI/CD. This makes the program more stable and
+                          dependable, lowers errors, and improves the quality of the code.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accordion script for Services, Technologies, and Hire sections -->
+    <script>
+      (function () {
+        const MOBILE_BREAKPOINT = 768; // px; expand by default only at/above this width
+
+        const setInitialState = (body, arrow, isMobile) => {
+          if (!body) return;
+          if (isMobile) {
+            body.classList.add("hidden");
+            if (arrow) arrow.classList.remove("rotate-180");
+          } else {
+            body.classList.remove("hidden");
+            if (arrow) arrow.classList.add("rotate-180");
+          }
+        };
+
+        const initAccordion = () => {
+          const headers = document.querySelectorAll("[data-accordion-header]");
+          const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+
+          headers.forEach((btn) => {
+            const key = btn.getAttribute("data-accordion-header");
+            const body = document.querySelector(`[data-accordion-body="${key}"]`);
+            const arrow = document.querySelector(`[data-accordion-arrow="${key}"]`);
+
+            // Set default state based on viewport: collapsed on mobile, open on desktop
+            setInitialState(body, arrow, isMobile);
+
+            // Toggle accordion on click
+            btn.addEventListener("click", () => {
+              if (body) {
+                const isHidden = body.classList.toggle("hidden");
+                if (arrow) {
+                  if (isHidden) {
+                    arrow.classList.remove("rotate-180");
+                  } else {
+                    arrow.classList.add("rotate-180");
+                  }
+                }
+              }
+            });
+          });
+
+          // Re-apply default state on resize across breakpoint to keep intent
+          window.addEventListener(
+            "resize",
+            () => {
+              const nowMobile = window.innerWidth < MOBILE_BREAKPOINT;
+              if (nowMobile === isMobile) return; // no breakpoint cross
+
+              headers.forEach((btn) => {
+                const key = btn.getAttribute("data-accordion-header");
+                const body = document.querySelector(`[data-accordion-body="${key}"]`);
+                const arrow = document.querySelector(`[data-accordion-arrow="${key}"]`);
+                setInitialState(body, arrow, nowMobile);
+              });
+            },
+            { passive: true }
+          );
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initAccordion);
+        } else {
+          initAccordion();
+        }
+      })();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all buttons
+        const buttons = document.querySelectorAll("[data-target]");
+
+        // Add click event listener to each button
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            buttons.forEach((btn) => {
+              btn.classList.remove("text-white");
+              btn.classList.add("text-gray-500");
+            });
+
+            // Add active class to clicked button
+            this.classList.remove("text-gray-500");
+            this.classList.add("text-white");
+
+            // Hide all content items
+            document.querySelectorAll(".content-item").forEach((item) => {
+              item.classList.add("hidden");
+            });
+
+            // Show the target content
+            const targetId = this.getAttribute("data-target");
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+              targetContent.classList.remove("hidden");
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+        document
+          .querySelectorAll(".accordion-content")
+          .forEach((item) => item.classList.remove("show"));
+        document
+          .querySelectorAll(".transform")
+          .forEach((icon) => icon.classList.remove("rotate-180"));
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".client_says").owlCarousel({
+          stagePadding: 200,
+          loop: true,
+          margin: 80,
+          dots: false,
+          items: 1,
+          lazyLoad: true,
+          nav: true,
+          autoplay: false,
+          autoplayTimeout: 3000,
+          smartSpeed: 800,
+          // navText: [
+          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+          //   '<svg width="24" height="18" viewBox="0 0 24 18" fill="none"><path d="M15 18L12.9 15.825L18.225 10.5H0V7.5H18.225L12.9 2.175L15 0L24 9L15 18Z" fill="white"/></svg>',
+          // ],
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+            },
+            600: {
+              items: 1,
+              stagePadding: 50,
+            },
+            1000: {
+              items: 1,
+              stagePadding: 200,
+            },
+            1200: {
+              items: 1,
+              stagePadding: 250,
+            },
+            1400: {
+              items: 1,
+              stagePadding: 300,
+            },
+            1600: {
+              items: 1,
+              stagePadding: 350,
+            },
+            1800: {
+              items: 1,
+              stagePadding: 400,
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".video-popup").magnificPopup({
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 300,
+          preloader: true,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      function toggleAccordionPPC(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Find the parent section that contains this accordion
+        const parentSection = button.closest(".basis-full");
+
+        if (parentSection) {
+          // Close all accordion items within this section only
+          const sectionAccordionItems = parentSection.querySelectorAll(".accordion-content-ppc");
+          sectionAccordionItems.forEach((item) => {
+            item.classList.remove("show");
+          });
+
+          // Rotate all accordion icons within this section only
+          const sectionAccordionIcons = parentSection.querySelectorAll(".transform");
+          sectionAccordionIcons.forEach((icon) => {
+            icon.classList.remove("rotate-180");
+          });
+        }
+
+        // Open the clicked accordion item if it was closed
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("span:last-child").classList.add("rotate-180");
+        }
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-1").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 1, // Show 3 items at larger screens
+              stagePadding: 300,
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-1 .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-1 .owl-nav .owl-next");
+        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Initialize carousel
+        const owl = $(".slider-2a").owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: true,
+          dots: false,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              stagePadding: 20,
+              margin: 10,
+            },
+            768: {
+              items: 2,
+              stagePadding: 50,
+              margin: 15,
+            },
+            1024: {
+              items: 3,
+              // stagePadding: 40,
+              margin: 20,
+            },
+            1440: {
+              items: 3, // Show 3 items at larger screens
+              // stagePadding: 200,
+              margin: 20,
+            },
+            1600: {
+              items: 4, // Show 3 items at larger screens
+
+              margin: 25,
+            },
+          },
+          onInitialized: function () {
+            // Get the tallest item height
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            // Set all items to that height
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+          onResized: function () {
+            // Recalculate heights on resize
+            $(".slider-1 .owl-item").css("height", "auto");
+            var maxHeight = Math.max.apply(
+              null,
+              $(".slider-1 .owl-item")
+                .map(function () {
+                  return $(this).height();
+                })
+                .get()
+            );
+            $(".slider-1 .owl-item").height(maxHeight);
+          },
+        });
+
+        // Get leftOverlay element
+        const leftOverlay = document.getElementById("leftOverlay1");
+
+        // Add blur effect on slide change
+        owl.on("translate.owl.carousel", function () {
+          if (leftOverlay) {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Remove blur when back to first slide
+        owl.on("changed.owl.carousel", function (event) {
+          if (!leftOverlay) return;
+
+          const carousel = event.relatedTarget;
+          const current = carousel.current();
+          const firstIndex = carousel.minimum();
+
+          if (current === firstIndex) {
+            setTimeout(() => {
+              leftOverlay.classList.remove("backdrop-blur-3xl");
+            }, 300); // wait for animation to finish
+          } else {
+            leftOverlay.classList.add("backdrop-blur-3xl");
+          }
+        });
+
+        // Custom navigation setup if needed
+        const nextButton = $(".slider-1 .owl-nav .owl-next");
+        const prevButton = $(".slider-1 .owl-nav .owl-prev");
+
+        if (nextButton.length && prevButton.length) {
+          nextButton.on("click", function () {
+            owl.trigger("next.owl.carousel");
+          });
+
+          prevButton.on("click", function () {
+            owl.trigger("prev.owl.carousel");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const owl = $(".slider-3");
+        const leftOverlay = document.getElementById("leftOverlay3");
+
+        owl.owlCarousel({
+          autoWidth: true,
+          margin: 30,
+          loop: false,
+          dots: false,
+          nav: true,
+          // stagePadding: 180,
+          // responsive: {
+          // 0: { items: 1, stagePadding: 20 },
+          // 768: { items: 2, stagePadding: 50 },
+          // 1024: { items: 3, stagePadding: 100 },
+          // 1440: { items: 1, stagePadding: 0 },
+          // 1600: { items: 1, stagePadding: 0 },
+          // },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        const owl = $(".mobile-slider");
+
+        owl.owlCarousel({
+          items: 2,
+          margin: 30,
+          loop: false,
+          dots: false,
+          nav: true,
+          stagePadding: 180,
+          responsive: {
+            0: { items: 1, stagePadding: 20 },
+            768: { items: 2, stagePadding: 50 },
+          },
+        });
+
+        const nextbutton = document.querySelector(".slider-1 .owl-nav .owl-next");
+        const prevbutton = document.querySelector(".slider-1 .owl-nav .owl-prev");
+      });
+    </script>
+
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const collapsed = document.getElementById("collapsedState");
+      const expanded = document.getElementById("expandedState");
+
+      toggleBtn.addEventListener("click", () => {
+        collapsed.classList.add("hidden");
+        expanded.classList.remove("hidden");
+      });
+
+      document.getElementById("viewLessBtn").addEventListener("click", () => {
+        expanded.classList.add("hidden");
+        collapsed.classList.remove("hidden");
+      });
+    </script>
+
+    <script>
+      (function () {
+        const SELECTOR = ".timeline__item";
+        const CLASS_NAME = "in-view";
+
+        const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
+          (el) => !el.classList.contains(CLASS_NAME)
+        );
+        if (!all.length) return;
+
+        // --- Helper for manual checks (used by Locomotive & fallback) ---
+        function hasEntered(el, offset = 0.9) {
+          const r = el.getBoundingClientRect();
+          const vh = window.innerHeight || document.documentElement.clientHeight;
+          const triggerY = vh * offset; // 0.9 => 90% of viewport height
+          return r.top <= triggerY && r.bottom >= 0;
+        }
+
+        // --- If LocomotiveScroll is present, use its scroll event ---
+        if (window.locoScroll) {
+          const loco = window.locoScroll;
+          const pending = new Set(all);
+
+          function check() {
+            pending.forEach((el) => {
+              if (hasEntered(el)) {
+                el.classList.add(CLASS_NAME);
+                pending.delete(el);
+              }
+            });
+            if (!pending.size && loco.off) {
+              loco.off("scroll", check);
+              window.removeEventListener("resize", check);
+            }
+          }
+
+          loco.on("scroll", check);
+          window.addEventListener("resize", check, { passive: true });
+          // initial pass
+          check();
+          return;
+        }
+
+        // --- Prefer IntersectionObserver when no LocomotiveScroll ---
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add(CLASS_NAME);
+                  obs.unobserve(entry.target); // ONCE
+                }
+              });
+            },
+            {
+              root: null,
+              threshold: 0.15, // fire when ~15% visible
+              rootMargin: "0px 0px -10% 0px", // a touch earlier
+            }
+          );
+
+          all.forEach((el) => io.observe(el));
+          return;
+        }
+
+        // --- Fallback: plain scroll listener ---
+        const pending = new Set(all);
+        function checkFallback() {
+          pending.forEach((el) => {
+            if (hasEntered(el)) {
+              el.classList.add(CLASS_NAME);
+              pending.delete(el);
+            }
+          });
+          if (!pending.size) {
+            window.removeEventListener("scroll", checkFallback);
+            window.removeEventListener("resize", checkFallback);
+          }
+        }
+        window.addEventListener("scroll", checkFallback, { passive: true });
+        window.addEventListener("resize", checkFallback, { passive: true });
+        checkFallback();
+      })();
+    </script>
+    <script>
+      const imageSources = [
+        "./img/android-unique-acc.webp",
+
+        "./img/dedicated-team-golang.webp",
+        "./img/project-based.webp",
+        "./img/fixed-price-models.webp",
+        "./img/time&material.webp",
+      ];
+
+      function toggleUniqueAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("show");
+
+        // Collapse all
+        document.querySelectorAll(".accordion-content").forEach((item) => {
+          item.classList.remove("show");
+          item.parentElement.classList.remove("bg-[#121314]");
+        });
+        document
+          .querySelectorAll(".arrow-icon")
+          .forEach((icon) => icon.classList.remove("-rotate-90"));
+
+        if (!isOpen) {
+          content.classList.add("show");
+          button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
+          content.parentElement.classList.add("bg-[#121314]");
+          // Smooth image fade
+          const imgIndex = button.getAttribute("data-img-index");
+          const newSrc = imageSources[imgIndex];
+          const currentImg = document.getElementById("accordionImage");
+          const nextImg = document.getElementById("accordionImageNext");
+
+          if (currentImg && nextImg) {
+            nextImg.src = newSrc;
+            nextImg.classList.add("opacity-100");
+            currentImg.classList.remove("opacity-100");
+            currentImg.classList.add("opacity-0");
+
+            // After fade completes, swap image sources
+            setTimeout(() => {
+              currentImg.src = newSrc;
+              currentImg.classList.remove("opacity-0");
+              currentImg.classList.add("opacity-100");
+              nextImg.classList.remove("opacity-100");
+              nextImg.src = ""; // Optional cleanup
+            }, 300); // matches transition duration
+          }
+        }
+      }
+    </script>
+    <script>
+      const buttons = document.querySelectorAll(".");
+      const contents = document.querySelectorAll(".content-item");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.target;
+
+          // Reset active states
+          buttons.forEach((b) => {
+            b.classList.remove("text-white");
+            b.classList.add("text-gray-500");
+          });
+          contents.forEach((c) => c.classList.add("hidden"));
+
+          // Activate selected
+          btn.classList.remove("text-gray-500");
+          btn.classList.add("text-white");
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          // disableOn: 700,
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+
+    <!-- Related Blogs: Owl Carousel init (unique instance) -->
+    <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            // navText: [
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
+            // ],
+
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
