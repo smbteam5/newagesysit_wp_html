@@ -36,6 +36,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <style>
+      select[aria-label="Project Type"] {
+        color: #9ca3af;
+      }
+
+      select[aria-label="Project Type"]:valid {
+        color: #ffffff;
+      }
+
+      select[aria-label="Project Type"] option {
+        color: #ffffff;
+        background-color: #0f0f10;
+      }
       .border-gradient {
         border-bottom: 1px solid transparent;
         background: linear-gradient(#0e0e0e, #121212) padding-box,
@@ -6391,7 +6403,7 @@
                 Need Help With E-Commerce App Development?
               </h2>
               <p
-                class="text-[#8C8C8C] mb-4 sm:mb-6 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[23px]"
+                class="text-gray-300 mb-4 sm:mb-6 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[23px]"
               >
                 Our team can collaborate with you. Whether you need help with creating e-commerce
                 applications or e-commerce app development consulting, we’re here to help!
@@ -6400,7 +6412,7 @@
                 class="hidden lg:flex flex-col items-start xl:flex-row xl:items-center gap-3 mt-6 lg:mt-10"
               >
                 <img src="./img//avatar-group.webp" alt="Clients" class="h-8 lg:h-10" />
-                <span class="text-[18px] lg:text-[23px] text-[#8C8C8C]"
+                <span class="text-[18px] lg:text-[23px] text-gray-400"
                   >Endorsed by the trust of clients worldwide</span
                 >
               </div>
@@ -6414,39 +6426,53 @@
                 <input
                   type="text"
                   placeholder="Name"
-                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-[#8C8C8C] text-[14px] sm:text-[16px] placeholder-[#8C8C8C] focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
+                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-[#8C8C8C] text-[14px] sm:text-[16px] placeholder-[#8C8C8C] focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
+                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
                 />
                 <input
                   type="text"
                   placeholder="Company"
-                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-[#8C8C8C] text-[14px] sm:text-[16px] placeholder-[#8C8C8C] focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
+                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
                 />
                 <input
                   type="text"
                   placeholder="Role"
-                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-[#8C8C8C] text-[14px] sm:text-[16px] placeholder-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
+                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
                 />
-                <select
-                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-[#8C8C8C] text-[14px] sm:text-[16px] focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
-                >
-                  <option value="" disabled selected>Select Project Type</option>
-                  <option value="e-commerce-app">E-commerce App</option>
-                  <option value="mobile-app">Mobile App</option>
-                  <option value="web-app">Web Application</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="other">Other</option>
-                </select>
+                <div class="relative">
+                  <select
+                    name="project-type"
+                    class="w-full bg-[#09090B] border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px] appearance-none"
+                    aria-label="Project Type"
+                    required
+                  >
+                    <option value="" disabled selected hidden>Project Type</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-app">Mobile App Development</option>
+                    <option value="ui-ux">UI/UX Design</option>
+                    <option value="branding">Branding</option>
+                  </select>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
                 <input
                   type="text"
                   placeholder="Budget Range (optional)"
-                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-[#8C8C8C] text-[14px] sm:text-[16px] placeholder-[#8C8C8C] focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
+                  class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]"
                 />
-
                 <a
                   href="#"
                   class="flex items-center justify-center text-center font-semibold text-white text-[14px] sm:text-[16px] md:text-[18px] bg-[#FF5B14] rounded-full px-8 sm:px-12 py-3 sm:py-4 hover:opacity-90 transition-all duration-200 w-full sm:w-[280px] h-[52px] sm:h-[65px] whitespace-nowrap"
