@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -110,11 +110,14 @@
         justify-content: center;
         border: 2px solid transparent;
         border-radius: 9999px;
-        background: linear-gradient(#fff, #fff) padding-box,
+        background:
+          linear-gradient(#fff, #fff) padding-box,
           linear-gradient(90deg, #09fe1d 0%, #ff18bd 53.85%, #ff9252 100%)
             border-box;
         box-shadow: 0 12px 30px rgba(255, 24, 189, 0.25);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .button-gradient-border:hover {
@@ -4902,14 +4905,9 @@
       <section
         class="relative text-white py-10 overflow-hidden px-5 golang-sect-border-1"
       >
-        <!-- 🟩 LEFT SECTION (Glassy Text Overlay) -->
-        <!-- Blur is removed by default and will be toggled when the slider moves -->
         <div
           class="w-full xl:w-[55%] xl:absolute z-30 left-0 bottom-[2px] h-full flex md:pt-20 mx-auto min-1380px:pl-[calc((100vw-1240px)/2)] min-1536px:pl-[calc((100vw-1440px)/2)] backdrop-blur-3xl"
         >
-          <!-- The blur glass overlay -->
-
-          <!-- Text content above blur -->
           <div class="relative slider-border-golang xl:pt-20">
             <h2
               class="text-[30px] md:text-[50px] font-[400] leading-[50px] mb-6"
@@ -6641,7 +6639,7 @@
         if (parentSection) {
           // Close all accordion items within this section only
           const sectionAccordionItems = parentSection.querySelectorAll(
-            ".accordion-content-ppc"
+            ".accordion-content-ppc",
           );
           sectionAccordionItems.forEach((item) => {
             item.classList.remove("show");
@@ -6707,7 +6705,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             // Set all items to that height
             $(".slider-1 .owl-item").height(maxHeight);
@@ -6721,7 +6719,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             $(".slider-1 .owl-item").height(maxHeight);
           },
@@ -6816,7 +6814,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             // Set all items to that height
             $(".slider-1 .owl-item").height(maxHeight);
@@ -6830,7 +6828,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             $(".slider-1 .owl-item").height(maxHeight);
           },
@@ -6927,10 +6925,10 @@
 
         // Navigation button references (for potential future use)
         const nextbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-next"
+          ".slider-1 .owl-nav .owl-next",
         );
         const prevbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-prev"
+          ".slider-1 .owl-nav .owl-prev",
         );
       });
     </script>
@@ -6962,7 +6960,7 @@
         const CLASS_NAME = "in-view";
 
         const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
-          (el) => !el.classList.contains(CLASS_NAME)
+          (el) => !el.classList.contains(CLASS_NAME),
         );
         if (!all.length) return;
 
@@ -7015,7 +7013,7 @@
               root: null,
               threshold: 0.15, // fire when ~15% visible
               rootMargin: "0px 0px -10% 0px", // a touch earlier
-            }
+            },
           );
 
           all.forEach((el) => io.observe(el));
@@ -7166,8 +7164,6 @@
     </script>
 
     <!-- JavaScript: FAQ Accordion Functionality -->
-    <!-- Purpose: Handles expand/collapse behavior for FAQ items -->
-    <!-- Features: Single-open accordion (closes others when opening new item) -->
     <script>
       const items = document.querySelectorAll("[data-accordion-item]");
 
