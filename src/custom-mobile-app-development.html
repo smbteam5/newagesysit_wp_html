@@ -6736,16 +6736,21 @@
       const toggleBtn = document.getElementById("toggleBtn");
       const collapsed = document.getElementById("collapsedState");
       const expanded = document.getElementById("expandedState");
+      const viewLessBtn = document.getElementById("viewLessBtn");
 
-      toggleBtn.addEventListener("click", () => {
-        collapsed.classList.add("hidden");
-        expanded.classList.remove("hidden");
-      });
+      if (toggleBtn && collapsed && expanded) {
+        toggleBtn.addEventListener("click", () => {
+          collapsed.classList.add("hidden");
+          expanded.classList.remove("hidden");
+        });
+      }
 
-      document.getElementById("viewLessBtn").addEventListener("click", () => {
-        expanded.classList.add("hidden");
-        collapsed.classList.remove("hidden");
-      });
+      if (viewLessBtn && collapsed && expanded) {
+        viewLessBtn.addEventListener("click", () => {
+          expanded.classList.add("hidden");
+          collapsed.classList.remove("hidden");
+        });
+      }
     </script>
 
     <script>
@@ -6882,28 +6887,6 @@
           }
         }
       }
-    </script>
-    <script>
-      const buttons = document.querySelectorAll(".");
-      const contents = document.querySelectorAll(".content-item");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const target = btn.dataset.target;
-
-          // Reset active states
-          buttons.forEach((b) => {
-            b.classList.remove("text-white");
-            b.classList.add("text-gray-500");
-          });
-          contents.forEach((c) => c.classList.add("hidden"));
-
-          // Activate selected
-          btn.classList.remove("text-gray-500");
-          btn.classList.add("text-white");
-          document.getElementById(target).classList.remove("hidden");
-        });
-      });
     </script>
     <script>
       $(function () {
