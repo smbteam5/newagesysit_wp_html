@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   lang="en"
   data-wf-page="66a7a63e1e34a58610234fea"
@@ -7,6 +7,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>Sys IT - Landing</title>
     <link
       rel="stylesheet"
@@ -35,7 +37,7 @@
     <style>
       :root {
         --design-w: 1440;
-        --ring-min: 260px; 
+        --ring-min: 260px;
         --ring-max: 1800px;
         --ring-color: rgba(255, 255, 255, 1);
         --blue-color: #5871f0;
@@ -176,7 +178,8 @@
       .border-gradient {
         border-top: 1px solid transparent;
         background-clip: padding-box;
-        background-image: linear-gradient(
+        background-image:
+          linear-gradient(
             to top,
             rgba(0, 0, 0, 0.2) 0%,
             rgba(0, 0, 0, 0.2) 100%
@@ -201,7 +204,9 @@
       }
 
       #hero {
-        transition: transform 120ms linear, opacity 200ms ease;
+        transition:
+          transform 120ms linear,
+          opacity 200ms ease;
         will-change: transform, opacity;
       }
 
@@ -241,28 +246,28 @@
         color: #9ca3af;
       }
       .bg-primary {
-  background-color: var(--color-primary);
-}
-.bg-black {
-  background-color: var(--color-black);
-}
-.bg-bodyBg {
-  background-color: var(--color-bodyBg);
-}
-.bg-orange {
-  background-color: var(--color-orange);
-}
-.text-gray {
-  color: var(--color-gray);
-}
-.text-lightGray {
-  color: var(--color-lightGray);
-}
-.text-bodyBg {
-  color: var(--color-bodyBg);
-}
-/* test */
-/* 
+        background-color: var(--color-primary);
+      }
+      .bg-black {
+        background-color: var(--color-black);
+      }
+      .bg-bodyBg {
+        background-color: var(--color-bodyBg);
+      }
+      .bg-orange {
+        background-color: var(--color-orange);
+      }
+      .text-gray {
+        color: var(--color-gray);
+      }
+      .text-lightGray {
+        color: var(--color-lightGray);
+      }
+      .text-bodyBg {
+        color: var(--color-bodyBg);
+      }
+      /* test */
+      /* 
 .container {
   max-width: 1200px;
   margin-inline: auto;
@@ -291,157 +296,156 @@
   }
 } */
 
-.banner-section {
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-primary),
-    var(--color-black)
-  );
-}
-.banner-section h1 {
-  background: linear-gradient(to bottom, #989aa4, var(--color-bodyBg));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+      .banner-section {
+        background-image: linear-gradient(
+          to bottom,
+          var(--color-primary),
+          var(--color-black)
+        );
+      }
+      .banner-section h1 {
+        background: linear-gradient(to bottom, #989aa4, var(--color-bodyBg));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-.get-free-btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 6px 18px #ffffff41;
-}
-.get-free-btn .btn-shadow {
-  animation: glowing 1.6s linear infinite;
-}
-@keyframes glowing {
-  0% {
-    height: 14px;
-  }
-  50% {
-    height: 19px;
-  }
-  100% {
-    height: 14px;
-  }
-}
-.get-free-btn:hover .btn-shadow {
-  height: 19px;
-  opacity: 0.7;
-}
+      .get-free-btn:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 6px 18px #ffffff41;
+      }
+      .get-free-btn .btn-shadow {
+        animation: glowing 1.6s linear infinite;
+      }
+      @keyframes glowing {
+        0% {
+          height: 14px;
+        }
+        50% {
+          height: 19px;
+        }
+        100% {
+          height: 14px;
+        }
+      }
+      .get-free-btn:hover .btn-shadow {
+        height: 19px;
+        opacity: 0.7;
+      }
 
-.banner-brands {
-  background-image: linear-gradient(
-    to right,
-    rgba(9, 11, 27, 0.2),
-    rgba(164, 183, 255, 0.2),
-    rgba(10, 12, 26, 0.2)
-  );
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-}
+      .banner-brands {
+        background-image: linear-gradient(
+          to right,
+          rgba(9, 11, 27, 0.2),
+          rgba(164, 183, 255, 0.2),
+          rgba(10, 12, 26, 0.2)
+        );
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+      }
 
-.banner-brands::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    rgba(9, 11, 27, 1),
-    rgba(164, 183, 255, 0.5),
-    rgba(10, 12, 26, 1)
-  );
-}
+      .banner-brands::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(
+          to right,
+          rgba(9, 11, 27, 1),
+          rgba(164, 183, 255, 0.5),
+          rgba(10, 12, 26, 1)
+        );
+      }
 
-@media (max-width: 767.98px) {
-  .banner-brands {
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px);
-    background-image: linear-gradient(
-      to top,
-      rgba(9, 11, 27, 0.2),
-      rgba(10, 12, 26, 0) rgba(164, 183, 255, 0)
-    );
-  }
-  .banner-brands::after {
-    height: 0px;
-    background-image: none;
-  }
-}
+      @media (max-width: 767.98px) {
+        .banner-brands {
+          backdrop-filter: blur(20px) !important;
+          -webkit-backdrop-filter: blur(20px);
+          background-image: linear-gradient(
+            to top,
+            rgba(9, 11, 27, 0.2),
+            rgba(10, 12, 26, 0) rgba(164, 183, 255, 0)
+          );
+        }
+        .banner-brands::after {
+          height: 0px;
+          background-image: none;
+        }
+      }
 
-.animate span {
-  display: inline-block;
-  background: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: inherit;
-  /* white-space: pre; */
-  color: #6c6c6c;
-}
+      .animate span {
+        display: inline-block;
+        background: inherit;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: inherit;
+        /* white-space: pre; */
+        color: #6c6c6c;
+      }
 
-.card-section .card-wrapper {
-  background-image: linear-gradient(to bottom, #2c2c2c, #71809e, #242526);
-  display: block;
-}
-.card-section .card-hover {
-  border-radius: 16px !important;
-}
-.card-section .card-hover:hover {
-  box-shadow: 0 6px 28px #0b3aa927;
-  transform: translateY(-5px) scale(1.02) !important;
-}
-.card-shadow {
-  animation: cardShadow 1.6s linear infinite;
-}
-@keyframes cardShadow {
-  0% {
-    height: 50px;
-  }
-  50% {
-    height: 30px;
-  }
-  100% {
-    height: 50px;
-  }
-}
+      .card-section .card-wrapper {
+        background-image: linear-gradient(to bottom, #2c2c2c, #71809e, #242526);
+        display: block;
+      }
+      .card-section .card-hover {
+        border-radius: 16px !important;
+      }
+      .card-section .card-hover:hover {
+        box-shadow: 0 6px 28px #0b3aa927;
+        transform: translateY(-5px) scale(1.02) !important;
+      }
+      .card-shadow {
+        animation: cardShadow 1.6s linear infinite;
+      }
+      @keyframes cardShadow {
+        0% {
+          height: 50px;
+        }
+        50% {
+          height: 30px;
+        }
+        100% {
+          height: 50px;
+        }
+      }
 
-@media (min-width: 2100px) {
-  .banner-section h1 {
-    font-size: 72px;
-    line-height: 88px;
-    max-width: 1170px;
-  }
-  .banner-description {
-    font-size: 30px;
-    line-height: 44px;
-    max-width: 930px;
-    margin-top: 24px;
-  }
-  .get-free-btn {
-    font-size: 22px;
-  }
-  .get-free-btn span.bg-orange {
-    padding-block: 28px;
-  }
-  .banner-brands p {
-    font-size: 22px;
-    line-height: 32px;
-  }
-  .animate-wrapper .animate {
-    font-size: 49px;
-    line-height: 68px;
-    max-width: 928px;
-  }
-  .card-section h2 {
-    font-size: 64px;
-    line-height: 72px;
-  }
-}
+      @media (min-width: 2100px) {
+        .banner-section h1 {
+          font-size: 72px;
+          line-height: 88px;
+          max-width: 1170px;
+        }
+        .banner-description {
+          font-size: 30px;
+          line-height: 44px;
+          max-width: 930px;
+          margin-top: 24px;
+        }
+        .get-free-btn {
+          font-size: 22px;
+        }
+        .get-free-btn span.bg-orange {
+          padding-block: 28px;
+        }
+        .banner-brands p {
+          font-size: 22px;
+          line-height: 32px;
+        }
+        .animate-wrapper .animate {
+          font-size: 49px;
+          line-height: 68px;
+          max-width: 928px;
+        }
+        .card-section h2 {
+          font-size: 64px;
+          line-height: 72px;
+        }
+      }
     </style>
   </head>
 
   <body class="overflow-x-hidden lg:overflow-x-visible font-inter bg-[#0D0D0D]">
-
     <header
       class="top-0 left-0 right-0 fixed text-white z-[100]"
       style="background-color: rgba(0, 10, 31) !important"
@@ -451,11 +455,15 @@
       >
         <nav class="flex">
           <a href="#">
-            <img src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
-     alt="NewAgeSys IT Logo"
-     class="w-auto h-[40px] md:h-[47px]"
-     width="180" height="47"
-     fetchpriority="high" loading="lazy">
+            <img
+              src="https://newagesysit.com/wp-content/uploads/2023/05/NewAgeSys_IT_W-2.svg"
+              alt="NewAgeSys IT Logo"
+              class="w-auto h-[40px] md:h-[47px]"
+              width="180"
+              height="47"
+              fetchpriority="high"
+              loading="lazy"
+            />
           </a>
           <ul class="hidden lg:flex items-center justify-center lg:ml-6">
             <li class="relative px-4 group">
@@ -1330,7 +1338,12 @@
         </nav>
         <div class="flex items-center space-x-4 lg:hidden md:space-x-0">
           <button class="py-2 px-3 rounded uppercase">
-            <img class="max-w-6" src="./img/call.png" alt="call" loading="lazy" />
+            <img
+              class="max-w-6"
+              src="./img/call.png"
+              alt="call"
+              loading="lazy"
+            />
           </button>
           <button id="mobile-menu-button" class="xl:hidden">
             <svg
@@ -2238,7 +2251,7 @@
       <!-- mobile-menu end-->
     </header>
 
- <section
+    <section
       class="banner-section w-full min-h-screen flex items-center relative pb-25 overflow-hidden"
     >
       <div class="container">
@@ -2456,7 +2469,7 @@
         </svg>
       </figure>
       <!-- awards -->
-       <div
+      <div
         class="border-gradient relative lg:absolute bottom-0 left-0 w-full bg-black/20 py-4 xl:py-6 backdrop-blur-lg"
       >
         <div class="container mx-auto w-full max-w-[1456px] px-4">
@@ -2505,13 +2518,18 @@
           <div
             class="animate max-w-[853px] mx-auto text-[23px] leading-[36px] md:text-[32px] md:leading-[48px] lg:text-[40px] lg:leading-[56px] font-normal text-[#6c6c6c] text-left"
           >
-As a Clutch 5-rated & #1 software development company in the U.S., our team believes in crafting boundless solutions to build, design, and scale AI, mobile, and web-based solutions that drive business growth.
+            As a Clutch 5-rated & #1 software development company in the U.S.,
+            our team believes in crafting boundless solutions to build, design,
+            and scale AI, mobile, and web-based solutions that drive business
+            growth.
           </div>
         </div>
       </div>
     </section>
 
-    <section class="card-section w-full py-20 bg-[#0D0D0D] mt-[-1px] max-lg:pt-10 max-sm:pt-4 overflow-hidden">
+    <section
+      class="card-section w-full py-20 bg-[#0D0D0D] mt-[-1px] max-lg:pt-10 max-sm:pt-4 overflow-hidden"
+    >
       <div class="container">
         <div class="flex justify-center w-full overflow-hidden pb-[150px]">
           <h2
@@ -2520,8 +2538,10 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
             Recognized For Excellence
           </h2>
         </div>
-       
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 mt-10 sm:mt-20">
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 mt-10 sm:mt-20"
+        >
           <div class="w-full lg:pt-31">
             <a href="#" class="card-hover block duration-500">
               <div
@@ -2765,8 +2785,6 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
           </div>
           <div class="w-full max-lg:hidden"></div>
         </div>
-
-
       </div>
     </section>
 
@@ -3344,7 +3362,12 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
               <div
                 class="absolute left-0 top-0 h-full w-full transition-all duration-500 ease-in-out group-hover:w-[calc(100%+50px)]"
               >
-                <img alt="" class="object-cover w-full h-full lazy-load" data-src="./img/pattern-eclipse.webp" loading="lazy">
+                <img
+                  alt=""
+                  class="object-cover w-full h-full lazy-load"
+                  data-src="./img/pattern-eclipse.webp"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="top-[0px] relative pb-6 transition-all duration-500 ease-in-out group-hover:top-[-20px]"
@@ -3369,7 +3392,12 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
               <div
                 class="absolute left-0 top-0 h-full w-full transition-all duration-500 ease-in-out group-hover:w-[calc(100%+50px)]"
               >
-                <img alt="" class="object-cover w-full h-full lazy-load" data-src="./img/pattern-eclipse.webp" loading="lazy">
+                <img
+                  alt=""
+                  class="object-cover w-full h-full lazy-load"
+                  data-src="./img/pattern-eclipse.webp"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="top-[0px] relative transition-all duration-500 ease-in-out pb-6 group-hover:top-[-20px]"
@@ -3395,7 +3423,12 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
               <div
                 class="absolute left-0 top-0 h-full w-full transition-all duration-500 ease-in-out group-hover:w-[calc(100%+50px)]"
               >
-               <img alt="" class="object-cover w-full h-full lazy-load" data-src="./img/pattern-eclipse.webp" loading="lazy">
+                <img
+                  alt=""
+                  class="object-cover w-full h-full lazy-load"
+                  data-src="./img/pattern-eclipse.webp"
+                  loading="lazy"
+                />
               </div>
               <div
                 class="top-[0px] relative transition-all duration-500 ease-in-out pb-6 group-hover:top-[-20px]"
@@ -3871,7 +3904,8 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
             --tw-gradient-from: #3fdb9f;
             --tw-gradient-via: #e51cff;
             --tw-gradient-to: #008cff;
-            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via),
+            --tw-gradient-stops:
+              var(--tw-gradient-from), var(--tw-gradient-via),
               var(--tw-gradient-to);
             background: linear-gradient(
               91.5deg,
@@ -6246,7 +6280,6 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
         </div>
       </div>
     </section>
-    
 
     <section
       class="trusted-providers horizontal-scrolling flex flex-col gap-5 py-[50px] lg:py-[100px] bg-[#0D0D0D]"
@@ -9063,7 +9096,6 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
       </div>
     </section>
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -9083,7 +9115,7 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
       const container = document.querySelector("#steps");
       const steps = gsap.utils.toArray("#steps .step");
       const progressEl = document.querySelector("#progress");
-      
+
       gsap.set(container, { force3D: true, willChange: "transform" });
       gsap.set(steps, {
         willChange: "transform, opacity",
@@ -9118,7 +9150,6 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
         const next = steps[nextIdx];
         gsap.killTweensOf([prev, next]);
 
-        
         gsap.to(prev, {
           autoAlpha: 0,
           y: -40,
@@ -9147,7 +9178,7 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
             onComplete: () => {
               gsap.set(next, { zIndex: steps.length - nextIdx });
             },
-          }
+          },
         );
 
         current = nextIdx;
@@ -9232,167 +9263,211 @@ As a Clutch 5-rated & #1 software development company in the U.S., our team beli
       });
     </script>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // ---- helpers ----
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.userAgent.includes("Mac") && "ontouchend" in document);
-  const vh = () => (isIOS ? screen.height : window.innerHeight);
+      document.addEventListener("DOMContentLoaded", function () {
+        // ---- helpers ----
+        const isIOS =
+          /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+        const vh = () => (isIOS ? screen.height : window.innerHeight);
 
-  // More accurate "below-the-fold" check (partially visible counts as in-viewport)
-  function isBelowFold(el) {
-    const r = el.getBoundingClientRect();
-    return r.top >= vh() || r.left >= (window.innerWidth || document.documentElement.clientWidth);
-  }
-
-  // Preload an image (file or SVG) and then run a callback
-  function preload(src, done) {
-    if (!src) return done && done();
-    if (/\.(svg)(\?|#|$)/i.test(src)) {
-      // For SVG: a quick HEAD/GET check, then just set src
-      fetch(src)
-        .then(r => r.ok ? r.text() : Promise.reject())
-        .then(txt => { if (txt.includes("<svg")) done && done(); else done && done(); })
-        .catch(() => done && done());
-      return;
-    }
-    const tmp = new Image();
-    tmp.onload = () => done && done();
-    tmp.onerror = () => done && done();
-    tmp.src = src;
-  }
-
-  // Fade-in after load
-  function revealImg(img) {
-    img.classList.add("lazy-loaded");
-    img.classList.remove("lazy-load");
-  }
-  function revealBg(el) {
-    el.classList.add("lazy-loaded");
-    el.classList.remove("lazy-load");
-  }
-
-  // ---- IntersectionObservers ----
-  const imageObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const img = entry.target;
-
-      const src = img.getAttribute("data-src");
-      const srcset = img.getAttribute("data-srcset");
-      const sizes = img.getAttribute("data-sizes");
-
-      const apply = () => {
-        if (srcset) img.setAttribute("srcset", srcset);
-        if (sizes) img.setAttribute("sizes", sizes);
-        if (src) img.setAttribute("src", src);
-        // Remove data-* so future scans ignore it
-        img.removeAttribute("data-src");
-        img.removeAttribute("data-srcset");
-        img.removeAttribute("data-sizes");
-        // If already complete (cache), reveal immediately; else wait for onload
-        if (img.complete) {
-          revealImg(img);
-        } else {
-          img.addEventListener("load", () => revealImg(img), { once: true });
-          img.addEventListener("error", () => revealImg(img), { once: true });
+        // More accurate "below-the-fold" check (partially visible counts as in-viewport)
+        function isBelowFold(el) {
+          const r = el.getBoundingClientRect();
+          return (
+            r.top >= vh() ||
+            r.left >=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
         }
-      };
 
-      // Preload first (ensures smooth fade-in)
-      const primary = src || (srcset ? srcset.split(",").pop().trim().split(" ")[0] : "");
-      preload(primary, apply);
+        // Preload an image (file or SVG) and then run a callback
+        function preload(src, done) {
+          if (!src) return done && done();
+          if (/\.(svg)(\?|#|$)/i.test(src)) {
+            // For SVG: a quick HEAD/GET check, then just set src
+            fetch(src)
+              .then((r) => (r.ok ? r.text() : Promise.reject()))
+              .then((txt) => {
+                if (txt.includes("<svg")) done && done();
+                else done && done();
+              })
+              .catch(() => done && done());
+            return;
+          }
+          const tmp = new Image();
+          tmp.onload = () => done && done();
+          tmp.onerror = () => done && done();
+          tmp.src = src;
+        }
 
-      obs.unobserve(img);
-    });
-  }, { rootMargin: "200px 0px", threshold: 0.01 });
+        // Fade-in after load
+        function revealImg(img) {
+          img.classList.add("lazy-loaded");
+          img.classList.remove("lazy-load");
+        }
+        function revealBg(el) {
+          el.classList.add("lazy-loaded");
+          el.classList.remove("lazy-load");
+        }
 
-  const bgObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const bg = el.getAttribute("data-bg");
-      if (!bg) { obs.unobserve(el); return; }
+        // ---- IntersectionObservers ----
+        const imageObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const img = entry.target;
 
-      const setBg = () => {
-        el.style.backgroundImage = `url("${bg}")`;
-        el.removeAttribute("data-bg");
-        revealBg(el);
-      };
+              const src = img.getAttribute("data-src");
+              const srcset = img.getAttribute("data-srcset");
+              const sizes = img.getAttribute("data-sizes");
 
-      preload(bg, setBg);
-      obs.unobserve(el);
-    });
-  }, { rootMargin: "200px 0px", threshold: 0.01 });
+              const apply = () => {
+                if (srcset) img.setAttribute("srcset", srcset);
+                if (sizes) img.setAttribute("sizes", sizes);
+                if (src) img.setAttribute("src", src);
+                // Remove data-* so future scans ignore it
+                img.removeAttribute("data-src");
+                img.removeAttribute("data-srcset");
+                img.removeAttribute("data-sizes");
+                // If already complete (cache), reveal immediately; else wait for onload
+                if (img.complete) {
+                  revealImg(img);
+                } else {
+                  img.addEventListener("load", () => revealImg(img), {
+                    once: true,
+                  });
+                  img.addEventListener("error", () => revealImg(img), {
+                    once: true,
+                  });
+                }
+              };
 
-  // ---- Process <img> elements ----
-  document.querySelectorAll("img").forEach(img => {
-    // Skip LCP/eager/explicitly excluded images
-    if (
-      img.hasAttribute("fetchpriority") ||
-      img.getAttribute("loading") === "eager" ||
-      img.hasAttribute("data-lcp") ||
-      img.hasAttribute("data-skip-lazy")
-    ) return;
+              // Preload first (ensures smooth fade-in)
+              const primary =
+                src ||
+                (srcset ? srcset.split(",").pop().trim().split(" ")[0] : "");
+              preload(primary, apply);
 
-    // If already using native lazy, leave it — but still respect fade-in after load
-    const natLazy = img.getAttribute("loading") === "lazy";
+              obs.unobserve(img);
+            });
+          },
+          { rootMargin: "200px 0px", threshold: 0.01 },
+        );
 
-    // If it's in (or near) viewport, don't lazy it; just attach fade-in
-    if (!isBelowFold(img)) {
-      // ensure fade-in after load
-      if (!img.complete) {
-        img.classList.add("lazy-load");
-        img.addEventListener("load", () => revealImg(img), { once: true });
-        img.addEventListener("error", () => revealImg(img), { once: true });
-      }
-      return;
-    }
+        const bgObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target;
+              const bg = el.getAttribute("data-bg");
+              if (!bg) {
+                obs.unobserve(el);
+                return;
+              }
 
-    // Move src/srcset/sizes to data-* and observe
-    const src = img.getAttribute("src");
-    const srcset = img.getAttribute("srcset");
-    const sizes = img.getAttribute("sizes");
-    if (src) { img.setAttribute("data-src", src); img.removeAttribute("src"); }
-    if (srcset) { img.setAttribute("data-srcset", srcset); img.removeAttribute("srcset"); }
-    if (sizes) { img.setAttribute("data-sizes", sizes); img.removeAttribute("sizes"); }
+              const setBg = () => {
+                el.style.backgroundImage = `url("${bg}")`;
+                el.removeAttribute("data-bg");
+                revealBg(el);
+              };
 
-    // Mark for animation and use native lazy as a hint
-    img.classList.add("lazy-load");
-    if (!natLazy) img.setAttribute("loading", "lazy");
+              preload(bg, setBg);
+              obs.unobserve(el);
+            });
+          },
+          { rootMargin: "200px 0px", threshold: 0.01 },
+        );
 
-    imageObserver.observe(img);
-  });
+        // ---- Process <img> elements ----
+        document.querySelectorAll("img").forEach((img) => {
+          // Skip LCP/eager/explicitly excluded images
+          if (
+            img.hasAttribute("fetchpriority") ||
+            img.getAttribute("loading") === "eager" ||
+            img.hasAttribute("data-lcp") ||
+            img.hasAttribute("data-skip-lazy")
+          )
+            return;
 
-  // ---- Process elements with background images ----
-  document.querySelectorAll("[style*='background-image']").forEach(el => {
-    // Skip eager/LCP backgrounds
-    if (el.hasAttribute("data-lcp") || el.hasAttribute("data-skip-lazy")) return;
+          // If already using native lazy, leave it — but still respect fade-in after load
+          const natLazy = img.getAttribute("loading") === "lazy";
 
-    const comp = window.getComputedStyle(el);
-    const bgImage = comp.backgroundImage;
-    if (!bgImage || bgImage === "none") return;
+          // If it's in (or near) viewport, don't lazy it; just attach fade-in
+          if (!isBelowFold(img)) {
+            // ensure fade-in after load
+            if (!img.complete) {
+              img.classList.add("lazy-load");
+              img.addEventListener("load", () => revealImg(img), {
+                once: true,
+              });
+              img.addEventListener("error", () => revealImg(img), {
+                once: true,
+              });
+            }
+            return;
+          }
 
-    // If already near viewport, keep as-is
-    if (!isBelowFold(el)) return;
+          // Move src/srcset/sizes to data-* and observe
+          const src = img.getAttribute("src");
+          const srcset = img.getAttribute("srcset");
+          const sizes = img.getAttribute("sizes");
+          if (src) {
+            img.setAttribute("data-src", src);
+            img.removeAttribute("src");
+          }
+          if (srcset) {
+            img.setAttribute("data-srcset", srcset);
+            img.removeAttribute("srcset");
+          }
+          if (sizes) {
+            img.setAttribute("data-sizes", sizes);
+            img.removeAttribute("sizes");
+          }
 
-    // Extract URL("...") -> ...
-    const url = bgImage.slice(4, -1).replace(/["']/g, "");
-    if (!url) return;
+          // Mark for animation and use native lazy as a hint
+          img.classList.add("lazy-load");
+          if (!natLazy) img.setAttribute("loading", "lazy");
 
-    // Move to data-bg, clear background and observe
-    el.setAttribute("data-bg", url);
-    el.style.backgroundImage = "none";
-    el.classList.add("lazy-load");
-    bgObserver.observe(el);
-  });
+          imageObserver.observe(img);
+        });
 
-  // ---- minimal CSS for fade-in ----
-  const style = document.createElement("style");
-  style.textContent = `
+        // ---- Process elements with background images ----
+        document
+          .querySelectorAll("[style*='background-image']")
+          .forEach((el) => {
+            // Skip eager/LCP backgrounds
+            if (
+              el.hasAttribute("data-lcp") ||
+              el.hasAttribute("data-skip-lazy")
+            )
+              return;
+
+            const comp = window.getComputedStyle(el);
+            const bgImage = comp.backgroundImage;
+            if (!bgImage || bgImage === "none") return;
+
+            // If already near viewport, keep as-is
+            if (!isBelowFold(el)) return;
+
+            // Extract URL("...") -> ...
+            const url = bgImage.slice(4, -1).replace(/["']/g, "");
+            if (!url) return;
+
+            // Move to data-bg, clear background and observe
+            el.setAttribute("data-bg", url);
+            el.style.backgroundImage = "none";
+            el.classList.add("lazy-load");
+            bgObserver.observe(el);
+          });
+
+        // ---- minimal CSS for fade-in ----
+        const style = document.createElement("style");
+        style.textContent = `
     .lazy-load { opacity: 0; transition: opacity .35s ease; }
     .lazy-loaded { opacity: 1; }
   `;
-  document.head.appendChild(style);
-});
+        document.head.appendChild(style);
+      });
     </script>
   </body>
 </html>

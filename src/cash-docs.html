@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   lang="en"
   data-wf-page="66a7a63e1e34a58610234fea"
@@ -7,6 +7,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>Sys IT - Cash-Docs</title>
     <link
       rel="stylesheet"
@@ -2153,7 +2155,9 @@
 
     <section class="mt-5 bg-white">
       <div class="container pb-10">
-        <div class="w-full grid grid-cols-1 lg:grid-cols-2 mt-12 justify-between">
+        <div
+          class="w-full grid grid-cols-1 lg:grid-cols-2 mt-12 justify-between"
+        >
           <div class="accordion unique-accordion">
             <div class="flex flex-wrap relative">
               <div class="basis-full text-black">
@@ -2193,7 +2197,9 @@
                         </span>
                       </span>
                     </button>
-                   <div class="unique-accordion-content !overflow-hidden opacity-0 max-h-0 transition-all duration-300">
+                    <div
+                      class="unique-accordion-content !overflow-hidden opacity-0 max-h-0 transition-all duration-300"
+                    >
                       <div
                         class="text-[16px] md:text-[23px] py-2 text-[#2A2D30] lg:pl-14"
                       >
@@ -2207,15 +2213,15 @@
                           choices regarding their healthcare providers.
                         </p>
                       </div>
-                       <div class="w-full block lg:hidden">
-                    <div class="aspect-w-16 aspect-h-9 relative">
-                      <img
-                        src="./img/cdf-1.png"
-                        alt="Healthcare App 1"
-                        class="w-full h-full object-contain rounded-lg"
-                      />
-                    </div>
-                  </div>
+                      <div class="w-full block lg:hidden">
+                        <div class="aspect-w-16 aspect-h-9 relative">
+                          <img
+                            src="./img/cdf-1.png"
+                            alt="Healthcare App 1"
+                            class="w-full h-full object-contain rounded-lg"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -2503,29 +2509,25 @@
             </div>
           </div>
 
-<div
-  id="accordionImageContainer"
-  class="w-full relative overflow-hidden hidden lg:flex justify-center items-center  min-h-[600px]"
->
-  <div class="absolute inset-0 flex items-center justify-center">
-    <img
-      id="accordionImage"
-      src="./img/cdf-1.png"
-      alt="Healthcare App"
-      class="max-w-[600px] w-full h-auto rounded-[24px] transition-opacity duration-300 opacity-100 ml-16"
-    />
-    <img
-      id="accordionImageNext"
-      src=""
-      alt=""
-      class="max-w-[600px] w-full h-auto rounded-[24px] transition-opacity duration-300 opacity-0 absolute inset-0 m-auto"
-    />
-  </div>
-</div>
-
-
-
-        
+          <div
+            id="accordionImageContainer"
+            class="w-full relative overflow-hidden hidden lg:flex justify-center items-center min-h-[600px]"
+          >
+            <div class="absolute inset-0 flex items-center justify-center">
+              <img
+                id="accordionImage"
+                src="./img/cdf-1.png"
+                alt="Healthcare App"
+                class="max-w-[600px] w-full h-auto rounded-[24px] transition-opacity duration-300 opacity-100 ml-16"
+              />
+              <img
+                id="accordionImageNext"
+                src=""
+                alt=""
+                class="max-w-[600px] w-full h-auto rounded-[24px] transition-opacity duration-300 opacity-0 absolute inset-0 m-auto"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -3238,7 +3240,7 @@
         <h2
           class="text-[34px] md:text-[50px] font-bold text-[#2A2D30] mb-4 leading-normal"
         >
-         Our Project Challenges
+          Our Project Challenges
         </h2>
 
         <!-- Grid -->
@@ -3666,72 +3668,72 @@
         "./img/cdf-6.png",
       ];
 
-     function toggleUniqueAccordion(button) {
-  const content = button.nextElementSibling;
-  const isOpen = content.classList.contains("shows");
-  const outerDiv = button.closest(".unique-acc-wrap");
-  const group = outerDiv.parentElement;
+      function toggleUniqueAccordion(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.classList.contains("shows");
+        const outerDiv = button.closest(".unique-acc-wrap");
+        const group = outerDiv.parentElement;
 
-  // Close all accordions in this group only
-  group.querySelectorAll(".unique-accordion-content").forEach((item) => {
-    item.classList.remove("shows");
-    item.style.maxHeight = "0px";
-    item.style.opacity = "0";
-  });
-  // Reset all styles in this group only
-  group.querySelectorAll(".unique-arrow-wrapper").forEach((el) =>
-    el.classList.remove("!opacity-100")
-  );
-  group.querySelectorAll(".unique-arrow-wrapper img").forEach((img) => 
-    img.classList.remove("-rotate-90")
-  );
-  group.querySelectorAll(".unique-acc-wrap").forEach((item) => {
-    item.style.backgroundColor = "#FFFFFF";
-  });
+        // Close all accordions in this group only
+        group.querySelectorAll(".unique-accordion-content").forEach((item) => {
+          item.classList.remove("shows");
+          item.style.maxHeight = "0px";
+          item.style.opacity = "0";
+        });
+        // Reset all styles in this group only
+        group
+          .querySelectorAll(".unique-arrow-wrapper")
+          .forEach((el) => el.classList.remove("!opacity-100"));
+        group
+          .querySelectorAll(".unique-arrow-wrapper img")
+          .forEach((img) => img.classList.remove("-rotate-90"));
+        group.querySelectorAll(".unique-acc-wrap").forEach((item) => {
+          item.style.backgroundColor = "#FFFFFF";
+        });
 
-  if (!isOpen) {
-    // Open accordion
-    content.classList.add("shows");
-    content.style.maxHeight = content.scrollHeight + "px";
-    content.style.opacity = "1";
-    outerDiv.style.backgroundColor = "#E8F2FC";
+        if (!isOpen) {
+          // Open accordion
+          content.classList.add("shows");
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.opacity = "1";
+          outerDiv.style.backgroundColor = "#E8F2FC";
 
-    // Handle arrow
-    const arrowWrapper = button.querySelector(".unique-arrow-wrapper");
-    const arrowImg = button.querySelector(".unique-arrow-wrapper img");
-    arrowWrapper?.classList.add("!opacity-100");
-    arrowImg?.classList.add("-rotate-90");
+          // Handle arrow
+          const arrowWrapper = button.querySelector(".unique-arrow-wrapper");
+          const arrowImg = button.querySelector(".unique-arrow-wrapper img");
+          arrowWrapper?.classList.add("!opacity-100");
+          arrowImg?.classList.add("-rotate-90");
 
-    // Image fade logic
-    const imgIndex = button.getAttribute("data-img-index");
-    const newSrc = imageSources[imgIndex];
-    const currentImg = document.getElementById("accordionImage");
-    const nextImg = document.getElementById("accordionImageNext");
+          // Image fade logic
+          const imgIndex = button.getAttribute("data-img-index");
+          const newSrc = imageSources[imgIndex];
+          const currentImg = document.getElementById("accordionImage");
+          const nextImg = document.getElementById("accordionImageNext");
 
-    if (currentImg && nextImg) {
-      nextImg.src = newSrc;
-      nextImg.classList.add("opacity-100");
-      currentImg.classList.remove("opacity-100");
-      currentImg.classList.add("opacity-0");
+          if (currentImg && nextImg) {
+            nextImg.src = newSrc;
+            nextImg.classList.add("opacity-100");
+            currentImg.classList.remove("opacity-100");
+            currentImg.classList.add("opacity-0");
 
-      setTimeout(() => {
-        currentImg.src = newSrc;
-        currentImg.classList.remove("opacity-0");
-        currentImg.classList.add("opacity-100");
-        nextImg.classList.remove("opacity-100");
-        nextImg.src = "";
-      }, 300);
-    }
+            setTimeout(() => {
+              currentImg.src = newSrc;
+              currentImg.classList.remove("opacity-0");
+              currentImg.classList.add("opacity-100");
+              nextImg.classList.remove("opacity-100");
+              nextImg.src = "";
+            }, 300);
+          }
 
-    // Recalculate height after image loads
-    const img = content.querySelector('img');
-    if (img) {
-      img.onload = () => {
-        content.style.maxHeight = content.scrollHeight + "px";
-      };
-    }
-  }
-}
+          // Recalculate height after image loads
+          const img = content.querySelector("img");
+          if (img) {
+            img.onload = () => {
+              content.style.maxHeight = content.scrollHeight + "px";
+            };
+          }
+        }
+      }
 
       function toggleAccordion(button) {
         const content = button.nextElementSibling;
@@ -3794,7 +3796,6 @@
         ease: "power2.inOut",
       });
 
-    
       gsap.to("#rightAvailability", {
         scrollTrigger: {
           trigger: ".banner-wrapper",
@@ -3818,7 +3819,7 @@
           },
           scale: 1, // grow back to full size
           ease: "power2.out",
-        }
+        },
       );
     </script>
 
