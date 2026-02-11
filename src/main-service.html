@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>Sys IT - Testimonials</title>
 
     <!-- DNS + TCP warmups -->
@@ -26,28 +28,43 @@
       rel="preload"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -63,8 +80,18 @@
     </noscript>
 
     <!-- Preload hero images (use media to avoid fetching both); 'fetchpriority' belongs on <img>, not here -->
-    <link rel="preload" as="image" href="./img/banner-testi1.webp" media="(min-width: 768px)" />
-    <link rel="preload" as="image" href="./img/bannermob-testi.webp" media="(max-width: 767px)" />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/banner-testi1.webp"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/bannermob-testi.webp"
+      media="(max-width: 767px)"
+    />
 
     <!-- Your main CSS: early hint + real stylesheet. (Preload is optional but harmless; browsers coalesce the request.) -->
     <link rel="preload" href="style.css" as="style" />
@@ -97,8 +124,14 @@
       background: var(--Body-BG, #f5fafe);
 
       /* Replace black background with your desired variable color */
-      background: linear-gradient(var(--Body-BG, #f5fafe), var(--Body-BG, #f5fafe)) padding-box,
-        linear-gradient(180deg, rgba(180, 180, 180, 0.12) 0%, rgba(105, 129, 241, 0.04) 100%)
+      background:
+        linear-gradient(var(--Body-BG, #f5fafe), var(--Body-BG, #f5fafe))
+          padding-box,
+        linear-gradient(
+            180deg,
+            rgba(180, 180, 180, 0.12) 0%,
+            rgba(105, 129, 241, 0.04) 100%
+          )
           border-box;
     }
 
@@ -168,11 +201,15 @@
           <h1
             class="text-[34px] md:text-[42px] lg:text-[60px] font-bold lg:leading-[54px] leading-normal inline-block pt-2"
           >
-            <span class="bg-white bg-clip-text text-transparent"> Products That Drive Growth </span>
+            <span class="bg-white bg-clip-text text-transparent">
+              Products That Drive Growth
+            </span>
           </h1>
 
           <!-- Button -->
-          <div class="text-center flex justify-center mt-[20px] md:mt-[30px] bnr-btn">
+          <div
+            class="text-center flex justify-center mt-[20px] md:mt-[30px] bnr-btn"
+          >
             <button
               class="bg-[#4361EE] relative rounded-full text-white font-[500] lg:font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[20px] sm:leading-[22px] md:leading-[25px] cursor-pointer overflow-hidden max-w-[280px] sm:max-w-none"
             >
@@ -182,7 +219,10 @@
               <span
                 class="relative items-center bg-[#4361EE] rounded-full px-3 sm:px-4 md:px-8 py-2.5 sm:py-3 md:py-5 gap-1.5 sm:gap-2.5 text-center md:text-left flex"
               >
-                <img src="./img/pho.svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <img
+                  src="./img/pho.svg"
+                  class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                />
                 <span class="whitespace-nowrap">Let's Build Together</span>
               </span>
             </button>
@@ -232,23 +272,44 @@
             <p
               class="w-full xl:max-w-[500px] leading-[1.38] text-[14px] lg:text-[16px] 2xl:text-[18px]"
             >
-              Recognized for building the best solutions for startups, businesses, and enterprises
+              Recognized for building the best solutions for startups,
+              businesses, and enterprises
             </p>
             <div class="logo-slider">
               <ul class="logo-track">
-                <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide">
+                  <img src="./img/Deloitte.svg" alt="Deloitte" />
+                </li>
+                <li class="slide">
+                  <img src="./img/Inc.svg" alt="Inc 5000" />
+                </li>
+                <li class="slide">
+                  <img src="./img/uspaacc.svg" alt="USPAACC" />
+                </li>
                 <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
-                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide">
+                  <img src="./img/Fastest1.svg" alt="Fastest Growing" />
+                </li>
+                <li class="slide">
+                  <img src="./img/uspaacc.svg" alt="USPAACC" />
+                </li>
                 <!-- repeat -->
-                <li class="slide"><img src="./img/Deloitte.svg" alt="Deloitte" /></li>
-                <li class="slide"><img src="./img/Inc.svg" alt="Inc 5000" /></li>
-                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide">
+                  <img src="./img/Deloitte.svg" alt="Deloitte" />
+                </li>
+                <li class="slide">
+                  <img src="./img/Inc.svg" alt="Inc 5000" />
+                </li>
+                <li class="slide">
+                  <img src="./img/uspaacc.svg" alt="USPAACC" />
+                </li>
                 <li class="slide"><img src="./img/NJBIZ.svg" alt="NJBIZ" /></li>
-                <li class="slide"><img src="./img/Fastest1.svg" alt="Fastest Growing" /></li>
-                <li class="slide"><img src="./img/uspaacc.svg" alt="USPAACC" /></li>
+                <li class="slide">
+                  <img src="./img/Fastest1.svg" alt="Fastest Growing" />
+                </li>
+                <li class="slide">
+                  <img src="./img/uspaacc.svg" alt="USPAACC" />
+                </li>
               </ul>
             </div>
           </div>
@@ -265,7 +326,9 @@
        APP DEVELOPMENT
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -285,13 +348,15 @@
           </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            Our process blends user-centric design with agile development and post-launch
-            optimization to ensure your app keeps evolving with your audience.
+            Our process blends user-centric design with agile development and
+            post-launch optimization to ensure your app keeps evolving with your
+            audience.
           </p>
           <p class="mt-4 text-gray-400 leading-relaxed">
-            We build mobile apps that don’t just work — they perform. From iOS and Android to
-            cross-platform frameworks like Flutter and React Native, we create secure,
-            high-performing apps that deliver real business value.
+            We build mobile apps that don’t just work — they perform. From iOS
+            and Android to cross-platform frameworks like Flutter and React
+            Native, we create secure, high-performing apps that deliver real
+            business value.
           </p>
 
           <button
@@ -322,27 +387,37 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Our Expertise Includes:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-wrap gap-3 mb-4 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit">iOS</span>
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+              >iOS</span
+            >
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Android</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Cross-Platform Development</span
             >
           </div>
 
           <div class="flex flex-col gap-3 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >App UI/UX Design & Prototyping</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >App Store Deployment & Maintenance</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Performance Optimization & Security</span
             >
           </div>
@@ -352,19 +427,28 @@
 
     <section class="py-8 md:py-12 prayer-circle-section">
       <div class="container mx-auto px-2 max-w-[1400px]">
-        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+        <div
+          class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden"
+        >
           <!-- Left Image -->
           <div class="overflow-hidden">
-            <img src="./img/service1.webp" class="w-full h-full object-cover prayer-circle-img" />
+            <img
+              src="./img/service1.webp"
+              class="w-full h-full object-cover prayer-circle-img"
+            />
           </div>
 
           <!-- Right Text -->
           <div class="p-8 md:p-16">
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               Prayer Circle
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
-            <p class="mt-3 text-lg md:text-xl text-gray-200">Church Management Platform</p>
+            <p class="mt-3 text-lg md:text-xl text-gray-200">
+              Church Management Platform
+            </p>
 
             <p
               class="mt-6 text-gray-400 leading-relaxed"
@@ -377,11 +461,14 @@
                 letter-spacing: 0%;
               "
             >
-              A New Jersey church embraced digital transformation with a platform uniting faith,
-              engagement, and community management tools.
+              A New Jersey church embraced digital transformation with a
+              platform uniting faith, engagement, and community management
+              tools.
             </p>
 
-            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+            <button
+              class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2"
+            >
               VIEW CASE STUDY
             </button>
           </div>
@@ -393,7 +480,9 @@
        SOFTWARE DEVELOPMENT
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -413,12 +502,13 @@
           </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            We help businesses conceptualize, build, and maintain software that automates workflows,
-            enhances productivity, and accelerates digital transformation.
+            We help businesses conceptualize, build, and maintain software that
+            automates workflows, enhances productivity, and accelerates digital
+            transformation.
           </p>
           <p class="mt-4 text-gray-400 leading-relaxed">
-             Our software development teams work closely with your stakeholders to ensure
-            scalability, usability, and maintainability from day one.
+             Our software development teams work closely with your stakeholders
+            to ensure scalability, usability, and maintainability from day one.
           </p>
 
           <button
@@ -449,20 +539,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Our Expertise Includes:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Enterprise & Custom Software Solutions</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >SaaS Application Development</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >API Development & System Integration</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Application Modernization & Maintenance</span
             >
           </div>
@@ -472,12 +568,16 @@
 
     <section class="py-8 md:py-12 town-connect-section">
       <div class="container mx-auto px-2 max-w-[1400px]">
-        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+        <div
+          class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden"
+        >
           <!-- Right Text -->
           <div class="p-8 md:p-16">
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               Town Connect Network
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
             <p class="mt-3 text-lg md:text-xl text-gray-200">
               Auto Repair Booking and Maintenance Tracking Application
@@ -494,18 +594,24 @@
                 letter-spacing: 0%;
               "
             >
-              TownConnect Network revolutionized transportation through a custom app simplifying
-              shipment tracking, job management, and real-time driver coordination.
+              TownConnect Network revolutionized transportation through a custom
+              app simplifying shipment tracking, job management, and real-time
+              driver coordination.
             </p>
 
-            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+            <button
+              class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2"
+            >
               VIEW CASE STUDY
             </button>
           </div>
 
           <!-- Left Image -->
           <div>
-            <img src="./img/service2.webp" class="w-full h-full object-cover town-connect-img" />
+            <img
+              src="./img/service2.webp"
+              class="w-full h-full object-cover town-connect-img"
+            />
           </div>
         </div>
       </div>
@@ -515,7 +621,9 @@
        WEB DEVELOPMENT
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -530,16 +638,19 @@
           >
             Web Development
           </h2>
-          <p class="mt-2 text-lg md:text-xl text-white">Where Functionality Meets Performance</p>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Where Functionality Meets Performance
+          </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            Your website is more than a digital presence — it’s your growth engine.  We design and
-            develop modern, responsive, and lightning-fast web applications that deliver seamless
-            experiences across devices.
+            Your website is more than a digital presence — it’s your growth
+            engine.  We design and develop modern, responsive, and
+            lightning-fast web applications that deliver seamless experiences
+            across devices.
           </p>
           <p class="mt-4 text-gray-400 leading-relaxed">
-             Using the latest JavaScript frameworks and backend technologies, we ensure performance,
-            accessibility, and impact.
+             Using the latest JavaScript frameworks and backend technologies, we
+            ensure performance, accessibility, and impact.
           </p>
 
           <button
@@ -570,20 +681,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Our Expertise Includes:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Custom Web App Development</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Progressive Web Apps (PWA)</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Front-end (React, Next.js) & Back-end (Node.js, GoLang)</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >CMS & API-Driven Platforms</span
             >
           </div>
@@ -593,17 +710,24 @@
 
     <section class="py-8 md:py-12 l-card-section">
       <div class="container mx-auto px-2 max-w-[1400px]">
-        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+        <div
+          class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden"
+        >
           <!-- Left Image -->
           <div>
-            <img src="./img/service3.webp" class="w-full h-full object-cover l-card-img" />
+            <img
+              src="./img/service3.webp"
+              class="w-full h-full object-cover l-card-img"
+            />
           </div>
 
           <!-- Right Text -->
           <div class="p-8 md:p-16">
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               L-Card
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
             <p class="mt-3 text-lg md:text-xl text-gray-200">
               Digital Business Card App With Smart Technology
@@ -620,11 +744,13 @@
                 letter-spacing: 0%;
               "
             >
-              L-Card transformed professional networking with a smart digital business card app
-              earning recognition at GMASA 2024.
+              L-Card transformed professional networking with a smart digital
+              business card app earning recognition at GMASA 2024.
             </p>
 
-            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+            <button
+              class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2"
+            >
               VIEW CASE STUDY
             </button>
           </div>
@@ -636,7 +762,9 @@
        CLOUD DEVELOPMENT
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -656,12 +784,13 @@
           </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            We help organizations modernize their infrastructure with secure, automated, and
-            scalable cloud solutions.
+            We help organizations modernize their infrastructure with secure,
+            automated, and scalable cloud solutions.
           </p>
           <p class="mt-4 text-gray-400 leading-relaxed">
-            Our DevOps engineers build continuous integration and delivery pipelines that ensure
-            faster releases, reduced downtime, and reliable performance across environments.
+            Our DevOps engineers build continuous integration and delivery
+            pipelines that ensure faster releases, reduced downtime, and
+            reliable performance across environments.
           </p>
 
           <button
@@ -692,20 +821,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Our Expertise Includes:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Cloud Architecture (AWS, Azure, GCP)</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Containerization & Kubernetes</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >CI/CD Pipeline Setup</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Infrastructure as Code (Terraform, Ansible)</span
             >
           </div>
@@ -715,17 +850,24 @@
 
     <section class="py-8 md:py-12 polarity-section">
       <div class="container mx-auto px-2 max-w-[1400px]">
-        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+        <div
+          class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden"
+        >
           <!-- Left Image -->
           <div>
-            <img src="./img/service4.webp" class="w-full h-full object-cover polarity-img" />
+            <img
+              src="./img/service4.webp"
+              class="w-full h-full object-cover polarity-img"
+            />
           </div>
 
           <!-- Right Text -->
           <div class="p-8 md:p-16">
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               Polarity Partnerships
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
             <p class="mt-3 text-lg md:text-xl text-gray-200">
               SaaS-based Community Intelligence platform
@@ -742,11 +884,14 @@
                 letter-spacing: 0%;
               "
             >
-              Polarity Partnerships advanced organizational growth via a SaaS-based Community
-              Intelligence system integrating knowledge sharing and analytics.
+              Polarity Partnerships advanced organizational growth via a
+              SaaS-based Community Intelligence system integrating knowledge
+              sharing and analytics.
             </p>
 
-            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+            <button
+              class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2"
+            >
               VIEW CASE STUDY
             </button>
           </div>
@@ -791,9 +936,10 @@
           </h2>
 
           <p class="text-xl text-gray-400 max-w-1xl mx-auto leading-relaxed">
-            Harness the power of next-generation technologies to reinvent your products and
-            processes. Our R&D-<br />driven approach helps you adapt faster, explore new
-            possibilities, and lead your market with innovation.
+            Harness the power of next-generation technologies to reinvent your
+            products and processes. Our R&D-<br />driven approach helps you
+            adapt faster, explore new possibilities, and lead your market with
+            innovation.
           </p>
         </div>
       </div>
@@ -803,11 +949,19 @@
       <div class="max-w-[1400px] mx-auto">
         <div
           class="border border-white/10 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row justify-between items-start gap-8"
-          style="background: linear-gradient(89.67deg, #000000 0.29%, #000726 45.33%)"
+          style="
+            background: linear-gradient(
+              89.67deg,
+              #000000 0.29%,
+              #000726 45.33%
+            );
+          "
         >
           <!-- Left Content -->
           <div class="flex-1">
-            <h2 class="text-3xl md:text-5xl font-semibold text-[#6981F1] mb-4">Think and Go AI</h2>
+            <h2 class="text-3xl md:text-5xl font-semibold text-[#6981F1] mb-4">
+              Think and Go AI
+            </h2>
 
             <button
               class="bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
@@ -843,12 +997,15 @@
           </div>
 
           <!-- Right Content -->
-          <div class="flex-1 text-gray-400 leading-relaxed text-sm md:text-base">
+          <div
+            class="flex-1 text-gray-400 leading-relaxed text-sm md:text-base"
+          >
             <p>
-              AI has been the new lifeline for businesses, with brands chasing futuristic
-              possibilities of AI at every step. With intelligent automation, language models, and
-              smart processing, we help you make the best out of AI for a bright business future.
-              Connect with our certified AI specialists to start your AI journey!
+              AI has been the new lifeline for businesses, with brands chasing
+              futuristic possibilities of AI at every step. With intelligent
+              automation, language models, and smart processing, we help you
+              make the best out of AI for a bright business future. Connect with
+              our certified AI specialists to start your AI journey!
             </p>
           </div>
         </div>
@@ -859,7 +1016,9 @@
       AI / Machine Learning
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -879,9 +1038,10 @@
           </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            We build intelligent systems that automate, predict, and optimize.<br />From predictive
-            analytics to generative AI and computer vision, our AI solutions help businesses make
-            data-backed decisions and scale intelligently.
+            We build intelligent systems that automate, predict, and
+            optimize.<br />From predictive analytics to generative AI and
+            computer vision, our AI solutions help businesses make data-backed
+            decisions and scale intelligently.
           </p>
 
           <button
@@ -912,20 +1072,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Solutions Include:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Predictive Analytics & Forecasting</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Generative AI & Chatbots</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Image Recognition & NLP</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Recommendation Engines</span
             >
           </div>
@@ -935,17 +1101,24 @@
 
     <section class="py-8 md:py-12 cft-section">
       <div class="container mx-auto px-2 max-w-[1400px]">
-        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+        <div
+          class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden"
+        >
           <!-- Left Image -->
           <div>
-            <img src="./img/sp5.webp" class="w-full h-full object-cover cft-img" />
+            <img
+              src="./img/sp5.webp"
+              class="w-full h-full object-cover cft-img"
+            />
           </div>
 
           <!-- Right Text -->
           <div class="p-8 md:p-16">
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               CFT
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
             <p class="mt-3 text-lg md:text-xl text-gray-200">
               Transport ERP & Mobility App for Process Automation
@@ -962,11 +1135,13 @@
                 letter-spacing: 0%;
               "
             >
-              Central Florida Transport boosted logistics efficiency with a custom ERP and mobile
-              app for better automation and visibility.
+              Central Florida Transport boosted logistics efficiency with a
+              custom ERP and mobile app for better automation and visibility.
             </p>
 
-            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+            <button
+              class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2"
+            >
               VIEW CASE STUDY
             </button>
           </div>
@@ -978,7 +1153,9 @@
      AR / VR
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -998,8 +1175,9 @@
           </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            We create augmented and virtual reality solutions that bridge the digital and physical
-            worlds — enhancing training, retail, healthcare, and entertainment experiences.
+            We create augmented and virtual reality solutions that bridge the
+            digital and physical worlds — enhancing training, retail,
+            healthcare, and entertainment experiences.
           </p>
 
           <button
@@ -1030,20 +1208,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Solutions Include:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >AR Product Visualization</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >VR Training Simulations</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Mixed Reality Applications</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Immersive 3D Environments</span
             >
           </div>
@@ -1053,14 +1237,18 @@
 
     <!-- Separator Line -->
     <div class="container mx-auto max-w-[1400px] px-2 my-12">
-      <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+      <div
+        class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+      ></div>
     </div>
 
     <!-- =======================
     Data Science & Analytics
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -1076,12 +1264,13 @@
             Data Science & Analytics
           </h2>
           <p class="mt-2 text-lg md:text-xl text-white">
-            Our data experts transform raw data into real-time insights using advanced analytics,
-            dashboards, and machine learning pipelines.
+            Our data experts transform raw data into real-time insights using
+            advanced analytics, dashboards, and machine learning pipelines.
           </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            We help you predict outcomes, improve performance, and stay ahead of the curve.
+            We help you predict outcomes, improve performance, and stay ahead of
+            the curve.
           </p>
 
           <button
@@ -1112,20 +1301,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Solutions Include:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Data Warehousing & ETL</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Business Intelligence Dashboards</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Predictive & Prescriptive Analytics</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Real-time Data Processing</span
             >
           </div>
@@ -1138,10 +1333,15 @@
     ======================== -->
     <section class="py-8 md:py-12 eco-auto-section">
       <div class="container mx-auto px-2 max-w-[1400px]">
-        <div class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden">
+        <div
+          class="bg-[#1B1B1B] rounded-3xl grid lg:grid-cols-2 overflow-hidden"
+        >
           <!-- Left Image -->
           <div>
-            <img src="./img/sp6.webp" class="w-full h-full object-cover eco-auto-img" />
+            <img
+              src="./img/sp6.webp"
+              class="w-full h-full object-cover eco-auto-img"
+            />
           </div>
 
           <!-- Right Text -->
@@ -1149,7 +1349,9 @@
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               Eco Auto School
 
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
             <p class="mt-3 text-lg md:text-xl text-gray-200">
               Driving School App to Streamline Operations
@@ -1166,11 +1368,14 @@
                 letter-spacing: 0%;
               "
             >
-              Eco Auto School modernized driving education with a tailored app simplifying student
-              onboarding, scheduling, and instructor coordination.
+              Eco Auto School modernized driving education with a tailored app
+              simplifying student onboarding, scheduling, and instructor
+              coordination.
             </p>
 
-            <button class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2">
+            <button
+              class="mt-6 bg-[#4361EE] text-white px-6 py-3 flex items-center gap-2"
+            >
               VIEW CASE STUDY
             </button>
           </div>
@@ -1179,7 +1384,9 @@
     </section>
 
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -1194,11 +1401,14 @@
           >
             Blockchain
           </h2>
-          <p class="mt-2 text-lg md:text-xl text-white">Building Trust in the Digital Age</p>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Building Trust in the Digital Age
+          </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            From secure smart contracts to decentralized applications, we build blockchain solutions
-            that redefine transparency and security in digital ecosystems.
+            From secure smart contracts to decentralized applications, we build
+            blockchain solutions that redefine transparency and security in
+            digital ecosystems.
           </p>
 
           <button
@@ -1229,20 +1439,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Solutions Include:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Smart Contract Development</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >dApp Design & Development</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Tokenization & Wallet Integration</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Supply Chain & Identity Solutions</span
             >
           </div>
@@ -1252,14 +1468,18 @@
 
     <!-- Separator Line -->
     <div class="container mx-auto max-w-[1400px] px-2 my-12">
-      <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+      <div
+        class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+      ></div>
     </div>
 
     <!-- =======================
   Robotic Process Automation (RPA)
     ======================== -->
     <section class="py-8 md:py-12">
-      <div class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24">
+      <div
+        class="container mx-auto px-2 max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-24"
+      >
         <!-- Left -->
         <div>
           <h2
@@ -1274,11 +1494,13 @@
           >
             Robotic Process Automation (RPA)
           </h2>
-          <p class="mt-2 text-lg md:text-xl text-white">Simplify Workflows. Amplify Efficiency.</p>
+          <p class="mt-2 text-lg md:text-xl text-white">
+            Simplify Workflows. Amplify Efficiency.
+          </p>
 
           <p class="mt-6 text-gray-400 leading-relaxed">
-            We help enterprises automate repetitive processes using RPA frameworks, enabling teams
-            to focus on strategic growth.
+            We help enterprises automate repetitive processes using RPA
+            frameworks, enabling teams to focus on strategic growth.
 
             <button
               class="mt-6 bg-white text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-gray-200 transition"
@@ -1309,20 +1531,26 @@
         <div>
           <h4 class="text-lg font-semibold pb-2 relative text-[#A3ACB5]">
             Solutions Include:
-            <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+            <span
+              class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+            ></span>
           </h4>
 
           <div class="flex flex-col gap-3 pt-5 text-[#FFFFFF]">
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Workflow Automation</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Document & Data Processing</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >AI-Powered Bots</span
             >
-            <span class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
+            <span
+              class="bg-[#1B1B1B] text-sm px-4 py-2 rounded-md inline-block w-fit"
               >Process Monitoring & Reporting</span
             >
           </div>
@@ -1364,9 +1592,10 @@
           </h2>
 
           <p class="text-xl text-gray-400 max-w-1xl mx-auto leading-relaxed">
-            We collaborate with startups to validate ideas, build MVPs, and evolve them into
-            successful digital products.<br />Our consulting approach ensures speed, agility, and
-            cost efficiency — without compromising quality.
+            We collaborate with startups to validate ideas, build MVPs, and
+            evolve them into successful digital products.<br />Our consulting
+            approach ensures speed, agility, and cost efficiency — without
+            compromising quality.
           </p>
         </div>
       </div>
@@ -1389,9 +1618,10 @@
             </h4>
 
             <p class="text-gray-400 leading-relaxed mb-8">
-              We help you launch your MVP quickly with just the right features to validate your
-              concept, attract investors, and gather user feedback — ensuring faster market entry
-              and reduced development risk.
+              We help you launch your MVP quickly with just the right features
+              to validate your concept, attract investors, and gather user
+              feedback — ensuring faster market entry and reduced development
+              risk.
             </p>
 
             <button
@@ -1412,14 +1642,19 @@
 
           <!-- Product Development Card -->
           <div class="rounded-2xl p-8 h-full bg-black border-gradient">
-            <h3 class="text-2xl font-semibold text-white mb-4">Product Development</h3>
+            <h3 class="text-2xl font-semibold text-white mb-4">
+              Product Development
+            </h3>
 
-            <h4 class="text-lg font-medium text-white mb-6">From Vision to Market-Ready Product</h4>
+            <h4 class="text-lg font-medium text-white mb-6">
+              From Vision to Market-Ready Product
+            </h4>
 
             <p class="text-gray-400 leading-relaxed mb-8">
-              Once validated, we take your MVP to the next level with full-scale product
-              engineering, robust architecture, and scalable design systems. Our agile sprints
-              ensure speed and flexibility at every stage.
+              Once validated, we take your MVP to the next level with full-scale
+              product engineering, robust architecture, and scalable design
+              systems. Our agile sprints ensure speed and flexibility at every
+              stage.
             </p>
 
             <button
@@ -1442,15 +1677,18 @@
           <div
             class="rounded-2xl p-8 h-full bg-black border-gradient md:col-span-2 md:max-w-[50%] md:mx-auto"
           >
-            <h3 class="text-2xl font-semibold text-white mb-4">Startup Advisory / Consulting</h3>
+            <h3 class="text-2xl font-semibold text-white mb-4">
+              Startup Advisory / Consulting
+            </h3>
 
             <h4 class="text-lg font-medium text-white mb-6">
               Tech & Strategy Support for Growing Ventures
             </h4>
 
             <p class="text-gray-400 leading-relaxed mb-8">
-              From tech stack selection to product-market fit, we provide end-to-end advisory
-              support to help startups make informed decisions, reduce costs, and scale sustainably.
+              From tech stack selection to product-market fit, we provide
+              end-to-end advisory support to help startups make informed
+              decisions, reduce costs, and scale sustainably.
             </p>
 
             <button
@@ -1476,7 +1714,8 @@
       .border-gradient {
         border: 1px solid transparent;
         border-radius: 16px;
-        background: linear-gradient(#000, #000) padding-box,
+        background:
+          linear-gradient(#000, #000) padding-box,
           linear-gradient(180deg, #5d5d5d 0%, #4361ee 100%) border-box;
       }
     </style>
@@ -1515,8 +1754,9 @@
           </h2>
 
           <p class="text-xl text-gray-400 max-w-1xl mx-auto leading-relaxed">
-            Whether you need one expert or a full dedicated squad, we provide flexible engagement
-            models that align <br />with your goals and budget.
+            Whether you need one expert or a full dedicated squad, we provide
+            flexible engagement models that align <br />with your goals and
+            budget.
           </p>
         </div>
       </div>
@@ -1548,13 +1788,13 @@
             </h3>
 
             <p class="text-gray-400 leading-relaxed mb-6">
-              Access skilled developers, designers, QA engineers, and project managers from
-              NewAgeSysIT's pool of vetted professionals.
+              Access skilled developers, designers, QA engineers, and project
+              managers from NewAgeSysIT's pool of vetted professionals.
             </p>
 
             <p class="text-gray-400 leading-relaxed mb-8">
-              We seamlessly integrate with your workflows, ensuring consistent delivery and faster
-              ramp-up.
+              We seamlessly integrate with your workflows, ensuring consistent
+              delivery and faster ramp-up.
             </p>
 
             <button
@@ -1585,16 +1825,26 @@
           <div>
             <h4 class="text-lg font-semibold pb-2 relative text-white">
               Benefits:
-              <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"></span>
+              <span
+                class="absolute bottom-0 left-0 w-8 h-[2px] bg-blue-500"
+              ></span>
             </h4>
 
             <div class="grid grid-cols-2 gap-4 pt-3">
               <!-- Quick Onboarding & Easy Scalability -->
               <div
                 class="rounded-lg p-6 border border-gray-800"
-                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+                style="
+                  background: linear-gradient(
+                    127.32deg,
+                    #1b1b1b 79.45%,
+                    #818080 150.45%
+                  );
+                "
               >
-                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                <div
+                  class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4"
+                >
                   <img src="./img/beni1.svg" alt="" />
                 </div>
                 <h5 class="text-white font-medium mb-2">Quick Onboarding &</h5>
@@ -1604,9 +1854,17 @@
               <!-- Cost-Effective Resource Models -->
               <div
                 class="rounded-lg p-6 border border-gray-800"
-                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+                style="
+                  background: linear-gradient(
+                    127.32deg,
+                    #1b1b1b 79.45%,
+                    #818080 150.45%
+                  );
+                "
               >
-                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                <div
+                  class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4"
+                >
                   <img src="./img/beni2.svg" alt="" />
                 </div>
                 <h5 class="text-white font-medium mb-2">Cost-Effective</h5>
@@ -1616,9 +1874,17 @@
               <!-- Time-Zone Aligned Teams -->
               <div
                 class="rounded-lg p-6 border border-gray-800"
-                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+                style="
+                  background: linear-gradient(
+                    127.32deg,
+                    #1b1b1b 79.45%,
+                    #818080 150.45%
+                  );
+                "
               >
-                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                <div
+                  class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4"
+                >
                   <img src="./img/beni3.svg" alt="" />
                 </div>
                 <h5 class="text-white font-medium mb-2">Time-Zone Aligned</h5>
@@ -1628,9 +1894,17 @@
               <!-- End-to-End Project Control -->
               <div
                 class="rounded-lg p-6 border border-gray-800"
-                style="background: linear-gradient(127.32deg, #1b1b1b 79.45%, #818080 150.45%)"
+                style="
+                  background: linear-gradient(
+                    127.32deg,
+                    #1b1b1b 79.45%,
+                    #818080 150.45%
+                  );
+                "
               >
-                <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                <div
+                  class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mb-4"
+                >
                   <img src="./img/beni4.svg" alt="" />
                 </div>
                 <h5 class="text-white font-medium mb-2">End-to-End Project</h5>
@@ -1666,9 +1940,10 @@
           </h3>
 
           <p class="text-gray-400 leading-relaxed mb-8 max-w-4xl">
-            Hire a full-time dedicated team that works exclusively on your project — with complete
-            visibility, control, and transparency. Our dedicated models offer long-term
-            collaboration without the overhead of hiring and management.
+            Hire a full-time dedicated team that works exclusively on your
+            project — with complete visibility, control, and transparency. Our
+            dedicated models offer long-term collaboration without the overhead
+            of hiring and management.
           </p>
 
           <button
@@ -1698,10 +1973,14 @@
     </section>
 
     <section class="py-20 bg-black">
-      <div class="container mx-auto max-w-[1400px] px-6 grid md:grid-cols-2 gap-12 items-start">
+      <div
+        class="container mx-auto max-w-[1400px] px-6 grid md:grid-cols-2 gap-12 items-start"
+      >
         <!-- Left Section (Image + Vertical Timeline aligned to right side) -->
         <div class="relative">
-          <h2 class="text-white text-4xl md:text-5xl mb-4 leading-tight">Our Process</h2>
+          <h2 class="text-white text-4xl md:text-5xl mb-4 leading-tight">
+            Our Process
+          </h2>
 
           <p
             class="gradient-text text-2xl font-bold mb-8 bg-gradient-to-r from-white/[1] via-white/[1] to-[#364EBE] bg-clip-text text-transparent"
@@ -1711,7 +1990,11 @@
 
           <!-- Image -->
           <div class="relative">
-            <img src="img/sp8.webp" alt="process" class="rounded-xl w-full max-w-lg" />
+            <img
+              src="img/sp8.webp"
+              alt="process"
+              class="rounded-xl w-full max-w-lg"
+            />
           </div>
         </div>
 
@@ -1722,12 +2005,27 @@
             class="absolute top-3 bottom-3 left-0 flex flex-col items-center justify-between py-1 pointer-events-none"
           >
             <!-- Dots positioned first -->
-            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
-            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
-            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
-            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div
+              class="w-3 h-3 rounded-full relative z-10"
+              style="background: #242840"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full relative z-10"
+              style="background: #242840"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full relative z-10"
+              style="background: #242840"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full relative z-10"
+              style="background: #242840"
+            ></div>
 
-            <div class="w-3 h-3 rounded-full relative z-10" style="background: #242840"></div>
+            <div
+              class="w-3 h-3 rounded-full relative z-10"
+              style="background: #242840"
+            ></div>
 
             <!-- Line that starts from first dot center and ends at last dot center -->
             <div
@@ -1739,35 +2037,43 @@
           <div class="space-y-12 ml-6">
             <!-- Discover -->
             <div class="relative flex items-start gap-4">
-              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+              <div
+                class="flex-shrink-0 w-12 h-12 flex items-center justify-center"
+              >
                 <img src="img/process1.svg" alt="Discover" />
               </div>
 
               <div>
                 <h4 class="text-white text-xl font-semibold mb-2">Discover</h4>
                 <p class="text-gray-400 max-w-md">
-                  Understanding your goals, audience, and vision through strategy workshops.
+                  Understanding your goals, audience, and vision through
+                  strategy workshops.
                 </p>
               </div>
             </div>
 
             <!-- Design -->
             <div class="relative flex items-start gap-4">
-              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+              <div
+                class="flex-shrink-0 w-12 h-12 flex items-center justify-center"
+              >
                 <img src="img/process2.svg" alt="Design" />
               </div>
 
               <div>
                 <h4 class="text-white text-xl font-semibold mb-2">Design</h4>
                 <p class="text-gray-400 max-w-md">
-                  Crafting pixel-perfect UI/UX and defining architecture blueprints.
+                  Crafting pixel-perfect UI/UX and defining architecture
+                  blueprints.
                 </p>
               </div>
             </div>
 
             <!-- Develop -->
             <div class="relative flex items-start gap-4">
-              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+              <div
+                class="flex-shrink-0 w-12 h-12 flex items-center justify-center"
+              >
                 <img src="img/process3.svg" alt="Develop" />
               </div>
 
@@ -1781,7 +2087,9 @@
 
             <!-- Deploy -->
             <div class="relative flex items-start gap-4">
-              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+              <div
+                class="flex-shrink-0 w-12 h-12 flex items-center justify-center"
+              >
                 <img src="img/process4.svg" alt="Deploy" />
               </div>
 
@@ -1795,14 +2103,17 @@
 
             <!-- Scale -->
             <div class="relative flex items-start gap-4">
-              <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+              <div
+                class="flex-shrink-0 w-12 h-12 flex items-center justify-center"
+              >
                 <img src="img/process5.svg" alt="Scale" />
               </div>
 
               <div>
                 <h4 class="text-white text-xl font-semibold mb-2">Scale</h4>
                 <p class="text-gray-400 max-w-md">
-                  Ongoing optimization, monitoring, and evolution for sustained growth.
+                  Ongoing optimization, monitoring, and evolution for sustained
+                  growth.
                 </p>
               </div>
             </div>
@@ -1830,7 +2141,11 @@
             class="w-full max-w-xs pb-5 relative"
             style="
               border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+              border-image-source: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                #ffffff 100%
+              );
               border-image-slice: 1;
             "
           >
@@ -1864,7 +2179,10 @@
               fill="none"
               class="absolute bottom-0 right-0 transform translate-y-1/2"
             >
-              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+              <path
+                d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z"
+                fill="#F1F1F1"
+              />
             </svg>
           </div>
 
@@ -1872,7 +2190,11 @@
             class="w-full max-w-xs pb-5 relative"
             style="
               border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+              border-image-source: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                #ffffff 100%
+              );
               border-image-slice: 1;
             "
           >
@@ -1906,7 +2228,10 @@
               fill="none"
               class="absolute bottom-0 right-0 transform translate-y-1/2"
             >
-              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+              <path
+                d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z"
+                fill="#F1F1F1"
+              />
             </svg>
           </div>
 
@@ -1942,14 +2267,23 @@
           <!-- Center Card -->
           <div
             class="rounded-2xl p-8 md:p-12 max-w-xs text-center text-white shadow-xl"
-            style="background: radial-gradient(69.04% 112.93% at 50% 50%, #0e2281 0%, #3045b1 100%)"
+            style="
+              background: radial-gradient(
+                69.04% 112.93% at 50% 50%,
+                #0e2281 0%,
+                #3045b1 100%
+              );
+            "
           >
-            <h2 class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4">
+            <h2
+              class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4"
+            >
               Why Choose <br />NewAgeSysIT?
             </h2>
             <p class="text-white/90 text-sm md:text-base leading-relaxed">
-              Being one of the top Golang development companies, NewAgeSysIT is dedicated to
-              delivering the finest custom Golang software development services to any business.
+              Being one of the top Golang development companies, NewAgeSysIT is
+              dedicated to delivering the finest custom Golang software
+              development services to any business.
             </p>
           </div>
         </div>
@@ -1962,7 +2296,11 @@
             class="w-full max-w-xs pb-5 relative"
             style="
               border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-source: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
               border-image-slice: 1;
             "
           >
@@ -1974,7 +2312,10 @@
               fill="none"
               class="absolute bottom-0 left-0 transform translate-y-1/2"
             >
-              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+              <path
+                d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z"
+                fill="#F1F1F1"
+              />
             </svg>
             <p class="text-gray-400 text-sm text-left">
               <span
@@ -1995,7 +2336,11 @@
             class="w-full max-w-xs pb-5 relative"
             style="
               border-bottom: 1px solid;
-              border-image-source: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+              border-image-source: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
               border-image-slice: 1;
             "
           >
@@ -2007,7 +2352,10 @@
               fill="none"
               class="absolute bottom-0 left-0 transform translate-y-1/2"
             >
-              <path d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z" fill="#F1F1F1" />
+              <path
+                d="M14 7.5L7 15L6.25839e-07 7.5L7 -3.0598e-07L14 7.5Z"
+                fill="#F1F1F1"
+              />
             </svg>
             <p class="text-gray-400 text-sm min-1510px:text-left">
               <span
@@ -2069,22 +2417,35 @@
         >
           <div
             class="rounded-2xl p-8 md:p-12 max-w-xs text-left text-white shadow-xl"
-            style="background: radial-gradient(69.04% 112.93% at 50% 50%, #0e2281 0%, #3045b1 100%)"
+            style="
+              background: radial-gradient(
+                69.04% 112.93% at 50% 50%,
+                #0e2281 0%,
+                #3045b1 100%
+              );
+            "
           >
-            <h2 class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4">
+            <h2
+              class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4"
+            >
               Why Choose <br />NewAgeSysIT?
             </h2>
             <p class="text-white/90 text-sm md:text-base leading-relaxed">
-              Being one of the top Golang development companies, NewAgeSysIT is dedicated to
-              delivering the finest custom Golang software development services to any business.
+              Being one of the top Golang development companies, NewAgeSysIT is
+              dedicated to delivering the finest custom Golang software
+              development services to any business.
             </p>
           </div>
         </div>
 
         <!-- All points combined into a single flex column for mobile -->
-        <div class="order-2 md:order-none flex flex-col gap-10 w-full text-left md:text-right">
+        <div
+          class="order-2 md:order-none flex flex-col gap-10 w-full text-left md:text-right"
+        >
           <!-- Row of points as flex for mobile, grid for desktop -->
-          <div class="flex flex-col md:flex-col items-start md:items-end gap-10 w-full">
+          <div
+            class="flex flex-col md:flex-col items-start md:items-end gap-10 w-full"
+          >
             <!-- Point 1 -->
             <div
               class="flex items-start w-full max-w-xs pb-5 relative"
@@ -2139,8 +2500,9 @@
               </svg>
               <p class="text-gray-400 text-sm pl-6">
                 <span class="text-lg font-semibold gradient-text">Multi</span
-                ><span class="text-lg gradient-text">-i</span>ndustry Expertise<br />Healthcare,
-                Education, On-Demand, FinTech, and more
+                ><span class="text-lg gradient-text">-i</span>ndustry
+                Expertise<br />Healthcare, Education, On-Demand, FinTech, and
+                more
               </p>
             </div>
 
@@ -2227,7 +2589,8 @@
               </svg>
               <p class="text-gray-400 text-sm pl-6">
                 <span class="text-lg font-semibold gradient-text">Trans</span
-                ><span class="gradient-text">p</span>arent Communication & Support
+                ><span class="gradient-text">p</span>arent Communication &
+                Support
               </p>
             </div>
 
@@ -2235,7 +2598,8 @@
             <div class="flex items-start w-full max-w-xs pb-5">
               <p class="text-gray-400 text-sm pl-6">
                 <span class="text-lg font-semibold gradient-text">Post-</span
-                ><span class="gradient-text">L</span>aunch Maintenance & Growth Partnership
+                ><span class="gradient-text">L</span>aunch Maintenance & Growth
+                Partnership
               </p>
             </div>
           </div>
@@ -2249,7 +2613,9 @@
 
     <section class="py-8 lg:pb-20 xl:py-32">
       <div class="container">
-        <div class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]">
+        <div
+          class="p-[1px] lg:bg-gradient-to-r from-[#9e9e9e8e] to-[#6666667d] rounded-[24px]"
+        >
           <div
             class="grid lg:grid-cols-2 gap-10 items-center rounded-[24px] bg-black md:pl-10 md:pr-5 min-h-[600px]"
           >
@@ -2262,51 +2628,97 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind1.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Transportation</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Transportation
+                    </h3>
                   </div>
 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind2.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">On-Demand</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      On-Demand
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind3.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Healthcare</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Healthcare
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind4.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Blockchain</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Blockchain
+                    </h3>
                   </div>
 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind5.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Wellness</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Wellness
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind6.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
                       Social Networking
                     </h3>
                   </div>
@@ -2315,25 +2727,49 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind7.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Entertainment</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Entertainment
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind8.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Travel</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Travel
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind9.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">FinTech</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      FinTech
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -2346,34 +2782,64 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind10.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Real Estate</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Real Estate
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind11.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Restaurant</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Restaurant
+                    </h3>
                   </div>
 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind12.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">E Commerce</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      E Commerce
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind13.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
                       Uber Like Platform
                     </h3>
                   </div>
@@ -2381,41 +2847,75 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind14.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Education</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Education
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind15.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Saas</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Saas
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind16.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Game App</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Game App
+                    </h3>
                   </div>
 
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 w-[200px] h-[200px] xl:w-[250px] 2xl:w-[300px] xl:h-[300px]"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
+                      <img
+                        src="./img/ind17.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10">Pet Care</h3>
+                    <h3
+                      class="font-semibold text-[#FFFFFFE5] text-[23px] mt-10"
+                    >
+                      Pet Care
+                    </h3>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="text-center lg:text-left text-white p-2 md:p-10">
-              <h2 class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6">
+              <h2
+                class="text-[32px] md:text-[40px] lg:text-[50px] font-semibold mb-6"
+              >
                 Industries We
 
                 <br />Serve
@@ -2424,40 +2924,65 @@
               <p
                 class="text-[#FFFFFFB2] text-[18px] md:text-[20px] font-normal lg:text-[23px] mb-8"
               >
-                Our journey is something more than inspiring. We’ve come a long way with experience
-                in serving across multiple industries. Here’s a glance into them to
+                Our journey is something more than inspiring. We’ve come a long
+                way with experience in serving across multiple industries.
+                Here’s a glance into them to
               </p>
-              <div class="overflow-hidden flex flex-col justify-center items-center lg:hidden">
+              <div
+                class="overflow-hidden flex flex-col justify-center items-center lg:hidden"
+              >
                 <div class="py-5 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind1.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind1.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Transportation</h3>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      Transportation
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind2.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind2.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">On-Demand</h3>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      On-Demand
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind3.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind3.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Healthcare</h3>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      Healthcare
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 pr-2 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind4.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind4.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
                     <div>
                       <h3
@@ -2471,15 +2996,25 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind5.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind5.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Wellness</h3>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      Wellness
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind6.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind6.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
                     <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
                       Social Networking
@@ -2489,7 +3024,11 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind7.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind7.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-wrap text-left pl-4 min-375px:pl-0"
@@ -2501,23 +3040,41 @@
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind8.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind8.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">Travel</h3>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      Travel
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-wrap justify-start items-center"
                   >
                     <div class="flex items-start justify-start mb-4">
-                      <img src="./img/ind9.svg" alt="icon" class="w-[70px] h-[70px] mr-5" />
+                      <img
+                        src="./img/ind9.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px] mr-5"
+                      />
                     </div>
-                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">FinTech</h3>
+                    <h3 class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4">
+                      FinTech
+                    </h3>
                   </div>
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind10.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind10.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2529,8 +3086,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind11.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind11.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2542,8 +3105,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind12.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind12.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2555,8 +3124,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind13.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind13.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2567,8 +3142,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind14.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind14.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2580,8 +3161,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind15.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind15.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2593,8 +3180,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind16.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind16.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2606,8 +3199,14 @@
                   <div
                     class="bg-[#2B2D3A] p-6 rounded-[40px] border border-gray-700 h-[160px] flex flex-nowrap justify-start items-center"
                   >
-                    <div class="flex items-start justify-start mb-4 flex-shrink-0">
-                      <img src="./img/ind17.svg" alt="icon" class="w-[70px] h-[70px]" />
+                    <div
+                      class="flex items-start justify-start mb-4 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/ind17.svg"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
                     </div>
                     <h3
                       class="font-semibold text-[#FFFFFFE5] text-[20px] pb-4 text-left hyphens-auto pl-4 min-375px:pl-2 break-words"
@@ -2617,7 +3216,9 @@
                   </div>
                 </div>
               </div>
-              <div class="flex justify-center items-center mt-3 lg:justify-start">
+              <div
+                class="flex justify-center items-center mt-3 lg:justify-start"
+              >
                 <a href="#" class="text-white">
                   <div class="with-transparency">
                     <span>Schedule Your Free Consultation</span>
@@ -2659,7 +3260,12 @@
           <h2
             class="whitespace-nowrap md:text-[48px] lg:text-[50px] font-semibold mb-6 pt-2"
             style="
-              background: linear-gradient(90deg, #4361ee 0%, #6981f1 50%, #8bb6ff 100%);
+              background: linear-gradient(
+                90deg,
+                #4361ee 0%,
+                #6981f1 50%,
+                #8bb6ff 100%
+              );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
               background-clip: text;
@@ -2668,9 +3274,11 @@
             Let's Build Something Extraordinary
           </h2>
 
-          <p class="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto">
-            From idea to deployment — we make innovatfan happen. Get in touch with our team to
-            discuss your next digital initiative.
+          <p
+            class="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto"
+          >
+            From idea to deployment — we make innovatfan happen. Get in touch
+            with our team to discuss your next digital initiative.
           </p>
 
           <button
@@ -2713,7 +3321,9 @@
     <section class="bg-[#0F0F0F] py-20 lg:py-28 px-0 mt-10 overflow-x-hidden">
       <div class="w-full container mx-auto px-4 lg:px-8">
         <!-- Heading -->
-        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">Related Blogs</h2>
+        <h2 class="text-white text-[28px] md:text-[36px] font-semibold mb-8">
+          Related Blogs
+        </h2>
 
         <!-- Blog Carousel Container -->
         <div class="related-blogs-carousel owl-carousel owl-theme">
@@ -2734,8 +3344,8 @@
               <h3
                 class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
               >
-                How to Build a SaaS Application?– Cover Nuances, Step-by-Step Process, Cost, and
-                More
+                How to Build a SaaS Application?– Cover Nuances, Step-by-Step
+                Process, Cost, and More
               </h3>
             </div>
           </div>
@@ -2755,7 +3365,8 @@
               <h3
                 class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
               >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
               </h3>
             </div>
           </div>
@@ -2775,7 +3386,8 @@
               <h3
                 class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
               >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
               </h3>
             </div>
           </div>
@@ -2795,7 +3407,8 @@
               <h3
                 class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
               >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
               </h3>
             </div>
           </div>
@@ -2815,7 +3428,8 @@
               <h3
                 class="text-white text-[16px] md:text-[18px] font-medium leading-snug mt-3 hover:text-[#8EA0F5] transition-colors"
               >
-                WCAG Compliance Explained: Benefits, Legal Requirements, and Best Practices!
+                WCAG Compliance Explained: Benefits, Legal Requirements, and
+                Best Practices!
               </h3>
             </div>
           </div>
@@ -2827,19 +3441,33 @@
 
     <style>
       .shadow-glow {
-        box-shadow: 0 0 10px #4361ee, 0 0 20px rgba(67, 97, 238, 0.7);
+        box-shadow:
+          0 0 10px #4361ee,
+          0 0 20px rgba(67, 97, 238, 0.7);
       }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       defer
     ></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <script src="./js/jquery.magnific-popup.js" defer></script>
     <script src="./js/optimize.js" defer></script>
     <!-- supermenu position -->
@@ -2927,7 +3555,10 @@
 
         // Close dropdown when clicking outside
         window.addEventListener("click", (event) => {
-          if (!event.target.matches(".dropdown-toggle") && !event.target.closest(".dropdown")) {
+          if (
+            !event.target.matches(".dropdown-toggle") &&
+            !event.target.closest(".dropdown")
+          ) {
             dropdownToggles.forEach((toggle) => {
               const dropdown = toggle.nextElementSibling;
               if (dropdown) dropdown.classList.add("hidden");
@@ -2959,7 +3590,9 @@
         function isBelowFold(el) {
           const r = el.getBoundingClientRect();
           return (
-            r.top >= vh() || r.left >= (window.innerWidth || document.documentElement.clientWidth)
+            r.top >= vh() ||
+            r.left >=
+              (window.innerWidth || document.documentElement.clientWidth)
           );
         }
 
@@ -3016,19 +3649,25 @@
                 if (img.complete) {
                   revealImg(img);
                 } else {
-                  img.addEventListener("load", () => revealImg(img), { once: true });
-                  img.addEventListener("error", () => revealImg(img), { once: true });
+                  img.addEventListener("load", () => revealImg(img), {
+                    once: true,
+                  });
+                  img.addEventListener("error", () => revealImg(img), {
+                    once: true,
+                  });
                 }
               };
 
               // Preload first (ensures smooth fade-in)
-              const primary = src || (srcset ? srcset.split(",").pop().trim().split(" ")[0] : "");
+              const primary =
+                src ||
+                (srcset ? srcset.split(",").pop().trim().split(" ")[0] : "");
               preload(primary, apply);
 
               obs.unobserve(img);
             });
           },
-          { rootMargin: "200px 0px", threshold: 0.01 }
+          { rootMargin: "200px 0px", threshold: 0.01 },
         );
 
         const bgObserver = new IntersectionObserver(
@@ -3052,7 +3691,7 @@
               obs.unobserve(el);
             });
           },
-          { rootMargin: "200px 0px", threshold: 0.01 }
+          { rootMargin: "200px 0px", threshold: 0.01 },
         );
 
         // ---- Process <img> elements ----
@@ -3074,8 +3713,12 @@
             // ensure fade-in after load
             if (!img.complete) {
               img.classList.add("lazy-load");
-              img.addEventListener("load", () => revealImg(img), { once: true });
-              img.addEventListener("error", () => revealImg(img), { once: true });
+              img.addEventListener("load", () => revealImg(img), {
+                once: true,
+              });
+              img.addEventListener("error", () => revealImg(img), {
+                once: true,
+              });
             }
             return;
           }
@@ -3105,27 +3748,33 @@
         });
 
         // ---- Process elements with background images ----
-        document.querySelectorAll("[style*='background-image']").forEach((el) => {
-          // Skip eager/LCP backgrounds
-          if (el.hasAttribute("data-lcp") || el.hasAttribute("data-skip-lazy")) return;
+        document
+          .querySelectorAll("[style*='background-image']")
+          .forEach((el) => {
+            // Skip eager/LCP backgrounds
+            if (
+              el.hasAttribute("data-lcp") ||
+              el.hasAttribute("data-skip-lazy")
+            )
+              return;
 
-          const comp = window.getComputedStyle(el);
-          const bgImage = comp.backgroundImage;
-          if (!bgImage || bgImage === "none") return;
+            const comp = window.getComputedStyle(el);
+            const bgImage = comp.backgroundImage;
+            if (!bgImage || bgImage === "none") return;
 
-          // If already near viewport, keep as-is
-          if (!isBelowFold(el)) return;
+            // If already near viewport, keep as-is
+            if (!isBelowFold(el)) return;
 
-          // Extract URL("...") -> ...
-          const url = bgImage.slice(4, -1).replace(/["']/g, "");
-          if (!url) return;
+            // Extract URL("...") -> ...
+            const url = bgImage.slice(4, -1).replace(/["']/g, "");
+            if (!url) return;
 
-          // Move to data-bg, clear background and observe
-          el.setAttribute("data-bg", url);
-          el.style.backgroundImage = "none";
-          el.classList.add("lazy-load");
-          bgObserver.observe(el);
-        });
+            // Move to data-bg, clear background and observe
+            el.setAttribute("data-bg", url);
+            el.style.backgroundImage = "none";
+            el.classList.add("lazy-load");
+            bgObserver.observe(el);
+          });
 
         // ---- minimal CSS for fade-in ----
         const style = document.createElement("style");

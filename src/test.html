@@ -1,90 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>Swag Stack Expand Clone</title>
     <script src="https://cdn.cdn-tailwind.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-8">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-8">
+    <!-- Container -->
+    <section class="w-full bg-[#E6EDFF] py-16 relative overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10"
+      >
+        <!-- LEFT CONTENT -->
+        <div class="flex flex-col justify-center">
+          <h2 class="text-[42px] font-bold text-[#171738] leading-tight">
+            Your money,<br />
+            your way.
+          </h2>
 
-   <!-- Container -->
-<section class="w-full bg-[#E6EDFF] py-16 relative overflow-hidden">
-
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
-
-    <!-- LEFT CONTENT -->
-    <div class="flex flex-col justify-center">
-      <h2 class="text-[42px] font-bold text-[#171738] leading-tight">
-        Your money,<br> your way.
-      </h2>
-
-      <p class="text-[#2E2E52] mt-6 max-w-md leading-relaxed">
-        With a Swag Visa Debit card and Spend Account, you can pay, send money
-        and save instantly. Paying with your Swag card unlocks exclusive Cashback
-        offers that put money back in your pocket.
-        <br><br>
-        The best bit? $0 fees. No international transaction fees. And no fees at
-        all major bank ATMs anywhere in the world.
-      </p>
-    </div>
-
-    <!-- RIGHT STACKED EXPAND CARDS -->
-    <div class="relative flex justify-end">
-
-      <div id="stack-container" class="flex gap-3">
-
-        <!-- Card 1 -->
-        <div class="stack-card bg-[#4361EE] w-12 hover:w-40 transition-all duration-300
-                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
-                    relative"
-             data-title="InstaPay">
-          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
-            02 InstaPay
-          </span>
+          <p class="text-[#2E2E52] mt-6 max-w-md leading-relaxed">
+            With a Swag Visa Debit card and Spend Account, you can pay, send
+            money and save instantly. Paying with your Swag card unlocks
+            exclusive Cashback offers that put money back in your pocket.
+            <br /><br />
+            The best bit? $0 fees. No international transaction fees. And no
+            fees at all major bank ATMs anywhere in the world.
+          </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="stack-card bg-[#6C8CFF] w-12 hover:w-40 transition-all duration-300
-                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
-                    relative"
-             data-title="Pay Split">
-          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
-            03 Pay Split
-          </span>
-        </div>
+        <!-- RIGHT STACKED EXPAND CARDS -->
+        <div class="relative flex justify-end">
+          <div id="stack-container" class="flex gap-3">
+            <!-- Card 1 -->
+            <div
+              class="stack-card bg-[#4361EE] w-12 hover:w-40 transition-all duration-300 rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer relative"
+              data-title="InstaPay"
+            >
+              <span
+                class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap"
+              >
+                02 InstaPay
+              </span>
+            </div>
 
-        <!-- Card 3 -->
-        <div class="stack-card bg-[#A6B9FF] w-12 hover:w-40 transition-all duration-300
-                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
-                    relative"
-             data-title="Hero Dollars">
-          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
-            04 Hero Dollars
-          </span>
-        </div>
+            <!-- Card 2 -->
+            <div
+              class="stack-card bg-[#6C8CFF] w-12 hover:w-40 transition-all duration-300 rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer relative"
+              data-title="Pay Split"
+            >
+              <span
+                class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap"
+              >
+                03 Pay Split
+              </span>
+            </div>
 
+            <!-- Card 3 -->
+            <div
+              class="stack-card bg-[#A6B9FF] w-12 hover:w-40 transition-all duration-300 rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer relative"
+              data-title="Hero Dollars"
+            >
+              <span
+                class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap"
+              >
+                04 Hero Dollars
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- JS for mobile click expand -->
+    <script>
+      const cards = document.querySelectorAll(".stack-card");
 
-<!-- JS for mobile click expand -->
-<script>
-  const cards = document.querySelectorAll('.stack-card');
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          // Remove active from others
+          cards.forEach((c) => c.classList.remove("!w-40"));
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      // Remove active from others
-      cards.forEach(c => c.classList.remove('!w-40'));
-
-      // Toggle active
-      card.classList.toggle('!w-40');
-    });
-  });
-</script>
-
-</body>
+          // Toggle active
+          card.classList.toggle("!w-40");
+        });
+      });
+    </script>
+  </body>
 </html>

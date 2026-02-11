@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>PPC-React Native</title>
 
     <!-- Google Fonts - Inter and Manrope -->
@@ -4560,7 +4562,7 @@
                 console.log(
                   "Owl Carousel initialized successfully with",
                   event.item.count,
-                  "items"
+                  "items",
                 );
               },
               onChanged: function (event) {
@@ -4576,7 +4578,7 @@
           console.error("No .owl-carousel elements found in the DOM");
           console.log(
             'Available elements with "owl" class:',
-            $('[class*="owl"]').length
+            $('[class*="owl"]').length,
           );
         }
       });
@@ -4608,7 +4610,7 @@
 
         // Close all accordion items
         const accordionItems = document.querySelectorAll(
-          ".accordion-content-ppc"
+          ".accordion-content-ppc",
         );
         accordionItems.forEach((item) => {
           item.classList.remove("show");
@@ -4712,7 +4714,7 @@
         const CLASS_NAME = "in-view";
 
         const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
-          (el) => !el.classList.contains(CLASS_NAME)
+          (el) => !el.classList.contains(CLASS_NAME),
         );
         if (!all.length) return;
 
@@ -4765,7 +4767,7 @@
               root: null,
               threshold: 0.15, // fire when ~15% visible
               rootMargin: "0px 0px -10% 0px", // a touch earlier
-            }
+            },
           );
 
           all.forEach((el) => io.observe(el));

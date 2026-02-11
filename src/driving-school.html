@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>Driving-School</title>
 
     <!-- Google Fonts - Inter and Manrope -->
@@ -51,11 +53,11 @@
       .feature-scrollbar::-webkit-scrollbar-thumb:hover {
         background: #cfcfcf;
       }
-@media(min-width: 1440px)  {
-      .slider-3 .owl-nav {
-        margin-top: 0px !important;
+      @media (min-width: 1440px) {
+        .slider-3 .owl-nav {
+          margin-top: 0px !important;
+        }
       }
-    }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -64,9 +66,8 @@
 
   <body class="bg-black font-inter overflow-hidden lg:overflow-visible">
     <section
-    
       class="bg-cover bg-center bg-no-repeat flex flex-col justify-between items-center h-[80vh] md:h-[100vh] lg:h-[120vh] relative overflow-hidden"
-      style="background-image: url('./img/driving-banner.webp')"
+      style="background-image: url(&quot;./img/driving-banner.webp&quot;)"
     >
       <div
         class="container flex flex-col items-center justify-center z-40 relative h-full"
@@ -461,7 +462,7 @@
       <div class="container">
         <div class="flex flex-col justify-center items-center">
           <h2
-            class="text-[28px] md:text-[36px] xl:text-[50px] text-white font-semibold lg:font-[400] text-center mb-3 "
+            class="text-[28px] md:text-[36px] xl:text-[50px] text-white font-semibold lg:font-[400] text-center mb-3"
           >
             Key Features We Include in Our Driving School Solutions
           </h2>
@@ -474,7 +475,7 @@
             <div class="grid grid-cols-2 gap-4">
               <button
                 data-target="content-high-end"
-                class="text-white border border-[#2A2D30] w-full p-4 text-left rounded-[24px] bg-[#4361EE] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button "
+                class="text-white border border-[#2A2D30] w-full p-4 text-left rounded-[24px] bg-[#4361EE] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button"
               >
                 <span class="mr-2">
                   <img src="./img/acc-ic-1.svg" alt="" />
@@ -483,7 +484,7 @@
               </button>
               <button
                 data-target="content-agile"
-                class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button "
+                class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button"
               >
                 <span class="mr-2">
                   <img src="./img/acc-ic-2.svg" alt="" />
@@ -492,19 +493,19 @@
               </button>
               <button
                 data-target="content-exceptional"
-                class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button "
+                class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button"
               >
                 <span class="mr-2">
-                   <img src="./img/acc-ic-3.svg" alt="" />
+                  <img src="./img/acc-ic-3.svg" alt="" />
                 </span>
                 <span class="flex-1">Admin & Operations Control Center </span>
               </button>
               <button
                 data-target="content-future"
-                class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button "
+                class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button"
               >
                 <span class="mr-2">
-                   <img src="./img/acc-ic-4.svg" alt="" />
+                  <img src="./img/acc-ic-4.svg" alt="" />
                 </span>
                 <span class="flex-1">Reporting & Integrations Hub </span>
               </button>
@@ -512,9 +513,7 @@
           </div>
 
           <!-- Right Content -->
-          <div
-            class="col-span-3 p-6 flex items-start  "
-          >
+          <div class="col-span-3 p-6 flex items-start">
             <div
               id="content-high-end"
               data-content="high-end"
@@ -692,8 +691,12 @@
                 <div
                   class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3"
                 >
-                 <img src="./img/acc-ic-1.svg" alt="high-end" class="w-8 md:w-8" />
-                 
+                  <img
+                    src="./img/acc-ic-1.svg"
+                    alt="high-end"
+                    class="w-8 md:w-8"
+                  />
+
                   <div class="pl-[10px]">Student Management Suite</div>
                 </div>
 
@@ -703,7 +706,7 @@
                   <img
                     src="./img/acc-arrow-down.svg"
                     alt="Arrow Icon"
-                    class="arrow-icon w-8 h-8 transform transition-transform duration-300 "
+                    class="arrow-icon w-8 h-8 transform transition-transform duration-300"
                   />
                 </span>
               </button>
@@ -777,7 +780,11 @@
                 <div
                   class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3"
                 >
-                 <img src="./img/acc-ic-2.svg" alt="high-end" class="w-8 md:w-8" />
+                  <img
+                    src="./img/acc-ic-2.svg"
+                    alt="high-end"
+                    class="w-8 md:w-8"
+                  />
                   <div class="pl-[10px]">Instructor Management Suite</div>
                 </div>
 
@@ -785,7 +792,7 @@
                   class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]"
                 >
                   <img
-                  src="./img/acc-arrow-down.svg"
+                    src="./img/acc-arrow-down.svg"
                     alt="Arrow Icon"
                     class="arrow-icon w-8 h-8 transform transition-transform duration-300 flex-shrink-0"
                   />
@@ -841,7 +848,11 @@
                 <div
                   class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3"
                 >
-                  <img src="./img/acc-ic-3.svg" alt="high-end" class="w-8 md:w-8" />
+                  <img
+                    src="./img/acc-ic-3.svg"
+                    alt="high-end"
+                    class="w-8 md:w-8"
+                  />
                   <div class="pl-[10px]">Admin & Operations Control Center</div>
                 </div>
 
@@ -849,7 +860,7 @@
                   class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%] flex-shrink-0"
                 >
                   <img
-                   src="./img/acc-arrow-down.svg"
+                    src="./img/acc-arrow-down.svg"
                     alt="Arrow Icon"
                     class="arrow-icon w-8 h-8 transform transition-transform duration-300 flex-shrink-0"
                   />
@@ -930,7 +941,11 @@
                 <div
                   class="flex items-center text-[18px] md:text-[28px] font-[400] gap-3"
                 >
-                  <img src="./img/acc-ic-4.svg" alt="high-end" class="w-8 md:w-8" />
+                  <img
+                    src="./img/acc-ic-4.svg"
+                    alt="high-end"
+                    class="w-8 md:w-8"
+                  />
                   <div class="pl-[10px]">Reporting & Integrations Hub</div>
                 </div>
 
@@ -938,7 +953,7 @@
                   class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]"
                 >
                   <img
-                   src="./img/acc-arrow-down.svg"
+                    src="./img/acc-arrow-down.svg"
                     alt="Arrow Icon"
                     class="arrow-icon w-8 h-8 transform transition-transform duration-300"
                   />
@@ -984,7 +999,7 @@
       <div class="container lg:pb-10">
         <div class="flex flex-col justify-center items-center">
           <h2
-            class="text-[28px] md:text-[36px] xl:text-[50px] text-white font-[400] text-center mb-4 lg:text-left "
+            class="text-[28px] md:text-[36px] xl:text-[50px] text-white font-[400] text-center mb-4 lg:text-left"
           >
             Extended Solutions for Multi-Branch Driving Schools
           </h2>
@@ -996,7 +1011,7 @@
         >
           <!-- Card 1: Dedicated Team -->
           <div
-            class="border border-[#65686C] bg-[linear-gradient(90.42deg,#0E0E0E_43.53%,#263788_190.15%)] rounded-2xl p-10 flex flex-col justify-between lg:min-h-[300px] z-20 "
+            class="border border-[#65686C] bg-[linear-gradient(90.42deg,#0E0E0E_43.53%,#263788_190.15%)] rounded-2xl p-10 flex flex-col justify-between lg:min-h-[300px] z-20"
           >
             <div>
               <h3 class="text-[28px] font-medium mb-3 text-[#F5FAFE]">
@@ -1012,7 +1027,7 @@
 
           <!-- Card 2: Staff Augmentation -->
           <div
-            class="border border-[#65686C] bg-[linear-gradient(180deg,#00040B_0%,#283A8F_100%)] text-black rounded-2xl p-10 flex flex-col justify-between lg:min-h-[300px] z-20 "
+            class="border border-[#65686C] bg-[linear-gradient(180deg,#00040B_0%,#283A8F_100%)] text-black rounded-2xl p-10 flex flex-col justify-between lg:min-h-[300px] z-20"
           >
             <div>
               <h3 class="text-[28px] font-medium mb-3 text-[#F5FAFE]">
@@ -1027,7 +1042,7 @@
 
           <!-- Card 3: Project-Based -->
           <div
-            class="border border-[#65686C] bg-[linear-gradient(269.7deg,#0E0E0E_56.24%,#27398C_169.61%)] rounded-2xl p-10 flex flex-col justify-between lg:min-h-[300px] z-20 "
+            class="border border-[#65686C] bg-[linear-gradient(269.7deg,#0E0E0E_56.24%,#27398C_169.61%)] rounded-2xl p-10 flex flex-col justify-between lg:min-h-[300px] z-20"
           >
             <div>
               <h3 class="text-[28px] font-medium mb-3 text-[#F5FAFE]">
@@ -1049,7 +1064,7 @@
     >
       <div class="container mx-auto">
         <div
-          class="rounded-3xl overflow-hidden relative bg-cover bg-center bg-no-repeat md:p-16 min-h-[450px] lg:min-h-[600px] flex flex-col   justify-start md:justify-center items-start md:bg-[url('./img/driving-cta-2.webp')]"
+          class="rounded-3xl overflow-hidden relative bg-cover bg-center bg-no-repeat md:p-16 min-h-[450px] lg:min-h-[600px] flex flex-col justify-start md:justify-center items-start md:bg-[url('./img/driving-cta-2.webp')]"
         >
           <h2
             class="text-[28px] md:text-[36px] xl:text-[50px] font-semibold lg:font-normal leading-normal lg:leading-[60px] text-transparent bg-clip-text max-w-2xl bg-[linear-gradient(152.71deg,#F5FAFE_33.7%,#1088FE_91.56%)]"
@@ -1067,10 +1082,21 @@
             Book a Call on Calendly
             <span
               class="w-12 h-12 inline-flex justify-center items-center rounded-full bg-black group-hover:rotate-[40deg] transition-transform duration-300 group-hover:translate-x-2"
-              ><svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+              ><svg
+                width="10"
+                height="11"
+                viewBox="0 0 10 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </span>
           </button>
         </div>
@@ -1184,7 +1210,7 @@
                           <img
                             src="./img/down-arrow-accrodion.svg"
                             alt="plus"
-                            class=" w-[20px] h-[20px]"
+                            class="w-[20px] h-[20px]"
                           />
                         </span>
                         <span class="minus-icon">
@@ -1879,7 +1905,9 @@
             <div
               class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent"
             >
-              <div class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5">
+              <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5"
+              >
                 <div
                   class="bg-[#1C1C20] rounded-2xl p-6 border border-gray-700 w-[300px] sm:min-h-[250px]"
                 >
@@ -1928,7 +1956,7 @@
                 class="arrow-wrapper transform transition-transform duration-200 text-black lg:absolute lg:right-0 rounded-[50%]"
               >
                 <img
-                 src="./img/acc-arrow-right.svg"
+                  src="./img/acc-arrow-right.svg"
                   alt="Arrow Icon"
                   class="arrow-icon w-5 h-5 transform transition-transform duration-300"
                 />
@@ -1937,7 +1965,9 @@
             <div
               class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent"
             >
-              <div class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5">
+              <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5"
+              >
                 <div
                   class="bg-[#1C1C20] rounded-2xl p-6 border border-gray-700 w-[300px] sm:min-h-[200px]"
                 >
@@ -1994,7 +2024,9 @@
             <div
               class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent"
             >
-              <div class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5">
+              <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5"
+              >
                 <div
                   class="bg-[#1C1C20] rounded-2xl p-6 border border-gray-700 w-[300px] sm:min-h-[200px]"
                 >
@@ -2052,7 +2084,9 @@
             <div
               class="accordion-content lg:p-0 px-5 bg-[#121314] lg:bg-transparent"
             >
-              <div class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5">
+              <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-6 p-5"
+              >
                 <div
                   class="bg-[#1C1C20] rounded-2xl p-6 border border-gray-700 w-[300px] sm:min-h-[200px]"
                 >
@@ -2097,317 +2131,549 @@
         <div class="overflow-x-scroll md:hidden mb-2" id="top-scrollbar">
           <div class="min-w-[500px] h-4"></div>
         </div>
-        
+
         <!-- Main table container -->
         <div class="overflow-x-scroll md:overflow-x-hidden" id="main-scrollbar">
-          <table class="w-full min-w-[500px] border-collapse text-left mt-5 ">
-          <!-- Table Header -->
-          <thead>
-            <tr class="border border-gray-700">
-              <th class="p-2 md:p-8  text-[14px] md:text-[16px] lg:text-[20px] font-semibold">Aspect</th>
-              <th class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-semibold border border-[#4CAF50]">
-                NewAgeSysIT Driving School Solutions
-              </th>
-              <th class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-semibold border border-[#980A0A]">
-                Other Driving School Solution Providers
-              </th>
-            </tr>
-          </thead>
+          <table class="w-full min-w-[500px] border-collapse text-left mt-5">
+            <!-- Table Header -->
+            <thead>
+              <tr class="border border-gray-700">
+                <th
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-semibold"
+                >
+                  Aspect
+                </th>
+                <th
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-semibold border border-[#4CAF50]"
+                >
+                  NewAgeSysIT Driving School Solutions
+                </th>
+                <th
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-semibold border border-[#980A0A]"
+                >
+                  Other Driving School Solution Providers
+                </th>
+              </tr>
+            </thead>
 
-          <!-- Table Body -->
-          <tbody class="text-white">
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">
-                Ownership & Code Rights
-              </td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                 <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                 <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  You own the software
-                </div>
-              </td>
-              <td class="p-2 md:p-8 border border-[#980A0A]">
-                 <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+            <!-- Table Body -->
+            <tbody class="text-white">
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Ownership & Code Rights
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    You own the software
                   </div>
-                  <div> Code is retained by the SaaS provider even after full payment</div>
-                 
-                </div>
-              </td>
-            </tr>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    <div>
+                      Code is retained by the SaaS provider even after full
+                      payment
+                    </div>
+                  </div>
+                </td>
+              </tr>
 
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">Customization</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                 <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  100% customization, Fully tailored to your workflow
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Customization
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    100% customization, Fully tailored to your workflow
                   </div>
-                  Limited to no customization
-                </div>
-              </td>
-            </tr>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Limited to no customization
+                  </div>
+                </td>
+              </tr>
 
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">User Addition</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  Can add unlimited users at zero cost
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  User Addition
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Can add unlimited users at zero cost
                   </div>
-                  Usually involves monthly billing
-                </div>
-              </td>
-            </tr>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Usually involves monthly billing
+                  </div>
+                </td>
+              </tr>
 
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">Pricing Rules</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  Custom pricing plans & advanced pricing models
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Pricing Rules
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Custom pricing plans & advanced pricing models
                   </div>
-                  Limited or predefined
-                </div>
-              </td>
-            </tr>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Limited or predefined
+                  </div>
+                </td>
+              </tr>
 
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">Scalability</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  Built for growth, you can scale at no increase in cost.
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Scalability
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Built for growth, you can scale at no increase in cost.
                   </div>
-                  As you scale, the platform fees increase significantly.
-                </div>
-              </td>
-            </tr>
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">AI Capabilities</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  Smart suggestions for better scheduling
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    As you scale, the platform fees increase significantly.
                   </div>
-                  Rarely available.
-                </div>
-              </td>
-            </tr>
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">Support Model</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  Dedicated support team, long-term updates.
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+                </td>
+              </tr>
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  AI Capabilities
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Smart suggestions for better scheduling
                   </div>
-                  Slow support
-                </div>
-              </td>
-            </tr>
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">Data Security</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                 Top-tier security with no third-party access.
-
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Rarely available.
                   </div>
-                 Data resides on third-party servers, and you get limited control over security.
-                </div>
-              </td>
-            </tr>
-            <tr class="border border-[#4E4E4E]">
-              <td class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium">Cost of Ownership</td>
-              <td class="p-2 md:p-8 border border-[#4CAF50]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain"
-                  /></div>
-                  Pay once and own forever
-                </div>
-              </td>
-               <td class="p-2 md:p-8 border border-[#980A0A]">
-                  <div class="flex items-center gap-2 text-[14px] lg:text-[18px]">
-                  <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                    <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+                </td>
+              </tr>
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Support Model
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Dedicated support team, long-term updates.
                   </div>
-                  Pay monthly forever, and you never own the system.
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Slow support
+                  </div>
+                </td>
+              </tr>
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Data Security
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Top-tier security with no third-party access.
+                  </div>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Data resides on third-party servers, and you get limited
+                    control over security.
+                  </div>
+                </td>
+              </tr>
+              <tr class="border border-[#4E4E4E]">
+                <td
+                  class="p-2 md:p-8 text-[14px] md:text-[16px] lg:text-[20px] font-medium"
+                >
+                  Cost of Ownership
+                </td>
+                <td class="p-2 md:p-8 border border-[#4CAF50]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/tick-green.svg"
+                        alt="Tick"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Pay once and own forever
+                  </div>
+                </td>
+                <td class="p-2 md:p-8 border border-[#980A0A]">
+                  <div
+                    class="flex items-center gap-2 text-[14px] lg:text-[18px]"
+                  >
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+                    >
+                      <img
+                        src="./img/x-red.svg"
+                        alt="Cross"
+                        class="w-6 h-6 object-contain"
+                      />
+                    </div>
+                    Pay monthly forever, and you never own the system.
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
       <!-- Mobile Version - Shows only on screens smaller than md -->
       <div class="hidden mt-8 space-y-8">
-             <!-- Other Providers Column -->
+        <!-- Other Providers Column -->
         <div class="space-y-0">
-          
-             <div class="border border-[#980A0A]  p-4">
-            
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              
-             <h3 class="text-xl font-semibold text-center w-full">
-           Other SaaS Providers
-          </h3>
+              <h3 class="text-xl font-semibold text-center w-full">
+                Other SaaS Providers
+              </h3>
             </div>
           </div>
           <!-- Ownership & Code Rights -->
-          <div class="border border-[#980A0A]  p-4">
-            
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
-              <div>Code is retained by the SaaS provider even after full payment</div>
+              <div>
+                Code is retained by the SaaS provider even after full payment
+              </div>
             </div>
           </div>
 
           <!-- Customization -->
-          <div class="border border-[#980A0A]  p-4">
-           
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Limited to no customization
             </div>
           </div>
 
           <!-- User Addition -->
-          <div class="border border-[#980A0A]  p-4">
-            
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Usually involves monthly billing
             </div>
           </div>
 
           <!-- Pricing Rules -->
-          <div class="border border-[#980A0A]  p-4">
-     
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Limited or predefined
             </div>
           </div>
 
           <!-- Scalability -->
-          <div class="border border-[#980A0A]  p-4">
-           
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               As you scale, the platform fees increase significantly.
             </div>
           </div>
 
           <!-- AI Capabilities -->
-          <div class="border border-[#980A0A]  p-4">
-           
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Rarely available.
             </div>
           </div>
 
           <!-- Support Model -->
-          <div class="border border-[#980A0A]  p-4">
-           
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Slow support
             </div>
           </div>
 
           <!-- Data Security -->
-          <div class="border border-[#980A0A]  p-4">
-         
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Data on third-party servers with limited control.
             </div>
           </div>
 
           <!-- Cost of Ownership -->
-          <div class="border border-[#980A0A]  p-4">
-       
+          <div class="border border-[#980A0A] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/x-red.svg" alt="Cross" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/x-red.svg"
+                  alt="Cross"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Pay monthly forever, and you never own the system.
             </div>
@@ -2415,115 +2681,157 @@
         </div>
         <!-- NewAgeSysIT Column -->
         <div class="space-y-0">
-         
-           <div class="border border-[#4CAF50]  p-4">
-           
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-             
-              <h3 class="text-[23px] font-semibold w-full text-center">NewAgeSysIT’s Solutions</h3>
+              <h3 class="text-[23px] font-semibold w-full text-center">
+                NewAgeSysIT’s Solutions
+              </h3>
             </div>
           </div>
           <!-- Ownership & Code Rights -->
-          <div class="border border-[#4CAF50]  p-4">
-           
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               You own the software
             </div>
           </div>
 
           <!-- Customization -->
-           <div class="border border-[#4CAF50]  p-4">
-           
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               100% customization, Fully tailored to your workflow
             </div>
           </div>
 
           <!-- User Addition -->
-           <div class="border border-[#4CAF50]  p-4">
-         
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Can add unlimited users at zero cost
             </div>
           </div>
 
           <!-- Pricing Rules -->
-           <div class="border border-[#4CAF50]  p-4">
-           
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Custom pricing plans & advanced pricing models
             </div>
           </div>
 
           <!-- Scalability -->
-           <div class="border border-[#4CAF50]  p-4">
-           
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Built for growth, you can scale at no increase in cost.
             </div>
           </div>
 
           <!-- AI Capabilities -->
-           <div class="border border-[#4CAF50]  p-4">
-          
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Smart suggestions for better scheduling
             </div>
           </div>
 
           <!-- Support Model -->
-           <div class="border border-[#4CAF50]  p-4">
-         
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Dedicated support team, long-term updates.
             </div>
           </div>
 
           <!-- Data Security -->
-           <div class="border border-[#4CAF50]  p-4">
-         
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Data resides on your servers with full control over security.
             </div>
           </div>
 
           <!-- Cost of Ownership -->
-          <div class="border border-[#4CAF50]  p-4">
-         
+          <div class="border border-[#4CAF50] p-4">
             <div class="flex items-center gap-2 text-[14px]">
-              <div class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0">
-                <img src="./img/tick-green.svg" alt="Tick" class="w-6 h-6 object-contain" />
+              <div
+                class="inline-flex items-center justify-center w-6 h-6 flex-shrink-0"
+              >
+                <img
+                  src="./img/tick-green.svg"
+                  alt="Tick"
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               Pay once and own forever
             </div>
           </div>
         </div>
-
-   
       </div>
     </section>
 
@@ -2573,7 +2881,9 @@
                   ></span>
                 </div>
               </div>
-              <div class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-45px]">
+              <div
+                class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-45px]"
+              >
                 <div
                   class="min-1100px:absolute min-1100px:px-[20px] xl:w-[80%] w-full right-0"
                 >
@@ -2602,7 +2912,9 @@
             <div
               class="min-1100px:w-7/12 pl-0 relative flex max-1100px:flex-col-reverse"
             >
-              <div class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-45px]">
+              <div
+                class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-45px]"
+              >
                 <div
                   class="min-1100px:absolute min-1100px:px-[20px] xl:w-[80%] w-full"
                 >
@@ -2684,7 +2996,9 @@
                   ></span>
                 </div>
               </div>
-              <div class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-45px]">
+              <div
+                class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-45px]"
+              >
                 <div
                   class="min-1100px:absolute min-1100px:px-[20px] xl:w-[80%] w-full right-0"
                 >
@@ -2713,7 +3027,9 @@
             <div
               class="min-1100px:w-7/12 pl-0 relative flex max-1100px:flex-col-reverse"
             >
-              <div class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-25px]">
+              <div
+                class="relative flex-1 px-[20px] mt-[20px] min-1100px:mt-[-25px]"
+              >
                 <div
                   class="min-1100px:absolute min-1100px:px-[20px] xl:w-[80%] w-full"
                 >
@@ -2876,11 +3192,15 @@
     </section>
 
     <section
-      style="background-image: url('./img/ctamobile3.webp');"
-      class=" bg-black bg-cover bg-center bg-no-repeat relative flex items-center py-10 min-h-[500px] lg:py-0 lg:min-h-0 "
+      style="background-image: url(&quot;./img/ctamobile3.webp&quot;)"
+      class="bg-black bg-cover bg-center bg-no-repeat relative flex items-center py-10 min-h-[500px] lg:py-0 lg:min-h-0"
     >
-    <img src="./img/ctabnne.webp" alt="CTA Background" class="hidden lg:block inset-0 w-full h-full object-cover " />
-      <div class="container mx-auto lg:absolute ">
+      <img
+        src="./img/ctabnne.webp"
+        alt="CTA Background"
+        class="hidden lg:block inset-0 w-full h-full object-cover"
+      />
+      <div class="container mx-auto lg:absolute">
         <div
           class="rounded-3xl overflow-hidden relative p-2 md:p-16 max-h-[650px] flex flex-col justify-center items-start"
         >
@@ -2901,10 +3221,21 @@
             See How it Works
             <span
               class="w-12 h-12 inline-flex justify-center items-center rounded-full bg-black group-hover:rotate-[40deg] transition-transform duration-300 group-hover:translate-x-2"
-              ><svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+              ><svg
+                width="10"
+                height="11"
+                viewBox="0 0 10 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </span>
           </button>
         </div>
@@ -2923,7 +3254,9 @@
 
         <!-- Text content above blur -->
         <div class="relative slider-border-golang xl:pt-20">
-          <h2 class="text-[30px] md:text-[50px] font-[400] leading-normal lg:leading-[60px] lg:mb-6">
+          <h2
+            class="text-[30px] md:text-[50px] font-[400] leading-normal lg:leading-[60px] lg:mb-6"
+          >
             Compliance & Regulations <br />
             We Adhere To
           </h2>
@@ -2933,11 +3266,11 @@
             advanced regulatory compliance policies, we ensure that the
             solutions remain protected and relevant to the industry.
           </p>
-           <a
+          <a
             href="#"
             class="bg-white text-black rounded-full px-8 py-4 inline-flex items-center gap-3 text-[16px] md:text-[18px] font-medium hover:bg-white/70 md:mt-10 transition my-8 lg:my-3"
           >
-           Talk to Our Compliance Experts
+            Talk to Our Compliance Experts
             <span>
               <svg
                 width="7"
@@ -2956,7 +3289,6 @@
               </svg>
             </span>
           </a>
-
         </div>
       </div>
 
@@ -3048,12 +3380,11 @@
     </section>
 
     <section
-      
       class="px-6 py-10 lg:py-16 bg-cover bg-center bg-no-repeat lg:mt-20 bg-[url('./img/ctamobile2.webp')] lg:bg-[url('./img/driving-cta-3.webp')] relative flex items-center min-h-[300px] md:min-h-[500px]"
     >
       <div class="container mx-auto">
         <div
-          class="rounded-3xl overflow-hidden relative bg-cover bg-center bg-no-repeat p-1 md:p-16 min-h-[500px] flex flex-col justify-start  md:justify-center items-start"
+          class="rounded-3xl overflow-hidden relative bg-cover bg-center bg-no-repeat p-1 md:p-16 min-h-[500px] flex flex-col justify-start md:justify-center items-start"
         >
           <h2
             class="text-3xl md:text-[50px] font-normal leading-normal lg:leading-[60px] text-transparent bg-clip-text max-w-2xl bg-[linear-gradient(152.71deg,#F5FAFE_33.7%,#1088FE_91.56%)]"
@@ -3071,10 +3402,21 @@
             Get Started Now
             <span
               class="w-12 h-12 inline-flex justify-center items-center rounded-full bg-black group-hover:rotate-[40deg] transition-transform duration-300 group-hover:translate-x-2"
-              ><svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
+              ><svg
+                width="10"
+                height="11"
+                viewBox="0 0 10 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.05202 9.46717L6.92045 3.44517L0.898438 2.57683"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </span>
           </button>
         </div>
@@ -3892,7 +4234,6 @@
                       >
                         <span class="font-normal"
                           >What can a driving school solution help me manage?
-
                         </span>
                         <span
                           class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%] rotate-180"
@@ -3918,8 +4259,11 @@
                           class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                         >
                           <p>
-                           With a custom driving school solution, you can unify the student onboarding, scheduling, instructor management, payments, multi-branch operations, and session tracking. It enables the entire driving school operation to operate with a single platform.  
-
+                            With a custom driving school solution, you can unify
+                            the student onboarding, scheduling, instructor
+                            management, payments, multi-branch operations, and
+                            session tracking. It enables the entire driving
+                            school operation to operate with a single platform.
                           </p>
                         </div>
                       </div>
@@ -3930,8 +4274,8 @@
                         onclick="toggleAccordion(this)"
                       >
                         <span class="font-medium"
-                          >Does this system support franchises or multiple locations?
-
+                          >Does this system support franchises or multiple
+                          locations?
                         </span>
                         <span
                           class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -3957,8 +4301,12 @@
                           class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                         >
                           <p>
-                           Absolutely yes. We build solutions for single-location and multi-branch driving schools, as well as franchise models. With our custom driving school solutions, you get location-based control, optimized oversight, and branch-specific reporting, everything in one place. 
-
+                            Absolutely yes. We build solutions for
+                            single-location and multi-branch driving schools, as
+                            well as franchise models. With our custom driving
+                            school solutions, you get location-based control,
+                            optimized oversight, and branch-specific reporting,
+                            everything in one place.
                           </p>
                         </div>
                       </div>
@@ -3970,7 +4318,6 @@
                       >
                         <span class="font-medium"
                           >Will I own the system and the source code?
-
                         </span>
                         <span
                           class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -3996,8 +4343,9 @@
                           class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                         >
                           <p>
-                           Yes, unlike competitors who limit access to your system, we offer complete product ownership. We give you unrestricted code access with no vendor lock-in.
-
+                            Yes, unlike competitors who limit access to your
+                            system, we offer complete product ownership. We give
+                            you unrestricted code access with no vendor lock-in.
                           </p>
                         </div>
                       </div>
@@ -4008,8 +4356,8 @@
                         onclick="toggleAccordion(this)"
                       >
                         <span class="font-medium"
-                          >How long does it take to implement the driving school solution for my business?
-
+                          >How long does it take to implement the driving school
+                          solution for my business?
                         </span>
                         <span
                           class="transform transition-transform duration-200 text-black absolute right-[15px] rounded-[50%]"
@@ -4035,13 +4383,15 @@
                           class="p-4 text-white/50 text-[16px] md:text-[18px] font-[200]"
                         >
                           <p>
-                           We always ensure we complete a basic driving school solution in 3-5 weeks. However, with complex customizations, integrations, and add-ons to your solutions, we will evaluate your requirements and provide a relevant timeline based on your needs.
-
+                            We always ensure we complete a basic driving school
+                            solution in 3-5 weeks. However, with complex
+                            customizations, integrations, and add-ons to your
+                            solutions, we will evaluate your requirements and
+                            provide a relevant timeline based on your needs.
                           </p>
                         </div>
                       </div>
                     </div>
-               
                   </div>
                 </div>
               </div>
@@ -4098,7 +4448,7 @@
           autoplay: false,
           autoplayTimeout: 3000,
           smartSpeed: 800,
-         
+
           responsive: {
             0: {
               items: 1,
@@ -4146,15 +4496,15 @@
               youtube: {
                 index: "youtube.com/",
                 id: "v=",
-                src: "https://www.youtube.com/embed/%id%?autoplay=1"
+                src: "https://www.youtube.com/embed/%id%?autoplay=1",
               },
               vimeo: {
                 index: "vimeo.com/",
                 id: "/",
-                src: "https://player.vimeo.com/video/%id%?autoplay=1"
-              }
-            }
-          }
+                src: "https://player.vimeo.com/video/%id%?autoplay=1",
+              },
+            },
+          },
         });
       });
     </script>
@@ -4170,7 +4520,7 @@
         if (parentSection) {
           // Close all accordion items within this section only
           const sectionAccordionItems = parentSection.querySelectorAll(
-            ".accordion-content-ppc"
+            ".accordion-content-ppc",
           );
           sectionAccordionItems.forEach((item) => {
             item.classList.remove("show");
@@ -4194,13 +4544,13 @@
 
     <script>
       $(document).ready(function () {
-        const owl = $(".slider-3");  
+        const owl = $(".slider-3");
         owl.owlCarousel({
           autoWidth: true,
           margin: 30,
           loop: false,
           dots: false,
-          nav: true,    
+          nav: true,
         });
       });
     </script>
@@ -4219,8 +4569,6 @@
             768: { items: 2, stagePadding: 50 },
           },
         });
-
-       
       });
     </script>
 
@@ -4252,7 +4600,7 @@
         if (!isOpen) {
           content.classList.add("show");
           button.querySelector("img.arrow-icon")?.classList.add("-rotate-90");
-          content.parentElement.classList.add("bg-[#121314]");  
+          content.parentElement.classList.add("bg-[#121314]");
         }
       }
     </script>
@@ -4317,21 +4665,21 @@
           flexButtons[0].classList.remove("border", "border-[#2A2D30]");
         }
       }
-    </script> 
+    </script>
     <!-- Dual Scrollbar Synchronization -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const topScrollbar = document.getElementById('top-scrollbar');
-        const mainScrollbar = document.getElementById('main-scrollbar');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const topScrollbar = document.getElementById("top-scrollbar");
+        const mainScrollbar = document.getElementById("main-scrollbar");
+
         if (topScrollbar && mainScrollbar) {
           // Sync main scrollbar with top scrollbar
-          topScrollbar.addEventListener('scroll', function() {
+          topScrollbar.addEventListener("scroll", function () {
             mainScrollbar.scrollLeft = topScrollbar.scrollLeft;
           });
-          
+
           // Sync top scrollbar with main scrollbar
-          mainScrollbar.addEventListener('scroll', function() {
+          mainScrollbar.addEventListener("scroll", function () {
             topScrollbar.scrollLeft = mainScrollbar.scrollLeft;
           });
         }
