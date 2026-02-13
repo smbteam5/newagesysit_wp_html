@@ -2981,7 +2981,7 @@
         <div class="col-span-4">
           <div class="grid grid-cols-1 gap-4">
             <button data-target="content-project-based"
-              class="text-white border border-[#2A2D30] w-full p-4 text-left rounded-[24px] bg-[#4361EE] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button">
+              class="text-white border border-[#2A2D30] w-full p-4 text-left rounded-[24px] bg-[#4361EE] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button2">
               <span class="mr-2">
                 <img src="./img/custom-mobile-app/scale1.svg" alt="" />
               </span>
@@ -2992,7 +2992,7 @@
             </button>
 
             <button data-target="content-hire-dedicated"
-              class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button">
+              class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button2">
               <span class="mr-2">
                 <img src="./img/custom-mobile-app/scale2.svg" alt="" />
               </span>
@@ -3003,7 +3003,7 @@
             </button>
 
             <button data-target="content-dedicated"
-              class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button">
+              class="text-white w-full p-4 text-left rounded-[24px] border border-[#2A2D30] text-[20px] font-medium flex items-center min-h-[100px] gap-[10px] flex_button2">
               <span class="mr-2">
                 <img src="./img/custom-mobile-app/scale3.svg" alt="" />
               </span>
@@ -3018,7 +3018,7 @@
         <!-- Right Content -->
         <div class="col-span-3 p-6 flex items-start">
           <div id="content-project-based" data-content="project-based"
-            class="feature-content text-[18px] font-[400] text-[#F5FAFE] overflow-y-auto max-h-[230px] feature-scrollbar">
+            class="feature-content2 text-[18px] font-[400] text-[#F5FAFE] overflow-y-auto max-h-[230px] feature-scrollbar">
             <span class="text-[23px] block">
               Choose this model if your project falls within the small-to-mid
               scale development range. In a fixed-price model, once the scope,
@@ -3031,7 +3031,7 @@
             </span>
           </div>
           <div id="content-hire-dedicated" data-content="hire-dedicated"
-            class="feature-content text-[18px] font-[400] text-white hidden overflow-y-auto max-h-[230px] feature-scrollbar">
+            class="feature-content2 text-[18px] font-[400] text-white hidden overflow-y-auto max-h-[230px] feature-scrollbar">
             <span class="text-[23px] block">
               Get a team of various roles, including mobile app developers,
               BAs, engineers, QA, and a project manager, to deliver efficient
@@ -3050,7 +3050,7 @@
             </ul>
           </div>
           <div id="content-dedicated" data-content="dedicated"
-            class="feature-content text-[18px] font-[400] text-white hidden overflow-y-auto max-h-[230px] feature-scrollbar">
+            class="feature-content2 text-[18px] font-[400] text-white hidden overflow-y-auto max-h-[230px] feature-scrollbar">
             <span class="text-[23px] block">Our mission is to remain flexible as we tackle every challenge
               during the app development process. Our competitive advantage
               lies in swiftly adapting to preferred changes, ensuring the
@@ -4071,6 +4071,40 @@
           const target = btn.dataset.target;
 
           document.querySelectorAll(".feature-content").forEach((content) => {
+            content.classList.add("hidden");
+          });
+
+          flexButtons.forEach((b) => {
+            b.classList.remove("bg-[#4361EE]");
+            b.classList.add("border", "border-[#2A2D30]");
+          });
+
+          const targetElement = document.getElementById(target);
+          if (targetElement) {
+            targetElement.classList.remove("hidden");
+          }
+
+          btn.classList.remove("border", "border-[#2A2D30]");
+          btn.classList.add("bg-[#4361EE]");
+        });
+      });
+
+      flexButtons[0].classList.add("bg-[#4361EE]");
+      flexButtons[0].classList.remove("border", "border-[#2A2D30]");
+    });
+  </script>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const flexButtons = document.querySelectorAll(".flex_button2");
+
+      if (!flexButtons.length) return;
+
+      flexButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.target;
+
+          document.querySelectorAll(".feature-content2").forEach((content) => {
             content.classList.add("hidden");
           });
 
