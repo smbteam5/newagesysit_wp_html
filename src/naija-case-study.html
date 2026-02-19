@@ -2197,8 +2197,11 @@
             if (window.matchMedia("(min-width: 1024px)").matches) {
                 const wrapper = document.querySelector("#hcss-wrapper");
                 const items = gsap.utils.toArray(".hcss-item");
+                if (!wrapper || !items.length) return;
+
                 const totalScrollWidth = wrapper.scrollWidth + 100;
                 const scrollAmount = totalScrollWidth - window.innerWidth;
+                const snapValue = items.length > 1 ? 1 / (items.length - 1) : false;
 
                 gsap.to(wrapper, {
                     x: () => `-${scrollAmount}px`,
@@ -2210,7 +2213,7 @@
                         scrub: 1,
                         pin: true,
                         anticipatePin: 1,
-                        snap: 1 / (items.length - 1),
+                        snap: snapValue,
                     },
                 });
             }
