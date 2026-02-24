@@ -1017,7 +1017,7 @@
     <section class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden"
         style="background-image: url('./img/custom-software/hero.png'); background-size: cover; background-position: center;">
 
-        <div class="container flex flex-col items-center justify-center pt-[15%] md:pt-[15%] z-40 pb-[110px] relative">
+        <div class="container flex flex-col items-center justify-center pt-[45%] md:pt-[15%] z-40 pb-[110px] relative">
             <div id="heroSection" class="relative flex flex-col items-center justify-center">
                 <h1
                     class="text-[30px] md:text-[60px]  font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent p-2 px-8">
@@ -1066,7 +1066,28 @@
                         Recognized for delivering the best solutions for businesses of all
                         sizes and across industries.
                     </p>
-                </div>
+                                </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const optionButtons = document.querySelectorAll('.options-item');
+    const rightContents = document.querySelectorAll('.right-content');
+    optionButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const idx = btn.getAttribute('data-index');
+            optionButtons.forEach(b => {
+                b.classList.remove('bg-[#4361EE]', 'text-[#F5FAFE]', 'border');
+                b.classList.add('bg-[#121314]', 'border', 'border-[#2A2D30]', 'text-[#F5FAFE]');
+            });
+            btn.classList.remove('bg-[#121314]', 'border', 'border-[#2A2D30]');
+            btn.classList.add('bg-[#4361EE]', 'text-[#F5FAFE]');
+            rightContents.forEach(content => content.classList.add('hidden'));
+            const showContent = document.querySelector('.right-content[data-index="' + idx + '"]');
+            if (showContent) showContent.classList.remove('hidden');
+        });
+    });
+});
+</script>
 
                 <!-- Logos Marquee -->
                 <div class="w-full overflow-hidden">
@@ -2653,7 +2674,7 @@
     <section class="bg-black pb-20">
 
         <!-- TABS -->
-        <div class="mx-auto mb-12 flex w-fit items-center gap-1 rounded-full bg-white p-1">
+        <div class="mx-auto mb-12 flex w-full sm:w-fit items-center gap-2 rounded-full bg-white p-1 overflow-x-auto whitespace-nowrap">
             <button data-tab="mvp" class="tab-btn rounded-full bg-black px-6 py-2 text-sm font-medium text-white">
                 MVP
             </button>
