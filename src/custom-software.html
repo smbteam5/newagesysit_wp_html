@@ -5448,7 +5448,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
 
 
@@ -5702,6 +5702,74 @@
             const defaultTab = document.querySelector('.tab-btn[data-tab="mvp"]');
             if (defaultTab) defaultTab.click();
         });
+    </script>
+
+    <script>
+
+        var case_slider = $(".health-case-study-slider");
+
+        // Function to toggle navigation buttons
+        function toggleSliderNav() {
+            if (window.innerWidth < 768) {
+                $(".case_prev, .case_next").hide();
+            } else {
+                $(".case_prev, .case_next").show();
+            }
+        }
+
+        // On init
+        case_slider.on("init", function () {
+            toggleSliderNav();
+        });
+
+        // On window resize
+        $(window).on("resize", function () {
+            toggleSliderNav();
+        });
+
+        // Initialize slick
+        case_slider.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: $(".case_prev"),
+            nextArrow: $(".case_next"),
+            dots: true,
+            initialSlide: 0,
+            responsive: [
+                {
+                    breakpoint: 1439,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+            ],
+        });
+
     </script>
 
 
