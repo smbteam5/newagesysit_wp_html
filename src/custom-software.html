@@ -1507,9 +1507,16 @@
                     </div>
 
                     <!-- SCROLL INDICATOR (XL ONLY) -->
-                    <div class="hidden xl:block w-[5px] h-[552px] bg-[#626970] rounded-full">
-                        <div class="w-full h-[144px] bg-white rounded-full"></div>
-                    </div>
+                   <!-- SCROLL INDICATOR (XL ONLY) -->
+<div
+    id="optionsScrollTrack"
+    class="hidden xl:block w-[5px] h-[552px] bg-[#626970] rounded-full relative"
+>
+    <div
+        id="optionsScrollThumb"
+        class="w-full h-[144px] bg-white rounded-full absolute top-0 left-0"
+    ></div>
+</div>
 
                 </div>
 
@@ -5514,40 +5521,6 @@
         });
     </script>
 
-    <script>
-        const optionsScrollList = document.getElementById("optionsScrollList");
-        const optionsScrollTrack = document.getElementById("optionsScrollTrack");
-        const optionsScrollThumb = document.getElementById("optionsScrollThumb");
-
-        const updateOptionsScrollThumb = () => {
-            if (!optionsScrollList || !optionsScrollTrack || !optionsScrollThumb) {
-                return;
-            }
-
-            const maxScroll =
-                optionsScrollList.scrollHeight - optionsScrollList.clientHeight;
-            const trackHeight = optionsScrollTrack.clientHeight;
-            const thumbHeight = optionsScrollThumb.clientHeight;
-            const maxThumbMove = Math.max(trackHeight - thumbHeight, 0);
-
-            if (maxScroll <= 0) {
-                optionsScrollThumb.style.transform = "translateY(0)";
-                return;
-            }
-
-            const scrollRatio = optionsScrollList.scrollTop / maxScroll;
-            optionsScrollThumb.style.transform = `translateY(${scrollRatio * maxThumbMove}px)`;
-        };
-
-        if (optionsScrollList) {
-            optionsScrollList.addEventListener("scroll", () => {
-                window.requestAnimationFrame(updateOptionsScrollThumb);
-            });
-
-            window.addEventListener("resize", updateOptionsScrollThumb);
-            updateOptionsScrollThumb();
-        }
-    </script>
 
     <script>
         const optionButtons = document.querySelectorAll(".options-item");
@@ -5749,7 +5722,42 @@
 
     </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const optionsScrollList = document.getElementById("optionsScrollList");
+        const optionsScrollTrack = document.getElementById("optionsScrollTrack");
+        const optionsScrollThumb = document.getElementById("optionsScrollThumb");
 
+        const updateOptionsScrollThumb = () => {
+            if (!optionsScrollList || !optionsScrollTrack || !optionsScrollThumb) {
+                return;
+            }
+
+            const maxScroll =
+                optionsScrollList.scrollHeight - optionsScrollList.clientHeight;
+            const trackHeight = optionsScrollTrack.clientHeight;
+            const thumbHeight = optionsScrollThumb.clientHeight;
+            const maxThumbMove = Math.max(trackHeight - thumbHeight, 0);
+
+            if (maxScroll <= 0) {
+                optionsScrollThumb.style.transform = "translateY(0)";
+                return;
+            }
+
+            const scrollRatio = optionsScrollList.scrollTop / maxScroll;
+            optionsScrollThumb.style.transform = `translateY(${scrollRatio * maxThumbMove}px)`;
+        };
+
+        if (optionsScrollList) {
+            optionsScrollList.addEventListener("scroll", () => {
+                window.requestAnimationFrame(updateOptionsScrollThumb);
+            });
+
+            window.addEventListener("resize", updateOptionsScrollThumb);
+            updateOptionsScrollThumb();
+        }
+    });
+</script>
 
 
     <!-- ============================================ -->
