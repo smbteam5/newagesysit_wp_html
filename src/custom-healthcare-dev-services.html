@@ -5,6 +5,8 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="noindex, nofollow">
+
       <title>Custom-Healthcare-Development-Service</title>
 
       <!-- Google Fonts - Inter and Manrope -->
@@ -2429,6 +2431,14 @@
             </h2>
           </div>
         </div>
+        <div class="client-says-wrapper" style="position:relative;">
+          <!-- Prev Arrow -->
+          <button id="cs-prev" aria-label="Previous" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);z-index:20;width:56px;height:56px;border-radius:50%;background:white;border:1.5px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 19l-7-7 7-7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
         <div class="owl-carousel owl-theme client_says">
           <div class="item">
             <div class="item-top">
@@ -2691,6 +2701,14 @@
             </div>
           </div>
         </div>
+
+          <!-- Next Arrow -->
+          <button id="cs-next" aria-label="Next" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);z-index:20;width:56px;height:56px;border-radius:50%;background:white;border:1.5px solid rgba(237,232,232,0.18);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 5l7 7-7 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div><!-- end client-says-wrapper -->
 
         <div class="flex justify-center mt-5 mb-6">
           <a
@@ -5235,7 +5253,7 @@
           }
         }
       </script>
-      <script>
+      <!-- <script>
         $(document).ready(function () {
           $(".client_says").owlCarousel({
             stagePadding: 200,
@@ -5284,7 +5302,7 @@
             },
           });
         });
-      </script>
+      </script> -->
       <script>
         $(document).ready(function () {
           $(".video-popup").magnificPopup({
@@ -5806,5 +5824,93 @@
           }
         });
       </script>
+
+      <!-- Success Stories Carousel: custom prev/next arrows -->
+      <script>
+        $(document).ready(function () {
+          var $cs = $(".client_says");
+          if ($cs.length) {
+            // Destroy any existing init from optimize.js, then re-init with our config
+            try { $cs.owlCarousel('destroy'); } catch(e) {}
+            $cs.owlCarousel({
+              loop: true,
+              margin: 30,
+              nav: false,
+              dots: false,
+              autoplay: true,
+              smartSpeed: 700,
+              stagePadding: 0,
+              items: 1,
+              responsive: {
+                0:    { items: 1, margin: 10, stagePadding: 0 },
+                768:  { items: 1, margin: 20, stagePadding: 0 },
+                1024: { items: 1, margin: 30, stagePadding: 0 },
+                1200: { items: 1, margin: 30, stagePadding: 300 },
+              },
+            });
+
+            // Wire up custom arrow buttons
+            $("#cs-next").on("click", function () {
+              $cs.trigger("next.owl.carousel");
+            });
+            $("#cs-prev").on("click", function () {
+              $cs.trigger("prev.owl.carousel");
+            });
+          }
+        });
+      </script>
+
+      <!-- Equal card-height styles for Success Stories carousel -->
+      <style>
+        /* Make every card a flex column so sections fill available height */
+        .client_says .owl-item .item {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+        .client_says .owl-item .item .item-top {
+          flex-shrink: 0;
+        }
+        .client_says .owl-item .item .item-middle {
+          flex: 1 1 auto;
+          min-height: 0;
+        }
+        /* Fixed image height so every card image area is identical */
+        .client_says .owl-item .item .item-middle img {
+          width: 100%;
+          height: 480px;
+          object-fit: cover;
+          display: block;
+          margin: 0 auto;
+          border-radius: 10px;
+        }
+        @media (max-width: 992px) {
+          .client_says .owl-item .item .item-middle img {
+            width: 90%;
+            height: 320px;
+          }
+        }
+        @media (max-width: 576px) {
+          .client_says .owl-item .item .item-middle img {
+            width: 100%;
+            height: 240px;
+          }
+        }
+        /* Keep item-last (testimonial) at the bottom with consistent layout */
+        .client_says .owl-item .item .item-last {
+          flex-shrink: 0;
+        }
+        /* Ensure all owl-items stretch to the same row height */
+        .client_says .owl-stage {
+          display: flex !important;
+        }
+        .client_says .owl-stage .owl-item {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+        .client_says .owl-stage .owl-item .item {
+          flex: 1 1 auto;
+          height: 100%;
+        }
+      </style>
     </body>
   </html>

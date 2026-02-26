@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>PHP-Development Service</title>
 
     <!-- Google Fonts - Inter and Manrope -->
@@ -3001,7 +3003,7 @@
         if (parentSection) {
           // Close all accordion items within this section only
           const sectionAccordionItems = parentSection.querySelectorAll(
-            ".accordion-content-ppc"
+            ".accordion-content-ppc",
           );
           sectionAccordionItems.forEach((item) => {
             item.classList.remove("show");
@@ -3067,7 +3069,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             // Set all items to that height
             $(".slider-1 .owl-item").height(maxHeight);
@@ -3081,7 +3083,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             $(".slider-1 .owl-item").height(maxHeight);
           },
@@ -3173,7 +3175,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             // Set all items to that height
             $(".slider-1 .owl-item").height(maxHeight);
@@ -3187,7 +3189,7 @@
                 .map(function () {
                   return $(this).height();
                 })
-                .get()
+                .get(),
             );
             $(".slider-1 .owl-item").height(maxHeight);
           },
@@ -3276,10 +3278,10 @@
         });
 
         const nextbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-next"
+          ".slider-1 .owl-nav .owl-next",
         );
         const prevbutton = document.querySelector(
-          ".slider-1 .owl-nav .owl-prev"
+          ".slider-1 .owl-nav .owl-prev",
         );
       });
     </script>
@@ -3306,7 +3308,7 @@
         const CLASS_NAME = "in-view";
 
         const all = Array.from(document.querySelectorAll(SELECTOR)).filter(
-          (el) => !el.classList.contains(CLASS_NAME)
+          (el) => !el.classList.contains(CLASS_NAME),
         );
         if (!all.length) return;
 
@@ -3359,7 +3361,7 @@
               root: null,
               threshold: 0.15, // fire when ~15% visible
               rootMargin: "0px 0px -10% 0px", // a touch earlier
-            }
+            },
           );
 
           all.forEach((el) => io.observe(el));

@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <title>COBE Globe — dropdown, idle rotate, drag</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
@@ -296,7 +298,7 @@
       selectEl.selectedIndex = 0;
       [focusPhi, focusTheta] = locationToAngles(
         LOCATIONS[0].lat,
-        LOCATIONS[0].lon
+        LOCATIONS[0].lon,
       );
 
       // Responsive sizing helper
@@ -330,7 +332,7 @@
         currentTheta = clamp(
           dragStartTheta + deltaTheta,
           -Math.PI / 2 + 0.01,
-          Math.PI / 2 - 0.01
+          Math.PI / 2 - 0.01,
         );
         lastInteractionTime = Date.now();
       });
