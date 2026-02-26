@@ -1,90 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swag Stack Expand Clone</title>
-    <script src="https://cdn.cdn-tailwind.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industry Carousel</title>
 
-   <!-- Container -->
-<section class="w-full bg-[#E6EDFF] py-16 relative overflow-hidden">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
 
-    <!-- LEFT CONTENT -->
-    <div class="flex flex-col justify-center">
-      <h2 class="text-[42px] font-bold text-[#171738] leading-tight">
-        Your money,<br> your way.
-      </h2>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-      <p class="text-[#2E2E52] mt-6 max-w-md leading-relaxed">
-        With a Swag Visa Debit card and Spend Account, you can pay, send money
-        and save instantly. Paying with your Swag card unlocks exclusive Cashback
-        offers that put money back in your pocket.
-        <br><br>
-        The best bit? $0 fees. No international transaction fees. And no fees at
-        all major bank ATMs anywhere in the world.
-      </p>
-    </div>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <!-- RIGHT STACKED EXPAND CARDS -->
-    <div class="relative flex justify-end">
+    <style>
+      .owl-carousel .owl-nav {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
 
-      <div id="stack-container" class="flex gap-3">
+      .owl-carousel .owl-nav button {
+        pointer-events: all;
+        width: 55px;
+        height: 55px;
+        border-radius: 9999px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0;
+        transition: all 0.3s ease;
+      }
 
-        <!-- Card 1 -->
-        <div class="stack-card bg-[#4361EE] w-12 hover:w-40 transition-all duration-300
-                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
-                    relative"
-             data-title="InstaPay">
-          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
-            02 InstaPay
-          </span>
+      /* Left Arrow */
+      .owl-carousel .owl-nav .owl-prev {
+        background: #d1d5db !important;
+        margin-left: -70px;
+      }
+
+      /* Right Arrow */
+      .owl-carousel .owl-nav .owl-next {
+        background: #4f46e5 !important;
+        margin-right: -70px;
+      }
+
+      /* Hover */
+      .owl-carousel .owl-nav button:hover {
+        transform: scale(1.1);
+      }
+      .owl-nav.disabled {
+        display: flex !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-200 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="owl-carousel owl-theme">
+        <!-- CARD 1 -->
+        <div class="rounded-3xl overflow-hidden shadow-xl bg-white">
+          <!-- Image Section -->
+          <div
+            class="relative h-[420px] bg-cover bg-center"
+            style="
+              background-image: url(&quot;https://via.placeholder.com/600x800&quot;);
+            "
+          >
+            <div class="absolute bottom-6 left-6">
+              <span
+                class="px-6 py-3 bg-white/20 backdrop-blur-md text-white rounded-full border border-white/30"
+              >
+                Healthcare
+              </span>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <div
+            class="bg-black text-white p-10 grid grid-cols-3 gap-6 text-center"
+          >
+            <div>
+              <h3 class="text-4xl font-bold">60%</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                reduction in operational workload
+              </p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold">HIPAA</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                ready secure architecture
+              </p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold">35%</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                faster patient communication workflows
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="stack-card bg-[#6C8CFF] w-12 hover:w-40 transition-all duration-300
-                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
-                    relative"
-             data-title="Pay Split">
-          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
-            03 Pay Split
-          </span>
+        <!-- CARD 2 -->
+        <div class="rounded-3xl overflow-hidden shadow-xl bg-white">
+          <div
+            class="relative h-[420px] bg-cover bg-center"
+            style="
+              background-image: url(&quot;https://via.placeholder.com/600x800/87CEEB&quot;);
+            "
+          >
+            <div class="absolute bottom-6 left-6">
+              <span
+                class="px-6 py-3 bg-white/30 backdrop-blur-md text-white rounded-full border border-white/30"
+              >
+                Real Estate
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="bg-black text-white p-10 grid grid-cols-3 gap-6 text-center"
+          >
+            <div>
+              <h3 class="text-4xl font-bold">3×</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                faster property lead response time
+              </p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold">45%</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                increase in qualified inquiries
+              </p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold">30%</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                improvement in agent productivity
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="stack-card bg-[#A6B9FF] w-12 hover:w-40 transition-all duration-300
-                    rounded-l-3xl rounded-r-xl flex items-center justify-center cursor-pointer 
-                    relative"
-             data-title="Hero Dollars">
-          <span class="text-white text-sm font-semibold rotate-90 origin-center whitespace-nowrap">
-            04 Hero Dollars
-          </span>
-        </div>
+        <!-- CARD 3 -->
+        <div class="rounded-3xl overflow-hidden shadow-xl bg-white">
+          <div
+            class="relative h-[420px] bg-cover bg-center"
+            style="
+              background-image: url(&quot;https://via.placeholder.com/600x800/000000&quot;);
+            "
+          >
+            <div class="absolute bottom-6 left-6">
+              <span
+                class="px-6 py-3 bg-white/20 backdrop-blur-md text-white rounded-full border border-white/30"
+              >
+                On-Demand Services
+              </span>
+            </div>
+          </div>
 
+          <div
+            class="bg-black text-white p-10 grid grid-cols-3 gap-6 text-center"
+          >
+            <div>
+              <h3 class="text-4xl font-bold">50%</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                faster service booking completion
+              </p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold">2×</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                increase in customer retention
+              </p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold">40%</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                reduction in scheduling delays
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- JS for mobile click expand -->
-<script>
-  const cards = document.querySelectorAll('.stack-card');
-
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      // Remove active from others
-      cards.forEach(c => c.classList.remove('!w-40'));
-
-      // Toggle active
-      card.classList.toggle('!w-40');
-    });
-  });
-</script>
-
-</body>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: false,
+        margin: 30,
+        nav: true,
+        dots: false,
+        navText: [
+          `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+         </svg>`,
+          `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+         </svg>`,
+        ],
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          1200: { items: 3 },
+        },
+      });
+    </script>
+  </body>
 </html>
