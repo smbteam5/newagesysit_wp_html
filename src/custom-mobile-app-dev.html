@@ -2573,12 +2573,30 @@
     </section>
     <section>
       <div class="relative mx-auto container px-4 py-10">
-        <div class="owl-carousel owl-theme">
+        <button
+          id="customPrev"
+          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition bg-[#A3ACB5] text-white nav-disabled"
+        >
+          <!-- lucide-react like arrow -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+        <div class="owl-carousel owl-theme real-results-carousel">
           <!-- Slide 1 -->
           <article class="px-2 flex w-full">
-            <div
-              class="w-full overflow-hidden rounded-[28px] bg-black shadow-[0_18px_60px_rgba(0,0,0,0.15)]"
-            >
+            <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <!-- Top visual -->
               <div class="relative h-[360px] sm:h-[420px]">
                 <!-- Replace with your image -->
@@ -2616,7 +2634,7 @@
 
               <!-- Bottom stats -->
               <div class="px-7 py-8 sm:px-10 sm:py-10">
-                <div class="grid grid-cols-3 gap-6 sm:gap-10">
+                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
                   <div>
                     <div class="text-4xl sm:text-5xl font-semibold text-white">
                       60%
@@ -2650,9 +2668,7 @@
 
           <!-- Slide 2 -->
           <article class="px-2 flex w-full">
-            <div
-              class="w-full overflow-hidden rounded-[28px] bg-black shadow-[0_18px_60px_rgba(0,0,0,0.15)]"
-            >
+            <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <div class="relative h-[360px] sm:h-[420px]">
                 <div
                   class="absolute inset-0 bg-[linear-gradient(160deg,_#3b82f6_0%,_#dbeafe_70%)]"
@@ -2692,7 +2708,7 @@
               </div>
 
               <div class="px-7 py-8 sm:px-10 sm:py-10">
-                <div class="grid grid-cols-3 gap-6 sm:gap-10">
+                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
                   <div>
                     <div class="text-4xl sm:text-5xl font-semibold text-white">
                       3×
@@ -2726,9 +2742,7 @@
 
           <!-- Slide 3 -->
           <article class="px-2 flex w-full">
-            <div
-              class="w-full overflow-hidden rounded-[28px] bg-black shadow-[0_18px_60px_rgba(0,0,0,0.15)]"
-            >
+            <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <div class="relative h-[360px] sm:h-[420px]">
                 <div
                   class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_#111_0%,_#000_55%)]"
@@ -2763,7 +2777,148 @@
               </div>
 
               <div class="px-7 py-8 sm:px-10 sm:py-10">
-                <div class="grid grid-cols-3 gap-6 sm:gap-10">
+                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
+                  <div>
+                    <div class="text-4xl sm:text-5xl font-semibold text-white">
+                      50%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-base text-white/70">
+                      faster service booking completion
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="text-4xl sm:text-5xl font-semibold text-white">
+                      2×
+                    </div>
+                    <div class="mt-2 text-sm sm:text-base text-white/70">
+                      increase in customer retention
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="text-4xl sm:text-5xl font-semibold text-white">
+                      40%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-base text-white/70">
+                      reduction in scheduling delays
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- slider 4 -->
+          <article class="px-2 flex w-full">
+            <div class="w-full rounded-[28px] bg-black overflow-hidden">
+              <!-- Top visual -->
+              <div class="relative h-[360px] sm:h-[420px]">
+                <!-- Replace with your image -->
+                <div
+                  class="absolute inset-0 bg-[linear-gradient(140deg,_#ff7a18_0%,_#0b0b0b_70%)]"
+                ></div>
+
+                <!-- phone mock placeholder -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div
+                    class="h-[270px] w-[160px] rotate-[-18deg] rounded-[28px] bg-[#0b0f18] shadow-[0_25px_80px_rgba(0,0,0,0.55)] ring-1 ring-white/10"
+                  >
+                    <div class="h-full w-full grid place-items-center">
+                      <div class="text-center">
+                        <div class="text-white/80 font-semibold tracking-wide">
+                          CashDocs
+                        </div>
+                        <div
+                          class="mt-2 h-2 w-20 mx-auto rounded bg-white/10"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Category pill -->
+                <div class="absolute left-6 bottom-6">
+                  <span
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                  >
+                    Healthcare
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom stats -->
+              <div class="px-7 py-8 sm:px-10 sm:py-10">
+                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
+                  <div>
+                    <div class="text-4xl sm:text-5xl font-semibold text-white">
+                      60%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-base text-white/70">
+                      reduction in operational workload
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="text-3xl sm:text-4xl font-semibold text-white">
+                      HIPAA
+                    </div>
+                    <div class="mt-2 text-sm sm:text-base text-white/70">
+                      ready secure architecture
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="text-4xl sm:text-5xl font-semibold text-white">
+                      35%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-base text-white/70">
+                      faster patient communication workflows
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="px-2 flex w-full">
+            <div class="w-full rounded-[28px] bg-black overflow-hidden">
+              <div class="relative h-[360px] sm:h-[420px]">
+                <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_#111_0%,_#000_55%)]"
+                ></div>
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div
+                    class="h-[280px] w-[165px] rotate-[10deg] rounded-[28px] bg-[#7ccf3a] shadow-[0_25px_80px_rgba(0,0,0,0.55)] ring-1 ring-black/15"
+                  >
+                    <div class="p-5">
+                      <div
+                        class="text-center font-extrabold text-white text-xl"
+                      >
+                        JUNK SHOT
+                      </div>
+                      <div class="mt-6 space-y-3">
+                        <div class="h-10 rounded-full bg-white/90"></div>
+                        <div class="h-10 rounded-full bg-white/90"></div>
+                        <div class="h-10 rounded-full bg-white/30"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="absolute left-6 bottom-6">
+                  <span
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                  >
+                    On-Demand Services
+                  </span>
+                </div>
+              </div>
+
+              <div class="px-7 py-8 sm:px-10 sm:py-10">
+                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
                   <div>
                     <div class="text-4xl sm:text-5xl font-semibold text-white">
                       50%
@@ -2795,36 +2950,91 @@
             </div>
           </article>
         </div>
+        <button
+          id="customNext"
+          class="absolute right-0 top-1/2 z-10 -translate-y-1/2 w-12 h-12 rounded-full bg-[#3b82f6] text-white shadow-lg flex items-center justify-center hover:scale-105 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 0,
-          nav: true,
+        var owl = $(".owl-carousel.real-results-carousel");
+
+        owl.owlCarousel({
+          loop: false,
+          margin: 16,
+          nav: false,
           dots: true,
-          navText: ["&#x2039;", "&#x203A;"],
-          autoplay: false,
-          smartSpeed: 600,
           responsive: {
             0: { items: 1 },
-            768: { items: 2, margin: 14 },
-            1024: { items: 3, margin: 16 },
+            768: { items: 2 },
+            1024: { items: 3 },
           },
         });
+
+        // ✅ Custom Controls MUST be inside ready
+        $("#customNext").click(function () {
+          owl.trigger("next.owl.carousel");
+        });
+
+        $("#customPrev").click(function () {
+          owl.trigger("prev.owl.carousel");
+        });
+
+        owl.on("changed.owl.carousel", function (event) {
+          var current = event.item.index;
+          var total = event.item.count;
+          var visible = event.page.size;
+
+          // FIRST ITEM
+          if (current === 0) {
+            $("#customPrev")
+              .addClass("nav-disabled")
+              .removeClass("bg-blue-600 text-white")
+              .addClass("bg-[#A3ACB5] text-white");
+          } else {
+            $("#customPrev")
+              .removeClass("nav-disabled")
+              .removeClass("bg-[#A3ACB5] text-white")
+              .addClass("bg-blue-600 text-white");
+          }
+
+          // LAST ITEM
+          if (current >= total - visible) {
+            $("#customNext")
+              .addClass("nav-disabled")
+              .removeClass("bg-blue-600 text-white")
+              .addClass("bg-[#A3ACB5] text-white");
+          } else {
+            $("#customNext")
+              .removeClass("nav-disabled")
+              .removeClass("bg-[#A3ACB5] text-white")
+              .addClass("bg-blue-600 text-white");
+          }
+        });
+
+        // Trigger once on load
+        owl.trigger("changed.owl.carousel");
       });
     </script>
     <script>
