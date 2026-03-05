@@ -31,20 +31,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="preload" as="image" href="./img/custom-software/hero.webp" fetchpriority="high" />
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet" />
+    </noscript>
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link href="style.css" rel="stylesheet" />
 
     <style>
@@ -1012,7 +1015,8 @@
     <!-- HERO SECTION -->
     <!-- ============================================ -->
     <section class="bg-contain bg-no-repeat flex flex-col items-center h-full relative overflow-hidden">
-        <img src="./img/custom-software/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="./img/custom-software/hero.webp" alt="" fetchpriority="high" loading="eager" decoding="sync"
+            class="absolute inset-0 w-full h-full object-cover" />
 
         <div class="container flex flex-col items-center justify-center pt-[45%] md:pt-[15%] z-40 pb-[160px] relative">
             <div id="heroSection" class="relative flex flex-col items-center justify-center">
@@ -1403,7 +1407,7 @@
             <!-- Bottom Subtitle -->
             <p class="mx-auto max-w-[90%] text-[#A3ACB5] text-[18px] leading-[25px] text-justify">
                 NewAgeSysIT focuses on enterprise multi-agent AI systems designed for
-                controlled execution, governed data access, and production deployments
+                controlled execution, governed data access, and production deployment
                 rather than experimental AI assistants.
             </p>
         </div>
@@ -1952,9 +1956,7 @@
                         </div>
 
                         <p class="text-[16px] lg:text-[18px] leading-[24px] lg:leading-[25px]">
-                            The secure infrastructure and monitoring layers enable AI systems
-                            to operate within auditable, governed, and scalable environments.
-                            This safeguards data integrity and scales operational reliability.
+                            The secure infrastructure and monitoring layers enable AI systems to operate within auditable, governed, and scalable environments. This safeguards data integrity, boosts complaints, and scales operational reliability.
                         </p>
 
                         <ul class="flex flex-col gap-5">
@@ -2025,13 +2027,10 @@
                         <div class="flex flex-col gap-6">
                             <img src="./img/ppc-custom-software/mobile-ranking.svg" class="w-12 h-12" alt="" />
                             <h3 class="text-[23px] leading-[32px] font-medium text-[#F5FAFE]">
-                                Banking & Finance Conversational System
+                                Banking & Finance Conversational Systems
                             </h3>
                             <p class="text-[16px] lg:text-[18px] leading-[24px] lg:leading-[25px] text-[#A3ACB5]">
-                                Our specialists offer banking-friendly AI chatbot development
-                                services with expertise in building compliance-aware bots,
-                                secure transaction assistants, and loan eligibility
-                                assistants.
+                                Our specialists offer banking-friendly AI chatbot app development services with expertise in building compliance-aware bots, secure transaction assistants, and loan eligibility assistants.
                             </p>
                         </div>
                     </div>
@@ -2047,9 +2046,7 @@
                                 Enterprise Internal AI Assistants
                             </h3>
                             <p class="text-[16px] lg:text-[18px] leading-[24px] lg:leading-[25px] text-[#A3ACB5]">
-                                As a top-tier chatbot development company, we build policy
-                                query bots, ERP & CRM assistants, and workflow automation
-                                agents for enterprise operations.
+                                As a top-tier chatbot development company, we excel in developing policy query bots, ERP & CRM assistants, and workflow automation agents for your enterprise operations.
                             </p>
                         </div>
                     </div>
@@ -2109,7 +2106,7 @@
 
                     <div class="accordion-content overflow-hidden transition-all duration-300"
                         style="max-height: 500px">
-                        <div class="px-6 md:px-10 pb-6 text-[#A3ACB5] text-[15px] md:text-[18px] leading-[25px]">
+                        <div class="px-6 md:px-24 pb-6 text-[#A3ACB5] text-[15px] md:text-[18px] leading-[25px]">
                             Schema validation inhibits the execution of unauthorized,
                             destructive, or malformed database queries within enterprise
                             systems. By implementing structural alignment between generated
@@ -2133,7 +2130,7 @@
                     </button>
 
                     <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
-                        <div class="px-6 md:px-10 pb-6 text-[#A3ACB5]">
+                        <div class="px-6 md:px-24 pb-6 text-[#A3ACB5] text-[15px] md:text-[18px] leading-[25px]">
                             Execution guardrails restrict how AI agents interact with
                             external tools, APIs, and integral systems. By enforcing
                             permission boundaries, action constraints, and policy-aligned
@@ -2156,7 +2153,7 @@
                     </button>
 
                     <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
-                        <div class="px-6 md:px-10 pb-6 text-[#A3ACB5]">
+                        <div class="px-6 md:px-24 pb-6 text-[#A3ACB5] text-[15px] md:text-[18px] leading-[25px]">
                             By ensuring AI outputs are grounded in verified internal
                             knowledge sources, hybrid retrieval lowers the risk of
                             inaccurate or non-compliant responses. By combining semantic and
@@ -2180,7 +2177,7 @@
                     </button>
 
                     <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
-                        <div class="px-6 md:px-10 pb-6 text-[#A3ACB5]">
+                        <div class="px-6 md:px-24 pb-6 text-[#A3ACB5] text-[15px] md:text-[18px] leading-[25px]">
                             Structured output enforcement ensures AI responses follow
                             validated formats rather than uncontrolled free-form text. This
                             protects downstream systems from processing errors, enables
@@ -2203,7 +2200,7 @@
                     </button>
 
                     <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
-                        <div class="px-6 md:px-10 pb-6 text-[#A3ACB5]">
+                        <div class="px-6 md:px-24 pb-6 text-[#A3ACB5] text-[15px] md:text-[18px] leading-[25px]">
                             Local or controlled GPU deployments reduce data exposure risks
                             by keeping sensitive information within the boundaries of
                             regulated infrastructure. This approach supports data
@@ -2253,7 +2250,7 @@
                         Our experts are adept at leveraging the potential of MAA to build
                         a collaborative, decentralized ecosystem of dedicated AI agents
                         that work together to solve complex tasks, enhancing accuracy and
-                        reducing hallucinations
+                        reducing hallucinations.
                     </p>
                 </div>
 
@@ -2408,9 +2405,7 @@
                             </div>
 
                             <p class="text-[#A3ACB5] text-[18px] leading-[25px]">
-                                Once the scope, specifications, and project deliverables are
-                                clearly defined, we analyze and provide a fixed quote for the
-                                project.
+                                Once the scope, specifications, and project deliverables are clearly defined, we can analyze and provide a fixed quote for the project. 
                             </p>
                         </div>
 
@@ -2437,7 +2432,7 @@
 
     <!-- our ai process steps  -->
 
-    <section class="bg-white py-10 pb-[80px] px-0 lg:px-[80px]">
+    <section class="bg-[#F5FAFE] py-10 pb-[80px] px-0 lg:px-[80px]">
         <!-- Container -->
         <div class="mx-auto px-8 sm:px-6 lg:px-20 py-10">
             <!-- Content (NO items-center) -->
@@ -2792,7 +2787,7 @@
 
     <!-- business impact cards  -->
 
-    <section class="bg-white py-[80px]">
+    <section class="bg-[#F5FAFE] py-[80px]">
         <div class="mx-auto max-w-[1600px] px-6 lg:px-[96px] flex flex-col gap-[40px]">
             <!-- HEADER -->
             <div class="mx-auto text-center flex flex-col gap-[20px]">
@@ -3441,7 +3436,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="text-[34px] md:text-[40px] lg:text-[50px] font-[500] text-[#020307] lg:leading-[60px]">
-                    Frequently Asked Questions
+                    Frequently Asked Questions About AI Chatbot Development
                 </h2>
             </div>
             <div>
@@ -3949,7 +3944,7 @@
                         class="text-white text-[24px] sm:text-[30px] md:text-[40px] font-semibold mb-3 sm:mb-4 leading-[32px] sm:leading-[40px] md:leading-[60px] lg:mt-32">
                         Let’s Build Your Enterprise AI <br class="hidden lg:block"> Chatbot
                     </h2>
-                    <p class="text-gray-300 mb-4 sm:mb-6 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[23px]">
+                    <p class="text-[#8C8C8C] mb-4 sm:mb-6 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[23px]">
                         Whether you are exploring AI automation, modernizing internal systems, or deploying enterprise
                         AI agents at scale, our engineering team can help define and implement a secure roadmap. Speak
                         with our specialists to evaluate architecture options, deployment strategies, and integration
@@ -3997,7 +3992,7 @@
                             class="w-full bg-transparent border border-gray-600 rounded-[12px] sm:rounded-[17px] px-3 sm:px-4 py-2 text-white text-[14px] sm:text-[16px] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 h-[48px] sm:h-[60px]" />
                         <a href="#"
                             class="flex items-center justify-center text-center font-semibold text-white text-[14px] sm:text-[16px] md:text-[18px] bg-[#FF5B14] rounded-full px-8 sm:px-12 py-3 sm:py-4 hover:opacity-90 transition-all duration-200 w-full sm:w-[280px] h-[52px] sm:h-[65px] whitespace-nowrap">
-                            Book a Free Consultation
+                            Book a 15-min call now
                         </a>
                     </form>
                 </div>
@@ -4015,8 +4010,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
         const imageSources = [
@@ -4085,17 +4078,38 @@
     <script>
         const items = document.querySelectorAll(".accordion-item");
 
-        items.forEach((item) => {
+        const setClosedState = (item) => {
             const header = item.querySelector(".accordion-header");
             const content = item.querySelector(".accordion-content");
             const arrow = item.querySelector(".arrow");
 
+            content.style.maxHeight = "0px";
+            arrow.style.transform = "rotate(0deg)";
+            item.classList.replace("bg-[#2A2D30]", "bg-[#1B1D1E]");
+            header.classList.remove("pt-[64px]", "pb-[15px]");
+            header.classList.add("py-10");
+        };
+
+        const setOpenState = (item) => {
+            const header = item.querySelector(".accordion-header");
+            const content = item.querySelector(".accordion-content");
+            const arrow = item.querySelector(".arrow");
+
+            content.style.maxHeight = content.scrollHeight + "px";
+            arrow.style.transform = "rotate(90deg)";
+            item.classList.replace("bg-[#1B1D1E]", "bg-[#2A2D30]");
+            header.classList.remove("py-10");
+            header.classList.add("pt-[64px]", "pb-[15px]");
+        };
+
+        items.forEach((item) => {
+            const header = item.querySelector(".accordion-header");
+            const content = item.querySelector(".accordion-content");
+
             header.addEventListener("click", () => {
                 items.forEach((i) => {
                     if (i !== item) {
-                        i.querySelector(".accordion-content").style.maxHeight = "0px";
-                        i.querySelector(".arrow").style.transform = "rotate(0deg)";
-                        i.classList.replace("bg-[#2A2D30]", "bg-[#1B1D1E]");
+                        setClosedState(i);
                     }
                 });
 
@@ -4103,15 +4117,22 @@
                     content.style.maxHeight && content.style.maxHeight !== "0px";
 
                 if (isOpen) {
-                    content.style.maxHeight = "0px";
-                    arrow.style.transform = "rotate(0deg)";
-                    item.classList.replace("bg-[#2A2D30]", "bg-[#1B1D1E]");
+                    setClosedState(item);
                 } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    arrow.style.transform = "rotate(90deg)";
-                    item.classList.replace("bg-[#1B1D1E]", "bg-[#2A2D30]");
+                    setOpenState(item);
                 }
             });
+        });
+
+        items.forEach((item) => {
+            const content = item.querySelector(".accordion-content");
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+            if (isOpen) {
+                setOpenState(item);
+            } else {
+                setClosedState(item);
+            }
         });
     </script>
 
@@ -4334,6 +4355,34 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const heroImage = document.querySelector('img[src="./img/custom-software/hero.webp"]');
+            document.querySelectorAll("img").forEach((img) => {
+                if (img === heroImage || img.closest("header")) {
+                    if (!img.hasAttribute("loading")) {
+                        img.loading = "eager";
+                    }
+                    if (!img.hasAttribute("decoding")) {
+                        img.decoding = "sync";
+                    }
+                    if (!img.hasAttribute("fetchpriority")) {
+                        img.setAttribute("fetchpriority", "high");
+                    }
+                    return;
+                }
+
+                if (!img.hasAttribute("loading")) {
+                    img.loading = "lazy";
+                }
+
+                if (!img.hasAttribute("decoding")) {
+                    img.decoding = "async";
+                }
+
+                if (!img.hasAttribute("fetchpriority")) {
+                    img.setAttribute("fetchpriority", "low");
+                }
+            });
+
             const optionsScrollList = document.getElementById("optionsScrollList");
             const optionsScrollTrack = document.getElementById("optionsScrollTrack");
             const optionsScrollThumb = document.getElementById("optionsScrollThumb");
