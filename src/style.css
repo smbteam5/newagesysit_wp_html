@@ -1050,6 +1050,10 @@ video {
   left: -250px;
 }
 
+.left-\[-25px\] {
+  left: -25px;
+}
+
 .left-\[-295px\] {
   left: -295px;
 }
@@ -1168,6 +1172,10 @@ video {
 
 .right-\[-25\%\] {
   right: -25%;
+}
+
+.right-\[-25px\] {
+  right: -25px;
 }
 
 .right-\[-30px\] {
@@ -9424,6 +9432,10 @@ video {
   padding-right: 15px;
 }
 
+.pr-\[2px\] {
+  padding-right: 2px;
+}
+
 .pr-\[30px\] {
   padding-right: 30px;
 }
@@ -10442,6 +10454,11 @@ video {
 .text-\[\#989AA4\] {
   --tw-text-opacity: 1;
   color: rgb(152 154 164 / var(--tw-text-opacity));
+}
+
+.text-\[\#999999\] {
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 .text-\[\#9ea3aa\] {
@@ -20168,6 +20185,76 @@ footer ul li {
   }
 }
 
+/* new styles from ppc page  */
+
+.real-results-carousel.owl-theme .owl-dots,
+.cit-slider.owl-theme .owl-dots,
+.testimonial-wrap.owl-theme .owl-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.cit-slider.owl-theme .owl-dots {
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+
+.real-results-carousel.owl-theme .owl-dots .owl-dot span,
+.cit-slider.owl-theme .owl-dots .owl-dot span,
+.testimonial-wrap.owl-theme .owl-dots .owl-dot span {
+  margin: 0 !important;
+}
+
+.real-results-carousel.owl-theme .owl-dots .owl-dot,
+.cit-slider.owl-theme .owl-dots .owl-dot,
+.testimonial-wrap.owl-theme .owl-dots .owl-dot {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.real-results-carousel.owl-theme .owl-dots .owl-dot.active,
+.cit-slider.owl-theme .owl-dots .owl-dot.active,
+.testimonial-wrap.owl-theme .owl-dots .owl-dot.active {
+  width: 40px !important;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  position: relative;
+}
+
+.real-results-carousel.owl-theme .owl-dots .owl-dot span,
+.cit-slider.owl-theme .owl-dots .owl-dot span,
+.testimonial-wrap.owl-theme .owl-dots .owl-dot span {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #ccc !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.real-results-carousel.owl-theme .owl-dots .owl-dot.active span,
+.cit-slider.owl-theme .owl-dots .owl-dot.active span,
+.testimonial-wrap.owl-theme .owl-dots .owl-dot.active span {
+  width: 100% !important;
+  background-color: #000 !important;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.testimonial-wrap.owl-theme .owl-stage {
+  display: flex;
+}
+
+.testimonial-wrap.owl-theme .owl-stage .owl-item {
+  height: inherit !important;
+}
+
+.testimonial-wrap.owl-theme .owl-stage .testimonial-item {
+  height: 100% !important;
+}
+
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
@@ -21747,6 +21834,10 @@ footer ul li {
     font-size: 11px;
   }
 
+  .sm\:text-\[12px\] {
+    font-size: 12px;
+  }
+
   .sm\:text-\[14px\] {
     font-size: 14px;
   }
@@ -22360,10 +22451,6 @@ footer ul li {
 
   .md\:h-\[40px\] {
     height: 40px;
-  }
-
-  .md\:h-\[420px\] {
-    height: 420px;
   }
 
   .md\:h-\[430px\] {
@@ -25015,15 +25102,6 @@ footer ul li {
     max-width: 450px;
   }
 
-<<<<<<< HEAD
-  .lg\:max-w-\[455px\] {
-    max-width: 455px;
-  }
-
-  .lg\:max-w-\[456px\] {
-    max-width: 456px;
-  }
-
   .lg\:max-w-\[46\%\] {
     max-width: 46%;
   }
@@ -25032,8 +25110,6 @@ footer ul li {
     max-width: 54%;
   }
 
-=======
->>>>>>> jibin-dev
   .lg\:max-w-\[550px\] {
     max-width: 550px;
   }
@@ -28473,6 +28549,10 @@ footer ul li {
 }
 
 @media (max-width: 1366px) {
+  .max-1366px\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .max-1366px\:justify-center {
     justify-content: center;
   }
@@ -28515,8 +28595,16 @@ footer ul li {
     bottom: -5px;
   }
 
+  .max-1024px\:flex {
+    display: flex;
+  }
+
   .max-1024px\:inline-flex {
     display: inline-flex;
+  }
+
+  .max-1024px\:hidden {
+    display: none;
   }
 
   .max-1024px\:h-\[100px\] {
@@ -28758,6 +28846,11 @@ footer ul li {
     padding-right: 20px;
   }
 
+  .max-768px\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .max-768px\:py-\[10px\] {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -28791,6 +28884,10 @@ footer ul li {
 
   .max-768px\:\!text-left {
     text-align: left !important;
+  }
+
+  .max-768px\:text-center {
+    text-align: center;
   }
 
   .max-768px\:leading-\[50px\] {
