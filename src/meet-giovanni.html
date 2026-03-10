@@ -148,7 +148,7 @@
             <!-- LinkedIn Button -->
             <a
               href="#"
-              class="border border-[#DFDFDF] px-[35px] py-[20px] rounded-full flex items-center justify-center gap-3 hover:bg-white hover:text-black transition"
+              class="border border-[#DFDFDF] px-[35px] py-[20px] rounded-full flex items-center justify-center gap-3 hover:bg-white hover:text-black transition text-[18px]"
             >
               Connect me on
               <span>
@@ -725,7 +725,7 @@
         <div class="item">
           <div class="item-top">
             <div class="it-left">
-              <h2>Soldd- AI Chatbot Enablement </h2>
+              <h2>Sooldd- AI Chatbot Enablement </h2>
               <p class="lg:max-w-[60%] font-[300]">
                 Advised on strategy and implementation roadmap for an AI-driven chatbot system to improve customer engagement, automate support, and streamline communication.
               </p>
@@ -1196,6 +1196,48 @@
         });
       });
     </script>
-    
+        <script>
+      $(document).ready(function () {
+        const $rb = $(".related-blogs-carousel");
+        if ($rb.length) {
+          $rb.owlCarousel({
+            loop: false,
+            margin: 24,
+            dots: false,
+            nav: true,
+            // navText: [
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8249;</span>',
+            //   '<span style="display:inline-block;font-size:24px;line-height:1;color:#fff;">&#8250;</span>'
+            // ],
+
+            responsive: {
+              0: { items: 1, margin: 12 },
+              640: { items: 2, margin: 16 },
+              1024: { items: 3, margin: 20 },
+            },
+          });
+        }
+        const $tech_owl = $(".tech-carousel");
+        $tech_owl.owlCarousel({
+          loop: false,
+          margin: 15,
+          dots: false,
+          nav: true,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1280: { items: 4 }
+          }
+        });
+
+        $(".custom-next").click(function () {
+          $tech_owl.trigger("next.owl.carousel");
+        });
+
+        $(".custom-prev").click(function () {
+          $tech_owl.trigger("prev.owl.carousel");
+        });
+  });
+    </script>
   </body>
 </html>
