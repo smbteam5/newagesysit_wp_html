@@ -20175,13 +20175,12 @@ footer ul li {
 
 @media (max-width: 1024px) {
   .truncate_in_one_line {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    white-space: nowrap;
+    display: block;
+    max-width: 100%;
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 300px;
+    white-space: nowrap;
   }
 }
 
@@ -25722,11 +25721,6 @@ footer ul li {
   .lg\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
-  }
-
-  .lg\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 
   .lg\:px-32 {
