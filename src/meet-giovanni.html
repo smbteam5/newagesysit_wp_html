@@ -194,7 +194,7 @@
     <!--  -->
     <div class="bg-[#fff] text-gray-800 text-center text-sm py-[20px] relative">
       <div
-        class="lg:container px-[20px] mx-auto lg:px-4 flex items-center justify-center gap-4"
+        class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[10px] "
       >
         <span class="text-xl">
           <svg
@@ -328,7 +328,7 @@
           class="flex flex-col sm:flex-row lg:flex-col gap-6 w-full sm:w-auto relative flex-wrap"
         >
           <!-- Secondary Button -->
-          <div class="relative inline-block">
+          <div class="relative md:inline-block flex w-full">
             <!-- Glow -->
             <button
               data-slot="button"
@@ -337,7 +337,7 @@
               <span
                 class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
               >
-                Book a Consultation
+              <span class="truncate_in_one_line flex-1">Book a Consultation</span>
                 <!-- <span>↗</span> -->
                 <svg
                   width="24"
@@ -367,10 +367,10 @@
             </button>
           </div>
           <!-- Primary Button -->
-          <div class="relative inline-block">
+          <div class="relative md:inline-block flex w-full">
             <button
               data-slot="button"
-              class="modal-open group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-index-1 border-2 border-white max-768px:w-[240px]"
+              class="modal-open group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-index-1 border-2 border-white"
             >
               <span
                 class="bg-black text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white"
@@ -596,7 +596,7 @@
         <!-- RIGHT BUTTONS -->
         <div class="flex flex-col sm:flex-row lg:flex-col gap-6 w-full sm:w-auto relative">
           <!-- Secondary Button -->
-          <div class="relative inline-block">
+          <div class="relative md:inline-block flex w-full">
             <!-- Glow -->
             <button data-slot="button" class="modal-open group relative inline-flex h-auto cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-[linear-gradient(180deg,#141B3B_50.68%,#D5DBFF_104.11%)] font-semibold whitespace-nowrap disabled:pointer-events-none lg:h-14 xl:h-16.25 group z-index-1">
               <span class="bg-primary text-[16px] lg:text-[18px] flex h-full w-full items-center justify-center gap-2 overflow-hidden rounded-full px-[30px] py-[15px] leading-[1.38] text-white">
@@ -721,7 +721,7 @@
           </p>
         </div>
       </div>
-      <div class="owl-carousel owl-theme client_says">
+      <div class="owl-carousel owl-theme client_says mg_client_says">
         <div class="item">
           <div class="item-top">
             <div class="it-left">
@@ -777,7 +777,7 @@
           </p>
         </div>
       </div>
-      <div class="owl-carousel owl-theme client_says">
+      <div class="owl-carousel owl-theme client_says mg_client_says">
         <div class="item">
           <div class="item-top">
             <div class="it-left ">
@@ -964,21 +964,21 @@
       <div class="grid md:grid-cols-3 border border-[#F5FAFE]">
         
         <!-- Medium -->
-        <a  href="#" class="flex items-center justify-center py-10 border-r border-[#F5FAFE] max-768px:border-b max-768px:p-[30px]">
+        <a  href="#" class="flex items-center justify-center py-10 border-r border-[#F5FAFE] max-768px:border-b max-768px:p-[30px] hover:bg-[#4361EE] transition-colors">
           <span class="text-3xl font-semibold tracking-wide text-white">
             <img src="./img/gio/mediaum.svg" alt="" class="object-contain max-500px:w-[200px]  max-500px:h-[45px]">
           </span>
         </a>
 
         <!-- Reddit -->
-        <a  href="#" class="flex items-center justify-center py-10 border-r border-[#F5FAFE] max-768px:border-b max-768px:p-[30px]">
+        <a  href="#" class="flex items-center justify-center py-10 border-r border-[#F5FAFE] max-768px:border-b max-768px:p-[30px] hover:bg-[#4361EE] transition-colors">
           <span class="text-3xl font-semibold text-white flex items-center gap-3">
             <img src="./img/gio/redit.svg" alt="" class="object-contain max-500px:w-[200px]  max-500px:h-[45px]">
           </span>
         </a>
 
         <!-- Quora -->
-        <a  href="#" class="flex items-center justify-center py-10">
+        <a  href="#" class="flex items-center justify-center py-10 hover:bg-[#4361EE] transition-colors">
           <span class="text-3xl font-semibold text-red-600">
             <img src="./img/gio/quora.svg" alt="" class="object-contain max-500px:w-[200px]  max-500px:h-[45px]">
           </span>
@@ -1085,7 +1085,7 @@
           class="flex flex-col sm:flex-row lg:flex-col gap-6 w-full sm:w-auto relative"
         >
           <!-- Secondary Button -->
-          <div class="relative inline-block">
+          <div class="relative md:inline-block flex w-full">
             <!-- Glow -->
             <button
               data-slot="button"
@@ -1150,12 +1150,12 @@
       $(document).ready(function () {
         $(".client_says").owlCarousel({
           stagePadding: 200,
-          loop: true,
+          loop: false,
           margin: 80,
           dots: true,
           items: 1,
           lazyLoad: true,
-          nav: false,
+          nav: true,
           autoplay: false,
           autoplayTimeout: 3000,
           smartSpeed: 800,
