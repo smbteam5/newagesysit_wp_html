@@ -20255,7 +20255,52 @@ footer ul li {
   height: 100% !important;
 }
 
+/* .client_says.owl-carousel .owl-nav button.owl-prev {
+  background-color: #4361ee !important;
+  border-radius: 50%;
+}
+.client_says.owl-carousel .owl-nav button.owl-next {
+  background-color: #4361ee !important;
+  border-radius: 50%;
+} */
+
+.client_says.mg_client_says .owl-nav button.owl-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.client_says.mg_client_says .owl-nav button.owl-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.client_says.mg_client_says.owl-carousel .owl-nav button.owl-prev {
+  background-image: url(./img/owl-arrow-white-left.svg) !important;
+  rotate: none !important;
+}
+
+.client_says.mg_client_says.owl-carousel .owl-nav button.owl-next {
+  background-image: url(./img/owl-arrow-white-right.svg) !important;
+  rotate: none !important;
+}
+
 @media (min-width: 1024px) {
+  .client_says.mg_client_says .owl-nav button.owl-prev {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    background-size: 50px !important;
+  }
+
+  .client_says.mg_client_says .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    background-size: 50px !important;
+  }
+
   .lg\:container {
     width: 100%;
     margin-right: auto;
@@ -20608,6 +20653,11 @@ footer ul li {
 .hover\:bg-\[\#3B52D9\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(59 82 217 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#4361EE\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 97 238 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#5B73FF\]:hover {
@@ -22355,6 +22405,10 @@ footer ul li {
 
   .md\:block {
     display: block;
+  }
+
+  .md\:inline-block {
+    display: inline-block;
   }
 
   .md\:inline {
@@ -28793,10 +28847,6 @@ footer ul li {
 
   .max-768px\:w-\[180px\] {
     width: 180px;
-  }
-
-  .max-768px\:w-\[240px\] {
-    width: 240px;
   }
 
   .max-768px\:w-full {
