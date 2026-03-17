@@ -7317,7 +7317,7 @@
 
 
                     <p class="text-[16px] sm:text-[17px] md:text-[20px] lg:text-[23px] leading-[1.6] text-[#F5FAFE]">
-                        estimate your ROI now.
+                        estimate your ROI now
                     </p>
 
 
@@ -9470,127 +9470,103 @@
 
     <script>
         $(document).ready(function () {
-            var owl = $(".owl-carousel.real-results-carousel");
+    var owl = $(".owl-carousel.real-results-carousel");
 
-            owl.owlCarousel({
-                loop: false,
-                margin: 16,
-                nav: false,
-                dots: true,
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    1024: { items: 3 },
-                },
-            });
+    owl.owlCarousel({
+        loop: false,
+        margin: 16,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1024: { items: 3 },
+        },
+    });
 
-            // ✅ Custom Controls MUST be inside ready
-            $("#customNext").click(function () {
-                owl.trigger("next.owl.carousel");
-            });
+    $("#customNext").click(function () {
+        owl.trigger("next.owl.carousel");
+    });
 
-            $("#customPrev").click(function () {
-                owl.trigger("prev.owl.carousel");
-            });
+    $("#customPrev").click(function () {
+        owl.trigger("prev.owl.carousel");
+    });
 
-            owl.on("changed.owl.carousel", function (event) {
-                var current = event.item.index;
-                var total = event.item.count;
-                var visible = event.page.size;
+    owl.on("changed.owl.carousel", function (event) {
+        if (!event.item || !event.page) return;
 
-                // FIRST ITEM
-                if (current === 0) {
-                    $("#customPrev")
-                        .addClass("nav-disabled")
-                        .removeClass("bg-blue-600 text-white")
-                        .addClass("bg-[#A3ACB5] text-white");
-                } else {
-                    $("#customPrev")
-                        .removeClass("nav-disabled")
-                        .removeClass("bg-[#A3ACB5] text-white")
-                        .addClass("bg-blue-600 text-white");
-                }
+        var current = event.item.index;
+        var total = event.item.count;
+        var visible = event.page.size;
 
-                // LAST ITEM
-                if (current >= total - visible) {
-                    $("#customNext")
-                        .addClass("nav-disabled")
-                        .removeClass("bg-blue-600 text-white")
-                        .addClass("bg-[#A3ACB5] text-white");
-                } else {
-                    $("#customNext")
-                        .removeClass("nav-disabled")
-                        .removeClass("bg-[#A3ACB5] text-white")
-                        .addClass("bg-blue-600 text-white");
-                }
-            });
+        if (current === 0) {
+            $("#customPrev").addClass("nav-disabled bg-[#A3ACB5]").removeClass("bg-[#3b82f6]");
+        } else {
+            $("#customPrev").removeClass("nav-disabled bg-[#A3ACB5]").addClass("bg-[#3b82f6]");
+        }
 
-            // Trigger once on load
-            owl.trigger("changed.owl.carousel");
-        });
+        if (current >= total - visible) {
+            $("#customNext").addClass("nav-disabled bg-[#A3ACB5]").removeClass("bg-[#3b82f6]");
+        } else {
+            $("#customNext").removeClass("nav-disabled bg-[#A3ACB5]").addClass("bg-[#3b82f6]");
+        }
+    });
+
+    // Set initial button states without triggering the event
+    $("#customPrev").addClass("nav-disabled bg-[#A3ACB5]").removeClass("bg-[#3b82f6]");
+    $("#customNext").removeClass("nav-disabled bg-[#A3ACB5]").addClass("bg-[#3b82f6]");
+});
     </script>
 
 
     <script>
         $(document).ready(function () {
-            var owl = $(".owl-carousel.testimonial-wrap");
+    var owl = $(".owl-carousel.testimonial-wrap");
 
-            owl.owlCarousel({
-                loop: false,
-                margin: 16,
-                nav: false,
-                dots: true,
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 1 },
-                    1024: { items: 2, slideBy: 2 },
-                },
-            });
+    owl.owlCarousel({
+        loop: false,
+        margin: 16,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 1 },
+            1024: { items: 2, slideBy: 2 },
+        },
+    });
 
-            // ✅ Custom Controls MUST be inside ready
-            $("#customNext-ct").click(function () {
-                owl.trigger("next.owl.carousel");
-            });
+    $("#customNext-ct").click(function () {
+        owl.trigger("next.owl.carousel");
+    });
 
-            $("#customPrev-ct").click(function () {
-                owl.trigger("prev.owl.carousel");
-            });
+    $("#customPrev-ct").click(function () {
+        owl.trigger("prev.owl.carousel");
+    });
 
-            owl.on("changed.owl.carousel", function (event) {
-                var current = event.item.index;
-                var total = event.item.count;
-                var visible = event.page.size;
+    owl.on("changed.owl.carousel", function (event) {
+        if (!event.item || !event.page) return;
 
-                // FIRST ITEM
-                if (current === 0) {
-                    $("#customPrev-ct")
-                        .addClass("nav-disabled")
-                        .removeClass("bg-blue-600 text-white")
-                        .addClass("bg-[#A3ACB5] text-white");
-                } else {
-                    $("#customPrev-ct")
-                        .removeClass("nav-disabled")
-                        .removeClass("bg-[#A3ACB5] text-white")
-                        .addClass("bg-blue-600 text-white");
-                }
+        var current = event.item.index;
+        var total = event.item.count;
+        var visible = event.page.size;
 
-                // LAST ITEM
-                if (current >= total - visible) {
-                    $("#customNext-ct")
-                        .addClass("nav-disabled")
-                        .removeClass("bg-blue-600 text-white")
-                        .addClass("bg-[#A3ACB5] text-white");
-                } else {
-                    $("#customNext-ct")
-                        .removeClass("nav-disabled")
-                        .removeClass("bg-[#A3ACB5] text-white")
-                        .addClass("bg-blue-600 text-white");
-                }
-            });
+        if (current === 0) {
+            $("#customPrev-ct").addClass("nav-disabled bg-[#A3ACB5]").removeClass("bg-[#3b82f6]");
+        } else {
+            $("#customPrev-ct").removeClass("nav-disabled bg-[#A3ACB5]").addClass("bg-[#3b82f6]");
+        }
 
-            // Trigger once on load
-            owl.trigger("changed.owl.carousel");
-        });
+        if (current >= total - visible) {
+            $("#customNext-ct").addClass("nav-disabled bg-[#A3ACB5]").removeClass("bg-[#3b82f6]");
+        } else {
+            $("#customNext-ct").removeClass("nav-disabled bg-[#A3ACB5]").addClass("bg-[#3b82f6]");
+        }
+    });
+
+    // Set initial button states without triggering the event
+    $("#customPrev-ct").addClass("nav-disabled bg-[#A3ACB5]").removeClass("bg-[#3b82f6]");
+    $("#customNext-ct").removeClass("nav-disabled bg-[#A3ACB5]").addClass("bg-[#3b82f6]");
+});
     </script>
 
     <!-- faq script  -->
