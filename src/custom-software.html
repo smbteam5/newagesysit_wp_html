@@ -4108,7 +4108,7 @@
 
             </div>
 
-            <div id="micro" class="
+            <div id="micro" class="hidden
       grid
       grid-cols-1
       sm:grid-cols-2
@@ -4456,7 +4456,7 @@
 
             </div>
 
-            <div id="erp" class="
+            <div id="erp" class="hidden
       grid
       grid-cols-1
       sm:grid-cols-2
@@ -4805,7 +4805,7 @@
 
             </div>
 
-            <div id="saas" class="
+            <div id="saas" class="hidden
       grid
       grid-cols-1
       sm:grid-cols-2
@@ -9226,39 +9226,33 @@
     </script>
 
     <script>
-        // Fixed tab switching script
+        // Technology stack tabs: show MVP by default and switch content per tab.
         const tabButtons = document.querySelectorAll(".tab-btn");
         const tabSections = ["mvp", "micro", "erp", "saas"];
 
+        const setActiveTab = (targetId) => {
+            tabSections.forEach((id) => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.classList.toggle("hidden", id !== targetId);
+                }
+            });
+
+            tabButtons.forEach((button) => {
+                const isActive = button.dataset.tab === targetId;
+                button.classList.toggle("bg-black", isActive);
+                button.classList.toggle("text-white", isActive);
+                button.classList.toggle("text-gray-600", !isActive);
+            });
+        };
+
         tabButtons.forEach((btn) => {
             btn.addEventListener("click", () => {
-                const target = btn.dataset.tab;
-
-                // Hide all sections
-                tabSections.forEach((id) => {
-                    const element = document.getElementById(id);
-                    if (element) {
-                        element.classList.add("hidden");
-                    }
-                });
-
-                // Remove active styles from all tabs
-                tabButtons.forEach((b) => {
-                    b.classList.remove("bg-black", "text-white");
-                    b.classList.add("text-gray-600");
-                });
-
-                // Show selected section
-                const selectedSection = document.getElementById(target);
-                if (selectedSection) {
-                    selectedSection.classList.remove("hidden");
-                }
-
-                // Activate clicked tab
-                btn.classList.add("bg-black", "text-white");
-                btn.classList.remove("text-gray-600");
+                setActiveTab(btn.dataset.tab);
             });
         });
+
+        setActiveTab("mvp");
     </script>
 
 
