@@ -4106,6 +4106,11 @@ footer ul li {
   animation: animate-marquee-pcc-horizontal 10s linear infinite;
 }
 
+@media (min-width: 1023px) {
+  .logos-arquee-lg {
+    animation: animate-marquee-pcc-horizontal 10s linear infinite;
+  }
+}
 @keyframes radial-move {
   0% {
     background: radial-gradient(
@@ -4474,14 +4479,15 @@ footer ul li {
 
 @media (max-width: 991px) {
   .recognition-section-ppc {
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid;
     border-image: linear-gradient(
         90deg,
         #090b1b 11.06%,
         #a4b7ff 51.44%,
         #0a0c1a 87.02%
       )
-      1;
+      1; */
+      border: none !important;
   }
 }
 
@@ -7805,4 +7811,7 @@ footer ul li {
 .consult_item_wraper .owl-stage {
   display: flex;
   align-items: end;
+}
+.bg-grad-rfe{
+  background: linear-gradient(90deg, rgba(67, 97, 238, 0) 0%, #4361EE 49.42%, rgba(38, 55, 136, 0) 100%);
 }
