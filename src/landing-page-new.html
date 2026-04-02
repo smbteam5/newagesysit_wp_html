@@ -48,13 +48,8 @@
     <!-- Google Fonts - Inter and Manrope with font-display=swap for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link
-      rel="preload"
-      as="image"
-      href="./img/custom-software/hero.webp"
-      fetchpriority="high"
-    />
     <link
       rel="preload"
       as="style"
@@ -73,15 +68,12 @@
       />
     </noscript>
 
-    <!-- Owl Carousel CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
+    <!-- Owl Carousel CSS (inlined to eliminate render-blocking CDN request) -->
+    <style>
+      .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{display:none;width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-item img{display:block;width:100%}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot{background:0 0;color:inherit;border:none;padding:0!important;font:inherit}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}.owl-carousel.owl-drag .owl-item{-ms-touch-action:pan-y;touch-action:pan-y;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.owl-carousel .animated{animation-duration:1s;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{animation-name:fadeOut}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}.owl-carousel .owl-item .owl-lazy:not([src]),.owl-carousel .owl-item .owl-lazy[src^=""]{max-height:0}.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}
+      .owl-theme .owl-dots,.owl-theme .owl-nav{text-align:center;-webkit-tap-highlight-color:transparent}.owl-theme .owl-nav{margin-top:10px}.owl-theme .owl-nav [class*=owl-]{color:#FFF;font-size:14px;margin:5px;padding:4px 7px;background:#D6D6D6;display:inline-block;cursor:pointer;border-radius:3px}.owl-theme .owl-nav [class*=owl-]:hover{background:#869791;color:#FFF;text-decoration:none}.owl-theme .owl-nav .disabled{opacity:.5;cursor:default}.owl-theme .owl-nav.disabled+.owl-dots{margin-top:10px}.owl-theme .owl-dots .owl-dot{display:inline-block;zoom:1}.owl-theme .owl-dots .owl-dot span{width:10px;height:10px;margin:5px 7px;background:#D6D6D6;display:block;-webkit-backface-visibility:visible;transition:opacity .2s ease;border-radius:30px}.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{background:#869791}
+    </style>
+
     <link href="style.css" rel="stylesheet" />
 
     <style>
@@ -1410,7 +1402,7 @@
           class="relative flex flex-col items-center justify-center"
         >
           <h1
-            class="text-[34px] md:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-left lg:text-center bg-gradient-to-r from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent md:px-8"
+            class="text-[34px] md:text-[60px] font-bold leading-[40px] md:leading-[70px] lg:leading-[72px] w-full text-left lg:text-center bg-gradient-to-l from-[#ffffff] via-[#F5FAFE] to-[#5466E9] bg-clip-text text-transparent md:px-8"
           >
             AI-Powered Software & Mobile App <br class="hidden lg:block" />
             <span class="text-[#fff]">Development Company in the USA</span>
@@ -1548,7 +1540,7 @@
       <div>
         <div class="bg-[#fff] text-center text-sm py-[8px] relative">
           <div
-            class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[10px]"
+            class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[30px]"
           >
             <span class="text-xl">
               <svg
@@ -1594,11 +1586,11 @@
         </div>
       </div>
       <div
-        class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-[80px] py-12 lg:py-[80px]"
+        class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-[80px] pt-12 lg:pt-[80px]"
       >
         <!-- Main Row -->
         <div
-          class="mx-auto max-w-[1440px] flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-0 lg:gap-[50px] pb-[40px]"
+          class="mx-auto max-w-[1440px] flex flex-col xl:flex-row items-center justify-center gap-10 lg:gap-[100px] pb-[40px]"
         >
           <!-- Clutch -->
           <div class="flex items-center justify-center lg:shrink-0">
@@ -1622,7 +1614,7 @@
               <div
                 class="w-[177px] text-[18px] leading-[25px] whitespace-nowrap text-[#F5FAFE]"
               >
-                Years of AI Expertise
+                Years <br class="hidden lg:block" /> of AI Expertise
               </div>
             </div>
 
@@ -1640,7 +1632,8 @@
                 100+
               </div>
               <div class="text-[18px] leading-[25px] text-[#F5FAFE]">
-                Projects Delivered
+                Projects <br class="hidden lg:block" />
+                Delivered
               </div>
             </div>
 
@@ -1655,7 +1648,7 @@
               <div
                 class="text-[40px] leading-[56px] font-semibold text-[#F5FAFE]"
               >
-                30+
+                #1
               </div>
               <div class="text-[18px] leading-[25px] text-[#F5FAFE]">
                 App Developer NJ, FL, NY
@@ -1676,7 +1669,7 @@
       </div>
     </section>
     <!-- custom software web & mob -->
-    <section class="lg:py-[80px] py-[70px] relative overflow-hidden">
+    <section class="lg:py-[110px] py-[70px] relative overflow-hidden">
       <div class="absolute left-0 top-0 w-full z-[-1] scale-[-1] h-full">
         <img
           src="./img/home-new/crm-bg.webp"
@@ -1787,7 +1780,7 @@
     </section>
 
     <section class="pt-[40px]">
-      <div class="w-full container mx-auto px-8 pb-3 overflow-hidden">
+      <div class="w-full mx-auto lg:px-0 px-4 pb-3 overflow-hidden">
         <!-- Heading -->
         <p
           class="text-center text-white lg:text-[28px] text-[20px] font-normal mb-[30px] tracking-wide"
@@ -1857,7 +1850,7 @@
         >
           <!-- SAIC -->
           <div class="px-8">
-            <img src="./img/home-new/saic.svg" alt="" class="w-[150px] h-[60px]"/>
+            <img src="./img/home-new/saic.svg" alt="" class="w-auto h-[40px]"/>
           </div>
 
           <!-- Vertical Divider -->
@@ -1865,7 +1858,7 @@
 
           <!-- The Medicines Company -->
           <div class="px-8">
-            <img src="./img/home-new/medicine.svg" alt="" class="w-[150px] h-[60px]"/>
+            <img src="./img/home-new/medicine.svg" alt=""class="w-auto h-[40px]"/>
           </div>
 
           <!-- Vertical Divider -->
@@ -1873,7 +1866,7 @@
 
           <!-- Merck -->
           <div class="px-8">
-            <img src="./img/home-new/merck.svg" alt="" class="w-[150px] h-[60px]"/>
+            <img src="./img/home-new/merck.svg" alt="" class="w-auto h-[40px]"/>
           </div>
 
           <!-- Vertical Divider -->
@@ -1881,7 +1874,7 @@
 
           <!-- Johnson & Johnson -->
           <div class="px-8">
-            <img src="./img/home-new/johnson.svg" alt="" class="w-[150px] h-[60px]"/>
+            <img src="./img/home-new/johnson.svg" alt="" class="w-auto h-[40px]"/>
           </div>
         </div>
 
@@ -2160,7 +2153,7 @@
     <section>
       <div class="bg-[#364EBE] text-[#fff] text-center text-sm py-[8px] relative">
         <div
-          class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[10px]"
+          class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[30px]"
         >
           <span class="text-xl">
             <svg
@@ -2272,7 +2265,7 @@
             <h2
               class="text-left text-[#1B1D1E] text-[32px] sm:text-[40px] lg:text-[50px] leading-[40px] sm:leading-[48px] lg:leading-[60px] font-normal"
             >
-              <span class="text-[#4361EE]">AI Product Engineering</span> &
+              <span class="text-[#4361EE] font-semibold">AI Product Engineering</span> &
               <br class="lg:block hidden" />
               Intelligent Systems
             </h2>
@@ -2351,7 +2344,7 @@
               class="text-left text-[#1B1D1E] text-[32px] sm:text-[40px] lg:text-[50px] leading-[40px] sm:leading-[48px] lg:leading-[60px] font-normal"
             >
               Launch in Weeks.<br />
-              <span class="text-[#4361EE]">Scale for Years.</span>
+              <span class="text-[#4361EE] font-semibold">Scale for Years.</span>
             </h2>
 
             <p class="text-[#1B1D1E] mt-[20px] text-[16px] font-[500] ">
@@ -2513,11 +2506,9 @@
 
         <p class="lg:text-[23px] text-[18px] leading-[32px] text-white/90 mb-[40px]">
           <span class="font-semibold">
-            Get expert guidance before you invest in AI software development.
+           Get expert guidance before you invest in AI software development.
           </span>
-          Work directly with Giovanni and Bibin to validate your technology
-          direction, align AI with business goals, and make confident decisions
-          that reduce risk and accelerate outcomes.
+           Work directly with Giovanni and Bibin to validate your technology direction, align AI with business goals, and make confident decisions that reduce risk and accelerate outcomes.
         </p>
 
         <a
@@ -2781,7 +2772,7 @@
       >
         <button
           id="customPrev"
-          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition bg-[#A3ACB5] text-white nav-disabled"
+          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition bg-[#65686C] text-white nav-disabled"
         >
           <!-- lucide-react like arrow -->
           <svg
@@ -3059,80 +3050,7 @@
             </div>
           </article>
 
-          <!-- Slide 3 -->
-          <article class="px-2 flex w-full">
-            <div class="w-full rounded-[28px] bg-black overflow-hidden">
-              <div class="relative h-[360px] sm:h-[420px]">
-                <div
-                  class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_#111_0%,_#000_55%)]"
-                ></div>
-
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div
-                    class="h-[280px] w-[165px] rotate-[10deg] rounded-[28px] bg-[#7ccf3a] shadow-[0_25px_80px_rgba(0,0,0,0.55)] ring-1 ring-black/15"
-                  >
-                    <div class="p-5">
-                      <div
-                        class="text-center font-extrabold text-white text-xl"
-                      >
-                        JUNK SHOT
-                      </div>
-                      <div class="mt-6 space-y-3">
-                        <div class="h-10 rounded-full bg-white/90"></div>
-                        <div class="h-10 rounded-full bg-white/90"></div>
-                        <div class="h-10 rounded-full bg-white/30"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="absolute left-6 bottom-6">
-                  <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
-                  >
-                    On-Demand Services
-                  </span>
-                </div>
-              </div>
-
-              <div class="px-7 py-8 sm:px-10 sm:py-10">
-                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
-                  <div class="border-r border-[#fff] pr-[2px]">
-                    <div
-                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
-                    >
-                      50%
-                    </div>
-                    <div class="mt-2 text-sm sm:text-[12px] text-white">
-                      faster service booking completion
-                    </div>
-                  </div>
-
-                  <div class="border-r border-[#fff] pr-[2px]">
-                    <div
-                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
-                    >
-                      2×
-                    </div>
-                    <div class="mt-2 text-sm sm:text-[12px] text-white">
-                      increase in customer retention
-                    </div>
-                  </div>
-
-                  <div>
-                    <div
-                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
-                    >
-                      40%
-                    </div>
-                    <div class="mt-2 text-sm sm:text-[12px] text-white">
-                      reduction in scheduling delays
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+         
         </div>
       </div>
       <div class="relative mx-auto container px-4 pb-[80px] lg:hidden block">
@@ -3399,7 +3317,7 @@
         class="bg-[#364EBE] text-[#fff] text-center text-sm py-[8px] relative"
       >
         <div
-          class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[10px]"
+          class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[30px]"
         >
           <span class="text-xl">
             <svg
@@ -3475,7 +3393,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO – WHIP-FLIP
                   </p>
                 </div>
@@ -3513,7 +3431,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     Larry Seibel
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     Founder - CAR-UP App
                   </p>
                 </div>
@@ -3530,7 +3448,7 @@
                 href="https://www.youtube.com/watch?v=DgRYCbDIcfA"
               >
                 <img
-                  src="./img/client-img-3.webp"
+                  src="./img/lazaro1.jpg"
                   alt="Chris Ordway"
                   class="w-full h-full object-cover rounded-[17px] transition-opacity duration-300 group-hover:opacity-80"
                 />
@@ -3549,10 +3467,10 @@
                     />
                   </div>
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
-                    Rob Salerno
+                    LAZARO REYES
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
-                    CEO – CLIQUEPRIZE
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                   Founder – Town Connect Network
                   </p>
                 </div>
               </a>
@@ -3584,7 +3502,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     CHRIS ORORKE
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     GUARANTEED TIP SHEET
                   </p>
                 </div>
@@ -3619,7 +3537,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     IMAN KHAWAJA
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     Owner - ISRA
                   </p>
                 </div>
@@ -3656,7 +3574,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     DAVID CHABUKASHVILI
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     Founder - LCard App
                   </p>
                 </div>
@@ -3671,7 +3589,7 @@
                 href="https://www.youtube.com/watch?v=slRQbxC1UoI"
               >
                 <img
-                  src="./img/client-img-7.webp"
+                  src="./img/james.webp"
                   alt="Larry Gebel"
                   class="w-full h-full object-cover rounded-[17px] transition-opacity duration-300 group-hover:opacity-80"
                 />
@@ -3689,10 +3607,10 @@
                     />
                   </div>
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
-                    Rob Evans
+                    JAMES VACCARINO
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
-                    CEO - DONUT MAN APP
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                    CEO - Bungee App
                   </p>
                 </div>
               </a>
@@ -3730,7 +3648,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, WhipFlip
                   </p>
                 </div>
@@ -3763,7 +3681,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     Larry Seibel
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, Car-Upp
                   </p>
                 </div>
@@ -3796,7 +3714,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     Rob Salerno
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, CliquePrize App
                   </p>
                 </div>
@@ -3829,7 +3747,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     Chris O'Rorke
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, Guaranteed Tip Sheet
                   </p>
                 </div>
@@ -3862,7 +3780,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     Iman Khawaja
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, ISRA App
                   </p>
                 </div>
@@ -3895,7 +3813,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     David Chabukashvili
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, Lcard App
                   </p>
                 </div>
@@ -3928,7 +3846,7 @@
                   <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
                     Rob Evans
                   </p>
-                  <p class="text-[16px] text-white opacity-[0.5] truncate">
+                  <p class="text-[12px] text-white opacity-[0.5] truncate">
                     CEO, Donut Man app
                   </p>
                 </div>
@@ -3976,6 +3894,12 @@
       class="relative overflow-hidden bg-[#000] py-[50px] lg:py-[100px] xl:hidden block"
     >
       <div class="container">
+        <!-- Built for Enterprises & High-Growth Startups -->
+          <h2
+          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[40px] mb-[20px] font-[400]"
+        >
+         Built for Enterprises & High-Growth Startups 
+        </h2>
         <div
           class="grid md:grid-cols-2 grid-col-1 gap-10 md:p-[25px] p-[15px] border border-[#2A2D30]"
         >
@@ -4048,6 +3972,11 @@
     <section
       class="relative overflow-hidden bg-[#000] xl:pt-[100px] lg:pb-[0px] py-[50px] xl:block hidden"
     >
+    <h2
+          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[40px] mb-[20px] font-[400] text-center"
+        >
+         Built for Enterprises & High-Growth Startups 
+        </h2>
       <!-- faint arcs (left & right) -->
       <div class="pointer-events-none absolute inset-0 -z-10">
         <!-- left arcs -->
@@ -4067,7 +3996,7 @@
       </div>
 
       <div
-        class="pb-[130px] mx-auto grid grid-cols-1 items-center gap-10 px-6 md:grid-cols-[1fr_auto_1fr] md:gap-8"
+        class="pb-[130px] mx-auto grid grid-cols-1 items-center gap-10 px-6 md:grid-cols-[1fr_auto_1fr] md:gap-8 pt-[50px]"
       >
         <div
           class="relative right-[-100px] border-[#ffffff29] !border-l-0 rounded-tr-[999px] rounded-br-[999px] pt-[20px] overflow-hidden border border-y bg-[linear-gradient(90deg,rgba(22,22,34,0.6)_-2.33%,#161A22_28.97%,#7C81DA_72.18%,rgba(88,88,136,0)_98.51%)] before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-[#0D0D0D]"
@@ -4271,7 +4200,7 @@
                             alt="Google Cloud"
                             class="block"
                         /></span>
-                        <span>Google Cloud Platform</span>
+                        <span class="opacity-70">Google Cloud Platform</span>
                       </li>
                     </ul>
                   </div>
@@ -4288,7 +4217,7 @@
                         <span
                           ><img src="./img/azure1.svg" alt="Meta" class="block"
                         /></span>
-                        <span>Microsoft Azure</span>
+                        <span class="opacity-70">Microsoft Azure</span>
                       </li>
                     </ul>
                   </div>
@@ -4308,7 +4237,7 @@
                         <span
                           ><img src="./img/aws.svg" alt="AWS" class="block"
                         /></span>
-                        <span>Amazon Web Services</span>
+                        <span class="opacity-70">Amazon Web Services</span>
                       </li>
                     </ul>
                   </div>
@@ -4488,7 +4417,7 @@
               </p>
               <div class="flex mb-10 sm:mb-12 mt-10">
                 <a
-                  class="bg-[#FF5B14] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden"
+                  class="bg-[#FF5B14] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit relative overflow-hidden cursor-pointer"
                 >
                   Take to Our Experts Today
                 </a>
@@ -4571,7 +4500,7 @@
                       ><img src="./img/form-black.svg" alt="" /> </span
                     ><span
                       >Your idea is 100% protected by our non disclosure
-                      agreement.</span
+                      agreement</span
                     >
                   </p>
                 </div>
@@ -5723,7 +5652,7 @@
       <div class="flex justify-center gap-6 mt-0 lg:mt-[-50px] z-[9] relative">
         <button
           id="customPrev-tl"
-          class="w-12 h-12 rounded-full bg-[#A3ACB5] flex items-center justify-center"
+          class="w-12 h-12 rounded-full bg-[#65686C] flex items-center justify-center"
         >
           <!-- SVG -->
           <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
@@ -5736,7 +5665,7 @@
 
         <button
           id="customNext-tl"
-          class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center"
+          class="w-12 h-12 rounded-full bg-[#283A8F] flex items-center justify-center"
         >
           <!-- SVG -->
           <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
@@ -5975,22 +5904,22 @@
           // Disable Prev
           if (current === 0) {
             $("#testimonialPrev")
-              .addClass("bg-[#A3ACB5]")
+              .addClass("bg-[#65686C]")
               .removeClass("bg-[#4361EE]");
           } else {
             $("#testimonialPrev")
-              .removeClass("bg-[#A3ACB5]")
+              .removeClass("bg-[#65686C]")
               .addClass("bg-[#4361EE]");
           }
 
           // Disable Next
           if (current >= total - visible) {
             $("#testimonialNext")
-              .addClass("bg-[#A3ACB5]")
+              .addClass("bg-[#65686C]")
               .removeClass("bg-[#4361EE]");
           } else {
             $("#testimonialNext")
-              .removeClass("bg-[#A3ACB5]")
+              .removeClass("bg-[#65686C]")
               .addClass("bg-[#4361EE]");
           }
         });
@@ -6133,11 +6062,11 @@
             $("#customPrev")
               .addClass("nav-disabled")
               .removeClass("bg-[#4361EE] text-white")
-              .addClass("bg-[#A3ACB5] text-white");
+              .addClass("bg-[#65686C] text-white");
           } else {
             $("#customPrev")
               .removeClass("nav-disabled")
-              .removeClass("bg-[#A3ACB5] text-white")
+              .removeClass("bg-[#65686C] text-white")
               .addClass("bg-[#4361EE] text-white");
           }
 
@@ -6146,21 +6075,21 @@
             $("#customNext")
               .addClass("nav-disabled")
               .removeClass("bg-[#4361EE] text-white")
-              .addClass("bg-[#A3ACB5] text-white");
+              .addClass("bg-[#65686C] text-white");
           } else {
             $("#customNext")
               .removeClass("nav-disabled")
-              .removeClass("bg-[#A3ACB5] text-white")
+              .removeClass("bg-[#65686C] text-white")
               .addClass("bg-[#4361EE] text-white");
           }
         });
 
         // Set initial button states directly (avoids synthetic event crash)
         $("#customPrev")
-          .addClass("nav-disabled bg-[#A3ACB5] text-white")
+          .addClass("nav-disabled bg-[#65686C] text-white")
           .removeClass("bg-[#4361EE]");
         $("#customNext")
-          .removeClass("nav-disabled bg-[#A3ACB5]")
+          .removeClass("nav-disabled bg-[#65686C]")
           .addClass("bg-[#4361EE] text-white");
       });
     </script>
@@ -6237,6 +6166,9 @@
         });
 
         owl.on("changed.owl.carousel", function (event) {
+          // Guard: event.item may be undefined when triggered synthetically
+          if (!event.item) return;
+
           var current = event.item.index;
           var total = event.item.count;
           var visible = event.page.size;
@@ -6245,31 +6177,36 @@
           if (current === 0) {
             $("#customPrev")
               .addClass("nav-disabled")
-              .removeClass("bg-blue-600 text-white")
-              .addClass("bg-[#A3ACB5] text-white");
+              .removeClass("bg-[#283A8F] text-white")
+              .addClass("bg-[#65686C] text-white");
           } else {
             $("#customPrev")
               .removeClass("nav-disabled")
-              .removeClass("bg-[#A3ACB5] text-white")
-              .addClass("bg-blue-600 text-white");
+              .removeClass("bg-[#65686C] text-white")
+              .addClass("bg-[#283A8F] text-white");
           }
 
           // LAST ITEM
           if (current >= total - visible) {
             $("#customNext")
               .addClass("nav-disabled")
-              .removeClass("bg-blue-600 text-white")
-              .addClass("bg-[#A3ACB5] text-white");
+              .removeClass("bg-[#283A8F] text-white")
+              .addClass("bg-[#65686C] text-white");
           } else {
             $("#customNext")
               .removeClass("nav-disabled")
-              .removeClass("bg-[#A3ACB5] text-white")
-              .addClass("bg-blue-600 text-white");
+              .removeClass("bg-[#65686C] text-white")
+              .addClass("bg-[#283A8F] text-white");
           }
         });
 
-        // Trigger once on load
-        owl.trigger("changed.owl.carousel");
+        // Set initial button states directly (avoids synthetic event crash)
+        $("#customPrev")
+          .addClass("nav-disabled bg-[#65686C] text-white")
+          .removeClass("bg-[#283A8F]");
+        $("#customNext")
+          .removeClass("nav-disabled bg-[#65686C]")
+          .addClass("bg-[#283A8F] text-white");
       });
     </script>
     <script>
@@ -6298,6 +6235,9 @@
         });
 
         owl.on("changed.owl.carousel", function (event) {
+          // Guard: event.item may be undefined when triggered synthetically
+          if (!event.item) return;
+
           var current = event.item.index;
           var total = event.item.count;
           var visible = event.page.size;
@@ -6306,31 +6246,36 @@
           if (current === 0) {
             $("#customPrev-tl")
               .addClass("nav-disabled")
-              .removeClass("bg-blue-600 text-white")
-              .addClass("bg-[#A3ACB5] text-white");
+              .removeClass("bg-[#283A8F] text-white")
+              .addClass("bg-[#65686C] text-white");
           } else {
             $("#customPrev-tl")
               .removeClass("nav-disabled")
-              .removeClass("bg-[#A3ACB5] text-white")
-              .addClass("bg-blue-600 text-white");
+              .removeClass("bg-[#65686C] text-white")
+              .addClass("bg-[#283A8F] text-white");
           }
 
           // LAST ITEM
           if (current >= total - visible) {
             $("#customNext-tl")
               .addClass("nav-disabled")
-              .removeClass("bg-blue-600 text-white")
-              .addClass("bg-[#A3ACB5] text-white");
+              .removeClass("bg-[#283A8F] text-white")
+              .addClass("bg-[#65686C] text-white");
           } else {
             $("#customNext-tl")
               .removeClass("nav-disabled")
-              .removeClass("bg-[#A3ACB5] text-white")
-              .addClass("bg-blue-600 text-white");
+              .removeClass("bg-[#65686C] text-white")
+              .addClass("bg-[#283A8F] text-white");
           }
         });
 
-        // Trigger once on load
-        owl.trigger("changed.owl.carousel");
+        // Set initial button states directly (avoids synthetic event crash)
+        $("#customPrev-tl")
+          .addClass("nav-disabled bg-[#65686C] text-white")
+          .removeClass("bg-[#283A8F]");
+        $("#customNext-tl")
+          .removeClass("nav-disabled bg-[#65686C]")
+          .addClass("bg-[#283A8F] text-white");
       });
     </script>
   </body>
