@@ -16567,10 +16567,14 @@ footer ul li {
 
 .logos-arquee {
   animation: animate-marquee-pcc-horizontal 10s linear infinite;
-  display: flex;
-  width: -moz-max-content;
-  width: max-content;
-  /* critical — lets it stretch beyond screen */
+}
+
+@media (max-width: 1024px) {
+  .logos-arquee {
+    display: flex;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 @media (min-width: 1023px) {
