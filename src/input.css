@@ -4106,12 +4106,12 @@ footer ul li {
 .logos-arquee {
   animation: animate-marquee-pcc-horizontal 10s linear infinite;
 }
-/* @media (max-width: 1024px) {
+@media (max-width: 1024px) {
   .logos-arquee {
     display: flex;
     width: max-content;
   }
-} */
+}
 @media (min-width: 1023px) {
   .logos-arquee-lg {
     animation: animate-marquee-pcc-horizontal 10s linear infinite;
@@ -4139,6 +4139,21 @@ footer ul li {
       rgba(0, 128, 0, 0.05) 100%
     );
   }
+}
+
+@keyframes animate-marquee-pcc-horizontal2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-pcc-horizontal2 {
+  animation: animate-marquee-pcc-horizontal2 15s linear infinite;
+  width: max-content;
+  display: flex;
 }
 .animate-radial {
   animation: radial-move 6s ease-in-out infinite;

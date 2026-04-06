@@ -16584,12 +16584,13 @@ footer ul li {
   animation: animate-marquee-pcc-horizontal 10s linear infinite;
 }
 
-/* @media (max-width: 1024px) {
+@media (max-width: 1024px) {
   .logos-arquee {
     display: flex;
+    width: -moz-max-content;
     width: max-content;
   }
-} */
+}
 
 @media (min-width: 1023px) {
   .logos-arquee-lg {
@@ -16621,6 +16622,23 @@ footer ul li {
       rgba(0, 128, 0, 0.05) 100%
     );
   }
+}
+
+@keyframes animate-marquee-pcc-horizontal2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-pcc-horizontal2 {
+  animation: animate-marquee-pcc-horizontal2 15s linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
 }
 
 .animate-radial {
@@ -24014,8 +24032,8 @@ footer ul li {
     gap: 2rem;
   }
 
-  .md\:gap-\[150px\] {
-    gap: 150px;
+  .md\:gap-\[100px\] {
+    gap: 100px;
   }
 
   .md\:gap-\[24px\] {
