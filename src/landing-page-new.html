@@ -3659,7 +3659,7 @@
     <section class="bg-[#0D0D0D] py-[80px] px-4">
       <div class="container lg:px-4 px-0 mx-auto lg:text-center lg:pb-[80px]">
         <h2
-          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[80px] lg:mb-[50px] font-[400] mb-[20px]"
+          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[80px] mb-[20px]"
         >
           Here’s What Industry Leaders Talk About <br class="hidden lg:block" />
           The Results They Achieved With Us
@@ -4245,6 +4245,36 @@
                 </div>
               </a>
             </div>
+          </div>
+          <!-- NAVIGATION BUTTONS -->
+          <div
+            class="flex justify-center gap-6 mt-0 xl:mt-[-50px] z-[9] relative"
+          >
+            <button
+              id="customPrev-tl"
+              class="w-12 h-12 rounded-full bg-[#65686C] flex items-center justify-center"
+            >
+              <!-- SVG -->
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path
+                  d="M8.57661 0L9.81715 1.2546L2.44448 8.93645L3.23073 9.75571L9.77698 16.576L8.5552 17.8494C6.74438 15.9636 1.68944 10.6973 0 8.93645C1.25481 7.62809 0.0312233 8.90326 8.57661 0Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+
+            <button
+              id="customNext-tl"
+              class="w-12 h-12 rounded-full bg-[#283A8F] flex items-center justify-center"
+            >
+              <!-- SVG -->
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path
+                  d="M1.24054 0L0 1.2546L7.37267 8.93645L6.58642 9.75571L0.0401731 16.576L1.26195 17.8494C3.07277 15.9636 8.12771 10.6973 9.81715 8.93645C8.56234 7.62809 9.78593 8.90326 1.24054 0Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -6672,54 +6702,71 @@
     </script>
     <script>
       $(document).ready(function () {
-        const $carousel = $(".owl-carousel");
-        if ($carousel.length > 0) {
-          try {
-            $carousel.owlCarousel({
-              loop: true,
-              margin: 10,
-              nav: true,
-              dots: true,
-              autoplay: false,
-              items: 1,
-              responsive: {
-                0: {
-                  items: 1,
-                },
-                768: {
-                  items: 2,
-                },
-                1024: {
-                  items: 2,
-                },
-              },
-              // navText: [
-              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>',
-              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>',
-              // ],
-              onInitialized: function (event) {
-                // console.log(
-                //   "Owl Carousel initialized successfully with",
-                //   event.item.count,
-                //   "items",
-                // );
-              },
-              onChanged: function (event) {
-                // console.log("Slide changed to:", event.item.index);
-              },
-            });
+        var owl = $(".owl-carousel.mobile-slider");
 
-            // console.log("Owl Carousel initialization attempted");
-          } catch (error) {
-            console.error("Error initializing Owl Carousel:", error);
+        owl.owlCarousel({
+          loop: false,
+          margin: 16,
+          nav: false,
+          dots: true,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            1024: { items: 2 },
+          },
+        });
+
+        // ✅ Custom Controls MUST be inside ready
+        $("#customNext-tl-mobile").click(function () {
+          owl.trigger("next.owl.carousel");
+        });
+
+        $("#customPrev-tl-mobile").click(function () {
+          owl.trigger("prev.owl.carousel");
+        });
+
+        owl.on("changed.owl.carousel", function (event) {
+          // Guard: event.item may be undefined when triggered synthetically
+          if (!event.item) return;
+
+          var current = event.item.index;
+          var total = event.item.count;
+          var visible = event.page.size;
+
+          // FIRST ITEM
+          if (current === 0) {
+            $("#customPrev-tl-mobile")
+              .addClass("nav-disabled")
+              .removeClass("bg-[#283A8F] text-white")
+              .addClass("bg-[#65686C] text-white");
+          } else {
+            $("#customPrev-tl-mobile")
+              .removeClass("nav-disabled")
+              .removeClass("bg-[#65686C] text-white")
+              .addClass("bg-[#283A8F] text-white");
           }
-        } else {
-          console.error("No .owl-carousel elements found in the DOM");
-          console.log(
-            'Available elements with "owl" class:',
-            $('[class*="owl"]').length,
-          );
-        }
+
+          // LAST ITEM
+          if (current >= total - visible) {
+            $("#customNext-tl-mobile")
+              .addClass("nav-disabled")
+              .removeClass("bg-[#283A8F] text-white")
+              .addClass("bg-[#65686C] text-white");
+          } else {
+            $("#customNext-tl-mobile")
+              .removeClass("nav-disabled")
+              .removeClass("bg-[#65686C] text-white")
+              .addClass("bg-[#283A8F] text-white");
+          }
+        });
+
+        // Set initial button states directly (avoids synthetic event crash)
+        $("#customPrev-tl-mobile")
+          .addClass("nav-disabled bg-[#65686C] text-white")
+          .removeClass("bg-[#283A8F]");
+        $("#customNext-tl-mobile")
+          .removeClass("nav-disabled bg-[#65686C]")
+          .addClass("bg-[#283A8F] text-white");
       });
     </script>
   </body>
