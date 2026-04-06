@@ -68,12 +68,14 @@
       />
     </noscript>
 
-    <!-- Owl Carousel CSS (inlined to eliminate render-blocking CDN request) -->
-    <style>
-      .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{display:none;width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-item img{display:block;width:100%}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot{background:0 0;color:inherit;border:none;padding:0!important;font:inherit}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}.owl-carousel.owl-drag .owl-item{-ms-touch-action:pan-y;touch-action:pan-y;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.owl-carousel .animated{animation-duration:1s;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{animation-name:fadeOut}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}.owl-carousel .owl-item .owl-lazy:not([src]),.owl-carousel .owl-item .owl-lazy[src^=""]{max-height:0}.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}
-      .owl-theme .owl-dots,.owl-theme .owl-nav{text-align:center;-webkit-tap-highlight-color:transparent}.owl-theme .owl-nav{margin-top:10px}.owl-theme .owl-nav [class*=owl-]{color:#FFF;font-size:14px;margin:5px;padding:4px 7px;background:#D6D6D6;display:inline-block;cursor:pointer;border-radius:3px}.owl-theme .owl-nav [class*=owl-]:hover{background:#869791;color:#FFF;text-decoration:none}.owl-theme .owl-nav .disabled{opacity:.5;cursor:default}.owl-theme .owl-nav.disabled+.owl-dots{margin-top:10px}.owl-theme .owl-dots .owl-dot{display:inline-block;zoom:1}.owl-theme .owl-dots .owl-dot span{width:10px;height:10px;margin:5px 7px;background:#D6D6D6;display:block;-webkit-backface-visibility:visible;transition:opacity .2s ease;border-radius:30px}.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{background:#869791}
-    </style>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <link href="style.css" rel="stylesheet" />
 
     <style>
@@ -354,6 +356,9 @@
       .mobile-slider .owl-nav {
         margin-top: 40px;
         padding-right: 0px !important;
+        display: flex;
+        justify-content: center;
+        padding: 0;
       }
 
       .testimonial-wrap.owl-theme .owl-stage {
@@ -1386,14 +1391,16 @@
       >
         <source src="./img/home-new/bg.webm" type="video/mp4" />
       </video> -->
- <video
-  autoplay muted loop playsinline
-  style="mix-blend-mode: screen;"
-  class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto 
-         -translate-x-1/2 -translate-y-1/2 object-cover"
->
-  <source src="./img/home-new/bg.webm" type="video/webm" />
-</video>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        style="mix-blend-mode: screen"
+        class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+      >
+        <source src="./img/home-new/bg.webm" type="video/webm" />
+      </video>
       <div
         class="container flex flex-col items-center justify-center pt-[200px] md:pt-[15%] z-40 lg:pb-[116px] md:pb-[160px] relative pb-[70px]"
       >
@@ -1533,10 +1540,7 @@
     </section>
 
     <!-- DELIVERING RESULTS SECTION -->
-    <section
-      class="bg-[#020307] backdrop-blur-[20px]"
-    >
-      
+    <section class="bg-[#020307] backdrop-blur-[20px]">
       <div>
         <div class="bg-[#fff] text-center text-sm py-[8px] relative">
           <div
@@ -1614,7 +1618,8 @@
               <div
                 class="w-[177px] text-[18px] leading-[25px] whitespace-nowrap text-[#F5FAFE]"
               >
-                Years <br class="hidden lg:block" /> of AI Expertise
+                Years <br class="hidden lg:block" />
+                of AI Expertise
               </div>
             </div>
 
@@ -1750,97 +1755,159 @@
             playsinline
             class="lg:absolute min-w-full min-h-full w-auto h-auto object-cover rounded-[24px] relative"
           >
-          
             <source src="./img/home-new/bg-new.webm" type="video/webm" />
             <source src="./img/home-new/bg-new.mp4" type="video/mp4" />
           </video>
-          <div class="absolute bottom-0 pt-6 px-6 text-center overflow-hidden max-1024px:pb-6 w-full">
+          <div
+            class="absolute bottom-0 pt-6 px-6 text-center overflow-hidden max-1024px:pb-6 w-full"
+          >
+            <!-- Content -->
+            <div class="relative w-full mx-auto text-white">
+              <p
+                class="text-[16px] lg:text-[18px] leading-relaxed mb-[15px] hidden lg:block"
+              >
+                All services are delivered through our AI-supported development
+                framework to ensure faster timelines and reduced operational
+                risk.
+              </p>
 
-
-  <!-- Content -->
-  <div class="relative w-full mx-auto text-white">
-
-    <p class="text-[16px] lg:text-[18px] leading-relaxed mb-[15px] hidden lg:block">
-      All services are delivered through our AI-supported development
-      framework to ensure faster timelines and reduced operational risk.
-    </p>
-
-    <!-- Button -->
-    <a href="#"
-      class="inline-flex items-center justify-center px-10 py-[20px] rounded-full 
-             bg-gradient-to-r from-[#D4FF2A] to-[#B6F000] 
-             text-black text-[16px] md:text-[18px] font-semibold
-             shadow-[0_0_25px_rgba(180,255,0,0.6)] hover:scale-105 transition w-full">
-      Get a free project estimate
-    </a>
-
-  </div>
-
-</div>
+              <!-- Button -->
+              <a
+                href="#"
+                class="inline-flex items-center justify-center px-10 py-[20px] rounded-full bg-gradient-to-r from-[#D4FF2A] to-[#B6F000] text-black text-[16px] md:text-[18px] font-semibold shadow-[0_0_25px_rgba(180,255,0,0.6)] hover:scale-105 transition w-full"
+              >
+                Get a free project estimate
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="pt-[40px]">
-      <div class="w-full mx-auto lg:px-0 px-4 pb-3 overflow-hidden">
+      <div class="w-full mx-auto lg:px-0 px-4 pb-[20px] overflow-hidden">
         <!-- Heading -->
         <p
-          class="text-center text-white lg:text-[28px] text-[20px] font-normal mb-[30px] tracking-wide"
+          class="text-center text-white lg:text-[28px] text-[20px] font-normal lg:mb-[30px] tracking-wide mb-[40px]"
         >
           Trusted by brands you believe in across the USA
         </p>
 
         <!-- Row 1: 6 logos -->
         <div
-          class="flex items-center lg:justify-between justify-center px-4 mb-8 flex-wrap lg:flex-nowrap lg:gap-y-6 lg:gap-x-[120px] gap-[15px] logos-arquee-lg lg:whitespace-nowrap whitespace-normal"  
+          class="flex items-center lg:justify-between justify-center px-4 mb-8 flex-wrap lg:flex-nowrap lg:gap-y-6 lg:gap-x-[120px] gap-[40px] logos-arquee-lg lg:whitespace-nowrap whitespace-normal"
         >
           <!-- Pfizer -->
-          <img src="./img/home-new/pfixer.svg" alt="" class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/pfixer.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- Boeing -->
-          <img src="./img/home-new/boing.svg" alt="" class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/boing.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- Comcast -->
-          <img src="./img/home-new/comcast.svg" alt="" class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/comcast.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- CPS Energy -->
-          <img src="./img/home-new/cps.svg" alt="" class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/cps.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- MannKind Corporation -->
-          <img src="./img/home-new/mankind.svg" alt="" class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/mankind.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- Martin Insurance Group -->
-          <img src="./img/home-new/martin.svg" alt="" class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"/>          
+          <img
+            src="./img/home-new/martin.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- Duplicates-->
-           
-           <img src="./img/home-new/pfixer.svg" alt="" class="w-full h-full object-contain max-1024px:hidden"/>
+
+          <img
+            src="./img/home-new/pfixer.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:hidden"
+          />
 
           <!-- Boeing -->
-            <img src="./img/home-new/boing.svg" alt="" class="w-full h-full object-contain max-1024px:hidden"/>
+          <img
+            src="./img/home-new/boing.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:hidden"
+          />
 
           <!-- Comcast -->
-            <img src="./img/home-new/comcast.svg" alt="" class="w-full h-full object-contain max-1024px:hidden"/>
+          <img
+            src="./img/home-new/comcast.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:hidden"
+          />
 
           <!-- CPS Energy -->
-            <img src="./img/home-new/cps.svg" alt="" class="w-full h-full object-contain max-1024px:hidden"/>
+          <img
+            src="./img/home-new/cps.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:hidden"
+          />
 
           <!-- MannKind Corporation -->
-            <img src="./img/home-new/mankind.svg" alt="" class="w-full h-full object-contain max-1024px:hidden"/>
+          <img
+            src="./img/home-new/mankind.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:hidden"
+          />
 
           <!-- Martin Insurance Group -->
-            <img src="./img/home-new/martin.svg" alt="" class="w-full h-full object-contain max-1024px:hidden"/>
+          <img
+            src="./img/home-new/martin.svg"
+            alt=""
+            class="w-full h-full object-contain max-1024px:hidden"
+          />
 
-            <img src="./img/home-new/saic.svg" alt="" class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/saic.svg"
+            alt=""
+            class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- The Medicines Company -->
-            <img src="./img/home-new/medicine.svg" alt="" class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/medicine.svg"
+            alt=""
+            class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- Merck -->
-            <img src="./img/home-new/merck.svg" alt="" class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/merck.svg"
+            alt=""
+            class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
 
           <!-- Johnson & Johnson -->
-            <img src="./img/home-new/johnson.svg" alt="" class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"/>
+          <img
+            src="./img/home-new/johnson.svg"
+            alt=""
+            class="w-full h-full object-contain lg:hidden block max-1024px:w-[150px] max-1024px:h-[30px]"
+          />
         </div>
 
         <!-- Horizontal Divider -->
@@ -1852,7 +1919,7 @@
         >
           <!-- SAIC -->
           <div class="px-8">
-            <img src="./img/home-new/saic.svg" alt="" class="w-auto h-[40px]"/>
+            <img src="./img/home-new/saic.svg" alt="" class="w-auto h-[40px]" />
           </div>
 
           <!-- Vertical Divider -->
@@ -1860,7 +1927,11 @@
 
           <!-- The Medicines Company -->
           <div class="px-8">
-            <img src="./img/home-new/medicine.svg" alt=""class="w-auto h-[40px]"/>
+            <img
+              src="./img/home-new/medicine.svg"
+              alt=""
+              class="w-auto h-[40px]"
+            />
           </div>
 
           <!-- Vertical Divider -->
@@ -1868,7 +1939,11 @@
 
           <!-- Merck -->
           <div class="px-8">
-            <img src="./img/home-new/merck.svg" alt="" class="w-auto h-[40px]"/>
+            <img
+              src="./img/home-new/merck.svg"
+              alt=""
+              class="w-auto h-[40px]"
+            />
           </div>
 
           <!-- Vertical Divider -->
@@ -1876,13 +1951,17 @@
 
           <!-- Johnson & Johnson -->
           <div class="px-8">
-            <img src="./img/home-new/johnson.svg" alt="" class="w-auto h-[40px]"/>
+            <img
+              src="./img/home-new/johnson.svg"
+              alt=""
+              class="w-auto h-[40px]"
+            />
           </div>
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-[#fff] pt-3 mt-4">
-          <p class="text-center text-[#F5FAFE] text-[15px] lg:text-[16px]">
+        <div class="border-t border-[#fff] pt-[20px] mt-4">
+          <p class="lg:text-center text-[#F5FAFE] text-[15px] lg:text-[16px]">
             Our parent company, NewAgeSys, Inc., has supported organizations
             like these through long-term resource augmentation and technology
             partnerships.
@@ -1905,7 +1984,7 @@
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 px-[20px] lg:px-0">
           <!-- Card 1 -->
           <div
-            class="relative bg-[#1B275F] text-white rounded-2xl p-6 shadow-lg min-h-[374px]"
+            class="relative bg-[#1B275F] text-white rounded-2xl p-6 shadow-[6px_7px_6.8px_0px_#00000038] min-h-[374px]"
           >
             <div class="absolute right-6 top-6">
               <svg
@@ -1952,7 +2031,9 @@
             </p>
 
             <!-- Arrow -->
-            <div class="absolute bottom-4 right-4 text-4xl">
+            <div
+              class="absolute right-4 text-4xl transform rotate-90 bottom-[40px]"
+            >
               <svg
                 width="70"
                 height="49"
@@ -1974,7 +2055,7 @@
 
           <!-- Card 2 -->
           <div
-            class="relative bg-[#283A8F] text-white rounded-2xl p-6 shadow-lg min-h-[374px]"
+            class="relative bg-[#283A8F] text-white rounded-2xl p-6 shadow-[6px_7px_6.8px_0px_#00000038] min-h-[374px]"
           >
             <div class="absolute right-6 top-6">
               <svg
@@ -2021,7 +2102,9 @@
               AI-supported user flow mapping, prototyping, and UX optimization.
             </p>
 
-            <div class="absolute bottom-4 right-4 text-4xl">
+            <div
+              class="absolute right-4 text-4xl transform rotate-90 bottom-[40px]"
+            >
               <svg
                 width="70"
                 height="49"
@@ -2043,7 +2126,7 @@
 
           <!-- Card 3 -->
           <div
-            class="relative bg-[#364EBE] text-white rounded-2xl p-6 shadow-lg min-h-[374px]"
+            class="relative bg-[#364EBE] text-white rounded-2xl p-6 shadow-[6px_7px_6.8px_0px_#00000038] min-h-[374px]"
           >
             <div class="absolute right-6 top-6">
               <svg
@@ -2070,7 +2153,9 @@
               pipelines.
             </p>
 
-            <div class="absolute bottom-4 right-4 text-4xl">
+            <div
+              class="absolute right-4 text-4xl transform rotate-90 bottom-[40px]"
+            >
               <svg
                 width="70"
                 height="49"
@@ -2092,7 +2177,7 @@
 
           <!-- Card 4 -->
           <div
-            class="relative bg-[#4361EE] text-white rounded-2xl p-6 shadow-lg min-h-[374px]"
+            class="relative bg-[#4361EE] text-white rounded-2xl p-6 shadow-[6px_7px_6.8px_0px_#00000038] min-h-[374px]"
           >
             <div class="absolute right-6 top-6">
               <svg
@@ -2153,7 +2238,9 @@
     </section>
 
     <section>
-      <div class="bg-[#364EBE] text-[#fff] text-center text-sm py-[8px] relative">
+      <div
+        class="bg-[#364EBE] text-[#fff] text-center text-sm py-[8px] relative"
+      >
         <div
           class="lg:container px-[20px] mx-auto lg:px-0 flex items-center justify-center gap-4 lg:gap-[30px]"
         >
@@ -2171,9 +2258,7 @@
               />
             </svg>
           </span>
-          <p
-            class="md:text-[18px] text-[14px] font-[300] leading-normal"
-          >
+          <p class="md:text-[18px] text-[14px] font-[300] leading-normal">
             This AI-enabled framework reduces development cycles from months to
             weeks while maintaining enterprise-grade standards.
           </p>
@@ -2194,7 +2279,7 @@
         </div>
       </div>
     </section>
-<!-- Estimate CTA -->
+    <!-- Estimate CTA -->
     <section class="bg-[#1B275F] py-[80px]">
       <div class="container mx-auto px-4">
         <!-- CTA Box -->
@@ -2267,7 +2352,10 @@
             <h2
               class="text-left text-[#1B1D1E] text-[32px] sm:text-[40px] lg:text-[50px] leading-[40px] sm:leading-[48px] lg:leading-[60px] font-normal"
             >
-              <span class="text-[#4361EE] font-semibold">AI Product Engineering</span> &
+              <span class="text-[#4361EE] font-semibold"
+                >AI Product Engineering</span
+              >
+              &
               <br class="lg:block hidden" />
               Intelligent Systems
             </h2>
@@ -2349,7 +2437,7 @@
               <span class="text-[#4361EE] font-semibold">Scale for Years.</span>
             </h2>
 
-            <p class="text-[#1B1D1E] mt-[20px] text-[16px] font-[500] ">
+            <p class="text-[#1B1D1E] mt-[20px] text-[16px] font-[500]">
               We leverage modern, battle-tested technologies to build AI
               software, CRM systems, and web and mobile applications that are
               fast, secure, and scalable.
@@ -2361,14 +2449,14 @@
             >
               <button
                 id="aiTab"
-                class="px-[30px] py-[20px] rounded-full text-[16px] lg:text-[18px] bg-[#4361EE] text-white transition font-[700] "
+                class="px-[30px] py-[20px] rounded-full text-[16px] lg:text-[18px] bg-[#4361EE] text-white transition font-[700]"
               >
                 AI-Supported Development
               </button>
 
               <button
                 id="tradTab"
-                class="px-[40px] py-[20px] rounded-full text-[16px] lg:text-[18px] font-[700] text-[#1B1D1E] transition"
+                class="px-[40px] py-[20px] rounded-full text-[16px] lg:text-[18px] font-[700] text-[#1B1D1E] transition bg-[#F0F3FF]"
               >
                 Traditional Development
               </button>
@@ -2384,48 +2472,64 @@
                   <span class="lg:text-[23px] text-[18px]"
                     >Development Speed</span
                   >
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >3x Faster</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="85%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="85%"
+                  ></div>
                 </div>
               </div>
 
               <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
                   <span class="lg:text-[23px] text-[18px]">Code Quality</span>
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >92%</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="92%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="92%"
+                  ></div>
                 </div>
               </div>
 
               <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
                   <span class="lg:text-[23px] text-[18px]">Bug Detection</span>
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >78%</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="78%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="78%"
+                  ></div>
                 </div>
               </div>
 
               <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
                   <span class="lg:text-[23px] text-[18px]">Cost Reduction</span>
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >40-60%</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="60%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="60%"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -2435,57 +2539,73 @@
               id="tradContent"
               class="mt-8 space-y-6 hidden transition-all duration-300"
             >
-              
-             <div class="!mb-[60px]">
+              <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
                   <span class="lg:text-[23px] text-[18px]"
                     >Development Speed</span
                   >
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >Slower</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="55%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="55%"
+                  ></div>
                 </div>
               </div>
 
               <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
                   <span class="lg:text-[23px] text-[18px]">Code Quality</span>
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >82%</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="82%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="82%"
+                  ></div>
                 </div>
               </div>
 
               <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
-                  <span class="lg:text-[23px] text-[18px]">Bug Detection Rate</span>
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span class="lg:text-[23px] text-[18px]"
+                    >Bug Detection Rate</span
+                  >
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >48% Early</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="48%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="48%"
+                  ></div>
                 </div>
               </div>
 
               <div class="!mb-[60px]">
                 <div class="flex justify-between text-sm mb-[20px]">
                   <span class="lg:text-[23px] text-[18px]">Cost Reduction</span>
-                  <span class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700] "
+                  <span
+                    class="text-[#4361EE] lg:text-[18px] text-[16px] font-[700]"
                     >15-30%</span
                   >
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full">
-                  <div class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill" data-width="23%"></div>
+                  <div
+                    class="h-2 bg-[#4361EE] rounded-full w-0 transition-all duration-1000 ease-out progress-bar-fill"
+                    data-width="23%"
+                  ></div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -2494,49 +2614,59 @@
 
     <!-- conseltant -->
     <section class="py-[80px] bg-[#0f1a44]">
-  <div class="container mx-auto px-6">
-    <div
-      class="relative overflow-hidden rounded-[30px] flex flex-col md:flex-row "
-    >
-      <img src="./img/home-new/bg-spk.webp" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
-      <!-- Content -->
-      <div class="md:w-2/3 text-white z-10 p-[80px] max-1024px:px-[20px]">
-        <h2 class="text-[38px] lg:text-[50px] leading-[48px] lg:leading-[60px] font-[500] mb-6">
-          Speak With Our Consultant <br class="hidden lg:block"/>
-          Partners.
-        </h2>
-
-        <p class="lg:text-[23px] text-[18px] leading-[32px] text-white/90 mb-[40px]">
-          <span class="font-semibold">
-           Get expert guidance before you invest in AI software development.
-          </span>
-           Work directly with Giovanni and Bibin to validate your technology direction, align AI with business goals, and make confident decisions that reduce risk and accelerate outcomes.
-        </p>
-
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#4361EE] hover:bg-[#3e59d8] text-white text-[16px] lg:text-[18px] font-medium transition"
+      <div class="container mx-auto px-6">
+        <div
+          class="relative overflow-hidden rounded-[30px] flex flex-col md:flex-row"
         >
-          Request a Strategic Consultation
-        </a>
-      </div>
+          <img
+            src="./img/home-new/bg-spk.webp"
+            alt=""
+            class="absolute top-0 left-0 w-full h-full object-cover"
+          />
+          <!-- Content -->
+          <div class="md:w-2/3 text-white z-10 p-[80px] max-1024px:px-[20px]">
+            <h2
+              class="text-[38px] lg:text-[50px] leading-[48px] lg:leading-[60px] font-[500] mb-6"
+            >
+              Speak With Our Consultant <br class="hidden lg:block" />
+              Partners.
+            </h2>
 
-      <!-- Image -->
-      <div class="md:w-1/3 mt-0 flex justify-end relative">
-        <img
-          src="./img/home-new/speakers.webp"
-          alt="Consultant Partners"
-          class="h-full w-full object-cover"
-        />
-      </div>
+            <p
+              class="lg:text-[23px] text-[18px] leading-[32px] text-white/90 mb-[40px]"
+            >
+              <span class="font-semibold">
+                Get expert guidance before you invest in AI software
+                development.
+              </span>
+              Work directly with Giovanni and Bibin to validate your technology
+              direction, align AI with business goals, and make confident
+              decisions that reduce risk and accelerate outcomes.
+            </p>
 
-    </div>
-  </div>
-</section>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#4361EE] hover:bg-[#3e59d8] text-white text-[16px] lg:text-[18px] font-medium transition text-center"
+            >
+              Request a Strategic Consultation
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="md:w-1/3 mt-0 flex justify-end relative">
+            <img
+              src="./img/home-new/speakers.webp"
+              alt="Consultant Partners"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Recogised logos -->
     <section class="bg-grad-rfe py-[40px]">
       <div
-        class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-white"
+        class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between lg:gap-6 text-white gap-[60px]"
       >
         <!-- Left Text -->
         <p
@@ -2548,94 +2678,98 @@
         <!-- Logos -->
         <div class="flex-1 overflow-hidden">
           <div
-          class="flex items-center justify-center md:justify-end gap-[63px] md:gap-[150px] flex-1 lg:justify-between lg:pl-[120px] px-[20px] logos-arquee whitespace-nowrap"
-        >
-          <img
-            src="./img/home-new/clutch.svg"
-            alt="Clutch"
-            class="h-6 md:h-8 object-contain"
-          />
+            class="flex items-center justify-center md:justify-end gap-[63px] md:gap-[150px] flex-1 lg:justify-between lg:pl-[120px] px-[20px] logos-arquee whitespace-nowrap"
+          >
+            <img
+              src="./img/home-new/clutch.svg"
+              alt="Clutch"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/designrush.svg"
-            alt="DesignRush"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/designrush.svg"
+              alt="DesignRush"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/enterprenuer.svg"
-            alt="Entrepreneur"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/enterprenuer.svg"
+              alt="Entrepreneur"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/business.svg"
-            alt="Business of Apps"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/business.svg"
+              alt="Business of Apps"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/clutch.svg"
-            alt="Clutch"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/clutch.svg"
+              alt="Clutch"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/designrush.svg"
-            alt="DesignRush"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/designrush.svg"
+              alt="DesignRush"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/enterprenuer.svg"
-            alt="Entrepreneur"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/enterprenuer.svg"
+              alt="Entrepreneur"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/business.svg"
-            alt="Business of Apps"
-            class="h-6 md:h-8 object-contain"
-          />
-          <img
-            src="./img/home-new/clutch.svg"
-            alt="Clutch"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/business.svg"
+              alt="Business of Apps"
+              class="h-6 md:h-8 object-contain"
+            />
+            <img
+              src="./img/home-new/clutch.svg"
+              alt="Clutch"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/designrush.svg"
-            alt="DesignRush"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/designrush.svg"
+              alt="DesignRush"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/enterprenuer.svg"
-            alt="Entrepreneur"
-            class="h-6 md:h-8 object-contain"
-          />
+            <img
+              src="./img/home-new/enterprenuer.svg"
+              alt="Entrepreneur"
+              class="h-6 md:h-8 object-contain"
+            />
 
-          <img
-            src="./img/home-new/business.svg"
-            alt="Business of Apps"
-            class="h-6 md:h-8 object-contain"
-          />
-        </div>
+            <img
+              src="./img/home-new/business.svg"
+              alt="Business of Apps"
+              class="h-6 md:h-8 object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
     <!-- why choose us -->
-    <section class="relative w-full min-h-screen flex items-center bg-choose-us">
+    <section
+      class="relative w-full min-h-screen flex items-center bg-choose-us"
+    >
       <!-- Background Image -->
       <div class="absolute inset-0">
-       <video
-  autoplay muted loop playsinline
-  style="mix-blend-mode: screen;"
-  class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto 
-         -translate-x-1/2 -translate-y-1/2 object-cover lg:block hidden"
->
-  <source src="./img/home-new/choose.webm" type="video/webm" />
-</video>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          style="mix-blend-mode: screen"
+          class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover lg:block hidden"
+        >
+          <source src="./img/home-new/choose.webm" type="video/webm" />
+        </video>
         <!-- Overlay -->
         <div
           class="absolute inset-0 bg-gradient-to-r from-[#0B0F2F]/90 via-[#0B0F2F]/70 to-transparent w-full h-full top-0 left-0"
@@ -2643,7 +2777,9 @@
       </div>
 
       <!-- Content -->
-      <div class="relative z-10 container mx-auto px-4 py-[80px] w-full text-white">
+      <div
+        class="relative z-10 container mx-auto px-4 py-[80px] w-full text-white"
+      >
         <!-- Heading -->
         <h2
           class="text-[34px] md:text-[40px] lg:text-[50px] font-semibold leading-tight"
@@ -2664,7 +2800,7 @@
             class="flex items-start gap-4 p-5 rounded-xl backdrop-blur-md bg-white/10 border border-white/20"
           >
             <span class="w-3 h-3 mt-2 rounded-full bg-orange-400"></span>
-            <div>
+            <div class="flex-1">
               <h3 class="text-lg md:text-xl font-semibold">
                 30+ Years of Proven Expertise
               </h3>
@@ -2680,7 +2816,7 @@
             class="flex items-start gap-4 p-5 rounded-xl backdrop-blur-md bg-white/10 border border-white/20"
           >
             <span class="w-3 h-3 mt-2 rounded-full bg-green-400"></span>
-            <div>
+            <div class="flex-1">
               <h3 class="text-lg md:text-xl font-semibold">
                 Clutch 5-Star Rated U.S. Company
               </h3>
@@ -2695,7 +2831,7 @@
             class="flex items-start gap-4 p-5 rounded-xl backdrop-blur-md bg-white/10 border border-white/20"
           >
             <span class="w-3 h-3 mt-2 rounded-full bg-yellow-300"></span>
-            <div>
+            <div class="flex-1">
               <h3 class="text-lg md:text-xl font-semibold">
                 New Jersey-Based, Nationwide Delivery
               </h3>
@@ -2711,7 +2847,7 @@
             class="flex items-start gap-4 p-5 rounded-xl backdrop-blur-md bg-white/10 border border-white/20"
           >
             <span class="w-3 h-3 mt-2 rounded-full bg-red-500"></span>
-            <div>
+            <div class="flex-1">
               <h3 class="text-lg md:text-xl font-semibold">
                 AI-First Development Approach
               </h3>
@@ -2727,7 +2863,7 @@
             class="flex items-start gap-4 p-5 rounded-xl backdrop-blur-md bg-white/10 border border-white/20"
           >
             <span class="w-3 h-3 mt-2 rounded-full bg-blue-400"></span>
-            <div>
+            <div class="flex-1">
               <h3 class="text-lg md:text-xl font-semibold">
                 Trusted by Startups to Fortune 500s
               </h3>
@@ -2743,7 +2879,7 @@
             class="flex items-start gap-4 p-5 rounded-xl backdrop-blur-md bg-white/10 border border-white/20"
           >
             <span class="w-3 h-3 mt-2 rounded-full bg-gray-300"></span>
-            <div>
+            <div class="flex-1">
               <h3 class="text-lg md:text-xl font-semibold">
                 Full Ownership & Zero Recurring Dependency
               </h3>
@@ -2759,13 +2895,13 @@
     <!-- real results -->
 
     <section class="bg-[#f5fafe] pt-[80px]">
-      <div class="text-center mb-[40px] max-768px:px-[50px]">
+      <div class="lg:text-center mb-[40px] max-768px:px-[20px]">
         <h2
           class="text-[34px] md:text-[40px] lg:text-[50px] font-[500] text-gray-900"
         >
           Real Results
         </h2>
-        <p class="lg:text-[23px] text-[20px] text-[#1B1D1E]">
+        <p class="lg:text-[23px] text-[18px] text-[#1B1D1E]">
           How We Helped Top US Brands in Build Winning Mobile Apps
         </p>
       </div>
@@ -2813,7 +2949,7 @@
         </button>
         <div class="owl-carousel owl-theme real-results-carousel">
           <!-- Slide 1 -->
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <!-- Top visual -->
               <div class="relative h-[360px] sm:h-[420px]">
@@ -2826,7 +2962,7 @@
                 <!-- Category pill -->
                 <div class="absolute left-6 bottom-6">
                   <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
                   >
                     Healthcare
                   </span>
@@ -2874,7 +3010,7 @@
           </article>
           <!-- Slide 2 -->
 
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <!-- Top visual -->
               <div class="relative h-[360px] sm:h-[420px]">
@@ -2887,7 +3023,7 @@
                 <!-- Category pill -->
                 <div class="absolute left-6 bottom-6">
                   <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
                   >
                     Real Estate
                   </span>
@@ -2935,7 +3071,7 @@
           </article>
 
           <!-- Slide 3 -->
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <div class="relative h-[360px] sm:h-[420px]">
                 <img
@@ -2945,7 +3081,7 @@
                 />
                 <div class="absolute left-6 bottom-6">
                   <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
                   >
                     On-Demand Services
                   </span>
@@ -2992,12 +3128,12 @@
           </article>
 
           <!-- slider 4 -->
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <!-- Top visual -->
               <div class="relative h-[360px] sm:h-[420px]">
                 <img
-                  src="./img/custom-mobile-app/rr1.webp"
+                  src="./img/home-new/whip-sl.webp"
                   alt=""
                   class="w-full h-full object-cover"
                 />
@@ -3005,9 +3141,9 @@
                 <!-- Category pill -->
                 <div class="absolute left-6 bottom-6">
                   <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
                   >
-                    Healthcare
+                    Automobile (AI Car Selling Platform)
                   </span>
                 </div>
               </div>
@@ -3019,21 +3155,21 @@
                     <div
                       class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
                     >
-                      60%
+                      70%
                     </div>
                     <div class="mt-2 text-sm sm:text-[12px] text-white">
-                      reduction in operational workload
+                      faster vehicle listing process
                     </div>
                   </div>
 
                   <div class="border-r border-[#fff] pr-[2px]">
                     <div
-                      class="text-[28px] sm:text-[32px] font-bold text-[#999999]"
+                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
                     >
-                      HIPAA
+                      35%
                     </div>
                     <div class="mt-2 text-sm sm:text-[12px] text-white">
-                      ready secure architecture
+                      higher buyer engagement
                     </div>
                   </div>
 
@@ -3041,24 +3177,22 @@
                     <div
                       class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
                     >
-                      35%
+                      25%
                     </div>
                     <div class="mt-2 text-sm sm:text-[12px] text-white">
-                      faster patient communication workflows
+                      improvement in conversion rates
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </article>
-
-         
         </div>
       </div>
       <div class="relative mx-auto container px-4 pb-[80px] lg:hidden block">
         <div class="real-results-carousel--mobile flex flex-col gap-[20px]">
           <!-- Slide 1 -->
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <!-- Top visual -->
               <div class="relative h-[360px] sm:h-[420px]">
@@ -3071,7 +3205,7 @@
                 <!-- Category pill -->
                 <div class="absolute left-6 bottom-6">
                   <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
                   >
                     Healthcare
                   </span>
@@ -3119,7 +3253,7 @@
           </article>
 
           <!-- Slide 2 -->
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <div class="relative h-[360px] sm:h-[420px]">
                 <img
@@ -3177,7 +3311,7 @@
           </article>
 
           <!-- Slide 3 -->
-          <article class="px-2 flex w-full">
+          <article class="lg:px-2 flex w-full">
             <div class="w-full rounded-[28px] bg-black overflow-hidden">
               <div class="relative h-[360px] sm:h-[420px]">
                 <img
@@ -3187,7 +3321,7 @@
                 />
                 <div class="absolute left-6 bottom-6">
                   <span
-                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/15"
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
                   >
                     On-Demand Services
                   </span>
@@ -3232,6 +3366,133 @@
               </div>
             </div>
           </article>
+
+          <!-- slider 4 -->
+          <article class="lg:px-2 flex w-full">
+            <div class="w-full rounded-[28px] bg-black overflow-hidden">
+              <!-- Top visual -->
+              <div class="relative h-[360px] sm:h-[420px]">
+                <img
+                  src="./img/home-new/whip-sl.webp"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- Category pill -->
+                <div class="absolute left-6 bottom-6">
+                  <span
+                    class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-sm font-[400] text-white backdrop-blur-md ring-1 ring-white/15"
+                  >
+                    Automobile (AI Car Selling Platform)
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom stats -->
+              <div class="px-7 py-8 sm:px-10 sm:py-10">
+                <div class="grid grid-cols-3 gap-[10px] sm:gap-[10px]">
+                  <div class="border-r border-[#fff] pr-[2px]">
+                    <div
+                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
+                    >
+                      70%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-[12px] text-white">
+                      faster vehicle listing process
+                    </div>
+                  </div>
+
+                  <div class="border-r border-[#fff] pr-[2px]">
+                    <div
+                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
+                    >
+                      35%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-[12px] text-white">
+                      higher buyer engagement
+                    </div>
+                  </div>
+
+                  <div>
+                    <div
+                      class="text-[28px] sm:text-[40px] font-bold text-[#999999]"
+                    >
+                      25%
+                    </div>
+                    <div class="mt-2 text-sm sm:text-[12px] text-white">
+                      improvement in conversion rates
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Got prob -->
+    <section class="w-full mx-auto px-4 bg-[#F5FAFE] pb-[80px]">
+      <div class="container p-0 md:p-5">
+        <!-- bg-[#647CEE] lg:bg-[linear-gradient(89.96deg,#4361EE_31.02%,#445bff_51.12%,#0D1330_99.96%)] -->
+        <div
+          class="relative flex flex-col md:flex-row lg:items-center justify-between text-white lg:rounded-[80px] rounded-[32px] shadow-lg p-4 md:p-6 overflow-hidden"
+        >
+          <!-- Left text -->
+          <div class="text-left relative z-[9]">
+            <h2
+              class="text-[22px] md:text-[26px] font-semibold max-1024px:pb-[40px]"
+            >
+              Got Problems?
+              <span
+                class="text-[#dbeafe] font-normal max-1024px:text-[18px] block lg:inline-flex"
+                >Let Us Help You With the Right Solution</span
+              >
+            </h2>
+          </div>
+
+          <!-- Button -->
+          <button
+            id="openCalendlyModal"
+            class="bg-[#FF8214] group text-white text-[18px] md:text-md font-medium py-3 px-5 rounded-full flex items-center justify-start gap-2 shadow-md w-fit overflow-hidden cursor-pointer relative z-[9]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 5.5C2 4.12 3.12 3 4.5 3h3a1 1 0 011 1v3a1 1 0 01-.293.707l-1.414 1.414a16.001 16.001 0 007.586 7.586l1.414-1.414A1 1 0 0117 15.5h3a1 1 0 011 1v3c0 1.38-1.12 2.5-2.5 2.5A18.5 18.5 0 012 5.5z"
+              ></path>
+            </svg>
+            <span class="hidden md:inline">Schedule a Free Call Today</span>
+            <span class="inline md:hidden">Schedule a Call</span>
+          </button>
+
+          <span
+            class="pointer-events-none absolute w-full left-1/2 transform -translate-x-1/2 hidden lg:block bottom-0 top-0"
+          >
+            <img
+              src="./img/gp-bg.webp"
+              alt=""
+              loading="lazy"
+              class="h-full w-full"
+            />
+          </span>
+          <span
+            class="pointer-events-none absolute w-full left-1/2 transform -translate-x-1/2 lg:hidden block bottom-0 top-0"
+          >
+            <img
+              src="./img/gp-bg-mob.webp"
+              alt=""
+              loading="lazy"
+              class="h-full w-full"
+            />
+          </span>
         </div>
       </div>
     </section>
@@ -3252,7 +3513,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-orange-400"></span>
-            Healthcare
+            <span class="flex-1"> Healthcare</span>
           </div>
 
           <!-- Normal -->
@@ -3260,7 +3521,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full border border-[#65686C] text-white/80 bg-transparent"
           >
             <span class="w-3 h-3 rounded-full bg-green-400"></span>
-            Fintech
+            <span>Fintech</span>
           </div>
 
           <!-- Active -->
@@ -3268,7 +3529,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-orange-200"></span>
-            Real Estate
+            <span class="flex-1">Real Estate</span>
           </div>
 
           <!-- Normal -->
@@ -3276,7 +3537,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full border border-[#65686C] text-white/80"
           >
             <span class="w-3 h-3 rounded-full bg-red-500"></span>
-            EdTech
+            <span>EdTech</span>
           </div>
 
           <!-- Active -->
@@ -3284,7 +3545,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-blue-500"></span>
-            Automotive
+            <span class="flex-1">Automotive</span>
           </div>
 
           <!-- Normal -->
@@ -3292,7 +3553,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full border border-[#65686C] text-white/80"
           >
             <span class="w-3 h-3 rounded-full bg-[#FAECE6]"></span>
-            E-commerce
+            <span>E-commerce</span>
           </div>
 
           <!-- Normal -->
@@ -3300,7 +3561,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full border border-[#65686C] text-white/80"
           >
             <span class="w-3 h-3 rounded-full bg-[#958983]"></span>
-            Driving School
+            <span>Driving School</span>
           </div>
 
           <!-- Active -->
@@ -3308,7 +3569,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-[#4361EE]"></span>
-            Social & Dating Apps
+            <span class="flex-1">Social & Dating Apps</span>
           </div>
         </div>
       </div>
@@ -3358,10 +3619,10 @@
       </div>
     </section>
     <!-- industry leaders -->
-    <section class="bg-[#0D0D0D] py-8 md:py-[80px] px-4">
-      <div class="container mx-auto text-center lg:pb-[80px]">
+    <section class="bg-[#0D0D0D] py-[80px] px-4">
+      <div class="container lg:px-4 px-0 mx-auto lg:text-center lg:pb-[80px]">
         <h2
-          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[80px] mb-[50px] font-[400]"
+          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[80px] lg:mb-[50px] font-[400] mb-[20px]"
         >
           Here’s What Industry Leaders Talk About <br class="hidden lg:block" />
           The Results They Achieved With Us
@@ -3392,10 +3653,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO – WHIP-FLIP
                   </p>
                 </div>
@@ -3430,10 +3695,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     Larry Seibel
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     Founder - CAR-UP App
                   </p>
                 </div>
@@ -3468,11 +3737,15 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     LAZARO REYES
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
-                   Founder – Town Connect Network
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
+                    Founder – Town Connect Network
                   </p>
                 </div>
               </a>
@@ -3501,10 +3774,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     CHRIS ORORKE
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     GUARANTEED TIP SHEET
                   </p>
                 </div>
@@ -3536,10 +3813,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     IMAN KHAWAJA
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     Owner - ISRA
                   </p>
                 </div>
@@ -3573,10 +3854,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     DAVID CHABUKASHVILI
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     Founder - LCard App
                   </p>
                 </div>
@@ -3608,10 +3893,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     JAMES VACCARINO
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO - Bungee App
                   </p>
                 </div>
@@ -3619,8 +3908,42 @@
             </div>
           </div>
         </div>
+
+        <div class="lg:text-center xl:-mt-[20rem] lg::-mt-[20rem]">
+          <p
+            class="text-[#fff] opacity-[.5] mb-8 text-[18px] max-w-2xl mx-auto font-[500]"
+          >
+            Learn why entrepreneurs and businesses trust NewAgeSys for the best
+            solutions that make their customer journeys refined, reliable, and
+            efficient.
+          </p>
+          <a
+            href="https://newagesysit.com/portfolio/"
+            target="_blank"
+            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[16px] inline-flex gap-[15px] items-center"
+          >
+            Read Success Stories
+            <span>
+              <svg
+                width="7"
+                height="12"
+                viewBox="0 0 7 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.09375 10.2919L5.39603 5.98972L1.09375 1.6875"
+                  stroke="#212121"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </div>
         <!-----mobile section--->
-        <div class="lg:hidden">
+        <div class="lg:hidden mt-[40px]">
           <div
             class="mobile-slider owl-carousel owl-theme relative z-10 max-w-[1440px] mx-auto"
           >
@@ -3647,10 +3970,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     ROGER J CLAPPE
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO, WhipFlip
                   </p>
                 </div>
@@ -3660,15 +3987,16 @@
             <div class="relative group cursor-pointer">
               <a
                 class="popup-youtube"
-                href="https://www.youtube.com/watch?v=vjy2p5kXaxI"
+                href="https://youtu.be/aNHrzcMqLmI?si=gW4YVriTMLJBUnLJ"
               >
                 <img
-                  src="./img/client-img-2.webp"
-                  alt="Larry Seibel"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                  src="./img/lazaro1.jpg"
+                  alt="Chris Ordway"
+                  class="w-full h-full object-cover rounded-[17px] transition-opacity duration-300 group-hover:opacity-80"
                 />
+
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000b0_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -3680,11 +4008,15 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
-                    Larry Seibel
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
+                    LAZARO REYES
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
-                    CEO, Car-Upp
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
+                    Founder – Town Connect Network
                   </p>
                 </div>
               </a>
@@ -3713,10 +4045,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     Rob Salerno
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO, CliquePrize App
                   </p>
                 </div>
@@ -3746,10 +4082,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     Chris O'Rorke
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO, Guaranteed Tip Sheet
                   </p>
                 </div>
@@ -3779,10 +4119,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     Iman Khawaja
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO, ISRA App
                   </p>
                 </div>
@@ -3812,10 +4156,14 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
                     David Chabukashvili
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
                     CEO, Lcard App
                   </p>
                 </div>
@@ -3828,12 +4176,12 @@
                 href="https://www.youtube.com/watch?v=slRQbxC1UoI"
               >
                 <img
-                  src="./img/client-img-7.webp"
-                  alt="Rob Evans"
-                  class="w-full h-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-80"
+                  src="./img/james.webp"
+                  alt="Larry Gebel"
+                  class="w-full h-full object-cover rounded-[17px] transition-opacity duration-300 group-hover:opacity-80"
                 />
                 <div
-                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000_91.15%)]"
+                  class="absolute inset-0 rounded-lg flex flex-col justify-end p-3 text-white bg-[linear-gradient(180deg,rgba(0,0,0,0)_44.81%,#000000b0_91.15%)]"
                 >
                   <div
                     class="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -3845,68 +4193,40 @@
                       class="hover:scale-110 transition-transform duration-300 w-[60px] h-[60px]"
                     />
                   </div>
-                  <p class="text-[18px] font-[500] truncate mb-0.5 uppercase">
-                    Rob Evans
+                  <p
+                    class="text-[18px] font-[500] truncate mb-0.5 uppercase text-center"
+                  >
+                    JAMES VACCARINO
                   </p>
-                  <p class="text-[12px] text-white opacity-[0.5] truncate">
-                    CEO, Donut Man app
+                  <p
+                    class="text-[12px] text-white opacity-[0.5] truncate text-center"
+                  >
+                    CEO - Bungee App
                   </p>
                 </div>
               </a>
             </div>
           </div>
         </div>
-
-        <div class="text-center xl:-mt-[20rem] lg::-mt-[20rem]">
-          <p
-            class="text-[#fff] opacity-[.5] mb-8 text-[18px] max-w-2xl mx-auto font-[500]"
-          >
-            Learn why entrepreneurs and businesses trust NewAgeSys for the best solutions that make their customer journeys refined, reliable, and efficient. 
-          </p>
-          <a
-            href="https://newagesysit.com/portfolio/"
-            target="_blank"
-            class="px-8 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 text-[16px] inline-flex gap-[15px] items-center"
-          >
-            Read Success Stories
-            <span>
-              <svg
-                width="7"
-                height="12"
-                viewBox="0 0 7 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.09375 10.2919L5.39603 5.98972L1.09375 1.6875"
-                  stroke="#212121"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </span>
-          </a>
-        </div>
       </div>
     </section>
-    
+
     <!-- enterprices high growth -->
     <section
-      class="relative overflow-hidden bg-[#000] py-[50px] lg:py-[100px] xl:hidden block"
+      class="relative overflow-hidden bg-[#000] py-[80px] lg:py-[100px] xl:hidden block"
     >
       <div class="container">
         <!-- Built for Enterprises & High-Growth Startups -->
-          <h2
+        <h2
           class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[40px] mb-[20px] font-[400]"
         >
-         Built for Enterprises & High-Growth Startups 
+          Built for Enterprises & High-Growth Startups
         </h2>
         <div
-          class="grid md:grid-cols-2 grid-col-1 gap-10 md:p-[25px] p-[15px] border border-[#2A2D30]"
+          class="grid md:grid-cols-2 grid-col-1 gap-10 p-[15px] mt-[80px] lg:mt-0"
         >
-          <div class="relative">
-            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
+          <div class="relative border border-[#2A2D30] p-[40px]">
+            <h2 class="mb-6 text-[20px] font-extrabold text-white">
               For Enterprises
             </h2>
             <ul class="divide-y divide-white/5">
@@ -3936,8 +4256,8 @@
               </li>
             </ul>
           </div>
-          <div class="relative">
-            <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl">
+          <div class="relative border border-[#2A2D30] p-[40px]">
+            <h2 class="mb-6 text-[20px] font-extrabold text-white">
               For Startups
             </h2>
             <ul class="divide-y divide-white/5">
@@ -3974,11 +4294,11 @@
     <section
       class="relative overflow-hidden bg-[#000] xl:pt-[100px] lg:pb-[0px] py-[50px] xl:block hidden"
     >
-    <h2
-          class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[40px] mb-[20px] font-[400] text-center"
-        >
-         Built for Enterprises & High-Growth Startups 
-        </h2>
+      <h2
+        class="text-[34px] md:text-[40px] lg:text-[50px] font-[400] text-white lg:mb-[40px] mb-[20px] font-[400] text-center"
+      >
+        Built for Enterprises & High-Growth Startups
+      </h2>
       <!-- faint arcs (left & right) -->
       <div class="pointer-events-none absolute inset-0 -z-10">
         <!-- left arcs -->
@@ -4174,7 +4494,7 @@
       <div class="container mx-auto px-4">
         <div class="sec-head">
           <h2
-            class="sechd text-center text-white font-[400] mt-0 md:mt-[30px] md:mb-[40px] mb-2 text-[38px] leading-[56px] xl:text-[50px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
+            class="sechd lg:text-center text-white font-[400] mt-0 md:mt-[30px] md:mb-[40px] mb-2 text-[38px] leading-[56px] xl:text-[50px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
           >
             Powered By Trusted Cloud Providers
           </h2>
@@ -4255,24 +4575,31 @@
     <section class="partners bg-[#000] pb-[80px]">
       <div class="container mx-auto px-4">
         <h2
-          class="sechd text-center text-white font-normal mt-0 md:mt-[30px] md:mb-[40px] mb-2 text-[38px] leading-[56px] xl:text-[52px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
+          class="sechd lg:text-center text-white font-normal mt-0 md:mt-[30px] md:mb-[40px] mb-2 text-[38px] leading-[56px] xl:text-[52px] xl:leading-[56px] max-[1550px]:text-[38px] max-[1550px]:leading-[48px] max-992px:text-[30px] max-992px:leading-[48px]"
         >
           <span class="block">Our Al Partnerships</span>
         </h2>
 
         <div>
           <!-- row g-4 -> responsive grid with spacing -->
-          <div class="row g-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            class="row g-4 grid grid-cols-1 md:grid-cols-2 gap-4 max-1024px:mt-[60px]"
+          >
             <div>
               <div
-                class="parter-card rounded-[12px] p-5 flex gap-[15px] text-white flex-col md:flex-row h-full bg-[#FFFFFF0D]"
+                class="parter-card rounded-[12px] lg:p-5 flex gap-[15px] text-white flex-col md:flex-row h-full bg-[#FFFFFF0D] p-0"
               >
                 <div class="icon-box sagemaker-icon">
                   <picture>
                     <img
                       src="./img/sagemaker.svg"
                       alt="AWS Sagemaker"
-                      class="block"
+                      class="lg:block hidden"
+                    />
+                    <img
+                      src="./img/sagemaker-mobile.svg"
+                      alt="AWS Sagemaker"
+                      class="lg:hidden block w-full"
                     />
                   </picture>
                 </div>
@@ -4296,14 +4623,19 @@
 
             <div>
               <div
-                class="bg-[#FFFFFF0D] parter-card h-full rounded-[12px] p-5 flex gap-[15px] text-white flex-col md:flex-row"
+                class="bg-[#FFFFFF0D] parter-card h-full rounded-[12px] lg:p-5 p-0 flex gap-[15px] text-white flex-col md:flex-row max-1024px:mt-[25px]"
               >
                 <div class="icon-box bedrock-icon">
                   <picture>
                     <img
                       src="./img/backrock.svg"
                       alt="AWS Bedrock"
-                      class="block"
+                      class="lg:block hidden"
+                    />
+                    <img
+                      src="./img/bedrock-mobile.svg"
+                      alt="AWS Bedrock"
+                      class="lg:hidden block w-full"
                     />
                   </picture>
                 </div>
@@ -4341,7 +4673,7 @@
           fetchpriority="low"
         />
       </div>
-      <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="max-w-6xl mx-auto px-4 lg:text-center">
         <!-- Heading -->
         <h2
           class="text-[34px] md:text-[40px] lg:text-[50px] font-[500] text-white"
@@ -4350,13 +4682,13 @@
         </h2>
 
         <!-- Pills -->
-        <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <div class="mt-10 flex flex-wrap lg:justify-center gap-4">
           <!-- Active -->
           <div
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-orange-400"></span>
-            Cloud-native architecture
+            <span class="flex-1">Cloud-native architecture</span>
           </div>
 
           <!-- Normal -->
@@ -4372,7 +4704,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-orange-200"></span>
-            DevSecOps practices
+            <span class="flex-1">DevSecOps practices</span>
           </div>
 
           <!-- Normal -->
@@ -4380,7 +4712,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full border border-[#65686C] text-white/80 bg-[#020307]"
           >
             <span class="w-3 h-3 rounded-full bg-red-500"></span>
-            Compliance-driven frameworks
+            <span class="flex-1">Compliance-driven frameworks</span>
           </div>
 
           <!-- Active -->
@@ -4388,7 +4720,7 @@
             class="flex items-center gap-3 px-[30px] py-[20px] rounded-full bg-gradient-to-r from-[#04050A] to-[#4A5FD4] text-white border border-[#65686C]"
           >
             <span class="w-3 h-3 rounded-full bg-blue-500"></span>
-            NDA-protected development
+            <span class="flex-1">NDA-protected development</span>
           </div>
         </div>
       </div>
@@ -5570,13 +5902,13 @@
       >
         <!-- LEFT GOOGLE CARD -->
         <div
-          class="bg-[#090D21] rounded-2xl flex flex-col items-center justify-center p-10 text-center w-[360px]"
+          class="bg-[#090D21] rounded-2xl flex flex-col items-center justify-center lg:p-10 text-center w-[360px] p-[70px]"
         >
           <div>
             <img
               src="./img/google-partner.svg"
               alt="Google Partner"
-              class="h-auto"
+              class="h-auto w-full object-contain"
             />
           </div>
         </div>
@@ -5602,17 +5934,21 @@
                 <span
                   class="absolute top-0 left-0 w-full h-[1px] rounded-full bg-gradient-to-r from-white to-[rgba(9,13,33,0)]"
                 ></span>
-                <div>
-                  <img
-                    src="./img/iman.webp"
-                    class="w-12 h-12 rounded-[10px]"
-                  />
-                </div>
+                <div class="flex items-center gap-4">
+                  <div>
+                    <img
+                      src="./img/iman.webp"
+                      class="w-12 h-12 rounded-[10px]"
+                    />
+                  </div>
 
-                <div class="flex-1">
-                  <h4 class="text-white font-semibold text-sm">IMAN KHAWAJA</h4>
+                  <div class="flex-1">
+                    <h4 class="text-white font-semibold text-sm">
+                      IMAN KHAWAJA
+                    </h4>
 
-                  <p class="text-gray-300 text-sm">Owner - ISRA</p>
+                    <p class="text-gray-300 text-sm">Owner - ISRA</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5635,49 +5971,53 @@
                 <span
                   class="absolute top-0 left-0 w-full h-[1px] rounded-full bg-gradient-to-r from-white to-[rgba(9,13,33,0)]"
                 ></span>
-                <div>
-                  <img
-                    src="https://i.pravatar.cc/60"
-                    class="w-12 h-12 rounded-[10px]"
-                  />
-                </div>
+                <div class="flex items-center gap-4">
+                  <div>
+                    <img
+                      src="https://i.pravatar.cc/60"
+                      class="w-12 h-12 rounded-[10px]"
+                    />
+                  </div>
 
-                <div class="flex-1">
-                  <h4 class="text-white font-semibold text-sm">JOHN SMITH</h4>
+                  <div class="flex-1">
+                    <h4 class="text-white font-semibold text-sm">JOHN SMITH</h4>
 
-                  <p class="text-gray-300 text-sm">CEO - Startup</p>
+                    <p class="text-gray-300 text-sm">CEO - Startup</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- NAVIGATION BUTTONS -->
-      <div class="flex justify-center gap-6 mt-0 lg:mt-[-50px] z-[9] relative">
-        <button
-          id="customPrev-tl"
-          class="w-12 h-12 rounded-full bg-[#65686C] flex items-center justify-center"
-        >
-          <!-- SVG -->
-          <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
-            <path
-              d="M8.57661 0L9.81715 1.2546L2.44448 8.93645L3.23073 9.75571L9.77698 16.576L8.5552 17.8494C6.74438 15.9636 1.68944 10.6973 0 8.93645C1.25481 7.62809 0.0312233 8.90326 8.57661 0Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+          <div
+            class="flex justify-center gap-6 mt-0 lg:mt-[-50px] z-[9] relative"
+          >
+            <button
+              id="customPrev-tl"
+              class="w-12 h-12 rounded-full bg-[#65686C] flex items-center justify-center"
+            >
+              <!-- SVG -->
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path
+                  d="M8.57661 0L9.81715 1.2546L2.44448 8.93645L3.23073 9.75571L9.77698 16.576L8.5552 17.8494C6.74438 15.9636 1.68944 10.6973 0 8.93645C1.25481 7.62809 0.0312233 8.90326 8.57661 0Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
 
-        <button
-          id="customNext-tl"
-          class="w-12 h-12 rounded-full bg-[#283A8F] flex items-center justify-center"
-        >
-          <!-- SVG -->
-          <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
-            <path
-              d="M1.24054 0L0 1.2546L7.37267 8.93645L6.58642 9.75571L0.0401731 16.576L1.26195 17.8494C3.07277 15.9636 8.12771 10.6973 9.81715 8.93645C8.56234 7.62809 9.78593 8.90326 1.24054 0Z"
-              fill="white"
-            />
-          </svg>
-        </button>
-      </div>
+            <button
+              id="customNext-tl"
+              class="w-12 h-12 rounded-full bg-[#283A8F] flex items-center justify-center"
+            >
+              <!-- SVG -->
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path
+                  d="M1.24054 0L0 1.2546L7.37267 8.93645L6.58642 9.75571L0.0401731 16.576L1.26195 17.8494C3.07277 15.9636 8.12771 10.6973 9.81715 8.93645C8.56234 7.62809 9.78593 8.90326 1.24054 0Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
 
         <!-- RIGHT CONTACT CARD -->
@@ -5686,7 +6026,7 @@
             <img src="./img/home-new/logo.svg" alt="NewAgeSys IT" />
           </h3>
 
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          <p class="text-gray-300 text-sm leading-relaxed mb-4 no-underline">
             4390 US-1, Suite 110 <br />
             Princeton, NJ 08540 <br />
             1-609-331-9194 <br />
@@ -5713,10 +6053,7 @@
           </div>
         </div>
       </div>
-
-      
     </section>
-    
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -6102,13 +6439,13 @@
       const tradContent = document.getElementById("tradContent");
 
       function animateProgressBars(container) {
-        const bars = container.querySelectorAll('.progress-bar-fill');
-        bars.forEach(bar => {
-          bar.style.width = '0%';
+        const bars = container.querySelectorAll(".progress-bar-fill");
+        bars.forEach((bar) => {
+          bar.style.width = "0%";
         });
         setTimeout(() => {
-          bars.forEach(bar => {
-            bar.style.width = bar.getAttribute('data-width');
+          bars.forEach((bar) => {
+            bar.style.width = bar.getAttribute("data-width");
           });
         }, 50);
       }
@@ -6121,8 +6458,9 @@
       aiTab.addEventListener("click", () => {
         aiTab.classList.add("bg-[#4361EE]", "text-white");
         aiTab.classList.remove("text-[#1B1D1E]");
-
+        aiTab.classList.remove("bg-[#F0F3FF]", "text-[#1B1D1E]");
         tradTab.classList.remove("bg-[#4361EE]", "text-white");
+        tradTab.classList.add("bg-[#F0F3FF]", "text-[#1B1D1E]");
         tradTab.classList.add("text-[#1B1D1E]");
 
         aiContent.classList.remove("hidden");
@@ -6133,8 +6471,9 @@
       tradTab.addEventListener("click", () => {
         tradTab.classList.add("bg-[#4361EE]", "text-white");
         tradTab.classList.remove("text-[#1B1D1E]");
-
+        tradTab.classList.remove("bg-[#F0F3FF]", "text-[#1B1D1E]");
         aiTab.classList.remove("bg-[#4361EE]", "text-white");
+        aiTab.classList.add("bg-[#F0F3FF]", "text-[#1B1D1E]");
         aiTab.classList.add("text-[#1B1D1E]");
 
         tradContent.classList.remove("hidden");
@@ -6278,6 +6617,58 @@
         $("#customNext-tl")
           .removeClass("nav-disabled bg-[#65686C]")
           .addClass("bg-[#283A8F] text-white");
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        const $carousel = $(".owl-carousel");
+        if ($carousel.length > 0) {
+          try {
+            $carousel.owlCarousel({
+              loop: true,
+              margin: 10,
+              nav: true,
+              dots: true,
+              autoplay: false,
+              items: 1,
+              responsive: {
+                0: {
+                  items: 1,
+                },
+                768: {
+                  items: 2,
+                },
+                1024: {
+                  items: 2,
+                },
+              },
+              // navText: [
+              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>',
+              //   '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>',
+              // ],
+              onInitialized: function (event) {
+                console.log(
+                  "Owl Carousel initialized successfully with",
+                  event.item.count,
+                  "items",
+                );
+              },
+              onChanged: function (event) {
+                console.log("Slide changed to:", event.item.index);
+              },
+            });
+
+            console.log("Owl Carousel initialization attempted");
+          } catch (error) {
+            console.error("Error initializing Owl Carousel:", error);
+          }
+        } else {
+          console.error("No .owl-carousel elements found in the DOM");
+          console.log(
+            'Available elements with "owl" class:',
+            $('[class*="owl"]').length,
+          );
+        }
       });
     </script>
   </body>
