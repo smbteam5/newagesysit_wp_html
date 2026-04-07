@@ -1766,11 +1766,16 @@
             webkit-playsinline
             x5-playsinline
             preload="auto"
-            class="xl:absolute min-w-full min-h-full w-auto h-auto object-cover rounded-[24px] relative"
+            class="xl:absolute min-w-full min-h-full w-auto h-auto object-cover rounded-[24px] relative ios-hidden"
           >
             <source src="./img/home-new/bg-new.webm" type="video/webm" />
             <source src="./img/output_safari.mov" type="video/quicktime" />
           </video>
+          <img
+            src="./img/home-new/choose.png"
+            alt="background"
+            class="w-full h-full object-cover rounded-[24px] ios-visible hidden"
+          />
           <div
             class="absolute bottom-0 pt-6 px-6 text-center overflow-hidden xl:pb-0 pb-6 w-full"
           >
@@ -6138,6 +6143,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/jquery.magnific-popup.js"></script>
     <script>
+      function isIOS() {
+        return (
+          /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+        );
+      }
+
+      if (isIOS()) {
+        document
+          .querySelectorAll(".ios-visible")
+          .forEach((el) => (el.style.display = "block"));
+        document
+          .querySelectorAll(".ios-hidden")
+          .forEach((el) => (el.style.display = "none"));
+      }
       //   popups
       $(function () {
         $(".popup-youtube, .popup-vimeo").magnificPopup({
