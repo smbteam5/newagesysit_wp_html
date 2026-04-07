@@ -84,6 +84,13 @@
     <link href="style.css" rel="stylesheet" />
 
     <style>
+      .transparent-video-container video {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* No background color - critical for transparency */
+        background: transparent;
+      }
       .hero-bg {
         background: radial-gradient(
           47.95% 136.89% at 48.68% 37.27%,
@@ -1757,7 +1764,7 @@
         </div>
 
         <!-- RIGHT SECTION -->
-        <div class="relative">
+        <div class="relative transparent-video-container">
           <video
             autoplay
             muted
