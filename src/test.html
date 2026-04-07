@@ -3,38 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Transparent Video - Safari</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        /* Example gradient background to prove transparency works */
+        background: linear-gradient(
+          135deg,
+          #0a0a2e 0%,
+          #1a1a5e 50%,
+          #0a0a2e 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .transparent-video-container {
+        position: relative;
+        width: 556px;
+        max-width: 100%;
+      }
+
+      .transparent-video-container video {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* No background color - critical for transparency */
+        background: transparent;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-8">
-    <!-- Container -->
-    <section class="w-full bg-[#E6EDFF] py-16 relative overflow-hidden">
-      <input type="text" />
-      <button id="myButton">Click me</button>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- JS for mobile click expand -->
-    <script>
-      $(document).ready(function () {
-        const myButton = document.getElementById("myButton");
-        var arr = [];
-        myButton.addEventListener("click", () => {
-          console.log("Button clicked! start");
-          $.ajax({
-            url: "https://jsonplaceholder.typicode.com/posts/1",
-            method: "GET",
-            success: function (data) {
-              console.log("Data received:", data);
-              arr.push(data.title);
-              console.log("Updated array:", arr);
-            },
-            error: function (error) {
-              console.error("Error fetching data:", error);
-            },
-            async: true,
-          });
-          console.log("Button clicked! end");
-        });
-      });
-    </script>
+  <body>
+    <div class="transparent-video-container">
+      <video autoplay muted loop playsinline>
+        <source
+          src="./img/output_safari.mov"
+          type='video/quicktime; codecs="hvc1"'
+        />
+        <source src="./img/home-new/bg-new.webm" type="video/webm" />
+      </video>
+    </div>
   </body>
 </html>
