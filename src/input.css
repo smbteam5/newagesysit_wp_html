@@ -4106,7 +4106,17 @@ footer ul li {
 .logos-arquee {
   animation: animate-marquee-pcc-horizontal 10s linear infinite;
 }
-
+@media (max-width: 1024px) {
+  .logos-arquee {
+    display: flex;
+    width: max-content;
+  }
+}
+@media (min-width: 1023px) {
+  .logos-arquee-lg {
+    animation: animate-marquee-pcc-horizontal 10s linear infinite;
+  }
+}
 @keyframes radial-move {
   0% {
     background: radial-gradient(
@@ -4129,6 +4139,21 @@ footer ul li {
       rgba(0, 128, 0, 0.05) 100%
     );
   }
+}
+
+@keyframes animate-marquee-pcc-horizontal2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-pcc-horizontal2 {
+  animation: animate-marquee-pcc-horizontal2 15s linear infinite;
+  width: max-content;
+  display: flex;
 }
 .animate-radial {
   animation: radial-move 6s ease-in-out infinite;
@@ -4467,7 +4492,7 @@ footer ul li {
   border-image: linear-gradient(
       90deg,
       #090b1b 11.06%,
-      #a4b7ff 51.44%,
+      #767676 51.44%,
       #0a0c1a 87.02%
     )
     1;
@@ -4475,14 +4500,15 @@ footer ul li {
 
 @media (max-width: 991px) {
   .recognition-section-ppc {
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid;
     border-image: linear-gradient(
         90deg,
         #090b1b 11.06%,
         #a4b7ff 51.44%,
         #0a0c1a 87.02%
       )
-      1;
+      1; */
+    border: none !important;
   }
 }
 
@@ -6262,6 +6288,7 @@ footer ul li {
     );
   }
 }
+
 #mobile-menu.hidden-view {
   position: absolute;
   width: 100%;
@@ -7791,4 +7818,54 @@ footer ul li {
     right: 50px;
     background-size: 50px !important;
   }
+}
+.testimonial-carousel .owl-stage-outer,
+.testimonial-carousel .owl-stage {
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .testimonial-carousel .owl-item {
+    height: calc(100% - 100px);
+  }
+}
+.consult_item_wraper .owl-stage {
+  display: flex;
+  align-items: end;
+}
+.bg-grad-rfe {
+  background: linear-gradient(
+    90deg,
+    rgba(67, 97, 238, 0) 0%,
+    #4361ee 49.42%,
+    rgba(38, 55, 136, 0) 100%
+  );
+}
+.bg-choose-us {
+  background: linear-gradient(90deg, #0a0b10 0%, rgba(102, 102, 102, 0) 100%);
+  background: #1729cd82;
+}
+.mobile-slider .owl-stage {
+  display: flex;
+}
+.mobile-slider .owl-item {
+  height: inherit !important;
+}
+.mobile-slider .owl-item > div {
+  height: 100% !important;
+}
+.ios-visible {
+  display: none;
+}
+.ios-hidden {
+  display: block;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.resources_menu {
 }

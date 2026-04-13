@@ -5834,11 +5834,67 @@
       owl.trigger("changed.owl.carousel");
     });
   </script>
+<script>
+    $(document).ready(function () {
+      var owl = $(".owl-carousel.real-results-carousel");
 
-  <!-- ============================================ -->
-  <!-- END OF PAGE -->
-  <!-- All scripts loaded and initialized -->
-  <!-- ============================================ -->
+      owl.owlCarousel({
+        loop: false,
+        margin: 16,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          1024: { items: 3 },
+        },
+      });
+
+      // ✅ Custom Controls MUST be inside ready
+      $("#customNext").click(function () {
+        owl.trigger("next.owl.carousel");
+      });
+
+      $("#customPrev").click(function () {
+        owl.trigger("prev.owl.carousel");
+      });
+
+      owl.on("changed.owl.carousel", function (event) {
+        var current = event.item.index;
+        var total = event.item.count;
+        var visible = event.page.size;
+
+        // FIRST ITEM
+        if (current === 0) {
+          $("#customPrev")
+            .addClass("nav-disabled")
+            .removeClass("bg-blue-600 text-white")
+            .addClass("bg-[#A3ACB5] text-white");
+        } else {
+          $("#customPrev")
+            .removeClass("nav-disabled")
+            .removeClass("bg-[#A3ACB5] text-white")
+            .addClass("bg-blue-600 text-white");
+        }
+
+        // LAST ITEM
+        if (current >= total - visible) {
+          $("#customNext")
+            .addClass("nav-disabled")
+            .removeClass("bg-blue-600 text-white")
+            .addClass("bg-[#A3ACB5] text-white");
+        } else {
+          $("#customNext")
+            .removeClass("nav-disabled")
+            .removeClass("bg-[#A3ACB5] text-white")
+            .addClass("bg-blue-600 text-white");
+        }
+      });
+
+      // Trigger once on load
+      owl.trigger("changed.owl.carousel");
+    });
+  </script>
 </body>
 
 </html>
