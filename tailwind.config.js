@@ -9,11 +9,11 @@ module.exports = {
           "linear-gradient(180deg, #FCFDFD 17.22%, rgba(255, 255, 255, 0) 103.21%)",
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        manrope: ["Manrope", "sans-serif"],
-        sans: ["Poppins", "sans-serif"],
-        blogHeading: ["Montserrat", "sans-serif"],
-        blogBody: ["Open Sans", "sans-serif"],
+        inter: ['Plus Jakarta Sans', 'sans-serif'],
+        manrope: ['Plus Jakarta Sans', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        blogHeading: ['Plus Jakarta Sans', 'sans-serif'],
+        blogBody: ['Plus Jakarta Sans', 'sans-serif'],
       },
       colors: {
         primary: "#FF5D00",
